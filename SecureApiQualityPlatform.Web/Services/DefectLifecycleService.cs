@@ -41,7 +41,7 @@ public sealed class DefectLifecycleService
             return;
         }
 
-        if (existing is not null && existing.Status is DefectStatus.Retest)
+        if (existing is not null && existing.Status is (DefectStatus.Resolved or DefectStatus.Retest))
         {
             existing.Status = DefectStatus.Closed;
             existing.RetestedAtUtc = DateTimeOffset.UtcNow;
