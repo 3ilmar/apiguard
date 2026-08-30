@@ -1,0 +1,26 @@
+@model IReadOnlyList<Defect>
+@{
+    ViewData["Title"] = "Defects";
+}
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h1 class="h3">Defect Register</h1>
+    <a class="btn btn-outline-secondary" asp-controller="Reports" asp-action="ExportDefectsCsv">Export CSV</a>
+</div>
+@if (Model.Count == 0) { <p class="text-muted">No defects have been recorded.</p> }
+@foreach (var d in Model)
+{
+    <form asp-action="Update" method="post" class="card card-body mb-3">
+        <input type="hidden" name="id" value="@d.Id" />
+        <div class="d-flex justify-content-between"><div><strong>@d.Title</strong><div class="text-muted small">@d.Description</div></div><span class="badge text-bg-secondary">@d.Severity</span></div>
+        <div class="row g-2 mt-2">
+            <div class="col-md-3"><label class="form-label">Status</label><select name="status" class="form-select">
+                @foreach (var value in Enum.GetValues<DefectStatus>()) { <option value="@value" selected="@(value == d.Status)">@value</option> }
+            </select></div>
+            <div class="col-md-3"><label class="form-label">Priority</label><select name="priority" class="form-select">
+                @foreach (var value in Enum.GetValues<DefectPriority>()) { <option value="@value" selected="@(value == d.Priority)">@value</option> }
+            </select></div>
+            <div class="col-md-4"><label class="form-label">Assigned to</label><input name="assignedTo" value="@d.AssignedTo" class="form-control"/></div>
+            <div class="col-md-2 d-flex align-items-end"><button class="btn btn-primary w-100">Update</button></div>
+        </div>
+    </form>
+}

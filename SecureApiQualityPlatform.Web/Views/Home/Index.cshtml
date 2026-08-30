@@ -1,0 +1,62 @@
+@model DashboardViewModel
+@{
+    ViewData["Title"] = "Dashboard";
+}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+        <h1 class="h3 mb-1">API Quality Dashboard</h1>
+        <p class="text-muted mb-0">Current prototype evidence for quality, performance, and defects.</p>
+    </div>
+    <a class="btn btn-primary" asp-controller="Apis" asp-action="Create">Register API</a>
+</div>
+<div class="row g-3 mb-4">
+    <div class="col-md-3"><div class="metric-card"><span>Registered APIs</span><strong>@Model.ApiCount</strong></div></div>
+    <div class="col-md-3"><div class="metric-card"><span>Pass rate</span><strong>@Model.PassRatePercent%</strong></div></div>
+    <div class="col-md-3"><div class="metric-card"><span>Avg response</span><strong>@Model.AverageResponseTimeMs ms</strong></div></div>
+    <div class="col-md-3"><div class="metric-card"><span>High/Critical open</span><strong>@Model.OpenHighOrCriticalDefects</strong></div></div>
+</div>
+<div class="row g-4">
+    <div class="col-lg-7">
+        <div class="card">
+            <div class="card-header">Recent checks</div>
+            <div class="table-responsive">
+                <table class="table table-sm mb-0">
+                    <thead><tr><th>Check</th><th>Result</th><th>Response</th><th>When</th></tr></thead>
+                    <tbody>
+                    @if (Model.RecentResults.Count == 0)
+                    {
+                        <tr><td colspan="4" class="text-muted">No checks have been run yet.</td></tr>
+                    }
+                    @foreach (var r in Model.RecentResults)
+                    {
+                        <tr>
+                            <td>@r.CheckType<br/><small class="text-muted">@r.Message</small></td>
+                            <td><span class="badge @(r.Passed ? "text-bg-success" : "text-bg-danger")">@(r.Passed ? "PASS" : "FAIL")</span></td>
+                            <td>@(r.ResponseTimeMs?.ToString() ?? "-") ms</td>
+                            <td>@r.ExecutedAtUtc.ToLocalTime().ToString("g")</td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-5">
+        <div class="card">
+            <div class="card-header">Recent defects</div>
+            <div class="list-group list-group-flush">
+                @if (Model.RecentDefects.Count == 0)
+                {
+                    <div class="list-group-item text-muted">No defects recorded.</div>
+                }
+                @foreach (var d in Model.RecentDefects)
+                {
+                    <div class="list-group-item">
+                        <div class="d-flex justify-content-between"><strong>@d.Title</strong><span>@d.Severity</span></div>
+                        <small class="text-muted">@d.Status · @d.Priority</small>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

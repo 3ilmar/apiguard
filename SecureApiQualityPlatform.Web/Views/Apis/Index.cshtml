@@ -1,0 +1,28 @@
+@model IReadOnlyList<RegisteredApi>
+@{
+    ViewData["Title"] = "APIs";
+}
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h1 class="h3">Registered APIs</h1>
+    <a class="btn btn-primary" asp-action="Create">Register API</a>
+</div>
+<div class="row g-3">
+@if (Model.Count == 0)
+{
+    <p class="text-muted">No APIs are registered yet.</p>
+}
+@foreach (var api in Model)
+{
+    <div class="col-md-6">
+        <div class="card h-100">
+            <div class="card-body">
+                <h2 class="h5">@api.Name</h2>
+                <p class="text-break"><code>@api.BaseUrl</code></p>
+                <p>@api.Description</p>
+                <p class="text-muted">@api.Endpoints.Count endpoint(s)</p>
+                <a class="btn btn-outline-primary" asp-action="Details" asp-route-id="@api.Id">Open</a>
+            </div>
+        </div>
+    </div>
+}
+</div>

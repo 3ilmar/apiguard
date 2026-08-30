@@ -1,0 +1,13 @@
+@model RegisteredApi
+@{
+    ViewData["Title"] = "Register API";
+}
+<h1 class="h3 mb-3">Register API</h1>
+<div class="alert alert-info">For safety, the prototype blocks localhost and private-network targets by default to reduce server-side request forgery (SSRF) risk.</div>
+<form asp-action="Create" method="post" class="card card-body">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="mb-3"><label asp-for="Name" class="form-label"></label><input asp-for="Name" class="form-control"/><span asp-validation-for="Name" class="text-danger"></span></div>
+    <div class="mb-3"><label asp-for="BaseUrl" class="form-label"></label><input asp-for="BaseUrl" class="form-control" placeholder="https://api.example.com"/><span asp-validation-for="BaseUrl" class="text-danger"></span></div>
+    <div class="mb-3"><label asp-for="Description" class="form-label"></label><textarea asp-for="Description" class="form-control"></textarea></div>
+    <button class="btn btn-primary" type="submit">Save API</button>
+</form>
