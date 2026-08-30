@@ -7,6 +7,7 @@ public interface IPlatformStore
     IReadOnlyList<RegisteredApi> GetApis();
     RegisteredApi? GetApi(Guid id);
     void AddApi(RegisteredApi api);
+    bool TryAddApi(RegisteredApi api);
     void AddEndpoint(Guid apiId, ApiEndpoint endpoint);
 
     IReadOnlyList<ApiCheckResult> GetResults();

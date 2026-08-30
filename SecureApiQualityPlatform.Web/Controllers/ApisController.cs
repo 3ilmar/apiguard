@@ -27,14 +27,34 @@ public sealed class ApisController : Controller
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Create(RegisteredApi model)
     {
-        if (!ModelState.IsValid) return View(model);
+        model.Name = model.Name?.Trim() ?? string.Empty;
+        model.BaseUrl = model.BaseUrl?.Trim().TrimEnd('/') ?? string.Empty;
+        model.Description = model.Description?.Trim() ?? string.Empty;
+
+        ModelState.Clear();
+
+        if (!TryValidateModel(model))
+        {
+            return View(model);
+        }
+
         var safety = await _urlSafety.ValidateAsync(model.BaseUrl);
+
         if (!safety.IsSafe)
         {
             ModelState.AddModelError(nameof(model.BaseUrl), safety.Reason);
             return View(model);
         }
-        _store.AddApi(model);
+
+        if (!_store.TryAddApi(model))
+        {
+            ModelState.AddModelError(
+                nameof(model.BaseUrl),
+                "An API with this base URL is already registered.");
+
+            return View(model);
+        }
+
         return RedirectToAction(nameof(Details), new { id = model.Id });
     }
 

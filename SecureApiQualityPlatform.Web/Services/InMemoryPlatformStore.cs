@@ -24,6 +24,27 @@ public sealed class InMemoryPlatformStore : IPlatformStore
         lock (_gate) _apis.Add(api);
     }
 
+    public bool TryAddApi(RegisteredApi api)
+    {
+        lock (_gate)
+        {
+            var normalizedBaseUrl = api.BaseUrl.TrimEnd('/');
+
+            var duplicateExists = _apis.Any(existingApi =>
+                existingApi.BaseUrl.TrimEnd('/').Equals(
+                    normalizedBaseUrl,
+                    StringComparison.OrdinalIgnoreCase));
+
+            if (duplicateExists)
+            {
+                return false;
+            }
+
+            _apis.Add(api);
+            return true;
+        }
+    }
+
     public void AddEndpoint(Guid apiId, ApiEndpoint endpoint)
     {
         lock (_gate)
