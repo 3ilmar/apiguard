@@ -54,6 +54,30 @@ public sealed class InMemoryPlatformStore : IPlatformStore
         }
     }
 
+    public bool TryAddEndpoint(Guid apiId, ApiEndpoint endpoint)
+    {
+        lock (_gate)
+        {
+            var api = _apis.Single(a => a.Id == apiId);
+
+            var duplicateExists = api.Endpoints.Any(existingEndpoint =>
+                existingEndpoint.Method.Equals(
+                    endpoint.Method,
+                    StringComparison.OrdinalIgnoreCase) &&
+                existingEndpoint.Path.TrimEnd('/').Equals(
+                    endpoint.Path.TrimEnd('/'),
+                    StringComparison.OrdinalIgnoreCase));
+
+            if (duplicateExists)
+            {
+                return false;
+            }
+
+            api.Endpoints.Add(endpoint);
+            return true;
+        }
+    }
+
     public IReadOnlyList<ApiCheckResult> GetResults()
     {
         lock (_gate) return _results.OrderByDescending(r => r.ExecutedAtUtc).ToList();

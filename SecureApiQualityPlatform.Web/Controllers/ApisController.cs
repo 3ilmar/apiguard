@@ -75,19 +75,59 @@ public sealed class ApisController : Controller
     public IActionResult AddEndpoint(Guid id, ApiEndpoint endpoint)
     {
         var api = _store.GetApi(id);
-        if (api is null) return NotFound();
+
+        if (api is null)
+        {
+            return NotFound();
+        }
+
+        var normalizedPath = endpoint.Path?.Trim() ?? string.Empty;
+
+        if (normalizedPath.Contains("://", StringComparison.OrdinalIgnoreCase) ||
+            normalizedPath.StartsWith("//") ||
+            normalizedPath.Split('/', StringSplitOptions.RemoveEmptyEntries)
+                .Any(segment => segment == ".."))
+        {
+            ModelState.AddModelError(
+                nameof(endpoint.Path),
+                "Endpoint path must stay within the registered API.");
+
+            return View("Details", new ApiDetailsViewModel
+            {
+                Api = api,
+                NewEndpoint = endpoint,
+                RecentResults = _store.GetResultsForApi(api.Id).Take(25).ToArray()
+            });
+        }
+
+        if (!string.IsNullOrWhiteSpace(normalizedPath))
+        {
+            if (!normalizedPath.StartsWith('/'))
+            {
+                normalizedPath = "/" + normalizedPath;
+            }
+
+            if (normalizedPath.Length > 1)
+            {
+                normalizedPath = normalizedPath.TrimEnd('/');
+            }
+        }
 
         endpoint = new ApiEndpoint
         {
             ApiId = id,
-            Name = endpoint.Name,
-            Path = endpoint.Path,
-            Method = endpoint.Method,
+            Name = endpoint.Name?.Trim() ?? string.Empty,
+            Path = normalizedPath,
+            Method = endpoint.Method?.Trim().ToUpperInvariant() ?? string.Empty,
             ExpectedStatusCode = endpoint.ExpectedStatusCode,
             MaxResponseTimeMs = endpoint.MaxResponseTimeMs,
             RequiresAuthentication = endpoint.RequiresAuthentication,
-            ExpectedContentType = endpoint.ExpectedContentType
+            ExpectedContentType = string.IsNullOrWhiteSpace(endpoint.ExpectedContentType)
+                ? null
+                : endpoint.ExpectedContentType.Trim()
         };
+
+        ModelState.Clear();
 
         if (!TryValidateModel(endpoint))
         {
@@ -99,7 +139,20 @@ public sealed class ApisController : Controller
             });
         }
 
-        _store.AddEndpoint(id, endpoint);
+        if (!_store.TryAddEndpoint(id, endpoint))
+        {
+            ModelState.AddModelError(
+                string.Empty,
+                "This method and path are already registered for this API.");
+
+            return View("Details", new ApiDetailsViewModel
+            {
+                Api = api,
+                NewEndpoint = endpoint,
+                RecentResults = _store.GetResultsForApi(api.Id).Take(25).ToArray()
+            });
+        }
+
         return RedirectToAction(nameof(Details), new { id });
     }
 
