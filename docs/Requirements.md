@@ -17,8 +17,8 @@
 | FR-04 | The system shall create or update a defect when an executed check fails. | Must |
 | FR-05 | The system shall allow a defect to be assigned, prioritised and moved through defined workflow states. | Must |
 | FR-06 | The system shall support retesting and close a resolved/retest defect when the associated check passes. | Must |
-| FR-07 | The system shall display dashboard metrics for test execution, pass rate, response time and open high/critical defects. | Must |
-| FR-08 | The system shall export check and defect evidence as CSV files. | Should |
+| FR-07 | The system shall display counts for executed, passed and failed checks, pass rate, average recorded response time, open defects and open high/critical defects. | Must |
+| FR-08 | The system shall export check and defect evidence as CSV files containing relevant API/endpoint context, timestamps and QA lifecycle fields. | Should |
 
 ## Non-functional / quality requirements
 
@@ -73,4 +73,13 @@ THEN the defect is marked Closed and the retest time is recorded.
 ### AC-05 Dashboard
 GIVEN check results and defects exist
 WHEN the dashboard is opened
-THEN it shows executed checks, pass rate, average recorded response time, open defect count and open high/critical defect count.
+THEN it shows executed, passed and failed check counts, pass rate, average recorded response time, open defect count and open high/critical defect count.
+
+GIVEN no checks have been executed
+WHEN the dashboard is opened
+THEN check counts remain zero and percentage/response-time metrics are presented as unavailable rather than as misleading measured values.
+
+### AC-06 CSV reporting
+GIVEN check results or defects exist, including text values that may contain commas or quotation marks
+WHEN a results or defect CSV export is requested
+THEN the downloaded file contains a header row, relevant API/endpoint context, timestamps and QA evidence fields, with text values escaped so the CSV remains parseable.
