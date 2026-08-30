@@ -8,8 +8,8 @@
 | FR-04 | Create/update defects from failures | AC-03 | TC-04, TC-05 | DefectLifecycleService | Implemented; automated tests included |
 | FR-05 | Assign/prioritise/manage defects | AC-04 | TC-08 | DefectsController | Implemented; manual evidence pending |
 | FR-06 | Retest and close | AC-04 | TC-09 | DefectLifecycleService | Implemented; automated test included |
-| FR-07 | Quality dashboard | AC-05 | TC-10 | DashboardService, Home/Index | Implemented; automated calculation test included |
-| FR-08 | Export reports | - | TC-11 | ReportsController | Implemented; manual evidence pending |
+| FR-07 | Quality dashboard | AC-05 | TC-10 | DashboardService, DashboardViewModel, Home/Index | Implemented; automated metric/empty-data/recent-item tests added; execution evidence pending |
+| FR-08 | Export reports | AC-06 | TC-11 | ReportsController | Implemented; automated CSV structure/escaping tests added; manual download evidence pending |
 | NFR-SEC-01 | Block unsafe local/private targets | AC-01 | TC-02 | UrlSafetyService | Implemented; manual evidence pending |
 | NFR-REL-01 | Graceful endpoint failure | AC-02 | TC-07 | ApiCheckService | Implemented; integration evidence pending |
 | NFR-MAINT-01 | Separated testable rules | - | Automated suite | Services + MSTest project | Implemented |
