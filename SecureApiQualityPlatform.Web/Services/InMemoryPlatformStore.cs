@@ -24,12 +24,57 @@ public sealed class InMemoryPlatformStore : IPlatformStore
         lock (_gate) _apis.Add(api);
     }
 
+    public bool TryAddApi(RegisteredApi api)
+    {
+        lock (_gate)
+        {
+            var normalizedBaseUrl = api.BaseUrl.TrimEnd('/');
+
+            var duplicateExists = _apis.Any(existingApi =>
+                existingApi.BaseUrl.TrimEnd('/').Equals(
+                    normalizedBaseUrl,
+                    StringComparison.OrdinalIgnoreCase));
+
+            if (duplicateExists)
+            {
+                return false;
+            }
+
+            _apis.Add(api);
+            return true;
+        }
+    }
+
     public void AddEndpoint(Guid apiId, ApiEndpoint endpoint)
     {
         lock (_gate)
         {
             var api = _apis.Single(a => a.Id == apiId);
             api.Endpoints.Add(endpoint);
+        }
+    }
+
+    public bool TryAddEndpoint(Guid apiId, ApiEndpoint endpoint)
+    {
+        lock (_gate)
+        {
+            var api = _apis.Single(a => a.Id == apiId);
+
+            var duplicateExists = api.Endpoints.Any(existingEndpoint =>
+                existingEndpoint.Method.Equals(
+                    endpoint.Method,
+                    StringComparison.OrdinalIgnoreCase) &&
+                existingEndpoint.Path.TrimEnd('/').Equals(
+                    endpoint.Path.TrimEnd('/'),
+                    StringComparison.OrdinalIgnoreCase));
+
+            if (duplicateExists)
+            {
+                return false;
+            }
+
+            api.Endpoints.Add(endpoint);
+            return true;
         }
     }
 
