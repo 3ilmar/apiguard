@@ -8,7 +8,9 @@ public sealed class DashboardViewModel
     public int EndpointCount { get; init; }
     public int ExecutedChecks { get; init; }
     public int PassedChecks { get; init; }
+    public int FailedChecks { get; init; }
     public double PassRatePercent { get; init; }
+    public int TimedChecks { get; init; }
     public double AverageResponseTimeMs { get; init; }
     public int OpenDefects { get; init; }
     public int OpenHighOrCriticalDefects { get; init; }

@@ -14,9 +14,16 @@ public sealed class DashboardService
         var apis = _store.GetApis();
         var results = _store.GetResults();
         var defects = _store.GetDefects();
+
         var passed = results.Count(r => r.Passed);
-        var timings = results.Where(r => r.ResponseTimeMs.HasValue).Select(r => (double)r.ResponseTimeMs!.Value).ToArray();
-        var open = defects.Where(d => d.Status != DefectStatus.Closed && d.Status != DefectStatus.Deferred).ToArray();
+        var failed = results.Count - passed;
+        var timings = results
+            .Where(r => r.ResponseTimeMs.HasValue)
+            .Select(r => (double)r.ResponseTimeMs!.Value)
+            .ToArray();
+        var open = defects
+            .Where(d => d.Status != DefectStatus.Closed && d.Status != DefectStatus.Deferred)
+            .ToArray();
 
         return new DashboardViewModel
         {
@@ -24,12 +31,14 @@ public sealed class DashboardService
             EndpointCount = apis.Sum(a => a.Endpoints.Count),
             ExecutedChecks = results.Count,
             PassedChecks = passed,
+            FailedChecks = failed,
             PassRatePercent = results.Count == 0 ? 0 : Math.Round((double)passed / results.Count * 100, 1),
+            TimedChecks = timings.Length,
             AverageResponseTimeMs = timings.Length == 0 ? 0 : Math.Round(timings.Average(), 1),
             OpenDefects = open.Length,
             OpenHighOrCriticalDefects = open.Count(d => d.Severity is DefectSeverity.High or DefectSeverity.Critical),
-            RecentResults = results.Take(12).ToArray(),
-            RecentDefects = defects.Take(8).ToArray()
+            RecentResults = results.OrderByDescending(r => r.ExecutedAtUtc).Take(12).ToArray(),
+            RecentDefects = defects.OrderByDescending(d => d.UpdatedAtUtc).Take(8).ToArray()
         };
     }
 }

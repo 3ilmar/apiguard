@@ -11,8 +11,12 @@
 </div>
 <div class="row g-3 mb-4">
     <div class="col-md-3"><div class="metric-card"><span>Registered APIs</span><strong>@Model.ApiCount</strong></div></div>
-    <div class="col-md-3"><div class="metric-card"><span>Pass rate</span><strong>@Model.PassRatePercent%</strong></div></div>
-    <div class="col-md-3"><div class="metric-card"><span>Avg response</span><strong>@Model.AverageResponseTimeMs ms</strong></div></div>
+    <div class="col-md-3"><div class="metric-card"><span>Configured endpoints</span><strong>@Model.EndpointCount</strong></div></div>
+    <div class="col-md-3"><div class="metric-card"><span>Executed checks</span><strong>@Model.ExecutedChecks</strong></div></div>
+    <div class="col-md-3"><div class="metric-card"><span>Pass rate</span><strong>@(Model.ExecutedChecks == 0 ? "N/A" : $"{Model.PassRatePercent}%")</strong></div></div>
+    <div class="col-md-3"><div class="metric-card"><span>Passed / Failed</span><strong>@Model.PassedChecks / @Model.FailedChecks</strong></div></div>
+    <div class="col-md-3"><div class="metric-card"><span>Avg response</span><strong>@(Model.TimedChecks == 0 ? "N/A" : $"{Model.AverageResponseTimeMs} ms")</strong></div></div>
+    <div class="col-md-3"><div class="metric-card"><span>Open defects</span><strong>@Model.OpenDefects</strong></div></div>
     <div class="col-md-3"><div class="metric-card"><span>High/Critical open</span><strong>@Model.OpenHighOrCriticalDefects</strong></div></div>
 </div>
 <div class="row g-4">
