@@ -19,6 +19,12 @@ public sealed class UrlSafetyService
             return (false, "Only absolute http:// or https:// URLs are allowed.");
         }
 
+        if (!string.IsNullOrEmpty(uri.UserInfo))
+        {
+            return (false, "URLs containing credentials are not allowed.");
+        }
+
+
         if (_allowPrivate) return (true, "Private-network targets are enabled by configuration.");
 
         if (uri.IsLoopback || uri.Host.Equals("localhost", StringComparison.OrdinalIgnoreCase))
