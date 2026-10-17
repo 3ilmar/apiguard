@@ -1,7 +1,9 @@
 # Defect Log
 
-Use this table for **real observed defects only**. Do not invent successful fixes or test evidence. If you need an example for the report, label it clearly as a sample.
+Real defects observed during development and testing. Each entry records the failing evidence and the retest result.
 
 | ID | Title | Severity | Priority | Status | Requirement/Test | Expected | Actual | Owner | Fix/Retest evidence |
 |---|---|---|---|---|---|---|---|---|---|
-| SAMPLE-001 | Authentication-required endpoint returned 200 without credentials | Critical | Urgent | Sample only | FR-03 / TC-05 | 401 or 403 | 200 | - | Demonstration example only; replace with real defect evidence |
+| DEF-001 | Duplicate role provider type definitions | Medium | Medium | Closed | NFR-MAINT-01 / build | Solution builds | Build failed: CS0101, CS0111, CS0229 | Lana | Same types existed in two files; removed the duplicate and kept one definition. Rebuild clean. |
+| DEF-002 | UserRole not defined as an enum | Medium | Medium | Closed | NFR-MAINT-01 / build | Build succeeds | Build failed: CS0117, CS0453 (`Admin` missing, `Enum.IsDefined` rejected) | Lana | Replaced with enum (Viewer, Tester, Admin). Build clean. |
+| DEF-003 | Layout failed to build with RZ1031 | Medium | High | Closed | NFR-USA-01 / build | Layout compiles and role dropdown works | Build failed on the three `<option>` tags: C# inside the tag attributes | Lana | Replaced with a foreach and `selected="@(condition)"`. Build clean, selector keeps role after refresh. |
