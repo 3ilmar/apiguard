@@ -28,4 +28,3 @@ public enum DefectStatus
     Reopened,
     Deferred
 }
-
