@@ -3,6 +3,10 @@ using SecureApiQualityPlatform.Web.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
+// assessment 2 addition: add IHttpContextAccessor to the DI container
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddScoped<IRoleProvider, CookieRoleProvider>();
+
 builder.Services.AddSingleton<IPlatformStore, InMemoryPlatformStore>();
 builder.Services.AddSingleton<CheckEvaluator>();
 builder.Services.AddSingleton<DefectLifecycleService>();
