@@ -1,3 +1,4 @@
+
 using Microsoft.EntityFrameworkCore;
 using SecureApiQualityPlatform.Web.Data;
 using SecureApiQualityPlatform.Web.Services;
@@ -17,17 +18,24 @@ public partial class Program
 
         builder.Services.AddControllersWithViews();
 
-        // Persistent SQLite storage.
+        // SQLite persistence - preserve the persistence PR.
         builder.Services.AddDbContextFactory<PlatformDbContext>(options =>
             options.UseSqlite(
                 builder.Configuration.GetConnectionString("PlatformDatabase")));
 
         builder.Services.AddSingleton<IPlatformStore, SqlitePlatformStore>();
+
+        // Existing application services.
         builder.Services.AddSingleton<CheckEvaluator>();
         builder.Services.AddSingleton<DefectLifecycleService>();
         builder.Services.AddSingleton<DashboardService>();
         builder.Services.AddSingleton<UrlSafetyService>();
 
+        // RBAC - preserve the role provider from PR #4.
+        builder.Services.AddHttpContextAccessor();
+        builder.Services.AddScoped<IRoleProvider, CookieRoleProvider>();
+
+        // API checking HTTP client.
         builder.Services.AddHttpClient<ApiCheckService>(client =>
         {
             client.Timeout = TimeSpan.FromSeconds(10);
@@ -47,6 +55,7 @@ public partial class Program
             db.Database.EnsureCreated();
         }
 
+        // Preserve the existing error handling and security middleware.
         if (!app.Environment.IsDevelopment())
         {
             app.UseExceptionHandler("/Home/Error");
