@@ -1,0 +1,24 @@
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+Project 'SecureApiQualityPlatform.Tests' has the following package references
+   [net8.0]: 
+   Top-level Package             Requested   Resolved
+   > coverlet.collector          6.0.2       6.0.2   
+   > Microsoft.NET.Test.Sdk      17.11.1     17.11.1 
+   > MSTest.TestAdapter          3.6.4       3.6.4   
+   > MSTest.TestFramework        3.6.4       3.6.4   
+
+   Transitive Package                                         Resolved
+   > Microsoft.ApplicationInsights                            2.22.0  
+   > Microsoft.CodeCoverage                                   17.11.1 
+   > Microsoft.Testing.Extensions.Telemetry                   1.4.3   
+   > Microsoft.Testing.Extensions.TrxReport.Abstractions      1.4.3   
+   > Microsoft.Testing.Extensions.VSTestBridge                1.4.3   
+   > Microsoft.Testing.Platform                               1.4.3   
+   > Microsoft.Testing.Platform.MSBuild                       1.4.3   
+   > Microsoft.TestPlatform.ObjectModel                       17.11.1 
+   > Microsoft.TestPlatform.TestHost                          17.11.1 
+   > Newtonsoft.Json                                          13.0.1  
+   > System.Diagnostics.DiagnosticSource                      5.0.0   
+   > System.Reflection.Metadata                               1.6.0   
+

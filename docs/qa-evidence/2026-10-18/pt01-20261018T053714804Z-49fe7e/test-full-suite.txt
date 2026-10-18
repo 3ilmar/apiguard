@@ -1,0 +1,336 @@
+Test run for C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Tests.dll (.NETCoreApp,Version=v8.0)
+A total of 1 test files matched the specified pattern.
+C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Tests.dll
+[MSTest][Discovery][C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Tests.dll] Unable to load types from the test source 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Tests.dll'. Some or all of the tests in this source may not be discovered.
+Error: System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)
+
+[MSTest][Discovery][C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Tests.dll] MSTestAdapter failed to discover tests in class 'SecureApiQualityPlatform.Tests.ReportsEnhancementTests' of assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Tests.dll' because Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7).
+  Failed ExpectedStatus_WhenMatching_ReturnsPass [21 ms]
+  Error Message:
+   Unable to create instance of class SecureApiQualityPlatform.Tests.CheckEvaluatorTests. Error: System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7).
+  Stack Trace:
+      at SecureApiQualityPlatform.Tests.CheckEvaluatorTests..ctor()
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+  Failed ExpectedStatus_WhenDifferent_ReturnsFail [< 1 ms]
+  Error Message:
+   Unable to create instance of class SecureApiQualityPlatform.Tests.CheckEvaluatorTests. Error: System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7).
+  Stack Trace:
+      at SecureApiQualityPlatform.Tests.CheckEvaluatorTests..ctor()
+   at InvokeStub_CheckEvaluatorTests..ctor(Object, Object, IntPtr*)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+  Failed ResponseTime_AtThreshold_ReturnsPass [< 1 ms]
+  Error Message:
+   Unable to create instance of class SecureApiQualityPlatform.Tests.CheckEvaluatorTests. Error: System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7).
+  Stack Trace:
+      at SecureApiQualityPlatform.Tests.CheckEvaluatorTests..ctor()
+   at InvokeStub_CheckEvaluatorTests..ctor(Object, Object, IntPtr*)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+  Failed ResponseTime_OverThreshold_ReturnsFail [< 1 ms]
+  Error Message:
+   Unable to create instance of class SecureApiQualityPlatform.Tests.CheckEvaluatorTests. Error: System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7).
+  Stack Trace:
+      at SecureApiQualityPlatform.Tests.CheckEvaluatorTests..ctor()
+   at InvokeStub_CheckEvaluatorTests..ctor(Object, Object, IntPtr*)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+  Failed AuthenticationProtection_WhenRequiredAndUnauthorized_ReturnsPass [< 1 ms]
+  Error Message:
+   Unable to create instance of class SecureApiQualityPlatform.Tests.CheckEvaluatorTests. Error: System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7).
+  Stack Trace:
+      at SecureApiQualityPlatform.Tests.CheckEvaluatorTests..ctor()
+   at InvokeStub_CheckEvaluatorTests..ctor(Object, Object, IntPtr*)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+  Failed AuthenticationProtection_WhenRequiredButReturnsOk_ReturnsCriticalFail [< 1 ms]
+  Error Message:
+   Unable to create instance of class SecureApiQualityPlatform.Tests.CheckEvaluatorTests. Error: System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7).
+  Stack Trace:
+      at SecureApiQualityPlatform.Tests.CheckEvaluatorTests..ctor()
+   at InvokeStub_CheckEvaluatorTests..ctor(Object, Object, IntPtr*)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+  Failed Cors_WhenAuthRequiredAndWildcard_ReturnsFail [< 1 ms]
+  Error Message:
+   Unable to create instance of class SecureApiQualityPlatform.Tests.CheckEvaluatorTests. Error: System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7).
+  Stack Trace:
+      at SecureApiQualityPlatform.Tests.CheckEvaluatorTests..ctor()
+   at InvokeStub_CheckEvaluatorTests..ctor(Object, Object, IntPtr*)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+  Failed ContentType_WhenExpectedMatches_ReturnsPass [< 1 ms]
+  Error Message:
+   Unable to create instance of class SecureApiQualityPlatform.Tests.CheckEvaluatorTests. Error: System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7).
+  Stack Trace:
+      at SecureApiQualityPlatform.Tests.CheckEvaluatorTests..ctor()
+   at InvokeStub_CheckEvaluatorTests..ctor(Object, Object, IntPtr*)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+  Failed Build_OpenSeverityDistribution_ExcludesClosedAndDeferred [3 ms]
+  Error Message:
+   Test method SecureApiQualityPlatform.Tests.DashboardEnhancementTests.Build_OpenSeverityDistribution_ExcludesClosedAndDeferred threw exception: 
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)
+  Stack Trace:
+      at SecureApiQualityPlatform.Tests.DashboardEnhancementTests.Build_OpenSeverityDistribution_ExcludesClosedAndDeferred()
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+  Failed Build_NoDefects_StillProvidesAllSeverityLabels [< 1 ms]
+  Error Message:
+   Test method SecureApiQualityPlatform.Tests.DashboardEnhancementTests.Build_NoDefects_StillProvidesAllSeverityLabels threw exception: 
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)
+  Stack Trace:
+      at SecureApiQualityPlatform.Tests.DashboardEnhancementTests.Build_NoDefects_StillProvidesAllSeverityLabels()
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+  Failed Build_UnorderedResults_StillReturnsLatestTwelve [< 1 ms]
+  Error Message:
+   Test method SecureApiQualityPlatform.Tests.DashboardEnhancementTests.Build_UnorderedResults_StillReturnsLatestTwelve threw exception: 
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)
+  Stack Trace:
+      at SecureApiQualityPlatform.Tests.DashboardEnhancementTests.Build_UnorderedResults_StillReturnsLatestTwelve()
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+  Failed Build_TiedResults_PreservesSnapshotOrderAtDisplayLimit [< 1 ms]
+  Error Message:
+   Test method SecureApiQualityPlatform.Tests.DashboardEnhancementTests.Build_TiedResults_PreservesSnapshotOrderAtDisplayLimit threw exception: 
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)
+  Stack Trace:
+      at SecureApiQualityPlatform.Tests.DashboardEnhancementTests.Build_TiedResults_PreservesSnapshotOrderAtDisplayLimit()
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+  Failed Build_UnorderedAndTiedDefects_PreservesSnapshotOrderAtDisplayLimit [< 1 ms]
+  Error Message:
+   Test method SecureApiQualityPlatform.Tests.DashboardEnhancementTests.Build_UnorderedAndTiedDefects_PreservesSnapshotOrderAtDisplayLimit threw exception: 
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)
+  Stack Trace:
+      at SecureApiQualityPlatform.Tests.DashboardEnhancementTests.Build_UnorderedAndTiedDefects_PreservesSnapshotOrderAtDisplayLimit()
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+  Failed Build_ResultsWithoutTimings_StillCalculatesPassRate [< 1 ms]
+  Error Message:
+   Test method SecureApiQualityPlatform.Tests.DashboardEnhancementTests.Build_ResultsWithoutTimings_StillCalculatesPassRate threw exception: 
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)
+  Stack Trace:
+      at SecureApiQualityPlatform.Tests.DashboardEnhancementTests.Build_ResultsWithoutTimings_StillCalculatesPassRate()
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+  Failed Build_OnlyClosedAndDeferredDefects_HasNoOpenSeverityCounts [< 1 ms]
+  Error Message:
+   Test method SecureApiQualityPlatform.Tests.DashboardEnhancementTests.Build_OnlyClosedAndDeferredDefects_HasNoOpenSeverityCounts threw exception: 
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)
+  Stack Trace:
+      at SecureApiQualityPlatform.Tests.DashboardEnhancementTests.Build_OnlyClosedAndDeferredDefects_HasNoOpenSeverityCounts()
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+  Failed PT01_BuildWithTwoThousandResults_UnderTwoSeconds [2 ms]
+  Error Message:
+   Test method SecureApiQualityPlatform.Tests.DashboardPerformanceTests.PT01_BuildWithTwoThousandResults_UnderTwoSeconds threw exception: 
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)
+  Stack Trace:
+      at SecureApiQualityPlatform.Tests.DashboardPerformanceTests.PT01_BuildWithTwoThousandResults_UnderTwoSeconds()
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+  Failed PT01_DashboardHttpWithTwoThousandResults_UnderTwoSeconds [16 ms]
+  Error Message:
+   Test method SecureApiQualityPlatform.Tests.DashboardPerformanceTests.PT01_DashboardHttpWithTwoThousandResults_UnderTwoSeconds threw exception: 
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)
+  Stack Trace:
+      at SecureApiQualityPlatform.Tests.DashboardPerformanceTests.PT01_DashboardHttpWithTwoThousandResults_UnderTwoSeconds()
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start[TStateMachine](TStateMachine& stateMachine)
+   at SecureApiQualityPlatform.Tests.DashboardPerformanceTests.PT01_DashboardHttpWithTwoThousandResults_UnderTwoSeconds()
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+  Failed Build_CalculatesCheckAndResponseTimeMetrics [< 1 ms]
+  Error Message:
+   Test method SecureApiQualityPlatform.Tests.DashboardServiceTests.Build_CalculatesCheckAndResponseTimeMetrics threw exception: 
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)
+  Stack Trace:
+      at SecureApiQualityPlatform.Tests.DashboardServiceTests.Build_CalculatesCheckAndResponseTimeMetrics()
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+  Failed Build_HandlesNoCheckDataWithoutInvalidMetrics [< 1 ms]
+  Error Message:
+   Test method SecureApiQualityPlatform.Tests.DashboardServiceTests.Build_HandlesNoCheckDataWithoutInvalidMetrics threw exception: 
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)
+  Stack Trace:
+      at SecureApiQualityPlatform.Tests.DashboardServiceTests.Build_HandlesNoCheckDataWithoutInvalidMetrics()
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+  Failed Build_CountsOnlyOpenHighOrCriticalDefectsAsHighRisk [< 1 ms]
+  Error Message:
+   Test method SecureApiQualityPlatform.Tests.DashboardServiceTests.Build_CountsOnlyOpenHighOrCriticalDefectsAsHighRisk threw exception: 
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)
+  Stack Trace:
+      at SecureApiQualityPlatform.Tests.DashboardServiceTests.Build_CountsOnlyOpenHighOrCriticalDefectsAsHighRisk()
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+  Failed Build_ReturnsMostRecentChecksAndDefectsWithinDisplayLimits [< 1 ms]
+  Error Message:
+   Test method SecureApiQualityPlatform.Tests.DashboardServiceTests.Build_ReturnsMostRecentChecksAndDefectsWithinDisplayLimits threw exception: 
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)
+  Stack Trace:
+      at SecureApiQualityPlatform.Tests.DashboardServiceTests.Build_ReturnsMostRecentChecksAndDefectsWithinDisplayLimits()
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+  Failed FailedCheck_CreatesDefectWithMappedPriority [< 1 ms]
+  Error Message:
+   Test method SecureApiQualityPlatform.Tests.DefectLifecycleServiceTests.FailedCheck_CreatesDefectWithMappedPriority threw exception: 
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)
+  Stack Trace:
+      at SecureApiQualityPlatform.Tests.DefectLifecycleServiceTests.FailedCheck_CreatesDefectWithMappedPriority()
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+  Failed PassingRetest_ClosesResolvedDefect [< 1 ms]
+  Error Message:
+   Test method SecureApiQualityPlatform.Tests.DefectLifecycleServiceTests.PassingRetest_ClosesResolvedDefect threw exception: 
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)
+  Stack Trace:
+      at SecureApiQualityPlatform.Tests.DefectLifecycleServiceTests.PassingRetest_ClosesResolvedDefect()
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+  Failed FailedCheck_MessageIncludesExpectationAndObservedEvidence ("Status","Expected HTTP 200","received 400") [< 1 ms]
+  Error Message:
+   Test method SecureApiQualityPlatform.Tests.FailureMessageTests.FailedCheck_MessageIncludesExpectationAndObservedEvidence threw exception: 
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)
+  Stack Trace:
+      at SecureApiQualityPlatform.Tests.FailureMessageTests.FailedCheck_MessageIncludesExpectationAndObservedEvidence(String scenario, String firstEvidence, String secondEvidence)
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+
+  Failed FailedCheck_MessageIncludesExpectationAndObservedEvidence ("Timing","1001 ms","1000 ms threshold") [1 ms]
+  Error Message:
+   Test method SecureApiQualityPlatform.Tests.FailureMessageTests.FailedCheck_MessageIncludesExpectationAndObservedEvidence threw exception: 
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)
+  Stack Trace:
+      at SecureApiQualityPlatform.Tests.FailureMessageTests.FailedCheck_MessageIncludesExpectationAndObservedEvidence(String scenario, String firstEvidence, String secondEvidence)
+   at InvokeStub_FailureMessageTests.FailedCheck_MessageIncludesExpectationAndObservedEvidence(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+
+  Failed FailedCheck_MessageIncludesExpectationAndObservedEvidence ("Authentication","authentication-required","HTTP 200") [< 1 ms]
+  Error Message:
+   Test method SecureApiQualityPlatform.Tests.FailureMessageTests.FailedCheck_MessageIncludesExpectationAndObservedEvidence threw exception: 
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)
+  Stack Trace:
+      at SecureApiQualityPlatform.Tests.FailureMessageTests.FailedCheck_MessageIncludesExpectationAndObservedEvidence(String scenario, String firstEvidence, String secondEvidence)
+   at InvokeStub_FailureMessageTests.FailedCheck_MessageIncludesExpectationAndObservedEvidence(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+
+  Failed FailedCheck_MessageIncludesExpectationAndObservedEvidence ("ContentType","application/json","text/html") [< 1 ms]
+  Error Message:
+   Test method SecureApiQualityPlatform.Tests.FailureMessageTests.FailedCheck_MessageIncludesExpectationAndObservedEvidence threw exception: 
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)
+  Stack Trace:
+      at SecureApiQualityPlatform.Tests.FailureMessageTests.FailedCheck_MessageIncludesExpectationAndObservedEvidence(String scenario, String firstEvidence, String secondEvidence)
+   at InvokeStub_FailureMessageTests.FailedCheck_MessageIncludesExpectationAndObservedEvidence(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+
+  Failed FailedCheck_MessageIncludesExpectationAndObservedEvidence ("Availability","Request failed","Request timed out.") [< 1 ms]
+  Error Message:
+   Test method SecureApiQualityPlatform.Tests.FailureMessageTests.FailedCheck_MessageIncludesExpectationAndObservedEvidence threw exception: 
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)
+  Stack Trace:
+      at SecureApiQualityPlatform.Tests.FailureMessageTests.FailedCheck_MessageIncludesExpectationAndObservedEvidence(String scenario, String firstEvidence, String secondEvidence)
+   at InvokeStub_FailureMessageTests.FailedCheck_MessageIncludesExpectationAndObservedEvidence(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+
+  Failed TryAddApi_DuplicateBaseUrl_ReturnsFalse [< 1 ms]
+  Error Message:
+   Test method SecureApiQualityPlatform.Tests.RegistrationValidationTests.TryAddApi_DuplicateBaseUrl_ReturnsFalse threw exception: 
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)
+  Stack Trace:
+      at SecureApiQualityPlatform.Tests.RegistrationValidationTests.TryAddApi_DuplicateBaseUrl_ReturnsFalse()
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+  Failed TryAddApi_DifferentBaseUrl_ReturnsTrue [< 1 ms]
+  Error Message:
+   Test method SecureApiQualityPlatform.Tests.RegistrationValidationTests.TryAddApi_DifferentBaseUrl_ReturnsTrue threw exception: 
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)
+  Stack Trace:
+      at SecureApiQualityPlatform.Tests.RegistrationValidationTests.TryAddApi_DifferentBaseUrl_ReturnsTrue()
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+  Failed TryAddEndpoint_DuplicateMethodAndPath_ReturnsFalse [< 1 ms]
+  Error Message:
+   Test method SecureApiQualityPlatform.Tests.RegistrationValidationTests.TryAddEndpoint_DuplicateMethodAndPath_ReturnsFalse threw exception: 
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)
+  Stack Trace:
+      at SecureApiQualityPlatform.Tests.RegistrationValidationTests.TryAddEndpoint_DuplicateMethodAndPath_ReturnsFalse()
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+  Failed TryAddEndpoint_SamePathDifferentMethod_ReturnsTrue [< 1 ms]
+  Error Message:
+   Test method SecureApiQualityPlatform.Tests.RegistrationValidationTests.TryAddEndpoint_SamePathDifferentMethod_ReturnsTrue threw exception: 
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)
+  Stack Trace:
+      at SecureApiQualityPlatform.Tests.RegistrationValidationTests.TryAddEndpoint_SamePathDifferentMethod_ReturnsTrue()
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+  Failed ExportResultsCsv_IncludesQaContextAndEscapesCsvValues [< 1 ms]
+  Error Message:
+   Test method SecureApiQualityPlatform.Tests.ReportsControllerTests.ExportResultsCsv_IncludesQaContextAndEscapesCsvValues threw exception: 
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)
+  Stack Trace:
+      at SecureApiQualityPlatform.Tests.ReportsControllerTests.ExportResultsCsv_IncludesQaContextAndEscapesCsvValues()
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+  Failed ExportDefectsCsv_IncludesLifecycleEvidenceAndEscapesCsvValues [< 1 ms]
+  Error Message:
+   Test method SecureApiQualityPlatform.Tests.ReportsControllerTests.ExportDefectsCsv_IncludesLifecycleEvidenceAndEscapesCsvValues threw exception: 
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)
+  Stack Trace:
+      at SecureApiQualityPlatform.Tests.ReportsControllerTests.ExportDefectsCsv_IncludesLifecycleEvidenceAndEscapesCsvValues()
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+  Failed ExportResultsCsv_WithNoResults_ReturnsHeaderOnly [12 ms]
+  Error Message:
+   Test method SecureApiQualityPlatform.Tests.ReportsControllerTests.ExportResultsCsv_WithNoResults_ReturnsHeaderOnly threw exception: 
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)
+  Stack Trace:
+      at SecureApiQualityPlatform.Tests.ReportsControllerTests.ExportResultsCsv_WithNoResults_ReturnsHeaderOnly()
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+  Failed ValidateAsync_ShouldRejectUrlsWithCredentials [5 ms]
+  Error Message:
+   Test method SecureApiQualityPlatform.Tests.UrlSafetyServiceTests.ValidateAsync_ShouldRejectUrlsWithCredentials threw exception: 
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)
+  Stack Trace:
+      at SecureApiQualityPlatform.Tests.UrlSafetyServiceTests.ValidateAsync_ShouldRejectUrlsWithCredentials()
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start[TStateMachine](TStateMachine& stateMachine)
+   at SecureApiQualityPlatform.Tests.UrlSafetyServiceTests.ValidateAsync_ShouldRejectUrlsWithCredentials()
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+Results File: C:\Users\zsr20\source\repos\3ilmar\apiguard\docs\qa-evidence\2026-10-18\pt01-20261018T053714804Z-49fe7e\full-suite\full-suite.trx
+
+Test Run Failed.
+Total tests: 36
+     Failed: 36
+ Total time: 5.6015 Seconds
+
+Attachments:
+  C:\Users\zsr20\source\repos\3ilmar\apiguard\docs\qa-evidence\2026-10-18\pt01-20261018T053714804Z-49fe7e\full-suite\004ec905-a8ee-4cc6-ae7c-487ec62418fe\coverage.cobertura.xml

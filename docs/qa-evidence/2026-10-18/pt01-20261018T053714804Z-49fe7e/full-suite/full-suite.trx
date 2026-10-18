@@ -1,0 +1,654 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="e45d9863-2b7f-4d60-99ba-3eb8b94ef6e1" name="zsr20@哈迪斯的宠物二 2026-10-18 18:37:28" runUser="哈迪斯的宠物二\zsr20" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-10-18T18:37:28.7092342+13:00" queuing="2026-10-18T18:37:28.7092346+13:00" start="2026-10-18T18:37:23.7144481+13:00" finish="2026-10-18T18:37:29.3336499+13:00" />
+  <TestSettings name="default" id="65805125-a2d3-4a6f-b326-76f878d7a24b">
+    <Deployment runDeploymentRoot="zsr20_哈迪斯的宠物二_2026-10-18_18_37_28" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="633ee5f4-b978-405d-bfcf-922a43810d97" testId="f5e491cb-0ec2-2f01-137d-6183d964dab0" testName="PT01_DashboardHttpWithTwoThousandResults_UnderTwoSeconds" computerName="哈迪斯的宠物二" duration="00:00:00.0163667" startTime="2026-10-18T18:37:28.6789528+13:00" endTime="2026-10-18T18:37:28.6955150+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="633ee5f4-b978-405d-bfcf-922a43810d97">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method SecureApiQualityPlatform.Tests.DashboardPerformanceTests.PT01_DashboardHttpWithTwoThousandResults_UnderTwoSeconds threw exception: &#xD;
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)</Message>
+          <StackTrace>    at SecureApiQualityPlatform.Tests.DashboardPerformanceTests.PT01_DashboardHttpWithTwoThousandResults_UnderTwoSeconds()&#xD;
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start[TStateMachine](TStateMachine&amp; stateMachine)&#xD;
+   at SecureApiQualityPlatform.Tests.DashboardPerformanceTests.PT01_DashboardHttpWithTwoThousandResults_UnderTwoSeconds()&#xD;
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)&#xD;
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="7855d614-bd6a-4483-acd1-29e9832be69f" testId="085fd098-71be-09df-65c7-832b7a190325" testName="Build_ResultsWithoutTimings_StillCalculatesPassRate" computerName="哈迪斯的宠物二" duration="00:00:00.0005222" startTime="2026-10-18T18:37:28.6724612+13:00" endTime="2026-10-18T18:37:28.6732080+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7855d614-bd6a-4483-acd1-29e9832be69f">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method SecureApiQualityPlatform.Tests.DashboardEnhancementTests.Build_ResultsWithoutTimings_StillCalculatesPassRate threw exception: &#xD;
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)</Message>
+          <StackTrace>    at SecureApiQualityPlatform.Tests.DashboardEnhancementTests.Build_ResultsWithoutTimings_StillCalculatesPassRate()&#xD;
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)&#xD;
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="f0834285-0e84-436f-aec0-f6cbe0b4f843" testId="cbac041c-ce35-4542-e074-b446b770b3d5" testName="PT01_BuildWithTwoThousandResults_UnderTwoSeconds" computerName="哈迪斯的宠物二" duration="00:00:00.0021255" startTime="2026-10-18T18:37:28.6755913+13:00" endTime="2026-10-18T18:37:28.6782090+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f0834285-0e84-436f-aec0-f6cbe0b4f843">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method SecureApiQualityPlatform.Tests.DashboardPerformanceTests.PT01_BuildWithTwoThousandResults_UnderTwoSeconds threw exception: &#xD;
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)</Message>
+          <StackTrace>    at SecureApiQualityPlatform.Tests.DashboardPerformanceTests.PT01_BuildWithTwoThousandResults_UnderTwoSeconds()&#xD;
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)&#xD;
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="1006c9af-f5c5-45da-9330-38274fd6375c" testId="65865416-f6d6-fcdb-2419-dc948f4c1962" testName="TryAddApi_DuplicateBaseUrl_ReturnsFalse" computerName="哈迪斯的宠物二" duration="00:00:00.0005304" startTime="2026-10-18T18:37:28.7247578+13:00" endTime="2026-10-18T18:37:28.7256224+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1006c9af-f5c5-45da-9330-38274fd6375c">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method SecureApiQualityPlatform.Tests.RegistrationValidationTests.TryAddApi_DuplicateBaseUrl_ReturnsFalse threw exception: &#xD;
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)</Message>
+          <StackTrace>    at SecureApiQualityPlatform.Tests.RegistrationValidationTests.TryAddApi_DuplicateBaseUrl_ReturnsFalse()&#xD;
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)&#xD;
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="8c8dd92e-a553-4326-948a-0cc6288e3abf" testId="294e842f-7cc7-c93f-4ab0-d13b3db32992" testName="FailedCheck_MessageIncludesExpectationAndObservedEvidence (&quot;ContentType&quot;,&quot;application/json&quot;,&quot;text/html&quot;)" computerName="哈迪斯的宠物二" duration="00:00:00.0004253" startTime="2026-10-18T18:37:28.7165302+13:00" endTime="2026-10-18T18:37:28.7175675+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8c8dd92e-a553-4326-948a-0cc6288e3abf">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method SecureApiQualityPlatform.Tests.FailureMessageTests.FailedCheck_MessageIncludesExpectationAndObservedEvidence threw exception: &#xD;
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)</Message>
+          <StackTrace>    at SecureApiQualityPlatform.Tests.FailureMessageTests.FailedCheck_MessageIncludesExpectationAndObservedEvidence(String scenario, String firstEvidence, String secondEvidence)&#xD;
+   at InvokeStub_FailureMessageTests.FailedCheck_MessageIncludesExpectationAndObservedEvidence(Object, Span`1)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)&#xD;
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="055b4ee5-4b75-4984-b465-943dd84b25de" testId="1c43688b-1e16-7cd6-9619-f52d5c2f185a" testName="FailedCheck_MessageIncludesExpectationAndObservedEvidence (&quot;Authentication&quot;,&quot;authentication-required&quot;,&quot;HTTP 200&quot;)" computerName="哈迪斯的宠物二" duration="00:00:00.0004792" startTime="2026-10-18T18:37:28.7147052+13:00" endTime="2026-10-18T18:37:28.7154740+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="055b4ee5-4b75-4984-b465-943dd84b25de">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method SecureApiQualityPlatform.Tests.FailureMessageTests.FailedCheck_MessageIncludesExpectationAndObservedEvidence threw exception: &#xD;
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)</Message>
+          <StackTrace>    at SecureApiQualityPlatform.Tests.FailureMessageTests.FailedCheck_MessageIncludesExpectationAndObservedEvidence(String scenario, String firstEvidence, String secondEvidence)&#xD;
+   at InvokeStub_FailureMessageTests.FailedCheck_MessageIncludesExpectationAndObservedEvidence(Object, Span`1)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)&#xD;
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="cefe18a6-c257-4962-b8f4-5557448c1eba" testId="6bd22966-3633-c58c-d222-f5d0dc1adae5" testName="TryAddEndpoint_SamePathDifferentMethod_ReturnsTrue" computerName="哈迪斯的宠物二" duration="00:00:00.0009867" startTime="2026-10-18T18:37:28.7323880+13:00" endTime="2026-10-18T18:37:28.7336750+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cefe18a6-c257-4962-b8f4-5557448c1eba">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method SecureApiQualityPlatform.Tests.RegistrationValidationTests.TryAddEndpoint_SamePathDifferentMethod_ReturnsTrue threw exception: &#xD;
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)</Message>
+          <StackTrace>    at SecureApiQualityPlatform.Tests.RegistrationValidationTests.TryAddEndpoint_SamePathDifferentMethod_ReturnsTrue()&#xD;
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)&#xD;
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="a2e1685a-c09d-4d63-8700-48a4e44d574a" testId="8db9f59e-020e-b3e3-1fa7-90388ed937d8" testName="ExportResultsCsv_WithNoResults_ReturnsHeaderOnly" computerName="哈迪斯的宠物二" duration="00:00:00.0126330" startTime="2026-10-18T18:37:28.7402555+13:00" endTime="2026-10-18T18:37:28.7531222+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a2e1685a-c09d-4d63-8700-48a4e44d574a">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method SecureApiQualityPlatform.Tests.ReportsControllerTests.ExportResultsCsv_WithNoResults_ReturnsHeaderOnly threw exception: &#xD;
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)</Message>
+          <StackTrace>    at SecureApiQualityPlatform.Tests.ReportsControllerTests.ExportResultsCsv_WithNoResults_ReturnsHeaderOnly()&#xD;
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)&#xD;
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="990cf2f4-de37-4d13-8450-b87708602259" testId="8552508c-77b6-a029-5ef0-969c55bcb922" testName="Build_UnorderedAndTiedDefects_PreservesSnapshotOrderAtDisplayLimit" computerName="哈迪斯的宠物二" duration="00:00:00.0004603" startTime="2026-10-18T18:37:28.6704596+13:00" endTime="2026-10-18T18:37:28.6711192+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="990cf2f4-de37-4d13-8450-b87708602259">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method SecureApiQualityPlatform.Tests.DashboardEnhancementTests.Build_UnorderedAndTiedDefects_PreservesSnapshotOrderAtDisplayLimit threw exception: &#xD;
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)</Message>
+          <StackTrace>    at SecureApiQualityPlatform.Tests.DashboardEnhancementTests.Build_UnorderedAndTiedDefects_PreservesSnapshotOrderAtDisplayLimit()&#xD;
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)&#xD;
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="7ce1c629-a70a-4b56-9ca9-0b16948e37cf" testId="d8bee227-7a93-6861-d5dc-296f7e8363ef" testName="FailedCheck_MessageIncludesExpectationAndObservedEvidence (&quot;Timing&quot;,&quot;1001 ms&quot;,&quot;1000 ms threshold&quot;)" computerName="哈迪斯的宠物二" duration="00:00:00.0010794" startTime="2026-10-18T18:37:28.7122599+13:00" endTime="2026-10-18T18:37:28.7136078+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7ce1c629-a70a-4b56-9ca9-0b16948e37cf">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method SecureApiQualityPlatform.Tests.FailureMessageTests.FailedCheck_MessageIncludesExpectationAndObservedEvidence threw exception: &#xD;
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)</Message>
+          <StackTrace>    at SecureApiQualityPlatform.Tests.FailureMessageTests.FailedCheck_MessageIncludesExpectationAndObservedEvidence(String scenario, String firstEvidence, String secondEvidence)&#xD;
+   at InvokeStub_FailureMessageTests.FailedCheck_MessageIncludesExpectationAndObservedEvidence(Object, Span`1)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)&#xD;
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="ae37bd21-7890-4e60-939d-f37409c405ad" testId="4bbed8f6-fd7d-4f24-d8aa-a303b01a8c2d" testName="ExportResultsCsv_IncludesQaContextAndEscapesCsvValues" computerName="哈迪斯的宠物二" duration="00:00:00.0006209" startTime="2026-10-18T18:37:28.7358325+13:00" endTime="2026-10-18T18:37:28.7367806+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ae37bd21-7890-4e60-939d-f37409c405ad">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method SecureApiQualityPlatform.Tests.ReportsControllerTests.ExportResultsCsv_IncludesQaContextAndEscapesCsvValues threw exception: &#xD;
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)</Message>
+          <StackTrace>    at SecureApiQualityPlatform.Tests.ReportsControllerTests.ExportResultsCsv_IncludesQaContextAndEscapesCsvValues()&#xD;
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)&#xD;
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="28535374-0ca5-4b91-a628-af9b1d2f7f37" testId="a19aa752-52eb-8815-8ae3-f495448a0b7b" testName="ExpectedStatus_WhenMatching_ReturnsPass" computerName="哈迪斯的宠物二" duration="00:00:00.0213550" startTime="2026-10-18T18:37:28.5792175+13:00" endTime="2026-10-18T18:37:28.6237527+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="28535374-0ca5-4b91-a628-af9b1d2f7f37">
+      <Output>
+        <ErrorInfo>
+          <Message>Unable to create instance of class SecureApiQualityPlatform.Tests.CheckEvaluatorTests. Error: System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7).</Message>
+          <StackTrace>    at SecureApiQualityPlatform.Tests.CheckEvaluatorTests..ctor()&#xD;
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)&#xD;
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="3ebcd785-4080-4448-906f-4c2906e5f153" testId="4c9fffbc-b1b7-a957-ae5a-aff66b7ced60" testName="TryAddEndpoint_DuplicateMethodAndPath_ReturnsFalse" computerName="哈迪斯的宠物二" duration="00:00:00.0006826" startTime="2026-10-18T18:37:28.7296152+13:00" endTime="2026-10-18T18:37:28.7307970+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3ebcd785-4080-4448-906f-4c2906e5f153">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method SecureApiQualityPlatform.Tests.RegistrationValidationTests.TryAddEndpoint_DuplicateMethodAndPath_ReturnsFalse threw exception: &#xD;
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)</Message>
+          <StackTrace>    at SecureApiQualityPlatform.Tests.RegistrationValidationTests.TryAddEndpoint_DuplicateMethodAndPath_ReturnsFalse()&#xD;
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)&#xD;
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="454300a8-dff9-4c42-892a-f49f524f78da" testId="b2e535f7-ca6a-d0cf-cacd-6c3b390a241a" testName="ResponseTime_AtThreshold_ReturnsPass" computerName="哈迪斯的宠物二" duration="00:00:00.0003105" startTime="2026-10-18T18:37:28.6392319+13:00" endTime="2026-10-18T18:37:28.6396706+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="454300a8-dff9-4c42-892a-f49f524f78da">
+      <Output>
+        <ErrorInfo>
+          <Message>Unable to create instance of class SecureApiQualityPlatform.Tests.CheckEvaluatorTests. Error: System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7).</Message>
+          <StackTrace>    at SecureApiQualityPlatform.Tests.CheckEvaluatorTests..ctor()&#xD;
+   at InvokeStub_CheckEvaluatorTests..ctor(Object, Object, IntPtr*)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)&#xD;
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="20aac8b6-1de9-451c-bb4c-a3722a890583" testId="f00c1b4f-9538-a550-be3d-8c300ed6e0eb" testName="Build_CountsOnlyOpenHighOrCriticalDefectsAsHighRisk" computerName="哈迪斯的宠物二" duration="00:00:00.0003038" startTime="2026-10-18T18:37:28.7012548+13:00" endTime="2026-10-18T18:37:28.7016824+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="20aac8b6-1de9-451c-bb4c-a3722a890583">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method SecureApiQualityPlatform.Tests.DashboardServiceTests.Build_CountsOnlyOpenHighOrCriticalDefectsAsHighRisk threw exception: &#xD;
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)</Message>
+          <StackTrace>    at SecureApiQualityPlatform.Tests.DashboardServiceTests.Build_CountsOnlyOpenHighOrCriticalDefectsAsHighRisk()&#xD;
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)&#xD;
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="cf1fbb90-5868-4686-ad25-00d8bb5c812d" testId="a92c4c74-0f8c-cdca-1964-dd47cc150180" testName="TryAddApi_DifferentBaseUrl_ReturnsTrue" computerName="哈迪斯的宠物二" duration="00:00:00.0006642" startTime="2026-10-18T18:37:28.7266056+13:00" endTime="2026-10-18T18:37:28.7274619+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cf1fbb90-5868-4686-ad25-00d8bb5c812d">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method SecureApiQualityPlatform.Tests.RegistrationValidationTests.TryAddApi_DifferentBaseUrl_ReturnsTrue threw exception: &#xD;
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)</Message>
+          <StackTrace>    at SecureApiQualityPlatform.Tests.RegistrationValidationTests.TryAddApi_DifferentBaseUrl_ReturnsTrue()&#xD;
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)&#xD;
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="5da76f83-76a4-48d5-a0a5-9f20752a5e91" testId="d230ef21-5cb8-5a53-0778-fdd78d9a2d86" testName="ContentType_WhenExpectedMatches_ReturnsPass" computerName="哈迪斯的宠物二" duration="00:00:00.0006032" startTime="2026-10-18T18:37:28.6459946+13:00" endTime="2026-10-18T18:37:28.6470045+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5da76f83-76a4-48d5-a0a5-9f20752a5e91">
+      <Output>
+        <ErrorInfo>
+          <Message>Unable to create instance of class SecureApiQualityPlatform.Tests.CheckEvaluatorTests. Error: System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7).</Message>
+          <StackTrace>    at SecureApiQualityPlatform.Tests.CheckEvaluatorTests..ctor()&#xD;
+   at InvokeStub_CheckEvaluatorTests..ctor(Object, Object, IntPtr*)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)&#xD;
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="ccddfbdd-ba3e-4512-897d-a9b3d171f1c6" testId="9730722e-2f59-8b10-0e48-329c410d77f4" testName="Build_HandlesNoCheckDataWithoutInvalidMetrics" computerName="哈迪斯的宠物二" duration="00:00:00.0005420" startTime="2026-10-18T18:37:28.6999087+13:00" endTime="2026-10-18T18:37:28.7006211+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ccddfbdd-ba3e-4512-897d-a9b3d171f1c6">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method SecureApiQualityPlatform.Tests.DashboardServiceTests.Build_HandlesNoCheckDataWithoutInvalidMetrics threw exception: &#xD;
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)</Message>
+          <StackTrace>    at SecureApiQualityPlatform.Tests.DashboardServiceTests.Build_HandlesNoCheckDataWithoutInvalidMetrics()&#xD;
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)&#xD;
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="3672eae7-8cc1-4f3f-9f91-3bcc2647912b" testId="1263fdce-489b-1284-a0ab-41100d7ae80b" testName="ResponseTime_OverThreshold_ReturnsFail" computerName="哈迪斯的宠物二" duration="00:00:00.0003081" startTime="2026-10-18T18:37:28.6406474+13:00" endTime="2026-10-18T18:37:28.6410713+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3672eae7-8cc1-4f3f-9f91-3bcc2647912b">
+      <Output>
+        <ErrorInfo>
+          <Message>Unable to create instance of class SecureApiQualityPlatform.Tests.CheckEvaluatorTests. Error: System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7).</Message>
+          <StackTrace>    at SecureApiQualityPlatform.Tests.CheckEvaluatorTests..ctor()&#xD;
+   at InvokeStub_CheckEvaluatorTests..ctor(Object, Object, IntPtr*)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)&#xD;
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="251bf655-3264-46ff-87f8-bba040467b69" testId="c6770dfd-4066-fc66-36ae-d4996507c576" testName="Build_UnorderedResults_StillReturnsLatestTwelve" computerName="哈迪斯的宠物二" duration="00:00:00.0003478" startTime="2026-10-18T18:37:28.6682956+13:00" endTime="2026-10-18T18:37:28.6687745+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="251bf655-3264-46ff-87f8-bba040467b69">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method SecureApiQualityPlatform.Tests.DashboardEnhancementTests.Build_UnorderedResults_StillReturnsLatestTwelve threw exception: &#xD;
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)</Message>
+          <StackTrace>    at SecureApiQualityPlatform.Tests.DashboardEnhancementTests.Build_UnorderedResults_StillReturnsLatestTwelve()&#xD;
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)&#xD;
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="0e791ca8-5c5c-43b6-bb9f-07d3964f1d8c" testId="71d8db1b-2303-65d0-7ffe-b60a288397bc" testName="FailedCheck_CreatesDefectWithMappedPriority" computerName="哈迪斯的宠物二" duration="00:00:00.0004986" startTime="2026-10-18T18:37:28.7038856+13:00" endTime="2026-10-18T18:37:28.7046046+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0e791ca8-5c5c-43b6-bb9f-07d3964f1d8c">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method SecureApiQualityPlatform.Tests.DefectLifecycleServiceTests.FailedCheck_CreatesDefectWithMappedPriority threw exception: &#xD;
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)</Message>
+          <StackTrace>    at SecureApiQualityPlatform.Tests.DefectLifecycleServiceTests.FailedCheck_CreatesDefectWithMappedPriority()&#xD;
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)&#xD;
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="cf31e07f-e533-4fe1-b85c-662a637e9296" testId="6790e69c-5f97-43e3-5b41-6ae36496a697" testName="Build_NoDefects_StillProvidesAllSeverityLabels" computerName="哈迪斯的宠物二" duration="00:00:00.0005781" startTime="2026-10-18T18:37:28.6668245+13:00" endTime="2026-10-18T18:37:28.6675991+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cf31e07f-e533-4fe1-b85c-662a637e9296">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method SecureApiQualityPlatform.Tests.DashboardEnhancementTests.Build_NoDefects_StillProvidesAllSeverityLabels threw exception: &#xD;
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)</Message>
+          <StackTrace>    at SecureApiQualityPlatform.Tests.DashboardEnhancementTests.Build_NoDefects_StillProvidesAllSeverityLabels()&#xD;
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)&#xD;
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="3ac06225-1907-42c7-98e2-8091633cf972" testId="fd19f53c-7fa8-3ab6-6d67-3198c903af26" testName="Build_OnlyClosedAndDeferredDefects_HasNoOpenSeverityCounts" computerName="哈迪斯的宠物二" duration="00:00:00.0003809" startTime="2026-10-18T18:37:28.6743374+13:00" endTime="2026-10-18T18:37:28.6748734+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3ac06225-1907-42c7-98e2-8091633cf972">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method SecureApiQualityPlatform.Tests.DashboardEnhancementTests.Build_OnlyClosedAndDeferredDefects_HasNoOpenSeverityCounts threw exception: &#xD;
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)</Message>
+          <StackTrace>    at SecureApiQualityPlatform.Tests.DashboardEnhancementTests.Build_OnlyClosedAndDeferredDefects_HasNoOpenSeverityCounts()&#xD;
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)&#xD;
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="c2984c4a-fb9f-453a-b676-6d2ef5164da3" testId="838b28cd-4bd3-b7e0-5405-e90246fecac9" testName="ExportDefectsCsv_IncludesLifecycleEvidenceAndEscapesCsvValues" computerName="哈迪斯的宠物二" duration="00:00:00.0007995" startTime="2026-10-18T18:37:28.7380916+13:00" endTime="2026-10-18T18:37:28.7392308+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c2984c4a-fb9f-453a-b676-6d2ef5164da3">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method SecureApiQualityPlatform.Tests.ReportsControllerTests.ExportDefectsCsv_IncludesLifecycleEvidenceAndEscapesCsvValues threw exception: &#xD;
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)</Message>
+          <StackTrace>    at SecureApiQualityPlatform.Tests.ReportsControllerTests.ExportDefectsCsv_IncludesLifecycleEvidenceAndEscapesCsvValues()&#xD;
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)&#xD;
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="9990a0e6-b3d4-465b-8bad-3bc0f138e541" testId="2e31e6a4-191c-e13b-3757-68decc27192f" testName="ExpectedStatus_WhenDifferent_ReturnsFail" computerName="哈迪斯的宠物二" duration="00:00:00.0006549" startTime="2026-10-18T18:37:28.6370371+13:00" endTime="2026-10-18T18:37:28.6379421+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9990a0e6-b3d4-465b-8bad-3bc0f138e541">
+      <Output>
+        <ErrorInfo>
+          <Message>Unable to create instance of class SecureApiQualityPlatform.Tests.CheckEvaluatorTests. Error: System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7).</Message>
+          <StackTrace>    at SecureApiQualityPlatform.Tests.CheckEvaluatorTests..ctor()&#xD;
+   at InvokeStub_CheckEvaluatorTests..ctor(Object, Object, IntPtr*)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)&#xD;
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="60228320-4bd0-43da-b301-1af0eaf4864a" testId="071a3811-b82e-d977-aa74-fde26c0d4bf8" testName="FailedCheck_MessageIncludesExpectationAndObservedEvidence (&quot;Status&quot;,&quot;Expected HTTP 200&quot;,&quot;received 400&quot;)" computerName="哈迪斯的宠物二" duration="00:00:00.0004814" startTime="2026-10-18T18:37:28.7067170+13:00" endTime="2026-10-18T18:37:28.7113691+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="60228320-4bd0-43da-b301-1af0eaf4864a">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method SecureApiQualityPlatform.Tests.FailureMessageTests.FailedCheck_MessageIncludesExpectationAndObservedEvidence threw exception: &#xD;
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)</Message>
+          <StackTrace>    at SecureApiQualityPlatform.Tests.FailureMessageTests.FailedCheck_MessageIncludesExpectationAndObservedEvidence(String scenario, String firstEvidence, String secondEvidence)&#xD;
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)&#xD;
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="c794e2a0-bebf-424e-987d-8d7a1ade09fe" testId="80634be9-e703-586b-8bfa-bc1ea6156ce6" testName="ValidateAsync_ShouldRejectUrlsWithCredentials" computerName="哈迪斯的宠物二" duration="00:00:00.0052365" startTime="2026-10-18T18:37:28.7546708+13:00" endTime="2026-10-18T18:37:28.7612211+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c794e2a0-bebf-424e-987d-8d7a1ade09fe">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method SecureApiQualityPlatform.Tests.UrlSafetyServiceTests.ValidateAsync_ShouldRejectUrlsWithCredentials threw exception: &#xD;
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)</Message>
+          <StackTrace>    at SecureApiQualityPlatform.Tests.UrlSafetyServiceTests.ValidateAsync_ShouldRejectUrlsWithCredentials()&#xD;
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start[TStateMachine](TStateMachine&amp; stateMachine)&#xD;
+   at SecureApiQualityPlatform.Tests.UrlSafetyServiceTests.ValidateAsync_ShouldRejectUrlsWithCredentials()&#xD;
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)&#xD;
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="eacec7f7-3e61-49a0-83a5-0e5e27b29dde" testId="65399025-2ad8-6d1d-5877-fa4409694b4b" testName="Build_OpenSeverityDistribution_ExcludesClosedAndDeferred" computerName="哈迪斯的宠物二" duration="00:00:00.0032409" startTime="2026-10-18T18:37:28.6484504+13:00" endTime="2026-10-18T18:37:28.6521131+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="eacec7f7-3e61-49a0-83a5-0e5e27b29dde">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method SecureApiQualityPlatform.Tests.DashboardEnhancementTests.Build_OpenSeverityDistribution_ExcludesClosedAndDeferred threw exception: &#xD;
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)</Message>
+          <StackTrace>    at SecureApiQualityPlatform.Tests.DashboardEnhancementTests.Build_OpenSeverityDistribution_ExcludesClosedAndDeferred()&#xD;
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)&#xD;
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="05619ca5-52b4-4418-9e5f-191ebd9f1692" testId="ce0f242e-138a-310f-2c13-e81428762193" testName="AuthenticationProtection_WhenRequiredButReturnsOk_ReturnsCriticalFail" computerName="哈迪斯的宠物二" duration="00:00:00.0004978" startTime="2026-10-18T18:37:28.6435739+13:00" endTime="2026-10-18T18:37:28.6442814+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="05619ca5-52b4-4418-9e5f-191ebd9f1692">
+      <Output>
+        <ErrorInfo>
+          <Message>Unable to create instance of class SecureApiQualityPlatform.Tests.CheckEvaluatorTests. Error: System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7).</Message>
+          <StackTrace>    at SecureApiQualityPlatform.Tests.CheckEvaluatorTests..ctor()&#xD;
+   at InvokeStub_CheckEvaluatorTests..ctor(Object, Object, IntPtr*)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)&#xD;
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="a27c9c34-df17-4cfc-853d-93c21f42b15b" testId="cb9e7789-8f4e-d792-ab39-460be47464e3" testName="Build_CalculatesCheckAndResponseTimeMetrics" computerName="哈迪斯的宠物二" duration="00:00:00.0004408" startTime="2026-10-18T18:37:28.6962907+13:00" endTime="2026-10-18T18:37:28.6969595+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a27c9c34-df17-4cfc-853d-93c21f42b15b">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method SecureApiQualityPlatform.Tests.DashboardServiceTests.Build_CalculatesCheckAndResponseTimeMetrics threw exception: &#xD;
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)</Message>
+          <StackTrace>    at SecureApiQualityPlatform.Tests.DashboardServiceTests.Build_CalculatesCheckAndResponseTimeMetrics()&#xD;
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)&#xD;
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="170b9ea8-1d3b-4f03-9940-4e11ea5e81dc" testId="8047cc13-9577-2909-0e36-0ff2d64566f8" testName="FailedCheck_MessageIncludesExpectationAndObservedEvidence (&quot;Availability&quot;,&quot;Request failed&quot;,&quot;Request timed out.&quot;)" computerName="哈迪斯的宠物二" duration="00:00:00.0005128" startTime="2026-10-18T18:37:28.7221574+13:00" endTime="2026-10-18T18:37:28.7230259+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="170b9ea8-1d3b-4f03-9940-4e11ea5e81dc">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method SecureApiQualityPlatform.Tests.FailureMessageTests.FailedCheck_MessageIncludesExpectationAndObservedEvidence threw exception: &#xD;
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)</Message>
+          <StackTrace>    at SecureApiQualityPlatform.Tests.FailureMessageTests.FailedCheck_MessageIncludesExpectationAndObservedEvidence(String scenario, String firstEvidence, String secondEvidence)&#xD;
+   at InvokeStub_FailureMessageTests.FailedCheck_MessageIncludesExpectationAndObservedEvidence(Object, Span`1)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)&#xD;
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="f21511d6-6a15-4d47-bd22-755100e88429" testId="bf141455-ff5b-99b7-f6b9-bfb9cf9a4c98" testName="PassingRetest_ClosesResolvedDefect" computerName="哈迪斯的宠物二" duration="00:00:00.0005336" startTime="2026-10-18T18:37:28.7053686+13:00" endTime="2026-10-18T18:37:28.7060467+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f21511d6-6a15-4d47-bd22-755100e88429">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method SecureApiQualityPlatform.Tests.DefectLifecycleServiceTests.PassingRetest_ClosesResolvedDefect threw exception: &#xD;
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)</Message>
+          <StackTrace>    at SecureApiQualityPlatform.Tests.DefectLifecycleServiceTests.PassingRetest_ClosesResolvedDefect()&#xD;
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)&#xD;
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="e6f44c87-d91e-4e7f-8935-ea1ed31b99f3" testId="7e416e17-8363-c334-f608-84c08dd4d700" testName="Build_TiedResults_PreservesSnapshotOrderAtDisplayLimit" computerName="哈迪斯的宠物二" duration="00:00:00.0002721" startTime="2026-10-18T18:37:28.6694000+13:00" endTime="2026-10-18T18:37:28.6697823+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e6f44c87-d91e-4e7f-8935-ea1ed31b99f3">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method SecureApiQualityPlatform.Tests.DashboardEnhancementTests.Build_TiedResults_PreservesSnapshotOrderAtDisplayLimit threw exception: &#xD;
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)</Message>
+          <StackTrace>    at SecureApiQualityPlatform.Tests.DashboardEnhancementTests.Build_TiedResults_PreservesSnapshotOrderAtDisplayLimit()&#xD;
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)&#xD;
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="2e0eaddb-9c79-4eb3-b4ee-241183b814b0" testId="373e2db5-fa31-84ef-f7a7-f5c4a6b9d876" testName="Build_ReturnsMostRecentChecksAndDefectsWithinDisplayLimits" computerName="哈迪斯的宠物二" duration="00:00:00.0004424" startTime="2026-10-18T18:37:28.7025515+13:00" endTime="2026-10-18T18:37:28.7031724+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2e0eaddb-9c79-4eb3-b4ee-241183b814b0">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method SecureApiQualityPlatform.Tests.DashboardServiceTests.Build_ReturnsMostRecentChecksAndDefectsWithinDisplayLimits threw exception: &#xD;
+System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)</Message>
+          <StackTrace>    at SecureApiQualityPlatform.Tests.DashboardServiceTests.Build_ReturnsMostRecentChecksAndDefectsWithinDisplayLimits()&#xD;
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)&#xD;
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="81830d31-720f-495a-9847-97b69d444c5a" testId="8795f816-f328-f85e-b229-d039dead8064" testName="Cors_WhenAuthRequiredAndWildcard_ReturnsFail" computerName="哈迪斯的宠物二" duration="00:00:00.0002964" startTime="2026-10-18T18:37:28.6449824+13:00" endTime="2026-10-18T18:37:28.6453980+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="81830d31-720f-495a-9847-97b69d444c5a">
+      <Output>
+        <ErrorInfo>
+          <Message>Unable to create instance of class SecureApiQualityPlatform.Tests.CheckEvaluatorTests. Error: System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7).</Message>
+          <StackTrace>    at SecureApiQualityPlatform.Tests.CheckEvaluatorTests..ctor()&#xD;
+   at InvokeStub_CheckEvaluatorTests..ctor(Object, Object, IntPtr*)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)&#xD;
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="6d94dfe9-073f-4278-bc49-6af8fc87fda6" testId="a913622e-a0b4-be1a-5c19-4fa0e2ca49ae" testName="AuthenticationProtection_WhenRequiredAndUnauthorized_ReturnsPass" computerName="哈迪斯的宠物二" duration="00:00:00.0003223" startTime="2026-10-18T18:37:28.6417210+13:00" endTime="2026-10-18T18:37:28.6421718+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6d94dfe9-073f-4278-bc49-6af8fc87fda6">
+      <Output>
+        <ErrorInfo>
+          <Message>Unable to create instance of class SecureApiQualityPlatform.Tests.CheckEvaluatorTests. Error: System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7).</Message>
+          <StackTrace>    at SecureApiQualityPlatform.Tests.CheckEvaluatorTests..ctor()&#xD;
+   at InvokeStub_CheckEvaluatorTests..ctor(Object, Object, IntPtr*)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)&#xD;
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="AuthenticationProtection_WhenRequiredButReturnsOk_ReturnsCriticalFail" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\release\net8.0\secureapiqualityplatform.tests.dll" id="ce0f242e-138a-310f-2c13-e81428762193">
+      <Execution id="05619ca5-52b4-4418-9e5f-191ebd9f1692" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.CheckEvaluatorTests" name="AuthenticationProtection_WhenRequiredButReturnsOk_ReturnsCriticalFail" />
+    </UnitTest>
+    <UnitTest name="FailedCheck_MessageIncludesExpectationAndObservedEvidence (&quot;Status&quot;,&quot;Expected HTTP 200&quot;,&quot;received 400&quot;)" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\release\net8.0\secureapiqualityplatform.tests.dll" id="071a3811-b82e-d977-aa74-fde26c0d4bf8">
+      <Execution id="60228320-4bd0-43da-b301-1af0eaf4864a" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.FailureMessageTests" name="FailedCheck_MessageIncludesExpectationAndObservedEvidence" />
+    </UnitTest>
+    <UnitTest name="FailedCheck_CreatesDefectWithMappedPriority" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\release\net8.0\secureapiqualityplatform.tests.dll" id="71d8db1b-2303-65d0-7ffe-b60a288397bc">
+      <Execution id="0e791ca8-5c5c-43b6-bb9f-07d3964f1d8c" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.DefectLifecycleServiceTests" name="FailedCheck_CreatesDefectWithMappedPriority" />
+    </UnitTest>
+    <UnitTest name="Build_CountsOnlyOpenHighOrCriticalDefectsAsHighRisk" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\release\net8.0\secureapiqualityplatform.tests.dll" id="f00c1b4f-9538-a550-be3d-8c300ed6e0eb">
+      <Execution id="20aac8b6-1de9-451c-bb4c-a3722a890583" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.DashboardServiceTests" name="Build_CountsOnlyOpenHighOrCriticalDefectsAsHighRisk" />
+    </UnitTest>
+    <UnitTest name="FailedCheck_MessageIncludesExpectationAndObservedEvidence (&quot;Timing&quot;,&quot;1001 ms&quot;,&quot;1000 ms threshold&quot;)" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\release\net8.0\secureapiqualityplatform.tests.dll" id="d8bee227-7a93-6861-d5dc-296f7e8363ef">
+      <Execution id="7ce1c629-a70a-4b56-9ca9-0b16948e37cf" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.FailureMessageTests" name="FailedCheck_MessageIncludesExpectationAndObservedEvidence" />
+    </UnitTest>
+    <UnitTest name="Build_UnorderedAndTiedDefects_PreservesSnapshotOrderAtDisplayLimit" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\release\net8.0\secureapiqualityplatform.tests.dll" id="8552508c-77b6-a029-5ef0-969c55bcb922">
+      <Execution id="990cf2f4-de37-4d13-8450-b87708602259" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.DashboardEnhancementTests" name="Build_UnorderedAndTiedDefects_PreservesSnapshotOrderAtDisplayLimit" />
+    </UnitTest>
+    <UnitTest name="Cors_WhenAuthRequiredAndWildcard_ReturnsFail" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\release\net8.0\secureapiqualityplatform.tests.dll" id="8795f816-f328-f85e-b229-d039dead8064">
+      <Execution id="81830d31-720f-495a-9847-97b69d444c5a" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.CheckEvaluatorTests" name="Cors_WhenAuthRequiredAndWildcard_ReturnsFail" />
+    </UnitTest>
+    <UnitTest name="FailedCheck_MessageIncludesExpectationAndObservedEvidence (&quot;Authentication&quot;,&quot;authentication-required&quot;,&quot;HTTP 200&quot;)" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\release\net8.0\secureapiqualityplatform.tests.dll" id="1c43688b-1e16-7cd6-9619-f52d5c2f185a">
+      <Execution id="055b4ee5-4b75-4984-b465-943dd84b25de" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.FailureMessageTests" name="FailedCheck_MessageIncludesExpectationAndObservedEvidence" />
+    </UnitTest>
+    <UnitTest name="PT01_DashboardHttpWithTwoThousandResults_UnderTwoSeconds" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\release\net8.0\secureapiqualityplatform.tests.dll" id="f5e491cb-0ec2-2f01-137d-6183d964dab0">
+      <TestCategory>
+        <TestCategoryItem TestCategory="Performance" />
+        <TestCategoryItem TestCategory="Integration" />
+      </TestCategory>
+      <Execution id="633ee5f4-b978-405d-bfcf-922a43810d97" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.DashboardPerformanceTests" name="PT01_DashboardHttpWithTwoThousandResults_UnderTwoSeconds" />
+    </UnitTest>
+    <UnitTest name="Build_ResultsWithoutTimings_StillCalculatesPassRate" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\release\net8.0\secureapiqualityplatform.tests.dll" id="085fd098-71be-09df-65c7-832b7a190325">
+      <Execution id="7855d614-bd6a-4483-acd1-29e9832be69f" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.DashboardEnhancementTests" name="Build_ResultsWithoutTimings_StillCalculatesPassRate" />
+    </UnitTest>
+    <UnitTest name="ExpectedStatus_WhenMatching_ReturnsPass" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\release\net8.0\secureapiqualityplatform.tests.dll" id="a19aa752-52eb-8815-8ae3-f495448a0b7b">
+      <Execution id="28535374-0ca5-4b91-a628-af9b1d2f7f37" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.CheckEvaluatorTests" name="ExpectedStatus_WhenMatching_ReturnsPass" />
+    </UnitTest>
+    <UnitTest name="ExportResultsCsv_IncludesQaContextAndEscapesCsvValues" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\release\net8.0\secureapiqualityplatform.tests.dll" id="4bbed8f6-fd7d-4f24-d8aa-a303b01a8c2d">
+      <Execution id="ae37bd21-7890-4e60-939d-f37409c405ad" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.ReportsControllerTests" name="ExportResultsCsv_IncludesQaContextAndEscapesCsvValues" />
+    </UnitTest>
+    <UnitTest name="TryAddEndpoint_SamePathDifferentMethod_ReturnsTrue" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\release\net8.0\secureapiqualityplatform.tests.dll" id="6bd22966-3633-c58c-d222-f5d0dc1adae5">
+      <Execution id="cefe18a6-c257-4962-b8f4-5557448c1eba" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.RegistrationValidationTests" name="TryAddEndpoint_SamePathDifferentMethod_ReturnsTrue" />
+    </UnitTest>
+    <UnitTest name="PassingRetest_ClosesResolvedDefect" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\release\net8.0\secureapiqualityplatform.tests.dll" id="bf141455-ff5b-99b7-f6b9-bfb9cf9a4c98">
+      <Execution id="f21511d6-6a15-4d47-bd22-755100e88429" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.DefectLifecycleServiceTests" name="PassingRetest_ClosesResolvedDefect" />
+    </UnitTest>
+    <UnitTest name="TryAddApi_DuplicateBaseUrl_ReturnsFalse" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\release\net8.0\secureapiqualityplatform.tests.dll" id="65865416-f6d6-fcdb-2419-dc948f4c1962">
+      <Execution id="1006c9af-f5c5-45da-9330-38274fd6375c" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.RegistrationValidationTests" name="TryAddApi_DuplicateBaseUrl_ReturnsFalse" />
+    </UnitTest>
+    <UnitTest name="FailedCheck_MessageIncludesExpectationAndObservedEvidence (&quot;Availability&quot;,&quot;Request failed&quot;,&quot;Request timed out.&quot;)" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\release\net8.0\secureapiqualityplatform.tests.dll" id="8047cc13-9577-2909-0e36-0ff2d64566f8">
+      <Execution id="170b9ea8-1d3b-4f03-9940-4e11ea5e81dc" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.FailureMessageTests" name="FailedCheck_MessageIncludesExpectationAndObservedEvidence" />
+    </UnitTest>
+    <UnitTest name="Build_OpenSeverityDistribution_ExcludesClosedAndDeferred" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\release\net8.0\secureapiqualityplatform.tests.dll" id="65399025-2ad8-6d1d-5877-fa4409694b4b">
+      <Execution id="eacec7f7-3e61-49a0-83a5-0e5e27b29dde" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.DashboardEnhancementTests" name="Build_OpenSeverityDistribution_ExcludesClosedAndDeferred" />
+    </UnitTest>
+    <UnitTest name="ExpectedStatus_WhenDifferent_ReturnsFail" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\release\net8.0\secureapiqualityplatform.tests.dll" id="2e31e6a4-191c-e13b-3757-68decc27192f">
+      <Execution id="9990a0e6-b3d4-465b-8bad-3bc0f138e541" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.CheckEvaluatorTests" name="ExpectedStatus_WhenDifferent_ReturnsFail" />
+    </UnitTest>
+    <UnitTest name="AuthenticationProtection_WhenRequiredAndUnauthorized_ReturnsPass" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\release\net8.0\secureapiqualityplatform.tests.dll" id="a913622e-a0b4-be1a-5c19-4fa0e2ca49ae">
+      <Execution id="6d94dfe9-073f-4278-bc49-6af8fc87fda6" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.CheckEvaluatorTests" name="AuthenticationProtection_WhenRequiredAndUnauthorized_ReturnsPass" />
+    </UnitTest>
+    <UnitTest name="Build_ReturnsMostRecentChecksAndDefectsWithinDisplayLimits" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\release\net8.0\secureapiqualityplatform.tests.dll" id="373e2db5-fa31-84ef-f7a7-f5c4a6b9d876">
+      <Execution id="2e0eaddb-9c79-4eb3-b4ee-241183b814b0" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.DashboardServiceTests" name="Build_ReturnsMostRecentChecksAndDefectsWithinDisplayLimits" />
+    </UnitTest>
+    <UnitTest name="FailedCheck_MessageIncludesExpectationAndObservedEvidence (&quot;ContentType&quot;,&quot;application/json&quot;,&quot;text/html&quot;)" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\release\net8.0\secureapiqualityplatform.tests.dll" id="294e842f-7cc7-c93f-4ab0-d13b3db32992">
+      <Execution id="8c8dd92e-a553-4326-948a-0cc6288e3abf" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.FailureMessageTests" name="FailedCheck_MessageIncludesExpectationAndObservedEvidence" />
+    </UnitTest>
+    <UnitTest name="ResponseTime_AtThreshold_ReturnsPass" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\release\net8.0\secureapiqualityplatform.tests.dll" id="b2e535f7-ca6a-d0cf-cacd-6c3b390a241a">
+      <Execution id="454300a8-dff9-4c42-892a-f49f524f78da" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.CheckEvaluatorTests" name="ResponseTime_AtThreshold_ReturnsPass" />
+    </UnitTest>
+    <UnitTest name="ExportDefectsCsv_IncludesLifecycleEvidenceAndEscapesCsvValues" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\release\net8.0\secureapiqualityplatform.tests.dll" id="838b28cd-4bd3-b7e0-5405-e90246fecac9">
+      <Execution id="c2984c4a-fb9f-453a-b676-6d2ef5164da3" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.ReportsControllerTests" name="ExportDefectsCsv_IncludesLifecycleEvidenceAndEscapesCsvValues" />
+    </UnitTest>
+    <UnitTest name="Build_CalculatesCheckAndResponseTimeMetrics" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\release\net8.0\secureapiqualityplatform.tests.dll" id="cb9e7789-8f4e-d792-ab39-460be47464e3">
+      <Execution id="a27c9c34-df17-4cfc-853d-93c21f42b15b" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.DashboardServiceTests" name="Build_CalculatesCheckAndResponseTimeMetrics" />
+    </UnitTest>
+    <UnitTest name="Build_UnorderedResults_StillReturnsLatestTwelve" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\release\net8.0\secureapiqualityplatform.tests.dll" id="c6770dfd-4066-fc66-36ae-d4996507c576">
+      <Execution id="251bf655-3264-46ff-87f8-bba040467b69" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.DashboardEnhancementTests" name="Build_UnorderedResults_StillReturnsLatestTwelve" />
+    </UnitTest>
+    <UnitTest name="Build_NoDefects_StillProvidesAllSeverityLabels" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\release\net8.0\secureapiqualityplatform.tests.dll" id="6790e69c-5f97-43e3-5b41-6ae36496a697">
+      <Execution id="cf31e07f-e533-4fe1-b85c-662a637e9296" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.DashboardEnhancementTests" name="Build_NoDefects_StillProvidesAllSeverityLabels" />
+    </UnitTest>
+    <UnitTest name="Build_TiedResults_PreservesSnapshotOrderAtDisplayLimit" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\release\net8.0\secureapiqualityplatform.tests.dll" id="7e416e17-8363-c334-f608-84c08dd4d700">
+      <Execution id="e6f44c87-d91e-4e7f-8935-ea1ed31b99f3" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.DashboardEnhancementTests" name="Build_TiedResults_PreservesSnapshotOrderAtDisplayLimit" />
+    </UnitTest>
+    <UnitTest name="Build_OnlyClosedAndDeferredDefects_HasNoOpenSeverityCounts" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\release\net8.0\secureapiqualityplatform.tests.dll" id="fd19f53c-7fa8-3ab6-6d67-3198c903af26">
+      <Execution id="3ac06225-1907-42c7-98e2-8091633cf972" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.DashboardEnhancementTests" name="Build_OnlyClosedAndDeferredDefects_HasNoOpenSeverityCounts" />
+    </UnitTest>
+    <UnitTest name="ValidateAsync_ShouldRejectUrlsWithCredentials" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\release\net8.0\secureapiqualityplatform.tests.dll" id="80634be9-e703-586b-8bfa-bc1ea6156ce6">
+      <Execution id="c794e2a0-bebf-424e-987d-8d7a1ade09fe" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.UrlSafetyServiceTests" name="ValidateAsync_ShouldRejectUrlsWithCredentials" />
+    </UnitTest>
+    <UnitTest name="ResponseTime_OverThreshold_ReturnsFail" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\release\net8.0\secureapiqualityplatform.tests.dll" id="1263fdce-489b-1284-a0ab-41100d7ae80b">
+      <Execution id="3672eae7-8cc1-4f3f-9f91-3bcc2647912b" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.CheckEvaluatorTests" name="ResponseTime_OverThreshold_ReturnsFail" />
+    </UnitTest>
+    <UnitTest name="ExportResultsCsv_WithNoResults_ReturnsHeaderOnly" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\release\net8.0\secureapiqualityplatform.tests.dll" id="8db9f59e-020e-b3e3-1fa7-90388ed937d8">
+      <Execution id="a2e1685a-c09d-4d63-8700-48a4e44d574a" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.ReportsControllerTests" name="ExportResultsCsv_WithNoResults_ReturnsHeaderOnly" />
+    </UnitTest>
+    <UnitTest name="PT01_BuildWithTwoThousandResults_UnderTwoSeconds" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\release\net8.0\secureapiqualityplatform.tests.dll" id="cbac041c-ce35-4542-e074-b446b770b3d5">
+      <TestCategory>
+        <TestCategoryItem TestCategory="Performance" />
+      </TestCategory>
+      <Execution id="f0834285-0e84-436f-aec0-f6cbe0b4f843" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.DashboardPerformanceTests" name="PT01_BuildWithTwoThousandResults_UnderTwoSeconds" />
+    </UnitTest>
+    <UnitTest name="TryAddApi_DifferentBaseUrl_ReturnsTrue" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\release\net8.0\secureapiqualityplatform.tests.dll" id="a92c4c74-0f8c-cdca-1964-dd47cc150180">
+      <Execution id="cf1fbb90-5868-4686-ad25-00d8bb5c812d" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.RegistrationValidationTests" name="TryAddApi_DifferentBaseUrl_ReturnsTrue" />
+    </UnitTest>
+    <UnitTest name="ContentType_WhenExpectedMatches_ReturnsPass" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\release\net8.0\secureapiqualityplatform.tests.dll" id="d230ef21-5cb8-5a53-0778-fdd78d9a2d86">
+      <Execution id="5da76f83-76a4-48d5-a0a5-9f20752a5e91" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.CheckEvaluatorTests" name="ContentType_WhenExpectedMatches_ReturnsPass" />
+    </UnitTest>
+    <UnitTest name="TryAddEndpoint_DuplicateMethodAndPath_ReturnsFalse" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\release\net8.0\secureapiqualityplatform.tests.dll" id="4c9fffbc-b1b7-a957-ae5a-aff66b7ced60">
+      <Execution id="3ebcd785-4080-4448-906f-4c2906e5f153" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.RegistrationValidationTests" name="TryAddEndpoint_DuplicateMethodAndPath_ReturnsFalse" />
+    </UnitTest>
+    <UnitTest name="Build_HandlesNoCheckDataWithoutInvalidMetrics" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\release\net8.0\secureapiqualityplatform.tests.dll" id="9730722e-2f59-8b10-0e48-329c410d77f4">
+      <Execution id="ccddfbdd-ba3e-4512-897d-a9b3d171f1c6" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.DashboardServiceTests" name="Build_HandlesNoCheckDataWithoutInvalidMetrics" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="f5e491cb-0ec2-2f01-137d-6183d964dab0" executionId="633ee5f4-b978-405d-bfcf-922a43810d97" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="085fd098-71be-09df-65c7-832b7a190325" executionId="7855d614-bd6a-4483-acd1-29e9832be69f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cbac041c-ce35-4542-e074-b446b770b3d5" executionId="f0834285-0e84-436f-aec0-f6cbe0b4f843" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="65865416-f6d6-fcdb-2419-dc948f4c1962" executionId="1006c9af-f5c5-45da-9330-38274fd6375c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="294e842f-7cc7-c93f-4ab0-d13b3db32992" executionId="8c8dd92e-a553-4326-948a-0cc6288e3abf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1c43688b-1e16-7cd6-9619-f52d5c2f185a" executionId="055b4ee5-4b75-4984-b465-943dd84b25de" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6bd22966-3633-c58c-d222-f5d0dc1adae5" executionId="cefe18a6-c257-4962-b8f4-5557448c1eba" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8db9f59e-020e-b3e3-1fa7-90388ed937d8" executionId="a2e1685a-c09d-4d63-8700-48a4e44d574a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8552508c-77b6-a029-5ef0-969c55bcb922" executionId="990cf2f4-de37-4d13-8450-b87708602259" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d8bee227-7a93-6861-d5dc-296f7e8363ef" executionId="7ce1c629-a70a-4b56-9ca9-0b16948e37cf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4bbed8f6-fd7d-4f24-d8aa-a303b01a8c2d" executionId="ae37bd21-7890-4e60-939d-f37409c405ad" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a19aa752-52eb-8815-8ae3-f495448a0b7b" executionId="28535374-0ca5-4b91-a628-af9b1d2f7f37" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4c9fffbc-b1b7-a957-ae5a-aff66b7ced60" executionId="3ebcd785-4080-4448-906f-4c2906e5f153" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b2e535f7-ca6a-d0cf-cacd-6c3b390a241a" executionId="454300a8-dff9-4c42-892a-f49f524f78da" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f00c1b4f-9538-a550-be3d-8c300ed6e0eb" executionId="20aac8b6-1de9-451c-bb4c-a3722a890583" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a92c4c74-0f8c-cdca-1964-dd47cc150180" executionId="cf1fbb90-5868-4686-ad25-00d8bb5c812d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d230ef21-5cb8-5a53-0778-fdd78d9a2d86" executionId="5da76f83-76a4-48d5-a0a5-9f20752a5e91" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9730722e-2f59-8b10-0e48-329c410d77f4" executionId="ccddfbdd-ba3e-4512-897d-a9b3d171f1c6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1263fdce-489b-1284-a0ab-41100d7ae80b" executionId="3672eae7-8cc1-4f3f-9f91-3bcc2647912b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c6770dfd-4066-fc66-36ae-d4996507c576" executionId="251bf655-3264-46ff-87f8-bba040467b69" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="71d8db1b-2303-65d0-7ffe-b60a288397bc" executionId="0e791ca8-5c5c-43b6-bb9f-07d3964f1d8c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6790e69c-5f97-43e3-5b41-6ae36496a697" executionId="cf31e07f-e533-4fe1-b85c-662a637e9296" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fd19f53c-7fa8-3ab6-6d67-3198c903af26" executionId="3ac06225-1907-42c7-98e2-8091633cf972" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="838b28cd-4bd3-b7e0-5405-e90246fecac9" executionId="c2984c4a-fb9f-453a-b676-6d2ef5164da3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2e31e6a4-191c-e13b-3757-68decc27192f" executionId="9990a0e6-b3d4-465b-8bad-3bc0f138e541" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="071a3811-b82e-d977-aa74-fde26c0d4bf8" executionId="60228320-4bd0-43da-b301-1af0eaf4864a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="80634be9-e703-586b-8bfa-bc1ea6156ce6" executionId="c794e2a0-bebf-424e-987d-8d7a1ade09fe" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="65399025-2ad8-6d1d-5877-fa4409694b4b" executionId="eacec7f7-3e61-49a0-83a5-0e5e27b29dde" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ce0f242e-138a-310f-2c13-e81428762193" executionId="05619ca5-52b4-4418-9e5f-191ebd9f1692" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cb9e7789-8f4e-d792-ab39-460be47464e3" executionId="a27c9c34-df17-4cfc-853d-93c21f42b15b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8047cc13-9577-2909-0e36-0ff2d64566f8" executionId="170b9ea8-1d3b-4f03-9940-4e11ea5e81dc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bf141455-ff5b-99b7-f6b9-bfb9cf9a4c98" executionId="f21511d6-6a15-4d47-bd22-755100e88429" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7e416e17-8363-c334-f608-84c08dd4d700" executionId="e6f44c87-d91e-4e7f-8935-ea1ed31b99f3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="373e2db5-fa31-84ef-f7a7-f5c4a6b9d876" executionId="2e0eaddb-9c79-4eb3-b4ee-241183b814b0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8795f816-f328-f85e-b229-d039dead8064" executionId="81830d31-720f-495a-9847-97b69d444c5a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a913622e-a0b4-be1a-5c19-4fa0e2ca49ae" executionId="6d94dfe9-073f-4278-bc49-6af8fc87fda6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Failed">
+    <Counters total="36" executed="36" passed="0" failed="36" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="哈迪斯的宠物二" outcome="Warning" timestamp="2026-10-18T18:37:28.4712648+13:00">
+        <Text>[MSTest][Discovery][C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Tests.dll] Unable to load types from the test source 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Tests.dll'. Some or all of the tests in this source may not be discovered.&#xD;
+Error: System.IO.FileLoadException: Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7)&#xD;
+</Text>
+      </RunInfo>
+      <RunInfo computerName="哈迪斯的宠物二" outcome="Warning" timestamp="2026-10-18T18:37:28.4718423+13:00">
+        <Text>[MSTest][Discovery][C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Tests.dll] MSTestAdapter failed to discover tests in class 'SecureApiQualityPlatform.Tests.ReportsEnhancementTests' of assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Tests.dll' because Could not load file or assembly 'C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll'. An Application Control policy has blocked this file. (0x800711C7).</Text>
+      </RunInfo>
+    </RunInfos>
+    <CollectorDataEntries>
+      <Collector agentName="哈迪斯的宠物二" uri="datacollector://microsoft/CoverletCodeCoverage/1.0" collectorDisplayName="XPlat code coverage">
+        <UriAttachments>
+          <UriAttachment>
+            <A href="哈迪斯的宠物二\coverage.cobertura.xml"></A>
+          </UriAttachment>
+        </UriAttachments>
+      </Collector>
+    </CollectorDataEntries>
+  </ResultSummary>
+</TestRun>
