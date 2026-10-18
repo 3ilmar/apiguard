@@ -1,0 +1,8 @@
+  SecureApiQualityPlatform.Web -> C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Web\bin\Release\net8.0\SecureApiQualityPlatform.Web.dll
+  SecureApiQualityPlatform.Tests -> C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Tests.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:02.51

@@ -1,0 +1,126 @@
+info: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[63]
+      User profile is available. Using 'C:\Users\zsr20\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://127.0.0.1:51325
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Web
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:51325/ - - -
+warn: Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware[3]
+      Failed to determine the https port for redirect.
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.HomeController.Index (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller SecureApiQualityPlatform.Web.Controllers.HomeController (SecureApiQualityPlatform.Web).
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[1]
+      Executing ViewResult, running view Index.
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[4]
+      Executed ViewResult - view Index executed in 48.9748ms.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.HomeController.Index (SecureApiQualityPlatform.Web) in 66.6758ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.HomeController.Index (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:51325/ - 200 - text/html;+charset=utf-8 103.9391ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:51325/Reports/ExportResultsCsv?passed=garbage - - -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.ReportsController.ExportResultsCsv (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "ExportResultsCsv", controller = "Reports"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ExportResultsCsv(System.Nullable`1[System.Guid], System.Nullable`1[System.Boolean]) on controller SecureApiQualityPlatform.Web.Controllers.ReportsController (SecureApiQualityPlatform.Web).
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor[1]
+      Executing BadRequestObjectResult, writing value of type 'System.String'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.ReportsController.ExportResultsCsv (SecureApiQualityPlatform.Web) in 12.7651ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.ReportsController.ExportResultsCsv (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:51325/Reports/ExportResultsCsv?passed=garbage - 400 - text/plain;+charset=utf-8 18.6259ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:51325/Reports/ExportResultsCsv?apiId=bad - - -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.ReportsController.ExportResultsCsv (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "ExportResultsCsv", controller = "Reports"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ExportResultsCsv(System.Nullable`1[System.Guid], System.Nullable`1[System.Boolean]) on controller SecureApiQualityPlatform.Web.Controllers.ReportsController (SecureApiQualityPlatform.Web).
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor[1]
+      Executing BadRequestObjectResult, writing value of type 'System.String'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.ReportsController.ExportResultsCsv (SecureApiQualityPlatform.Web) in 1.0041ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.ReportsController.ExportResultsCsv (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:51325/Reports/ExportResultsCsv?apiId=bad - 400 - text/plain;+charset=utf-8 2.5540ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:51325/Reports/ExportDefectsCsv?status=garbage - - -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.ReportsController.ExportDefectsCsv (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "ExportDefectsCsv", controller = "Reports"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ExportDefectsCsv(System.Nullable`1[SecureApiQualityPlatform.Web.Models.DefectStatus], System.Nullable`1[SecureApiQualityPlatform.Web.Models.DefectSeverity], System.Nullable`1[System.Guid]) on controller SecureApiQualityPlatform.Web.Controllers.ReportsController (SecureApiQualityPlatform.Web).
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor[1]
+      Executing BadRequestObjectResult, writing value of type 'System.String'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.ReportsController.ExportDefectsCsv (SecureApiQualityPlatform.Web) in 2.9018ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.ReportsController.ExportDefectsCsv (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:51325/Reports/ExportDefectsCsv?status=garbage - 400 - text/plain;+charset=utf-8 5.0675ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:51325/Reports/ExportDefectsCsv?severity=999 - - -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.ReportsController.ExportDefectsCsv (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "ExportDefectsCsv", controller = "Reports"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ExportDefectsCsv(System.Nullable`1[SecureApiQualityPlatform.Web.Models.DefectStatus], System.Nullable`1[SecureApiQualityPlatform.Web.Models.DefectSeverity], System.Nullable`1[System.Guid]) on controller SecureApiQualityPlatform.Web.Controllers.ReportsController (SecureApiQualityPlatform.Web).
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor[1]
+      Executing BadRequestObjectResult, writing value of type 'System.String'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.ReportsController.ExportDefectsCsv (SecureApiQualityPlatform.Web) in 0.2669ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.ReportsController.ExportDefectsCsv (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:51325/Reports/ExportDefectsCsv?severity=999 - 400 - text/plain;+charset=utf-8 0.4696ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:51325/Reports/ExportDefectsCsv?apiId=bad - - -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.ReportsController.ExportDefectsCsv (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "ExportDefectsCsv", controller = "Reports"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ExportDefectsCsv(System.Nullable`1[SecureApiQualityPlatform.Web.Models.DefectStatus], System.Nullable`1[SecureApiQualityPlatform.Web.Models.DefectSeverity], System.Nullable`1[System.Guid]) on controller SecureApiQualityPlatform.Web.Controllers.ReportsController (SecureApiQualityPlatform.Web).
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor[1]
+      Executing BadRequestObjectResult, writing value of type 'System.String'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.ReportsController.ExportDefectsCsv (SecureApiQualityPlatform.Web) in 0.2408ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.ReportsController.ExportDefectsCsv (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:51325/Reports/ExportDefectsCsv?apiId=bad - 400 - text/plain;+charset=utf-8 0.4006ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:51325/Reports/ExportResultsCsv?passed=false - - -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.ReportsController.ExportResultsCsv (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "ExportResultsCsv", controller = "Reports"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ExportResultsCsv(System.Nullable`1[System.Guid], System.Nullable`1[System.Boolean]) on controller SecureApiQualityPlatform.Web.Controllers.ReportsController (SecureApiQualityPlatform.Web).
+info: Microsoft.AspNetCore.Mvc.Infrastructure.FileContentResultExecutor[2]
+      Executing FileContentResult, sending file with download name 'api-check-results-20261018-045525.csv' ...
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.ReportsController.ExportResultsCsv (SecureApiQualityPlatform.Web) in 11.3945ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.ReportsController.ExportResultsCsv (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:51325/Reports/ExportResultsCsv?passed=false - 200 157 text/csv;+charset=utf-8 11.6191ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:51325/Reports/ExportDefectsCsv?status=New&severity=Critical - - -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.ReportsController.ExportDefectsCsv (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "ExportDefectsCsv", controller = "Reports"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ExportDefectsCsv(System.Nullable`1[SecureApiQualityPlatform.Web.Models.DefectStatus], System.Nullable`1[SecureApiQualityPlatform.Web.Models.DefectSeverity], System.Nullable`1[System.Guid]) on controller SecureApiQualityPlatform.Web.Controllers.ReportsController (SecureApiQualityPlatform.Web).
+info: Microsoft.AspNetCore.Mvc.Infrastructure.FileContentResultExecutor[2]
+      Executing FileContentResult, sending file with download name 'defects-20261018-045525.csv' ...
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.ReportsController.ExportDefectsCsv (SecureApiQualityPlatform.Web) in 0.99ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.ReportsController.ExportDefectsCsv (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:51325/Reports/ExportDefectsCsv?status=New&severity=Critical - 200 217 text/csv;+charset=utf-8 1.2058ms
