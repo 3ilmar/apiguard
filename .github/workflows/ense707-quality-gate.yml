@@ -17,7 +17,6 @@ jobs:
     env:
       ASPNETCORE_ENVIRONMENT: Development
       ASPNETCORE_URLS: http://127.0.0.1:5085
-      ConnectionStrings__PlatformDatabase: "Data Source=${{ runner.temp }}/apiguard-smoke.db"
 
     steps:
       - name: Check out repository
@@ -46,6 +45,8 @@ jobs:
           bind_url="http://127.0.0.1:5085"
           request_url="http://127.0.0.1:5085/"
           app_dll="SecureApiQualityPlatform.Web/bin/Release/net8.0/SecureApiQualityPlatform.Web.dll"
+
+          export ConnectionStrings__PlatformDatabase="Data Source=$RUNNER_TEMP/apiguard-smoke.db"
 
           dotnet "$app_dll" --urls "$bind_url" >"$app_log" 2>&1 &
           app_pid=$!
