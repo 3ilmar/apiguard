@@ -1,0 +1,23 @@
+Test run for C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Tests.dll (.NETCoreApp,Version=v8.0)
+A total of 1 test files matched the specified pattern.
+C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Tests.dll
+  Passed PT01_BuildWithTwoThousandResults_UnderTwoSeconds [185 ms]
+  Standard Output Messages:
+ PT-01 aggregation: first=14.337 ms; warm statistics={"MinMs":0.5017,"MedianMs":0.5314000000000001,"MeanMs":0.8465950000000001,"P95Ms":0.616,"MaxMs":6.7006}; limit < 2000 ms
+ Warm samples (ms): [6.7006,0.5792,0.5221,0.531,0.5365,0.5221,0.5112,0.5397,0.616,0.5129,0.6082,0.5318,0.544,0.5237,0.5111,0.5725,0.5264,0.5017,0.5025,0.5387]
+
+
+  Passed PT01_DashboardHttpWithTwoThousandResults_UnderTwoSeconds [755 ms]
+  Standard Output Messages:
+ warn: Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware[3]
+       Failed to determine the https port for redirect.
+ PT-01 HTTP: first=218.910 ms; warm statistics={"MinMs":1.4856,"MedianMs":1.7999,"MeanMs":1.8489249999999995,"P95Ms":2.3652,"MaxMs":2.7327}; limit < 2000 ms
+ Warm samples (ms): [1.9378,1.7911,1.7834,2.7327,1.9035,2.3652,2.0359,1.8155,1.8087,1.6934,1.709,1.5706,1.5305,1.8723,2.2446,1.8436,1.7682,1.5813,1.5056,1.4856]
+
+
+Results File: C:\Users\zsr20\source\repos\3ilmar\apiguard\docs\qa-evidence\2026-10-18\pt01-20261018T053714804Z-49fe7e\performance\performance.trx
+
+Test Run Successful.
+Total tests: 2
+     Passed: 2
+ Total time: 2.2272 Seconds

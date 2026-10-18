@@ -1,0 +1,336 @@
+[
+  {
+    "File": "full-suite\\full-suite.trx",
+    "Outcome": "Failed",
+    "Counters": [
+      {
+        "Name": "total",
+        "Value": "36"
+      },
+      {
+        "Name": "executed",
+        "Value": "36"
+      },
+      {
+        "Name": "passed",
+        "Value": "0"
+      },
+      {
+        "Name": "failed",
+        "Value": "36"
+      },
+      {
+        "Name": "error",
+        "Value": "0"
+      },
+      {
+        "Name": "timeout",
+        "Value": "0"
+      },
+      {
+        "Name": "aborted",
+        "Value": "0"
+      },
+      {
+        "Name": "inconclusive",
+        "Value": "0"
+      },
+      {
+        "Name": "passedButRunAborted",
+        "Value": "0"
+      },
+      {
+        "Name": "notRunnable",
+        "Value": "0"
+      },
+      {
+        "Name": "notExecuted",
+        "Value": "0"
+      },
+      {
+        "Name": "disconnected",
+        "Value": "0"
+      },
+      {
+        "Name": "warning",
+        "Value": "0"
+      },
+      {
+        "Name": "completed",
+        "Value": "0"
+      },
+      {
+        "Name": "inProgress",
+        "Value": "0"
+      },
+      {
+        "Name": "pending",
+        "Value": "0"
+      }
+    ],
+    "Results": [
+      {
+        "Name": "PT01_DashboardHttpWithTwoThousandResults_UnderTwoSeconds",
+        "Outcome": "Failed",
+        "Duration": "00:00:00.0163667"
+      },
+      {
+        "Name": "Build_ResultsWithoutTimings_StillCalculatesPassRate",
+        "Outcome": "Failed",
+        "Duration": "00:00:00.0005222"
+      },
+      {
+        "Name": "PT01_BuildWithTwoThousandResults_UnderTwoSeconds",
+        "Outcome": "Failed",
+        "Duration": "00:00:00.0021255"
+      },
+      {
+        "Name": "TryAddApi_DuplicateBaseUrl_ReturnsFalse",
+        "Outcome": "Failed",
+        "Duration": "00:00:00.0005304"
+      },
+      {
+        "Name": "FailedCheck_MessageIncludesExpectationAndObservedEvidence (\"ContentType\",\"application/json\",\"text/html\")",
+        "Outcome": "Failed",
+        "Duration": "00:00:00.0004253"
+      },
+      {
+        "Name": "FailedCheck_MessageIncludesExpectationAndObservedEvidence (\"Authentication\",\"authentication-required\",\"HTTP 200\")",
+        "Outcome": "Failed",
+        "Duration": "00:00:00.0004792"
+      },
+      {
+        "Name": "TryAddEndpoint_SamePathDifferentMethod_ReturnsTrue",
+        "Outcome": "Failed",
+        "Duration": "00:00:00.0009867"
+      },
+      {
+        "Name": "ExportResultsCsv_WithNoResults_ReturnsHeaderOnly",
+        "Outcome": "Failed",
+        "Duration": "00:00:00.0126330"
+      },
+      {
+        "Name": "Build_UnorderedAndTiedDefects_PreservesSnapshotOrderAtDisplayLimit",
+        "Outcome": "Failed",
+        "Duration": "00:00:00.0004603"
+      },
+      {
+        "Name": "FailedCheck_MessageIncludesExpectationAndObservedEvidence (\"Timing\",\"1001 ms\",\"1000 ms threshold\")",
+        "Outcome": "Failed",
+        "Duration": "00:00:00.0010794"
+      },
+      {
+        "Name": "ExportResultsCsv_IncludesQaContextAndEscapesCsvValues",
+        "Outcome": "Failed",
+        "Duration": "00:00:00.0006209"
+      },
+      {
+        "Name": "ExpectedStatus_WhenMatching_ReturnsPass",
+        "Outcome": "Failed",
+        "Duration": "00:00:00.0213550"
+      },
+      {
+        "Name": "TryAddEndpoint_DuplicateMethodAndPath_ReturnsFalse",
+        "Outcome": "Failed",
+        "Duration": "00:00:00.0006826"
+      },
+      {
+        "Name": "ResponseTime_AtThreshold_ReturnsPass",
+        "Outcome": "Failed",
+        "Duration": "00:00:00.0003105"
+      },
+      {
+        "Name": "Build_CountsOnlyOpenHighOrCriticalDefectsAsHighRisk",
+        "Outcome": "Failed",
+        "Duration": "00:00:00.0003038"
+      },
+      {
+        "Name": "TryAddApi_DifferentBaseUrl_ReturnsTrue",
+        "Outcome": "Failed",
+        "Duration": "00:00:00.0006642"
+      },
+      {
+        "Name": "ContentType_WhenExpectedMatches_ReturnsPass",
+        "Outcome": "Failed",
+        "Duration": "00:00:00.0006032"
+      },
+      {
+        "Name": "Build_HandlesNoCheckDataWithoutInvalidMetrics",
+        "Outcome": "Failed",
+        "Duration": "00:00:00.0005420"
+      },
+      {
+        "Name": "ResponseTime_OverThreshold_ReturnsFail",
+        "Outcome": "Failed",
+        "Duration": "00:00:00.0003081"
+      },
+      {
+        "Name": "Build_UnorderedResults_StillReturnsLatestTwelve",
+        "Outcome": "Failed",
+        "Duration": "00:00:00.0003478"
+      },
+      {
+        "Name": "FailedCheck_CreatesDefectWithMappedPriority",
+        "Outcome": "Failed",
+        "Duration": "00:00:00.0004986"
+      },
+      {
+        "Name": "Build_NoDefects_StillProvidesAllSeverityLabels",
+        "Outcome": "Failed",
+        "Duration": "00:00:00.0005781"
+      },
+      {
+        "Name": "Build_OnlyClosedAndDeferredDefects_HasNoOpenSeverityCounts",
+        "Outcome": "Failed",
+        "Duration": "00:00:00.0003809"
+      },
+      {
+        "Name": "ExportDefectsCsv_IncludesLifecycleEvidenceAndEscapesCsvValues",
+        "Outcome": "Failed",
+        "Duration": "00:00:00.0007995"
+      },
+      {
+        "Name": "ExpectedStatus_WhenDifferent_ReturnsFail",
+        "Outcome": "Failed",
+        "Duration": "00:00:00.0006549"
+      },
+      {
+        "Name": "FailedCheck_MessageIncludesExpectationAndObservedEvidence (\"Status\",\"Expected HTTP 200\",\"received 400\")",
+        "Outcome": "Failed",
+        "Duration": "00:00:00.0004814"
+      },
+      {
+        "Name": "ValidateAsync_ShouldRejectUrlsWithCredentials",
+        "Outcome": "Failed",
+        "Duration": "00:00:00.0052365"
+      },
+      {
+        "Name": "Build_OpenSeverityDistribution_ExcludesClosedAndDeferred",
+        "Outcome": "Failed",
+        "Duration": "00:00:00.0032409"
+      },
+      {
+        "Name": "AuthenticationProtection_WhenRequiredButReturnsOk_ReturnsCriticalFail",
+        "Outcome": "Failed",
+        "Duration": "00:00:00.0004978"
+      },
+      {
+        "Name": "Build_CalculatesCheckAndResponseTimeMetrics",
+        "Outcome": "Failed",
+        "Duration": "00:00:00.0004408"
+      },
+      {
+        "Name": "FailedCheck_MessageIncludesExpectationAndObservedEvidence (\"Availability\",\"Request failed\",\"Request timed out.\")",
+        "Outcome": "Failed",
+        "Duration": "00:00:00.0005128"
+      },
+      {
+        "Name": "PassingRetest_ClosesResolvedDefect",
+        "Outcome": "Failed",
+        "Duration": "00:00:00.0005336"
+      },
+      {
+        "Name": "Build_TiedResults_PreservesSnapshotOrderAtDisplayLimit",
+        "Outcome": "Failed",
+        "Duration": "00:00:00.0002721"
+      },
+      {
+        "Name": "Build_ReturnsMostRecentChecksAndDefectsWithinDisplayLimits",
+        "Outcome": "Failed",
+        "Duration": "00:00:00.0004424"
+      },
+      {
+        "Name": "Cors_WhenAuthRequiredAndWildcard_ReturnsFail",
+        "Outcome": "Failed",
+        "Duration": "00:00:00.0002964"
+      },
+      {
+        "Name": "AuthenticationProtection_WhenRequiredAndUnauthorized_ReturnsPass",
+        "Outcome": "Failed",
+        "Duration": "00:00:00.0003223"
+      }
+    ]
+  },
+  {
+    "File": "performance\\performance.trx",
+    "Outcome": "Completed",
+    "Counters": [
+      {
+        "Name": "total",
+        "Value": "2"
+      },
+      {
+        "Name": "executed",
+        "Value": "2"
+      },
+      {
+        "Name": "passed",
+        "Value": "2"
+      },
+      {
+        "Name": "failed",
+        "Value": "0"
+      },
+      {
+        "Name": "error",
+        "Value": "0"
+      },
+      {
+        "Name": "timeout",
+        "Value": "0"
+      },
+      {
+        "Name": "aborted",
+        "Value": "0"
+      },
+      {
+        "Name": "inconclusive",
+        "Value": "0"
+      },
+      {
+        "Name": "passedButRunAborted",
+        "Value": "0"
+      },
+      {
+        "Name": "notRunnable",
+        "Value": "0"
+      },
+      {
+        "Name": "notExecuted",
+        "Value": "0"
+      },
+      {
+        "Name": "disconnected",
+        "Value": "0"
+      },
+      {
+        "Name": "warning",
+        "Value": "0"
+      },
+      {
+        "Name": "completed",
+        "Value": "0"
+      },
+      {
+        "Name": "inProgress",
+        "Value": "0"
+      },
+      {
+        "Name": "pending",
+        "Value": "0"
+      }
+    ],
+    "Results": [
+      {
+        "Name": "PT01_DashboardHttpWithTwoThousandResults_UnderTwoSeconds",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.7552678"
+      },
+      {
+        "Name": "PT01_BuildWithTwoThousandResults_UnderTwoSeconds",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.1851105"
+      }
+    ]
+  }
+]
