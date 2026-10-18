@@ -1,0 +1,7 @@
+{
+  "CheckedAtUtc": "2026-10-18T06:31:18.0533948+00:00",
+  "RequestedEnvironment": "Production",
+  "Expected": "Reject before app creation or seeding",
+  "ExitCode": -532462766,
+  "Rejected": true
+}

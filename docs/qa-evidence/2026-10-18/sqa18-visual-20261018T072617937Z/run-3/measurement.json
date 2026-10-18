@@ -1,0 +1,367 @@
+{
+  "run": 3,
+  "startedUtc": "2026-10-18T07:28:18.396Z",
+  "status": "NUMERIC PASS - SCREENSHOT REVIEW PENDING",
+  "documentStatus": 200,
+  "fixtureSHA256": "CCBE6723FB603221C3CECB95BB176BD6426E8F7611B96D3AC0565A1D7927AC18",
+  "ready": {
+    "errors": [],
+    "metrics": {
+      "Registered APIs": "1",
+      "Configured endpoints": "1",
+      "Executed checks": "2000",
+      "Pass rate": "50%",
+      "Passed / Failed": "1000 / 1000",
+      "Avg response": "149.5 ms",
+      "Open defects": "48",
+      "High/Critical open": "24"
+    },
+    "severities": [
+      {
+        "label": "Critical",
+        "count": "12",
+        "now": "12",
+        "max": "48",
+        "fraction": 0.25,
+        "colour": "rgb(220, 53, 69)"
+      },
+      {
+        "label": "High",
+        "count": "12",
+        "now": "12",
+        "max": "48",
+        "fraction": 0.25,
+        "colour": "rgb(255, 193, 7)"
+      },
+      {
+        "label": "Medium",
+        "count": "12",
+        "now": "12",
+        "max": "48",
+        "fraction": 0.25,
+        "colour": "rgb(13, 202, 240)"
+      },
+      {
+        "label": "Low",
+        "count": "12",
+        "now": "12",
+        "max": "48",
+        "fraction": 0.25,
+        "colour": "rgb(108, 117, 125)"
+      }
+    ],
+    "recentChecks": 12,
+    "recentDefects": 8,
+    "boxes": [
+      {
+        "x": 72,
+        "y": 165.59375,
+        "w": 312,
+        "h": 100
+      },
+      {
+        "x": 400,
+        "y": 165.59375,
+        "w": 312,
+        "h": 100
+      },
+      {
+        "x": 728,
+        "y": 165.59375,
+        "w": 312,
+        "h": 100
+      },
+      {
+        "x": 1056,
+        "y": 165.59375,
+        "w": 312,
+        "h": 100
+      },
+      {
+        "x": 72,
+        "y": 281.59375,
+        "w": 312,
+        "h": 100
+      },
+      {
+        "x": 400,
+        "y": 281.59375,
+        "w": 312,
+        "h": 100
+      },
+      {
+        "x": 728,
+        "y": 281.59375,
+        "w": 312,
+        "h": 100
+      },
+      {
+        "x": 1056,
+        "y": 281.59375,
+        "w": 312,
+        "h": 100
+      },
+      {
+        "x": 89,
+        "y": 458.78125,
+        "w": 1262,
+        "h": 40
+      },
+      {
+        "x": 89,
+        "y": 514.78125,
+        "w": 1262,
+        "h": 40
+      },
+      {
+        "x": 89,
+        "y": 570.78125,
+        "w": 1262,
+        "h": 40
+      },
+      {
+        "x": 89,
+        "y": 626.78125,
+        "w": 1262,
+        "h": 40
+      },
+      {
+        "x": 73,
+        "y": 810.46875,
+        "w": 744,
+        "h": 57
+      },
+      {
+        "x": 73,
+        "y": 867.46875,
+        "w": 744,
+        "h": 57
+      },
+      {
+        "x": 73,
+        "y": 924.46875,
+        "w": 744,
+        "h": 57
+      },
+      {
+        "x": 73,
+        "y": 981.46875,
+        "w": 744,
+        "h": 57
+      },
+      {
+        "x": 73,
+        "y": 1038.46875,
+        "w": 744,
+        "h": 57
+      },
+      {
+        "x": 73,
+        "y": 1095.46875,
+        "w": 744,
+        "h": 57
+      },
+      {
+        "x": 73,
+        "y": 1152.46875,
+        "w": 744,
+        "h": 57
+      },
+      {
+        "x": 73,
+        "y": 1209.46875,
+        "w": 744,
+        "h": 57
+      },
+      {
+        "x": 73,
+        "y": 1266.46875,
+        "w": 744,
+        "h": 57
+      },
+      {
+        "x": 73,
+        "y": 1323.46875,
+        "w": 744,
+        "h": 57
+      },
+      {
+        "x": 73,
+        "y": 1380.46875,
+        "w": 744,
+        "h": 57
+      },
+      {
+        "x": 73,
+        "y": 1437.46875,
+        "w": 744,
+        "h": 57
+      },
+      {
+        "x": 843,
+        "y": 777.96875,
+        "w": 524,
+        "h": 65
+      },
+      {
+        "x": 843,
+        "y": 842.96875,
+        "w": 524,
+        "h": 65
+      },
+      {
+        "x": 843,
+        "y": 907.96875,
+        "w": 524,
+        "h": 65
+      },
+      {
+        "x": 843,
+        "y": 972.96875,
+        "w": 524,
+        "h": 65
+      },
+      {
+        "x": 843,
+        "y": 1037.96875,
+        "w": 524,
+        "h": 65
+      },
+      {
+        "x": 843,
+        "y": 1102.96875,
+        "w": 524,
+        "h": 65
+      },
+      {
+        "x": 843,
+        "y": 1167.96875,
+        "w": 524,
+        "h": 65
+      },
+      {
+        "x": 843,
+        "y": 1232.96875,
+        "w": 524,
+        "h": 64
+      }
+    ],
+    "documentHeight": 1600,
+    "documentWidth": 1440,
+    "layoutReadyMs": 101.80000001192093,
+    "timeOrigin": 1792308498630.9,
+    "navigation": {
+      "name": "http://127.0.0.1:51818/",
+      "entryType": "navigation",
+      "startTime": 0,
+      "duration": 44.80000001192093,
+      "navigationId": 6068,
+      "initiatorType": "navigation",
+      "deliveryType": "",
+      "nextHopProtocol": "http/1.1",
+      "renderBlockingStatus": "non-blocking",
+      "contentType": "text/html",
+      "contentEncoding": "",
+      "workerStart": 0,
+      "workerRouterEvaluationStart": 0,
+      "workerCacheLookupStart": 0,
+      "workerMatchedSourceType": "",
+      "workerFinalSourceType": "",
+      "redirectStart": 0,
+      "redirectEnd": 0,
+      "fetchStart": 0.5,
+      "domainLookupStart": 0.5,
+      "domainLookupEnd": 0.5,
+      "connectStart": 0.5,
+      "secureConnectionStart": 0,
+      "connectEnd": 0.5,
+      "requestStart": 1,
+      "responseStart": 3,
+      "firstInterimResponseStart": 0,
+      "finalResponseHeadersStart": 3,
+      "responseEnd": 3.399999976158142,
+      "transferSize": 13347,
+      "encodedBodySize": 13047,
+      "decodedBodySize": 13047,
+      "responseStatus": 200,
+      "serverTiming": [],
+      "unloadEventStart": 20.30000001192093,
+      "unloadEventEnd": 20.30000001192093,
+      "domInteractive": 28.19999998807907,
+      "domContentLoadedEventStart": 28.19999998807907,
+      "domContentLoadedEventEnd": 28.19999998807907,
+      "domComplete": 44.80000001192093,
+      "loadEventStart": 44.80000001192093,
+      "loadEventEnd": 44.80000001192093,
+      "type": "reload",
+      "redirectCount": 0,
+      "activationStart": 0,
+      "criticalCHRestart": 0,
+      "notRestoredReasons": null,
+      "confidence": {
+        "randomizedTriggerRate": 0.4994798,
+        "value": "low"
+      }
+    },
+    "stylesheets": [
+      "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css",
+      "http://127.0.0.1:51818/css/site.css?v=HffZIPzXvtCF50QQu7UxC_M2h9_R0To5cymAcUw3MHk"
+    ],
+    "fontsStatus": "loaded",
+    "visibility": "visible",
+    "viewport": {
+      "width": 1440,
+      "height": 1600,
+      "dpr": 1
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+    "stableFrames": 2
+  },
+  "visualReadinessUpperBoundMs": 197.10000002384186,
+  "navigationStartUtc": "2026-10-18T07:28:18.630Z",
+  "paint": [
+    {
+      "name": "first-paint",
+      "entryType": "paint",
+      "startTime": 68,
+      "duration": 0,
+      "navigationId": 6068,
+      "paintTime": 43.39999997615814,
+      "presentationTime": 68
+    },
+    {
+      "name": "first-contentful-paint",
+      "entryType": "paint",
+      "startTime": 68,
+      "duration": 0,
+      "navigationId": 6068,
+      "paintTime": 43.39999997615814,
+      "presentationTime": 68
+    }
+  ],
+  "postScreenshotCorrectness": {
+    "executed": "2000",
+    "checks": 12,
+    "defects": 8
+  },
+  "responses": [
+    {
+      "url": "http://127.0.0.1:51818/",
+      "status": 200,
+      "type": "document"
+    },
+    {
+      "url": "http://127.0.0.1:51818/css/site.css?v=HffZIPzXvtCF50QQu7UxC_M2h9_R0To5cymAcUw3MHk",
+      "status": 200,
+      "type": "stylesheet"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css",
+      "status": 200,
+      "type": "stylesheet"
+    }
+  ],
+  "requestFailures": [],
+  "pageErrors": [],
+  "finishedUtc": "2026-10-18T07:28:18.848Z"
+}

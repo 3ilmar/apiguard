@@ -1,0 +1,29 @@
+{
+  "CheckedAtUtc": "2026-10-18T07:07:18.0691161+00:00",
+  "EvidenceCopiesVerified": 7,
+  "UniqueScreenshotHashes": 4,
+  "LaunchedSourceFilesUnchanged": 50,
+  "NetworkObservations": 5,
+  "NetworkMedianMs": 55,
+  "NetworkMaximumMs": 190,
+  "FullVisualTimingsRemainEmpty": true,
+  "OtherCaseRowsPreserved": 21,
+  "Statuses": [
+    {
+      "Name": "ACCEPTANCE PENDING",
+      "Count": 1
+    },
+    {
+      "Name": "NOT RUN",
+      "Count": 8
+    },
+    {
+      "Name": "PASS",
+      "Count": 13
+    }
+  ],
+  "LocalLinksChecked": 45,
+  "ValidationStatus": "PASS",
+  "Sqa18Acceptance": "PENDING",
+  "BuildTestsRerunDuringEvidenceImport": false
+}
