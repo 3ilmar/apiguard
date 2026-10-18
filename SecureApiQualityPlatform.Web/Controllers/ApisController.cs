@@ -87,14 +87,9 @@ public sealed class ApisController : Controller
 
         var normalizedPath = endpoint.Path?.Trim() ?? string.Empty;
 
-        if (normalizedPath.Contains("://", StringComparison.OrdinalIgnoreCase) ||
-            normalizedPath.StartsWith("//") ||
-            normalizedPath.Split('/', StringSplitOptions.RemoveEmptyEntries)
-                .Any(segment => segment == ".."))
+        if (!EndpointPathValidator.IsSafe(normalizedPath, out var pathProblem))
         {
-            ModelState.AddModelError(
-                nameof(endpoint.Path),
-                "Endpoint path must stay within the registered API.");
+            ModelState.AddModelError(nameof(endpoint.Path), pathProblem);
 
             return View("Details", new ApiDetailsViewModel
             {
