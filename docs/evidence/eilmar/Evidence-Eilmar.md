@@ -22,7 +22,7 @@ Before starting the final-project persistence changes, the existing application 
 
 
 
-!\[Baseline - 22 tests passed](eilmar-01-baseline-22-tests.png)
+!\[Baseline - 22 tests passed](./eilmar-01-baseline-22-tests.png)
 
 
 
@@ -54,7 +54,7 @@ This baseline was used to check that later persistence changes did not break exi
 
 
 
-!\[Copilot SQLite review](eilmar-02-copilot-sqlite-review.png)
+!\[Copilot SQLite review](./eilmar-02-copilot-sqlite-review.png)
 
 
 
@@ -94,7 +94,7 @@ During manual execution after enabling SQLite, the dashboard failed with a `NotS
 
 
 
-!\[SQLite DateTimeOffset defect](eilmar-03-defect-datetimeoffset.png)
+!\[SQLite DateTimeOffset defect](./eilmar-03-defect-datetimeoffset.png)
 
 
 
@@ -134,7 +134,7 @@ During endpoint creation with the SQLite store, the application produced a `DbUp
 
 
 
-!\[Endpoint insertion defect](eilmar-04-defect-endpoint-insert.png)
+!\[Endpoint insertion defect](./eilmar-04-defect-endpoint-insert.png)
 
 
 
@@ -186,7 +186,7 @@ Endpoint creation worked after the change and the endpoint remained available af
 
 
 
-!\[Copilot persistence review](eilmar-05-copilot-persistence-review.png)
+!\[Copilot persistence review](./eilmar-05-copilot-persistence-review.png)
 
 
 
@@ -238,7 +238,7 @@ The API and its configured endpoint were still available after restart.
 
 
 
-!\[API and endpoint persistence](eilmar-06-api-endpoint-persistence.png)
+!\[API and endpoint persistence](./eilmar-06-api-endpoint-persistence.png)
 
 
 
@@ -278,7 +278,7 @@ After restarting the application, the dashboard still contained the executed che
 
 
 
-!\[Results and defect persistence](eilmar-07-results-defect-persistence.png)
+!\[Results and defect persistence](./eilmar-07-results-defect-persistence.png)
 
 
 
@@ -322,7 +322,7 @@ Five new SQLite integration and regression tests were added.
 
 
 
-!\[Final automated tests](eilmar-08-final-27-tests.png)
+!\[Final automated tests](./eilmar-08-final-27-tests.png)
 
 
 
@@ -378,7 +378,7 @@ The added tests covered:
 
 
 
-!\[Copilot CI summary](eilmar-09-copilot-ci-summary.png)
+!\[Copilot CI summary](./eilmar-09-copilot-ci-summary.png)
 
 
 
@@ -430,7 +430,7 @@ After correcting the GitHub Actions configuration, the workflow completed succes
 
 
 
-!\[Successful GitHub Actions quality gate](eilmar-10-ci-quality-gate-passed.png)
+!\[Successful GitHub Actions quality gate](./eilmar-10-ci-quality-gate-passed.png)
 
 
 
