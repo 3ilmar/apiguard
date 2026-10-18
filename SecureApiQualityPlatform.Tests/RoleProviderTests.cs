@@ -19,18 +19,18 @@ public class RoleProviderTests
     }
 
     [TestMethod]
-    public void NoCookie_DefaultsToAdmin() =>
-        Assert.AreEqual(UserRole.Admin, Make(null).CurrentRole);
+    public void NoCookie_DefaultsToViewer() =>
+        Assert.AreEqual(UserRole.Viewer, Make(null).CurrentRole);
 
     [TestMethod]
-    public void ViewerCookie_ReturnsViewer() =>
-        Assert.AreEqual(UserRole.Viewer, Make("Viewer").CurrentRole);
+    public void AdminCookie_ReturnsAdmin() =>
+        Assert.AreEqual(UserRole.Admin, Make("Admin").CurrentRole);
 
     [TestMethod]
-    public void GarbageCookie_DefaultsToAdmin() =>
-        Assert.AreEqual(UserRole.Admin, Make("hacker").CurrentRole);
+    public void GarbageCookie_DefaultsToViewer() =>
+        Assert.AreEqual(UserRole.Viewer, Make("hacker").CurrentRole);
 
     [TestMethod]
-    public void UndefinedNumericCookie_DefaultsToAdmin() =>
-        Assert.AreEqual(UserRole.Admin, Make("7").CurrentRole);
+    public void UndefinedNumericCookie_DefaultsToViewer() =>
+        Assert.AreEqual(UserRole.Viewer, Make("7").CurrentRole);
 }
