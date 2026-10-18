@@ -31,9 +31,10 @@ Screenshots are in `docs/evidence/lana/`. Prompts marked "drafted with help from
   2. `UserRole` was not an enum at that point, so `Admin` and `Enum.IsDefined` failed to compile (CS0117, CS0453), found by the build. Screenshot: lana-defect-02-CS0117-CS0453-build.png
   3. The test count showed 30 instead of 26 because a second test file duplicated four tests. Screenshot: lana-defect-04-tests-30-duplicates.png
   4. The unused `using Microsoft.Extensions.FileProviders;` and the stray change to `Models/Enums.cs` were found in a review of the pushed code with an AI assistant (Claude).
-- **What I changed and why:** deleted the duplicate definitions and the duplicate test file, restored `Enums.cs`, removed the unused using. Retest: 26 tests passing (lana-06-tests-26-final.png).
-- **Decision:** accepted after modification.
-- **Quality risks:** duplicate code, tests that inflate counts, changes outside the requested scope, unused imports.
+  5. The provider failed open: a missing, invalid or undefined role cookie defaulted to Admin (DEF-006). A teammate found this in peer review of the pull request. This default came from the instruction in prompt 2, which was drafted with help from an AI assistant (Claude) and which I ran unchanged, so it was a design choice in the prompt rather than a Copilot error. Copilot followed the instruction as written.
+- **What I changed and why:** deleted the duplicate definitions and the duplicate test file, restored `Enums.cs`, removed the unused using. Retest: 26 tests passing (lana-06-tests-26-final.png). After peer review I changed the fallback role from Admin to Viewer (fail closed), replaced the "Viewer cookie" provider test with an "Admin cookie" test (a Viewer cookie can no longer be told apart from the default), and documented in the code that the cookie is a demo mechanism, not authentication. Retest: 26 tests passing; deleting the cookie in DevTools shows Viewer in the selector (screenshot: lana-06b-default-viewer-no-cookie.png).
+- **Decision:** accepted after modification; the default role was changed after peer review.
+- **Quality risks:** duplicate code, tests that inflate counts, changes outside the requested scope, unused imports, and an insecure fail-open default introduced through the prompt instead of the tool, which shows that a prompt can encode a risky design decision and that human peer review caught it.
 
 ## Entry L-3: tool availability
 - **What happened:** my first Copilot Chat prompt returned `BadRequestFailure` (exception type `CopilotApiException`, HTTP 400 BadRequest, correlation ID f84f422d-08e3-470d-a660-0c42236a9efc). The screenshot was not retained; the exception text was recorded.
