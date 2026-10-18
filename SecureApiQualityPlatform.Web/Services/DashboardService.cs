@@ -11,34 +11,87 @@ public sealed class DashboardService
 
     public DashboardViewModel Build()
     {
+        // The store may sort snapshots; aggregate here without extra full-sized arrays.
         var apis = _store.GetApis();
         var results = _store.GetResults();
         var defects = _store.GetDefects();
 
-        var passed = results.Count(r => r.Passed);
-        var failed = results.Count - passed;
-        var timings = results
-            .Where(r => r.ResponseTimeMs.HasValue)
-            .Select(r => (double)r.ResponseTimeMs!.Value)
-            .ToArray();
-        var open = defects
-            .Where(d => d.Status != DefectStatus.Closed && d.Status != DefectStatus.Deferred)
-            .ToArray();
+        var passed = 0;
+        var timed = 0;
+        double totalResponseTimeMs = 0;
+
+        foreach (var result in results)
+        {
+            if (result.Passed) passed++;
+            if (result.ResponseTimeMs is long elapsed)
+            {
+                timed++;
+                totalResponseTimeMs += elapsed;
+            }
+        }
+
+        var distribution = Enum.GetValues<DefectSeverity>()
+            .ToDictionary(severity => severity, _ => 0);
+        var openCount = 0;
+        var highRiskOpenCount = 0;
+
+        foreach (var defect in defects)
+        {
+            if (defect.Status is DefectStatus.Closed or DefectStatus.Deferred)
+                continue;
+
+            openCount++;
+            if (distribution.ContainsKey(defect.Severity))
+                distribution[defect.Severity]++;
+
+            if (defect.Severity is DefectSeverity.High or DefectSeverity.Critical)
+                highRiskOpenCount++;
+        }
 
         return new DashboardViewModel
         {
             ApiCount = apis.Count,
-            EndpointCount = apis.Sum(a => a.Endpoints.Count),
+            EndpointCount = apis.Sum(api => api.Endpoints.Count),
             ExecutedChecks = results.Count,
             PassedChecks = passed,
-            FailedChecks = failed,
+            FailedChecks = results.Count - passed,
             PassRatePercent = results.Count == 0 ? 0 : Math.Round((double)passed / results.Count * 100, 1),
-            TimedChecks = timings.Length,
-            AverageResponseTimeMs = timings.Length == 0 ? 0 : Math.Round(timings.Average(), 1),
-            OpenDefects = open.Length,
-            OpenHighOrCriticalDefects = open.Count(d => d.Severity is DefectSeverity.High or DefectSeverity.Critical),
-            RecentResults = results.OrderByDescending(r => r.ExecutedAtUtc).Take(12).ToArray(),
-            RecentDefects = defects.OrderByDescending(d => d.UpdatedAtUtc).Take(8).ToArray()
+            TimedChecks = timed,
+            AverageResponseTimeMs = timed == 0 ? 0 : Math.Round(totalResponseTimeMs / timed, 1),
+            OpenDefects = openCount,
+            OpenHighOrCriticalDefects = highRiskOpenCount,
+            OpenDefectsBySeverity = distribution,
+            RecentResults = Newest(results, result => result.ExecutedAtUtc, 12),
+            RecentDefects = Newest(defects, defect => defect.UpdatedAtUtc, 8)
         };
+    }
+
+    private static IReadOnlyList<T> Newest<T>(
+        IReadOnlyList<T> items,
+        Func<T, DateTimeOffset> timestamp,
+        int limit)
+    {
+        // Selection is O(n log limit), independently of any sorting done by the store.
+        // Earlier snapshot items win timestamp ties, matching stable OrderByDescending.
+        var heap = new PriorityQueue<T, (DateTimeOffset Time, int ReverseIndex)>();
+        for (var index = 0; index < items.Count; index++)
+        {
+            var item = items[index];
+            var priority = (Time: timestamp(item), ReverseIndex: -index);
+            if (heap.Count < limit)
+            {
+                heap.Enqueue(item, priority);
+            }
+            else if (heap.TryPeek(out _, out var oldest) && priority.CompareTo(oldest) > 0)
+            {
+                heap.Dequeue();
+                heap.Enqueue(item, priority);
+            }
+        }
+
+        return heap.UnorderedItems
+            .OrderByDescending(entry => entry.Priority)
+            .Select(entry => entry.Element)
+            .ToArray();
     }
 }

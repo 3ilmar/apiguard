@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="ff16bcb8-5ece-4feb-b750-8879fd5ba89f" name="zsr20@哈迪斯的宠物二 2026-10-18 18:32:31" runUser="哈迪斯的宠物二\zsr20" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-10-18T18:32:31.1192044+13:00" queuing="2026-10-18T18:32:31.1192048+13:00" start="2026-10-18T18:32:29.0867936+13:00" finish="2026-10-18T18:32:31.5844807+13:00" />
+  <TestSettings name="default" id="eb3be5f2-f5ef-413f-827c-d9aadb989b01">
+    <Deployment runDeploymentRoot="zsr20_哈迪斯的宠物二_2026-10-18_18_32_31" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="f63f507b-a7a3-4ae7-8b68-0e6d54e348dd" testId="f5e491cb-0ec2-2f01-137d-6183d964dab0" testName="PT01_DashboardHttpWithTwoThousandResults_UnderTwoSeconds" computerName="哈迪斯的宠物二" duration="00:00:00.6266999" startTime="2026-10-18T18:32:30.8693210+13:00" endTime="2026-10-18T18:32:31.4973362+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f63f507b-a7a3-4ae7-8b68-0e6d54e348dd">
+      <Output>
+        <StdOut>warn: Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware[3]&#xD;
+      Failed to determine the https port for redirect.&#xD;
+PT-01 HTTP: first=175.655 ms; warm statistics={"MinMs":1.7377,"MedianMs":2.373,"MeanMs":2.7407150000000002,"P95Ms":4.4687,"MaxMs":7.0358}; limit &lt; 2000 ms&#xD;
+Warm samples (ms): [2.7288,2.0127,2.2147,2.2766,2.5714,2.9363,3.3959,2.2496,2.3039,2.4772,4.4687,2.2652,7.0358,2.6527,2.4421,2.9267,1.8987,2.2129,1.7377,2.0067]</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="c5191310-5912-41e6-bc6e-43e265bf12b6" testId="cbac041c-ce35-4542-e074-b446b770b3d5" testName="PT01_BuildWithTwoThousandResults_UnderTwoSeconds" computerName="哈迪斯的宠物二" duration="00:00:00.1337437" startTime="2026-10-18T18:32:30.7211310+13:00" endTime="2026-10-18T18:32:30.8653473+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c5191310-5912-41e6-bc6e-43e265bf12b6">
+      <Output>
+        <StdOut>PT-01 aggregation: first=10.569 ms; warm statistics={"MinMs":0.3453,"MedianMs":0.3698,"MeanMs":0.61631,"P95Ms":0.6248,"MaxMs":4.7994}; limit &lt; 2000 ms&#xD;
+Warm samples (ms): [4.7994,0.4103,0.3597,0.3842,0.3786,0.353,0.3497,0.3453,0.3816,0.3632,0.3562,0.3501,0.3748,0.3634,0.3677,0.4421,0.3719,0.3611,0.5891,0.6248]</StdOut>
+      </Output>
+      <ResultFiles>
+        <ResultFile path="哈迪斯的宠物二\pt01-aggregation.json" />
+      </ResultFiles>
+    </UnitTestResult>
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="PT01_BuildWithTwoThousandResults_UnderTwoSeconds" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\release\net8.0\secureapiqualityplatform.tests.dll" id="cbac041c-ce35-4542-e074-b446b770b3d5">
+      <TestCategory>
+        <TestCategoryItem TestCategory="Performance" />
+      </TestCategory>
+      <Execution id="c5191310-5912-41e6-bc6e-43e265bf12b6" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.DashboardPerformanceTests" name="PT01_BuildWithTwoThousandResults_UnderTwoSeconds" />
+    </UnitTest>
+    <UnitTest name="PT01_DashboardHttpWithTwoThousandResults_UnderTwoSeconds" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\release\net8.0\secureapiqualityplatform.tests.dll" id="f5e491cb-0ec2-2f01-137d-6183d964dab0">
+      <TestCategory>
+        <TestCategoryItem TestCategory="Performance" />
+        <TestCategoryItem TestCategory="Integration" />
+      </TestCategory>
+      <Execution id="f63f507b-a7a3-4ae7-8b68-0e6d54e348dd" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.DashboardPerformanceTests" name="PT01_DashboardHttpWithTwoThousandResults_UnderTwoSeconds" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="f5e491cb-0ec2-2f01-137d-6183d964dab0" executionId="f63f507b-a7a3-4ae7-8b68-0e6d54e348dd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cbac041c-ce35-4542-e074-b446b770b3d5" executionId="c5191310-5912-41e6-bc6e-43e265bf12b6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="2" executed="2" passed="2" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+</TestRun>

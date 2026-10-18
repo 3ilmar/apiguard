@@ -1,0 +1,104 @@
+Test run for C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Tests.dll (.NETCoreApp,Version=v8.0)
+A total of 1 test files matched the specified pattern.
+C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Tests.dll
+  Passed OwnedLoopbackFixture_FailureAndPassingRetest_ReachDashboardAndReports (Resolved) [348 ms]
+  Standard Output Messages:
+ Owned loopback fixture: http://127.0.0.1:50368; HTTP intentionally fails HTTPS transport. Retest from Resolved.
+
+
+  Passed OwnedLoopbackFixture_FailureAndPassingRetest_ReachDashboardAndReports (Retest) [23 ms]
+  Standard Output Messages:
+ Owned loopback fixture: http://127.0.0.1:50370; HTTP intentionally fails HTTPS transport. Retest from Retest.
+
+
+  Passed SimulatedTransportTimeout_RecordsFailureAndAllowsNextCheckRun [3 ms]
+  Standard Output Messages:
+ Deterministic timeout simulation: HttpMessageHandler throws TaskCanceledException, then returns HTTP 200; no network request or elapsed timeout is measured. HTTP intentionally fails HTTPS transport.
+
+
+  Passed ExpectedStatus_WhenMatching_ReturnsPass [< 1 ms]
+  Passed ExpectedStatus_WhenDifferent_ReturnsFail [< 1 ms]
+  Passed ResponseTime_AtThreshold_ReturnsPass [< 1 ms]
+  Passed ResponseTime_OverThreshold_ReturnsFail [< 1 ms]
+  Passed AuthenticationProtection_WhenRequiredAndUnauthorized_ReturnsPass [< 1 ms]
+  Passed AuthenticationProtection_WhenRequiredButReturnsOk_ReturnsCriticalFail [< 1 ms]
+  Passed Cors_WhenAuthRequiredAndWildcard_ReturnsFail [< 1 ms]
+  Passed ContentType_WhenExpectedMatches_ReturnsPass [< 1 ms]
+  Passed Build_OpenSeverityDistribution_ExcludesClosedAndDeferred [1 ms]
+  Passed Build_NoDefects_StillProvidesAllSeverityLabels [< 1 ms]
+  Passed Build_UnorderedResults_StillReturnsLatestTwelve [2 ms]
+  Passed Build_TiedResults_PreservesSnapshotOrderAtDisplayLimit [2 ms]
+  Passed Build_UnorderedAndTiedDefects_PreservesSnapshotOrderAtDisplayLimit [1 ms]
+  Passed Build_ResultsWithoutTimings_StillCalculatesPassRate [< 1 ms]
+  Passed Build_OnlyClosedAndDeferredDefects_HasNoOpenSeverityCounts [1 ms]
+  Passed PT01_BuildWithTwoThousandResults_UnderTwoSeconds [202 ms]
+  Standard Output Messages:
+ PT-01 aggregation: first=1.113 ms; warm statistics={"MinMs":0.5827,"MedianMs":0.62995,"MeanMs":1.1413250000000004,"P95Ms":1.1047,"MaxMs":9.6328}; limit < 2000 ms
+ Warm samples (ms): [9.6328,0.6822,0.627,0.5916,0.6133,0.6369,0.6593,0.5917,0.589,0.6329,0.5995,0.6009,0.5914,0.5984,0.5827,0.6625,0.9185,0.9779,1.1047,0.9333]
+
+
+  Passed PT01_DashboardHttpWithTwoThousandResults_UnderTwoSeconds [521 ms]
+  Standard Output Messages:
+ warn: Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware[3]
+       Failed to determine the https port for redirect.
+ PT-01 HTTP: first=142.987 ms; warm statistics={"MinMs":1.5363,"MedianMs":1.66685,"MeanMs":1.7133599999999998,"P95Ms":1.9795,"MaxMs":2.2421}; limit < 2000 ms
+ Warm samples (ms): [1.5447,1.5363,1.6741,1.6301,1.645,1.6596,1.6504,1.7627,1.6935,1.6303,1.6038,1.5762,1.7439,1.7593,1.9795,1.8684,1.791,1.6879,1.5884,2.2421]
+
+
+  Passed Build_CalculatesCheckAndResponseTimeMetrics [< 1 ms]
+  Passed Build_HandlesNoCheckDataWithoutInvalidMetrics [< 1 ms]
+  Passed Build_CountsOnlyOpenHighOrCriticalDefectsAsHighRisk [< 1 ms]
+  Passed Build_ReturnsMostRecentChecksAndDefectsWithinDisplayLimits [< 1 ms]
+  Passed FailedCheck_CreatesDefectWithMappedPriority [< 1 ms]
+  Passed PassingRetest_ClosesResolvedDefect [< 1 ms]
+  Passed FailedCheck_MessageIncludesExpectationAndObservedEvidence ("Status","Expected HTTP 200","received 400") [< 1 ms]
+  Passed FailedCheck_MessageIncludesExpectationAndObservedEvidence ("Timing","1001 ms","1000 ms threshold") [< 1 ms]
+  Passed FailedCheck_MessageIncludesExpectationAndObservedEvidence ("Authentication","authentication-required","HTTP 200") [< 1 ms]
+  Passed FailedCheck_MessageIncludesExpectationAndObservedEvidence ("ContentType","application/json","text/html") [< 1 ms]
+  Passed FailedCheck_MessageIncludesExpectationAndObservedEvidence ("Availability","Request failed","Request timed out.") [< 1 ms]
+  Passed TryAddApi_DuplicateBaseUrl_ReturnsFalse [< 1 ms]
+  Passed TryAddApi_DifferentBaseUrl_ReturnsTrue [< 1 ms]
+  Passed TryAddEndpoint_DuplicateMethodAndPath_ReturnsFalse [< 1 ms]
+  Passed TryAddEndpoint_SamePathDifferentMethod_ReturnsTrue [< 1 ms]
+  Passed ExportResultsCsv_IncludesQaContextAndEscapesCsvValues [< 1 ms]
+  Passed ExportDefectsCsv_IncludesLifecycleEvidenceAndEscapesCsvValues [< 1 ms]
+  Passed ExportResultsCsv_WithNoResults_ReturnsHeaderOnly [< 1 ms]
+  Passed ExportResultsCsv_FiltersByApiAndPassStatus (False,"selected-fail","Fail") [15 ms]
+  Passed ExportResultsCsv_FiltersByApiAndPassStatus (True,"selected-pass","Pass") [1 ms]
+  Passed ExportDefectsCsv_FiltersSeverityStatusAndApi_AndAddsLifecycleFields [1 ms]
+  Passed ExportResultsCsv_EscapesUntrustedSpreadsheetFormulaAndNewLine [< 1 ms]
+  Passed ExportDefectsCsv_WithNoMatchingRows_RemainsHeaderOnly [< 1 ms]
+  Passed ExportResultsCsv_PreservesSchemaAndQuotedMultilineText [< 1 ms]
+  Passed ExportDefectsCsv_PreservesSchemaAndQuotedLifecycleEvidence [< 1 ms]
+  Passed Exports_WithMissingApiAndEndpoint_PreserveIdsAndEmptyOptionalFields [< 1 ms]
+  Passed Exports_WithoutFilters_IncludeAllRowsNewestFirst [1 ms]
+  Passed ExportDefectsCsv_MapsEveryLifecycleStatus (New,"Active",True) [< 1 ms]
+  Passed ExportDefectsCsv_MapsEveryLifecycleStatus (Triaged,"Active",True) [< 1 ms]
+  Passed ExportDefectsCsv_MapsEveryLifecycleStatus (Assigned,"Active",True) [< 1 ms]
+  Passed ExportDefectsCsv_MapsEveryLifecycleStatus (InProgress,"Active",True) [< 1 ms]
+  Passed ExportDefectsCsv_MapsEveryLifecycleStatus (Resolved,"Verification",True) [< 1 ms]
+  Passed ExportDefectsCsv_MapsEveryLifecycleStatus (Retest,"Verification",True) [< 1 ms]
+  Passed ExportDefectsCsv_MapsEveryLifecycleStatus (Closed,"Closed",False) [< 1 ms]
+  Passed ExportDefectsCsv_MapsEveryLifecycleStatus (Reopened,"Active",True) [< 1 ms]
+  Passed ExportDefectsCsv_MapsEveryLifecycleStatus (Deferred,"Deferred",False) [< 1 ms]
+  Passed Exports_NeutralizeFormulaPrefixesInUntrustedFields ("=SUM(1,2)") [1 ms]
+  Passed Exports_NeutralizeFormulaPrefixesInUntrustedFields ("+SUM(1,2)") [< 1 ms]
+  Passed Exports_NeutralizeFormulaPrefixesInUntrustedFields ("-SUM(1,2)") [< 1 ms]
+  Passed Exports_NeutralizeFormulaPrefixesInUntrustedFields ("@SUM(1,2)") [< 1 ms]
+  Passed Exports_NeutralizeFormulaPrefixesInUntrustedFields (" 	=SUM(1,2)") [< 1 ms]
+  Passed ExportResultsCsv_WithMalformedFilter_ReturnsActionableBadRequest ("apiId") [< 1 ms]
+  Passed ExportResultsCsv_WithMalformedFilter_ReturnsActionableBadRequest ("passed") [< 1 ms]
+  Passed ExportDefectsCsv_WithMalformedFilter_ReturnsActionableBadRequest ("apiId") [< 1 ms]
+  Passed ExportDefectsCsv_WithMalformedFilter_ReturnsActionableBadRequest ("status") [< 1 ms]
+  Passed ExportDefectsCsv_WithMalformedFilter_ReturnsActionableBadRequest ("severity") [< 1 ms]
+  Passed ExportDefectsCsv_WithUndefinedEnumFilter_ReturnsActionableBadRequest (-1,0) [< 1 ms]
+  Passed ExportDefectsCsv_WithUndefinedEnumFilter_ReturnsActionableBadRequest (999,0) [< 1 ms]
+  Passed ExportDefectsCsv_WithUndefinedEnumFilter_ReturnsActionableBadRequest (0,-1) [< 1 ms]
+  Passed ExportDefectsCsv_WithUndefinedEnumFilter_ReturnsActionableBadRequest (0,999) [< 1 ms]
+  Passed ValidateAsync_ShouldRejectUrlsWithCredentials [< 1 ms]
+Results File: C:\Users\zsr20\source\repos\3ilmar\apiguard\docs\qa-evidence\2026-10-18\pt01-20261018T053834379Z-eb0590\full-suite\full-suite.trx
+
+Test Run Successful.
+Total tests: 71
+     Passed: 71
+ Total time: 1.9517 Seconds

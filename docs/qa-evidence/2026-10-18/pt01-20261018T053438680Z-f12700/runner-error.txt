@@ -1,0 +1,8 @@
+Exception: C:\Users\zsr20\source\repos\3ilmar\apiguard\docs\qa-evidence\Invoke-PT01.ps1:209
+Line |
+ 209 |              throw "Expected exactly one dedicated performance artifac …
+     |              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Expected exactly one dedicated performance artifact named pt01-aggregation.json; found 0. PT-01 evidence is
+     | incomplete.
+
+

@@ -1,0 +1,511 @@
+[
+  {
+    "File": "full-suite\\full-suite.trx",
+    "Outcome": "Completed",
+    "Counters": [
+      {
+        "Name": "total",
+        "Value": "71"
+      },
+      {
+        "Name": "executed",
+        "Value": "71"
+      },
+      {
+        "Name": "passed",
+        "Value": "71"
+      },
+      {
+        "Name": "failed",
+        "Value": "0"
+      },
+      {
+        "Name": "error",
+        "Value": "0"
+      },
+      {
+        "Name": "timeout",
+        "Value": "0"
+      },
+      {
+        "Name": "aborted",
+        "Value": "0"
+      },
+      {
+        "Name": "inconclusive",
+        "Value": "0"
+      },
+      {
+        "Name": "passedButRunAborted",
+        "Value": "0"
+      },
+      {
+        "Name": "notRunnable",
+        "Value": "0"
+      },
+      {
+        "Name": "notExecuted",
+        "Value": "0"
+      },
+      {
+        "Name": "disconnected",
+        "Value": "0"
+      },
+      {
+        "Name": "warning",
+        "Value": "0"
+      },
+      {
+        "Name": "completed",
+        "Value": "0"
+      },
+      {
+        "Name": "inProgress",
+        "Value": "0"
+      },
+      {
+        "Name": "pending",
+        "Value": "0"
+      }
+    ],
+    "Results": [
+      {
+        "Name": "ExportDefectsCsv_IncludesLifecycleEvidenceAndEscapesCsvValues",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0007626"
+      },
+      {
+        "Name": "ExportResultsCsv_WithMalformedFilter_ReturnsActionableBadRequest (\"apiId\")",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0007300"
+      },
+      {
+        "Name": "ExportDefectsCsv_WithUndefinedEnumFilter_ReturnsActionableBadRequest (0,999)",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0000299"
+      },
+      {
+        "Name": "ExportResultsCsv_EscapesUntrustedSpreadsheetFormulaAndNewLine",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0003640"
+      },
+      {
+        "Name": "Exports_WithMissingApiAndEndpoint_PreserveIdsAndEmptyOptionalFields",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0010250"
+      },
+      {
+        "Name": "ValidateAsync_ShouldRejectUrlsWithCredentials",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0007191"
+      },
+      {
+        "Name": "ResponseTime_OverThreshold_ReturnsFail",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0000552"
+      },
+      {
+        "Name": "Build_CalculatesCheckAndResponseTimeMetrics",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0004200"
+      },
+      {
+        "Name": "PassingRetest_ClosesResolvedDefect",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0002832"
+      },
+      {
+        "Name": "FailedCheck_CreatesDefectWithMappedPriority",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0006917"
+      },
+      {
+        "Name": "ExportDefectsCsv_MapsEveryLifecycleStatus (Deferred,\"Deferred\",False)",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0002288"
+      },
+      {
+        "Name": "ExportDefectsCsv_WithMalformedFilter_ReturnsActionableBadRequest (\"apiId\")",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0001779"
+      },
+      {
+        "Name": "Exports_NeutralizeFormulaPrefixesInUntrustedFields (\"+SUM(1,2)\")",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0003233"
+      },
+      {
+        "Name": "ExportResultsCsv_PreservesSchemaAndQuotedMultilineText",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0003982"
+      },
+      {
+        "Name": "Build_CountsOnlyOpenHighOrCriticalDefectsAsHighRisk",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0002649"
+      },
+      {
+        "Name": "Exports_NeutralizeFormulaPrefixesInUntrustedFields (\"@SUM(1,2)\")",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0001760"
+      },
+      {
+        "Name": "ExportResultsCsv_IncludesQaContextAndEscapesCsvValues",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0004623"
+      },
+      {
+        "Name": "Build_UnorderedAndTiedDefects_PreservesSnapshotOrderAtDisplayLimit",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0004356"
+      },
+      {
+        "Name": "ExportResultsCsv_WithMalformedFilter_ReturnsActionableBadRequest (\"passed\")",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0003215"
+      },
+      {
+        "Name": "TryAddEndpoint_DuplicateMethodAndPath_ReturnsFalse",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0009197"
+      },
+      {
+        "Name": "ExportDefectsCsv_WithUndefinedEnumFilter_ReturnsActionableBadRequest (999,0)",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0003436"
+      },
+      {
+        "Name": "ExportDefectsCsv_WithUndefinedEnumFilter_ReturnsActionableBadRequest (-1,0)",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0001844"
+      },
+      {
+        "Name": "TryAddEndpoint_SamePathDifferentMethod_ReturnsTrue",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0001487"
+      },
+      {
+        "Name": "ExportDefectsCsv_MapsEveryLifecycleStatus (InProgress,\"Active\",True)",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0001071"
+      },
+      {
+        "Name": "ResponseTime_AtThreshold_ReturnsPass",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0000720"
+      },
+      {
+        "Name": "FailedCheck_MessageIncludesExpectationAndObservedEvidence (\"Status\",\"Expected HTTP 200\",\"received 400\")",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0004125"
+      },
+      {
+        "Name": "Build_TiedResults_PreservesSnapshotOrderAtDisplayLimit",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0013690"
+      },
+      {
+        "Name": "FailedCheck_MessageIncludesExpectationAndObservedEvidence (\"Authentication\",\"authentication-required\",\"HTTP 200\")",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0000295"
+      },
+      {
+        "Name": "AuthenticationProtection_WhenRequiredButReturnsOk_ReturnsCriticalFail",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0000729"
+      },
+      {
+        "Name": "FailedCheck_MessageIncludesExpectationAndObservedEvidence (\"Availability\",\"Request failed\",\"Request timed out.\")",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0000263"
+      },
+      {
+        "Name": "ExportDefectsCsv_MapsEveryLifecycleStatus (Triaged,\"Active\",True)",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0005995"
+      },
+      {
+        "Name": "FailedCheck_MessageIncludesExpectationAndObservedEvidence (\"ContentType\",\"application/json\",\"text/html\")",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0000346"
+      },
+      {
+        "Name": "AuthenticationProtection_WhenRequiredAndUnauthorized_ReturnsPass",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0002232"
+      },
+      {
+        "Name": "SimulatedTransportTimeout_RecordsFailureAndAllowsNextCheckRun",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0020760"
+      },
+      {
+        "Name": "ExportDefectsCsv_MapsEveryLifecycleStatus (Reopened,\"Active\",True)",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0002755"
+      },
+      {
+        "Name": "ExportDefectsCsv_MapsEveryLifecycleStatus (Closed,\"Closed\",False)",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0002776"
+      },
+      {
+        "Name": "OwnedLoopbackFixture_FailureAndPassingRetest_ReachDashboardAndReports (Resolved)",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.3889537"
+      },
+      {
+        "Name": "Exports_NeutralizeFormulaPrefixesInUntrustedFields (\"=SUM(1,2)\")",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0007862"
+      },
+      {
+        "Name": "Build_OnlyClosedAndDeferredDefects_HasNoOpenSeverityCounts",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0007745"
+      },
+      {
+        "Name": "Cors_WhenAuthRequiredAndWildcard_ReturnsFail",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0002707"
+      },
+      {
+        "Name": "ExportDefectsCsv_MapsEveryLifecycleStatus (Resolved,\"Verification\",True)",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0002214"
+      },
+      {
+        "Name": "Exports_WithoutFilters_IncludeAllRowsNewestFirst",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0015182"
+      },
+      {
+        "Name": "ExportDefectsCsv_MapsEveryLifecycleStatus (New,\"Active\",True)",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0005820"
+      },
+      {
+        "Name": "Build_UnorderedResults_StillReturnsLatestTwelve",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0011012"
+      },
+      {
+        "Name": "ExportDefectsCsv_MapsEveryLifecycleStatus (Retest,\"Verification\",True)",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0003170"
+      },
+      {
+        "Name": "OwnedLoopbackFixture_FailureAndPassingRetest_ReachDashboardAndReports (Retest)",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0139229"
+      },
+      {
+        "Name": "Exports_NeutralizeFormulaPrefixesInUntrustedFields (\"-SUM(1,2)\")",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0002032"
+      },
+      {
+        "Name": "TryAddApi_DuplicateBaseUrl_ReturnsFalse",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0015713"
+      },
+      {
+        "Name": "PT01_BuildWithTwoThousandResults_UnderTwoSeconds",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.1171310"
+      },
+      {
+        "Name": "ExpectedStatus_WhenMatching_ReturnsPass",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0001481"
+      },
+      {
+        "Name": "Exports_NeutralizeFormulaPrefixesInUntrustedFields (\" \t=SUM(1,2)\")",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0001801"
+      },
+      {
+        "Name": "TryAddApi_DifferentBaseUrl_ReturnsTrue",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0004617"
+      },
+      {
+        "Name": "Build_HandlesNoCheckDataWithoutInvalidMetrics",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0003475"
+      },
+      {
+        "Name": "Build_NoDefects_StillProvidesAllSeverityLabels",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0003106"
+      },
+      {
+        "Name": "PT01_DashboardHttpWithTwoThousandResults_UnderTwoSeconds",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.3166531"
+      },
+      {
+        "Name": "ExportDefectsCsv_PreservesSchemaAndQuotedLifecycleEvidence",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0007882"
+      },
+      {
+        "Name": "FailedCheck_MessageIncludesExpectationAndObservedEvidence (\"Timing\",\"1001 ms\",\"1000 ms threshold\")",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0004406"
+      },
+      {
+        "Name": "Build_ReturnsMostRecentChecksAndDefectsWithinDisplayLimits",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0004698"
+      },
+      {
+        "Name": "ExportDefectsCsv_WithNoMatchingRows_RemainsHeaderOnly",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0001901"
+      },
+      {
+        "Name": "ExportDefectsCsv_MapsEveryLifecycleStatus (Assigned,\"Active\",True)",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0001365"
+      },
+      {
+        "Name": "ContentType_WhenExpectedMatches_ReturnsPass",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0001265"
+      },
+      {
+        "Name": "ExportDefectsCsv_WithMalformedFilter_ReturnsActionableBadRequest (\"status\")",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0002067"
+      },
+      {
+        "Name": "ExportDefectsCsv_FiltersSeverityStatusAndApi_AndAddsLifecycleFields",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0005371"
+      },
+      {
+        "Name": "ExportResultsCsv_FiltersByApiAndPassStatus (False,\"selected-fail\",\"Fail\")",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0085214"
+      },
+      {
+        "Name": "ExportResultsCsv_WithNoResults_ReturnsHeaderOnly",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0007320"
+      },
+      {
+        "Name": "Build_OpenSeverityDistribution_ExcludesClosedAndDeferred",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0007311"
+      },
+      {
+        "Name": "ExpectedStatus_WhenDifferent_ReturnsFail",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0003826"
+      },
+      {
+        "Name": "ExportDefectsCsv_WithUndefinedEnumFilter_ReturnsActionableBadRequest (0,-1)",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0000338"
+      },
+      {
+        "Name": "ExportResultsCsv_FiltersByApiAndPassStatus (True,\"selected-pass\",\"Pass\")",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0008191"
+      },
+      {
+        "Name": "ExportDefectsCsv_WithMalformedFilter_ReturnsActionableBadRequest (\"severity\")",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0000285"
+      },
+      {
+        "Name": "Build_ResultsWithoutTimings_StillCalculatesPassRate",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.0001863"
+      }
+    ]
+  },
+  {
+    "File": "performance\\performance.trx",
+    "Outcome": "Completed",
+    "Counters": [
+      {
+        "Name": "total",
+        "Value": "2"
+      },
+      {
+        "Name": "executed",
+        "Value": "2"
+      },
+      {
+        "Name": "passed",
+        "Value": "2"
+      },
+      {
+        "Name": "failed",
+        "Value": "0"
+      },
+      {
+        "Name": "error",
+        "Value": "0"
+      },
+      {
+        "Name": "timeout",
+        "Value": "0"
+      },
+      {
+        "Name": "aborted",
+        "Value": "0"
+      },
+      {
+        "Name": "inconclusive",
+        "Value": "0"
+      },
+      {
+        "Name": "passedButRunAborted",
+        "Value": "0"
+      },
+      {
+        "Name": "notRunnable",
+        "Value": "0"
+      },
+      {
+        "Name": "notExecuted",
+        "Value": "0"
+      },
+      {
+        "Name": "disconnected",
+        "Value": "0"
+      },
+      {
+        "Name": "warning",
+        "Value": "0"
+      },
+      {
+        "Name": "completed",
+        "Value": "0"
+      },
+      {
+        "Name": "inProgress",
+        "Value": "0"
+      },
+      {
+        "Name": "pending",
+        "Value": "0"
+      }
+    ],
+    "Results": [
+      {
+        "Name": "PT01_DashboardHttpWithTwoThousandResults_UnderTwoSeconds",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.6266999"
+      },
+      {
+        "Name": "PT01_BuildWithTwoThousandResults_UnderTwoSeconds",
+        "Outcome": "Passed",
+        "Duration": "00:00:00.1337437"
+      }
+    ]
+  }
+]

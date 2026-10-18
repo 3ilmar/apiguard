@@ -1,0 +1,15 @@
+{
+  "CapturedAtNZ": "2026-10-18T17:53:55.3958613+13:00",
+  "OS": "Microsoft Windows 10.0.26200",
+  "CPU": "12th Gen Intel(R) Core(TM) i7-12700H",
+  "PhysicalMemoryBytes": 16834023424,
+  "GitVersion": "git version 2.45.1.windows.1",
+  "Head": "1505cc9f1d60687111765aec1355ec1e9f87b2a9",
+  "Branch": "feature/dashboard-reporting",
+  "WorkingTree": "Uncommitted changes; see tested-source-sha256.csv",
+  "Configuration": "Release",
+  "TargetFramework": "net8.0",
+  "TestSdk": "17.11.1",
+  "MSTest": "3.6.4",
+  "CoverletCollector": "6.0.2"
+}

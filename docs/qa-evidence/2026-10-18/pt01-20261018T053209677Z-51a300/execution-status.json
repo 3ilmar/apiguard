@@ -1,0 +1,199 @@
+{
+  "Case": "PT-01",
+  "StartedAtUtc": "2026-10-18T05:32:09.6774131+00:00",
+  "StartedAtAuckland": "2026-10-18T18:32:09.6774131+13:00",
+  "RepositoryRoot": "C:\\Users\\zsr20\\source\\repos\\3ilmar\\apiguard",
+  "EvidenceDirectory": "C:\\Users\\zsr20\\source\\repos\\3ilmar\\apiguard\\docs\\qa-evidence\\2026-10-18\\pt01-20261018T053209677Z-51a300",
+  "Configuration": "Release",
+  "ThresholdMilliseconds": 2000,
+  "DatasetResultCount": 2000,
+  "Status": "CommandsCompletedSuccessfully",
+  "Commands": [
+    {
+      "Name": "git-version",
+      "Executable": "git",
+      "Arguments": [
+        "--version"
+      ],
+      "StartedAtUtc": "2026-10-18T05:32:11.2919142+00:00",
+      "CompletedAtUtc": "2026-10-18T05:32:11.3465163+00:00",
+      "DurationMilliseconds": 52.6194,
+      "ExitCode": 0,
+      "Log": "git-version.txt"
+    },
+    {
+      "Name": "git-diff",
+      "Executable": "git",
+      "Arguments": [
+        "diff",
+        "--no-ext-diff"
+      ],
+      "StartedAtUtc": "2026-10-18T05:32:11.3546559+00:00",
+      "CompletedAtUtc": "2026-10-18T05:32:11.5894029+00:00",
+      "DurationMilliseconds": 234.6676,
+      "ExitCode": 0,
+      "Log": "git-diff.txt"
+    },
+    {
+      "Name": "git-staged-diff",
+      "Executable": "git",
+      "Arguments": [
+        "diff",
+        "--cached",
+        "--no-ext-diff"
+      ],
+      "StartedAtUtc": "2026-10-18T05:32:11.5920859+00:00",
+      "CompletedAtUtc": "2026-10-18T05:32:11.6508538+00:00",
+      "DurationMilliseconds": 58.6907,
+      "ExitCode": 0,
+      "Log": "git-staged-diff.txt"
+    },
+    {
+      "Name": "dotnet-info",
+      "Executable": "dotnet",
+      "Arguments": [
+        "--info"
+      ],
+      "StartedAtUtc": "2026-10-18T05:32:11.6552362+00:00",
+      "CompletedAtUtc": "2026-10-18T05:32:12.0520433+00:00",
+      "DurationMilliseconds": 396.7228,
+      "ExitCode": 0,
+      "Log": "dotnet-info.txt"
+    },
+    {
+      "Name": "dotnet-sdk-version",
+      "Executable": "dotnet",
+      "Arguments": [
+        "--version"
+      ],
+      "StartedAtUtc": "2026-10-18T05:32:12.0548917+00:00",
+      "CompletedAtUtc": "2026-10-18T05:32:12.1988235+00:00",
+      "DurationMilliseconds": 143.8459,
+      "ExitCode": 0,
+      "Log": "dotnet-sdk-version.txt"
+    },
+    {
+      "Name": "dotnet-sdks",
+      "Executable": "dotnet",
+      "Arguments": [
+        "--list-sdks"
+      ],
+      "StartedAtUtc": "2026-10-18T05:32:12.2019119+00:00",
+      "CompletedAtUtc": "2026-10-18T05:32:12.2272267+00:00",
+      "DurationMilliseconds": 25.2236,
+      "ExitCode": 0,
+      "Log": "dotnet-sdks.txt"
+    },
+    {
+      "Name": "dotnet-runtimes",
+      "Executable": "dotnet",
+      "Arguments": [
+        "--list-runtimes"
+      ],
+      "StartedAtUtc": "2026-10-18T05:32:12.2299556+00:00",
+      "CompletedAtUtc": "2026-10-18T05:32:12.2558345+00:00",
+      "DurationMilliseconds": 25.7816,
+      "ExitCode": 0,
+      "Log": "dotnet-runtimes.txt"
+    },
+    {
+      "Name": "restore",
+      "Executable": "dotnet",
+      "Arguments": [
+        "restore",
+        "SecureApiQualityPlatform.sln"
+      ],
+      "StartedAtUtc": "2026-10-18T05:32:12.2604288+00:00",
+      "CompletedAtUtc": "2026-10-18T05:32:13.2626169+00:00",
+      "DurationMilliseconds": 1002.0958,
+      "ExitCode": 0,
+      "Log": "restore.txt"
+    },
+    {
+      "Name": "test-package-versions",
+      "Executable": "dotnet",
+      "Arguments": [
+        "list",
+        "SecureApiQualityPlatform.Tests/SecureApiQualityPlatform.Tests.csproj",
+        "package",
+        "--include-transitive"
+      ],
+      "StartedAtUtc": "2026-10-18T05:32:13.2654893+00:00",
+      "CompletedAtUtc": "2026-10-18T05:32:15.3961003+00:00",
+      "DurationMilliseconds": 2130.4655,
+      "ExitCode": 0,
+      "Log": "test-package-versions.txt"
+    },
+    {
+      "Name": "build-release",
+      "Executable": "dotnet",
+      "Arguments": [
+        "build",
+        "SecureApiQualityPlatform.sln",
+        "--configuration",
+        "Release",
+        "--no-restore"
+      ],
+      "StartedAtUtc": "2026-10-18T05:32:15.4012729+00:00",
+      "CompletedAtUtc": "2026-10-18T05:32:20.0026235+00:00",
+      "DurationMilliseconds": 4601.2615,
+      "ExitCode": 0,
+      "Log": "build-release.txt"
+    },
+    {
+      "Name": "test-full-suite",
+      "Executable": "dotnet",
+      "Arguments": [
+        "test",
+        "SecureApiQualityPlatform.Tests/SecureApiQualityPlatform.Tests.csproj",
+        "--configuration",
+        "Release",
+        "--no-build",
+        "--no-restore",
+        "--collect",
+        "XPlat Code Coverage",
+        "--logger",
+        "trx;LogFileName=full-suite.trx",
+        "--logger",
+        "console;verbosity=detailed",
+        "--results-directory",
+        "C:\\Users\\zsr20\\source\\repos\\3ilmar\\apiguard\\docs\\qa-evidence\\2026-10-18\\pt01-20261018T053209677Z-51a300\\full-suite"
+      ],
+      "StartedAtUtc": "2026-10-18T05:32:20.0073167+00:00",
+      "CompletedAtUtc": "2026-10-18T05:32:28.1500154+00:00",
+      "DurationMilliseconds": 8142.6207,
+      "ExitCode": 0,
+      "Log": "test-full-suite.txt"
+    },
+    {
+      "Name": "test-performance",
+      "Executable": "dotnet",
+      "Arguments": [
+        "test",
+        "SecureApiQualityPlatform.Tests/SecureApiQualityPlatform.Tests.csproj",
+        "--configuration",
+        "Release",
+        "--no-build",
+        "--no-restore",
+        "--filter",
+        "TestCategory=Performance",
+        "--logger",
+        "trx;LogFileName=performance.trx",
+        "--logger",
+        "console;verbosity=detailed",
+        "--results-directory",
+        "C:\\Users\\zsr20\\source\\repos\\3ilmar\\apiguard\\docs\\qa-evidence\\2026-10-18\\pt01-20261018T053209677Z-51a300\\performance"
+      ],
+      "StartedAtUtc": "2026-10-18T05:32:28.2344106+00:00",
+      "CompletedAtUtc": "2026-10-18T05:32:31.6602341+00:00",
+      "DurationMilliseconds": 3425.7516,
+      "ExitCode": 0,
+      "Log": "test-performance.txt"
+    }
+  ],
+  "Branch": "feature/dashboard-reporting",
+  "Head": "1505cc9f1d60687111765aec1355ec1e9f87b2a9",
+  "WorkingTreeDirty": true,
+  "CompletedAtUtc": "2026-10-18T05:32:31.8223566+00:00",
+  "ExitCode": 0
+}
