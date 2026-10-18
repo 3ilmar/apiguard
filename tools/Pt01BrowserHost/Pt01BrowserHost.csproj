@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPublishable>false</IsPublishable>
+  </PropertyGroup>
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    <ProjectReference Include="../../SecureApiQualityPlatform.Web/SecureApiQualityPlatform.Web.csproj" />
+    <Compile Include="../../SecureApiQualityPlatform.Tests/Fixtures/Pt01Fixture.cs" Link="Pt01Fixture.cs" />
+  </ItemGroup>
+  <Target Name="RejectPublish" BeforeTargets="Publish">
+    <Error Text="PT-01 browser host is a local development tool and cannot be published." />
+  </Target>
+</Project>

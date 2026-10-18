@@ -14,6 +14,8 @@ public sealed class DashboardViewModel
     public double AverageResponseTimeMs { get; init; }
     public int OpenDefects { get; init; }
     public int OpenHighOrCriticalDefects { get; init; }
+    public IReadOnlyDictionary<DefectSeverity, int> OpenDefectsBySeverity { get; init; }
+        = new Dictionary<DefectSeverity, int>();
     public IReadOnlyList<ApiCheckResult> RecentResults { get; init; } = Array.Empty<ApiCheckResult>();
     public IReadOnlyList<Defect> RecentDefects { get; init; } = Array.Empty<Defect>();
 }

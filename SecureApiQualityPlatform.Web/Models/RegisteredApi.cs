@@ -17,5 +17,5 @@ public sealed class RegisteredApi
 
     public DateTimeOffset CreatedAtUtc { get; init; } = DateTimeOffset.UtcNow;
 
-    public List<ApiEndpoint> Endpoints { get; } = new();
+    public List<ApiEndpoint> Endpoints { get; set; } = new();
 }

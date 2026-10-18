@@ -1,0 +1,6 @@
+Run,NetworkFinishMs,DOMContentLoadedMs,NavigationStartUtc,CompleteDashboardMs,Status,Source,Notes
+1,190,15,,,ACCEPTANCE PENDING,User-reported Network run order,Supporting screenshot values retained; per-run capture time unavailable
+2,55,15,,,ACCEPTANCE PENDING,User-reported Network run order,Five reported runs are not five independently identifiable screenshot captures
+3,55,15,,,ACCEPTANCE PENDING,User-reported Network run order,Attachments 03/04/06 are byte-identical; trace not paired to this run
+4,55,15,,,ACCEPTANCE PENDING,User-reported Network run order,Attachments 03/04/06 are byte-identical; trace not paired to this run
+5,41,15,,,ACCEPTANCE PENDING,User-reported Network run order,Supporting screenshot values retained; complete-dashboard timing unmeasured

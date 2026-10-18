@@ -1,0 +1,19 @@
+{
+  "CapturedAtUtc": "2026-10-18T06:30:13.8400628+00:00",
+  "Branch": "feature/dashboard-reporting",
+  "Head": "ced44546ba9c71f25935e6ba913b27fe08f0acd1",
+  "WorkingTree": [
+    " M SecureApiQualityPlatform.Tests/DashboardPerformanceTests.cs",
+    "?? SecureApiQualityPlatform.Tests/Fixtures/",
+    "?? SecureApiQualityPlatform.Tests/Pt01FixtureTests.cs",
+    "?? docs/qa-evidence/2026-10-18/sqa18-browser-20261018T062538973Z/",
+    "?? docs/qa-evidence/SQA18-Browser-Performance.md",
+    "?? tools/"
+  ],
+  "ProcessId": 35680,
+  "Url": "http://127.0.0.1:51818/",
+  "SDK": "10.0.400",
+  "OS": "Microsoft Windows 10.0.26200",
+  "PowerShellVersion": "7.6.5",
+  "BrowserStatus": "NOT RUN"
+}

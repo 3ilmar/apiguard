@@ -1,0 +1,8 @@
+Test run for C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Tests.dll (.NETCoreApp,Version=v8.0)
+A total of 1 test files matched the specified pattern.
+Results File: C:\Users\zsr20\source\repos\3ilmar\apiguard\TestResults\final-recorded\final.trx
+
+Passed!  - Failed:     0, Passed:    70, Skipped:     0, Total:    70, Duration: 714 ms - SecureApiQualityPlatform.Tests.dll (net8.0)
+
+Attachments:
+  C:\Users\zsr20\source\repos\3ilmar\apiguard\TestResults\final-recorded\04cd3269-9839-42c7-9b63-1a4a93d175fd\coverage.cobertura.xml
