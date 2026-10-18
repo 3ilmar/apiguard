@@ -6,11 +6,11 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddDbContext<PlatformDbContext>(options =>
+builder.Services.AddDbContextFactory<PlatformDbContext>(options =>
     options.UseSqlite(
         builder.Configuration.GetConnectionString("PlatformDatabase")));
 
-builder.Services.AddSingleton<IPlatformStore, InMemoryPlatformStore>();
+builder.Services.AddSingleton<IPlatformStore, SqlitePlatformStore>();
 builder.Services.AddSingleton<CheckEvaluator>();
 builder.Services.AddSingleton<DefectLifecycleService>();
 builder.Services.AddSingleton<DashboardService>();
@@ -24,6 +24,15 @@ builder.Services.AddHttpClient<ApiCheckService>(client =>
 });
 
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var dbFactory =
+        scope.ServiceProvider.GetRequiredService<IDbContextFactory<PlatformDbContext>>();
+
+    using var db = dbFactory.CreateDbContext();
+    db.Database.EnsureCreated();
+}
 
 if (!app.Environment.IsDevelopment())
 {
