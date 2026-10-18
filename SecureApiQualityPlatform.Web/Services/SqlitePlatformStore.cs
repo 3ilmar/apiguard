@@ -9,10 +9,6 @@ public sealed class SqlitePlatformStore : IPlatformStore
     private readonly IDbContextFactory<PlatformDbContext> _dbFactory;
     private readonly object _gate = new();
 
-    // Results and defects will be persisted in the next storage commit.
-    private readonly List<ApiCheckResult> _results = new();
-    private readonly List<Defect> _defects = new();
-
     public SqlitePlatformStore(IDbContextFactory<PlatformDbContext> dbFactory)
     {
         _dbFactory = dbFactory;
@@ -46,6 +42,8 @@ public sealed class SqlitePlatformStore : IPlatformStore
         {
             using var db = _dbFactory.CreateDbContext();
 
+            api.BaseUrl = NormalizeBaseUrl(api.BaseUrl);
+
             db.Apis.Add(api);
             db.SaveChanges();
         }
@@ -57,7 +55,7 @@ public sealed class SqlitePlatformStore : IPlatformStore
         {
             using var db = _dbFactory.CreateDbContext();
 
-            var normalizedBaseUrl = api.BaseUrl.TrimEnd('/');
+            var normalizedBaseUrl = NormalizeBaseUrl(api.BaseUrl);
 
             var existingUrls = db.Apis
                 .AsNoTracking()
@@ -65,7 +63,7 @@ public sealed class SqlitePlatformStore : IPlatformStore
                 .ToList();
 
             var duplicateExists = existingUrls.Any(existingUrl =>
-                existingUrl.TrimEnd('/').Equals(
+                NormalizeBaseUrl(existingUrl).Equals(
                     normalizedBaseUrl,
                     StringComparison.OrdinalIgnoreCase));
 
@@ -73,6 +71,8 @@ public sealed class SqlitePlatformStore : IPlatformStore
             {
                 return false;
             }
+
+            api.BaseUrl = normalizedBaseUrl;
 
             db.Apis.Add(api);
             db.SaveChanges();
@@ -101,6 +101,9 @@ public sealed class SqlitePlatformStore : IPlatformStore
                     "Endpoint API ID does not match the target API.");
             }
 
+            endpoint.Method = NormalizeMethod(endpoint.Method);
+            endpoint.Path = NormalizePath(endpoint.Path);
+
             db.Endpoints.Add(endpoint);
             db.SaveChanges();
         }
@@ -124,23 +127,29 @@ public sealed class SqlitePlatformStore : IPlatformStore
                 return false;
             }
 
+            var normalizedMethod = NormalizeMethod(endpoint.Method);
+            var normalizedPath = NormalizePath(endpoint.Path);
+
             var existingEndpoints = db.Endpoints
                 .AsNoTracking()
                 .Where(existingEndpoint => existingEndpoint.ApiId == apiId)
                 .ToList();
 
             var duplicateExists = existingEndpoints.Any(existingEndpoint =>
-                existingEndpoint.Method.Equals(
-                    endpoint.Method,
-                    StringComparison.OrdinalIgnoreCase) &&
-                existingEndpoint.Path.TrimEnd('/').Equals(
-                    endpoint.Path.TrimEnd('/'),
-                    StringComparison.OrdinalIgnoreCase));
+                NormalizeMethod(existingEndpoint.Method).Equals(
+                    normalizedMethod,
+                    StringComparison.Ordinal) &&
+                NormalizePath(existingEndpoint.Path).Equals(
+                    normalizedPath,
+                    StringComparison.Ordinal));
 
             if (duplicateExists)
             {
                 return false;
             }
+
+            endpoint.Method = normalizedMethod;
+            endpoint.Path = normalizedPath;
 
             db.Endpoints.Add(endpoint);
             db.SaveChanges();
@@ -151,70 +160,119 @@ public sealed class SqlitePlatformStore : IPlatformStore
 
     public IReadOnlyList<ApiCheckResult> GetResults()
     {
-        lock (_gate)
-        {
-            return _results
-                .OrderByDescending(result => result.ExecutedAtUtc)
-                .ToList();
-        }
+        using var db = _dbFactory.CreateDbContext();
+
+        return db.CheckResults
+            .AsNoTracking()
+            .ToList()
+            .OrderByDescending(result => result.ExecutedAtUtc)
+            .ToList();
     }
 
     public IReadOnlyList<ApiCheckResult> GetResultsForApi(Guid apiId)
     {
-        lock (_gate)
-        {
-            return _results
-                .Where(result => result.ApiId == apiId)
-                .OrderByDescending(result => result.ExecutedAtUtc)
-                .ToList();
-        }
+        using var db = _dbFactory.CreateDbContext();
+
+        return db.CheckResults
+            .AsNoTracking()
+            .Where(result => result.ApiId == apiId)
+            .ToList()
+            .OrderByDescending(result => result.ExecutedAtUtc)
+            .ToList();
     }
 
     public void AddResult(ApiCheckResult result)
     {
         lock (_gate)
         {
-            _results.Add(result);
+            using var db = _dbFactory.CreateDbContext();
+
+            var apiExists = db.Apis.Any(api => api.Id == result.ApiId);
+
+            var endpointExists = db.Endpoints.Any(endpoint =>
+                endpoint.Id == result.EndpointId &&
+                endpoint.ApiId == result.ApiId);
+
+            if (!apiExists || !endpointExists)
+            {
+                throw new InvalidOperationException(
+                    "Check result must reference an existing API and endpoint.");
+            }
+
+            db.CheckResults.Add(result);
+            db.SaveChanges();
         }
     }
 
     public IReadOnlyList<Defect> GetDefects()
     {
-        lock (_gate)
-        {
-            return _defects
-                .OrderByDescending(defect => defect.UpdatedAtUtc)
-                .ToList();
-        }
+        using var db = _dbFactory.CreateDbContext();
+
+        return db.Defects
+            .AsNoTracking()
+            .ToList()
+            .OrderByDescending(defect => defect.UpdatedAtUtc)
+            .ToList();
     }
 
     public Defect? GetDefect(Guid id)
     {
-        lock (_gate)
-        {
-            return _defects.SingleOrDefault(defect => defect.Id == id);
-        }
+        using var db = _dbFactory.CreateDbContext();
+
+        return db.Defects
+            .AsNoTracking()
+            .SingleOrDefault(defect => defect.Id == id);
     }
 
     public Defect? FindOpenDefect(Guid endpointId, string checkType)
     {
-        lock (_gate)
-        {
-            return _defects.FirstOrDefault(defect =>
+        using var db = _dbFactory.CreateDbContext();
+
+        return db.Defects
+            .AsNoTracking()
+            .Where(defect =>
                 defect.EndpointId == endpointId &&
+                defect.Status != DefectStatus.Closed &&
+                defect.Status != DefectStatus.Deferred)
+            .ToList()
+            .FirstOrDefault(defect =>
                 defect.CheckType.Equals(
                     checkType,
-                    StringComparison.OrdinalIgnoreCase) &&
-                defect.Status != DefectStatus.Closed &&
-                defect.Status != DefectStatus.Deferred);
-        }
+                    StringComparison.OrdinalIgnoreCase));
     }
 
     public void AddDefect(Defect defect)
     {
         lock (_gate)
         {
-            _defects.Add(defect);
+            using var db = _dbFactory.CreateDbContext();
+
+            var apiExists = db.Apis.Any(api => api.Id == defect.ApiId);
+
+            var endpointExists = db.Endpoints.Any(endpoint =>
+                endpoint.Id == defect.EndpointId &&
+                endpoint.ApiId == defect.ApiId);
+
+            if (!apiExists || !endpointExists)
+            {
+                throw new InvalidOperationException(
+                    "Defect must reference an existing API and endpoint.");
+            }
+
+            if (defect.SourceCheckResultId.HasValue)
+            {
+                var sourceResultExists = db.CheckResults.Any(result =>
+                    result.Id == defect.SourceCheckResultId.Value);
+
+                if (!sourceResultExists)
+                {
+                    throw new InvalidOperationException(
+                        "Defect source check result does not exist.");
+                }
+            }
+
+            db.Defects.Add(defect);
+            db.SaveChanges();
         }
     }
 
@@ -222,7 +280,57 @@ public sealed class SqlitePlatformStore : IPlatformStore
     {
         lock (_gate)
         {
+            using var db = _dbFactory.CreateDbContext();
+
+            var defectExists = db.Defects.Any(existing =>
+                existing.Id == defect.Id);
+
+            if (!defectExists)
+            {
+                throw new InvalidOperationException(
+                    "Cannot update a defect that does not exist.");
+            }
+
             defect.UpdatedAtUtc = DateTimeOffset.UtcNow;
+
+            db.Defects.Update(defect);
+            db.SaveChanges();
         }
+    }
+
+    private static string NormalizeBaseUrl(string baseUrl)
+    {
+        return (baseUrl ?? string.Empty)
+            .Trim()
+            .TrimEnd('/');
+    }
+
+    private static string NormalizeMethod(string method)
+    {
+        return (method ?? string.Empty)
+            .Trim()
+            .ToUpperInvariant();
+    }
+
+    private static string NormalizePath(string path)
+    {
+        var normalizedPath = (path ?? string.Empty).Trim();
+
+        if (string.IsNullOrWhiteSpace(normalizedPath))
+        {
+            return "/";
+        }
+
+        if (!normalizedPath.StartsWith('/'))
+        {
+            normalizedPath = "/" + normalizedPath;
+        }
+
+        if (normalizedPath.Length > 1)
+        {
+            normalizedPath = normalizedPath.TrimEnd('/');
+        }
+
+        return normalizedPath;
     }
 }
