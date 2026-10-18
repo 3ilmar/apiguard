@@ -40,9 +40,37 @@ pwsh -NoProfile -File docs/qa-evidence/Invoke-PT01.ps1
 
 Newer PT-01 execution evidence is retained in timestamped directories beginning with `pt01-` under [18 October 2026 evidence](qa-evidence/2026-10-18/). Use each run's command logs, TRX outcomes, environment record, source hashes and PT-01 measurement files together. The earlier results below belong to their original fixture and measurement method.
 
-NFR-PERF-01 specifies **dashboard browser rendering within 2 seconds** on the agreed machine, with the target still provisional in `Requirements.md`. Aggregation and complete HTTP document receipt are separate checks; neither measures browser CSS loading, layout or paint. Browser rendering has not been measured and must remain unverified until that boundary is executed.
+NFR-PERF-01 specifies **dashboard browser rendering within 2 seconds** on the agreed machine, with the target still provisional in `Requirements.md`. Aggregation and complete HTTP document receipt are separate checks. SQA-18 now has [five visual-readiness measurements](qa-evidence/2026-10-18/sqa18-visual-20261018T072617937Z/README.md) against the [user's proposed operational criterion](qa-evidence/2026-10-18/sqa18-visual-20261018T072617937Z/PROPOSED-CRITERION.md). Local result: **PASS against that proposal**; formal team/stakeholder approval of the target and rule remains pending. Earlier Network and paint observations remain in their [historical ledger](qa-evidence/2026-10-18/sqa18-browser-20261018T062538973Z/browser-measurements/README.md).
 
-Suggested browser evidence: open developer tools -> Network, disable cache, load the dashboard with 2,000 prepared results, and record the document load/render timing. Repeat the measurement and state the machine, build, browser, cache setting and data preparation method. Do not test external APIs without authorisation.
+Browser evidence distinguishes Network Finish, DOMContentLoaded, FCP, LCP candidates and navigation-to-visual-readiness timing. Follow the [collection checklist](qa-evidence/SQA18-Browser-Performance.md) and retain actual repetitions/settings. The new readiness values are conservative screenshot-verified upper bounds; Network completion remains a separate measurement.
+
+## Automated browser visual-readiness execution — 18 October 2026
+
+| Item | Recorded result |
+|---|---|
+| Operational rule provenance | User-proposed; not formally approved by the team/stakeholders; existing NFR-PERF-01 target remains provisional |
+| Fixture/correctness | Exactly 2,000 deterministic results; correct dashboard statistics and severity distribution; fixture unchanged before/after |
+| Boundary | Navigation start to conservative screenshot-verified visual-readiness upper bound, including stylesheet loading, layout and paint readiness |
+| Five independent reloads (ms) | **257.9, 199.5, 197.1, 189.7, 201.0** |
+| Median / maximum (ms) | **199.5 / 257.9** |
+| Browser / automation | Headed Chrome **155.0.8059.80**; Playwright **1.62.1** |
+| Viewport / screenshots | Fixed **1440 × 1600**; all five screenshots inspected for complete/correct dashboard content |
+| Local SQA-18 decision | **PASS against the user's proposed criterion**: every measured upper bound is below 2,000 ms and dashboard values are correct |
+| Evidence | [Run ledger, environment, settings and screenshots](qa-evidence/2026-10-18/sqa18-visual-20261018T072617937Z/README.md); [proposed criterion](qa-evidence/2026-10-18/sqa18-visual-20261018T072617937Z/PROPOSED-CRITERION.md) |
+| Approval/release | Formal requirement/rule approval and team release decision remain pending; no application functionality changed for this browser execution |
+
+## Earlier user browser evidence received — 18 October 2026
+
+| Observation | Recorded result |
+|---|---|
+| Five user-reported Network Finish samples | 190, 55, 55, 55, 41 ms; median 55 ms; maximum 190 ms |
+| Network screenshots' DOMContentLoaded | 15 ms each; cache disabled and no network throttling visible |
+| Separate Performance trace | Recording start 19:50:43.535 NZDT; matched-navigation FCP 89.415 ms and one LCP candidate 89.415 ms |
+| Provenance | Six PNG attachments retained; four unique hashes; 03/04/06 byte-identical; no pairing of trace to a Network run |
+| Environment | Development-only Release MVC host at `http://127.0.0.1:51818/`; 2,000 deterministic results; isolated from five manual results |
+| As-of status of this earlier evidence | ACCEPTANCE PENDING; those Network/paint observations did not establish complete-dashboard visual timing; later automated run above supplies the current local result |
+
+[Raw files, hashes, extractor and limitations](qa-evidence/2026-10-18/sqa18-browser-20261018T062538973Z/browser-measurements/README.md). The [19:29 setup run](qa-evidence/2026-10-18/sqa18-browser-20261018T062538973Z/README.md) previously passed 76/76 MSTest checks with coverage; it was not rerun during this evidence update. Historical run descriptions below retain their original timestamps and results.
 
 ## Manual usability verification
 
@@ -50,7 +78,7 @@ Use keyboard only to reach navigation, links, defect controls, and CSV actions. 
 
 ## PT-01 rerun — 18 October 2026, 18:38 NZDT
 
-[Validated execution ledger](qa-evidence/2026-10-18/pt01-20261018T053834379Z-eb0590/README.md): Release build passed with 0 warnings/errors; final regression suite 71/71 passed without coverage; dedicated PT-01 checks 2/2 passed. Aggregation first call 21.4494 ms, warm median 0.7386 ms, P95 0.9888 ms, maximum 8.7894 ms. HTTP first request 223.0098 ms, warm median 1.8280 ms, P95 2.4933 ms, maximum 2.6382 ms. Every first and retained sample was below 2,000 ms. Browser rendering remains NOT RUN.
+[Validated execution ledger](qa-evidence/2026-10-18/pt01-20261018T053834379Z-eb0590/README.md): Release build passed with 0 warnings/errors; that regression suite passed 71/71 without coverage; dedicated PT-01 checks 2/2 passed. Aggregation first call 21.4494 ms, warm median 0.7386 ms, P95 0.9888 ms, maximum 8.7894 ms. HTTP first request 223.0098 ms, warm median 1.8280 ms, P95 2.4933 ms, maximum 2.6382 ms. Every first and retained sample was below 2,000 ms. Browser evidence was NOT RUN at that execution; later observations are recorded above.
 
 All raw JSON/HTML/TRX files were retained and verified. The final invocation used `-SkipCoverage`: an earlier coverage attempt was blocked by local Windows Application Control while loading the instrumented Web assembly; its failure log is retained. Final-run coverage is NOT COLLECTED. The historical evidence below is preserved with its original source/run identity.
 
@@ -73,7 +101,7 @@ All raw JSON/HTML/TRX files were retained and verified. The final invocation use
 | Tool versions | MSBuild 18.9.6; Microsoft.NET.Test.Sdk 17.11.1; MSTest 3.6.4; coverlet.collector 6.0.2; Git 2.45.1.windows.1 |
 | Final suite time | 2026-10-18 17:56:50–17:56:58 NZDT; [environment](qa-evidence/2026-10-18/environment.json), [SDK](qa-evidence/2026-10-18/dotnet-info.txt) |
 
-The final evidence register uses **SQA-01–SQA-22** to avoid reusing the initial `TC-*` identifiers with different meanings. Its `Initial case mapping` column maps back to `docs/TestCases.md`. The team's RTM remains unchanged pending coordination. Register totals: **22 planned, 13 executed, 13 passed, 0 failed, 0 blocked, 9 not run**. These are acceptance/evidence cases, separate from the 70 MSTest executions. See [master register](ShiruiFinalTestCases.csv) and [run details](qa-evidence/2026-10-18/README.md).
+The final evidence register uses **SQA-01–SQA-22** to avoid reusing the initial `TC-*` identifiers with different meanings. Its `Initial case mapping` column maps back to `docs/TestCases.md`. The team's RTM remains unchanged pending coordination. Current register totals after visual-readiness execution: **22 planned, 14 executed, 14 passed, 0 failed, 0 case-level acceptance pending, 0 blocked, 8 not run**. These are acceptance/evidence cases, separate from MSTest executions. Only SQA-18 changed status; its PASS is against the user's proposed operational criterion, with formal approval still pending. See [master register](ShiruiFinalTestCases.csv) and [current browser run](qa-evidence/2026-10-18/sqa18-visual-20261018T072617937Z/README.md); earlier run ledgers retain their as-of totals.
 
 The owned integration fixture listens only on ephemeral loopback ports and returns controlled HTTP 503 then 200 responses. Test-only private-target permission does not change app defaults. HTTP intentionally produces HTTPS-transport failures in the fixture; those expected results are not failing MSTest cases. The timeout case uses a handler simulation and does not measure a real socket timeout. No external API was scanned.
 

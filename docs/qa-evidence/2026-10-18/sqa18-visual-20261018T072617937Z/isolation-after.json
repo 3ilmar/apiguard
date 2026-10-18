@@ -1,0 +1,18 @@
+{
+  "VerifiedAtUtc": "2026-10-18T07:33:21.0797489+00:00",
+  "Instances": [
+    {
+      "Url": "http://127.0.0.1:51818/",
+      "Status": 200,
+      "ExecutedChecks": "2000"
+    },
+    {
+      "Url": "https://localhost:49994/",
+      "Status": null,
+      "Error": "No connection could be made because the target machine actively refused it.",
+      "Observation": "Endpoint unavailable at final check; no process start/stop or data mutation attempted"
+    }
+  ],
+  "Method": "Read-only GET; local self-signed certificate accepted for this client only; no app writes or restarts",
+  "ServerLifecycle": "Only the dedicated automation browser was closed; application processes were not controlled"
+}

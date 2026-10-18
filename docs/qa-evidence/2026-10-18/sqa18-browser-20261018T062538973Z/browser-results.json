@@ -1,0 +1,67 @@
+{
+  "Case": "SQA-18",
+  "Status": "ACCEPTANCE PENDING",
+  "ExecutedScope": "Partial browser measurement evidence; complete-dashboard visual boundary unmeasured",
+  "MeasurementActor": "User-supplied manual Chrome observations; offline trace extraction by Codex",
+  "Network": {
+    "Source": "User report and attached screenshots",
+    "FinishMs": [
+      190,
+      55,
+      55,
+      55,
+      41
+    ],
+    "DOMContentLoadedMs": [
+      15,
+      15,
+      15,
+      15,
+      15
+    ],
+    "MedianFinishMs": 55,
+    "MaxFinishMs": 190,
+    "PerRunCaptureTimesUtc": null,
+    "RawHAR": null,
+    "Boundary": "Displayed Network panel Finish; not visual-rendering time"
+  },
+  "Trace": {
+    "File": "browser-measurements/Trace-20261018T195043.json",
+    "SHA256": "AAB8AB51895D7DA096A6047D35529797FB16FE52C6C9C5E77175075063A502ED",
+    "RecordingStartUtc": "2026-10-18T06:50:43.535Z",
+    "FCPMs": 89.415,
+    "LCPCandidateMs": 89.415,
+    "LCPFinalizationVerified": false,
+    "CorrespondingNetworkRun": null,
+    "CompleteDashboardMs": null,
+    "Extraction": "browser-measurements/trace-analysis.json"
+  },
+  "Environment": {
+    "Url": "http://127.0.0.1:51818/",
+    "FixtureSHA256": "CCBE6723FB603221C3CECB95BB176BD6426E8F7611B96D3AC0565A1D7927AC18",
+    "Build": "live-instance/source-sha256.csv",
+    "SetupMetadata": "live-instance/instance.json",
+    "Isolation": "Development-only separate process and store; manual five-result app unchanged"
+  },
+  "Acceptance": {
+    "ThresholdMs": 2000,
+    "Definition": "Provisional; team must agree metric/content scope/repetition rule",
+    "Decision": null
+  },
+  "RegisterTotals": {
+    "Planned": 22,
+    "ExecutedOrAttempted": 14,
+    "Passed": 13,
+    "Failed": 0,
+    "AcceptancePending": 1,
+    "Blocked": 0,
+    "NotRun": 8
+  },
+  "Limitations": [
+    "Six PNGs have four unique hashes; attachments 03/04/06 are byte-identical",
+    "Five-run order/count attributed to user; single trace not paired to a Network sample",
+    "No full Chrome version, exact zoom, CPU throttle/power/extension settings or per-run timestamps supplied",
+    "Complete-dashboard visual-render median/max unavailable; below-fold content not timed",
+    "Warmed local server; external Bootstrap CDN dependency; not a production/concurrency/startup test"
+  ]
+}
