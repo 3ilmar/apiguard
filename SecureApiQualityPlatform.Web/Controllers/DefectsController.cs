@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using SecureApiQualityPlatform.Web.Models;
 using SecureApiQualityPlatform.Web.Services;
+using SecureApiQualityPlatform.Web.Filters;
 
 namespace SecureApiQualityPlatform.Web.Controllers;
 
@@ -14,6 +15,7 @@ public sealed class DefectsController : Controller
 
     [HttpPost]
     [ValidateAntiForgeryToken]
+    [RequireRole(UserRole.Tester)]
     public IActionResult Update(Guid id, DefectStatus status, DefectPriority priority, string? assignedTo)
     {
         var defect = _store.GetDefect(id);

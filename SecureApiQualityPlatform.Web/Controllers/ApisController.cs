@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using SecureApiQualityPlatform.Web.Models;
 using SecureApiQualityPlatform.Web.Services;
 using SecureApiQualityPlatform.Web.ViewModels;
+using SecureApiQualityPlatform.Web.Filters;
 
 namespace SecureApiQualityPlatform.Web.Controllers;
 
@@ -21,10 +22,12 @@ public sealed class ApisController : Controller
     public IActionResult Index() => View(_store.GetApis());
 
     [HttpGet]
+    [RequireRole(UserRole.Admin)]
     public IActionResult Create() => View(new RegisteredApi());
 
     [HttpPost]
     [ValidateAntiForgeryToken]
+    [RequireRole(UserRole.Admin)]
     public async Task<IActionResult> Create(RegisteredApi model)
     {
         model.Name = model.Name?.Trim() ?? string.Empty;
@@ -72,6 +75,7 @@ public sealed class ApisController : Controller
 
     [HttpPost]
     [ValidateAntiForgeryToken]
+    [RequireRole(UserRole.Admin)]
     public IActionResult AddEndpoint(Guid id, ApiEndpoint endpoint)
     {
         var api = _store.GetApi(id);
@@ -158,6 +162,7 @@ public sealed class ApisController : Controller
 
     [HttpPost]
     [ValidateAntiForgeryToken]
+    [RequireRole(UserRole.Tester)]
     public async Task<IActionResult> RunChecks(Guid id)
     {
         await _checks.RunApiAsync(id, HttpContext.RequestAborted);
