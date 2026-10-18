@@ -1,0 +1,78 @@
+name: ENSE707 Quality Gate
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  quality-gate:
+    name: Restore, build, test, and smoke test
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    env:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://127.0.0.1:5085
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up .NET 8
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.x
+
+      - name: Restore dependencies
+        run: dotnet restore SecureApiQualityPlatform.sln
+
+      - name: Build solution in Release mode
+        run: dotnet build SecureApiQualityPlatform.sln --configuration Release --no-restore
+
+      - name: Run automated tests
+        run: dotnet test SecureApiQualityPlatform.sln --configuration Release --no-build --no-restore
+
+      - name: Smoke test home page
+        shell: bash
+        run: |
+          set -u
+
+          app_log="$RUNNER_TEMP/apiguard-web.log"
+          bind_url="http://127.0.0.1:5085"
+          request_url="http://127.0.0.1:5085/"
+          app_dll="SecureApiQualityPlatform.Web/bin/Release/net8.0/SecureApiQualityPlatform.Web.dll"
+
+          export ConnectionStrings__PlatformDatabase="Data Source=$RUNNER_TEMP/apiguard-smoke.db"
+
+          dotnet "$app_dll" --urls "$bind_url" >"$app_log" 2>&1 &
+          app_pid=$!
+
+          cleanup() {
+            kill "$app_pid" 2>/dev/null || true
+            wait "$app_pid" 2>/dev/null || true
+          }
+
+          trap cleanup EXIT
+
+          for attempt in {1..30}; do
+            if curl --fail --silent --show-error "$request_url" -o /dev/null; then
+              echo "Smoke test passed: $request_url responded successfully."
+              exit 0
+            fi
+
+            if ! kill -0 "$app_pid" 2>/dev/null; then
+              echo "The web application stopped before becoming ready."
+              cat "$app_log"
+              exit 1
+            fi
+
+            sleep 1
+          done
+
+          echo "The web application did not respond within 30 seconds."
+          cat "$app_log"
+          exit 1
