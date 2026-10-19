@@ -1,0 +1,236 @@
+{
+  "executedAtUtc": "2026-10-19T10:33:35.559695+00:00",
+  "purpose": "Automated documentation validation; not human approval time or a new product test run",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "baseCommit": "e43fe52373d3d74b617610e2dbee418ac9b3f9b4",
+  "branch": "docs/sqa19-final-approval",
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "strict_csv_schema_and_widths",
+      "passed": true,
+      "actual": {
+        "header": [
+          "ID",
+          "Initial case mapping",
+          "Requirement",
+          "Type",
+          "Preconditions",
+          "Steps / input",
+          "Expected result",
+          "Actual result",
+          "Status",
+          "Evidence link or screenshot"
+        ],
+        "recordWidths": [
+          10
+        ]
+      }
+    },
+    {
+      "check": "case_ids_unique_complete",
+      "passed": true,
+      "actual": [
+        "SQA-01",
+        "SQA-02",
+        "SQA-03",
+        "SQA-04",
+        "SQA-05",
+        "SQA-06",
+        "SQA-07",
+        "SQA-08",
+        "SQA-09",
+        "SQA-10",
+        "SQA-11",
+        "SQA-12",
+        "SQA-13",
+        "SQA-14",
+        "SQA-15",
+        "SQA-16",
+        "SQA-17",
+        "SQA-18",
+        "SQA-19",
+        "SQA-20",
+        "SQA-21",
+        "SQA-22"
+      ]
+    },
+    {
+      "check": "only_sqa19_outcome_changed",
+      "passed": true,
+      "actual": [
+        "SQA-19"
+      ]
+    },
+    {
+      "check": "sqa19_final_status",
+      "passed": true,
+      "actual": "PASS \u2014 observer approved. Shirui explicitly reviewed and approved all five scenario outcomes in this conversation: 5/5 interpretations and supporting explanations accepted for EILMAR-P01, session 19 October 2026 15:00-16:00 NZDT. ChatGPT assisted wording after tester-reported interpretation; original unpolished answers and a session-specific screenshot were not supplied. Some aspects of the unaided session cannot be independently corroborated. Original responses preserved unchanged. No signature or precise approval timestamp supplied or inferred."
+    },
+    {
+      "check": "SQA-18_record_preserved",
+      "passed": true,
+      "actual": "PASS"
+    },
+    {
+      "check": "SQA-20_record_preserved",
+      "passed": true,
+      "actual": "PASS"
+    },
+    {
+      "check": "saved_totals_match_register",
+      "passed": true,
+      "actual": {
+        "planned": 22,
+        "executed": 16,
+        "passed": 16,
+        "provisionalPass": 0,
+        "failed": 0,
+        "blocked": 0,
+        "notRun": 6,
+        "executionRatePercent": 72.73,
+        "passRatePercent": 100.0
+      }
+    },
+    {
+      "check": "human_submission_unchanged",
+      "passed": true,
+      "actual": {
+        "baselineWorkingSha256": "89d60b170c3c1e2c3373174b04826093a6c436ea9971e0e56c59f15dd6ba27db",
+        "currentWorkingSha256": "89d60b170c3c1e2c3373174b04826093a6c436ea9971e0e56c59f15dd6ba27db",
+        "baselineGitBlobSha256": "092d7b886716f48d8e5511a545ea83370c0ac4bcf6578e6659cf1dc20826be82"
+      }
+    },
+    {
+      "check": "historical_evidence_preserved",
+      "passed": true,
+      "actual": {
+        "filesChecked": 1577,
+        "intentionalCurrentRecordChanges": [
+          "docs/qa-evidence/SQA-19/README.md",
+          "docs/qa-evidence/SQA-19/observer-assessment-session-eilmar.md"
+        ]
+      }
+    },
+    {
+      "check": "five_scenarios_approved",
+      "passed": true,
+      "actual": {
+        "scenarioRows": 5,
+        "finalOutcomes": [
+          "PASS",
+          "PASS",
+          "PASS",
+          "PASS",
+          "PASS"
+        ]
+      }
+    },
+    {
+      "check": "quoted_interpretations_preserved",
+      "passed": true,
+      "actual": 5
+    },
+    {
+      "check": "limitations_retained",
+      "passed": true,
+      "actual": {
+        "wording_assistance": true,
+        "no_raw_answers": true,
+        "no_session_screenshot": true,
+        "unaided_provenance_limit": true,
+        "no_signature_timestamp": true
+      }
+    },
+    {
+      "check": "no_obsolete_current_approval_wording",
+      "passed": true,
+      "actual": []
+    },
+    {
+      "check": "local_evidence_links_resolve",
+      "passed": true,
+      "actual": {
+        "documents": 11,
+        "linksChecked": 151,
+        "missing": []
+      }
+    },
+    {
+      "check": "SQA-18_register_evidence_links",
+      "passed": true,
+      "actual": [
+        "qa-evidence/2026-10-18/sqa18-visual-20261018T072617937Z/README.md",
+        "qa-evidence/2026-10-18/sqa18-visual-20261018T072617937Z/decision.json"
+      ]
+    },
+    {
+      "check": "SQA-19_register_evidence_links",
+      "passed": true,
+      "actual": [
+        "qa-evidence/SQA-19/observation-sheet-session-eilmar.md",
+        "qa-evidence/SQA-19/observer-assessment-session-eilmar.md"
+      ]
+    },
+    {
+      "check": "SQA-20_register_evidence_links",
+      "passed": true,
+      "actual": [
+        "qa-evidence/SQA-20/retest-20261019T095150Z/README.md",
+        "qa-evidence/SQA-20/retest-20261019T095150Z/after/browser-execution.json",
+        "qa-evidence/SQA-20/retest-20261019T095150Z/after-targets/accessibility-targets.json",
+        "qa-evidence/SQA-20/playwright-20261019T035608Z/findings.md"
+      ]
+    },
+    {
+      "check": "documentation_only_diff",
+      "passed": true,
+      "actual": [
+        "docs/AutomationSuite-Shirui.md",
+        "docs/ShiruiFinalTestCases.csv",
+        "docs/ShiruiQualityMetrics-Evidence.md",
+        "docs/qa-evidence/SQA-19/README.md",
+        "docs/qa-evidence/SQA-19/observer-assessment-session-eilmar.md",
+        "docs/qa-evidence/SQA-19/final-approval-20261019/README.md",
+        "docs/qa-evidence/SQA-19/final-approval-20261019/base-commit.txt",
+        "docs/qa-evidence/SQA-19/final-approval-20261019/baseline-evidence-sha256.csv",
+        "docs/qa-evidence/SQA-19/final-approval-20261019/baseline-metrics.txt",
+        "docs/qa-evidence/SQA-19/final-approval-20261019/baseline-observer-assessment.txt",
+        "docs/qa-evidence/SQA-19/final-approval-20261019/baseline-register.csv",
+        "docs/qa-evidence/SQA-19/final-approval-20261019/finalize_register.py",
+        "docs/qa-evidence/SQA-19/final-approval-20261019/qa-totals.json",
+        "docs/qa-evidence/SQA-19/final-approval-20261019/validate.py",
+        "docs/qa-evidence/SQA-19/final-approval-20261019/validation-initial.json",
+        "docs/qa-evidence/SQA-19/final-approval-20261019/validation.json",
+        "docs/qa-evidence/SQA-19/numeric-endpoint-validation-assessment.md"
+      ]
+    },
+    {
+      "check": "git_whitespace_check",
+      "passed": true,
+      "actual": "git diff --check e43fe52373d3d74b617610e2dbee418ac9b3f9b4"
+    },
+    {
+      "check": "http_failure_preserved",
+      "passed": true,
+      "actual": {
+        "passed": 28,
+        "failed": 1,
+        "status": "FAIL"
+      }
+    }
+  ],
+  "totals": {
+    "planned": 22,
+    "executed": 16,
+    "passed": 16,
+    "provisionalPass": 0,
+    "failed": 0,
+    "blocked": 0,
+    "notRun": 6,
+    "executionRatePercent": 72.73,
+    "passRatePercent": 100.0
+  },
+  "passedChecks": 20,
+  "failedChecks": 0
+}
