@@ -1,0 +1,323 @@
+diff --git a/SecureApiQualityPlatform.Web/Views/Apis/Details.cshtml b/SecureApiQualityPlatform.Web/Views/Apis/Details.cshtml
+index e1fe84f..364ac88 100644
+--- a/SecureApiQualityPlatform.Web/Views/Apis/Details.cshtml
++++ b/SecureApiQualityPlatform.Web/Views/Apis/Details.cshtml
+@@ -3,7 +3,7 @@
+     ViewData["Title"] = Model.Api.Name;
+ }
+ <div class="d-flex justify-content-between align-items-start mb-3">
+-    <div><h1 class="h3">@Model.Api.Name</h1><code>@Model.Api.BaseUrl</code></div>
++    <div><h1 class="h3">@Model.Api.Name</h1><code class="api-base-url">@Model.Api.BaseUrl</code></div>
+     <form asp-action="RunChecks" asp-route-id="@Model.Api.Id" method="post"><button class="btn btn-success" type="submit">Run all checks</button></form>
+ </div>
+ <div class="row g-4">
+@@ -27,13 +27,13 @@
+         <form asp-action="AddEndpoint" asp-route-id="@Model.Api.Id" method="post" class="card card-body">
+             <h2 class="h5">Add endpoint</h2>
+             <div asp-validation-summary="All" class="text-danger"></div>
+-            <div class="mb-2"><label class="form-label">Name</label><input asp-for="NewEndpoint.Name" name="Name" class="form-control"/></div>
+-            <div class="mb-2"><label class="form-label">Path</label><input asp-for="NewEndpoint.Path" name="Path" class="form-control" placeholder="/v1/orders"/></div>
+-            <div class="mb-2"><label class="form-label">Method</label><select asp-for="NewEndpoint.Method" name="Method" class="form-select"><option>GET</option><option>POST</option><option>PUT</option><option>PATCH</option><option>DELETE</option></select></div>
+-            <div class="mb-2"><label class="form-label">Expected HTTP status</label><input asp-for="NewEndpoint.ExpectedStatusCode" name="ExpectedStatusCode" class="form-control"/></div>
+-            <div class="mb-2"><label class="form-label">Max response time (ms)</label><input asp-for="NewEndpoint.MaxResponseTimeMs" name="MaxResponseTimeMs" class="form-control"/></div>
+-            <div class="mb-2"><label class="form-label">Expected content type</label><input asp-for="NewEndpoint.ExpectedContentType" name="ExpectedContentType" class="form-control" placeholder="application/json"/></div>
+-            <div class="form-check mb-3"><input asp-for="NewEndpoint.RequiresAuthentication" name="RequiresAuthentication" class="form-check-input"/><label class="form-check-label">Requires authentication</label></div>
++            <div class="mb-2"><label asp-for="NewEndpoint.Name" class="form-label">Name</label><input asp-for="NewEndpoint.Name" name="Name" class="form-control"/></div>
++            <div class="mb-2"><label asp-for="NewEndpoint.Path" class="form-label">Path</label><input asp-for="NewEndpoint.Path" name="Path" class="form-control" placeholder="/v1/orders"/></div>
++            <div class="mb-2"><label asp-for="NewEndpoint.Method" class="form-label">Method</label><select asp-for="NewEndpoint.Method" name="Method" class="form-select"><option>GET</option><option>POST</option><option>PUT</option><option>PATCH</option><option>DELETE</option></select></div>
++            <div class="mb-2"><label asp-for="NewEndpoint.ExpectedStatusCode" class="form-label">Expected HTTP status</label><input asp-for="NewEndpoint.ExpectedStatusCode" name="ExpectedStatusCode" class="form-control"/></div>
++            <div class="mb-2"><label asp-for="NewEndpoint.MaxResponseTimeMs" class="form-label">Max response time (ms)</label><input asp-for="NewEndpoint.MaxResponseTimeMs" name="MaxResponseTimeMs" class="form-control"/></div>
++            <div class="mb-2"><label asp-for="NewEndpoint.ExpectedContentType" class="form-label">Expected content type</label><input asp-for="NewEndpoint.ExpectedContentType" name="ExpectedContentType" class="form-control" placeholder="application/json"/></div>
++            <div class="form-check mb-3"><input asp-for="NewEndpoint.RequiresAuthentication" name="RequiresAuthentication" class="form-check-input"/><label asp-for="NewEndpoint.RequiresAuthentication" class="form-check-label">Requires authentication</label></div>
+             <button class="btn btn-primary" type="submit">Add endpoint</button>
+         </form>
+     </div>
+diff --git a/SecureApiQualityPlatform.Web/Views/Defects/Index.cshtml b/SecureApiQualityPlatform.Web/Views/Defects/Index.cshtml
+index cc5a9ac..5247568 100644
+--- a/SecureApiQualityPlatform.Web/Views/Defects/Index.cshtml
++++ b/SecureApiQualityPlatform.Web/Views/Defects/Index.cshtml
+@@ -11,15 +11,15 @@
+ {
+     <form asp-action="Update" method="post" class="card card-body mb-3">
+         <input type="hidden" name="id" value="@d.Id" />
+-        <div class="d-flex justify-content-between"><div><strong>@d.Title</strong><div class="text-muted small">@d.Description</div></div><span class="badge text-bg-secondary">@d.Severity</span></div>
++        <div class="d-flex justify-content-between gap-2"><div><strong>@d.Title</strong><div class="text-muted small">@d.Description</div></div><span class="badge text-bg-secondary align-self-start flex-shrink-0">@d.Severity</span></div>
+         <div class="row g-2 mt-2">
+-            <div class="col-md-3"><label class="form-label">Status</label><select name="status" class="form-select">
++            <div class="col-md-3"><label for="status-@d.Id" class="form-label">Status</label><select id="status-@d.Id" name="status" class="form-select">
+                 @foreach (var value in Enum.GetValues<DefectStatus>()) { <option value="@value" selected="@(value == d.Status)">@value</option> }
+             </select></div>
+-            <div class="col-md-3"><label class="form-label">Priority</label><select name="priority" class="form-select">
++            <div class="col-md-3"><label for="priority-@d.Id" class="form-label">Priority</label><select id="priority-@d.Id" name="priority" class="form-select">
+                 @foreach (var value in Enum.GetValues<DefectPriority>()) { <option value="@value" selected="@(value == d.Priority)">@value</option> }
+             </select></div>
+-            <div class="col-md-4"><label class="form-label">Assigned to</label><input name="assignedTo" value="@d.AssignedTo" class="form-control"/></div>
++            <div class="col-md-4"><label for="assigned-to-@d.Id" class="form-label">Assigned to</label><input id="assigned-to-@d.Id" name="assignedTo" value="@d.AssignedTo" class="form-control"/></div>
+             <div class="col-md-2 d-flex align-items-end"><button class="btn btn-primary w-100">Update</button></div>
+         </div>
+     </form>
+diff --git a/SecureApiQualityPlatform.Web/wwwroot/css/site.css b/SecureApiQualityPlatform.Web/wwwroot/css/site.css
+index da985a4..8341682 100644
+--- a/SecureApiQualityPlatform.Web/wwwroot/css/site.css
++++ b/SecureApiQualityPlatform.Web/wwwroot/css/site.css
+@@ -1,4 +1,15 @@
+ body { background: #f6f8fb; }
++/* Normal text must retain AA contrast on the page background. */
++.api-base-url { color: #a61e65; }
++.btn-outline-secondary {
++    --bs-btn-color: #495057;
++    --bs-btn-border-color: #495057;
++    --bs-btn-hover-bg: #495057;
++    --bs-btn-hover-border-color: #495057;
++    --bs-btn-active-bg: #495057;
++    --bs-btn-active-border-color: #495057;
++    --bs-btn-focus-shadow-rgb: 73, 80, 87;
++}
+ .metric-card { background: white; border: 1px solid #e5e7eb; border-radius: .75rem; padding: 1rem; min-height: 100px; display: flex; flex-direction: column; justify-content: space-between; }
+ .metric-card span { color: #4b5563; font-size: .9rem; }
+ .metric-card strong { font-size: 1.8rem; overflow-wrap: anywhere; }
+diff --git a/docs/DefectLog.md b/docs/DefectLog.md
+index ef10dc7..5aecbfe 100644
+--- a/docs/DefectLog.md
++++ b/docs/DefectLog.md
+@@ -13,4 +13,8 @@ Real defects observed during development and testing. Each entry records the fai
+ | DEF-007 | RBAC role not enforced on any action | Medium | High | Closed | NFR-SEC-03 (new, RBAC) | A Viewer is denied server-side on defect updates, API registration, endpoint creation and check runs; Tester and Admin are allowed according to the role matrix | The first RBAC PR only added the role model, provider and selector, so a Viewer could still POST to Defects/Update and the Apis actions; found in peer review | Lana | Added a server-side `RequireRole` action filter on `Defects.Update` (Tester) and `Apis.Create`, `AddEndpoint` (Admin) and `RunChecks` (Tester), with tests. Retest: 34 tests passing; as Viewer, Update and Register API are refused with a role message, and Tester can update a defect. lana-11-viewer-update-denied.png lana-11b-tester-update-allowed.png lana-11c-tester-register-denied.png|
+ | DEF-008 | Encoded endpoint path traversal | Medium | High | Closed | NFR-SEC-01 / FR-02 | Encoded traversal paths such as `/%2e%2e/admin` are rejected; traversal segments, backslashes, control characters and absolute URL forms are blocked | Review of `ApisController.AddEndpoint` with an AI assistant (Claude), followed by manual reproduction, identified that validation checked literal `..` segments without decoding URL-encoded input first | Lana | Introduced `EndpointPathValidator` to repeatedly decode endpoint paths and reject traversal segments, backslashes, control characters and absolute URL forms. Automated regression testing: 111 tests passed, 0 failed. Manual retest: `/%2e%2e/admin` rejected after the fix; evidence: `lana-09-encoded-path-rejected-after-fix.png`. Before-fix evidence: `lana-08-defect-encoded-path-accepted.png`. |
+ | DEF-009 | SSRF bypass through IPv4-mapped and unique-local IPv6 addresses | High | High | Closed | NFR-SEC-01 / security validation | IPv4-mapped IPv6 addresses and IPv6 unique-local addresses are rejected; IPv4 private, loopback, link-local and unspecified targets remain blocked | SSRF boundary tests exposed that `UrlSafetyService.IsPrivateOrLocal` accepted `::ffff:10.0.0.1`, `fc00::1` and `fd12:3456:789a::1` as public HTTP(S) targets | Lana | Added regression tests for private IPv4/IPv6 targets, public boundary addresses and malformed URLs. Updated `IsPrivateOrLocal` to map IPv4-mapped IPv6 addresses to IPv4 and block the IPv6 unique-local range (`fc00::/7`). Retest: 112 tests passed, 0 failed on this branch at the time of the fix (baseline 93 plus 19 new cases, before PRs #8 and #9 merged). Evidence: `lana-15-ssrf-ipv6-tests-fail.png` (before fix) and `lana-16-ssrf-tests-pass.png` (after fix). |
+-| DEF-010 | Defect status transitions are not enforced | Medium | Medium | Open | FR-05 / FR-06 | A defect moves only through the defined workflow (New, Triaged, Assigned, Resolved, Retest, Closed, with Reopened or Deferred), and cannot be closed without a passing retest | `Defects/Update` accepts any status from any status, including New straight to Closed; found by an audit of `DefectsController.Update` and the Update form while checking RBAC | Lana | Not fixed. Recorded as a known limitation: FR-05 and FR-06 are partially implemented. Candidate fix: a transition table in `DefectLifecycleService` checked by `DefectsController.Update`, with tests. |
+\ No newline at end of file
++| DEF-010 | Defect status transitions are not enforced | Medium | Medium | Open | FR-05 / FR-06 | A defect moves only through the defined workflow (New, Triaged, Assigned, Resolved, Retest, Closed, with Reopened or Deferred), and cannot be closed without a passing retest | `Defects/Update` accepts any status from any status, including New straight to Closed; found by an audit of `DefectsController.Update` and the Update form while checking RBAC | Lana | Not fixed. Recorded as a known limitation: FR-05 and FR-06 are partially implemented. Candidate fix: a transition table in `DefectLifecycleService` checked by `DefectsController.Update`, with tests. |
++| SQA20-A11Y-01 | Missing endpoint/defect control label associations | High (historical QA triage) | Triage pending | Fixed locally; automated retest PASS; review pending | SQA-20 | Every control has an associated purpose label | Reproduced 22 axe naming targets and 26 DOM label gaps per browser/viewport before edits | Review/acceptance pending | [Original FAIL](qa-evidence/SQA-20/playwright-20261019T035608Z/findings.md); [retest](qa-evidence/SQA-20/retest-20261019T095150Z/README.md): 26/26 target controls per browser/viewport pass labels, names and native click behavior. Uncommitted fix. |
++| SQA20-A11Y-02 | API URL and export-link text contrast | Medium (historical QA triage) | Triage pending | Fixed locally; automated retest PASS; review pending | SQA-20 | Normal text contrast at least 4.5:1 | Reproduced URL 4.23:1 and export 4.4:1 | Review/acceptance pending | [Original FAIL](qa-evidence/SQA-20/playwright-20261019T035608Z/findings.md); [retest](qa-evidence/SQA-20/retest-20261019T095150Z/after-targets/accessibility-targets.json): URL 6.59:1; export 7.69:1 resting / 8.18:1 interactive. Uncommitted fix. |
++| SQA20-UI-01 | Vertically stretched defect severity badges | Low (historical QA triage) | Triage pending | Fixed locally; automated retest PASS; review pending | SQA-20 | Compact readable severity badges | Reproduced in Chrome/Edge at desktop and 375px | Review/acceptance pending | [Original finding](qa-evidence/SQA-20/playwright-20261019T035608Z/findings.md); [retest](qa-evidence/SQA-20/retest-20261019T095150Z/after/browser-execution.json): 0 stretched badges in both browsers/widths. Uncommitted fix. |
++| PM-VALIDATION-01 | Malformed numeric endpoint status silently stores default 200 | Triage pending | Triage pending | Open; pre-existing before PR #12 | FR-02 / isolated HTTP regression | Reject nonnumeric expected-status input without persisting an endpoint | Valid-token POST with ExpectedStatusCode=not-a-number returned 302 and persisted 200; reproduced before and after accessibility fixes | Unassigned; coordinate Eilmar/Lana | [Failing request/persisted row](qa-evidence/SQA-20/retest-20261019T095150Z/postfix-http-verified/findings.json); [parent source](qa-evidence/SQA-20/retest-20261019T095150Z/endpoint-validation-parent-source.txt). `AddEndpoint` clears model binding errors. Left outside accessibility fix scope. |
+diff --git a/docs/ShiruiFinalTestCases.csv b/docs/ShiruiFinalTestCases.csv
+index b93377c..7874efe 100644
+--- a/docs/ShiruiFinalTestCases.csv
++++ b/docs/ShiruiFinalTestCases.csv
+@@ -18,6 +18,6 @@ SQA-16,TC-11,FR-08,Unit boundary/no-data,Defects exist but none match filter,Exp
+ SQA-17,-,NFR-PERF-01,Performance aggregation and HTTP,"2000 fixed-ID results; private store with 1 API and endpoint plus 80 defects; Release .NET 8.0.30 x64; documented machine/SDK",Run PT-01 aggregation and real Kestrel MVC HTTP checks; record first plus 20 samples after 3 warm-ups,Every first and retained sample below 2000 ms with correct model and HTTP 200 populated HTML; browser separately unverified,18 October 2026 at 18:38 NZDT: aggregation first 21.4494 ms; warm median 0.7386 ms; max 8.7894 ms. HTTP first 223.0098 ms; warm median 1.8280 ms; max 2.6382 ms. Both checks passed without coverage; fixture hashes matched and HTTP preserved all records,PASS,qa-evidence/2026-10-18/pt01-20261018T053834379Z-eb0590/README.md; qa-evidence/2026-10-18/pt01-20261018T053834379Z-eb0590/performance/performance.trx
+ SQA-18,-,NFR-PERF-01,Browser performance - proposed operational acceptance,"Isolated Development Release host at http://127.0.0.1:51818/; exactly 2000 deterministic results; Chrome 155.0.8059.80; viewport 1440x1600; consistent cache/throttle settings",Run five independent Playwright browser reloads; verify styles/fonts/correct values/stable layout and inspect captured dashboard pixels,User-proposed rule: all five navigation-to-verified visual-readiness bounds below 2000 ms with correct dashboard statistics and severities; NFR-PERF-01 remains provisional and proposal is not formally team-approved,"18 October 2026 at 20:28 NZDT: conservative screenshot-verified bounds 257.9/199.5/197.1/189.7/201.0 ms; median 199.5 ms; maximum 257.9 ms. All five PNGs inspected; complete styled dashboard and expected values visible; fixture unchanged. PASS against user-proposed criterion only; includes screenshot/automation overhead; formal team approval and release decision remain pending. Earlier Network/FCP/LCP evidence remains historical",PASS,qa-evidence/2026-10-18/sqa18-visual-20261018T072617937Z/README.md; qa-evidence/2026-10-18/sqa18-visual-20261018T072617937Z/decision.json
+ SQA-19,TC-12,NFR-USA-01,Manual usability,Representative user and 5 failed-check examples,Read failure messages and describe observed issue,Tester identifies failure and evidence without reading code,19 October 2026 15:00-16:00 NZDT: representative tester EILMAR-P01 reported reviewing all 5 dashboard failures. Submitted interpretations and evidence match the displayed messages in 5/5 scenarios (provisional PASS). Submitted wording was polished with ChatGPT after tester-reported interpretations. Original unpolished record was not supplied. Unaided provenance and no source-code inspection are not independently corroborated. Shirui final observer approval pending.,PASS (PROVISIONAL),qa-evidence/SQA-19/observation-sheet-session-eilmar.md; qa-evidence/SQA-19/observer-assessment-session-eilmar.md
+-SQA-20,-,"NFR-USA-01,NFR-COMP-01",Automated browser compatibility/accessibility; human acceptance not performed,Installed Chrome 155.0.8059.80 and Edge 155.0.4283.62; isolated synthetic fixture; desktop and 375px,"Execute 16 scoped Playwright categories plus axe WCAG scans; inspect screenshots, trusted keyboard events and original browser CSVs",Links focusable; labels available; metrics readable; no overlap; downloads usable,19 October 2026: 16/16 scoped technical browser cases passed (0 failed/blocked/not run); additional axe accessibility verification FAILED: 22 unnamed control instances per browser and contrast 4.23/4.4 below 4.5. DOM inspection found 26 label association gaps. Cosmetic stretched badges reproduced. Overall SQA-20 automated criteria NOT satisfied; no human acceptance claimed.,FAIL,qa-evidence/SQA-20/playwright-20261019T035608Z/README.md; qa-evidence/SQA-20/playwright-20261019T035608Z/findings.md; qa-evidence/SQA-20/playwright-20261019T035608Z/browser-execution.json
++SQA-20,-,"NFR-USA-01,NFR-COMP-01",Automated browser compatibility/accessibility retest; human acceptance not performed,Installed Chrome 155.0.8059.80 and Edge 155.0.4283.62; isolated synthetic fixture; desktop and 375px,Repeat 16 technical categories; Tab/Shift+Tab at desktop and 375px; actual names/label clicks; contrast states; axe scans; original browser CSV parsing,Links focusable; labels available; metrics readable; no overlap; downloads usable,19 October 2026 22:59-23:03 NZDT: PASS on automated retest of uncommitted accessibility fixes over 7f28ee9. 16/16 browser categories PASS; 26/26 original controls per browser/viewport correctly labelled; URL contrast 6.59; export contrast 7.69 resting and 8.18 interactive. Compact badges; 24 page/viewport/browser forward/reverse runs PASS. Four raw axe scroll-region flags retained; genuine Tab/Shift+Tab and ArrowRight 0-to-40px establish access. Historical FAIL preserved; no full WCAG/human acceptance claim. Separate pre-existing numeric validation failure remains open.,PASS,qa-evidence/SQA-20/retest-20261019T095150Z/README.md; qa-evidence/SQA-20/retest-20261019T095150Z/after/browser-execution.json; qa-evidence/SQA-20/retest-20261019T095150Z/after-targets/accessibility-targets.json; qa-evidence/SQA-20/playwright-20261019T035608Z/findings.md
+ SQA-21,-,FR-08,Unit negative and real HTTP MVC smoke,Application running and malformed report filter values available,Request invalid apiId/passed/status/severity filters and undefined enum values,HTTP 400 with accepted values and recovery guidance; no unfiltered export,Malformed and undefined filter unit cases passed; 5 actual malformed-filter requests returned HTTP 400 and actionable guidance; 2 valid filtered empty exports returned HTTP 200 CSV,PASS,qa-evidence/2026-10-18/final.trx; qa-evidence/2026-10-18/http-smoke.json
+ SQA-22,-,"FR-03,NFR-REL-01",Integration simulation - deterministic transport error,Test HttpMessageHandler throws TaskCanceledException once then returns HTTP 200,Run ApiCheckService twice using simulated handler,Availability failure and defect recorded; later check run succeeds and results retained,First simulated run recorded timeout evidence and availability defect; second returned passing availability and expected-status checks; no network timeout or elapsed timeout measured,PASS,qa-evidence/2026-10-18/final.trx (SimulatedTransportTimeout_RecordsFailureAndAllowsNextCheckRun)
+diff --git a/docs/ShiruiQualityMetrics-Evidence.md b/docs/ShiruiQualityMetrics-Evidence.md
+index b089ed7..bc76268 100644
+--- a/docs/ShiruiQualityMetrics-Evidence.md
++++ b/docs/ShiruiQualityMetrics-Evidence.md
+@@ -6,16 +6,17 @@
+ 
+ | Metric | Calculation / source | Current measured value |
+ |---|---|---|
+-| Test execution rate | Executed / Planned × 100; includes executed cases awaiting final approval | 16/22 = 72.73%; 14 PASS (including SQA-18 against the proposed criterion), 1 PASS (PROVISIONAL, SQA-19), 1 FAIL (SQA-20), 6 NOT RUN, 0 BLOCKED |
+-| Test pass rate | Passed / all executed × 100; exclude blocked and not run; distinguish provisional outcomes | Confirmed register PASS only: 14/16 = 87.50%. Proposed including SQA-19 provisional PASS: 15/16 = 93.75%, subject to Shirui's approval. SQA-20 remains FAIL |
+-| Automated test pass rate | Passed MSTest / executed MSTest × 100; TRX artifact | 19 October 2026 integration run: 136/136 = 100%; 0 failed/skipped; Debug with XPlat coverage; SDK 10.0.402 / runtime 8.0.32. Earlier 71-test and 76-test runs remain historical |
++| Test execution rate | Executed / Planned × 100; includes executed cases awaiting final approval | 16/22 = 72.73%; 15 PASS (SQA-20 automated retest; SQA-18 proposed criterion caveat retained), 1 PASS (PROVISIONAL, SQA-19), 0 FAIL, 6 NOT RUN, 0 BLOCKED |
++| Test pass rate | Passed / all executed × 100; exclude blocked and not run; distinguish provisional outcomes | Confirmed register PASS: 15/16 = 93.75%. Including SQA-19 provisional PASS would be 16/16 = 100%, subject to Shirui's approval. Separate HTTP regression remains 28/29; do not infer overall release readiness from master-register outcomes |
++| Automated test pass rate | Passed MSTest / executed MSTest × 100; TRX artifact | 19 October 2026 post-merge baseline and post-fix Release runs: 136/136 = 100% each; 0 failed/skipped; XPlat coverage; SDK 10.0.402 / runtime 8.0.32. Historical Debug and 71/76-test runs retain their own identities |
+ | Requirements verification | Fully verified requirements / requirements in scope × 100; RTM | PENDING |
+ | Defect severity distribution | Count unresolved defects by severity; include Deferred separately from dashboard open counts | NOT ASSESSED; test fixtures are not the team's product defect register |
+-| Automation coverage | Test cases automated / cases selected for automation × 100; test mapping | Selection denominator requires team agreement; 15 SQA cases have executed automated evidence (14 PASS including the SQA-18 browser criterion, SQA-20 FAIL). Human SQA-19 is separately reported executed, with 5/5 provisional scenario passes and final observer approval pending |
+-| Code coverage | Local Cobertura instrumented lines/branches in SecureApiQualityPlatform.Web | 19 October merged-source Debug run: 876/1141 lines = 76.77%; 325/494 branches = 65.78%; measured application package only. Historical 71-test and 76-test coverage retains its original source identity; CI pending |
++| Automation coverage | Test cases automated / cases selected for automation × 100; test mapping | Selection denominator requires team agreement; 15 SQA cases have executed automated evidence, now PASS including SQA-20 retest and SQA-18 proposed criterion. Human SQA-19 remains separate, with 5/5 provisional scenario passes and final observer approval pending |
++| Code coverage | Local Cobertura instrumented lines/branches in SecureApiQualityPlatform.Web | Baseline and post-fix Release: 715/918 lines = 77.89%; 325/492 branches = 66.06%. Historical merged Debug: 876/1141 lines = 76.77%, 325/494 branches = 65.78%; configuration/source denominators differ. CI pending |
+ | Commit activity | Count verifiable commits per member from Git history | PENDING |
+ | Dashboard PT-01 | Aggregation and complete HTTP document receipt for 2,000 deterministic results; browser separately | Historical 18 October 18:38 run PASS: aggregation first 21.4494 ms / warm median 0.7386 ms / max 8.7894 ms; HTTP first 223.0098 ms / warm median 1.8280 ms / max 2.6382 ms. SQA-18 later measured browser visual readiness separately below. Merged HTTP regression now uses an explicit temporary SQLite database |
+-| SQA-20 automated browser checks | Eight scoped technical categories in each installed browser, plus separate accessibility scans | 16/16 technical PASS, 0 FAIL/BLOCKED/NOT RUN; Chrome 155.0.8059.80 and Edge 155.0.4283.62. Additional axe/DOM naming and contrast checks FAIL, therefore overall SQA-20 FAIL. No human acceptance inferred |
++| SQA-20 automated browser checks | Eight technical categories per installed browser, plus original-location accessibility retest | Retest: 16/16 PASS, 0 FAIL/BLOCKED/NOT RUN; Chrome 155.0.8059.80, Edge 155.0.4283.62, both widths. 26/26 original controls per browser/viewport labelled; URL contrast 6.59, export 7.69 resting / 8.18 interactive; compact badges. Raw scroll-wrapper flags preserved with native keyboard proof. Automated SQA-20 PASS on retest; historical FAIL retained; no human acceptance inferred |
++| Normal SQLite HTTP regression | Isolated real MVC HTTP, owned loopback target and SQLite restart | Baseline and post-fix: 29 executed, 28 PASS, 1 pre-existing numeric-binding FAIL. Final post-fix CSV validation checks exact headers and raw logical-record widths; older assertions were less strict. No new HTTP regression observed; overall HTTP status remains FAIL |
+ | SQA-19 human usability | Five submitted interpretations and evidence pairs compared with the actual messages | Reported 19 October 2026, 15:00–16:00 NZDT: 5/5 provisional PASS recommendations, final Shirui approval pending. Tester-reported interpretations preceded ChatGPT wording assistance; no original unpolished transcript supplied |
+ | SQA-18 earlier browser Network | Five user-reported Network Finish values; screenshots retained; displayed rounded timings | 190, 55, 55, 55, 41 ms; median 55 ms; maximum 190 ms; DOMContentLoaded 15 ms each. Historical supporting evidence; Network Finish is not visual-render time; duplicate attachments disclosed |
+ | SQA-18 earlier browser paint | One separate matched-navigation Performance trace at 19:50:43 NZDT | FCP 89.415 ms; one LCP candidate 89.415 ms; historical supporting evidence, not finalized LCP or complete rendering; no trace-to-Network-run pairing established |
+@@ -24,23 +25,23 @@
+ 
+ SQA-19 evidence: [unchanged submitted responses](qa-evidence/SQA-19/observation-sheet-session-eilmar.md), [proposed observer assessment and limitations](qa-evidence/SQA-19/observer-assessment-session-eilmar.md). Execution counts reflect that the human session was reported completed; approval is a separate outcome decision. The provisional case contributes once to the 22-case register. Its five scenarios are not five additional master cases. Automated tests and the [AI-assisted heuristic review](qa-evidence/SQA-20/playwright-20261019T035608Z/sqa19-heuristic-review.md) remain distinct from the human evidence.
+ 
+-| Master-register count | Before merging main | Current review state |
+-|---|---:|---:|
+-| Planned | 22 | 22 |
+-| Executed, including pending approval | 15 | 16 |
+-| Confirmed PASS | 13 | 14 |
+-| PASS (PROVISIONAL), approval pending | 1 | 1 |
+-| FAIL | 1 | 1 |
+-| BLOCKED | 0 | 0 |
+-| NOT RUN | 7 | 6 |
++| Master-register count | Before merging main | Merged baseline | After accessibility retest |
++|---|---:|---:|---:|
++| Planned | 22 | 22 | 22 |
++| Executed, including pending approval | 15 | 16 | 16 |
++| Confirmed PASS | 13 | 14 | 15 |
++| PASS (PROVISIONAL), approval pending | 1 | 1 | 1 |
++| FAIL | 1 | 1 | 0 |
++| BLOCKED | 0 | 0 | 0 |
++| NOT RUN | 7 | 6 | 6 |
+ 
+-Current status reconciliation: 14 + 1 + 1 + 0 + 6 = 22. Executed: 14 + 1 + 1 = 16. If Shirui accepts the proposed SQA-19 outcome, confirmed register PASS becomes 15 and provisional PASS becomes 0; the executed denominator stays 16. Until then, do not publish 15 confirmed passes. SQA-18 is PASS against the documented proposed criterion only; formal NFR-PERF-01 approval remains pending. SQA-20 remains FAIL. Earlier execution ledgers retain their historical totals.
++Current status reconciliation: 15 + 1 + 0 + 0 + 6 = 22. Executed: 15 + 1 = 16. If Shirui accepts SQA-19, confirmed register PASS becomes 16 and provisional PASS becomes 0; the executed denominator stays 16. SQA-18 remains PASS against its proposed criterion only; formal NFR-PERF-01 approval is pending. SQA-20 is PASS on automated retest only. The separate numeric-validation HTTP failure remains open. Earlier ledgers and the [pre-retest register](qa-evidence/SQA-20/retest-20261019T095150Z/initial-register.csv) retain historical totals.
+ 
+ Latest integration validation: [merge and validation ledger](qa-evidence/integration-20261019T092140Z/README.md), [136-test TRX](qa-evidence/integration-20261019T092140Z/merged-suite.trx), [measured coverage](qa-evidence/integration-20261019T092140Z/cobertura.xml), [test summary](qa-evidence/integration-20261019T092140Z/test-summary.json) and [fixture-isolation smoke](qa-evidence/integration-20261019T092140Z/host-smoke/summary.json). These results identify the merged source via both parent SHAs and the retained source manifest; they do not rerun or extend the historical human or browser acceptance sessions.
+ 
+ Retained SQA-18 evidence: [five visual-readiness runs, screenshots and environment](qa-evidence/2026-10-18/sqa18-visual-20261018T072617937Z/README.md), [user-proposed operational criterion](qa-evidence/2026-10-18/sqa18-visual-20261018T072617937Z/PROPOSED-CRITERION.md). Earlier evidence: [user Network observations, trace extraction and limitations](qa-evidence/2026-10-18/sqa18-browser-20261018T062538973Z/browser-measurements/README.md), [isolated host/setup ledger](qa-evidence/2026-10-18/sqa18-browser-20261018T062538973Z/README.md), [76-test TRX](qa-evidence/2026-10-18/sqa18-browser-20261018T062538973Z/coverage-run/full-suite-coverage.trx), [historical 76-test Cobertura](qa-evidence/2026-10-18/sqa18-browser-20261018T062538973Z/cobertura.xml), [master register](ShiruiFinalTestCases.csv). The earlier uninstrumented [PT-01 execution ledger](qa-evidence/2026-10-18/pt01-20261018T053834379Z-eb0590/README.md) retains aggregation/HTTP timing evidence. Historical [earlier TRX](qa-evidence/2026-10-18/final.trx), [earlier coverage](qa-evidence/2026-10-18/cobertura.xml) and [environment/source identity](qa-evidence/2026-10-18/README.md) remain unchanged. Local setup used SDK 10.0.400 targeting net8.0 on .NET 8.0.30; workflow SDK 8 CI verification remains pending. The earlier failed coverage attempt is not counted as a passing suite.
+ 
+-Latest SQA-20 evidence: [execution ledger](qa-evidence/SQA-20/playwright-20261019T035608Z/README.md), [all 16 results](qa-evidence/SQA-20/playwright-20261019T035608Z/browser-execution.json), [accessibility findings](qa-evidence/SQA-20/playwright-20261019T035608Z/findings.md), [71-test TRX](qa-evidence/SQA-20/playwright-20261019T035608Z/dotnet/automated-suite.trx), [coverage](qa-evidence/SQA-20/playwright-20261019T035608Z/dotnet/cobertura.xml), [master register](ShiruiFinalTestCases.csv). This run used SDK 10.0.402 on Windows 10.0.26200 x64; the application host loads .NET 8.0.32. No production source changes were made for browser execution.
++Latest SQA-20 retest: [factual execution ledger](qa-evidence/SQA-20/retest-20261019T095150Z/README.md), [comparison and source identity](qa-evidence/SQA-20/retest-20261019T095150Z/comparison.json), [browser categories](qa-evidence/SQA-20/retest-20261019T095150Z/after/browser-execution.json), [targeted labels/contrast](qa-evidence/SQA-20/retest-20261019T095150Z/after-targets/accessibility-targets.json), [136-test post-fix TRX](qa-evidence/SQA-20/retest-20261019T095150Z/postfix-suite/postfix.trx), [HTTP regression](qa-evidence/SQA-20/retest-20261019T095150Z/postfix-http-verified/summary.json). Source is uncommitted accessibility fixes over PR #12 merge `7f28ee9`; no remote CI or human acceptance occurred. Historical FAIL evidence remains unchanged: [original ledger](qa-evidence/SQA-20/playwright-20261019T035608Z/README.md), [findings](qa-evidence/SQA-20/playwright-20261019T035608Z/findings.md), [71-test TRX](qa-evidence/SQA-20/playwright-20261019T035608Z/dotnet/automated-suite.trx). The retest hashes verified 361 historical SQA-19/SQA-20 evidence files unchanged.
+ 
+ Retained PT-01 evidence: [execution ledger](qa-evidence/2026-10-18/pt01-20261018T053834379Z-eb0590/README.md), [dedicated PT-01 TRX](qa-evidence/2026-10-18/pt01-20261018T053834379Z-eb0590/performance/performance.trx). Historical evidence: [earlier TRX](qa-evidence/2026-10-18/final.trx), [earlier Cobertura](qa-evidence/2026-10-18/cobertura.xml), [earlier environment/source identity](qa-evidence/2026-10-18/README.md). The earlier execution ledger records SDK 10.0.400/.NET 8.0.30 and a separate coverage-loading failure; those are not the latest run. CI on the submitted commit is still unverified.
+ 
+@@ -65,12 +66,15 @@ Basis: [actual test run URL, failing tests, severe defects, accepted risk, unver
+ 
+ Observed limitations for team assessment: the merged normal application persists API, endpoint, check and defect data in SQLite. Migration/backup operations require separate operational review. Server-side demo RBAC is present, defaults to Viewer and reads a user-selected role cookie; it is not authenticated identity or production authorization. DEF-010 remains open because defect status transitions are not enforced. The selected passive checks do not establish production security. Dashboard open counts exclude both Closed and Deferred; Deferred can still carry release risk. Numeric performance/compatibility targets remain provisional in Requirements.md. No AI-generated final report prose or human release decision is supplied here.
+ 
++Post-merge HTTP additionally confirms malformed numeric endpoint status input can persist default 200 because binding errors are cleared. This predates PR #12 and remains open for separate ownership; see [actual failing request and persisted row](qa-evidence/SQA-20/retest-20261019T095150Z/postfix-http-verified/findings.json).
++
+ Residual risk and mitigation table:
+ 
+ | Risk / defect ID | Severity | User/system impact | Mitigation / responsible person | Due date | Evidence |
+ |---|---|---|---|---|---|
+-| SQA20-A11Y-01 | High (QA triage recommendation) | Endpoint and defect controls lack reliable programmatic label associations; axe fails 22 rendered control instances per browser, DOM inspection identifies 26 association gaps | Associate visible labels and unique control IDs; team owner/acceptance pending | PENDING | [Observed findings](qa-evidence/SQA-20/playwright-20261019T035608Z/findings.md) |
+-| SQA20-A11Y-02 | Medium (QA triage recommendation) | API BaseUrl text contrast 4.23:1 and Defects export-link contrast 4.4:1 fall below the tested 4.5:1 criterion | Adjust colours and remeasure; team owner/acceptance pending | PENDING | [Observed findings](qa-evidence/SQA-20/playwright-20261019T035608Z/findings.md) |
+-| SQA20-UI-01 | Low (QA triage recommendation) | Defect severity backgrounds stretch vertically; reproduced at narrow width, with labels still readable | Align badge to start of flex row; team owner/acceptance pending | PENDING | [Observed findings](qa-evidence/SQA-20/playwright-20261019T035608Z/findings.md) |
++| SQA20-A11Y-01 | High (historical QA triage recommendation) | Original 22 axe naming failures / 26 DOM gaps per browser reproduced | Fixed locally; associated labels/unique IDs; 26/26 targeted controls pass per browser/viewport; review pending | Review pending | [Original FAIL](qa-evidence/SQA-20/playwright-20261019T035608Z/findings.md), [retest](qa-evidence/SQA-20/retest-20261019T095150Z/after-targets/accessibility-targets.json) |
++| SQA20-A11Y-02 | Medium (historical QA triage recommendation) | Original URL 4.23:1 / export 4.4:1 reproduced | Fixed locally; measured 6.59 / 7.69 resting, 8.18 interactive; review pending | Review pending | [Original FAIL](qa-evidence/SQA-20/playwright-20261019T035608Z/findings.md), [retest](qa-evidence/SQA-20/retest-20261019T095150Z/after-targets/accessibility-targets.json) |
++| SQA20-UI-01 | Low (historical QA triage recommendation) | Original vertically stretched severity badges reproduced at both widths | Fixed locally with flex self-alignment; 0 stretched badges in both browsers/widths; review pending | Review pending | [Original FAIL](qa-evidence/SQA-20/playwright-20261019T035608Z/findings.md), [retest](qa-evidence/SQA-20/retest-20261019T095150Z/after/browser-execution.json) |
++| PM-VALIDATION-01 | Triage pending | Malformed numeric expected-status input silently persists default 200; existing before PR #12 | OPEN; coordinate separate fix/ownership with Eilmar/Lana; accessibility branch leaves logic unchanged | PENDING | [HTTP finding](qa-evidence/SQA-20/retest-20261019T095150Z/postfix-http-verified/findings.json), [parent source](qa-evidence/SQA-20/retest-20261019T095150Z/endpoint-validation-parent-source.txt) |
+ 
+ Do not infer measured line coverage from a suite's existence, or mark `pass` when the test was blocked or never executed.
+diff --git a/tools/Sqa20.ManualHost/Run-BrowserChecks.cjs b/tools/Sqa20.ManualHost/Run-BrowserChecks.cjs
+index 2659282..3356b49 100644
+--- a/tools/Sqa20.ManualHost/Run-BrowserChecks.cjs
++++ b/tools/Sqa20.ManualHost/Run-BrowserChecks.cjs
+@@ -1,7 +1,7 @@
+ #!/usr/bin/env node
+ 'use strict';
+ 
+-// Runs the unchanged MVC application through installed Chrome and Edge binaries.
++// Runs the current MVC application through installed Chrome and Edge binaries.
+ // Browser contexts are fresh; no user profile or original application store is used.
+ const fs = require('node:fs');
+ const path = require('node:path');
+@@ -55,13 +55,14 @@ const result = (browser, index, status, actual, evidence = [], limitations = [])
+ });
+ fs.mkdirSync(output, { recursive: true });
+ if (!finalizeOnly && fs.existsSync(path.join(output, 'browser-execution.json'))) throw new Error('Refusing to overwrite a previous browser execution. Choose a new output directory.');
+-if (git(['branch', '--show-current']) !== 'qa/sqa19-sqa20-manual-validation') throw new Error('Wrong branch; no tests executed.');
++if (git(['branch', '--show-current']) !== 'fix/sqa20-accessibility-postmerge') throw new Error('Wrong branch; no tests executed.');
++const applicationSourceChanges = git(['status', '--short', '--', 'SecureApiQualityPlatform.Web']);
+ const metadata = finalizeOnly ? JSON.parse(fs.readFileSync(path.join(output, 'environment.json'), 'utf8')) : {
+   startedAtUtc: startedAt, branch: git(['branch', '--show-current']), baseCommit: git(['rev-parse', 'HEAD']),
+   sourceState: git(['status', '--short']), node: process.version, os: { platform: os.platform(), release: os.release(), architecture: os.arch(), cpu: os.cpus()[0]?.model, logicalCpus: os.cpus().length },
+   playwright: require(path.join(path.dirname(playwrightPath), 'package.json')).version,
+   playwrightPath, baseUrl, headless: true, viewportDesktop: { width: 1440, height: 900 }, viewportNarrow: { width: 375, height: 812 }, deviceScaleFactor: 1,
+-  axe: axeAvailability, originalApplicationCodeModified: false, demoRole,
++  axe: axeAvailability, originalApplicationCodeModified: Boolean(applicationSourceChanges), applicationSourceChanges, demoRole,
+   networkPolicy: 'Only localhost:51920 GET/HEAD and original Bootstrap stylesheet URL allowed by browser context. No API checks or form submissions.',
+   humanTesting: 'No human SQA-20 execution or acceptance is performed by this runner; separate human evidence is not reassessed.'
+ };
+@@ -90,6 +91,46 @@ async function severityFacts(page) {
+   });
+ }
+ 
++async function verifyScrollableRegions(page, keyboard, scan) {
++  const findings = scan?.violations.filter(rule => rule.id === 'scrollable-region-focusable') || [];
++  const results = [];
++  for (const node of findings.flatMap(rule => rule.nodes)) {
++    const proof = { target: node.target, reachedByTab: false, reachedByShiftTab: false, keyboardScrollWorks: false };
++    // This fixture has light DOM. Keep any unexpected selector form unresolved.
++    if (node.target.length === 1 && typeof node.target[0] === 'string') {
++      const locator = page.locator(node.target[0]);
++      if (await locator.count() === 1) {
++        const wrapper = await locator.evaluate(element => ({
++          key: `dom-${[...document.querySelectorAll('*')].indexOf(element)}`,
++          isTableWrapper: element.matches('.table-responsive'),
++          clientWidth: element.clientWidth, scrollWidth: element.scrollWidth,
++          tabIndex: element.tabIndex, attributeTabIndex: element.getAttribute('tabindex')
++        }));
++        Object.assign(proof, wrapper);
++        proof.reachedByTab = keyboard.forward.some(event => event.active.key === wrapper.key);
++        proof.reachedByShiftTab = keyboard.reverse.some(event => event.active.key === wrapper.key);
++        if (wrapper.isTableWrapper && wrapper.scrollWidth > wrapper.clientWidth && proof.reachedByTab && proof.reachedByShiftTab) {
++          for (let step = 0; step < 120; step++) {
++            await page.keyboard.press('Tab');
++            const activeKey = await page.evaluate(() => `dom-${[...document.querySelectorAll('*')].indexOf(document.activeElement)}`);
++            if (activeKey === wrapper.key) {
++              proof.scrollBefore = await locator.evaluate(element => element.scrollLeft);
++              await page.keyboard.press('ArrowRight');
++              await page.waitForTimeout(180);
++              proof.scrollAfter = await locator.evaluate(element => element.scrollLeft);
++              proof.keyboardScrollWorks = proof.scrollAfter > proof.scrollBefore;
++              break;
++            }
++          }
++        }
++      }
++    }
++    proof.unconfirmedScannerFlag = proof.reachedByTab && proof.reachedByShiftTab && proof.keyboardScrollWorks;
++    results.push(proof);
++  }
++  return results;
++}
++
+ async function executeBrowser(configuration) {
+   const directory = path.join(output, configuration.name);
+   fs.mkdirSync(directory, { recursive: true });
+@@ -140,24 +181,32 @@ async function executeBrowser(configuration) {
+         facts.page = item.name; facts.viewportName = viewportName; facts.httpStatus = response?.status();
+         facts.passed = facts.httpStatus === 200 && facts.heading === item.heading && facts.stylesheets.length === 2 && facts.stylesheets.every(style => style.loaded) && facts.controls.every(control => !control.disabled && control.width > 0 && control.height > 0 && control.visibility === 'visible');
+         summary.pages.push(facts);
++        let rawScan = null;
++        let accessibility = null;
+         if (axeAvailability.available) {
+           try {
+             const scan = await scanPage(page);
++            rawScan = scan;
+             const file = path.join(directory, `axe-${viewportName}-${item.name}.json`);
+             json(file, scan);
+-            summary.accessibility.push({ page: item.name, viewportName, evidence: relative(file), violations: scan.violations.map(violation => ({ id: violation.id, impact: violation.impact, description: violation.description, help: violation.help, helpUrl: violation.helpUrl, nodes: violation.nodes.length, targets: violation.nodes.map(node => node.target) })), incomplete: scan.incomplete.map(rule => ({ id: rule.id, nodes: rule.nodes.length })) });
++            accessibility = { page: item.name, viewportName, evidence: relative(file), violations: scan.violations.map(violation => ({ id: violation.id, impact: violation.impact, description: violation.description, help: violation.help, helpUrl: violation.helpUrl, nodes: violation.nodes.length, targets: violation.nodes.map(node => node.target) })), incomplete: scan.incomplete.map(rule => ({ id: rule.id, nodes: rule.nodes.length })) };
++            summary.accessibility.push(accessibility);
+           } catch (error) { summary.accessibility.push({ page: item.name, viewportName, error: String(error), status: 'BLOCKED' }); }
+         }
+         const measuredLayout = await inspectLayout(page, { directory, pageName: item.name, viewportName });
+         const { evidence: rawLayout, ...layout } = measuredLayout;
+         summary.layouts.push({ page: item.name, viewportName, ...layout, evidence: layout.evidencePath });
+         if (item.name === 'dashboard') summary.severity.push({ viewportName, ...await severityFacts(page) });
+-        if (viewportName === 'desktop') {
+-          // Reload to restore a pristine Tab starting position after scrolling/layout work.
+-          await page.goto(baseUrl + item.url, { waitUntil: 'networkidle' });
+-          phase = `keyboard-${item.name}`;
+-          const keyboard = await testKeyboard(page, { directory, pageName: item.name });
+-          summary.keyboard.push({ page: item.name, ...keyboard });
++        // Reload to restore a pristine Tab starting position after scrolling/layout work.
++        await page.goto(baseUrl + item.url, { waitUntil: 'networkidle' });
++        phase = `keyboard-${viewportName}-${item.name}`;
++        const keyboard = await testKeyboard(page, { directory, pageName: `${viewportName}-${item.name}` });
++        summary.keyboard.push({ page: item.name, viewportName, ...keyboard });
++        if (accessibility) {
++          accessibility.scrollableRegionVerification = await verifyScrollableRegions(page, keyboard, rawScan);
++          accessibility.unresolvedViolations = accessibility.violations.filter(rule => rule.id !== 'scrollable-region-focusable' ||
++            accessibility.scrollableRegionVerification.some(proof => !proof.unconfirmedScannerFlag));
++          accessibility.classification = 'Raw axe JSON and violations are preserved. A scrollable-region-focusable flag is unconfirmed only when this execution proves genuine Tab, Shift+Tab and ArrowRight access for every flagged table wrapper; all other rule failures remain unresolved.';
+         }
+       }
+     }
+@@ -193,14 +242,14 @@ async function executeBrowser(configuration) {
+     const importantResourceFailures = events.filter(event => event.type === 'requestfailed' && !event.url.includes('/Reports/') || event.type === 'response' && event.status >= 400 && !event.url.endsWith('/favicon.ico') || event.type === 'pageerror');
+     summary.results = [
+       result(configuration.name, 1, summary.pages.every(item => item.passed) && summary.navigation.every(item => item.passed) && !importantResourceFailures.length ? 'PASS' : 'FAIL', { pages: summary.pages.length, navigation: summary.navigation, resourceFailures: importantResourceFailures }, [`${configuration.name}/browser-summary.json`, `${configuration.name}/browser-events.json`]),
+-      result(configuration.name, 2, summary.keyboard.every(item => item.forwardPassed) ? 'PASS' : 'FAIL', { pages: summary.keyboard.map(item => ({ page: item.page, passed: item.forwardPassed, missing: item.missing, focusFailures: item.focusFailures })) }, summary.keyboard.map(item => relative(item.evidence))),
+-      result(configuration.name, 3, summary.keyboard.every(item => item.reversePassed) ? 'PASS' : 'FAIL', { pages: summary.keyboard.map(item => ({ page: item.page, passed: item.reversePassed, order: item.order })) }, summary.keyboard.map(item => relative(item.evidence))),
++      result(configuration.name, 2, summary.keyboard.every(item => item.forwardPassed) ? 'PASS' : 'FAIL', { pages: summary.keyboard.map(item => ({ page: item.page, viewportName: item.viewportName, passed: item.forwardPassed, missing: item.missing, focusFailures: item.focusFailures })) }, summary.keyboard.map(item => relative(item.evidence))),
++      result(configuration.name, 3, summary.keyboard.every(item => item.reversePassed) ? 'PASS' : 'FAIL', { pages: summary.keyboard.map(item => ({ page: item.page, viewportName: item.viewportName, passed: item.reversePassed, order: item.order })) }, summary.keyboard.map(item => relative(item.evidence))),
+       result(configuration.name, 4, summary.layouts.every(item => item.responsivePassed) ? 'PASS' : 'FAIL', { pages: summary.layouts.map(item => ({ page: item.page, viewportName: item.viewportName, passed: item.responsivePassed, overflowElements: item.overflowElements, overlaps: item.overlaps })) }, summary.layouts.map(item => relative(item.evidence))),
+-      result(configuration.name, 5, summary.severity.every(item => item.passed) ? 'PASS' : 'FAIL', { dashboard: summary.severity, stretchedBadges: summary.layouts.filter(item => item.stretchedBadges?.length).map(item => ({ page: item.page, viewportName: item.viewportName, badges: item.stretchedBadges })) }, [`${configuration.name}/browser-summary.json`, ...summary.layouts.filter(item => ['dashboard', 'defects'].includes(item.page)).map(item => relative(item.evidence))]),
++      result(configuration.name, 5, summary.severity.every(item => item.passed) && summary.layouts.every(item => !item.stretchedBadges?.length) ? 'PASS' : 'FAIL', { dashboard: summary.severity, stretchedBadges: summary.layouts.filter(item => item.stretchedBadges?.length).map(item => ({ page: item.page, viewportName: item.viewportName, badges: item.stretchedBadges })) }, [`${configuration.name}/browser-summary.json`, ...summary.layouts.filter(item => ['dashboard', 'defects'].includes(item.page)).map(item => relative(item.evidence))]),
+       result(configuration.name, 6, summary.layouts.every(item => item.tablePassed) ? 'PASS' : 'FAIL', { pages: summary.layouts.filter(item => item.tables?.length).map(item => ({ page: item.page, viewportName: item.viewportName, passed: item.tablePassed, tables: item.tables })) }, summary.layouts.filter(item => ['dashboard', 'orders', 'catalogue', 'defects'].includes(item.page)).map(item => relative(item.evidence))),
+       ...[7, 8].map(index => result(configuration.name, index, 'BLOCKED', 'Browser download collected; semantic CSV validation follows both browser executions.', [`${configuration.name}/browser-summary.json`]))
+     ];
+-    summary.additionalAccessibilityStatus = summary.accessibility.some(scan => scan.violations?.length) ? 'FAIL' : summary.accessibility.some(scan => scan.error) || !axeAvailability.available ? 'BLOCKED' : 'PASS';
++    summary.additionalAccessibilityStatus = summary.accessibility.some(scan => scan.unresolvedViolations?.length) || summary.keyboard.some(item => item.labelIssues.length) ? 'FAIL' : summary.accessibility.some(scan => scan.error) || !axeAvailability.available ? 'BLOCKED' : 'PASS';
+     summary.limitations = ['Headless genuine browser binaries; browser chrome, operating-system dialogs, assistive-technology interactions and human usability acceptance are not exercised.', 'Axe automated rules and DOM measurements do not establish full WCAG compliance.', 'Isolated host deliberately blocks writes and scans.'];
+   } catch (error) {
+     summary.error = String(error.stack || error);

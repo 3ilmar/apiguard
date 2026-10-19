@@ -1,0 +1,356 @@
+[
+  {
+    "name": "Empty persisted dashboard returns N/A",
+    "status": "PASS",
+    "actual": {
+      "http": 200,
+      "naCount": 2
+    },
+    "expected": "200, >=2 N/A, no APIs",
+    "atUtc": "2026-10-19T10:01:14.392983+00:00"
+  },
+  {
+    "name": "Viewer denied registration GET",
+    "status": "PASS",
+    "actual": 302,
+    "expected": 302,
+    "atUtc": "2026-10-19T10:01:14.412064+00:00"
+  },
+  {
+    "name": "Viewer denied registration POST without mutation",
+    "status": "PASS",
+    "actual": {
+      "http": 302,
+      "apis": 0
+    },
+    "expected": "302, 0 APIs",
+    "atUtc": "2026-10-19T10:01:14.485672+00:00"
+  },
+  {
+    "name": "Set Admin role through real antiforgery form",
+    "status": "PASS",
+    "actual": 302,
+    "expected": "302 to /",
+    "atUtc": "2026-10-19T10:01:14.544837+00:00"
+  },
+  {
+    "name": "Set Tester role through real antiforgery form",
+    "status": "PASS",
+    "actual": 302,
+    "expected": "302 to /",
+    "atUtc": "2026-10-19T10:01:14.558938+00:00"
+  },
+  {
+    "name": "Tester denied Admin registration action",
+    "status": "PASS",
+    "actual": 302,
+    "expected": 302,
+    "atUtc": "2026-10-19T10:01:14.562501+00:00"
+  },
+  {
+    "name": "Registration rejects invalid-scheme",
+    "status": "PASS",
+    "actual": {
+      "http": 200,
+      "apis": 0
+    },
+    "expected": "validation view, no persistence",
+    "atUtc": "2026-10-19T10:01:14.627785+00:00"
+  },
+  {
+    "name": "Registration rejects credentials",
+    "status": "PASS",
+    "actual": {
+      "http": 200,
+      "apis": 0
+    },
+    "expected": "validation view, no persistence",
+    "atUtc": "2026-10-19T10:01:14.658678+00:00"
+  },
+  {
+    "name": "Default safety rejects loopback registration",
+    "status": "PASS",
+    "actual": {
+      "http": 200,
+      "apis": 0,
+      "outboundRequests": 0
+    },
+    "expected": "200 validation guidance, no registration/outbound request",
+    "atUtc": "2026-10-19T10:01:14.684794+00:00"
+  },
+  {
+    "name": "Admin API registration persists to SQLite",
+    "status": "PASS",
+    "actual": {
+      "http": 302,
+      "apis": 1
+    },
+    "expected": "302, 1 API",
+    "atUtc": "2026-10-19T10:01:16.518223+00:00"
+  },
+  {
+    "name": "Duplicate API URL rejected",
+    "status": "PASS",
+    "actual": 200,
+    "expected": "200 validation view, unchanged DB",
+    "atUtc": "2026-10-19T10:01:16.539841+00:00"
+  },
+  {
+    "name": "Encoded traversal rejected via real MVC action",
+    "status": "PASS",
+    "actual": 200,
+    "expected": "200 validation view, 0 endpoints",
+    "atUtc": "2026-10-19T10:01:16.642707+00:00"
+  },
+  {
+    "name": "Numeric out-of-range rejected",
+    "status": "PASS",
+    "actual": 200,
+    "expected": "200 validation view, 0 endpoints",
+    "atUtc": "2026-10-19T10:01:16.692473+00:00"
+  },
+  {
+    "name": "Malformed numeric endpoint input rejected",
+    "status": "FAIL",
+    "actual": {
+      "http": 302,
+      "persistedRows": [
+        {
+          "Id": "B3D01899-A0B4-4DF4-9B15-1FEE9689F52B",
+          "ApiId": "AF1345F9-F7E7-445C-B5C9-67B2F665EC1C",
+          "Name": "Malformed numeric probe",
+          "Path": "/numeric-probe",
+          "Method": "GET",
+          "ExpectedStatusCode": 200,
+          "MaxResponseTimeMs": 60000,
+          "RequiresAuthentication": 1,
+          "ExpectedContentType": "application/json"
+        }
+      ]
+    },
+    "expected": "validation error, no endpoint persisted",
+    "atUtc": "2026-10-19T10:01:16.799428+00:00"
+  },
+  {
+    "name": "Admin valid endpoint registered",
+    "status": "PASS",
+    "actual": 302,
+    "expected": "302, health endpoint persisted",
+    "atUtc": "2026-10-19T10:01:16.849944+00:00"
+  },
+  {
+    "name": "Duplicate method/path rejected",
+    "status": "PASS",
+    "actual": 200,
+    "expected": "200 duplicate guidance",
+    "atUtc": "2026-10-19T10:01:16.893337+00:00"
+  },
+  {
+    "name": "Tester cannot add endpoint",
+    "status": "PASS",
+    "actual": 302,
+    "expected": "302, unchanged DB",
+    "atUtc": "2026-10-19T10:01:16.951720+00:00"
+  },
+  {
+    "name": "Viewer cannot run checks",
+    "status": "PASS",
+    "actual": 302,
+    "expected": "302, no outbound request or result",
+    "atUtc": "2026-10-19T10:01:17.015311+00:00"
+  },
+  {
+    "name": "Tester executes owned fixture and persists failures",
+    "status": "PASS",
+    "actual": {
+      "http": 302,
+      "fixtureRequests": 2,
+      "results": 16,
+      "defects": 6
+    },
+    "expected": "302, one fixture GET per endpoint, persisted results/defects",
+    "atUtc": "2026-10-19T10:01:17.398032+00:00"
+  },
+  {
+    "name": "Viewer cannot mutate defect",
+    "status": "PASS",
+    "actual": 302,
+    "expected": "302, unchanged defect status",
+    "atUtc": "2026-10-19T10:01:17.450954+00:00"
+  },
+  {
+    "name": "Tester assignment/priority/status update persists",
+    "status": "PASS",
+    "actual": {
+      "Id": "3C6126AE-D0C5-49A9-B3FA-9E03EC91984F",
+      "ApiId": "AF1345F9-F7E7-445C-B5C9-67B2F665EC1C",
+      "EndpointId": "85298B76-9CDE-4DF2-84F5-53CDA99C2735",
+      "SourceCheckResultId": "5448F522-F347-4A63-83E5-5D0EB8B68907",
+      "Title": "Expected status check failed",
+      "Description": "Expected HTTP 200 but received 503.",
+      "CheckType": "Expected status",
+      "Severity": 2,
+      "Priority": 3,
+      "Status": 4,
+      "AssignedTo": "Synthetic, \"Tester\"",
+      "CreatedAtUtc": "2026-10-19 10:01:17.2094684+00:00",
+      "UpdatedAtUtc": "2026-10-19 10:01:17.4776396+00:00",
+      "RetestedAtUtc": null
+    },
+    "expected": "Resolved, Urgent, synthetic assignee",
+    "atUtc": "2026-10-19T10:01:17.488563+00:00"
+  },
+  {
+    "name": "Passing retest closes resolved expected-status defect",
+    "status": "PASS",
+    "actual": {
+      "Id": "3C6126AE-D0C5-49A9-B3FA-9E03EC91984F",
+      "ApiId": "AF1345F9-F7E7-445C-B5C9-67B2F665EC1C",
+      "EndpointId": "85298B76-9CDE-4DF2-84F5-53CDA99C2735",
+      "SourceCheckResultId": "5448F522-F347-4A63-83E5-5D0EB8B68907",
+      "Title": "Expected status check failed",
+      "Description": "Expected HTTP 200 but received 503.",
+      "CheckType": "Expected status",
+      "Severity": 2,
+      "Priority": 3,
+      "Status": 6,
+      "AssignedTo": "Synthetic, \"Tester\"",
+      "CreatedAtUtc": "2026-10-19 10:01:17.2094684+00:00",
+      "UpdatedAtUtc": "2026-10-19 10:01:17.5646342+00:00",
+      "RetestedAtUtc": "2026-10-19 10:01:17.5620068+00:00"
+    },
+    "expected": "Closed with RetestedAtUtc",
+    "atUtc": "2026-10-19T10:01:17.760035+00:00"
+  },
+  {
+    "name": "Populated SQLite dashboard renders",
+    "status": "PASS",
+    "actual": 200,
+    "expected": "200, metrics and mixed result rows",
+    "atUtc": "2026-10-19T10:01:17.814873+00:00"
+  },
+  {
+    "name": "failed-results CSV schema/filter/escaping",
+    "status": "PASS",
+    "actual": {
+      "http": 200,
+      "actualHeader": [
+        "ExecutedAtUtc",
+        "ApiName",
+        "ApiId",
+        "EndpointName",
+        "EndpointId",
+        "Method",
+        "Path",
+        "CheckType",
+        "Passed",
+        "ActualStatusCode",
+        "ResponseTimeMs",
+        "FailureSeverity",
+        "Message",
+        "ApiBaseUrl",
+        "Outcome"
+      ],
+      "logicalRecordWidths": [
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15
+      ],
+      "rows": 10
+    },
+    "expected": "200 CSV, exact 15-column header and all raw record widths, strict parse, filtered rows, quoted API name round-trips",
+    "atUtc": "2026-10-19T10:01:17.849545+00:00"
+  },
+  {
+    "name": "closed-high-defects CSV schema/filter/escaping",
+    "status": "PASS",
+    "actual": {
+      "http": 200,
+      "actualHeader": [
+        "DefectId",
+        "ApiName",
+        "ApiId",
+        "EndpointName",
+        "EndpointId",
+        "Method",
+        "Path",
+        "CheckType",
+        "Severity",
+        "Priority",
+        "Status",
+        "AssignedTo",
+        "CreatedAtUtc",
+        "UpdatedAtUtc",
+        "RetestedAtUtc",
+        "SourceCheckResultId",
+        "Title",
+        "Description",
+        "ApiBaseUrl",
+        "LifecycleStage",
+        "IsOpen"
+      ],
+      "logicalRecordWidths": [
+        21,
+        21
+      ],
+      "rows": 1
+    },
+    "expected": "200 CSV, exact 21-column header and all raw record widths, strict parse, filtered rows, quoted API name round-trips",
+    "atUtc": "2026-10-19T10:01:17.875219+00:00"
+  },
+  {
+    "name": "Malformed filter rejected: /Reports/ExportResultsCsv?passed=wrong",
+    "status": "PASS",
+    "actual": {
+      "http": 400,
+      "guidancePresent": {
+        "Invalid report filter": true,
+        "passed as true or false": true,
+        "Omit a filter": true
+      }
+    },
+    "expected": "400 with specific accepted values and omission guidance",
+    "atUtc": "2026-10-19T10:01:17.882743+00:00"
+  },
+  {
+    "name": "Malformed filter rejected: /Reports/ExportDefectsCsv?severity=999",
+    "status": "PASS",
+    "actual": {
+      "http": 400,
+      "guidancePresent": {
+        "Invalid report filter": true,
+        "severity as one of Low, Medium, High, Critical": true,
+        "Omit a filter": true
+      }
+    },
+    "expected": "400 with specific accepted values and omission guidance",
+    "atUtc": "2026-10-19T10:01:17.888275+00:00"
+  },
+  {
+    "name": "All API/endpoint/result/defect data survives process restart",
+    "status": "PASS",
+    "actual": {
+      "Apis": 1,
+      "Endpoints": 2,
+      "CheckResults": 32,
+      "Defects": 6
+    },
+    "expected": "Identical rows across fresh process",
+    "atUtc": "2026-10-19T10:01:20.199282+00:00"
+  },
+  {
+    "name": "Persisted API details render after restart",
+    "status": "PASS",
+    "actual": 200,
+    "expected": "200 and stored endpoints/results visible",
+    "atUtc": "2026-10-19T10:01:20.301871+00:00"
+  }
+]

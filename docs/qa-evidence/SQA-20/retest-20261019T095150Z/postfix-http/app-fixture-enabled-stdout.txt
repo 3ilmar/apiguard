@@ -1,0 +1,1754 @@
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+info: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[63]
+      User profile is available. Using 'C:\Users\zsr20\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://127.0.0.1:51921
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Web
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:51921/ - - -
+warn: Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware[3]
+      Failed to determine the https port for redirect.
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.HomeController.Index (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller SecureApiQualityPlatform.Web.Controllers.HomeController (SecureApiQualityPlatform.Web).
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."Id", "a"."BaseUrl", "a"."CreatedAtUtc", "a"."Description", "a"."Name", "e"."Id", "e"."ApiId", "e"."ExpectedContentType", "e"."ExpectedStatusCode", "e"."MaxResponseTimeMs", "e"."Method", "e"."Name", "e"."Path", "e"."RequiresAuthentication"
+      FROM "Apis" AS "a"
+      LEFT JOIN "Endpoints" AS "e" ON "a"."Id" = "e"."ApiId"
+      ORDER BY "a"."Id"
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "c"."Id", "c"."ActualStatusCode", "c"."ApiId", "c"."CheckType", "c"."EndpointId", "c"."ExecutedAtUtc", "c"."FailureSeverity", "c"."Message", "c"."Passed", "c"."ResponseTimeMs"
+      FROM "CheckResults" AS "c"
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "d"."Id", "d"."ApiId", "d"."AssignedTo", "d"."CheckType", "d"."CreatedAtUtc", "d"."Description", "d"."EndpointId", "d"."Priority", "d"."RetestedAtUtc", "d"."Severity", "d"."SourceCheckResultId", "d"."Status", "d"."Title", "d"."UpdatedAtUtc"
+      FROM "Defects" AS "d"
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[1]
+      Executing ViewResult, running view Index.
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[4]
+      Executed ViewResult - view Index executed in 63.5184ms.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.HomeController.Index (SecureApiQualityPlatform.Web) in 320.6088ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.HomeController.Index (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:51921/ - 200 - text/html;+charset=utf-8 347.5155ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:51921/Apis/Create - - -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.Create (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Create", controller = "Apis"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create() on controller SecureApiQualityPlatform.Web.Controllers.ApisController (SecureApiQualityPlatform.Web).
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[1]
+      Executing ViewResult, running view Create.
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[4]
+      Executed ViewResult - view Create executed in 19.8349ms.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.ApisController.Create (SecureApiQualityPlatform.Web) in 28.5435ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.Create (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:51921/Apis/Create - 200 - text/html;+charset=utf-8 31.1061ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://127.0.0.1:51921/Apis/Create - application/x-www-form-urlencoded 299
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.Create (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Create", controller = "Apis"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(SecureApiQualityPlatform.Web.Models.RegisteredApi) on controller SecureApiQualityPlatform.Web.Controllers.ApisController (SecureApiQualityPlatform.Web).
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."BaseUrl"
+      FROM "Apis" AS "a"
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (8ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 22), @p2='?' (DbType = DateTimeOffset), @p3='?' (Size = 27), @p4='?' (Size = 26)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Apis" ("Id", "BaseUrl", "CreatedAtUtc", "Description", "Name")
+      VALUES (@p0, @p1, @p2, @p3, @p4);
+info: Microsoft.AspNetCore.Mvc.RedirectToActionResult[1]
+      Executing RedirectResult, redirecting to /Apis/Details/3d93e01b-4f4b-4421-939c-1ded3fe5abb5.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.ApisController.Create (SecureApiQualityPlatform.Web) in 122.0684ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.Create (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://127.0.0.1:51921/Apis/Create - 302 0 - 132.2903ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:51921/Apis/Create - - -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.Create (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Create", controller = "Apis"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create() on controller SecureApiQualityPlatform.Web.Controllers.ApisController (SecureApiQualityPlatform.Web).
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[1]
+      Executing ViewResult, running view Create.
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[4]
+      Executed ViewResult - view Create executed in 2.353ms.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.ApisController.Create (SecureApiQualityPlatform.Web) in 3.147ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.Create (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:51921/Apis/Create - 200 - text/html;+charset=utf-8 3.5324ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://127.0.0.1:51921/Apis/Create - application/x-www-form-urlencoded 239
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.Create (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Create", controller = "Apis"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(SecureApiQualityPlatform.Web.Models.RegisteredApi) on controller SecureApiQualityPlatform.Web.Controllers.ApisController (SecureApiQualityPlatform.Web).
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."BaseUrl"
+      FROM "Apis" AS "a"
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[1]
+      Executing ViewResult, running view Create.
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[4]
+      Executed ViewResult - view Create executed in 1.9121ms.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.ApisController.Create (SecureApiQualityPlatform.Web) in 7.521ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.Create (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://127.0.0.1:51921/Apis/Create - 200 - text/html;+charset=utf-8 7.8020ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:51921/Apis/Details/3d93e01b-4f4b-4421-939c-1ded3fe5abb5 - - -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.Details (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Details", controller = "Apis"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Details(System.Guid) on controller SecureApiQualityPlatform.Web.Controllers.ApisController (SecureApiQualityPlatform.Web).
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."BaseUrl", "t"."CreatedAtUtc", "t"."Description", "t"."Name", "e"."Id", "e"."ApiId", "e"."ExpectedContentType", "e"."ExpectedStatusCode", "e"."MaxResponseTimeMs", "e"."Method", "e"."Name", "e"."Path", "e"."RequiresAuthentication"
+      FROM (
+          SELECT "a"."Id", "a"."BaseUrl", "a"."CreatedAtUtc", "a"."Description", "a"."Name"
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__id_0
+          LIMIT 2
+      ) AS "t"
+      LEFT JOIN "Endpoints" AS "e" ON "t"."Id" = "e"."ApiId"
+      ORDER BY "t"."Id"
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__apiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "c"."Id", "c"."ActualStatusCode", "c"."ApiId", "c"."CheckType", "c"."EndpointId", "c"."ExecutedAtUtc", "c"."FailureSeverity", "c"."Message", "c"."Passed", "c"."ResponseTimeMs"
+      FROM "CheckResults" AS "c"
+      WHERE "c"."ApiId" = @__apiId_0
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[1]
+      Executing ViewResult, running view Details.
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[4]
+      Executed ViewResult - view Details executed in 20.8026ms.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.ApisController.Details (SecureApiQualityPlatform.Web) in 55.2411ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.Details (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:51921/Apis/Details/3d93e01b-4f4b-4421-939c-1ded3fe5abb5 - 200 - text/html;+charset=utf-8 56.6694ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://127.0.0.1:51921/Apis/AddEndpoint/3D93E01B-4F4B-4421-939C-1DED3FE5ABB5 - application/x-www-form-urlencoded 356
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.AddEndpoint (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "AddEndpoint", controller = "Apis"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddEndpoint(System.Guid, SecureApiQualityPlatform.Web.Models.ApiEndpoint) on controller SecureApiQualityPlatform.Web.Controllers.ApisController (SecureApiQualityPlatform.Web).
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."BaseUrl", "t"."CreatedAtUtc", "t"."Description", "t"."Name", "e"."Id", "e"."ApiId", "e"."ExpectedContentType", "e"."ExpectedStatusCode", "e"."MaxResponseTimeMs", "e"."Method", "e"."Name", "e"."Path", "e"."RequiresAuthentication"
+      FROM (
+          SELECT "a"."Id", "a"."BaseUrl", "a"."CreatedAtUtc", "a"."Description", "a"."Name"
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__id_0
+          LIMIT 2
+      ) AS "t"
+      LEFT JOIN "Endpoints" AS "e" ON "t"."Id" = "e"."ApiId"
+      ORDER BY "t"."Id"
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__apiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "c"."Id", "c"."ActualStatusCode", "c"."ApiId", "c"."CheckType", "c"."EndpointId", "c"."ExecutedAtUtc", "c"."FailureSeverity", "c"."Message", "c"."Passed", "c"."ResponseTimeMs"
+      FROM "CheckResults" AS "c"
+      WHERE "c"."ApiId" = @__apiId_0
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[1]
+      Executing ViewResult, running view Details.
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[4]
+      Executed ViewResult - view Details executed in 1.8401ms.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.ApisController.AddEndpoint (SecureApiQualityPlatform.Web) in 9.312ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.AddEndpoint (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://127.0.0.1:51921/Apis/AddEndpoint/3D93E01B-4F4B-4421-939C-1DED3FE5ABB5 - 200 - text/html;+charset=utf-8 10.9958ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:51921/Apis/Details/3d93e01b-4f4b-4421-939c-1ded3fe5abb5 - - -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.Details (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Details", controller = "Apis"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Details(System.Guid) on controller SecureApiQualityPlatform.Web.Controllers.ApisController (SecureApiQualityPlatform.Web).
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."BaseUrl", "t"."CreatedAtUtc", "t"."Description", "t"."Name", "e"."Id", "e"."ApiId", "e"."ExpectedContentType", "e"."ExpectedStatusCode", "e"."MaxResponseTimeMs", "e"."Method", "e"."Name", "e"."Path", "e"."RequiresAuthentication"
+      FROM (
+          SELECT "a"."Id", "a"."BaseUrl", "a"."CreatedAtUtc", "a"."Description", "a"."Name"
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__id_0
+          LIMIT 2
+      ) AS "t"
+      LEFT JOIN "Endpoints" AS "e" ON "t"."Id" = "e"."ApiId"
+      ORDER BY "t"."Id"
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__apiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "c"."Id", "c"."ActualStatusCode", "c"."ApiId", "c"."CheckType", "c"."EndpointId", "c"."ExecutedAtUtc", "c"."FailureSeverity", "c"."Message", "c"."Passed", "c"."ResponseTimeMs"
+      FROM "CheckResults" AS "c"
+      WHERE "c"."ApiId" = @__apiId_0
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[1]
+      Executing ViewResult, running view Details.
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[4]
+      Executed ViewResult - view Details executed in 1.7065ms.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.ApisController.Details (SecureApiQualityPlatform.Web) in 6.8677ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.Details (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:51921/Apis/Details/3d93e01b-4f4b-4421-939c-1ded3fe5abb5 - 200 - text/html;+charset=utf-8 7.1324ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://127.0.0.1:51921/Apis/AddEndpoint/3D93E01B-4F4B-4421-939C-1DED3FE5ABB5 - application/x-www-form-urlencoded 343
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.AddEndpoint (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "AddEndpoint", controller = "Apis"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddEndpoint(System.Guid, SecureApiQualityPlatform.Web.Models.ApiEndpoint) on controller SecureApiQualityPlatform.Web.Controllers.ApisController (SecureApiQualityPlatform.Web).
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."BaseUrl", "t"."CreatedAtUtc", "t"."Description", "t"."Name", "e"."Id", "e"."ApiId", "e"."ExpectedContentType", "e"."ExpectedStatusCode", "e"."MaxResponseTimeMs", "e"."Method", "e"."Name", "e"."Path", "e"."RequiresAuthentication"
+      FROM (
+          SELECT "a"."Id", "a"."BaseUrl", "a"."CreatedAtUtc", "a"."Description", "a"."Name"
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__id_0
+          LIMIT 2
+      ) AS "t"
+      LEFT JOIN "Endpoints" AS "e" ON "t"."Id" = "e"."ApiId"
+      ORDER BY "t"."Id"
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__apiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "c"."Id", "c"."ActualStatusCode", "c"."ApiId", "c"."CheckType", "c"."EndpointId", "c"."ExecutedAtUtc", "c"."FailureSeverity", "c"."Message", "c"."Passed", "c"."ResponseTimeMs"
+      FROM "CheckResults" AS "c"
+      WHERE "c"."ApiId" = @__apiId_0
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[1]
+      Executing ViewResult, running view Details.
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[4]
+      Executed ViewResult - view Details executed in 1.2137ms.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.ApisController.AddEndpoint (SecureApiQualityPlatform.Web) in 6.9294ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.AddEndpoint (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://127.0.0.1:51921/Apis/AddEndpoint/3D93E01B-4F4B-4421-939C-1DED3FE5ABB5 - 200 - text/html;+charset=utf-8 7.1729ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:51921/Apis/Details/3d93e01b-4f4b-4421-939c-1ded3fe5abb5 - - -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.Details (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Details", controller = "Apis"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Details(System.Guid) on controller SecureApiQualityPlatform.Web.Controllers.ApisController (SecureApiQualityPlatform.Web).
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."BaseUrl", "t"."CreatedAtUtc", "t"."Description", "t"."Name", "e"."Id", "e"."ApiId", "e"."ExpectedContentType", "e"."ExpectedStatusCode", "e"."MaxResponseTimeMs", "e"."Method", "e"."Name", "e"."Path", "e"."RequiresAuthentication"
+      FROM (
+          SELECT "a"."Id", "a"."BaseUrl", "a"."CreatedAtUtc", "a"."Description", "a"."Name"
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__id_0
+          LIMIT 2
+      ) AS "t"
+      LEFT JOIN "Endpoints" AS "e" ON "t"."Id" = "e"."ApiId"
+      ORDER BY "t"."Id"
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__apiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "c"."Id", "c"."ActualStatusCode", "c"."ApiId", "c"."CheckType", "c"."EndpointId", "c"."ExecutedAtUtc", "c"."FailureSeverity", "c"."Message", "c"."Passed", "c"."ResponseTimeMs"
+      FROM "CheckResults" AS "c"
+      WHERE "c"."ApiId" = @__apiId_0
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[1]
+      Executing ViewResult, running view Details.
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[4]
+      Executed ViewResult - view Details executed in 1.3042ms.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.ApisController.Details (SecureApiQualityPlatform.Web) in 6.6739ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.Details (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:51921/Apis/Details/3d93e01b-4f4b-4421-939c-1ded3fe5abb5 - 200 - text/html;+charset=utf-8 6.9893ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://127.0.0.1:51921/Apis/AddEndpoint/3D93E01B-4F4B-4421-939C-1DED3FE5ABB5 - application/x-www-form-urlencoded 367
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.AddEndpoint (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "AddEndpoint", controller = "Apis"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddEndpoint(System.Guid, SecureApiQualityPlatform.Web.Models.ApiEndpoint) on controller SecureApiQualityPlatform.Web.Controllers.ApisController (SecureApiQualityPlatform.Web).
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."BaseUrl", "t"."CreatedAtUtc", "t"."Description", "t"."Name", "e"."Id", "e"."ApiId", "e"."ExpectedContentType", "e"."ExpectedStatusCode", "e"."MaxResponseTimeMs", "e"."Method", "e"."Name", "e"."Path", "e"."RequiresAuthentication"
+      FROM (
+          SELECT "a"."Id", "a"."BaseUrl", "a"."CreatedAtUtc", "a"."Description", "a"."Name"
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__id_0
+          LIMIT 2
+      ) AS "t"
+      LEFT JOIN "Endpoints" AS "e" ON "t"."Id" = "e"."ApiId"
+      ORDER BY "t"."Id"
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__apiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__apiId_0)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__apiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "e"."Id", "e"."ApiId", "e"."ExpectedContentType", "e"."ExpectedStatusCode", "e"."MaxResponseTimeMs", "e"."Method", "e"."Name", "e"."Path", "e"."RequiresAuthentication"
+      FROM "Endpoints" AS "e"
+      WHERE "e"."ApiId" = @__apiId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (Size = 16), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (Size = 3), @p6='?' (Size = 23), @p7='?' (Size = 14), @p8='?' (DbType = Boolean)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Endpoints" ("Id", "ApiId", "ExpectedContentType", "ExpectedStatusCode", "MaxResponseTimeMs", "Method", "Name", "Path", "RequiresAuthentication")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+info: Microsoft.AspNetCore.Mvc.RedirectToActionResult[1]
+      Executing RedirectResult, redirecting to /Apis/Details/3d93e01b-4f4b-4421-939c-1ded3fe5abb5.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.ApisController.AddEndpoint (SecureApiQualityPlatform.Web) in 51.0162ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.AddEndpoint (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://127.0.0.1:51921/Apis/AddEndpoint/3D93E01B-4F4B-4421-939C-1DED3FE5ABB5 - 302 0 - 51.3418ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:51921/Apis/Details/3d93e01b-4f4b-4421-939c-1ded3fe5abb5 - - -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.Details (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Details", controller = "Apis"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Details(System.Guid) on controller SecureApiQualityPlatform.Web.Controllers.ApisController (SecureApiQualityPlatform.Web).
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."BaseUrl", "t"."CreatedAtUtc", "t"."Description", "t"."Name", "e"."Id", "e"."ApiId", "e"."ExpectedContentType", "e"."ExpectedStatusCode", "e"."MaxResponseTimeMs", "e"."Method", "e"."Name", "e"."Path", "e"."RequiresAuthentication"
+      FROM (
+          SELECT "a"."Id", "a"."BaseUrl", "a"."CreatedAtUtc", "a"."Description", "a"."Name"
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__id_0
+          LIMIT 2
+      ) AS "t"
+      LEFT JOIN "Endpoints" AS "e" ON "t"."Id" = "e"."ApiId"
+      ORDER BY "t"."Id"
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__apiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "c"."Id", "c"."ActualStatusCode", "c"."ApiId", "c"."CheckType", "c"."EndpointId", "c"."ExecutedAtUtc", "c"."FailureSeverity", "c"."Message", "c"."Passed", "c"."ResponseTimeMs"
+      FROM "CheckResults" AS "c"
+      WHERE "c"."ApiId" = @__apiId_0
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[1]
+      Executing ViewResult, running view Details.
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[4]
+      Executed ViewResult - view Details executed in 1.2612ms.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.ApisController.Details (SecureApiQualityPlatform.Web) in 7.0247ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.Details (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:51921/Apis/Details/3d93e01b-4f4b-4421-939c-1ded3fe5abb5 - 200 - text/html;+charset=utf-8 7.2765ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://127.0.0.1:51921/Apis/AddEndpoint/3D93E01B-4F4B-4421-939C-1DED3FE5ABB5 - application/x-www-form-urlencoded 344
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.AddEndpoint (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "AddEndpoint", controller = "Apis"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddEndpoint(System.Guid, SecureApiQualityPlatform.Web.Models.ApiEndpoint) on controller SecureApiQualityPlatform.Web.Controllers.ApisController (SecureApiQualityPlatform.Web).
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."BaseUrl", "t"."CreatedAtUtc", "t"."Description", "t"."Name", "e"."Id", "e"."ApiId", "e"."ExpectedContentType", "e"."ExpectedStatusCode", "e"."MaxResponseTimeMs", "e"."Method", "e"."Name", "e"."Path", "e"."RequiresAuthentication"
+      FROM (
+          SELECT "a"."Id", "a"."BaseUrl", "a"."CreatedAtUtc", "a"."Description", "a"."Name"
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__id_0
+          LIMIT 2
+      ) AS "t"
+      LEFT JOIN "Endpoints" AS "e" ON "t"."Id" = "e"."ApiId"
+      ORDER BY "t"."Id"
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__apiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__apiId_0)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__apiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "e"."Id", "e"."ApiId", "e"."ExpectedContentType", "e"."ExpectedStatusCode", "e"."MaxResponseTimeMs", "e"."Method", "e"."Name", "e"."Path", "e"."RequiresAuthentication"
+      FROM "Endpoints" AS "e"
+      WHERE "e"."ApiId" = @__apiId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (Size = 16), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (Size = 3), @p6='?' (Size = 16), @p7='?' (Size = 7), @p8='?' (DbType = Boolean)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Endpoints" ("Id", "ApiId", "ExpectedContentType", "ExpectedStatusCode", "MaxResponseTimeMs", "Method", "Name", "Path", "RequiresAuthentication")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+info: Microsoft.AspNetCore.Mvc.RedirectToActionResult[1]
+      Executing RedirectResult, redirecting to /Apis/Details/3d93e01b-4f4b-4421-939c-1ded3fe5abb5.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.ApisController.AddEndpoint (SecureApiQualityPlatform.Web) in 10.685ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.AddEndpoint (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://127.0.0.1:51921/Apis/AddEndpoint/3D93E01B-4F4B-4421-939C-1DED3FE5ABB5 - 302 0 - 11.0027ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:51921/Apis/Details/3d93e01b-4f4b-4421-939c-1ded3fe5abb5 - - -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.Details (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Details", controller = "Apis"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Details(System.Guid) on controller SecureApiQualityPlatform.Web.Controllers.ApisController (SecureApiQualityPlatform.Web).
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."BaseUrl", "t"."CreatedAtUtc", "t"."Description", "t"."Name", "e"."Id", "e"."ApiId", "e"."ExpectedContentType", "e"."ExpectedStatusCode", "e"."MaxResponseTimeMs", "e"."Method", "e"."Name", "e"."Path", "e"."RequiresAuthentication"
+      FROM (
+          SELECT "a"."Id", "a"."BaseUrl", "a"."CreatedAtUtc", "a"."Description", "a"."Name"
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__id_0
+          LIMIT 2
+      ) AS "t"
+      LEFT JOIN "Endpoints" AS "e" ON "t"."Id" = "e"."ApiId"
+      ORDER BY "t"."Id"
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__apiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "c"."Id", "c"."ActualStatusCode", "c"."ApiId", "c"."CheckType", "c"."EndpointId", "c"."ExecutedAtUtc", "c"."FailureSeverity", "c"."Message", "c"."Passed", "c"."ResponseTimeMs"
+      FROM "CheckResults" AS "c"
+      WHERE "c"."ApiId" = @__apiId_0
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[1]
+      Executing ViewResult, running view Details.
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[4]
+      Executed ViewResult - view Details executed in 1.2926ms.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.ApisController.Details (SecureApiQualityPlatform.Web) in 6.089ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.Details (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:51921/Apis/Details/3d93e01b-4f4b-4421-939c-1ded3fe5abb5 - 200 - text/html;+charset=utf-8 6.3354ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://127.0.0.1:51921/Apis/AddEndpoint/3D93E01B-4F4B-4421-939C-1DED3FE5ABB5 - application/x-www-form-urlencoded 344
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.AddEndpoint (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "AddEndpoint", controller = "Apis"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddEndpoint(System.Guid, SecureApiQualityPlatform.Web.Models.ApiEndpoint) on controller SecureApiQualityPlatform.Web.Controllers.ApisController (SecureApiQualityPlatform.Web).
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."BaseUrl", "t"."CreatedAtUtc", "t"."Description", "t"."Name", "e"."Id", "e"."ApiId", "e"."ExpectedContentType", "e"."ExpectedStatusCode", "e"."MaxResponseTimeMs", "e"."Method", "e"."Name", "e"."Path", "e"."RequiresAuthentication"
+      FROM (
+          SELECT "a"."Id", "a"."BaseUrl", "a"."CreatedAtUtc", "a"."Description", "a"."Name"
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__id_0
+          LIMIT 2
+      ) AS "t"
+      LEFT JOIN "Endpoints" AS "e" ON "t"."Id" = "e"."ApiId"
+      ORDER BY "t"."Id"
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__apiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__apiId_0)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__apiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "e"."Id", "e"."ApiId", "e"."ExpectedContentType", "e"."ExpectedStatusCode", "e"."MaxResponseTimeMs", "e"."Method", "e"."Name", "e"."Path", "e"."RequiresAuthentication"
+      FROM "Endpoints" AS "e"
+      WHERE "e"."ApiId" = @__apiId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__apiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "c"."Id", "c"."ActualStatusCode", "c"."ApiId", "c"."CheckType", "c"."EndpointId", "c"."ExecutedAtUtc", "c"."FailureSeverity", "c"."Message", "c"."Passed", "c"."ResponseTimeMs"
+      FROM "CheckResults" AS "c"
+      WHERE "c"."ApiId" = @__apiId_0
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[1]
+      Executing ViewResult, running view Details.
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[4]
+      Executed ViewResult - view Details executed in 1.1672ms.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.ApisController.AddEndpoint (SecureApiQualityPlatform.Web) in 10.4351ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.AddEndpoint (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://127.0.0.1:51921/Apis/AddEndpoint/3D93E01B-4F4B-4421-939C-1DED3FE5ABB5 - 200 - text/html;+charset=utf-8 10.6684ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:51921/Apis/Details/3d93e01b-4f4b-4421-939c-1ded3fe5abb5 - - -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.Details (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Details", controller = "Apis"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Details(System.Guid) on controller SecureApiQualityPlatform.Web.Controllers.ApisController (SecureApiQualityPlatform.Web).
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."BaseUrl", "t"."CreatedAtUtc", "t"."Description", "t"."Name", "e"."Id", "e"."ApiId", "e"."ExpectedContentType", "e"."ExpectedStatusCode", "e"."MaxResponseTimeMs", "e"."Method", "e"."Name", "e"."Path", "e"."RequiresAuthentication"
+      FROM (
+          SELECT "a"."Id", "a"."BaseUrl", "a"."CreatedAtUtc", "a"."Description", "a"."Name"
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__id_0
+          LIMIT 2
+      ) AS "t"
+      LEFT JOIN "Endpoints" AS "e" ON "t"."Id" = "e"."ApiId"
+      ORDER BY "t"."Id"
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__apiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "c"."Id", "c"."ActualStatusCode", "c"."ApiId", "c"."CheckType", "c"."EndpointId", "c"."ExecutedAtUtc", "c"."FailureSeverity", "c"."Message", "c"."Passed", "c"."ResponseTimeMs"
+      FROM "CheckResults" AS "c"
+      WHERE "c"."ApiId" = @__apiId_0
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[1]
+      Executing ViewResult, running view Details.
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[4]
+      Executed ViewResult - view Details executed in 1.4054ms.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.ApisController.Details (SecureApiQualityPlatform.Web) in 5.7514ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.Details (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:51921/Apis/Details/3d93e01b-4f4b-4421-939c-1ded3fe5abb5 - 200 - text/html;+charset=utf-8 6.0188ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://127.0.0.1:51921/Apis/AddEndpoint/3D93E01B-4F4B-4421-939C-1DED3FE5ABB5 - application/x-www-form-urlencoded 351
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.AddEndpoint (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "AddEndpoint", controller = "Apis"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddEndpoint(System.Guid, SecureApiQualityPlatform.Web.Models.ApiEndpoint) on controller SecureApiQualityPlatform.Web.Controllers.ApisController (SecureApiQualityPlatform.Web).
+info: Microsoft.AspNetCore.Mvc.RedirectToActionResult[1]
+      Executing RedirectResult, redirecting to /Apis.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.ApisController.AddEndpoint (SecureApiQualityPlatform.Web) in 1.9894ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.AddEndpoint (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://127.0.0.1:51921/Apis/AddEndpoint/3D93E01B-4F4B-4421-939C-1DED3FE5ABB5 - 302 0 - 2.3134ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:51921/Apis/Details/3d93e01b-4f4b-4421-939c-1ded3fe5abb5 - - -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.Details (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Details", controller = "Apis"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Details(System.Guid) on controller SecureApiQualityPlatform.Web.Controllers.ApisController (SecureApiQualityPlatform.Web).
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."BaseUrl", "t"."CreatedAtUtc", "t"."Description", "t"."Name", "e"."Id", "e"."ApiId", "e"."ExpectedContentType", "e"."ExpectedStatusCode", "e"."MaxResponseTimeMs", "e"."Method", "e"."Name", "e"."Path", "e"."RequiresAuthentication"
+      FROM (
+          SELECT "a"."Id", "a"."BaseUrl", "a"."CreatedAtUtc", "a"."Description", "a"."Name"
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__id_0
+          LIMIT 2
+      ) AS "t"
+      LEFT JOIN "Endpoints" AS "e" ON "t"."Id" = "e"."ApiId"
+      ORDER BY "t"."Id"
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__apiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "c"."Id", "c"."ActualStatusCode", "c"."ApiId", "c"."CheckType", "c"."EndpointId", "c"."ExecutedAtUtc", "c"."FailureSeverity", "c"."Message", "c"."Passed", "c"."ResponseTimeMs"
+      FROM "CheckResults" AS "c"
+      WHERE "c"."ApiId" = @__apiId_0
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[1]
+      Executing ViewResult, running view Details.
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[4]
+      Executed ViewResult - view Details executed in 1.3509ms.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.ApisController.Details (SecureApiQualityPlatform.Web) in 5.8814ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.Details (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:51921/Apis/Details/3d93e01b-4f4b-4421-939c-1ded3fe5abb5 - 200 - text/html;+charset=utf-8 6.1271ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://127.0.0.1:51921/Apis/RunChecks/3D93E01B-4F4B-4421-939C-1DED3FE5ABB5 - application/x-www-form-urlencoded 182
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.RunChecks (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "RunChecks", controller = "Apis"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RunChecks(System.Guid) on controller SecureApiQualityPlatform.Web.Controllers.ApisController (SecureApiQualityPlatform.Web).
+info: Microsoft.AspNetCore.Mvc.RedirectToActionResult[1]
+      Executing RedirectResult, redirecting to /Apis.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.ApisController.RunChecks (SecureApiQualityPlatform.Web) in 0.7002ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.RunChecks (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://127.0.0.1:51921/Apis/RunChecks/3D93E01B-4F4B-4421-939C-1DED3FE5ABB5 - 302 0 - 3.8037ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:51921/Apis/Details/3d93e01b-4f4b-4421-939c-1ded3fe5abb5 - - -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.Details (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Details", controller = "Apis"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Details(System.Guid) on controller SecureApiQualityPlatform.Web.Controllers.ApisController (SecureApiQualityPlatform.Web).
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."BaseUrl", "t"."CreatedAtUtc", "t"."Description", "t"."Name", "e"."Id", "e"."ApiId", "e"."ExpectedContentType", "e"."ExpectedStatusCode", "e"."MaxResponseTimeMs", "e"."Method", "e"."Name", "e"."Path", "e"."RequiresAuthentication"
+      FROM (
+          SELECT "a"."Id", "a"."BaseUrl", "a"."CreatedAtUtc", "a"."Description", "a"."Name"
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__id_0
+          LIMIT 2
+      ) AS "t"
+      LEFT JOIN "Endpoints" AS "e" ON "t"."Id" = "e"."ApiId"
+      ORDER BY "t"."Id"
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__apiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "c"."Id", "c"."ActualStatusCode", "c"."ApiId", "c"."CheckType", "c"."EndpointId", "c"."ExecutedAtUtc", "c"."FailureSeverity", "c"."Message", "c"."Passed", "c"."ResponseTimeMs"
+      FROM "CheckResults" AS "c"
+      WHERE "c"."ApiId" = @__apiId_0
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[1]
+      Executing ViewResult, running view Details.
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[4]
+      Executed ViewResult - view Details executed in 1.5359ms.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.ApisController.Details (SecureApiQualityPlatform.Web) in 9.1754ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.Details (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:51921/Apis/Details/3d93e01b-4f4b-4421-939c-1ded3fe5abb5 - 200 - text/html;+charset=utf-8 9.7290ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://127.0.0.1:51921/Apis/RunChecks/3D93E01B-4F4B-4421-939C-1DED3FE5ABB5 - application/x-www-form-urlencoded 182
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.RunChecks (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "RunChecks", controller = "Apis"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RunChecks(System.Guid) on controller SecureApiQualityPlatform.Web.Controllers.ApisController (SecureApiQualityPlatform.Web).
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."BaseUrl", "t"."CreatedAtUtc", "t"."Description", "t"."Name", "e"."Id", "e"."ApiId", "e"."ExpectedContentType", "e"."ExpectedStatusCode", "e"."MaxResponseTimeMs", "e"."Method", "e"."Name", "e"."Path", "e"."RequiresAuthentication"
+      FROM (
+          SELECT "a"."Id", "a"."BaseUrl", "a"."CreatedAtUtc", "a"."Description", "a"."Name"
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__id_0
+          LIMIT 2
+      ) AS "t"
+      LEFT JOIN "Endpoints" AS "e" ON "t"."Id" = "e"."ApiId"
+      ORDER BY "t"."Id"
+info: System.Net.Http.HttpClient.ApiCheckService.LogicalHandler[100]
+      Start processing HTTP request GET http://127.0.0.1:51922/health
+info: System.Net.Http.HttpClient.ApiCheckService.ClientHandler[100]
+      Sending HTTP request GET http://127.0.0.1:51922/health
+info: System.Net.Http.HttpClient.ApiCheckService.ClientHandler[101]
+      Received HTTP response headers after 33.5835ms - 503
+info: System.Net.Http.HttpClient.ApiCheckService.LogicalHandler[101]
+      End processing HTTP request after 41.0544ms - 503
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__result_ApiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__result_ApiId_0)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_EndpointId_0='?' (DbType = Guid), @__result_ApiId_1='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Endpoints" AS "e"
+          WHERE "e"."Id" = @__result_EndpointId_0 AND "e"."ApiId" = @__result_ApiId_1)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?' (DbType = Guid), @p3='?' (Size = 15), @p4='?' (DbType = Guid), @p5='?' (DbType = DateTimeOffset), @p6='?' (DbType = Int32), @p7='?' (Size = 37), @p8='?' (DbType = Boolean), @p9='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "CheckResults" ("Id", "ActualStatusCode", "ApiId", "CheckType", "EndpointId", "ExecutedAtUtc", "FailureSeverity", "Message", "Passed", "ResponseTimeMs")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__endpointId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "d"."Id", "d"."ApiId", "d"."AssignedTo", "d"."CheckType", "d"."CreatedAtUtc", "d"."Description", "d"."EndpointId", "d"."Priority", "d"."RetestedAtUtc", "d"."Severity", "d"."SourceCheckResultId", "d"."Status", "d"."Title", "d"."UpdatedAtUtc"
+      FROM "Defects" AS "d"
+      WHERE "d"."EndpointId" = @__endpointId_0 AND "d"."Status" <> 6 AND "d"."Status" <> 8
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__defect_ApiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__defect_ApiId_0)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__defect_EndpointId_0='?' (DbType = Guid), @__defect_ApiId_1='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Endpoints" AS "e"
+          WHERE "e"."Id" = @__defect_EndpointId_0 AND "e"."ApiId" = @__defect_ApiId_1)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__defect_SourceCheckResultId_Value_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "CheckResults" AS "c"
+          WHERE "c"."Id" = @__defect_SourceCheckResultId_Value_0)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?', @p3='?' (Size = 15), @p4='?' (DbType = DateTimeOffset), @p5='?' (Size = 37), @p6='?' (DbType = Guid), @p7='?' (DbType = Int32), @p8='?' (DbType = DateTimeOffset), @p9='?' (DbType = Int32), @p10='?' (DbType = Guid), @p11='?' (DbType = Int32), @p12='?' (Size = 28), @p13='?' (DbType = DateTimeOffset)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Defects" ("Id", "ApiId", "AssignedTo", "CheckType", "CreatedAtUtc", "Description", "EndpointId", "Priority", "RetestedAtUtc", "Severity", "SourceCheckResultId", "Status", "Title", "UpdatedAtUtc")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_ApiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__result_ApiId_0)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_EndpointId_0='?' (DbType = Guid), @__result_ApiId_1='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Endpoints" AS "e"
+          WHERE "e"."Id" = @__result_EndpointId_0 AND "e"."ApiId" = @__result_ApiId_1)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?' (DbType = Guid), @p3='?' (Size = 12), @p4='?' (DbType = Guid), @p5='?' (DbType = DateTimeOffset), @p6='?' (DbType = Int32), @p7='?' (Size = 42), @p8='?' (DbType = Boolean), @p9='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "CheckResults" ("Id", "ActualStatusCode", "ApiId", "CheckType", "EndpointId", "ExecutedAtUtc", "FailureSeverity", "Message", "Passed", "ResponseTimeMs")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__endpointId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "d"."Id", "d"."ApiId", "d"."AssignedTo", "d"."CheckType", "d"."CreatedAtUtc", "d"."Description", "d"."EndpointId", "d"."Priority", "d"."RetestedAtUtc", "d"."Severity", "d"."SourceCheckResultId", "d"."Status", "d"."Title", "d"."UpdatedAtUtc"
+      FROM "Defects" AS "d"
+      WHERE "d"."EndpointId" = @__endpointId_0 AND "d"."Status" <> 6 AND "d"."Status" <> 8
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_ApiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__result_ApiId_0)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_EndpointId_0='?' (DbType = Guid), @__result_ApiId_1='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Endpoints" AS "e"
+          WHERE "e"."Id" = @__result_EndpointId_0 AND "e"."ApiId" = @__result_ApiId_1)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?' (DbType = Guid), @p3='?' (Size = 15), @p4='?' (DbType = Guid), @p5='?' (DbType = DateTimeOffset), @p6='?' (DbType = Int32), @p7='?' (Size = 35), @p8='?' (DbType = Boolean), @p9='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "CheckResults" ("Id", "ActualStatusCode", "ApiId", "CheckType", "EndpointId", "ExecutedAtUtc", "FailureSeverity", "Message", "Passed", "ResponseTimeMs")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__endpointId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "d"."Id", "d"."ApiId", "d"."AssignedTo", "d"."CheckType", "d"."CreatedAtUtc", "d"."Description", "d"."EndpointId", "d"."Priority", "d"."RetestedAtUtc", "d"."Severity", "d"."SourceCheckResultId", "d"."Status", "d"."Title", "d"."UpdatedAtUtc"
+      FROM "Defects" AS "d"
+      WHERE "d"."EndpointId" = @__endpointId_0 AND "d"."Status" <> 6 AND "d"."Status" <> 8
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__defect_ApiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__defect_ApiId_0)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__defect_EndpointId_0='?' (DbType = Guid), @__defect_ApiId_1='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Endpoints" AS "e"
+          WHERE "e"."Id" = @__defect_EndpointId_0 AND "e"."ApiId" = @__defect_ApiId_1)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__defect_SourceCheckResultId_Value_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "CheckResults" AS "c"
+          WHERE "c"."Id" = @__defect_SourceCheckResultId_Value_0)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?', @p3='?' (Size = 15), @p4='?' (DbType = DateTimeOffset), @p5='?' (Size = 35), @p6='?' (DbType = Guid), @p7='?' (DbType = Int32), @p8='?' (DbType = DateTimeOffset), @p9='?' (DbType = Int32), @p10='?' (DbType = Guid), @p11='?' (DbType = Int32), @p12='?' (Size = 28), @p13='?' (DbType = DateTimeOffset)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Defects" ("Id", "ApiId", "AssignedTo", "CheckType", "CreatedAtUtc", "Description", "EndpointId", "Priority", "RetestedAtUtc", "Severity", "SourceCheckResultId", "Status", "Title", "UpdatedAtUtc")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_ApiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__result_ApiId_0)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_EndpointId_0='?' (DbType = Guid), @__result_ApiId_1='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Endpoints" AS "e"
+          WHERE "e"."Id" = @__result_EndpointId_0 AND "e"."ApiId" = @__result_ApiId_1)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?' (DbType = Guid), @p3='?' (Size = 13), @p4='?' (DbType = Guid), @p5='?' (DbType = DateTimeOffset), @p6='?' (DbType = Int32), @p7='?' (Size = 49), @p8='?' (DbType = Boolean), @p9='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "CheckResults" ("Id", "ActualStatusCode", "ApiId", "CheckType", "EndpointId", "ExecutedAtUtc", "FailureSeverity", "Message", "Passed", "ResponseTimeMs")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__endpointId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "d"."Id", "d"."ApiId", "d"."AssignedTo", "d"."CheckType", "d"."CreatedAtUtc", "d"."Description", "d"."EndpointId", "d"."Priority", "d"."RetestedAtUtc", "d"."Severity", "d"."SourceCheckResultId", "d"."Status", "d"."Title", "d"."UpdatedAtUtc"
+      FROM "Defects" AS "d"
+      WHERE "d"."EndpointId" = @__endpointId_0 AND "d"."Status" <> 6 AND "d"."Status" <> 8
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_ApiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__result_ApiId_0)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_EndpointId_0='?' (DbType = Guid), @__result_ApiId_1='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Endpoints" AS "e"
+          WHERE "e"."Id" = @__result_EndpointId_0 AND "e"."ApiId" = @__result_ApiId_1)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?' (DbType = Guid), @p3='?' (Size = 25), @p4='?' (DbType = Guid), @p5='?' (DbType = DateTimeOffset), @p6='?' (DbType = Int32), @p7='?' (Size = 89), @p8='?' (DbType = Boolean), @p9='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "CheckResults" ("Id", "ActualStatusCode", "ApiId", "CheckType", "EndpointId", "ExecutedAtUtc", "FailureSeverity", "Message", "Passed", "ResponseTimeMs")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__endpointId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "d"."Id", "d"."ApiId", "d"."AssignedTo", "d"."CheckType", "d"."CreatedAtUtc", "d"."Description", "d"."EndpointId", "d"."Priority", "d"."RetestedAtUtc", "d"."Severity", "d"."SourceCheckResultId", "d"."Status", "d"."Title", "d"."UpdatedAtUtc"
+      FROM "Defects" AS "d"
+      WHERE "d"."EndpointId" = @__endpointId_0 AND "d"."Status" <> 6 AND "d"."Status" <> 8
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__defect_ApiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__defect_ApiId_0)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__defect_EndpointId_0='?' (DbType = Guid), @__defect_ApiId_1='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Endpoints" AS "e"
+          WHERE "e"."Id" = @__defect_EndpointId_0 AND "e"."ApiId" = @__defect_ApiId_1)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__defect_SourceCheckResultId_Value_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "CheckResults" AS "c"
+          WHERE "c"."Id" = @__defect_SourceCheckResultId_Value_0)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?', @p3='?' (Size = 25), @p4='?' (DbType = DateTimeOffset), @p5='?' (Size = 89), @p6='?' (DbType = Guid), @p7='?' (DbType = Int32), @p8='?' (DbType = DateTimeOffset), @p9='?' (DbType = Int32), @p10='?' (DbType = Guid), @p11='?' (DbType = Int32), @p12='?' (Size = 38), @p13='?' (DbType = DateTimeOffset)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Defects" ("Id", "ApiId", "AssignedTo", "CheckType", "CreatedAtUtc", "Description", "EndpointId", "Priority", "RetestedAtUtc", "Severity", "SourceCheckResultId", "Status", "Title", "UpdatedAtUtc")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_ApiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__result_ApiId_0)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_EndpointId_0='?' (DbType = Guid), @__result_ApiId_1='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Endpoints" AS "e"
+          WHERE "e"."Id" = @__result_EndpointId_0 AND "e"."ApiId" = @__result_ApiId_1)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?' (DbType = Guid), @p3='?' (Size = 11), @p4='?' (DbType = Guid), @p5='?' (DbType = DateTimeOffset), @p6='?' (DbType = Int32), @p7='?' (Size = 84), @p8='?' (DbType = Boolean), @p9='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "CheckResults" ("Id", "ActualStatusCode", "ApiId", "CheckType", "EndpointId", "ExecutedAtUtc", "FailureSeverity", "Message", "Passed", "ResponseTimeMs")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__endpointId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "d"."Id", "d"."ApiId", "d"."AssignedTo", "d"."CheckType", "d"."CreatedAtUtc", "d"."Description", "d"."EndpointId", "d"."Priority", "d"."RetestedAtUtc", "d"."Severity", "d"."SourceCheckResultId", "d"."Status", "d"."Title", "d"."UpdatedAtUtc"
+      FROM "Defects" AS "d"
+      WHERE "d"."EndpointId" = @__endpointId_0 AND "d"."Status" <> 6 AND "d"."Status" <> 8
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_ApiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__result_ApiId_0)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_EndpointId_0='?' (DbType = Guid), @__result_ApiId_1='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Endpoints" AS "e"
+          WHERE "e"."Id" = @__result_EndpointId_0 AND "e"."ApiId" = @__result_ApiId_1)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?' (DbType = Guid), @p3='?' (Size = 12), @p4='?' (DbType = Guid), @p5='?' (DbType = DateTimeOffset), @p6='?' (DbType = Int32), @p7='?' (Size = 59), @p8='?' (DbType = Boolean), @p9='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "CheckResults" ("Id", "ActualStatusCode", "ApiId", "CheckType", "EndpointId", "ExecutedAtUtc", "FailureSeverity", "Message", "Passed", "ResponseTimeMs")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__endpointId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "d"."Id", "d"."ApiId", "d"."AssignedTo", "d"."CheckType", "d"."CreatedAtUtc", "d"."Description", "d"."EndpointId", "d"."Priority", "d"."RetestedAtUtc", "d"."Severity", "d"."SourceCheckResultId", "d"."Status", "d"."Title", "d"."UpdatedAtUtc"
+      FROM "Defects" AS "d"
+      WHERE "d"."EndpointId" = @__endpointId_0 AND "d"."Status" <> 6 AND "d"."Status" <> 8
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_ApiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__result_ApiId_0)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_EndpointId_0='?' (DbType = Guid), @__result_ApiId_1='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Endpoints" AS "e"
+          WHERE "e"."Id" = @__result_EndpointId_0 AND "e"."ApiId" = @__result_ApiId_1)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?' (DbType = Guid), @p3='?' (Size = 17), @p4='?' (DbType = Guid), @p5='?' (DbType = DateTimeOffset), @p6='?' (DbType = Int32), @p7='?' (Size = 41), @p8='?' (DbType = Boolean), @p9='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "CheckResults" ("Id", "ActualStatusCode", "ApiId", "CheckType", "EndpointId", "ExecutedAtUtc", "FailureSeverity", "Message", "Passed", "ResponseTimeMs")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__endpointId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "d"."Id", "d"."ApiId", "d"."AssignedTo", "d"."CheckType", "d"."CreatedAtUtc", "d"."Description", "d"."EndpointId", "d"."Priority", "d"."RetestedAtUtc", "d"."Severity", "d"."SourceCheckResultId", "d"."Status", "d"."Title", "d"."UpdatedAtUtc"
+      FROM "Defects" AS "d"
+      WHERE "d"."EndpointId" = @__endpointId_0 AND "d"."Status" <> 6 AND "d"."Status" <> 8
+info: System.Net.Http.HttpClient.ApiCheckService.LogicalHandler[100]
+      Start processing HTTP request GET http://127.0.0.1:51922/numeric-probe
+info: System.Net.Http.HttpClient.ApiCheckService.ClientHandler[100]
+      Sending HTTP request GET http://127.0.0.1:51922/numeric-probe
+info: System.Net.Http.HttpClient.ApiCheckService.ClientHandler[101]
+      Received HTTP response headers after 2.8919ms - 503
+info: System.Net.Http.HttpClient.ApiCheckService.LogicalHandler[101]
+      End processing HTTP request after 2.9938ms - 503
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__result_ApiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__result_ApiId_0)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_EndpointId_0='?' (DbType = Guid), @__result_ApiId_1='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Endpoints" AS "e"
+          WHERE "e"."Id" = @__result_EndpointId_0 AND "e"."ApiId" = @__result_ApiId_1)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?' (DbType = Guid), @p3='?' (Size = 15), @p4='?' (DbType = Guid), @p5='?' (DbType = DateTimeOffset), @p6='?' (DbType = Int32), @p7='?' (Size = 37), @p8='?' (DbType = Boolean), @p9='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "CheckResults" ("Id", "ActualStatusCode", "ApiId", "CheckType", "EndpointId", "ExecutedAtUtc", "FailureSeverity", "Message", "Passed", "ResponseTimeMs")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__endpointId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "d"."Id", "d"."ApiId", "d"."AssignedTo", "d"."CheckType", "d"."CreatedAtUtc", "d"."Description", "d"."EndpointId", "d"."Priority", "d"."RetestedAtUtc", "d"."Severity", "d"."SourceCheckResultId", "d"."Status", "d"."Title", "d"."UpdatedAtUtc"
+      FROM "Defects" AS "d"
+      WHERE "d"."EndpointId" = @__endpointId_0 AND "d"."Status" <> 6 AND "d"."Status" <> 8
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__defect_ApiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__defect_ApiId_0)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__defect_EndpointId_0='?' (DbType = Guid), @__defect_ApiId_1='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Endpoints" AS "e"
+          WHERE "e"."Id" = @__defect_EndpointId_0 AND "e"."ApiId" = @__defect_ApiId_1)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__defect_SourceCheckResultId_Value_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "CheckResults" AS "c"
+          WHERE "c"."Id" = @__defect_SourceCheckResultId_Value_0)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?', @p3='?' (Size = 15), @p4='?' (DbType = DateTimeOffset), @p5='?' (Size = 37), @p6='?' (DbType = Guid), @p7='?' (DbType = Int32), @p8='?' (DbType = DateTimeOffset), @p9='?' (DbType = Int32), @p10='?' (DbType = Guid), @p11='?' (DbType = Int32), @p12='?' (Size = 28), @p13='?' (DbType = DateTimeOffset)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Defects" ("Id", "ApiId", "AssignedTo", "CheckType", "CreatedAtUtc", "Description", "EndpointId", "Priority", "RetestedAtUtc", "Severity", "SourceCheckResultId", "Status", "Title", "UpdatedAtUtc")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_ApiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__result_ApiId_0)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_EndpointId_0='?' (DbType = Guid), @__result_ApiId_1='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Endpoints" AS "e"
+          WHERE "e"."Id" = @__result_EndpointId_0 AND "e"."ApiId" = @__result_ApiId_1)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?' (DbType = Guid), @p3='?' (Size = 12), @p4='?' (DbType = Guid), @p5='?' (DbType = DateTimeOffset), @p6='?' (DbType = Int32), @p7='?' (Size = 41), @p8='?' (DbType = Boolean), @p9='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "CheckResults" ("Id", "ActualStatusCode", "ApiId", "CheckType", "EndpointId", "ExecutedAtUtc", "FailureSeverity", "Message", "Passed", "ResponseTimeMs")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__endpointId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "d"."Id", "d"."ApiId", "d"."AssignedTo", "d"."CheckType", "d"."CreatedAtUtc", "d"."Description", "d"."EndpointId", "d"."Priority", "d"."RetestedAtUtc", "d"."Severity", "d"."SourceCheckResultId", "d"."Status", "d"."Title", "d"."UpdatedAtUtc"
+      FROM "Defects" AS "d"
+      WHERE "d"."EndpointId" = @__endpointId_0 AND "d"."Status" <> 6 AND "d"."Status" <> 8
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_ApiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__result_ApiId_0)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_EndpointId_0='?' (DbType = Guid), @__result_ApiId_1='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Endpoints" AS "e"
+          WHERE "e"."Id" = @__result_EndpointId_0 AND "e"."ApiId" = @__result_ApiId_1)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?' (DbType = Guid), @p3='?' (Size = 15), @p4='?' (DbType = Guid), @p5='?' (DbType = DateTimeOffset), @p6='?' (DbType = Int32), @p7='?' (Size = 35), @p8='?' (DbType = Boolean), @p9='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "CheckResults" ("Id", "ActualStatusCode", "ApiId", "CheckType", "EndpointId", "ExecutedAtUtc", "FailureSeverity", "Message", "Passed", "ResponseTimeMs")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__endpointId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "d"."Id", "d"."ApiId", "d"."AssignedTo", "d"."CheckType", "d"."CreatedAtUtc", "d"."Description", "d"."EndpointId", "d"."Priority", "d"."RetestedAtUtc", "d"."Severity", "d"."SourceCheckResultId", "d"."Status", "d"."Title", "d"."UpdatedAtUtc"
+      FROM "Defects" AS "d"
+      WHERE "d"."EndpointId" = @__endpointId_0 AND "d"."Status" <> 6 AND "d"."Status" <> 8
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__defect_ApiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__defect_ApiId_0)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__defect_EndpointId_0='?' (DbType = Guid), @__defect_ApiId_1='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Endpoints" AS "e"
+          WHERE "e"."Id" = @__defect_EndpointId_0 AND "e"."ApiId" = @__defect_ApiId_1)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__defect_SourceCheckResultId_Value_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "CheckResults" AS "c"
+          WHERE "c"."Id" = @__defect_SourceCheckResultId_Value_0)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?', @p3='?' (Size = 15), @p4='?' (DbType = DateTimeOffset), @p5='?' (Size = 35), @p6='?' (DbType = Guid), @p7='?' (DbType = Int32), @p8='?' (DbType = DateTimeOffset), @p9='?' (DbType = Int32), @p10='?' (DbType = Guid), @p11='?' (DbType = Int32), @p12='?' (Size = 28), @p13='?' (DbType = DateTimeOffset)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Defects" ("Id", "ApiId", "AssignedTo", "CheckType", "CreatedAtUtc", "Description", "EndpointId", "Priority", "RetestedAtUtc", "Severity", "SourceCheckResultId", "Status", "Title", "UpdatedAtUtc")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_ApiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__result_ApiId_0)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_EndpointId_0='?' (DbType = Guid), @__result_ApiId_1='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Endpoints" AS "e"
+          WHERE "e"."Id" = @__result_EndpointId_0 AND "e"."ApiId" = @__result_ApiId_1)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?' (DbType = Guid), @p3='?' (Size = 13), @p4='?' (DbType = Guid), @p5='?' (DbType = DateTimeOffset), @p6='?' (DbType = Int32), @p7='?' (Size = 48), @p8='?' (DbType = Boolean), @p9='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "CheckResults" ("Id", "ActualStatusCode", "ApiId", "CheckType", "EndpointId", "ExecutedAtUtc", "FailureSeverity", "Message", "Passed", "ResponseTimeMs")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__endpointId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "d"."Id", "d"."ApiId", "d"."AssignedTo", "d"."CheckType", "d"."CreatedAtUtc", "d"."Description", "d"."EndpointId", "d"."Priority", "d"."RetestedAtUtc", "d"."Severity", "d"."SourceCheckResultId", "d"."Status", "d"."Title", "d"."UpdatedAtUtc"
+      FROM "Defects" AS "d"
+      WHERE "d"."EndpointId" = @__endpointId_0 AND "d"."Status" <> 6 AND "d"."Status" <> 8
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_ApiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__result_ApiId_0)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_EndpointId_0='?' (DbType = Guid), @__result_ApiId_1='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Endpoints" AS "e"
+          WHERE "e"."Id" = @__result_EndpointId_0 AND "e"."ApiId" = @__result_ApiId_1)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?' (DbType = Guid), @p3='?' (Size = 25), @p4='?' (DbType = Guid), @p5='?' (DbType = DateTimeOffset), @p6='?' (DbType = Int32), @p7='?' (Size = 89), @p8='?' (DbType = Boolean), @p9='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "CheckResults" ("Id", "ActualStatusCode", "ApiId", "CheckType", "EndpointId", "ExecutedAtUtc", "FailureSeverity", "Message", "Passed", "ResponseTimeMs")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__endpointId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "d"."Id", "d"."ApiId", "d"."AssignedTo", "d"."CheckType", "d"."CreatedAtUtc", "d"."Description", "d"."EndpointId", "d"."Priority", "d"."RetestedAtUtc", "d"."Severity", "d"."SourceCheckResultId", "d"."Status", "d"."Title", "d"."UpdatedAtUtc"
+      FROM "Defects" AS "d"
+      WHERE "d"."EndpointId" = @__endpointId_0 AND "d"."Status" <> 6 AND "d"."Status" <> 8
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__defect_ApiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__defect_ApiId_0)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__defect_EndpointId_0='?' (DbType = Guid), @__defect_ApiId_1='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Endpoints" AS "e"
+          WHERE "e"."Id" = @__defect_EndpointId_0 AND "e"."ApiId" = @__defect_ApiId_1)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__defect_SourceCheckResultId_Value_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "CheckResults" AS "c"
+          WHERE "c"."Id" = @__defect_SourceCheckResultId_Value_0)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?', @p3='?' (Size = 25), @p4='?' (DbType = DateTimeOffset), @p5='?' (Size = 89), @p6='?' (DbType = Guid), @p7='?' (DbType = Int32), @p8='?' (DbType = DateTimeOffset), @p9='?' (DbType = Int32), @p10='?' (DbType = Guid), @p11='?' (DbType = Int32), @p12='?' (Size = 38), @p13='?' (DbType = DateTimeOffset)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Defects" ("Id", "ApiId", "AssignedTo", "CheckType", "CreatedAtUtc", "Description", "EndpointId", "Priority", "RetestedAtUtc", "Severity", "SourceCheckResultId", "Status", "Title", "UpdatedAtUtc")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_ApiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__result_ApiId_0)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__result_EndpointId_0='?' (DbType = Guid), @__result_ApiId_1='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Endpoints" AS "e"
+          WHERE "e"."Id" = @__result_EndpointId_0 AND "e"."ApiId" = @__result_ApiId_1)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?' (DbType = Guid), @p3='?' (Size = 11), @p4='?' (DbType = Guid), @p5='?' (DbType = DateTimeOffset), @p6='?' (DbType = Int32), @p7='?' (Size = 84), @p8='?' (DbType = Boolean), @p9='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "CheckResults" ("Id", "ActualStatusCode", "ApiId", "CheckType", "EndpointId", "ExecutedAtUtc", "FailureSeverity", "Message", "Passed", "ResponseTimeMs")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__endpointId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "d"."Id", "d"."ApiId", "d"."AssignedTo", "d"."CheckType", "d"."CreatedAtUtc", "d"."Description", "d"."EndpointId", "d"."Priority", "d"."RetestedAtUtc", "d"."Severity", "d"."SourceCheckResultId", "d"."Status", "d"."Title", "d"."UpdatedAtUtc"
+      FROM "Defects" AS "d"
+      WHERE "d"."EndpointId" = @__endpointId_0 AND "d"."Status" <> 6 AND "d"."Status" <> 8
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_ApiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__result_ApiId_0)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_EndpointId_0='?' (DbType = Guid), @__result_ApiId_1='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Endpoints" AS "e"
+          WHERE "e"."Id" = @__result_EndpointId_0 AND "e"."ApiId" = @__result_ApiId_1)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?' (DbType = Guid), @p3='?' (Size = 12), @p4='?' (DbType = Guid), @p5='?' (DbType = DateTimeOffset), @p6='?' (DbType = Int32), @p7='?' (Size = 59), @p8='?' (DbType = Boolean), @p9='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "CheckResults" ("Id", "ActualStatusCode", "ApiId", "CheckType", "EndpointId", "ExecutedAtUtc", "FailureSeverity", "Message", "Passed", "ResponseTimeMs")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__endpointId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "d"."Id", "d"."ApiId", "d"."AssignedTo", "d"."CheckType", "d"."CreatedAtUtc", "d"."Description", "d"."EndpointId", "d"."Priority", "d"."RetestedAtUtc", "d"."Severity", "d"."SourceCheckResultId", "d"."Status", "d"."Title", "d"."UpdatedAtUtc"
+      FROM "Defects" AS "d"
+      WHERE "d"."EndpointId" = @__endpointId_0 AND "d"."Status" <> 6 AND "d"."Status" <> 8
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_ApiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__result_ApiId_0)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_EndpointId_0='?' (DbType = Guid), @__result_ApiId_1='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Endpoints" AS "e"
+          WHERE "e"."Id" = @__result_EndpointId_0 AND "e"."ApiId" = @__result_ApiId_1)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?' (DbType = Guid), @p3='?' (Size = 17), @p4='?' (DbType = Guid), @p5='?' (DbType = DateTimeOffset), @p6='?' (DbType = Int32), @p7='?' (Size = 41), @p8='?' (DbType = Boolean), @p9='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "CheckResults" ("Id", "ActualStatusCode", "ApiId", "CheckType", "EndpointId", "ExecutedAtUtc", "FailureSeverity", "Message", "Passed", "ResponseTimeMs")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__endpointId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "d"."Id", "d"."ApiId", "d"."AssignedTo", "d"."CheckType", "d"."CreatedAtUtc", "d"."Description", "d"."EndpointId", "d"."Priority", "d"."RetestedAtUtc", "d"."Severity", "d"."SourceCheckResultId", "d"."Status", "d"."Title", "d"."UpdatedAtUtc"
+      FROM "Defects" AS "d"
+      WHERE "d"."EndpointId" = @__endpointId_0 AND "d"."Status" <> 6 AND "d"."Status" <> 8
+info: Microsoft.AspNetCore.Mvc.RedirectToActionResult[1]
+      Executing RedirectResult, redirecting to /Apis/Details/3d93e01b-4f4b-4421-939c-1ded3fe5abb5.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.ApisController.RunChecks (SecureApiQualityPlatform.Web) in 341.7452ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.RunChecks (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://127.0.0.1:51921/Apis/RunChecks/3D93E01B-4F4B-4421-939C-1DED3FE5ABB5 - 302 0 - 342.4434ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:51921/Defects - - -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.DefectsController.Index (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Index", controller = "Defects"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller SecureApiQualityPlatform.Web.Controllers.DefectsController (SecureApiQualityPlatform.Web).
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "d"."Id", "d"."ApiId", "d"."AssignedTo", "d"."CheckType", "d"."CreatedAtUtc", "d"."Description", "d"."EndpointId", "d"."Priority", "d"."RetestedAtUtc", "d"."Severity", "d"."SourceCheckResultId", "d"."Status", "d"."Title", "d"."UpdatedAtUtc"
+      FROM "Defects" AS "d"
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[1]
+      Executing ViewResult, running view Index.
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[4]
+      Executed ViewResult - view Index executed in 6.6699ms.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.DefectsController.Index (SecureApiQualityPlatform.Web) in 9.9707ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.DefectsController.Index (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:51921/Defects - 200 - text/html;+charset=utf-8 11.7510ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://127.0.0.1:51921/Defects/Update - application/x-www-form-urlencoded 291
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.DefectsController.Update (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Update", controller = "Defects"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Update(System.Guid, SecureApiQualityPlatform.Web.Models.DefectStatus, SecureApiQualityPlatform.Web.Models.DefectPriority, System.String) on controller SecureApiQualityPlatform.Web.Controllers.DefectsController (SecureApiQualityPlatform.Web).
+info: Microsoft.AspNetCore.Mvc.RedirectToActionResult[1]
+      Executing RedirectResult, redirecting to /Defects.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.DefectsController.Update (SecureApiQualityPlatform.Web) in 0.7001ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.DefectsController.Update (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://127.0.0.1:51921/Defects/Update - 302 0 - 3.8830ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:51921/Defects - - -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.DefectsController.Index (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Index", controller = "Defects"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller SecureApiQualityPlatform.Web.Controllers.DefectsController (SecureApiQualityPlatform.Web).
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "d"."Id", "d"."ApiId", "d"."AssignedTo", "d"."CheckType", "d"."CreatedAtUtc", "d"."Description", "d"."EndpointId", "d"."Priority", "d"."RetestedAtUtc", "d"."Severity", "d"."SourceCheckResultId", "d"."Status", "d"."Title", "d"."UpdatedAtUtc"
+      FROM "Defects" AS "d"
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[1]
+      Executing ViewResult, running view Index.
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[4]
+      Executed ViewResult - view Index executed in 1.8006ms.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.DefectsController.Index (SecureApiQualityPlatform.Web) in 4.7776ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.DefectsController.Index (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:51921/Defects - 200 - text/html;+charset=utf-8 5.1802ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://127.0.0.1:51921/Defects/Update - application/x-www-form-urlencoded 291
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.DefectsController.Update (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Update", controller = "Defects"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Update(System.Guid, SecureApiQualityPlatform.Web.Models.DefectStatus, SecureApiQualityPlatform.Web.Models.DefectPriority, System.String) on controller SecureApiQualityPlatform.Web.Controllers.DefectsController (SecureApiQualityPlatform.Web).
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "d"."Id", "d"."ApiId", "d"."AssignedTo", "d"."CheckType", "d"."CreatedAtUtc", "d"."Description", "d"."EndpointId", "d"."Priority", "d"."RetestedAtUtc", "d"."Severity", "d"."SourceCheckResultId", "d"."Status", "d"."Title", "d"."UpdatedAtUtc"
+      FROM "Defects" AS "d"
+      WHERE "d"."Id" = @__id_0
+      LIMIT 2
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__defect_Id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Defects" AS "d"
+          WHERE "d"."Id" = @__defect_Id_0)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@p13='?' (DbType = Guid), @p0='?' (DbType = Guid), @p1='?' (Size = 19), @p2='?' (Size = 15), @p3='?' (DbType = DateTimeOffset), @p4='?' (Size = 35), @p5='?' (DbType = Guid), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTimeOffset), @p8='?' (DbType = Int32), @p9='?' (DbType = Guid), @p10='?' (DbType = Int32), @p11='?' (Size = 28), @p12='?' (DbType = DateTimeOffset)], CommandType='Text', CommandTimeout='30']
+      UPDATE "Defects" SET "ApiId" = @p0, "AssignedTo" = @p1, "CheckType" = @p2, "CreatedAtUtc" = @p3, "Description" = @p4, "EndpointId" = @p5, "Priority" = @p6, "RetestedAtUtc" = @p7, "Severity" = @p8, "SourceCheckResultId" = @p9, "Status" = @p10, "Title" = @p11, "UpdatedAtUtc" = @p12
+      WHERE "Id" = @p13
+      RETURNING 1;
+info: Microsoft.AspNetCore.Mvc.RedirectToActionResult[1]
+      Executing RedirectResult, redirecting to /Defects.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.DefectsController.Update (SecureApiQualityPlatform.Web) in 16.8106ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.DefectsController.Update (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://127.0.0.1:51921/Defects/Update - 302 0 - 17.6383ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:51921/Apis/Details/3d93e01b-4f4b-4421-939c-1ded3fe5abb5 - - -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.Details (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Details", controller = "Apis"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Details(System.Guid) on controller SecureApiQualityPlatform.Web.Controllers.ApisController (SecureApiQualityPlatform.Web).
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."BaseUrl", "t"."CreatedAtUtc", "t"."Description", "t"."Name", "e"."Id", "e"."ApiId", "e"."ExpectedContentType", "e"."ExpectedStatusCode", "e"."MaxResponseTimeMs", "e"."Method", "e"."Name", "e"."Path", "e"."RequiresAuthentication"
+      FROM (
+          SELECT "a"."Id", "a"."BaseUrl", "a"."CreatedAtUtc", "a"."Description", "a"."Name"
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__id_0
+          LIMIT 2
+      ) AS "t"
+      LEFT JOIN "Endpoints" AS "e" ON "t"."Id" = "e"."ApiId"
+      ORDER BY "t"."Id"
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__apiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "c"."Id", "c"."ActualStatusCode", "c"."ApiId", "c"."CheckType", "c"."EndpointId", "c"."ExecutedAtUtc", "c"."FailureSeverity", "c"."Message", "c"."Passed", "c"."ResponseTimeMs"
+      FROM "CheckResults" AS "c"
+      WHERE "c"."ApiId" = @__apiId_0
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[1]
+      Executing ViewResult, running view Details.
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[4]
+      Executed ViewResult - view Details executed in 2.0187ms.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.ApisController.Details (SecureApiQualityPlatform.Web) in 10.4726ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.Details (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:51921/Apis/Details/3d93e01b-4f4b-4421-939c-1ded3fe5abb5 - 200 - text/html;+charset=utf-8 10.8387ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://127.0.0.1:51921/Apis/RunChecks/3D93E01B-4F4B-4421-939C-1DED3FE5ABB5 - application/x-www-form-urlencoded 182
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.RunChecks (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "RunChecks", controller = "Apis"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RunChecks(System.Guid) on controller SecureApiQualityPlatform.Web.Controllers.ApisController (SecureApiQualityPlatform.Web).
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."BaseUrl", "t"."CreatedAtUtc", "t"."Description", "t"."Name", "e"."Id", "e"."ApiId", "e"."ExpectedContentType", "e"."ExpectedStatusCode", "e"."MaxResponseTimeMs", "e"."Method", "e"."Name", "e"."Path", "e"."RequiresAuthentication"
+      FROM (
+          SELECT "a"."Id", "a"."BaseUrl", "a"."CreatedAtUtc", "a"."Description", "a"."Name"
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__id_0
+          LIMIT 2
+      ) AS "t"
+      LEFT JOIN "Endpoints" AS "e" ON "t"."Id" = "e"."ApiId"
+      ORDER BY "t"."Id"
+info: System.Net.Http.HttpClient.ApiCheckService.LogicalHandler[100]
+      Start processing HTTP request GET http://127.0.0.1:51922/health
+info: System.Net.Http.HttpClient.ApiCheckService.ClientHandler[100]
+      Sending HTTP request GET http://127.0.0.1:51922/health
+info: System.Net.Http.HttpClient.ApiCheckService.ClientHandler[101]
+      Received HTTP response headers after 1.6943ms - 200
+info: System.Net.Http.HttpClient.ApiCheckService.LogicalHandler[101]
+      End processing HTTP request after 1.7881ms - 200
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_ApiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__result_ApiId_0)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_EndpointId_0='?' (DbType = Guid), @__result_ApiId_1='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Endpoints" AS "e"
+          WHERE "e"."Id" = @__result_EndpointId_0 AND "e"."ApiId" = @__result_ApiId_1)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?' (DbType = Guid), @p3='?' (Size = 15), @p4='?' (DbType = Guid), @p5='?' (DbType = DateTimeOffset), @p6='?' (DbType = Int32), @p7='?' (Size = 37), @p8='?' (DbType = Boolean), @p9='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "CheckResults" ("Id", "ActualStatusCode", "ApiId", "CheckType", "EndpointId", "ExecutedAtUtc", "FailureSeverity", "Message", "Passed", "ResponseTimeMs")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__endpointId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "d"."Id", "d"."ApiId", "d"."AssignedTo", "d"."CheckType", "d"."CreatedAtUtc", "d"."Description", "d"."EndpointId", "d"."Priority", "d"."RetestedAtUtc", "d"."Severity", "d"."SourceCheckResultId", "d"."Status", "d"."Title", "d"."UpdatedAtUtc"
+      FROM "Defects" AS "d"
+      WHERE "d"."EndpointId" = @__endpointId_0 AND "d"."Status" <> 6 AND "d"."Status" <> 8
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__defect_Id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Defects" AS "d"
+          WHERE "d"."Id" = @__defect_Id_0)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@p13='?' (DbType = Guid), @p0='?' (DbType = Guid), @p1='?', @p2='?' (Size = 15), @p3='?' (DbType = DateTimeOffset), @p4='?' (Size = 37), @p5='?' (DbType = Guid), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTimeOffset), @p8='?' (DbType = Int32), @p9='?' (DbType = Guid), @p10='?' (DbType = Int32), @p11='?' (Size = 28), @p12='?' (DbType = DateTimeOffset)], CommandType='Text', CommandTimeout='30']
+      UPDATE "Defects" SET "ApiId" = @p0, "AssignedTo" = @p1, "CheckType" = @p2, "CreatedAtUtc" = @p3, "Description" = @p4, "EndpointId" = @p5, "Priority" = @p6, "RetestedAtUtc" = @p7, "Severity" = @p8, "SourceCheckResultId" = @p9, "Status" = @p10, "Title" = @p11, "UpdatedAtUtc" = @p12
+      WHERE "Id" = @p13
+      RETURNING 1;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_ApiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__result_ApiId_0)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_EndpointId_0='?' (DbType = Guid), @__result_ApiId_1='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Endpoints" AS "e"
+          WHERE "e"."Id" = @__result_EndpointId_0 AND "e"."ApiId" = @__result_ApiId_1)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?' (DbType = Guid), @p3='?' (Size = 12), @p4='?' (DbType = Guid), @p5='?' (DbType = DateTimeOffset), @p6='?' (DbType = Int32), @p7='?' (Size = 41), @p8='?' (DbType = Boolean), @p9='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "CheckResults" ("Id", "ActualStatusCode", "ApiId", "CheckType", "EndpointId", "ExecutedAtUtc", "FailureSeverity", "Message", "Passed", "ResponseTimeMs")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__endpointId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "d"."Id", "d"."ApiId", "d"."AssignedTo", "d"."CheckType", "d"."CreatedAtUtc", "d"."Description", "d"."EndpointId", "d"."Priority", "d"."RetestedAtUtc", "d"."Severity", "d"."SourceCheckResultId", "d"."Status", "d"."Title", "d"."UpdatedAtUtc"
+      FROM "Defects" AS "d"
+      WHERE "d"."EndpointId" = @__endpointId_0 AND "d"."Status" <> 6 AND "d"."Status" <> 8
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_ApiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__result_ApiId_0)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_EndpointId_0='?' (DbType = Guid), @__result_ApiId_1='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Endpoints" AS "e"
+          WHERE "e"."Id" = @__result_EndpointId_0 AND "e"."ApiId" = @__result_ApiId_1)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?' (DbType = Guid), @p3='?' (Size = 15), @p4='?' (DbType = Guid), @p5='?' (DbType = DateTimeOffset), @p6='?' (DbType = Int32), @p7='?' (Size = 27), @p8='?' (DbType = Boolean), @p9='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "CheckResults" ("Id", "ActualStatusCode", "ApiId", "CheckType", "EndpointId", "ExecutedAtUtc", "FailureSeverity", "Message", "Passed", "ResponseTimeMs")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__endpointId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "d"."Id", "d"."ApiId", "d"."AssignedTo", "d"."CheckType", "d"."CreatedAtUtc", "d"."Description", "d"."EndpointId", "d"."Priority", "d"."RetestedAtUtc", "d"."Severity", "d"."SourceCheckResultId", "d"."Status", "d"."Title", "d"."UpdatedAtUtc"
+      FROM "Defects" AS "d"
+      WHERE "d"."EndpointId" = @__endpointId_0 AND "d"."Status" <> 6 AND "d"."Status" <> 8
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__defect_Id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Defects" AS "d"
+          WHERE "d"."Id" = @__defect_Id_0)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@p13='?' (DbType = Guid), @p0='?' (DbType = Guid), @p1='?' (Size = 19), @p2='?' (Size = 15), @p3='?' (DbType = DateTimeOffset), @p4='?' (Size = 35), @p5='?' (DbType = Guid), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTimeOffset), @p8='?' (DbType = Int32), @p9='?' (DbType = Guid), @p10='?' (DbType = Int32), @p11='?' (Size = 28), @p12='?' (DbType = DateTimeOffset)], CommandType='Text', CommandTimeout='30']
+      UPDATE "Defects" SET "ApiId" = @p0, "AssignedTo" = @p1, "CheckType" = @p2, "CreatedAtUtc" = @p3, "Description" = @p4, "EndpointId" = @p5, "Priority" = @p6, "RetestedAtUtc" = @p7, "Severity" = @p8, "SourceCheckResultId" = @p9, "Status" = @p10, "Title" = @p11, "UpdatedAtUtc" = @p12
+      WHERE "Id" = @p13
+      RETURNING 1;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_ApiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__result_ApiId_0)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_EndpointId_0='?' (DbType = Guid), @__result_ApiId_1='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Endpoints" AS "e"
+          WHERE "e"."Id" = @__result_EndpointId_0 AND "e"."ApiId" = @__result_ApiId_1)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?' (DbType = Guid), @p3='?' (Size = 13), @p4='?' (DbType = Guid), @p5='?' (DbType = DateTimeOffset), @p6='?' (DbType = Int32), @p7='?' (Size = 48), @p8='?' (DbType = Boolean), @p9='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "CheckResults" ("Id", "ActualStatusCode", "ApiId", "CheckType", "EndpointId", "ExecutedAtUtc", "FailureSeverity", "Message", "Passed", "ResponseTimeMs")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__endpointId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "d"."Id", "d"."ApiId", "d"."AssignedTo", "d"."CheckType", "d"."CreatedAtUtc", "d"."Description", "d"."EndpointId", "d"."Priority", "d"."RetestedAtUtc", "d"."Severity", "d"."SourceCheckResultId", "d"."Status", "d"."Title", "d"."UpdatedAtUtc"
+      FROM "Defects" AS "d"
+      WHERE "d"."EndpointId" = @__endpointId_0 AND "d"."Status" <> 6 AND "d"."Status" <> 8
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_ApiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__result_ApiId_0)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_EndpointId_0='?' (DbType = Guid), @__result_ApiId_1='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Endpoints" AS "e"
+          WHERE "e"."Id" = @__result_EndpointId_0 AND "e"."ApiId" = @__result_ApiId_1)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?' (DbType = Guid), @p3='?' (Size = 25), @p4='?' (DbType = Guid), @p5='?' (DbType = DateTimeOffset), @p6='?' (DbType = Int32), @p7='?' (Size = 89), @p8='?' (DbType = Boolean), @p9='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "CheckResults" ("Id", "ActualStatusCode", "ApiId", "CheckType", "EndpointId", "ExecutedAtUtc", "FailureSeverity", "Message", "Passed", "ResponseTimeMs")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__endpointId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "d"."Id", "d"."ApiId", "d"."AssignedTo", "d"."CheckType", "d"."CreatedAtUtc", "d"."Description", "d"."EndpointId", "d"."Priority", "d"."RetestedAtUtc", "d"."Severity", "d"."SourceCheckResultId", "d"."Status", "d"."Title", "d"."UpdatedAtUtc"
+      FROM "Defects" AS "d"
+      WHERE "d"."EndpointId" = @__endpointId_0 AND "d"."Status" <> 6 AND "d"."Status" <> 8
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__defect_Id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Defects" AS "d"
+          WHERE "d"."Id" = @__defect_Id_0)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@p13='?' (DbType = Guid), @p0='?' (DbType = Guid), @p1='?', @p2='?' (Size = 25), @p3='?' (DbType = DateTimeOffset), @p4='?' (Size = 89), @p5='?' (DbType = Guid), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTimeOffset), @p8='?' (DbType = Int32), @p9='?' (DbType = Guid), @p10='?' (DbType = Int32), @p11='?' (Size = 38), @p12='?' (DbType = DateTimeOffset)], CommandType='Text', CommandTimeout='30']
+      UPDATE "Defects" SET "ApiId" = @p0, "AssignedTo" = @p1, "CheckType" = @p2, "CreatedAtUtc" = @p3, "Description" = @p4, "EndpointId" = @p5, "Priority" = @p6, "RetestedAtUtc" = @p7, "Severity" = @p8, "SourceCheckResultId" = @p9, "Status" = @p10, "Title" = @p11, "UpdatedAtUtc" = @p12
+      WHERE "Id" = @p13
+      RETURNING 1;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_ApiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__result_ApiId_0)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_EndpointId_0='?' (DbType = Guid), @__result_ApiId_1='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Endpoints" AS "e"
+          WHERE "e"."Id" = @__result_EndpointId_0 AND "e"."ApiId" = @__result_ApiId_1)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?' (DbType = Guid), @p3='?' (Size = 11), @p4='?' (DbType = Guid), @p5='?' (DbType = DateTimeOffset), @p6='?' (DbType = Int32), @p7='?' (Size = 84), @p8='?' (DbType = Boolean), @p9='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "CheckResults" ("Id", "ActualStatusCode", "ApiId", "CheckType", "EndpointId", "ExecutedAtUtc", "FailureSeverity", "Message", "Passed", "ResponseTimeMs")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__endpointId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "d"."Id", "d"."ApiId", "d"."AssignedTo", "d"."CheckType", "d"."CreatedAtUtc", "d"."Description", "d"."EndpointId", "d"."Priority", "d"."RetestedAtUtc", "d"."Severity", "d"."SourceCheckResultId", "d"."Status", "d"."Title", "d"."UpdatedAtUtc"
+      FROM "Defects" AS "d"
+      WHERE "d"."EndpointId" = @__endpointId_0 AND "d"."Status" <> 6 AND "d"."Status" <> 8
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_ApiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__result_ApiId_0)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_EndpointId_0='?' (DbType = Guid), @__result_ApiId_1='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Endpoints" AS "e"
+          WHERE "e"."Id" = @__result_EndpointId_0 AND "e"."ApiId" = @__result_ApiId_1)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?' (DbType = Guid), @p3='?' (Size = 12), @p4='?' (DbType = Guid), @p5='?' (DbType = DateTimeOffset), @p6='?' (DbType = Int32), @p7='?' (Size = 59), @p8='?' (DbType = Boolean), @p9='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "CheckResults" ("Id", "ActualStatusCode", "ApiId", "CheckType", "EndpointId", "ExecutedAtUtc", "FailureSeverity", "Message", "Passed", "ResponseTimeMs")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__endpointId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "d"."Id", "d"."ApiId", "d"."AssignedTo", "d"."CheckType", "d"."CreatedAtUtc", "d"."Description", "d"."EndpointId", "d"."Priority", "d"."RetestedAtUtc", "d"."Severity", "d"."SourceCheckResultId", "d"."Status", "d"."Title", "d"."UpdatedAtUtc"
+      FROM "Defects" AS "d"
+      WHERE "d"."EndpointId" = @__endpointId_0 AND "d"."Status" <> 6 AND "d"."Status" <> 8
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_ApiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__result_ApiId_0)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_EndpointId_0='?' (DbType = Guid), @__result_ApiId_1='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Endpoints" AS "e"
+          WHERE "e"."Id" = @__result_EndpointId_0 AND "e"."ApiId" = @__result_ApiId_1)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?' (DbType = Guid), @p3='?' (Size = 17), @p4='?' (DbType = Guid), @p5='?' (DbType = DateTimeOffset), @p6='?' (DbType = Int32), @p7='?' (Size = 41), @p8='?' (DbType = Boolean), @p9='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "CheckResults" ("Id", "ActualStatusCode", "ApiId", "CheckType", "EndpointId", "ExecutedAtUtc", "FailureSeverity", "Message", "Passed", "ResponseTimeMs")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__endpointId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "d"."Id", "d"."ApiId", "d"."AssignedTo", "d"."CheckType", "d"."CreatedAtUtc", "d"."Description", "d"."EndpointId", "d"."Priority", "d"."RetestedAtUtc", "d"."Severity", "d"."SourceCheckResultId", "d"."Status", "d"."Title", "d"."UpdatedAtUtc"
+      FROM "Defects" AS "d"
+      WHERE "d"."EndpointId" = @__endpointId_0 AND "d"."Status" <> 6 AND "d"."Status" <> 8
+info: System.Net.Http.HttpClient.ApiCheckService.LogicalHandler[100]
+      Start processing HTTP request GET http://127.0.0.1:51922/numeric-probe
+info: System.Net.Http.HttpClient.ApiCheckService.ClientHandler[100]
+      Sending HTTP request GET http://127.0.0.1:51922/numeric-probe
+info: System.Net.Http.HttpClient.ApiCheckService.ClientHandler[101]
+      Received HTTP response headers after 1.6531ms - 200
+info: System.Net.Http.HttpClient.ApiCheckService.LogicalHandler[101]
+      End processing HTTP request after 1.7445ms - 200
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_ApiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__result_ApiId_0)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_EndpointId_0='?' (DbType = Guid), @__result_ApiId_1='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Endpoints" AS "e"
+          WHERE "e"."Id" = @__result_EndpointId_0 AND "e"."ApiId" = @__result_ApiId_1)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?' (DbType = Guid), @p3='?' (Size = 15), @p4='?' (DbType = Guid), @p5='?' (DbType = DateTimeOffset), @p6='?' (DbType = Int32), @p7='?' (Size = 37), @p8='?' (DbType = Boolean), @p9='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "CheckResults" ("Id", "ActualStatusCode", "ApiId", "CheckType", "EndpointId", "ExecutedAtUtc", "FailureSeverity", "Message", "Passed", "ResponseTimeMs")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__endpointId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "d"."Id", "d"."ApiId", "d"."AssignedTo", "d"."CheckType", "d"."CreatedAtUtc", "d"."Description", "d"."EndpointId", "d"."Priority", "d"."RetestedAtUtc", "d"."Severity", "d"."SourceCheckResultId", "d"."Status", "d"."Title", "d"."UpdatedAtUtc"
+      FROM "Defects" AS "d"
+      WHERE "d"."EndpointId" = @__endpointId_0 AND "d"."Status" <> 6 AND "d"."Status" <> 8
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__defect_Id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Defects" AS "d"
+          WHERE "d"."Id" = @__defect_Id_0)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@p13='?' (DbType = Guid), @p0='?' (DbType = Guid), @p1='?', @p2='?' (Size = 15), @p3='?' (DbType = DateTimeOffset), @p4='?' (Size = 37), @p5='?' (DbType = Guid), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTimeOffset), @p8='?' (DbType = Int32), @p9='?' (DbType = Guid), @p10='?' (DbType = Int32), @p11='?' (Size = 28), @p12='?' (DbType = DateTimeOffset)], CommandType='Text', CommandTimeout='30']
+      UPDATE "Defects" SET "ApiId" = @p0, "AssignedTo" = @p1, "CheckType" = @p2, "CreatedAtUtc" = @p3, "Description" = @p4, "EndpointId" = @p5, "Priority" = @p6, "RetestedAtUtc" = @p7, "Severity" = @p8, "SourceCheckResultId" = @p9, "Status" = @p10, "Title" = @p11, "UpdatedAtUtc" = @p12
+      WHERE "Id" = @p13
+      RETURNING 1;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_ApiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__result_ApiId_0)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_EndpointId_0='?' (DbType = Guid), @__result_ApiId_1='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Endpoints" AS "e"
+          WHERE "e"."Id" = @__result_EndpointId_0 AND "e"."ApiId" = @__result_ApiId_1)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?' (DbType = Guid), @p3='?' (Size = 12), @p4='?' (DbType = Guid), @p5='?' (DbType = DateTimeOffset), @p6='?' (DbType = Int32), @p7='?' (Size = 41), @p8='?' (DbType = Boolean), @p9='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "CheckResults" ("Id", "ActualStatusCode", "ApiId", "CheckType", "EndpointId", "ExecutedAtUtc", "FailureSeverity", "Message", "Passed", "ResponseTimeMs")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__endpointId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "d"."Id", "d"."ApiId", "d"."AssignedTo", "d"."CheckType", "d"."CreatedAtUtc", "d"."Description", "d"."EndpointId", "d"."Priority", "d"."RetestedAtUtc", "d"."Severity", "d"."SourceCheckResultId", "d"."Status", "d"."Title", "d"."UpdatedAtUtc"
+      FROM "Defects" AS "d"
+      WHERE "d"."EndpointId" = @__endpointId_0 AND "d"."Status" <> 6 AND "d"."Status" <> 8
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_ApiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__result_ApiId_0)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_EndpointId_0='?' (DbType = Guid), @__result_ApiId_1='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Endpoints" AS "e"
+          WHERE "e"."Id" = @__result_EndpointId_0 AND "e"."ApiId" = @__result_ApiId_1)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?' (DbType = Guid), @p3='?' (Size = 15), @p4='?' (DbType = Guid), @p5='?' (DbType = DateTimeOffset), @p6='?' (DbType = Int32), @p7='?' (Size = 27), @p8='?' (DbType = Boolean), @p9='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "CheckResults" ("Id", "ActualStatusCode", "ApiId", "CheckType", "EndpointId", "ExecutedAtUtc", "FailureSeverity", "Message", "Passed", "ResponseTimeMs")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__endpointId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "d"."Id", "d"."ApiId", "d"."AssignedTo", "d"."CheckType", "d"."CreatedAtUtc", "d"."Description", "d"."EndpointId", "d"."Priority", "d"."RetestedAtUtc", "d"."Severity", "d"."SourceCheckResultId", "d"."Status", "d"."Title", "d"."UpdatedAtUtc"
+      FROM "Defects" AS "d"
+      WHERE "d"."EndpointId" = @__endpointId_0 AND "d"."Status" <> 6 AND "d"."Status" <> 8
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_ApiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__result_ApiId_0)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_EndpointId_0='?' (DbType = Guid), @__result_ApiId_1='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Endpoints" AS "e"
+          WHERE "e"."Id" = @__result_EndpointId_0 AND "e"."ApiId" = @__result_ApiId_1)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?' (DbType = Guid), @p3='?' (Size = 13), @p4='?' (DbType = Guid), @p5='?' (DbType = DateTimeOffset), @p6='?' (DbType = Int32), @p7='?' (Size = 48), @p8='?' (DbType = Boolean), @p9='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "CheckResults" ("Id", "ActualStatusCode", "ApiId", "CheckType", "EndpointId", "ExecutedAtUtc", "FailureSeverity", "Message", "Passed", "ResponseTimeMs")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__endpointId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "d"."Id", "d"."ApiId", "d"."AssignedTo", "d"."CheckType", "d"."CreatedAtUtc", "d"."Description", "d"."EndpointId", "d"."Priority", "d"."RetestedAtUtc", "d"."Severity", "d"."SourceCheckResultId", "d"."Status", "d"."Title", "d"."UpdatedAtUtc"
+      FROM "Defects" AS "d"
+      WHERE "d"."EndpointId" = @__endpointId_0 AND "d"."Status" <> 6 AND "d"."Status" <> 8
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_ApiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__result_ApiId_0)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_EndpointId_0='?' (DbType = Guid), @__result_ApiId_1='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Endpoints" AS "e"
+          WHERE "e"."Id" = @__result_EndpointId_0 AND "e"."ApiId" = @__result_ApiId_1)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?' (DbType = Guid), @p3='?' (Size = 25), @p4='?' (DbType = Guid), @p5='?' (DbType = DateTimeOffset), @p6='?' (DbType = Int32), @p7='?' (Size = 89), @p8='?' (DbType = Boolean), @p9='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "CheckResults" ("Id", "ActualStatusCode", "ApiId", "CheckType", "EndpointId", "ExecutedAtUtc", "FailureSeverity", "Message", "Passed", "ResponseTimeMs")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__endpointId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "d"."Id", "d"."ApiId", "d"."AssignedTo", "d"."CheckType", "d"."CreatedAtUtc", "d"."Description", "d"."EndpointId", "d"."Priority", "d"."RetestedAtUtc", "d"."Severity", "d"."SourceCheckResultId", "d"."Status", "d"."Title", "d"."UpdatedAtUtc"
+      FROM "Defects" AS "d"
+      WHERE "d"."EndpointId" = @__endpointId_0 AND "d"."Status" <> 6 AND "d"."Status" <> 8
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__defect_Id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Defects" AS "d"
+          WHERE "d"."Id" = @__defect_Id_0)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@p13='?' (DbType = Guid), @p0='?' (DbType = Guid), @p1='?', @p2='?' (Size = 25), @p3='?' (DbType = DateTimeOffset), @p4='?' (Size = 89), @p5='?' (DbType = Guid), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTimeOffset), @p8='?' (DbType = Int32), @p9='?' (DbType = Guid), @p10='?' (DbType = Int32), @p11='?' (Size = 38), @p12='?' (DbType = DateTimeOffset)], CommandType='Text', CommandTimeout='30']
+      UPDATE "Defects" SET "ApiId" = @p0, "AssignedTo" = @p1, "CheckType" = @p2, "CreatedAtUtc" = @p3, "Description" = @p4, "EndpointId" = @p5, "Priority" = @p6, "RetestedAtUtc" = @p7, "Severity" = @p8, "SourceCheckResultId" = @p9, "Status" = @p10, "Title" = @p11, "UpdatedAtUtc" = @p12
+      WHERE "Id" = @p13
+      RETURNING 1;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_ApiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__result_ApiId_0)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_EndpointId_0='?' (DbType = Guid), @__result_ApiId_1='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Endpoints" AS "e"
+          WHERE "e"."Id" = @__result_EndpointId_0 AND "e"."ApiId" = @__result_ApiId_1)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?' (DbType = Guid), @p3='?' (Size = 11), @p4='?' (DbType = Guid), @p5='?' (DbType = DateTimeOffset), @p6='?' (DbType = Int32), @p7='?' (Size = 84), @p8='?' (DbType = Boolean), @p9='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "CheckResults" ("Id", "ActualStatusCode", "ApiId", "CheckType", "EndpointId", "ExecutedAtUtc", "FailureSeverity", "Message", "Passed", "ResponseTimeMs")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__endpointId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "d"."Id", "d"."ApiId", "d"."AssignedTo", "d"."CheckType", "d"."CreatedAtUtc", "d"."Description", "d"."EndpointId", "d"."Priority", "d"."RetestedAtUtc", "d"."Severity", "d"."SourceCheckResultId", "d"."Status", "d"."Title", "d"."UpdatedAtUtc"
+      FROM "Defects" AS "d"
+      WHERE "d"."EndpointId" = @__endpointId_0 AND "d"."Status" <> 6 AND "d"."Status" <> 8
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_ApiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__result_ApiId_0)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_EndpointId_0='?' (DbType = Guid), @__result_ApiId_1='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Endpoints" AS "e"
+          WHERE "e"."Id" = @__result_EndpointId_0 AND "e"."ApiId" = @__result_ApiId_1)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?' (DbType = Guid), @p3='?' (Size = 12), @p4='?' (DbType = Guid), @p5='?' (DbType = DateTimeOffset), @p6='?' (DbType = Int32), @p7='?' (Size = 59), @p8='?' (DbType = Boolean), @p9='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "CheckResults" ("Id", "ActualStatusCode", "ApiId", "CheckType", "EndpointId", "ExecutedAtUtc", "FailureSeverity", "Message", "Passed", "ResponseTimeMs")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__endpointId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "d"."Id", "d"."ApiId", "d"."AssignedTo", "d"."CheckType", "d"."CreatedAtUtc", "d"."Description", "d"."EndpointId", "d"."Priority", "d"."RetestedAtUtc", "d"."Severity", "d"."SourceCheckResultId", "d"."Status", "d"."Title", "d"."UpdatedAtUtc"
+      FROM "Defects" AS "d"
+      WHERE "d"."EndpointId" = @__endpointId_0 AND "d"."Status" <> 6 AND "d"."Status" <> 8
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_ApiId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Apis" AS "a"
+          WHERE "a"."Id" = @__result_ApiId_0)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__result_EndpointId_0='?' (DbType = Guid), @__result_ApiId_1='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Endpoints" AS "e"
+          WHERE "e"."Id" = @__result_EndpointId_0 AND "e"."ApiId" = @__result_ApiId_1)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?' (DbType = Guid), @p3='?' (Size = 17), @p4='?' (DbType = Guid), @p5='?' (DbType = DateTimeOffset), @p6='?' (DbType = Int32), @p7='?' (Size = 41), @p8='?' (DbType = Boolean), @p9='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "CheckResults" ("Id", "ActualStatusCode", "ApiId", "CheckType", "EndpointId", "ExecutedAtUtc", "FailureSeverity", "Message", "Passed", "ResponseTimeMs")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__endpointId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT "d"."Id", "d"."ApiId", "d"."AssignedTo", "d"."CheckType", "d"."CreatedAtUtc", "d"."Description", "d"."EndpointId", "d"."Priority", "d"."RetestedAtUtc", "d"."Severity", "d"."SourceCheckResultId", "d"."Status", "d"."Title", "d"."UpdatedAtUtc"
+      FROM "Defects" AS "d"
+      WHERE "d"."EndpointId" = @__endpointId_0 AND "d"."Status" <> 6 AND "d"."Status" <> 8
+info: Microsoft.AspNetCore.Mvc.RedirectToActionResult[1]
+      Executing RedirectResult, redirecting to /Apis/Details/3d93e01b-4f4b-4421-939c-1ded3fe5abb5.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.ApisController.RunChecks (SecureApiQualityPlatform.Web) in 191.2522ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.RunChecks (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://127.0.0.1:51921/Apis/RunChecks/3D93E01B-4F4B-4421-939C-1DED3FE5ABB5 - 302 0 - 191.6730ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:51921/ - - -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.HomeController.Index (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller SecureApiQualityPlatform.Web.Controllers.HomeController (SecureApiQualityPlatform.Web).
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."Id", "a"."BaseUrl", "a"."CreatedAtUtc", "a"."Description", "a"."Name", "e"."Id", "e"."ApiId", "e"."ExpectedContentType", "e"."ExpectedStatusCode", "e"."MaxResponseTimeMs", "e"."Method", "e"."Name", "e"."Path", "e"."RequiresAuthentication"
+      FROM "Apis" AS "a"
+      LEFT JOIN "Endpoints" AS "e" ON "a"."Id" = "e"."ApiId"
+      ORDER BY "a"."Id"
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "c"."Id", "c"."ActualStatusCode", "c"."ApiId", "c"."CheckType", "c"."EndpointId", "c"."ExecutedAtUtc", "c"."FailureSeverity", "c"."Message", "c"."Passed", "c"."ResponseTimeMs"
+      FROM "CheckResults" AS "c"
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "d"."Id", "d"."ApiId", "d"."AssignedTo", "d"."CheckType", "d"."CreatedAtUtc", "d"."Description", "d"."EndpointId", "d"."Priority", "d"."RetestedAtUtc", "d"."Severity", "d"."SourceCheckResultId", "d"."Status", "d"."Title", "d"."UpdatedAtUtc"
+      FROM "Defects" AS "d"
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[1]
+      Executing ViewResult, running view Index.
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[4]
+      Executed ViewResult - view Index executed in 5.7536ms.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.HomeController.Index (SecureApiQualityPlatform.Web) in 17.4847ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.HomeController.Index (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:51921/ - 200 - text/html;+charset=utf-8 17.7566ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:51921/Reports/ExportResultsCsv?apiId=3D93E01B-4F4B-4421-939C-1DED3FE5ABB5&passed=false - - -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.ReportsController.ExportResultsCsv (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "ExportResultsCsv", controller = "Reports"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ExportResultsCsv(System.Nullable`1[System.Guid], System.Nullable`1[System.Boolean]) on controller SecureApiQualityPlatform.Web.Controllers.ReportsController (SecureApiQualityPlatform.Web).
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."Id", "a"."BaseUrl", "a"."CreatedAtUtc", "a"."Description", "a"."Name", "e"."Id", "e"."ApiId", "e"."ExpectedContentType", "e"."ExpectedStatusCode", "e"."MaxResponseTimeMs", "e"."Method", "e"."Name", "e"."Path", "e"."RequiresAuthentication"
+      FROM "Apis" AS "a"
+      LEFT JOIN "Endpoints" AS "e" ON "a"."Id" = "e"."ApiId"
+      ORDER BY "a"."Id"
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "c"."Id", "c"."ActualStatusCode", "c"."ApiId", "c"."CheckType", "c"."EndpointId", "c"."ExecutedAtUtc", "c"."FailureSeverity", "c"."Message", "c"."Passed", "c"."ResponseTimeMs"
+      FROM "CheckResults" AS "c"
+info: Microsoft.AspNetCore.Mvc.Infrastructure.FileContentResultExecutor[2]
+      Executing FileContentResult, sending file with download name 'api-check-results-20261019-095921.csv' ...
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.ReportsController.ExportResultsCsv (SecureApiQualityPlatform.Web) in 14.5876ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.ReportsController.ExportResultsCsv (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:51921/Reports/ExportResultsCsv?apiId=3D93E01B-4F4B-4421-939C-1DED3FE5ABB5&passed=false - 200 3425 text/csv;+charset=utf-8 16.4945ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:51921/Reports/ExportDefectsCsv?apiId=3D93E01B-4F4B-4421-939C-1DED3FE5ABB5&status=Closed&severity=High - - -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.ReportsController.ExportDefectsCsv (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "ExportDefectsCsv", controller = "Reports"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ExportDefectsCsv(System.Nullable`1[SecureApiQualityPlatform.Web.Models.DefectStatus], System.Nullable`1[SecureApiQualityPlatform.Web.Models.DefectSeverity], System.Nullable`1[System.Guid]) on controller SecureApiQualityPlatform.Web.Controllers.ReportsController (SecureApiQualityPlatform.Web).
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."Id", "a"."BaseUrl", "a"."CreatedAtUtc", "a"."Description", "a"."Name", "e"."Id", "e"."ApiId", "e"."ExpectedContentType", "e"."ExpectedStatusCode", "e"."MaxResponseTimeMs", "e"."Method", "e"."Name", "e"."Path", "e"."RequiresAuthentication"
+      FROM "Apis" AS "a"
+      LEFT JOIN "Endpoints" AS "e" ON "a"."Id" = "e"."ApiId"
+      ORDER BY "a"."Id"
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "d"."Id", "d"."ApiId", "d"."AssignedTo", "d"."CheckType", "d"."CreatedAtUtc", "d"."Description", "d"."EndpointId", "d"."Priority", "d"."RetestedAtUtc", "d"."Severity", "d"."SourceCheckResultId", "d"."Status", "d"."Title", "d"."UpdatedAtUtc"
+      FROM "Defects" AS "d"
+info: Microsoft.AspNetCore.Mvc.Infrastructure.FileContentResultExecutor[2]
+      Executing FileContentResult, sending file with download name 'defects-20261019-095921.csv' ...
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.ReportsController.ExportDefectsCsv (SecureApiQualityPlatform.Web) in 8.0279ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.ReportsController.ExportDefectsCsv (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:51921/Reports/ExportDefectsCsv?apiId=3D93E01B-4F4B-4421-939C-1DED3FE5ABB5&status=Closed&severity=High - 200 726 text/csv;+charset=utf-8 10.2098ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:51921/Reports/ExportResultsCsv?passed=wrong - - -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.ReportsController.ExportResultsCsv (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "ExportResultsCsv", controller = "Reports"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ExportResultsCsv(System.Nullable`1[System.Guid], System.Nullable`1[System.Boolean]) on controller SecureApiQualityPlatform.Web.Controllers.ReportsController (SecureApiQualityPlatform.Web).
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor[1]
+      Executing BadRequestObjectResult, writing value of type 'System.String'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.ReportsController.ExportResultsCsv (SecureApiQualityPlatform.Web) in 3.4778ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.ReportsController.ExportResultsCsv (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:51921/Reports/ExportResultsCsv?passed=wrong - 400 - text/plain;+charset=utf-8 3.7895ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:51921/Reports/ExportDefectsCsv?severity=999 - - -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.ReportsController.ExportDefectsCsv (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "ExportDefectsCsv", controller = "Reports"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ExportDefectsCsv(System.Nullable`1[SecureApiQualityPlatform.Web.Models.DefectStatus], System.Nullable`1[SecureApiQualityPlatform.Web.Models.DefectSeverity], System.Nullable`1[System.Guid]) on controller SecureApiQualityPlatform.Web.Controllers.ReportsController (SecureApiQualityPlatform.Web).
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor[1]
+      Executing BadRequestObjectResult, writing value of type 'System.String'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.ReportsController.ExportDefectsCsv (SecureApiQualityPlatform.Web) in 1.2126ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.ReportsController.ExportDefectsCsv (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:51921/Reports/ExportDefectsCsv?severity=999 - 400 - text/plain;+charset=utf-8 1.6535ms

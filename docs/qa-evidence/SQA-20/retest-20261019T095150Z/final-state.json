@@ -1,0 +1,12 @@
+{
+  "branch": "fix/sqa20-accessibility-postmerge",
+  "mainUnchanged": true,
+  "main": "8e69c6273080b01db100c29cc76eb33a798e84af",
+  "head": "7f28ee9239ba728a297ffd729da618abb1c0d415",
+  "pushed": false,
+  "originMain": "7f28ee9239ba728a297ffd729da618abb1c0d415",
+  "testListeners": [],
+  "historicalTrackedEvidenceDiff": "none",
+  "uncommitted": true,
+  "committed": false
+}

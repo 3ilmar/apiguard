@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 'use strict';
 
-// Runs the unchanged MVC application through installed Chrome and Edge binaries.
+// Runs the current MVC application through installed Chrome and Edge binaries.
 // Browser contexts are fresh; no user profile or original application store is used.
 const fs = require('node:fs');
 const path = require('node:path');
@@ -55,13 +55,14 @@ const result = (browser, index, status, actual, evidence = [], limitations = [])
 });
 fs.mkdirSync(output, { recursive: true });
 if (!finalizeOnly && fs.existsSync(path.join(output, 'browser-execution.json'))) throw new Error('Refusing to overwrite a previous browser execution. Choose a new output directory.');
-if (git(['branch', '--show-current']) !== 'qa/sqa19-sqa20-manual-validation') throw new Error('Wrong branch; no tests executed.');
+if (git(['branch', '--show-current']) !== 'fix/sqa20-accessibility-postmerge') throw new Error('Wrong branch; no tests executed.');
+const applicationSourceChanges = git(['status', '--short', '--', 'SecureApiQualityPlatform.Web']);
 const metadata = finalizeOnly ? JSON.parse(fs.readFileSync(path.join(output, 'environment.json'), 'utf8')) : {
   startedAtUtc: startedAt, branch: git(['branch', '--show-current']), baseCommit: git(['rev-parse', 'HEAD']),
   sourceState: git(['status', '--short']), node: process.version, os: { platform: os.platform(), release: os.release(), architecture: os.arch(), cpu: os.cpus()[0]?.model, logicalCpus: os.cpus().length },
   playwright: require(path.join(path.dirname(playwrightPath), 'package.json')).version,
   playwrightPath, baseUrl, headless: true, viewportDesktop: { width: 1440, height: 900 }, viewportNarrow: { width: 375, height: 812 }, deviceScaleFactor: 1,
-  axe: axeAvailability, originalApplicationCodeModified: false, demoRole,
+  axe: axeAvailability, originalApplicationCodeModified: Boolean(applicationSourceChanges), applicationSourceChanges, demoRole,
   networkPolicy: 'Only localhost:51920 GET/HEAD and original Bootstrap stylesheet URL allowed by browser context. No API checks or form submissions.',
   humanTesting: 'No human SQA-20 execution or acceptance is performed by this runner; separate human evidence is not reassessed.'
 };
@@ -88,6 +89,46 @@ async function severityFacts(page) {
     const expected = ['Critical', 'High', 'Medium', 'Low'];
     return { metrics, rows, passed: metrics['Open defects'] === '4' && metrics['High/Critical open'] === '2' && rows.length === 4 && rows.every((row, index) => row.label === expected[index] && row.count === '1' && row.accessibleName === `${row.label} open defects` && row.now === '1' && row.max === '4' && Math.abs(row.percent - 25) < 1 && row.visible) };
   });
+}
+
+async function verifyScrollableRegions(page, keyboard, scan) {
+  const findings = scan?.violations.filter(rule => rule.id === 'scrollable-region-focusable') || [];
+  const results = [];
+  for (const node of findings.flatMap(rule => rule.nodes)) {
+    const proof = { target: node.target, reachedByTab: false, reachedByShiftTab: false, keyboardScrollWorks: false };
+    // This fixture has light DOM. Keep any unexpected selector form unresolved.
+    if (node.target.length === 1 && typeof node.target[0] === 'string') {
+      const locator = page.locator(node.target[0]);
+      if (await locator.count() === 1) {
+        const wrapper = await locator.evaluate(element => ({
+          key: `dom-${[...document.querySelectorAll('*')].indexOf(element)}`,
+          isTableWrapper: element.matches('.table-responsive'),
+          clientWidth: element.clientWidth, scrollWidth: element.scrollWidth,
+          tabIndex: element.tabIndex, attributeTabIndex: element.getAttribute('tabindex')
+        }));
+        Object.assign(proof, wrapper);
+        proof.reachedByTab = keyboard.forward.some(event => event.active.key === wrapper.key);
+        proof.reachedByShiftTab = keyboard.reverse.some(event => event.active.key === wrapper.key);
+        if (wrapper.isTableWrapper && wrapper.scrollWidth > wrapper.clientWidth && proof.reachedByTab && proof.reachedByShiftTab) {
+          for (let step = 0; step < 120; step++) {
+            await page.keyboard.press('Tab');
+            const activeKey = await page.evaluate(() => `dom-${[...document.querySelectorAll('*')].indexOf(document.activeElement)}`);
+            if (activeKey === wrapper.key) {
+              proof.scrollBefore = await locator.evaluate(element => element.scrollLeft);
+              await page.keyboard.press('ArrowRight');
+              await page.waitForTimeout(180);
+              proof.scrollAfter = await locator.evaluate(element => element.scrollLeft);
+              proof.keyboardScrollWorks = proof.scrollAfter > proof.scrollBefore;
+              break;
+            }
+          }
+        }
+      }
+    }
+    proof.unconfirmedScannerFlag = proof.reachedByTab && proof.reachedByShiftTab && proof.keyboardScrollWorks;
+    results.push(proof);
+  }
+  return results;
 }
 
 async function executeBrowser(configuration) {
@@ -140,24 +181,32 @@ async function executeBrowser(configuration) {
         facts.page = item.name; facts.viewportName = viewportName; facts.httpStatus = response?.status();
         facts.passed = facts.httpStatus === 200 && facts.heading === item.heading && facts.stylesheets.length === 2 && facts.stylesheets.every(style => style.loaded) && facts.controls.every(control => !control.disabled && control.width > 0 && control.height > 0 && control.visibility === 'visible');
         summary.pages.push(facts);
+        let rawScan = null;
+        let accessibility = null;
         if (axeAvailability.available) {
           try {
             const scan = await scanPage(page);
+            rawScan = scan;
             const file = path.join(directory, `axe-${viewportName}-${item.name}.json`);
             json(file, scan);
-            summary.accessibility.push({ page: item.name, viewportName, evidence: relative(file), violations: scan.violations.map(violation => ({ id: violation.id, impact: violation.impact, description: violation.description, help: violation.help, helpUrl: violation.helpUrl, nodes: violation.nodes.length, targets: violation.nodes.map(node => node.target) })), incomplete: scan.incomplete.map(rule => ({ id: rule.id, nodes: rule.nodes.length })) });
+            accessibility = { page: item.name, viewportName, evidence: relative(file), violations: scan.violations.map(violation => ({ id: violation.id, impact: violation.impact, description: violation.description, help: violation.help, helpUrl: violation.helpUrl, nodes: violation.nodes.length, targets: violation.nodes.map(node => node.target) })), incomplete: scan.incomplete.map(rule => ({ id: rule.id, nodes: rule.nodes.length })) };
+            summary.accessibility.push(accessibility);
           } catch (error) { summary.accessibility.push({ page: item.name, viewportName, error: String(error), status: 'BLOCKED' }); }
         }
         const measuredLayout = await inspectLayout(page, { directory, pageName: item.name, viewportName });
         const { evidence: rawLayout, ...layout } = measuredLayout;
         summary.layouts.push({ page: item.name, viewportName, ...layout, evidence: layout.evidencePath });
         if (item.name === 'dashboard') summary.severity.push({ viewportName, ...await severityFacts(page) });
-        if (viewportName === 'desktop') {
-          // Reload to restore a pristine Tab starting position after scrolling/layout work.
-          await page.goto(baseUrl + item.url, { waitUntil: 'networkidle' });
-          phase = `keyboard-${item.name}`;
-          const keyboard = await testKeyboard(page, { directory, pageName: item.name });
-          summary.keyboard.push({ page: item.name, ...keyboard });
+        // Reload to restore a pristine Tab starting position after scrolling/layout work.
+        await page.goto(baseUrl + item.url, { waitUntil: 'networkidle' });
+        phase = `keyboard-${viewportName}-${item.name}`;
+        const keyboard = await testKeyboard(page, { directory, pageName: `${viewportName}-${item.name}` });
+        summary.keyboard.push({ page: item.name, viewportName, ...keyboard });
+        if (accessibility) {
+          accessibility.scrollableRegionVerification = await verifyScrollableRegions(page, keyboard, rawScan);
+          accessibility.unresolvedViolations = accessibility.violations.filter(rule => rule.id !== 'scrollable-region-focusable' ||
+            accessibility.scrollableRegionVerification.some(proof => !proof.unconfirmedScannerFlag));
+          accessibility.classification = 'Raw axe JSON and violations are preserved. A scrollable-region-focusable flag is unconfirmed only when this execution proves genuine Tab, Shift+Tab and ArrowRight access for every flagged table wrapper; all other rule failures remain unresolved.';
         }
       }
     }
@@ -193,14 +242,14 @@ async function executeBrowser(configuration) {
     const importantResourceFailures = events.filter(event => event.type === 'requestfailed' && !event.url.includes('/Reports/') || event.type === 'response' && event.status >= 400 && !event.url.endsWith('/favicon.ico') || event.type === 'pageerror');
     summary.results = [
       result(configuration.name, 1, summary.pages.every(item => item.passed) && summary.navigation.every(item => item.passed) && !importantResourceFailures.length ? 'PASS' : 'FAIL', { pages: summary.pages.length, navigation: summary.navigation, resourceFailures: importantResourceFailures }, [`${configuration.name}/browser-summary.json`, `${configuration.name}/browser-events.json`]),
-      result(configuration.name, 2, summary.keyboard.every(item => item.forwardPassed) ? 'PASS' : 'FAIL', { pages: summary.keyboard.map(item => ({ page: item.page, passed: item.forwardPassed, missing: item.missing, focusFailures: item.focusFailures })) }, summary.keyboard.map(item => relative(item.evidence))),
-      result(configuration.name, 3, summary.keyboard.every(item => item.reversePassed) ? 'PASS' : 'FAIL', { pages: summary.keyboard.map(item => ({ page: item.page, passed: item.reversePassed, order: item.order })) }, summary.keyboard.map(item => relative(item.evidence))),
+      result(configuration.name, 2, summary.keyboard.every(item => item.forwardPassed) ? 'PASS' : 'FAIL', { pages: summary.keyboard.map(item => ({ page: item.page, viewportName: item.viewportName, passed: item.forwardPassed, missing: item.missing, focusFailures: item.focusFailures })) }, summary.keyboard.map(item => relative(item.evidence))),
+      result(configuration.name, 3, summary.keyboard.every(item => item.reversePassed) ? 'PASS' : 'FAIL', { pages: summary.keyboard.map(item => ({ page: item.page, viewportName: item.viewportName, passed: item.reversePassed, order: item.order })) }, summary.keyboard.map(item => relative(item.evidence))),
       result(configuration.name, 4, summary.layouts.every(item => item.responsivePassed) ? 'PASS' : 'FAIL', { pages: summary.layouts.map(item => ({ page: item.page, viewportName: item.viewportName, passed: item.responsivePassed, overflowElements: item.overflowElements, overlaps: item.overlaps })) }, summary.layouts.map(item => relative(item.evidence))),
-      result(configuration.name, 5, summary.severity.every(item => item.passed) ? 'PASS' : 'FAIL', { dashboard: summary.severity, stretchedBadges: summary.layouts.filter(item => item.stretchedBadges?.length).map(item => ({ page: item.page, viewportName: item.viewportName, badges: item.stretchedBadges })) }, [`${configuration.name}/browser-summary.json`, ...summary.layouts.filter(item => ['dashboard', 'defects'].includes(item.page)).map(item => relative(item.evidence))]),
+      result(configuration.name, 5, summary.severity.every(item => item.passed) && summary.layouts.every(item => !item.stretchedBadges?.length) ? 'PASS' : 'FAIL', { dashboard: summary.severity, stretchedBadges: summary.layouts.filter(item => item.stretchedBadges?.length).map(item => ({ page: item.page, viewportName: item.viewportName, badges: item.stretchedBadges })) }, [`${configuration.name}/browser-summary.json`, ...summary.layouts.filter(item => ['dashboard', 'defects'].includes(item.page)).map(item => relative(item.evidence))]),
       result(configuration.name, 6, summary.layouts.every(item => item.tablePassed) ? 'PASS' : 'FAIL', { pages: summary.layouts.filter(item => item.tables?.length).map(item => ({ page: item.page, viewportName: item.viewportName, passed: item.tablePassed, tables: item.tables })) }, summary.layouts.filter(item => ['dashboard', 'orders', 'catalogue', 'defects'].includes(item.page)).map(item => relative(item.evidence))),
       ...[7, 8].map(index => result(configuration.name, index, 'BLOCKED', 'Browser download collected; semantic CSV validation follows both browser executions.', [`${configuration.name}/browser-summary.json`]))
     ];
-    summary.additionalAccessibilityStatus = summary.accessibility.some(scan => scan.violations?.length) ? 'FAIL' : summary.accessibility.some(scan => scan.error) || !axeAvailability.available ? 'BLOCKED' : 'PASS';
+    summary.additionalAccessibilityStatus = summary.accessibility.some(scan => scan.unresolvedViolations?.length) || summary.keyboard.some(item => item.labelIssues.length) ? 'FAIL' : summary.accessibility.some(scan => scan.error) || !axeAvailability.available ? 'BLOCKED' : 'PASS';
     summary.limitations = ['Headless genuine browser binaries; browser chrome, operating-system dialogs, assistive-technology interactions and human usability acceptance are not exercised.', 'Axe automated rules and DOM measurements do not establish full WCAG compliance.', 'Isolated host deliberately blocks writes and scans.'];
   } catch (error) {
     summary.error = String(error.stack || error);

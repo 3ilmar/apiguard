@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dashboard - Secure API Quality Platform</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/site.css?v=v_5yvPs1Pz2dgvIIKaqvFNok2HrJ3SM9wpFGiyE4NCU" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">API Quality</a>
+            <div class="navbar-nav">
+                <a class="nav-link" href="/">Dashboard</a>
+                <a class="nav-link" href="/Apis">APIs</a>
+                <a class="nav-link" href="/Defects">Defects</a>
+                <a class="nav-link" href="/Reports/ExportResultsCsv">Export Results</a>
+            </div>
+
+            <form method="post" class="d-flex ms-auto align-items-center" action="/Role/SetRole">
+                <input type="hidden" name="returnUrl" value="/" />
+                <label class="text-light small me-2" for="roleSelect">Role</label>
+                <select id="roleSelect" name="role" class="form-select form-select-sm me-2" onchange="this.form.submit()">
+                        <option value="Viewer">Viewer</option>
+                        <option value="Tester" selected="selected">Tester</option>
+                        <option value="Admin">Admin</option>
+                </select>
+                <noscript>
+                    <button type="submit" class="btn btn-sm btn-outline-light">Set</button>
+                </noscript>
+            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8LVobS9-BG5Lg1mWMIPAsan0fDp_F83WJFip0HHSsJZHMmttpPB7FbwSkSao46Qfd8IXU32AmKqg7GNiYTO2MJmcVUWKmUgGrzuaCLxwDjb9w_lcesFKwwutpHj3T8m4U28AQfsCCXIeji-0YH302HI" /></form>
+        </div>
+    </nav>
+    <main class="container py-4">
+
+        <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-3 mb-4">
+    <div>
+        <h1 class="h3 mb-1">API Quality Dashboard</h1>
+        <p class="text-muted mb-0">Current prototype evidence for quality, performance, and defects.</p>
+    </div>
+    <a class="btn btn-primary" href="/Apis/Create">Register API</a>
+</div>
+<div class="row g-3 mb-4" role="group" aria-label="Quality metrics">
+    <div class="col-md-3"><div class="metric-card"><span>Registered APIs</span><strong>1</strong></div></div>
+    <div class="col-md-3"><div class="metric-card"><span>Configured endpoints</span><strong>2</strong></div></div>
+    <div class="col-md-3"><div class="metric-card"><span>Executed checks</span><strong>32</strong></div></div>
+    <div class="col-md-3"><div class="metric-card"><span>Pass rate</span><strong>68.8%</strong></div></div>
+    <div class="col-md-3"><div class="metric-card"><span>Passed / Failed</span><strong>22 / 10</strong></div></div>
+    <div class="col-md-3"><div class="metric-card"><span>Avg response</span><strong>20.8 ms</strong></div></div>
+    <div class="col-md-3"><div class="metric-card"><span>Open defects</span><strong>5</strong></div></div>
+    <div class="col-md-3"><div class="metric-card"><span>High/Critical open</span><strong>5</strong></div></div>
+</div>
+<section class="card mb-4" aria-labelledby="severity-title">
+    <h2 class="card-header h6 mb-0" id="severity-title">Open defect severity distribution</h2>
+    <div class="card-body">
+                <div class="severity-row mb-3">
+                    <div class="d-flex justify-content-between mb-1">
+                        <span>Critical</span><strong>2</strong>
+                    </div>
+                    <div class="progress" role="progressbar" aria-label="Critical open defects" aria-valuenow="2" aria-valuemin="0" aria-valuemax="5">
+                        <div class="progress-bar bg-danger" style="width: 40%"></div>
+                    </div>
+                </div>
+                <div class="severity-row mb-3">
+                    <div class="d-flex justify-content-between mb-1">
+                        <span>High</span><strong>3</strong>
+                    </div>
+                    <div class="progress" role="progressbar" aria-label="High open defects" aria-valuenow="3" aria-valuemin="0" aria-valuemax="5">
+                        <div class="progress-bar bg-warning" style="width: 60%"></div>
+                    </div>
+                </div>
+                <div class="severity-row mb-3">
+                    <div class="d-flex justify-content-between mb-1">
+                        <span>Medium</span><strong>0</strong>
+                    </div>
+                    <div class="progress" role="progressbar" aria-label="Medium open defects" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5">
+                        <div class="progress-bar bg-info" style="width: 0%"></div>
+                    </div>
+                </div>
+                <div class="severity-row mb-3">
+                    <div class="d-flex justify-content-between mb-1">
+                        <span>Low</span><strong>0</strong>
+                    </div>
+                    <div class="progress" role="progressbar" aria-label="Low open defects" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5">
+                        <div class="progress-bar bg-secondary" style="width: 0%"></div>
+                    </div>
+                </div>
+            <p class="text-muted small mb-0">Counts exclude Closed and Deferred defects. Numbers are displayed alongside colours.</p>
+    </div>
+</section>
+<div class="row g-4">
+    <div class="col-lg-7">
+        <section class="card" aria-labelledby="recent-checks-title">
+            <h2 class="card-header h6 mb-0" id="recent-checks-title">Recent checks</h2>
+            <div class="table-responsive">
+                <table class="table table-sm mb-0">
+                    <thead><tr><th scope="col">Check</th><th scope="col">Result</th><th scope="col">Response</th><th scope="col">When</th></tr></thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-break">Server disclosure<br /><small class="text-muted">No Server header disclosure was observed.</small></td>
+                            <td><span class="badge text-bg-success">PASS</span></td>
+                            <td>N/A</td>
+                            <td><time datetime="2026-10-19T09:56:26.5749501&#x2B;00:00">10/19/2026 10:56 PM</time></td>
+                        </tr>
+                        <tr>
+                            <td class="text-break">Content type<br /><small class="text-muted">Content type &#x27;application/json&#x27; matched the expected value.</small></td>
+                            <td><span class="badge text-bg-success">PASS</span></td>
+                            <td>N/A</td>
+                            <td><time datetime="2026-10-19T09:56:26.5749422&#x2B;00:00">10/19/2026 10:56 PM</time></td>
+                        </tr>
+                        <tr>
+                            <td class="text-break">CORS policy<br /><small class="text-muted">No unsafe wildcard CORS policy was observed for an authentication-required endpoint.</small></td>
+                            <td><span class="badge text-bg-success">PASS</span></td>
+                            <td>N/A</td>
+                            <td><time datetime="2026-10-19T09:56:26.5749291&#x2B;00:00">10/19/2026 10:56 PM</time></td>
+                        </tr>
+                        <tr>
+                            <td class="text-break">Authentication protection<br /><small class="text-muted">Endpoint is marked authentication-required but unauthenticated request returned HTTP 200.</small></td>
+                            <td><span class="badge text-bg-danger">FAIL</span></td>
+                            <td>N/A</td>
+                            <td><time datetime="2026-10-19T09:56:26.5749160&#x2B;00:00">10/19/2026 10:56 PM</time></td>
+                        </tr>
+                        <tr>
+                            <td class="text-break">Response time<br /><small class="text-muted">Response completed in 1 ms (threshold 60000 ms).</small></td>
+                            <td><span class="badge text-bg-success">PASS</span></td>
+                            <td>1 ms</td>
+                            <td><time datetime="2026-10-19T09:56:26.5749147&#x2B;00:00">10/19/2026 10:56 PM</time></td>
+                        </tr>
+                        <tr>
+                            <td class="text-break">Expected status<br /><small class="text-muted">Returned expected HTTP 200.</small></td>
+                            <td><span class="badge text-bg-success">PASS</span></td>
+                            <td>N/A</td>
+                            <td><time datetime="2026-10-19T09:56:26.5749120&#x2B;00:00">10/19/2026 10:56 PM</time></td>
+                        </tr>
+                        <tr>
+                            <td class="text-break">Availability<br /><small class="text-muted">Endpoint responded with HTTP 200 in 1 ms.</small></td>
+                            <td><span class="badge text-bg-success">PASS</span></td>
+                            <td>1 ms</td>
+                            <td><time datetime="2026-10-19T09:56:26.5749067&#x2B;00:00">10/19/2026 10:56 PM</time></td>
+                        </tr>
+                        <tr>
+                            <td class="text-break">HTTPS transport<br /><small class="text-muted">Endpoint uses HTTP rather than HTTPS.</small></td>
+                            <td><span class="badge text-bg-danger">FAIL</span></td>
+                            <td>N/A</td>
+                            <td><time datetime="2026-10-19T09:56:26.5729629&#x2B;00:00">10/19/2026 10:56 PM</time></td>
+                        </tr>
+                        <tr>
+                            <td class="text-break">Server disclosure<br /><small class="text-muted">No Server header disclosure was observed.</small></td>
+                            <td><span class="badge text-bg-success">PASS</span></td>
+                            <td>N/A</td>
+                            <td><time datetime="2026-10-19T09:56:26.4537973&#x2B;00:00">10/19/2026 10:56 PM</time></td>
+                        </tr>
+                        <tr>
+                            <td class="text-break">Content type<br /><small class="text-muted">Content type &#x27;application/json&#x27; matched the expected value.</small></td>
+                            <td><span class="badge text-bg-success">PASS</span></td>
+                            <td>N/A</td>
+                            <td><time datetime="2026-10-19T09:56:26.4537918&#x2B;00:00">10/19/2026 10:56 PM</time></td>
+                        </tr>
+                        <tr>
+                            <td class="text-break">CORS policy<br /><small class="text-muted">No unsafe wildcard CORS policy was observed for an authentication-required endpoint.</small></td>
+                            <td><span class="badge text-bg-success">PASS</span></td>
+                            <td>N/A</td>
+                            <td><time datetime="2026-10-19T09:56:26.4537833&#x2B;00:00">10/19/2026 10:56 PM</time></td>
+                        </tr>
+                        <tr>
+                            <td class="text-break">Authentication protection<br /><small class="text-muted">Endpoint is marked authentication-required but unauthenticated request returned HTTP 200.</small></td>
+                            <td><span class="badge text-bg-danger">FAIL</span></td>
+                            <td>N/A</td>
+                            <td><time datetime="2026-10-19T09:56:26.4537733&#x2B;00:00">10/19/2026 10:56 PM</time></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+    <div class="col-lg-5">
+        <section class="card" aria-labelledby="recent-defects-title">
+            <h2 class="card-header h6 mb-0" id="recent-defects-title">Recent defects</h2>
+            <div class="list-group list-group-flush">
+                    <div class="list-group-item text-break">
+                        <div class="d-flex justify-content-between gap-2"><strong>Authentication protection check failed</strong><span>Critical</span></div>
+                        <small class="text-muted">New · Urgent</small>
+                    </div>
+                    <div class="list-group-item text-break">
+                        <div class="d-flex justify-content-between gap-2"><strong>HTTPS transport check failed</strong><span>High</span></div>
+                        <small class="text-muted">New · High</small>
+                    </div>
+                    <div class="list-group-item text-break">
+                        <div class="d-flex justify-content-between gap-2"><strong>Authentication protection check failed</strong><span>Critical</span></div>
+                        <small class="text-muted">New · Urgent</small>
+                    </div>
+                    <div class="list-group-item text-break">
+                        <div class="d-flex justify-content-between gap-2"><strong>Expected status check failed</strong><span>High</span></div>
+                        <small class="text-muted">Closed · Urgent</small>
+                    </div>
+                    <div class="list-group-item text-break">
+                        <div class="d-flex justify-content-between gap-2"><strong>HTTPS transport check failed</strong><span>High</span></div>
+                        <small class="text-muted">New · High</small>
+                    </div>
+                    <div class="list-group-item text-break">
+                        <div class="d-flex justify-content-between gap-2"><strong>Expected status check failed</strong><span>High</span></div>
+                        <small class="text-muted">New · High</small>
+                    </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+    </main>
+</body>
+</html>

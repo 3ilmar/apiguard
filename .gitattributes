@@ -1,0 +1,4 @@
+# Keep the pinned axe distribution byte-identical for SHA-256 verification.
+tools/Sqa20.ManualHost/axe/axe.min.js text eol=lf
+tools/Sqa20.ManualHost/axe/package.json text eol=lf
+tools/Sqa20.ManualHost/axe/LICENSE text eol=lf

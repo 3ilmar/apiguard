@@ -1,0 +1,13 @@
+2026-10-19T09:57:08.856Z chrome-desktop-orders: FAIL
+2026-10-19T09:57:13.249Z chrome-desktop-catalogue: FAIL
+2026-10-19T09:57:20.949Z chrome-desktop-defects: FAIL
+2026-10-19T09:57:25.307Z chrome-narrow-orders: FAIL
+2026-10-19T09:57:29.431Z chrome-narrow-catalogue: FAIL
+2026-10-19T09:57:36.542Z chrome-narrow-defects: FAIL
+2026-10-19T09:57:41.410Z edge-desktop-orders: FAIL
+2026-10-19T09:57:45.533Z edge-desktop-catalogue: FAIL
+2026-10-19T09:57:52.670Z edge-desktop-defects: FAIL
+2026-10-19T09:57:56.825Z edge-narrow-orders: FAIL
+2026-10-19T09:58:00.936Z edge-narrow-catalogue: FAIL
+2026-10-19T09:58:07.957Z edge-narrow-defects: FAIL
+{"status":"FAIL","browsers":[{"browser":"chrome","version":"155.0.8059.80","status":"FAIL"},{"browser":"edge","version":"155.0.4283.62","status":"FAIL"}]}

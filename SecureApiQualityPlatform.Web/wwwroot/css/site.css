@@ -1,4 +1,15 @@
 body { background: #f6f8fb; }
+/* Normal text must retain AA contrast on the page background. */
+.api-base-url { color: #a61e65; }
+.btn-outline-secondary {
+    --bs-btn-color: #495057;
+    --bs-btn-border-color: #495057;
+    --bs-btn-hover-bg: #495057;
+    --bs-btn-hover-border-color: #495057;
+    --bs-btn-active-bg: #495057;
+    --bs-btn-active-border-color: #495057;
+    --bs-btn-focus-shadow-rgb: 73, 80, 87;
+}
 .metric-card { background: white; border: 1px solid #e5e7eb; border-radius: .75rem; padding: 1rem; min-height: 100px; display: flex; flex-direction: column; justify-content: space-between; }
 .metric-card span { color: #4b5563; font-size: .9rem; }
 .metric-card strong { font-size: 1.8rem; overflow-wrap: anywhere; }

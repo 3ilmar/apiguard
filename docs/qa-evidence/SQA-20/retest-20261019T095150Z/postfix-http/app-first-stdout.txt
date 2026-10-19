@@ -1,0 +1,398 @@
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      PRAGMA journal_mode = 'wal';
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Apis" (
+          "Id" TEXT NOT NULL CONSTRAINT "PK_Apis" PRIMARY KEY,
+          "Name" TEXT NOT NULL,
+          "BaseUrl" TEXT NOT NULL,
+          "Description" TEXT NOT NULL,
+          "CreatedAtUtc" TEXT NOT NULL
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "CheckResults" (
+          "Id" TEXT NOT NULL CONSTRAINT "PK_CheckResults" PRIMARY KEY,
+          "ApiId" TEXT NOT NULL,
+          "EndpointId" TEXT NOT NULL,
+          "CheckType" TEXT NOT NULL,
+          "Passed" INTEGER NOT NULL,
+          "Message" TEXT NOT NULL,
+          "ActualStatusCode" INTEGER NULL,
+          "ResponseTimeMs" INTEGER NULL,
+          "FailureSeverity" INTEGER NOT NULL,
+          "ExecutedAtUtc" TEXT NOT NULL
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Defects" (
+          "Id" TEXT NOT NULL CONSTRAINT "PK_Defects" PRIMARY KEY,
+          "ApiId" TEXT NOT NULL,
+          "EndpointId" TEXT NOT NULL,
+          "SourceCheckResultId" TEXT NULL,
+          "Title" TEXT NOT NULL,
+          "Description" TEXT NOT NULL,
+          "CheckType" TEXT NOT NULL,
+          "Severity" INTEGER NOT NULL,
+          "Priority" INTEGER NOT NULL,
+          "Status" INTEGER NOT NULL,
+          "AssignedTo" TEXT NULL,
+          "CreatedAtUtc" TEXT NOT NULL,
+          "UpdatedAtUtc" TEXT NOT NULL,
+          "RetestedAtUtc" TEXT NULL
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Endpoints" (
+          "Id" TEXT NOT NULL CONSTRAINT "PK_Endpoints" PRIMARY KEY,
+          "ApiId" TEXT NOT NULL,
+          "Name" TEXT NOT NULL,
+          "Path" TEXT NOT NULL,
+          "Method" TEXT NOT NULL,
+          "ExpectedStatusCode" INTEGER NOT NULL,
+          "MaxResponseTimeMs" INTEGER NOT NULL,
+          "RequiresAuthentication" INTEGER NOT NULL,
+          "ExpectedContentType" TEXT NULL,
+          CONSTRAINT "FK_Endpoints_Apis_ApiId" FOREIGN KEY ("ApiId") REFERENCES "Apis" ("Id") ON DELETE CASCADE
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX "IX_Apis_BaseUrl" ON "Apis" ("BaseUrl");
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX "IX_CheckResults_ApiId" ON "CheckResults" ("ApiId");
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX "IX_Defects_EndpointId" ON "Defects" ("EndpointId");
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX "IX_Endpoints_ApiId_Method_Path" ON "Endpoints" ("ApiId", "Method", "Path");
+info: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[63]
+      User profile is available. Using 'C:\Users\zsr20\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://127.0.0.1:51921
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Web
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:51921/ - - -
+warn: Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware[3]
+      Failed to determine the https port for redirect.
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.HomeController.Index (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller SecureApiQualityPlatform.Web.Controllers.HomeController (SecureApiQualityPlatform.Web).
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."Id", "a"."BaseUrl", "a"."CreatedAtUtc", "a"."Description", "a"."Name", "e"."Id", "e"."ApiId", "e"."ExpectedContentType", "e"."ExpectedStatusCode", "e"."MaxResponseTimeMs", "e"."Method", "e"."Name", "e"."Path", "e"."RequiresAuthentication"
+      FROM "Apis" AS "a"
+      LEFT JOIN "Endpoints" AS "e" ON "a"."Id" = "e"."ApiId"
+      ORDER BY "a"."Id"
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "c"."Id", "c"."ActualStatusCode", "c"."ApiId", "c"."CheckType", "c"."EndpointId", "c"."ExecutedAtUtc", "c"."FailureSeverity", "c"."Message", "c"."Passed", "c"."ResponseTimeMs"
+      FROM "CheckResults" AS "c"
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "d"."Id", "d"."ApiId", "d"."AssignedTo", "d"."CheckType", "d"."CreatedAtUtc", "d"."Description", "d"."EndpointId", "d"."Priority", "d"."RetestedAtUtc", "d"."Severity", "d"."SourceCheckResultId", "d"."Status", "d"."Title", "d"."UpdatedAtUtc"
+      FROM "Defects" AS "d"
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[1]
+      Executing ViewResult, running view Index.
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[4]
+      Executed ViewResult - view Index executed in 55.8272ms.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.HomeController.Index (SecureApiQualityPlatform.Web) in 294.6653ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.HomeController.Index (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:51921/ - 200 - text/html;+charset=utf-8 318.1351ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:51921/ - - -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.HomeController.Index (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller SecureApiQualityPlatform.Web.Controllers.HomeController (SecureApiQualityPlatform.Web).
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."Id", "a"."BaseUrl", "a"."CreatedAtUtc", "a"."Description", "a"."Name", "e"."Id", "e"."ApiId", "e"."ExpectedContentType", "e"."ExpectedStatusCode", "e"."MaxResponseTimeMs", "e"."Method", "e"."Name", "e"."Path", "e"."RequiresAuthentication"
+      FROM "Apis" AS "a"
+      LEFT JOIN "Endpoints" AS "e" ON "a"."Id" = "e"."ApiId"
+      ORDER BY "a"."Id"
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "c"."Id", "c"."ActualStatusCode", "c"."ApiId", "c"."CheckType", "c"."EndpointId", "c"."ExecutedAtUtc", "c"."FailureSeverity", "c"."Message", "c"."Passed", "c"."ResponseTimeMs"
+      FROM "CheckResults" AS "c"
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "d"."Id", "d"."ApiId", "d"."AssignedTo", "d"."CheckType", "d"."CreatedAtUtc", "d"."Description", "d"."EndpointId", "d"."Priority", "d"."RetestedAtUtc", "d"."Severity", "d"."SourceCheckResultId", "d"."Status", "d"."Title", "d"."UpdatedAtUtc"
+      FROM "Defects" AS "d"
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[1]
+      Executing ViewResult, running view Index.
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[4]
+      Executed ViewResult - view Index executed in 3.65ms.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.HomeController.Index (SecureApiQualityPlatform.Web) in 17.5252ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.HomeController.Index (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:51921/ - 200 - text/html;+charset=utf-8 18.4713ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:51921/Apis/Create - - -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.Create (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Create", controller = "Apis"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create() on controller SecureApiQualityPlatform.Web.Controllers.ApisController (SecureApiQualityPlatform.Web).
+info: Microsoft.AspNetCore.Mvc.RedirectToActionResult[1]
+      Executing RedirectResult, redirecting to /Apis.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.ApisController.Create (SecureApiQualityPlatform.Web) in 10.414ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.Create (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:51921/Apis/Create - 302 0 - 13.5770ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:51921/ - - -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.HomeController.Index (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller SecureApiQualityPlatform.Web.Controllers.HomeController (SecureApiQualityPlatform.Web).
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."Id", "a"."BaseUrl", "a"."CreatedAtUtc", "a"."Description", "a"."Name", "e"."Id", "e"."ApiId", "e"."ExpectedContentType", "e"."ExpectedStatusCode", "e"."MaxResponseTimeMs", "e"."Method", "e"."Name", "e"."Path", "e"."RequiresAuthentication"
+      FROM "Apis" AS "a"
+      LEFT JOIN "Endpoints" AS "e" ON "a"."Id" = "e"."ApiId"
+      ORDER BY "a"."Id"
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "c"."Id", "c"."ActualStatusCode", "c"."ApiId", "c"."CheckType", "c"."EndpointId", "c"."ExecutedAtUtc", "c"."FailureSeverity", "c"."Message", "c"."Passed", "c"."ResponseTimeMs"
+      FROM "CheckResults" AS "c"
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "d"."Id", "d"."ApiId", "d"."AssignedTo", "d"."CheckType", "d"."CreatedAtUtc", "d"."Description", "d"."EndpointId", "d"."Priority", "d"."RetestedAtUtc", "d"."Severity", "d"."SourceCheckResultId", "d"."Status", "d"."Title", "d"."UpdatedAtUtc"
+      FROM "Defects" AS "d"
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[1]
+      Executing ViewResult, running view Index.
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[4]
+      Executed ViewResult - view Index executed in 1.626ms.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.HomeController.Index (SecureApiQualityPlatform.Web) in 11.3439ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.HomeController.Index (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:51921/ - 200 - text/html;+charset=utf-8 11.5995ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://127.0.0.1:51921/Apis/Create - application/x-www-form-urlencoded 233
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.Create (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Create", controller = "Apis"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(SecureApiQualityPlatform.Web.Models.RegisteredApi) on controller SecureApiQualityPlatform.Web.Controllers.ApisController (SecureApiQualityPlatform.Web).
+info: Microsoft.AspNetCore.Mvc.RedirectToActionResult[1]
+      Executing RedirectResult, redirecting to /Apis.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.ApisController.Create (SecureApiQualityPlatform.Web) in 28.1841ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.Create (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://127.0.0.1:51921/Apis/Create - 302 0 - 41.2141ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:51921/ - - -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.HomeController.Index (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller SecureApiQualityPlatform.Web.Controllers.HomeController (SecureApiQualityPlatform.Web).
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."Id", "a"."BaseUrl", "a"."CreatedAtUtc", "a"."Description", "a"."Name", "e"."Id", "e"."ApiId", "e"."ExpectedContentType", "e"."ExpectedStatusCode", "e"."MaxResponseTimeMs", "e"."Method", "e"."Name", "e"."Path", "e"."RequiresAuthentication"
+      FROM "Apis" AS "a"
+      LEFT JOIN "Endpoints" AS "e" ON "a"."Id" = "e"."ApiId"
+      ORDER BY "a"."Id"
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "c"."Id", "c"."ActualStatusCode", "c"."ApiId", "c"."CheckType", "c"."EndpointId", "c"."ExecutedAtUtc", "c"."FailureSeverity", "c"."Message", "c"."Passed", "c"."ResponseTimeMs"
+      FROM "CheckResults" AS "c"
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "d"."Id", "d"."ApiId", "d"."AssignedTo", "d"."CheckType", "d"."CreatedAtUtc", "d"."Description", "d"."EndpointId", "d"."Priority", "d"."RetestedAtUtc", "d"."Severity", "d"."SourceCheckResultId", "d"."Status", "d"."Title", "d"."UpdatedAtUtc"
+      FROM "Defects" AS "d"
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[1]
+      Executing ViewResult, running view Index.
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[4]
+      Executed ViewResult - view Index executed in 0.9391ms.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.HomeController.Index (SecureApiQualityPlatform.Web) in 13.1392ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.HomeController.Index (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:51921/ - 200 - text/html;+charset=utf-8 13.4997ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://127.0.0.1:51921/Role/SetRole - application/x-www-form-urlencoded 207
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.RoleController.SetRole (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "SetRole", controller = "Role"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult SetRole(System.String, System.String) on controller SecureApiQualityPlatform.Web.Controllers.RoleController (SecureApiQualityPlatform.Web).
+info: Microsoft.AspNetCore.Mvc.Infrastructure.LocalRedirectResultExecutor[1]
+      Executing LocalRedirectResult, redirecting to /.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.RoleController.SetRole (SecureApiQualityPlatform.Web) in 5.0893ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.RoleController.SetRole (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://127.0.0.1:51921/Role/SetRole - 302 0 - 8.0322ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:51921/ - - -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.HomeController.Index (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller SecureApiQualityPlatform.Web.Controllers.HomeController (SecureApiQualityPlatform.Web).
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."Id", "a"."BaseUrl", "a"."CreatedAtUtc", "a"."Description", "a"."Name", "e"."Id", "e"."ApiId", "e"."ExpectedContentType", "e"."ExpectedStatusCode", "e"."MaxResponseTimeMs", "e"."Method", "e"."Name", "e"."Path", "e"."RequiresAuthentication"
+      FROM "Apis" AS "a"
+      LEFT JOIN "Endpoints" AS "e" ON "a"."Id" = "e"."ApiId"
+      ORDER BY "a"."Id"
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "c"."Id", "c"."ActualStatusCode", "c"."ApiId", "c"."CheckType", "c"."EndpointId", "c"."ExecutedAtUtc", "c"."FailureSeverity", "c"."Message", "c"."Passed", "c"."ResponseTimeMs"
+      FROM "CheckResults" AS "c"
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "d"."Id", "d"."ApiId", "d"."AssignedTo", "d"."CheckType", "d"."CreatedAtUtc", "d"."Description", "d"."EndpointId", "d"."Priority", "d"."RetestedAtUtc", "d"."Severity", "d"."SourceCheckResultId", "d"."Status", "d"."Title", "d"."UpdatedAtUtc"
+      FROM "Defects" AS "d"
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[1]
+      Executing ViewResult, running view Index.
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[4]
+      Executed ViewResult - view Index executed in 1.3977ms.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.HomeController.Index (SecureApiQualityPlatform.Web) in 10.4336ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.HomeController.Index (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:51921/ - 200 - text/html;+charset=utf-8 10.8126ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://127.0.0.1:51921/Role/SetRole - application/x-www-form-urlencoded 208
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.RoleController.SetRole (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "SetRole", controller = "Role"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult SetRole(System.String, System.String) on controller SecureApiQualityPlatform.Web.Controllers.RoleController (SecureApiQualityPlatform.Web).
+info: Microsoft.AspNetCore.Mvc.Infrastructure.LocalRedirectResultExecutor[1]
+      Executing LocalRedirectResult, redirecting to /.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.RoleController.SetRole (SecureApiQualityPlatform.Web) in 0.728ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.RoleController.SetRole (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://127.0.0.1:51921/Role/SetRole - 302 0 - 1.2461ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:51921/Apis/Create - - -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.Create (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Create", controller = "Apis"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create() on controller SecureApiQualityPlatform.Web.Controllers.ApisController (SecureApiQualityPlatform.Web).
+info: Microsoft.AspNetCore.Mvc.RedirectToActionResult[1]
+      Executing RedirectResult, redirecting to /Apis.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.ApisController.Create (SecureApiQualityPlatform.Web) in 1.116ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.Create (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:51921/Apis/Create - 302 0 - 1.5645ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:51921/Apis/Create - - -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.Create (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Create", controller = "Apis"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create() on controller SecureApiQualityPlatform.Web.Controllers.ApisController (SecureApiQualityPlatform.Web).
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[1]
+      Executing ViewResult, running view Create.
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[4]
+      Executed ViewResult - view Create executed in 23.0421ms.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.ApisController.Create (SecureApiQualityPlatform.Web) in 23.3401ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.Create (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:51921/Apis/Create - 200 - text/html;+charset=utf-8 23.7013ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://127.0.0.1:51921/Apis/Create - application/x-www-form-urlencoded 245
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.Create (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Create", controller = "Apis"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(SecureApiQualityPlatform.Web.Models.RegisteredApi) on controller SecureApiQualityPlatform.Web.Controllers.ApisController (SecureApiQualityPlatform.Web).
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[1]
+      Executing ViewResult, running view Create.
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[4]
+      Executed ViewResult - view Create executed in 2.0383ms.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.ApisController.Create (SecureApiQualityPlatform.Web) in 6.2494ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.Create (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://127.0.0.1:51921/Apis/Create - 200 - text/html;+charset=utf-8 6.5696ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:51921/Apis/Create - - -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.Create (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Create", controller = "Apis"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create() on controller SecureApiQualityPlatform.Web.Controllers.ApisController (SecureApiQualityPlatform.Web).
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[1]
+      Executing ViewResult, running view Create.
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[4]
+      Executed ViewResult - view Create executed in 1.4198ms.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.ApisController.Create (SecureApiQualityPlatform.Web) in 1.6185ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.Create (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:51921/Apis/Create - 200 - text/html;+charset=utf-8 1.8817ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://127.0.0.1:51921/Apis/Create - application/x-www-form-urlencoded 269
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.Create (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Create", controller = "Apis"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(SecureApiQualityPlatform.Web.Models.RegisteredApi) on controller SecureApiQualityPlatform.Web.Controllers.ApisController (SecureApiQualityPlatform.Web).
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[1]
+      Executing ViewResult, running view Create.
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[4]
+      Executed ViewResult - view Create executed in 0.8523ms.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.ApisController.Create (SecureApiQualityPlatform.Web) in 1.505ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.Create (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://127.0.0.1:51921/Apis/Create - 200 - text/html;+charset=utf-8 1.7558ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:51921/Apis/Create - - -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.Create (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Create", controller = "Apis"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create() on controller SecureApiQualityPlatform.Web.Controllers.ApisController (SecureApiQualityPlatform.Web).
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[1]
+      Executing ViewResult, running view Create.
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[4]
+      Executed ViewResult - view Create executed in 0.8988ms.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.ApisController.Create (SecureApiQualityPlatform.Web) in 1.0739ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.Create (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:51921/Apis/Create - 200 - text/html;+charset=utf-8 1.3981ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://127.0.0.1:51921/Apis/Create - application/x-www-form-urlencoded 243
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.Create (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Create", controller = "Apis"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(SecureApiQualityPlatform.Web.Models.RegisteredApi) on controller SecureApiQualityPlatform.Web.Controllers.ApisController (SecureApiQualityPlatform.Web).
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[1]
+      Executing ViewResult, running view Create.
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[4]
+      Executed ViewResult - view Create executed in 0.8406ms.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action SecureApiQualityPlatform.Web.Controllers.ApisController.Create (SecureApiQualityPlatform.Web) in 1.3565ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'SecureApiQualityPlatform.Web.Controllers.ApisController.Create (SecureApiQualityPlatform.Web)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://127.0.0.1:51921/Apis/Create - 200 - text/html;+charset=utf-8 1.6546ms

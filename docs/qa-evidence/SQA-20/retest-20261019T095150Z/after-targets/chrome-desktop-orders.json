@@ -1,0 +1,377 @@
+{
+  "page": "orders",
+  "viewportName": "desktop",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "atUtc": "2026-10-19T09:59:43.126Z",
+  "httpStatus": 200,
+  "stylesheetFacts": [
+    {
+      "href": "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css",
+      "loaded": true
+    },
+    {
+      "href": "http://localhost:51920/css/site.css?v=457tT9JfQ-0Gsc_-heEexFQuSuanGruZA4xQGt6kiWw",
+      "loaded": true
+    }
+  ],
+  "expectedControlCount": 7,
+  "labels": [
+    {
+      "id": "NewEndpoint_Name",
+      "name": "Name",
+      "type": "text",
+      "uniqueId": true,
+      "labels": [
+        {
+          "text": "Name",
+          "htmlFor": "NewEndpoint_Name",
+          "controlsThisElement": true
+        }
+      ],
+      "associated": true,
+      "expectedName": "Name",
+      "ariaSnapshot": "- textbox \"Name\"",
+      "accessibilitySnapshotName": "Name",
+      "accessibilitySnapshotPassed": true,
+      "labelClick": {
+        "available": true,
+        "focusedCorrectControl": true
+      },
+      "passed": true
+    },
+    {
+      "id": "NewEndpoint_Path",
+      "name": "Path",
+      "type": "text",
+      "uniqueId": true,
+      "labels": [
+        {
+          "text": "Path",
+          "htmlFor": "NewEndpoint_Path",
+          "controlsThisElement": true
+        }
+      ],
+      "associated": true,
+      "expectedName": "Path",
+      "ariaSnapshot": "- textbox \"Path\":\n  - /placeholder: /v1/orders\n  - text: /",
+      "accessibilitySnapshotName": "Path",
+      "accessibilitySnapshotPassed": true,
+      "labelClick": {
+        "available": true,
+        "focusedCorrectControl": true
+      },
+      "passed": true
+    },
+    {
+      "id": "NewEndpoint_Method",
+      "name": "Method",
+      "type": "select-one",
+      "uniqueId": true,
+      "labels": [
+        {
+          "text": "Method",
+          "htmlFor": "NewEndpoint_Method",
+          "controlsThisElement": true
+        }
+      ],
+      "associated": true,
+      "expectedName": "Method",
+      "ariaSnapshot": "- combobox \"Method\":\n  - option \"GET\" [selected]\n  - option \"POST\"\n  - option \"PUT\"\n  - option \"PATCH\"\n  - option \"DELETE\"",
+      "accessibilitySnapshotName": "Method",
+      "accessibilitySnapshotPassed": true,
+      "labelClick": {
+        "available": true,
+        "focusedCorrectControl": true
+      },
+      "passed": true
+    },
+    {
+      "id": "NewEndpoint_ExpectedStatusCode",
+      "name": "ExpectedStatusCode",
+      "type": "number",
+      "uniqueId": true,
+      "labels": [
+        {
+          "text": "Expected HTTP status",
+          "htmlFor": "NewEndpoint_ExpectedStatusCode",
+          "controlsThisElement": true
+        }
+      ],
+      "associated": true,
+      "expectedName": "Expected HTTP status",
+      "ariaSnapshot": "- spinbutton \"Expected HTTP status\": \"200\"",
+      "accessibilitySnapshotName": "Expected HTTP status",
+      "accessibilitySnapshotPassed": true,
+      "labelClick": {
+        "available": true,
+        "focusedCorrectControl": true
+      },
+      "passed": true
+    },
+    {
+      "id": "NewEndpoint_MaxResponseTimeMs",
+      "name": "MaxResponseTimeMs",
+      "type": "number",
+      "uniqueId": true,
+      "labels": [
+        {
+          "text": "Max response time (ms)",
+          "htmlFor": "NewEndpoint_MaxResponseTimeMs",
+          "controlsThisElement": true
+        }
+      ],
+      "associated": true,
+      "expectedName": "Max response time (ms)",
+      "ariaSnapshot": "- spinbutton \"Max response time (ms)\": \"1500\"",
+      "accessibilitySnapshotName": "Max response time (ms)",
+      "accessibilitySnapshotPassed": true,
+      "labelClick": {
+        "available": true,
+        "focusedCorrectControl": true
+      },
+      "passed": true
+    },
+    {
+      "id": "NewEndpoint_ExpectedContentType",
+      "name": "ExpectedContentType",
+      "type": "text",
+      "uniqueId": true,
+      "labels": [
+        {
+          "text": "Expected content type",
+          "htmlFor": "NewEndpoint_ExpectedContentType",
+          "controlsThisElement": true
+        }
+      ],
+      "associated": true,
+      "expectedName": "Expected content type",
+      "ariaSnapshot": "- textbox \"Expected content type\":\n  - /placeholder: application/json",
+      "accessibilitySnapshotName": "Expected content type",
+      "accessibilitySnapshotPassed": true,
+      "labelClick": {
+        "available": true,
+        "focusedCorrectControl": true
+      },
+      "passed": true
+    },
+    {
+      "id": "NewEndpoint_RequiresAuthentication",
+      "name": "RequiresAuthentication",
+      "type": "checkbox",
+      "uniqueId": true,
+      "labels": [
+        {
+          "text": "Requires authentication",
+          "htmlFor": "NewEndpoint_RequiresAuthentication",
+          "controlsThisElement": true
+        }
+      ],
+      "associated": true,
+      "expectedName": "Requires authentication",
+      "ariaSnapshot": "- checkbox \"Requires authentication\"",
+      "accessibilitySnapshotName": "Requires authentication",
+      "accessibilitySnapshotPassed": true,
+      "labelClick": {
+        "available": true,
+        "focusedCorrectControl": true,
+        "checkboxBefore": [
+          {
+            "id": "NewEndpoint_RequiresAuthentication",
+            "checked": false
+          }
+        ],
+        "checkboxAfter": [
+          {
+            "id": "NewEndpoint_RequiresAuthentication",
+            "checked": true
+          }
+        ],
+        "onlyIntendedCheckboxToggled": true,
+        "checkboxRestored": true
+      },
+      "passed": true
+    }
+  ],
+  "contrast": [
+    {
+      "text": "https://sqa20-orders.invalid",
+      "color": "rgb(166, 30, 101)",
+      "compositeForeground": [
+        166,
+        30,
+        101,
+        1
+      ],
+      "compositeBackground": [
+        246,
+        248,
+        251,
+        1
+      ],
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "ratio": 6.590441316712724,
+      "required": 4.5,
+      "supported": true,
+      "passed": true,
+      "status": "PASS",
+      "ancestors": [
+        {
+          "tag": "HTML",
+          "className": "",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1"
+        },
+        {
+          "tag": "BODY",
+          "className": "",
+          "backgroundColor": "rgb(246, 248, 251)",
+          "backgroundImage": "none",
+          "opacity": "1"
+        },
+        {
+          "tag": "MAIN",
+          "className": "container py-4",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1"
+        },
+        {
+          "tag": "DIV",
+          "className": "d-flex justify-content-between align-items-start mb-3",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1"
+        },
+        {
+          "tag": "DIV",
+          "className": "",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1"
+        },
+        {
+          "tag": "CODE",
+          "className": "api-base-url",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1"
+        }
+      ],
+      "state": {
+        "hover": false,
+        "focus": false,
+        "focusVisible": false,
+        "active": false
+      },
+      "focusIndicator": {
+        "outline": "rgb(166, 30, 101) none 3px",
+        "outlineOffset": "0px",
+        "boxShadow": "none",
+        "borderColor": "rgb(166, 30, 101)"
+      },
+      "requestedState": "resting",
+      "stateApplied": true,
+      "screenshot": "chrome-desktop-orders-resting.png"
+    },
+    {
+      "text": "https://sqa20-orders.invalid",
+      "color": "rgb(166, 30, 101)",
+      "compositeForeground": [
+        166,
+        30,
+        101,
+        1
+      ],
+      "compositeBackground": [
+        246,
+        248,
+        251,
+        1
+      ],
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "ratio": 6.590441316712724,
+      "required": 4.5,
+      "supported": true,
+      "passed": true,
+      "status": "PASS",
+      "ancestors": [
+        {
+          "tag": "HTML",
+          "className": "",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1"
+        },
+        {
+          "tag": "BODY",
+          "className": "",
+          "backgroundColor": "rgb(246, 248, 251)",
+          "backgroundImage": "none",
+          "opacity": "1"
+        },
+        {
+          "tag": "MAIN",
+          "className": "container py-4",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1"
+        },
+        {
+          "tag": "DIV",
+          "className": "d-flex justify-content-between align-items-start mb-3",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1"
+        },
+        {
+          "tag": "DIV",
+          "className": "",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1"
+        },
+        {
+          "tag": "CODE",
+          "className": "api-base-url",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1"
+        }
+      ],
+      "state": {
+        "hover": true,
+        "focus": false,
+        "focusVisible": false,
+        "active": false
+      },
+      "focusIndicator": {
+        "outline": "rgb(166, 30, 101) none 3px",
+        "outlineOffset": "0px",
+        "boxShadow": "none",
+        "borderColor": "rgb(166, 30, 101)"
+      },
+      "requestedState": "hover",
+      "stateApplied": true,
+      "screenshot": "chrome-desktop-orders-hover.png"
+    },
+    {
+      "state": "focus",
+      "status": "N/A",
+      "reason": "Noninteractive code text has no native focus/active state."
+    },
+    {
+      "state": "active",
+      "status": "N/A",
+      "reason": "Noninteractive code text has no native focus/active state."
+    }
+  ],
+  "axeEvidence": "axe-chrome-desktop-orders.json",
+  "relevantAxeViolations": [],
+  "status": "PASS"
+}

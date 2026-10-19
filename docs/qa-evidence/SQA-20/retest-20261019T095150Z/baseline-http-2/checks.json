@@ -1,0 +1,210 @@
+[
+  {
+    "name": "Empty persisted dashboard returns N/A",
+    "status": "PASS",
+    "actual": {
+      "http": 200,
+      "naCount": 2
+    },
+    "expected": "200, >=2 N/A, no APIs",
+    "atUtc": "2026-10-19T09:55:45.978216+00:00"
+  },
+  {
+    "name": "Viewer denied registration GET",
+    "status": "PASS",
+    "actual": 302,
+    "expected": 302,
+    "atUtc": "2026-10-19T09:55:46.004289+00:00"
+  },
+  {
+    "name": "Viewer denied registration POST without mutation",
+    "status": "PASS",
+    "actual": {
+      "http": 302,
+      "apis": 0
+    },
+    "expected": "302, 0 APIs",
+    "atUtc": "2026-10-19T09:55:46.088808+00:00"
+  },
+  {
+    "name": "Set Admin role through real antiforgery form",
+    "status": "PASS",
+    "actual": 302,
+    "expected": "302 to /",
+    "atUtc": "2026-10-19T09:55:46.135467+00:00"
+  },
+  {
+    "name": "Set Tester role through real antiforgery form",
+    "status": "PASS",
+    "actual": 302,
+    "expected": "302 to /",
+    "atUtc": "2026-10-19T09:55:46.158626+00:00"
+  },
+  {
+    "name": "Tester denied Admin registration action",
+    "status": "PASS",
+    "actual": 302,
+    "expected": 302,
+    "atUtc": "2026-10-19T09:55:46.162559+00:00"
+  },
+  {
+    "name": "Registration rejects invalid-scheme",
+    "status": "PASS",
+    "actual": {
+      "http": 200,
+      "apis": 0
+    },
+    "expected": "validation view, no persistence",
+    "atUtc": "2026-10-19T09:55:46.237398+00:00"
+  },
+  {
+    "name": "Registration rejects credentials",
+    "status": "PASS",
+    "actual": {
+      "http": 200,
+      "apis": 0
+    },
+    "expected": "validation view, no persistence",
+    "atUtc": "2026-10-19T09:55:46.265591+00:00"
+  },
+  {
+    "name": "Admin API registration persists to SQLite",
+    "status": "PASS",
+    "actual": {
+      "http": 302,
+      "apis": 1
+    },
+    "expected": "302, 1 API",
+    "atUtc": "2026-10-19T09:55:46.508655+00:00"
+  },
+  {
+    "name": "Duplicate API URL rejected",
+    "status": "PASS",
+    "actual": 200,
+    "expected": "200 validation view, unchanged DB",
+    "atUtc": "2026-10-19T09:55:46.535395+00:00"
+  },
+  {
+    "name": "Encoded traversal rejected via real MVC action",
+    "status": "PASS",
+    "actual": 200,
+    "expected": "200 validation view, 0 endpoints",
+    "atUtc": "2026-10-19T09:55:46.692597+00:00"
+  },
+  {
+    "name": "Numeric out-of-range rejected",
+    "status": "PASS",
+    "actual": 200,
+    "expected": "200 validation view, 0 endpoints",
+    "atUtc": "2026-10-19T09:55:46.730576+00:00"
+  },
+  {
+    "name": "Admin valid endpoint registered",
+    "status": "PASS",
+    "actual": 302,
+    "expected": "302, health endpoint persisted",
+    "atUtc": "2026-10-19T09:55:46.902951+00:00"
+  },
+  {
+    "name": "Duplicate method/path rejected",
+    "status": "PASS",
+    "actual": 200,
+    "expected": "200 duplicate guidance",
+    "atUtc": "2026-10-19T09:55:46.948355+00:00"
+  },
+  {
+    "name": "Tester cannot add endpoint",
+    "status": "PASS",
+    "actual": 302,
+    "expected": "302, unchanged DB",
+    "atUtc": "2026-10-19T09:55:47.014727+00:00"
+  },
+  {
+    "name": "Viewer cannot run checks",
+    "status": "PASS",
+    "actual": 302,
+    "expected": "302, no outbound request or result",
+    "atUtc": "2026-10-19T09:55:47.040380+00:00"
+  },
+  {
+    "name": "Tester executes owned fixture and persists failures",
+    "status": "PASS",
+    "actual": {
+      "http": 302,
+      "fixtureRequests": 2,
+      "results": 16,
+      "defects": 6
+    },
+    "expected": "302, one fixture GET per endpoint, persisted results/defects",
+    "atUtc": "2026-10-19T09:55:47.729442+00:00"
+  },
+  {
+    "name": "Viewer cannot mutate defect",
+    "status": "PASS",
+    "actual": 302,
+    "expected": "302, unchanged defect status",
+    "atUtc": "2026-10-19T09:55:47.779043+00:00"
+  },
+  {
+    "name": "Tester assignment/priority/status update persists",
+    "status": "PASS",
+    "actual": {
+      "Id": "C92129CC-1823-4C43-9C71-33D47A6CDB48",
+      "ApiId": "DE3BF897-F3D5-4845-90A2-F2F9E6D1DF19",
+      "EndpointId": "726B0931-F358-491A-9ACC-24110171DE62",
+      "SourceCheckResultId": "D34E3756-5467-4B6C-862A-5A76C2C4637E",
+      "Title": "Expected status check failed",
+      "Description": "Expected HTTP 200 but received 503.",
+      "CheckType": "Expected status",
+      "Severity": 2,
+      "Priority": 3,
+      "Status": 4,
+      "AssignedTo": "Synthetic, \"Tester\"",
+      "CreatedAtUtc": "2026-10-19 09:55:47.3343814+00:00",
+      "UpdatedAtUtc": "2026-10-19 09:55:47.8447419+00:00",
+      "RetestedAtUtc": null
+    },
+    "expected": "Resolved, Urgent, synthetic assignee",
+    "atUtc": "2026-10-19T09:55:47.860029+00:00"
+  },
+  {
+    "name": "Passing retest closes resolved expected-status defect",
+    "status": "PASS",
+    "actual": {
+      "Id": "C92129CC-1823-4C43-9C71-33D47A6CDB48",
+      "ApiId": "DE3BF897-F3D5-4845-90A2-F2F9E6D1DF19",
+      "EndpointId": "726B0931-F358-491A-9ACC-24110171DE62",
+      "SourceCheckResultId": "D34E3756-5467-4B6C-862A-5A76C2C4637E",
+      "Title": "Expected status check failed",
+      "Description": "Expected HTTP 200 but received 503.",
+      "CheckType": "Expected status",
+      "Severity": 2,
+      "Priority": 3,
+      "Status": 6,
+      "AssignedTo": "Synthetic, \"Tester\"",
+      "CreatedAtUtc": "2026-10-19 09:55:47.3343814+00:00",
+      "UpdatedAtUtc": "2026-10-19 09:55:47.9910064+00:00",
+      "RetestedAtUtc": "2026-10-19 09:55:47.9867361+00:00"
+    },
+    "expected": "Closed with RetestedAtUtc",
+    "atUtc": "2026-10-19T09:55:48.261518+00:00"
+  },
+  {
+    "name": "Populated SQLite dashboard renders",
+    "status": "PASS",
+    "actual": 200,
+    "expected": "200, metrics and mixed result rows",
+    "atUtc": "2026-10-19T09:55:48.304547+00:00"
+  },
+  {
+    "name": "failed-results CSV schema/filter/escaping",
+    "status": "FAIL",
+    "actual": {
+      "http": 200,
+      "columns": 15,
+      "rows": 10
+    },
+    "expected": "200 CSV, 15 columns, filtered rows, quoted API name round-trips",
+    "atUtc": "2026-10-19T09:55:48.346982+00:00"
+  }
+]

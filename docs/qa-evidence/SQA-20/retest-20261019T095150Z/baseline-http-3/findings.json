@@ -1,0 +1,23 @@
+[
+  {
+    "id": "ENDPOINT-NUMERIC-BINDING",
+    "status": "CONFIRMED",
+    "http": 302,
+    "expected": "Malformed numeric input rejected without persisting endpoint",
+    "persistedRows": [
+      {
+        "Id": "DB63131A-CEDB-4F39-90D8-377610C2BEA1",
+        "ApiId": "C94CCEC2-2235-42EC-9067-49814A2D2107",
+        "Name": "Malformed numeric probe",
+        "Path": "/numeric-probe",
+        "Method": "GET",
+        "ExpectedStatusCode": 200,
+        "MaxResponseTimeMs": 60000,
+        "RequiresAuthentication": 1,
+        "ExpectedContentType": "application/json"
+      }
+    ],
+    "sourceLocation": "SecureApiQualityPlatform.Web/Controllers/ApisController.cs:129",
+    "scope": "Investigate existing ModelState.Clear; do not silently fold into accessibility fix."
+  }
+]

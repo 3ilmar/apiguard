@@ -1,0 +1,835 @@
+{
+  "capturedUtc": "2026-10-19T10:02:14.033Z",
+  "url": "http://localhost:51920/Apis/Create",
+  "viewport": {
+    "width": 1440,
+    "height": 900,
+    "devicePixelRatio": 1
+  },
+  "document": {
+    "clientWidth": 1440,
+    "scrollWidth": 1440,
+    "clientHeight": 900,
+    "scrollHeight": 900,
+    "bodyClientWidth": 1440,
+    "bodyScrollWidth": 1440,
+    "horizontalOverflow": false
+  },
+  "headings": [
+    {
+      "tag": "h1",
+      "id": null,
+      "name": null,
+      "type": null,
+      "text": "Register API",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 72,
+        "y": 80,
+        "left": 72,
+        "top": 80,
+        "right": 1368,
+        "bottom": 113.59,
+        "width": 1296,
+        "height": 33.59
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "28px",
+        "lineHeight": "33.6px",
+        "fontWeight": "500",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "normal",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 720,
+          "y": 96.8
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "h1",
+          "id": null,
+          "text": "Register API"
+        }
+      }
+    }
+  ],
+  "navigation": [
+    {
+      "tag": "nav",
+      "id": null,
+      "name": null,
+      "type": null,
+      "text": "API Quality Dashboard APIs Defects Export Results Role Viewer Tester Admin",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "left": 0,
+        "top": 0,
+        "right": 1440,
+        "bottom": 56,
+        "width": 1440,
+        "height": 56
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(33, 37, 41)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "normal",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 720,
+          "y": 28
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "div",
+          "id": null,
+          "text": "API Quality Dashboard APIs Defects Export Results Role Viewer Tester Admin"
+        }
+      }
+    }
+  ],
+  "controls": [
+    {
+      "tag": "a",
+      "id": null,
+      "name": null,
+      "type": null,
+      "text": "API Quality",
+      "accessibleName": {
+        "value": "API Quality",
+        "source": "element text"
+      },
+      "href": "/",
+      "role": null,
+      "rect": {
+        "x": 72,
+        "y": 8,
+        "left": 72,
+        "top": 8,
+        "right": 169.63,
+        "bottom": 48,
+        "width": 97.63,
+        "height": 40
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "20px",
+        "lineHeight": "30px",
+        "fontWeight": "400",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "nowrap",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 120.82,
+          "y": 28
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "a",
+          "id": null,
+          "text": "API Quality"
+        }
+      }
+    },
+    {
+      "tag": "a",
+      "id": null,
+      "name": null,
+      "type": null,
+      "text": "Dashboard",
+      "accessibleName": {
+        "value": "Dashboard",
+        "source": "element text"
+      },
+      "href": "/",
+      "role": null,
+      "rect": {
+        "x": 185.63,
+        "y": 8,
+        "left": 185.63,
+        "top": 8,
+        "right": 278.73,
+        "bottom": 48,
+        "width": 93.11,
+        "height": 40
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgba(255, 255, 255, 0.55)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "normal",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 232.18,
+          "y": 28
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "a",
+          "id": null,
+          "text": "Dashboard"
+        }
+      }
+    },
+    {
+      "tag": "a",
+      "id": null,
+      "name": null,
+      "type": null,
+      "text": "APIs",
+      "accessibleName": {
+        "value": "APIs",
+        "source": "element text"
+      },
+      "href": "/Apis",
+      "role": null,
+      "rect": {
+        "x": 278.73,
+        "y": 8,
+        "left": 278.73,
+        "top": 8,
+        "right": 325.06,
+        "bottom": 48,
+        "width": 46.33,
+        "height": 40
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgba(255, 255, 255, 0.55)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "normal",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 301.9,
+          "y": 28
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "a",
+          "id": null,
+          "text": "APIs"
+        }
+      }
+    },
+    {
+      "tag": "a",
+      "id": null,
+      "name": null,
+      "type": null,
+      "text": "Defects",
+      "accessibleName": {
+        "value": "Defects",
+        "source": "element text"
+      },
+      "href": "/Defects",
+      "role": null,
+      "rect": {
+        "x": 325.06,
+        "y": 8,
+        "left": 325.06,
+        "top": 8,
+        "right": 393.63,
+        "bottom": 48,
+        "width": 68.56,
+        "height": 40
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgba(255, 255, 255, 0.55)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "normal",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 359.35,
+          "y": 28
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "a",
+          "id": null,
+          "text": "Defects"
+        }
+      }
+    },
+    {
+      "tag": "a",
+      "id": null,
+      "name": null,
+      "type": null,
+      "text": "Export Results",
+      "accessibleName": {
+        "value": "Export Results",
+        "source": "element text"
+      },
+      "href": "/Reports/ExportResultsCsv",
+      "role": null,
+      "rect": {
+        "x": 393.63,
+        "y": 8,
+        "left": 393.63,
+        "top": 8,
+        "right": 508.61,
+        "bottom": 48,
+        "width": 114.98,
+        "height": 40
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgba(255, 255, 255, 0.55)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "normal",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 451.12,
+          "y": 28
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "a",
+          "id": null,
+          "text": "Export Results"
+        }
+      }
+    },
+    {
+      "tag": "select",
+      "id": "roleSelect",
+      "name": "role",
+      "type": null,
+      "text": "Viewer Tester Admin",
+      "accessibleName": {
+        "value": "Role",
+        "source": "associated label"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 1272,
+        "y": 12.5,
+        "left": 1272,
+        "top": 12.5,
+        "right": 1360,
+        "bottom": 43.5,
+        "width": 88,
+        "height": 31
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "14px",
+        "lineHeight": "21px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "pre",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 1316,
+          "y": 28
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "select",
+          "id": "roleSelect",
+          "text": "Viewer Tester Admin"
+        }
+      }
+    },
+    {
+      "tag": "input",
+      "id": "Name",
+      "name": "Name",
+      "type": "text",
+      "text": "",
+      "accessibleName": {
+        "value": "Name",
+        "source": "associated label"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 89,
+        "y": 252.59,
+        "left": 89,
+        "top": 252.59,
+        "right": 1351,
+        "bottom": 290.59,
+        "width": 1262,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "normal",
+        "overflowWrap": "break-word",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 720,
+          "y": 271.59
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "input",
+          "id": "Name",
+          "text": ""
+        }
+      }
+    },
+    {
+      "tag": "input",
+      "id": "BaseUrl",
+      "name": "BaseUrl",
+      "type": "url",
+      "text": "",
+      "accessibleName": {
+        "value": "BaseUrl",
+        "source": "associated label"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 89,
+        "y": 338.59,
+        "left": 89,
+        "top": 338.59,
+        "right": 1351,
+        "bottom": 376.59,
+        "width": 1262,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "normal",
+        "overflowWrap": "break-word",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 720,
+          "y": 357.59
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "input",
+          "id": "BaseUrl",
+          "text": ""
+        }
+      }
+    },
+    {
+      "tag": "textarea",
+      "id": "Description",
+      "name": "Description",
+      "type": null,
+      "text": "",
+      "accessibleName": {
+        "value": "Description",
+        "source": "associated label"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 89,
+        "y": 424.59,
+        "left": 89,
+        "top": 424.59,
+        "right": 1351,
+        "bottom": 486.59,
+        "width": 1262,
+        "height": 62
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "auto",
+        "overflowY": "auto",
+        "whiteSpace": "pre-wrap",
+        "overflowWrap": "break-word",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 720,
+          "y": 455.59
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "textarea",
+          "id": "Description",
+          "text": ""
+        }
+      }
+    },
+    {
+      "tag": "button",
+      "id": null,
+      "name": null,
+      "type": "submit",
+      "text": "Save API",
+      "accessibleName": {
+        "value": "Save API",
+        "source": "element text"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 89,
+        "y": 502.59,
+        "left": 89,
+        "top": 502.59,
+        "right": 1351,
+        "bottom": 540.59,
+        "width": 1262,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(13, 110, 253)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "normal",
+        "overflowWrap": "break-word",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 720,
+          "y": 521.59
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "button",
+          "id": null,
+          "text": "Save API"
+        }
+      }
+    }
+  ],
+  "formControls": [
+    {
+      "tag": "select",
+      "id": "roleSelect",
+      "name": "role",
+      "type": null,
+      "text": "Viewer Tester Admin",
+      "accessibleName": {
+        "value": "Role",
+        "source": "associated label"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 1272,
+        "y": 12.5,
+        "left": 1272,
+        "top": 12.5,
+        "right": 1360,
+        "bottom": 43.5,
+        "width": 88,
+        "height": 31
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "14px",
+        "lineHeight": "21px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "pre",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 1316,
+          "y": 28
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "select",
+          "id": "roleSelect",
+          "text": "Viewer Tester Admin"
+        }
+      }
+    },
+    {
+      "tag": "input",
+      "id": "Name",
+      "name": "Name",
+      "type": "text",
+      "text": "",
+      "accessibleName": {
+        "value": "Name",
+        "source": "associated label"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 89,
+        "y": 252.59,
+        "left": 89,
+        "top": 252.59,
+        "right": 1351,
+        "bottom": 290.59,
+        "width": 1262,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "normal",
+        "overflowWrap": "break-word",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 720,
+          "y": 271.59
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "input",
+          "id": "Name",
+          "text": ""
+        }
+      }
+    },
+    {
+      "tag": "input",
+      "id": "BaseUrl",
+      "name": "BaseUrl",
+      "type": "url",
+      "text": "",
+      "accessibleName": {
+        "value": "BaseUrl",
+        "source": "associated label"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 89,
+        "y": 338.59,
+        "left": 89,
+        "top": 338.59,
+        "right": 1351,
+        "bottom": 376.59,
+        "width": 1262,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "normal",
+        "overflowWrap": "break-word",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 720,
+          "y": 357.59
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "input",
+          "id": "BaseUrl",
+          "text": ""
+        }
+      }
+    },
+    {
+      "tag": "textarea",
+      "id": "Description",
+      "name": "Description",
+      "type": null,
+      "text": "",
+      "accessibleName": {
+        "value": "Description",
+        "source": "associated label"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 89,
+        "y": 424.59,
+        "left": 89,
+        "top": 424.59,
+        "right": 1351,
+        "bottom": 486.59,
+        "width": 1262,
+        "height": 62
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "auto",
+        "overflowY": "auto",
+        "whiteSpace": "pre-wrap",
+        "overflowWrap": "break-word",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 720,
+          "y": 455.59
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "textarea",
+          "id": "Description",
+          "text": ""
+        }
+      }
+    }
+  ],
+  "missingInputAccessibleNames": [],
+  "overflowElements": [],
+  "overlaps": [],
+  "clippedControls": [],
+  "severityLabels": [],
+  "stretchedBadges": [],
+  "severityProgressBars": [],
+  "tables": [],
+  "limitations": [
+    "DOM and geometry measurements test technical criteria; they cannot independently establish visual readability, user acceptance, or full WCAG conformance.",
+    "Out-of-viewport content inside a horizontally scrollable table is assessed by actual wheel scrolling rather than classified as document overflow.",
+    "The absence of an HTML caption is recorded; a nearby heading may identify a table visually, while axe independently checks supported accessibility rules.",
+    "The Defect Register and Recent defects are card/list structures, not HTML tables; their text, form controls and severity labels are recorded separately."
+  ],
+  "assessment": {
+    "responsivePassed": true,
+    "tablePassed": true,
+    "meaning": "PASS refers only to the stated automated geometry, structural and native scrolling criteria. Accessibility scan and screenshot observations are assessed separately.",
+    "cosmeticStretchingCount": 0,
+    "missingInputAccessibleNameCount": 0
+  },
+  "screenshots": [
+    "C:\\Users\\zsr20\\source\\repos\\3ilmar\\apiguard\\docs\\qa-evidence\\SQA-20\\retest-20261019T095150Z\\after\\edge\\desktop-registration-full.png",
+    "C:\\Users\\zsr20\\source\\repos\\3ilmar\\apiguard\\docs\\qa-evidence\\SQA-20\\retest-20261019T095150Z\\after\\edge\\desktop-registration-viewport.png"
+  ]
+}

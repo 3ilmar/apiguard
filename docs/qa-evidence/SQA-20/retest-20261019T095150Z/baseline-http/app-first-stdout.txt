@@ -1,0 +1,105 @@
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (19ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      PRAGMA journal_mode = 'wal';
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Apis" (
+          "Id" TEXT NOT NULL CONSTRAINT "PK_Apis" PRIMARY KEY,
+          "Name" TEXT NOT NULL,
+          "BaseUrl" TEXT NOT NULL,
+          "Description" TEXT NOT NULL,
+          "CreatedAtUtc" TEXT NOT NULL
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "CheckResults" (
+          "Id" TEXT NOT NULL CONSTRAINT "PK_CheckResults" PRIMARY KEY,
+          "ApiId" TEXT NOT NULL,
+          "EndpointId" TEXT NOT NULL,
+          "CheckType" TEXT NOT NULL,
+          "Passed" INTEGER NOT NULL,
+          "Message" TEXT NOT NULL,
+          "ActualStatusCode" INTEGER NULL,
+          "ResponseTimeMs" INTEGER NULL,
+          "FailureSeverity" INTEGER NOT NULL,
+          "ExecutedAtUtc" TEXT NOT NULL
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Defects" (
+          "Id" TEXT NOT NULL CONSTRAINT "PK_Defects" PRIMARY KEY,
+          "ApiId" TEXT NOT NULL,
+          "EndpointId" TEXT NOT NULL,
+          "SourceCheckResultId" TEXT NULL,
+          "Title" TEXT NOT NULL,
+          "Description" TEXT NOT NULL,
+          "CheckType" TEXT NOT NULL,
+          "Severity" INTEGER NOT NULL,
+          "Priority" INTEGER NOT NULL,
+          "Status" INTEGER NOT NULL,
+          "AssignedTo" TEXT NULL,
+          "CreatedAtUtc" TEXT NOT NULL,
+          "UpdatedAtUtc" TEXT NOT NULL,
+          "RetestedAtUtc" TEXT NULL
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Endpoints" (
+          "Id" TEXT NOT NULL CONSTRAINT "PK_Endpoints" PRIMARY KEY,
+          "ApiId" TEXT NOT NULL,
+          "Name" TEXT NOT NULL,
+          "Path" TEXT NOT NULL,
+          "Method" TEXT NOT NULL,
+          "ExpectedStatusCode" INTEGER NOT NULL,
+          "MaxResponseTimeMs" INTEGER NOT NULL,
+          "RequiresAuthentication" INTEGER NOT NULL,
+          "ExpectedContentType" TEXT NULL,
+          CONSTRAINT "FK_Endpoints_Apis_ApiId" FOREIGN KEY ("ApiId") REFERENCES "Apis" ("Id") ON DELETE CASCADE
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX "IX_Apis_BaseUrl" ON "Apis" ("BaseUrl");
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX "IX_CheckResults_ApiId" ON "CheckResults" ("ApiId");
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX "IX_Defects_EndpointId" ON "Defects" ("EndpointId");
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX "IX_Endpoints_ApiId_Method_Path" ON "Endpoints" ("ApiId", "Method", "Path");
+info: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[63]
+      User profile is available. Using 'C:\Users\zsr20\AppData\Local\Packages\sandbox.{4b15de5f-bdd0-4397-90a6-5e7e596226f1}\AC\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+info: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[58]
+      Creating key {9993a81d-6421-4199-83c4-afa722e40dd9} with creation date 2026-10-19 09:55:04Z, activation date 2026-10-19 09:55:04Z, and expiration date 2027-01-17 09:55:04Z.
+info: Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository[39]
+      Writing data to file 'C:\Users\zsr20\AppData\Local\Packages\sandbox.{4b15de5f-bdd0-4397-90a6-5e7e596226f1}\AC\ASP.NET\DataProtection-Keys\key-9993a81d-6421-4199-83c4-afa722e40dd9.xml'.
+fail: Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider[48]
+      An error occurred while reading the key ring.
+      System.UnauthorizedAccessException: Access to the path is denied.
+         at System.IO.FileSystem.MoveFile(String sourceFullPath, String destFullPath, Boolean overwrite)
+         at Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository.StoreElementCore(XElement element, String filename)
+         at Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository.StoreElement(XElement element, String friendlyName)
+         at Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager.Microsoft.AspNetCore.DataProtection.KeyManagement.Internal.IInternalXmlKeyManager.CreateNewKey(Guid keyId, DateTimeOffset creationDate, DateTimeOffset activationDate, DateTimeOffset expirationDate)
+         at Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager.CreateNewKey(DateTimeOffset activationDate, DateTimeOffset expirationDate)
+         at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider.CreateCacheableKeyRingCore(DateTimeOffset now, IKey keyJustAdded)
+         at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider.GetCurrentKeyRingCore(DateTime utcNow, Boolean forceRefresh)
+info: Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService[66]
+      Key ring failed to load during application startup.
+      System.UnauthorizedAccessException: Access to the path is denied.
+         at System.IO.FileSystem.MoveFile(String sourceFullPath, String destFullPath, Boolean overwrite)
+         at Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository.StoreElementCore(XElement element, String filename)
+         at Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository.StoreElement(XElement element, String friendlyName)
+         at Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager.Microsoft.AspNetCore.DataProtection.KeyManagement.Internal.IInternalXmlKeyManager.CreateNewKey(Guid keyId, DateTimeOffset creationDate, DateTimeOffset activationDate, DateTimeOffset expirationDate)
+         at Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager.CreateNewKey(DateTimeOffset activationDate, DateTimeOffset expirationDate)
+         at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider.CreateCacheableKeyRingCore(DateTimeOffset now, IKey keyJustAdded)
+         at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider.GetCurrentKeyRingCore(DateTime utcNow, Boolean forceRefresh)
+         at Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService.StartAsync(CancellationToken token)
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://127.0.0.1:51921
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Web

@@ -1,0 +1,1 @@
+Invalid report filter. Use apiId as a GUID, status as one of New, Triaged, Assigned, InProgress, Resolved, Retest, Closed, Reopened, Deferred, and severity as one of Low, Medium, High, Critical. Omit a filter to include all values.

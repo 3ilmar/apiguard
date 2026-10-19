@@ -1,0 +1,147 @@
+{
+  "Test": "PT-01",
+  "Kind": "http",
+  "Status": "PASS",
+  "Error": null,
+  "StartedUtc": "2026-10-19T09:53:07.4712464+00:00",
+  "FinishedUtc": "2026-10-19T09:53:08.5767285+00:00",
+  "ThresholdMs": 2000,
+  "Rule": "Every first and warmed measured duration must be strictly below 2000 ms; correctness must pass",
+  "SampleCount": 20,
+  "ResultCount": 2000,
+  "ApiCount": 1,
+  "EndpointCount": 1,
+  "DefectCount": 80,
+  "Fixture": "Fixed IDs and UTC timestamps; 1000 pass/1000 fail, 1333 timings, 48 open defects (12 per severity); isolated SqlitePlatformStore; no outbound checks",
+  "FixtureSha256": "CCBE6723FB603221C3CECB95BB176BD6426E8F7611B96D3AC0565A1D7927AC18",
+  "Runtime": ".NET 8.0.32",
+  "OS": "Microsoft Windows 10.0.26200",
+  "Architecture": "X64",
+  "LogicalProcessors": 20,
+  "ProcessId": 12368,
+  "Frequency": 10000000,
+  "IsHighResolution": true,
+  "BuildConfiguration": "Release",
+  "TargetFramework": "net8.0",
+  "Measurement": {
+    "Boundary": "HttpClient GET / through real loopback TCP/Kestrel \u002B MVC \u002B Razor \u002B SQLite-backed store until complete HTML body received; excludes host startup, seeding, decoding/assertions, CSS fetch, browser layout/paint",
+    "Url": "http://127.0.0.1:59732/",
+    "FirstRequest": {
+      "ElapsedMs": 139.0651,
+      "StatusCode": 200,
+      "BodyBytes": 14289
+    },
+    "WarmupCount": 3,
+    "Samples": [
+      {
+        "ElapsedMs": 43.9264,
+        "StatusCode": 200,
+        "BodyBytes": 14289
+      },
+      {
+        "ElapsedMs": 39.5904,
+        "StatusCode": 200,
+        "BodyBytes": 14289
+      },
+      {
+        "ElapsedMs": 43.2256,
+        "StatusCode": 200,
+        "BodyBytes": 14289
+      },
+      {
+        "ElapsedMs": 39.7704,
+        "StatusCode": 200,
+        "BodyBytes": 14289
+      },
+      {
+        "ElapsedMs": 31.0503,
+        "StatusCode": 200,
+        "BodyBytes": 14289
+      },
+      {
+        "ElapsedMs": 28.4181,
+        "StatusCode": 200,
+        "BodyBytes": 14289
+      },
+      {
+        "ElapsedMs": 38.6236,
+        "StatusCode": 200,
+        "BodyBytes": 14289
+      },
+      {
+        "ElapsedMs": 43.0897,
+        "StatusCode": 200,
+        "BodyBytes": 14289
+      },
+      {
+        "ElapsedMs": 33.6586,
+        "StatusCode": 200,
+        "BodyBytes": 14289
+      },
+      {
+        "ElapsedMs": 35.9978,
+        "StatusCode": 200,
+        "BodyBytes": 14289
+      },
+      {
+        "ElapsedMs": 38.6971,
+        "StatusCode": 200,
+        "BodyBytes": 14289
+      },
+      {
+        "ElapsedMs": 36.2855,
+        "StatusCode": 200,
+        "BodyBytes": 14289
+      },
+      {
+        "ElapsedMs": 45.2475,
+        "StatusCode": 200,
+        "BodyBytes": 14289
+      },
+      {
+        "ElapsedMs": 37.2882,
+        "StatusCode": 200,
+        "BodyBytes": 14289
+      },
+      {
+        "ElapsedMs": 34.8728,
+        "StatusCode": 200,
+        "BodyBytes": 14289
+      },
+      {
+        "ElapsedMs": 32.8863,
+        "StatusCode": 200,
+        "BodyBytes": 14289
+      },
+      {
+        "ElapsedMs": 38.2053,
+        "StatusCode": 200,
+        "BodyBytes": 14289
+      },
+      {
+        "ElapsedMs": 25.9431,
+        "StatusCode": 200,
+        "BodyBytes": 14289
+      },
+      {
+        "ElapsedMs": 32.2639,
+        "StatusCode": 200,
+        "BodyBytes": 14289
+      },
+      {
+        "ElapsedMs": 34.0117,
+        "StatusCode": 200,
+        "BodyBytes": 14289
+      }
+    ],
+    "WarmStatistics": {
+      "MinMs": 25.9431,
+      "MedianMs": 36.78685,
+      "MeanMs": 36.652615,
+      "P95Ms": 43.9264,
+      "MaxMs": 45.2475
+    },
+    "Concurrency": 1,
+    "Connection": "First request opens a connection; later requests reuse HttpClient/connection; no proxy or redirects"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "checkedAtUtc": "2026-10-19T10:09:15.868601+00:00",
+  "purpose": "Evidence consistency only; no product test executed",
+  "status": "PASS",
+  "sourceFilesChecked": 84,
+  "changedApplicationFiles": [
+    "SecureApiQualityPlatform.Web/Views/Apis/Details.cshtml",
+    "SecureApiQualityPlatform.Web/Views/Defects/Index.cshtml",
+    "SecureApiQualityPlatform.Web/wwwroot/css/site.css"
+  ],
+  "historicalEvidence": {
+    "checkedFiles": 361,
+    "changed": []
+  },
+  "masterRegister": {
+    "planned": 22,
+    "executed": 16,
+    "confirmedPass": 15,
+    "provisionalPass": 1,
+    "failed": 0,
+    "blocked": 0,
+    "notRun": 6,
+    "otherRowsPreserved": true,
+    "sqa18Preserved": true,
+    "sqa19Preserved": true
+  },
+  "missingLocalLinks": [],
+  "stagedChanges": false
+}

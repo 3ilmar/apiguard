@@ -1,0 +1,50 @@
+[
+  {
+    "pid": 19708,
+    "startedUtc": "2026-10-19T09:57:12.966220+00:00",
+    "command": [
+      "dotnet",
+      "C:\\Users\\zsr20\\source\\repos\\3ilmar\\apiguard\\SecureApiQualityPlatform.Web\\bin\\Release\\net8.0\\SecureApiQualityPlatform.Web.dll",
+      "--urls",
+      "http://127.0.0.1:51921",
+      "--contentRoot",
+      "C:\\Users\\zsr20\\source\\repos\\3ilmar\\apiguard\\SecureApiQualityPlatform.Web"
+    ],
+    "database": "C:\\Users\\zsr20\\source\\repos\\3ilmar\\apiguard\\docs\\qa-evidence\\SQA-20\\retest-20261019T095150Z\\baseline-http-4\\isolated-app.db",
+    "privateTargetsEnabledForOwnedLoopbackFixtureOnly": false,
+    "stoppedUtc": "2026-10-19T09:57:15.477847+00:00",
+    "exitCode": 1
+  },
+  {
+    "pid": 38652,
+    "startedUtc": "2026-10-19T09:57:15.484940+00:00",
+    "command": [
+      "dotnet",
+      "C:\\Users\\zsr20\\source\\repos\\3ilmar\\apiguard\\SecureApiQualityPlatform.Web\\bin\\Release\\net8.0\\SecureApiQualityPlatform.Web.dll",
+      "--urls",
+      "http://127.0.0.1:51921",
+      "--contentRoot",
+      "C:\\Users\\zsr20\\source\\repos\\3ilmar\\apiguard\\SecureApiQualityPlatform.Web"
+    ],
+    "database": "C:\\Users\\zsr20\\source\\repos\\3ilmar\\apiguard\\docs\\qa-evidence\\SQA-20\\retest-20261019T095150Z\\baseline-http-4\\isolated-app.db",
+    "privateTargetsEnabledForOwnedLoopbackFixtureOnly": true,
+    "stoppedUtc": "2026-10-19T09:57:18.656952+00:00",
+    "exitCode": 1
+  },
+  {
+    "pid": 18896,
+    "startedUtc": "2026-10-19T09:57:18.665026+00:00",
+    "command": [
+      "dotnet",
+      "C:\\Users\\zsr20\\source\\repos\\3ilmar\\apiguard\\SecureApiQualityPlatform.Web\\bin\\Release\\net8.0\\SecureApiQualityPlatform.Web.dll",
+      "--urls",
+      "http://127.0.0.1:51921",
+      "--contentRoot",
+      "C:\\Users\\zsr20\\source\\repos\\3ilmar\\apiguard\\SecureApiQualityPlatform.Web"
+    ],
+    "database": "C:\\Users\\zsr20\\source\\repos\\3ilmar\\apiguard\\docs\\qa-evidence\\SQA-20\\retest-20261019T095150Z\\baseline-http-4\\isolated-app.db",
+    "privateTargetsEnabledForOwnedLoopbackFixtureOnly": true,
+    "stoppedUtc": "2026-10-19T09:57:20.388401+00:00",
+    "exitCode": 1
+  }
+]

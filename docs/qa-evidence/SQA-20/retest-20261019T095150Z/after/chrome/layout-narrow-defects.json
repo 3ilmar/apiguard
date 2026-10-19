@@ -1,0 +1,2070 @@
+{
+  "capturedUtc": "2026-10-19T10:01:03.301Z",
+  "url": "http://localhost:51920/Defects",
+  "viewport": {
+    "width": 375,
+    "height": 812,
+    "devicePixelRatio": 1
+  },
+  "document": {
+    "clientWidth": 375,
+    "scrollWidth": 375,
+    "clientHeight": 812,
+    "scrollHeight": 1918,
+    "bodyClientWidth": 375,
+    "bodyScrollWidth": 375,
+    "horizontalOverflow": false
+  },
+  "headings": [
+    {
+      "tag": "h1",
+      "id": null,
+      "name": null,
+      "type": null,
+      "text": "Defect Register",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 12,
+        "y": 201.17,
+        "left": 12,
+        "top": 201.17,
+        "right": 171.28,
+        "bottom": 228.83,
+        "width": 159.28,
+        "height": 27.66
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "23.05px",
+        "lineHeight": "27.66px",
+        "fontWeight": "500",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "normal",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 91.64,
+          "y": 215
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "h1",
+          "id": null,
+          "text": "Defect Register"
+        }
+      }
+    }
+  ],
+  "navigation": [
+    {
+      "tag": "nav",
+      "id": null,
+      "name": null,
+      "type": null,
+      "text": "API Quality Dashboard APIs Defects Export Results Role Viewer Tester Admin",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "left": 0,
+        "top": 0,
+        "right": 375,
+        "bottom": 176,
+        "width": 375,
+        "height": 176
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(33, 37, 41)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "normal",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 187.5,
+          "y": 88
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "a",
+          "id": null,
+          "text": "Defects"
+        }
+      }
+    }
+  ],
+  "controls": [
+    {
+      "tag": "a",
+      "id": null,
+      "name": null,
+      "type": null,
+      "text": "API Quality",
+      "accessibleName": {
+        "value": "API Quality",
+        "source": "element text"
+      },
+      "href": "/",
+      "role": null,
+      "rect": {
+        "x": 12,
+        "y": 68,
+        "left": 12,
+        "top": 68,
+        "right": 109.63,
+        "bottom": 108,
+        "width": 97.63,
+        "height": 40
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "20px",
+        "lineHeight": "30px",
+        "fontWeight": "400",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "nowrap",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 60.82,
+          "y": 88
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "a",
+          "id": null,
+          "text": "API Quality"
+        }
+      }
+    },
+    {
+      "tag": "a",
+      "id": null,
+      "name": null,
+      "type": null,
+      "text": "Dashboard",
+      "accessibleName": {
+        "value": "Dashboard",
+        "source": "element text"
+      },
+      "href": "/",
+      "role": null,
+      "rect": {
+        "x": 125.63,
+        "y": 8,
+        "left": 125.63,
+        "top": 8,
+        "right": 224.61,
+        "bottom": 48,
+        "width": 98.98,
+        "height": 40
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgba(255, 255, 255, 0.55)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "normal",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 175.12,
+          "y": 28
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "a",
+          "id": null,
+          "text": "Dashboard"
+        }
+      }
+    },
+    {
+      "tag": "a",
+      "id": null,
+      "name": null,
+      "type": null,
+      "text": "APIs",
+      "accessibleName": {
+        "value": "APIs",
+        "source": "element text"
+      },
+      "href": "/Apis",
+      "role": null,
+      "rect": {
+        "x": 125.63,
+        "y": 48,
+        "left": 125.63,
+        "top": 48,
+        "right": 224.61,
+        "bottom": 88,
+        "width": 98.98,
+        "height": 40
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgba(255, 255, 255, 0.55)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "normal",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 175.12,
+          "y": 68
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "a",
+          "id": null,
+          "text": "APIs"
+        }
+      }
+    },
+    {
+      "tag": "a",
+      "id": null,
+      "name": null,
+      "type": null,
+      "text": "Defects",
+      "accessibleName": {
+        "value": "Defects",
+        "source": "element text"
+      },
+      "href": "/Defects",
+      "role": null,
+      "rect": {
+        "x": 125.63,
+        "y": 88,
+        "left": 125.63,
+        "top": 88,
+        "right": 224.61,
+        "bottom": 128,
+        "width": 98.98,
+        "height": 40
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgba(255, 255, 255, 0.55)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "normal",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 175.12,
+          "y": 108
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "a",
+          "id": null,
+          "text": "Defects"
+        }
+      }
+    },
+    {
+      "tag": "a",
+      "id": null,
+      "name": null,
+      "type": null,
+      "text": "Export Results",
+      "accessibleName": {
+        "value": "Export Results",
+        "source": "element text"
+      },
+      "href": "/Reports/ExportResultsCsv",
+      "role": null,
+      "rect": {
+        "x": 125.63,
+        "y": 128,
+        "left": 125.63,
+        "top": 128,
+        "right": 224.61,
+        "bottom": 168,
+        "width": 98.98,
+        "height": 40
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgba(255, 255, 255, 0.55)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "normal",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 175.12,
+          "y": 148
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "a",
+          "id": null,
+          "text": "Export Results"
+        }
+      }
+    },
+    {
+      "tag": "select",
+      "id": "roleSelect",
+      "name": "role",
+      "type": null,
+      "text": "Viewer Tester Admin",
+      "accessibleName": {
+        "value": "Role",
+        "source": "associated label"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 267,
+        "y": 72.5,
+        "left": 267,
+        "top": 72.5,
+        "right": 355,
+        "bottom": 103.5,
+        "width": 88,
+        "height": 31
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "14px",
+        "lineHeight": "21px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "pre",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 311,
+          "y": 88
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "select",
+          "id": "roleSelect",
+          "text": "Viewer Tester Admin"
+        }
+      }
+    },
+    {
+      "tag": "a",
+      "id": null,
+      "name": null,
+      "type": null,
+      "text": "Export CSV",
+      "accessibleName": {
+        "value": "Export CSV",
+        "source": "element text"
+      },
+      "href": "/Reports/ExportDefectsCsv",
+      "role": null,
+      "rect": {
+        "x": 259.06,
+        "y": 200,
+        "left": 259.06,
+        "top": 200,
+        "right": 363,
+        "bottom": 238,
+        "width": 103.94,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(73, 80, 87)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "normal",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 311.03,
+          "y": 219
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "a",
+          "id": null,
+          "text": "Export CSV"
+        }
+      }
+    },
+    {
+      "tag": "select",
+      "id": "status-58bd17df-c9d1-4ed3-b448-6d57fbd89600",
+      "name": "status",
+      "type": null,
+      "text": "New Triaged Assigned InProgress Resolved Retest Closed Reopened Deferred",
+      "accessibleName": {
+        "value": "Status",
+        "source": "associated label"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 29,
+        "y": 430,
+        "left": 29,
+        "top": 430,
+        "right": 346,
+        "bottom": 468,
+        "width": 317,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "pre",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 187.5,
+          "y": 449
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "select",
+          "id": "status-58bd17df-c9d1-4ed3-b448-6d57fbd89600",
+          "text": "New Triaged Assigned InProgress Resolved Retest Closed Reopened Deferred"
+        }
+      }
+    },
+    {
+      "tag": "select",
+      "id": "priority-58bd17df-c9d1-4ed3-b448-6d57fbd89600",
+      "name": "priority",
+      "type": null,
+      "text": "Low Medium High Urgent",
+      "accessibleName": {
+        "value": "Priority",
+        "source": "associated label"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 29,
+        "y": 508,
+        "left": 29,
+        "top": 508,
+        "right": 346,
+        "bottom": 546,
+        "width": 317,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "pre",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 187.5,
+          "y": 527
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "select",
+          "id": "priority-58bd17df-c9d1-4ed3-b448-6d57fbd89600",
+          "text": "Low Medium High Urgent"
+        }
+      }
+    },
+    {
+      "tag": "input",
+      "id": "assigned-to-58bd17df-c9d1-4ed3-b448-6d57fbd89600",
+      "name": "assignedTo",
+      "type": null,
+      "text": "",
+      "accessibleName": {
+        "value": "Assigned to",
+        "source": "associated label"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 29,
+        "y": 586,
+        "left": 29,
+        "top": 586,
+        "right": 346,
+        "bottom": 624,
+        "width": 317,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "normal",
+        "overflowWrap": "break-word",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 187.5,
+          "y": 605
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "input",
+          "id": "assigned-to-58bd17df-c9d1-4ed3-b448-6d57fbd89600",
+          "text": ""
+        }
+      }
+    },
+    {
+      "tag": "button",
+      "id": null,
+      "name": null,
+      "type": null,
+      "text": "Update",
+      "accessibleName": {
+        "value": "Update",
+        "source": "element text"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 29,
+        "y": 632,
+        "left": 29,
+        "top": 632,
+        "right": 346,
+        "bottom": 670,
+        "width": 317,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(13, 110, 253)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "normal",
+        "overflowWrap": "break-word",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 187.5,
+          "y": 651
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "button",
+          "id": null,
+          "text": "Update"
+        }
+      }
+    },
+    {
+      "tag": "select",
+      "id": "status-d0327d7e-cd4f-4153-b02c-f611926e9395",
+      "name": "status",
+      "type": null,
+      "text": "New Triaged Assigned InProgress Resolved Retest Closed Reopened Deferred",
+      "accessibleName": {
+        "value": "Status",
+        "source": "associated label"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 29,
+        "y": 813,
+        "left": 29,
+        "top": 813,
+        "right": 346,
+        "bottom": 851,
+        "width": 317,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "pre",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 187.5,
+          "y": 832
+        },
+        "applicable": false,
+        "receivesPointer": null,
+        "topElement": null
+      }
+    },
+    {
+      "tag": "select",
+      "id": "priority-d0327d7e-cd4f-4153-b02c-f611926e9395",
+      "name": "priority",
+      "type": null,
+      "text": "Low Medium High Urgent",
+      "accessibleName": {
+        "value": "Priority",
+        "source": "associated label"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 29,
+        "y": 891,
+        "left": 29,
+        "top": 891,
+        "right": 346,
+        "bottom": 929,
+        "width": 317,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "pre",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 187.5,
+          "y": 910
+        },
+        "applicable": false,
+        "receivesPointer": null,
+        "topElement": null
+      }
+    },
+    {
+      "tag": "input",
+      "id": "assigned-to-d0327d7e-cd4f-4153-b02c-f611926e9395",
+      "name": "assignedTo",
+      "type": null,
+      "text": "",
+      "accessibleName": {
+        "value": "Assigned to",
+        "source": "associated label"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 29,
+        "y": 969,
+        "left": 29,
+        "top": 969,
+        "right": 346,
+        "bottom": 1007,
+        "width": 317,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "normal",
+        "overflowWrap": "break-word",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 187.5,
+          "y": 988
+        },
+        "applicable": false,
+        "receivesPointer": null,
+        "topElement": null
+      }
+    },
+    {
+      "tag": "button",
+      "id": null,
+      "name": null,
+      "type": null,
+      "text": "Update",
+      "accessibleName": {
+        "value": "Update",
+        "source": "element text"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 29,
+        "y": 1015,
+        "left": 29,
+        "top": 1015,
+        "right": 346,
+        "bottom": 1053,
+        "width": 317,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(13, 110, 253)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "normal",
+        "overflowWrap": "break-word",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 187.5,
+          "y": 1034
+        },
+        "applicable": false,
+        "receivesPointer": null,
+        "topElement": null
+      }
+    },
+    {
+      "tag": "select",
+      "id": "status-b1eacc90-dc1e-409a-a642-79ceb26fe7d6",
+      "name": "status",
+      "type": null,
+      "text": "New Triaged Assigned InProgress Resolved Retest Closed Reopened Deferred",
+      "accessibleName": {
+        "value": "Status",
+        "source": "associated label"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 29,
+        "y": 1217,
+        "left": 29,
+        "top": 1217,
+        "right": 346,
+        "bottom": 1255,
+        "width": 317,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "pre",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 187.5,
+          "y": 1236
+        },
+        "applicable": false,
+        "receivesPointer": null,
+        "topElement": null
+      }
+    },
+    {
+      "tag": "select",
+      "id": "priority-b1eacc90-dc1e-409a-a642-79ceb26fe7d6",
+      "name": "priority",
+      "type": null,
+      "text": "Low Medium High Urgent",
+      "accessibleName": {
+        "value": "Priority",
+        "source": "associated label"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 29,
+        "y": 1295,
+        "left": 29,
+        "top": 1295,
+        "right": 346,
+        "bottom": 1333,
+        "width": 317,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "pre",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 187.5,
+          "y": 1314
+        },
+        "applicable": false,
+        "receivesPointer": null,
+        "topElement": null
+      }
+    },
+    {
+      "tag": "input",
+      "id": "assigned-to-b1eacc90-dc1e-409a-a642-79ceb26fe7d6",
+      "name": "assignedTo",
+      "type": null,
+      "text": "",
+      "accessibleName": {
+        "value": "Assigned to",
+        "source": "associated label"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 29,
+        "y": 1373,
+        "left": 29,
+        "top": 1373,
+        "right": 346,
+        "bottom": 1411,
+        "width": 317,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "normal",
+        "overflowWrap": "break-word",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 187.5,
+          "y": 1392
+        },
+        "applicable": false,
+        "receivesPointer": null,
+        "topElement": null
+      }
+    },
+    {
+      "tag": "button",
+      "id": null,
+      "name": null,
+      "type": null,
+      "text": "Update",
+      "accessibleName": {
+        "value": "Update",
+        "source": "element text"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 29,
+        "y": 1419,
+        "left": 29,
+        "top": 1419,
+        "right": 346,
+        "bottom": 1457,
+        "width": 317,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(13, 110, 253)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "normal",
+        "overflowWrap": "break-word",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 187.5,
+          "y": 1438
+        },
+        "applicable": false,
+        "receivesPointer": null,
+        "topElement": null
+      }
+    },
+    {
+      "tag": "select",
+      "id": "status-753fe811-7c9d-43f5-a0ef-ac3b9cb5bcc1",
+      "name": "status",
+      "type": null,
+      "text": "New Triaged Assigned InProgress Resolved Retest Closed Reopened Deferred",
+      "accessibleName": {
+        "value": "Status",
+        "source": "associated label"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 29,
+        "y": 1621,
+        "left": 29,
+        "top": 1621,
+        "right": 346,
+        "bottom": 1659,
+        "width": 317,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "pre",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 187.5,
+          "y": 1640
+        },
+        "applicable": false,
+        "receivesPointer": null,
+        "topElement": null
+      }
+    },
+    {
+      "tag": "select",
+      "id": "priority-753fe811-7c9d-43f5-a0ef-ac3b9cb5bcc1",
+      "name": "priority",
+      "type": null,
+      "text": "Low Medium High Urgent",
+      "accessibleName": {
+        "value": "Priority",
+        "source": "associated label"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 29,
+        "y": 1699,
+        "left": 29,
+        "top": 1699,
+        "right": 346,
+        "bottom": 1737,
+        "width": 317,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "pre",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 187.5,
+          "y": 1718
+        },
+        "applicable": false,
+        "receivesPointer": null,
+        "topElement": null
+      }
+    },
+    {
+      "tag": "input",
+      "id": "assigned-to-753fe811-7c9d-43f5-a0ef-ac3b9cb5bcc1",
+      "name": "assignedTo",
+      "type": null,
+      "text": "",
+      "accessibleName": {
+        "value": "Assigned to",
+        "source": "associated label"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 29,
+        "y": 1777,
+        "left": 29,
+        "top": 1777,
+        "right": 346,
+        "bottom": 1815,
+        "width": 317,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "normal",
+        "overflowWrap": "break-word",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 187.5,
+          "y": 1796
+        },
+        "applicable": false,
+        "receivesPointer": null,
+        "topElement": null
+      }
+    },
+    {
+      "tag": "button",
+      "id": null,
+      "name": null,
+      "type": null,
+      "text": "Update",
+      "accessibleName": {
+        "value": "Update",
+        "source": "element text"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 29,
+        "y": 1823,
+        "left": 29,
+        "top": 1823,
+        "right": 346,
+        "bottom": 1861,
+        "width": 317,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(13, 110, 253)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "normal",
+        "overflowWrap": "break-word",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 187.5,
+          "y": 1842
+        },
+        "applicable": false,
+        "receivesPointer": null,
+        "topElement": null
+      }
+    }
+  ],
+  "formControls": [
+    {
+      "tag": "select",
+      "id": "roleSelect",
+      "name": "role",
+      "type": null,
+      "text": "Viewer Tester Admin",
+      "accessibleName": {
+        "value": "Role",
+        "source": "associated label"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 267,
+        "y": 72.5,
+        "left": 267,
+        "top": 72.5,
+        "right": 355,
+        "bottom": 103.5,
+        "width": 88,
+        "height": 31
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "14px",
+        "lineHeight": "21px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "pre",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 311,
+          "y": 88
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "select",
+          "id": "roleSelect",
+          "text": "Viewer Tester Admin"
+        }
+      }
+    },
+    {
+      "tag": "select",
+      "id": "status-58bd17df-c9d1-4ed3-b448-6d57fbd89600",
+      "name": "status",
+      "type": null,
+      "text": "New Triaged Assigned InProgress Resolved Retest Closed Reopened Deferred",
+      "accessibleName": {
+        "value": "Status",
+        "source": "associated label"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 29,
+        "y": 430,
+        "left": 29,
+        "top": 430,
+        "right": 346,
+        "bottom": 468,
+        "width": 317,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "pre",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 187.5,
+          "y": 449
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "select",
+          "id": "status-58bd17df-c9d1-4ed3-b448-6d57fbd89600",
+          "text": "New Triaged Assigned InProgress Resolved Retest Closed Reopened Deferred"
+        }
+      }
+    },
+    {
+      "tag": "select",
+      "id": "priority-58bd17df-c9d1-4ed3-b448-6d57fbd89600",
+      "name": "priority",
+      "type": null,
+      "text": "Low Medium High Urgent",
+      "accessibleName": {
+        "value": "Priority",
+        "source": "associated label"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 29,
+        "y": 508,
+        "left": 29,
+        "top": 508,
+        "right": 346,
+        "bottom": 546,
+        "width": 317,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "pre",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 187.5,
+          "y": 527
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "select",
+          "id": "priority-58bd17df-c9d1-4ed3-b448-6d57fbd89600",
+          "text": "Low Medium High Urgent"
+        }
+      }
+    },
+    {
+      "tag": "input",
+      "id": "assigned-to-58bd17df-c9d1-4ed3-b448-6d57fbd89600",
+      "name": "assignedTo",
+      "type": null,
+      "text": "",
+      "accessibleName": {
+        "value": "Assigned to",
+        "source": "associated label"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 29,
+        "y": 586,
+        "left": 29,
+        "top": 586,
+        "right": 346,
+        "bottom": 624,
+        "width": 317,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "normal",
+        "overflowWrap": "break-word",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 187.5,
+          "y": 605
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "input",
+          "id": "assigned-to-58bd17df-c9d1-4ed3-b448-6d57fbd89600",
+          "text": ""
+        }
+      }
+    },
+    {
+      "tag": "select",
+      "id": "status-d0327d7e-cd4f-4153-b02c-f611926e9395",
+      "name": "status",
+      "type": null,
+      "text": "New Triaged Assigned InProgress Resolved Retest Closed Reopened Deferred",
+      "accessibleName": {
+        "value": "Status",
+        "source": "associated label"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 29,
+        "y": 813,
+        "left": 29,
+        "top": 813,
+        "right": 346,
+        "bottom": 851,
+        "width": 317,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "pre",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 187.5,
+          "y": 832
+        },
+        "applicable": false,
+        "receivesPointer": null,
+        "topElement": null
+      }
+    },
+    {
+      "tag": "select",
+      "id": "priority-d0327d7e-cd4f-4153-b02c-f611926e9395",
+      "name": "priority",
+      "type": null,
+      "text": "Low Medium High Urgent",
+      "accessibleName": {
+        "value": "Priority",
+        "source": "associated label"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 29,
+        "y": 891,
+        "left": 29,
+        "top": 891,
+        "right": 346,
+        "bottom": 929,
+        "width": 317,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "pre",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 187.5,
+          "y": 910
+        },
+        "applicable": false,
+        "receivesPointer": null,
+        "topElement": null
+      }
+    },
+    {
+      "tag": "input",
+      "id": "assigned-to-d0327d7e-cd4f-4153-b02c-f611926e9395",
+      "name": "assignedTo",
+      "type": null,
+      "text": "",
+      "accessibleName": {
+        "value": "Assigned to",
+        "source": "associated label"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 29,
+        "y": 969,
+        "left": 29,
+        "top": 969,
+        "right": 346,
+        "bottom": 1007,
+        "width": 317,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "normal",
+        "overflowWrap": "break-word",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 187.5,
+          "y": 988
+        },
+        "applicable": false,
+        "receivesPointer": null,
+        "topElement": null
+      }
+    },
+    {
+      "tag": "select",
+      "id": "status-b1eacc90-dc1e-409a-a642-79ceb26fe7d6",
+      "name": "status",
+      "type": null,
+      "text": "New Triaged Assigned InProgress Resolved Retest Closed Reopened Deferred",
+      "accessibleName": {
+        "value": "Status",
+        "source": "associated label"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 29,
+        "y": 1217,
+        "left": 29,
+        "top": 1217,
+        "right": 346,
+        "bottom": 1255,
+        "width": 317,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "pre",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 187.5,
+          "y": 1236
+        },
+        "applicable": false,
+        "receivesPointer": null,
+        "topElement": null
+      }
+    },
+    {
+      "tag": "select",
+      "id": "priority-b1eacc90-dc1e-409a-a642-79ceb26fe7d6",
+      "name": "priority",
+      "type": null,
+      "text": "Low Medium High Urgent",
+      "accessibleName": {
+        "value": "Priority",
+        "source": "associated label"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 29,
+        "y": 1295,
+        "left": 29,
+        "top": 1295,
+        "right": 346,
+        "bottom": 1333,
+        "width": 317,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "pre",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 187.5,
+          "y": 1314
+        },
+        "applicable": false,
+        "receivesPointer": null,
+        "topElement": null
+      }
+    },
+    {
+      "tag": "input",
+      "id": "assigned-to-b1eacc90-dc1e-409a-a642-79ceb26fe7d6",
+      "name": "assignedTo",
+      "type": null,
+      "text": "",
+      "accessibleName": {
+        "value": "Assigned to",
+        "source": "associated label"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 29,
+        "y": 1373,
+        "left": 29,
+        "top": 1373,
+        "right": 346,
+        "bottom": 1411,
+        "width": 317,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "normal",
+        "overflowWrap": "break-word",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 187.5,
+          "y": 1392
+        },
+        "applicable": false,
+        "receivesPointer": null,
+        "topElement": null
+      }
+    },
+    {
+      "tag": "select",
+      "id": "status-753fe811-7c9d-43f5-a0ef-ac3b9cb5bcc1",
+      "name": "status",
+      "type": null,
+      "text": "New Triaged Assigned InProgress Resolved Retest Closed Reopened Deferred",
+      "accessibleName": {
+        "value": "Status",
+        "source": "associated label"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 29,
+        "y": 1621,
+        "left": 29,
+        "top": 1621,
+        "right": 346,
+        "bottom": 1659,
+        "width": 317,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "pre",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 187.5,
+          "y": 1640
+        },
+        "applicable": false,
+        "receivesPointer": null,
+        "topElement": null
+      }
+    },
+    {
+      "tag": "select",
+      "id": "priority-753fe811-7c9d-43f5-a0ef-ac3b9cb5bcc1",
+      "name": "priority",
+      "type": null,
+      "text": "Low Medium High Urgent",
+      "accessibleName": {
+        "value": "Priority",
+        "source": "associated label"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 29,
+        "y": 1699,
+        "left": 29,
+        "top": 1699,
+        "right": 346,
+        "bottom": 1737,
+        "width": 317,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "pre",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 187.5,
+          "y": 1718
+        },
+        "applicable": false,
+        "receivesPointer": null,
+        "topElement": null
+      }
+    },
+    {
+      "tag": "input",
+      "id": "assigned-to-753fe811-7c9d-43f5-a0ef-ac3b9cb5bcc1",
+      "name": "assignedTo",
+      "type": null,
+      "text": "",
+      "accessibleName": {
+        "value": "Assigned to",
+        "source": "associated label"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 29,
+        "y": 1777,
+        "left": 29,
+        "top": 1777,
+        "right": 346,
+        "bottom": 1815,
+        "width": 317,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "normal",
+        "overflowWrap": "break-word",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 187.5,
+          "y": 1796
+        },
+        "applicable": false,
+        "receivesPointer": null,
+        "topElement": null
+      }
+    }
+  ],
+  "missingInputAccessibleNames": [],
+  "overflowElements": [],
+  "overlaps": [],
+  "clippedControls": [],
+  "severityLabels": [
+    {
+      "tag": "span",
+      "id": null,
+      "name": null,
+      "type": null,
+      "text": "Critical",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 290.97,
+        "y": 271,
+        "left": 290.97,
+        "top": 271,
+        "right": 346,
+        "bottom": 291.38,
+        "width": 55.03,
+        "height": 20.38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "12px",
+        "lineHeight": "12px",
+        "fontWeight": "700",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(108, 117, 125)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "nowrap",
+        "overflowWrap": "break-word",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 318.49,
+          "y": 281.19
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "span",
+          "id": null,
+          "text": "Critical"
+        }
+      },
+      "parentHeight": 111,
+      "textRect": {
+        "left": 298.77,
+        "top": 273.19,
+        "right": 338.2,
+        "bottom": 289.19,
+        "width": 39.44,
+        "height": 16
+      },
+      "normalLineHeight": 12,
+      "stretched": false,
+      "textGeometricallyContained": true,
+      "assessment": "No vertical badge stretching measured."
+    },
+    {
+      "tag": "span",
+      "id": null,
+      "name": null,
+      "type": null,
+      "text": "High",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 303.14,
+        "y": 720,
+        "left": 303.14,
+        "top": 720,
+        "right": 346,
+        "bottom": 740.38,
+        "width": 42.86,
+        "height": 20.38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "12px",
+        "lineHeight": "12px",
+        "fontWeight": "700",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(108, 117, 125)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "nowrap",
+        "overflowWrap": "break-word",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 324.57,
+          "y": 730.19
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "span",
+          "id": null,
+          "text": "High"
+        }
+      },
+      "parentHeight": 45,
+      "textRect": {
+        "left": 310.94,
+        "top": 722.19,
+        "right": 338.2,
+        "bottom": 738.19,
+        "width": 27.27,
+        "height": 16
+      },
+      "normalLineHeight": 12,
+      "stretched": false,
+      "textGeometricallyContained": true,
+      "assessment": "No vertical badge stretching measured."
+    },
+    {
+      "tag": "span",
+      "id": null,
+      "name": null,
+      "type": null,
+      "text": "Medium",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 283.33,
+        "y": 1103,
+        "left": 283.33,
+        "top": 1103,
+        "right": 346,
+        "bottom": 1123.38,
+        "width": 62.67,
+        "height": 20.38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "12px",
+        "lineHeight": "12px",
+        "fontWeight": "700",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(108, 117, 125)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "nowrap",
+        "overflowWrap": "break-word",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 314.66,
+          "y": 1113.19
+        },
+        "applicable": false,
+        "receivesPointer": null,
+        "topElement": null
+      },
+      "parentHeight": 66,
+      "textRect": {
+        "left": 291.13,
+        "top": 1105.19,
+        "right": 338.2,
+        "bottom": 1121.19,
+        "width": 47.08,
+        "height": 16
+      },
+      "normalLineHeight": 12,
+      "stretched": false,
+      "textGeometricallyContained": true,
+      "assessment": "No vertical badge stretching measured."
+    },
+    {
+      "tag": "span",
+      "id": null,
+      "name": null,
+      "type": null,
+      "text": "Low",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 307.36,
+        "y": 1507,
+        "left": 307.36,
+        "top": 1507,
+        "right": 346,
+        "bottom": 1527.38,
+        "width": 38.64,
+        "height": 20.38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "12px",
+        "lineHeight": "12px",
+        "fontWeight": "700",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(108, 117, 125)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "nowrap",
+        "overflowWrap": "break-word",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 326.68,
+          "y": 1517.19
+        },
+        "applicable": false,
+        "receivesPointer": null,
+        "topElement": null
+      },
+      "parentHeight": 66,
+      "textRect": {
+        "left": 315.16,
+        "top": 1509.19,
+        "right": 338.2,
+        "bottom": 1525.19,
+        "width": 23.05,
+        "height": 16
+      },
+      "normalLineHeight": 12,
+      "stretched": false,
+      "textGeometricallyContained": true,
+      "assessment": "No vertical badge stretching measured."
+    }
+  ],
+  "stretchedBadges": [],
+  "severityProgressBars": [],
+  "tables": [],
+  "limitations": [
+    "DOM and geometry measurements test technical criteria; they cannot independently establish visual readability, user acceptance, or full WCAG conformance.",
+    "Out-of-viewport content inside a horizontally scrollable table is assessed by actual wheel scrolling rather than classified as document overflow.",
+    "The absence of an HTML caption is recorded; a nearby heading may identify a table visually, while axe independently checks supported accessibility rules.",
+    "The Defect Register and Recent defects are card/list structures, not HTML tables; their text, form controls and severity labels are recorded separately."
+  ],
+  "assessment": {
+    "responsivePassed": true,
+    "tablePassed": true,
+    "meaning": "PASS refers only to the stated automated geometry, structural and native scrolling criteria. Accessibility scan and screenshot observations are assessed separately.",
+    "cosmeticStretchingCount": 0,
+    "missingInputAccessibleNameCount": 0
+  },
+  "screenshots": [
+    "C:\\Users\\zsr20\\source\\repos\\3ilmar\\apiguard\\docs\\qa-evidence\\SQA-20\\retest-20261019T095150Z\\after\\chrome\\narrow-defects-full.png",
+    "C:\\Users\\zsr20\\source\\repos\\3ilmar\\apiguard\\docs\\qa-evidence\\SQA-20\\retest-20261019T095150Z\\after\\chrome\\narrow-defects-viewport.png"
+  ]
+}

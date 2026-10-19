@@ -1,0 +1,34 @@
+[
+  {
+    "pid": 38356,
+    "startedUtc": "2026-10-19T09:56:21.365292+00:00",
+    "command": [
+      "dotnet",
+      "C:\\Users\\zsr20\\source\\repos\\3ilmar\\apiguard\\SecureApiQualityPlatform.Web\\bin\\Release\\net8.0\\SecureApiQualityPlatform.Web.dll",
+      "--urls",
+      "http://127.0.0.1:51921",
+      "--contentRoot",
+      "C:\\Users\\zsr20\\source\\repos\\3ilmar\\apiguard\\SecureApiQualityPlatform.Web"
+    ],
+    "database": "C:\\Users\\zsr20\\source\\repos\\3ilmar\\apiguard\\docs\\qa-evidence\\SQA-20\\retest-20261019T095150Z\\baseline-http-3\\isolated-app.db",
+    "privateTargetsEnabledForOwnedLoopbackFixtureOnly": true,
+    "stoppedUtc": "2026-10-19T09:56:26.857438+00:00",
+    "exitCode": 1
+  },
+  {
+    "pid": 35284,
+    "startedUtc": "2026-10-19T09:56:26.870494+00:00",
+    "command": [
+      "dotnet",
+      "C:\\Users\\zsr20\\source\\repos\\3ilmar\\apiguard\\SecureApiQualityPlatform.Web\\bin\\Release\\net8.0\\SecureApiQualityPlatform.Web.dll",
+      "--urls",
+      "http://127.0.0.1:51921",
+      "--contentRoot",
+      "C:\\Users\\zsr20\\source\\repos\\3ilmar\\apiguard\\SecureApiQualityPlatform.Web"
+    ],
+    "database": "C:\\Users\\zsr20\\source\\repos\\3ilmar\\apiguard\\docs\\qa-evidence\\SQA-20\\retest-20261019T095150Z\\baseline-http-3\\isolated-app.db",
+    "privateTargetsEnabledForOwnedLoopbackFixtureOnly": true,
+    "stoppedUtc": "2026-10-19T09:56:28.665365+00:00",
+    "exitCode": 1
+  }
+]

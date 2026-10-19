@@ -1,0 +1,3048 @@
+{
+  "capturedUtc": "2026-10-19T09:54:22.238Z",
+  "url": "http://localhost:51920/Defects",
+  "viewport": {
+    "width": 1440,
+    "height": 900,
+    "devicePixelRatio": 1
+  },
+  "document": {
+    "clientWidth": 1440,
+    "scrollWidth": 1440,
+    "clientHeight": 900,
+    "scrollHeight": 900,
+    "bodyClientWidth": 1440,
+    "bodyScrollWidth": 1440,
+    "horizontalOverflow": false
+  },
+  "headings": [
+    {
+      "tag": "h1",
+      "id": null,
+      "name": null,
+      "type": null,
+      "text": "Defect Register",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 72,
+        "y": 80,
+        "left": 72,
+        "top": 80,
+        "right": 265.48,
+        "bottom": 113.59,
+        "width": 193.48,
+        "height": 33.59
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "28px",
+        "lineHeight": "33.6px",
+        "fontWeight": "500",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "normal",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 168.74,
+          "y": 96.8
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "h1",
+          "id": null,
+          "text": "Defect Register"
+        }
+      }
+    }
+  ],
+  "navigation": [
+    {
+      "tag": "nav",
+      "id": null,
+      "name": null,
+      "type": null,
+      "text": "API Quality Dashboard APIs Defects Export Results Role Viewer Tester Admin",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "left": 0,
+        "top": 0,
+        "right": 1440,
+        "bottom": 56,
+        "width": 1440,
+        "height": 56
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(33, 37, 41)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "normal",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 720,
+          "y": 28
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "div",
+          "id": null,
+          "text": "API Quality Dashboard APIs Defects Export Results Role Viewer Tester Admin"
+        }
+      }
+    }
+  ],
+  "controls": [
+    {
+      "tag": "a",
+      "id": null,
+      "name": null,
+      "type": null,
+      "text": "API Quality",
+      "accessibleName": {
+        "value": "API Quality",
+        "source": "element text"
+      },
+      "href": "/",
+      "role": null,
+      "rect": {
+        "x": 72,
+        "y": 8,
+        "left": 72,
+        "top": 8,
+        "right": 169.63,
+        "bottom": 48,
+        "width": 97.63,
+        "height": 40
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "20px",
+        "lineHeight": "30px",
+        "fontWeight": "400",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "nowrap",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 120.82,
+          "y": 28
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "a",
+          "id": null,
+          "text": "API Quality"
+        }
+      }
+    },
+    {
+      "tag": "a",
+      "id": null,
+      "name": null,
+      "type": null,
+      "text": "Dashboard",
+      "accessibleName": {
+        "value": "Dashboard",
+        "source": "element text"
+      },
+      "href": "/",
+      "role": null,
+      "rect": {
+        "x": 185.63,
+        "y": 8,
+        "left": 185.63,
+        "top": 8,
+        "right": 278.73,
+        "bottom": 48,
+        "width": 93.11,
+        "height": 40
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgba(255, 255, 255, 0.55)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "normal",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 232.18,
+          "y": 28
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "a",
+          "id": null,
+          "text": "Dashboard"
+        }
+      }
+    },
+    {
+      "tag": "a",
+      "id": null,
+      "name": null,
+      "type": null,
+      "text": "APIs",
+      "accessibleName": {
+        "value": "APIs",
+        "source": "element text"
+      },
+      "href": "/Apis",
+      "role": null,
+      "rect": {
+        "x": 278.73,
+        "y": 8,
+        "left": 278.73,
+        "top": 8,
+        "right": 325.06,
+        "bottom": 48,
+        "width": 46.33,
+        "height": 40
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgba(255, 255, 255, 0.55)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "normal",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 301.9,
+          "y": 28
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "a",
+          "id": null,
+          "text": "APIs"
+        }
+      }
+    },
+    {
+      "tag": "a",
+      "id": null,
+      "name": null,
+      "type": null,
+      "text": "Defects",
+      "accessibleName": {
+        "value": "Defects",
+        "source": "element text"
+      },
+      "href": "/Defects",
+      "role": null,
+      "rect": {
+        "x": 325.06,
+        "y": 8,
+        "left": 325.06,
+        "top": 8,
+        "right": 393.63,
+        "bottom": 48,
+        "width": 68.56,
+        "height": 40
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgba(255, 255, 255, 0.55)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "normal",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 359.35,
+          "y": 28
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "a",
+          "id": null,
+          "text": "Defects"
+        }
+      }
+    },
+    {
+      "tag": "a",
+      "id": null,
+      "name": null,
+      "type": null,
+      "text": "Export Results",
+      "accessibleName": {
+        "value": "Export Results",
+        "source": "element text"
+      },
+      "href": "/Reports/ExportResultsCsv",
+      "role": null,
+      "rect": {
+        "x": 393.63,
+        "y": 8,
+        "left": 393.63,
+        "top": 8,
+        "right": 508.61,
+        "bottom": 48,
+        "width": 114.98,
+        "height": 40
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgba(255, 255, 255, 0.55)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "normal",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 451.12,
+          "y": 28
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "a",
+          "id": null,
+          "text": "Export Results"
+        }
+      }
+    },
+    {
+      "tag": "select",
+      "id": "roleSelect",
+      "name": "role",
+      "type": null,
+      "text": "Viewer Tester Admin",
+      "accessibleName": {
+        "value": "Role",
+        "source": "associated label"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 1272,
+        "y": 12.5,
+        "left": 1272,
+        "top": 12.5,
+        "right": 1360,
+        "bottom": 43.5,
+        "width": 88,
+        "height": 31
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "14px",
+        "lineHeight": "21px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "pre",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 1316,
+          "y": 28
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "select",
+          "id": "roleSelect",
+          "text": "Viewer Tester Admin"
+        }
+      }
+    },
+    {
+      "tag": "a",
+      "id": null,
+      "name": null,
+      "type": null,
+      "text": "Export CSV",
+      "accessibleName": {
+        "value": "Export CSV",
+        "source": "element text"
+      },
+      "href": "/Reports/ExportDefectsCsv",
+      "role": null,
+      "rect": {
+        "x": 1264.06,
+        "y": 81.8,
+        "left": 1264.06,
+        "top": 81.8,
+        "right": 1368,
+        "bottom": 119.8,
+        "width": 103.94,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(108, 117, 125)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "normal",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 1316.03,
+          "y": 100.8
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "a",
+          "id": null,
+          "text": "Export CSV"
+        }
+      }
+    },
+    {
+      "tag": "select",
+      "id": null,
+      "name": "status",
+      "type": null,
+      "text": "New Triaged Assigned InProgress Resolved Retest Closed Reopened Deferred",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 89,
+        "y": 247.59,
+        "left": 89,
+        "top": 247.59,
+        "right": 398.5,
+        "bottom": 285.59,
+        "width": 309.5,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "pre",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 243.75,
+          "y": 266.59
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "select",
+          "id": null,
+          "text": "New Triaged Assigned InProgress Resolved Retest Closed Reopened Deferred"
+        }
+      }
+    },
+    {
+      "tag": "select",
+      "id": null,
+      "name": "priority",
+      "type": null,
+      "text": "Low Medium High Urgent",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 406.5,
+        "y": 247.59,
+        "left": 406.5,
+        "top": 247.59,
+        "right": 716,
+        "bottom": 285.59,
+        "width": 309.5,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "pre",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 561.25,
+          "y": 266.59
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "select",
+          "id": null,
+          "text": "Low Medium High Urgent"
+        }
+      }
+    },
+    {
+      "tag": "input",
+      "id": null,
+      "name": "assignedTo",
+      "type": null,
+      "text": "",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 724,
+        "y": 247.59,
+        "left": 724,
+        "top": 247.59,
+        "right": 1139.33,
+        "bottom": 285.59,
+        "width": 415.33,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "normal",
+        "overflowWrap": "break-word",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 931.67,
+          "y": 266.59
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "input",
+          "id": null,
+          "text": ""
+        }
+      }
+    },
+    {
+      "tag": "button",
+      "id": null,
+      "name": null,
+      "type": null,
+      "text": "Update",
+      "accessibleName": {
+        "value": "Update",
+        "source": "element text"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 1147.33,
+        "y": 247.59,
+        "left": 1147.33,
+        "top": 247.59,
+        "right": 1350.98,
+        "bottom": 285.59,
+        "width": 203.66,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(13, 110, 253)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "normal",
+        "overflowWrap": "break-word",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 1249.16,
+          "y": 266.59
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "button",
+          "id": null,
+          "text": "Update"
+        }
+      }
+    },
+    {
+      "tag": "select",
+      "id": null,
+      "name": "status",
+      "type": null,
+      "text": "New Triaged Assigned InProgress Resolved Retest Closed Reopened Deferred",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 89,
+        "y": 428.59,
+        "left": 89,
+        "top": 428.59,
+        "right": 398.5,
+        "bottom": 466.59,
+        "width": 309.5,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "pre",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 243.75,
+          "y": 447.59
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "select",
+          "id": null,
+          "text": "New Triaged Assigned InProgress Resolved Retest Closed Reopened Deferred"
+        }
+      }
+    },
+    {
+      "tag": "select",
+      "id": null,
+      "name": "priority",
+      "type": null,
+      "text": "Low Medium High Urgent",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 406.5,
+        "y": 428.59,
+        "left": 406.5,
+        "top": 428.59,
+        "right": 716,
+        "bottom": 466.59,
+        "width": 309.5,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "pre",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 561.25,
+          "y": 447.59
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "select",
+          "id": null,
+          "text": "Low Medium High Urgent"
+        }
+      }
+    },
+    {
+      "tag": "input",
+      "id": null,
+      "name": "assignedTo",
+      "type": null,
+      "text": "",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 724,
+        "y": 428.59,
+        "left": 724,
+        "top": 428.59,
+        "right": 1139.33,
+        "bottom": 466.59,
+        "width": 415.33,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "normal",
+        "overflowWrap": "break-word",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 931.67,
+          "y": 447.59
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "input",
+          "id": null,
+          "text": ""
+        }
+      }
+    },
+    {
+      "tag": "button",
+      "id": null,
+      "name": null,
+      "type": null,
+      "text": "Update",
+      "accessibleName": {
+        "value": "Update",
+        "source": "element text"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 1147.33,
+        "y": 428.59,
+        "left": 1147.33,
+        "top": 428.59,
+        "right": 1350.98,
+        "bottom": 466.59,
+        "width": 203.66,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(13, 110, 253)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "normal",
+        "overflowWrap": "break-word",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 1249.16,
+          "y": 447.59
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "button",
+          "id": null,
+          "text": "Update"
+        }
+      }
+    },
+    {
+      "tag": "select",
+      "id": null,
+      "name": "status",
+      "type": null,
+      "text": "New Triaged Assigned InProgress Resolved Retest Closed Reopened Deferred",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 89,
+        "y": 609.59,
+        "left": 89,
+        "top": 609.59,
+        "right": 398.5,
+        "bottom": 647.59,
+        "width": 309.5,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "pre",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 243.75,
+          "y": 628.59
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "select",
+          "id": null,
+          "text": "New Triaged Assigned InProgress Resolved Retest Closed Reopened Deferred"
+        }
+      }
+    },
+    {
+      "tag": "select",
+      "id": null,
+      "name": "priority",
+      "type": null,
+      "text": "Low Medium High Urgent",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 406.5,
+        "y": 609.59,
+        "left": 406.5,
+        "top": 609.59,
+        "right": 716,
+        "bottom": 647.59,
+        "width": 309.5,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "pre",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 561.25,
+          "y": 628.59
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "select",
+          "id": null,
+          "text": "Low Medium High Urgent"
+        }
+      }
+    },
+    {
+      "tag": "input",
+      "id": null,
+      "name": "assignedTo",
+      "type": null,
+      "text": "",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 724,
+        "y": 609.59,
+        "left": 724,
+        "top": 609.59,
+        "right": 1139.33,
+        "bottom": 647.59,
+        "width": 415.33,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "normal",
+        "overflowWrap": "break-word",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 931.67,
+          "y": 628.59
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "input",
+          "id": null,
+          "text": ""
+        }
+      }
+    },
+    {
+      "tag": "button",
+      "id": null,
+      "name": null,
+      "type": null,
+      "text": "Update",
+      "accessibleName": {
+        "value": "Update",
+        "source": "element text"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 1147.33,
+        "y": 609.59,
+        "left": 1147.33,
+        "top": 609.59,
+        "right": 1350.98,
+        "bottom": 647.59,
+        "width": 203.66,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(13, 110, 253)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "normal",
+        "overflowWrap": "break-word",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 1249.16,
+          "y": 628.59
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "button",
+          "id": null,
+          "text": "Update"
+        }
+      }
+    },
+    {
+      "tag": "select",
+      "id": null,
+      "name": "status",
+      "type": null,
+      "text": "New Triaged Assigned InProgress Resolved Retest Closed Reopened Deferred",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 89,
+        "y": 790.59,
+        "left": 89,
+        "top": 790.59,
+        "right": 398.5,
+        "bottom": 828.59,
+        "width": 309.5,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "pre",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 243.75,
+          "y": 809.59
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "select",
+          "id": null,
+          "text": "New Triaged Assigned InProgress Resolved Retest Closed Reopened Deferred"
+        }
+      }
+    },
+    {
+      "tag": "select",
+      "id": null,
+      "name": "priority",
+      "type": null,
+      "text": "Low Medium High Urgent",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 406.5,
+        "y": 790.59,
+        "left": 406.5,
+        "top": 790.59,
+        "right": 716,
+        "bottom": 828.59,
+        "width": 309.5,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "pre",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 561.25,
+          "y": 809.59
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "select",
+          "id": null,
+          "text": "Low Medium High Urgent"
+        }
+      }
+    },
+    {
+      "tag": "input",
+      "id": null,
+      "name": "assignedTo",
+      "type": null,
+      "text": "",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 724,
+        "y": 790.59,
+        "left": 724,
+        "top": 790.59,
+        "right": 1139.33,
+        "bottom": 828.59,
+        "width": 415.33,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "normal",
+        "overflowWrap": "break-word",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 931.67,
+          "y": 809.59
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "input",
+          "id": null,
+          "text": ""
+        }
+      }
+    },
+    {
+      "tag": "button",
+      "id": null,
+      "name": null,
+      "type": null,
+      "text": "Update",
+      "accessibleName": {
+        "value": "Update",
+        "source": "element text"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 1147.33,
+        "y": 790.59,
+        "left": 1147.33,
+        "top": 790.59,
+        "right": 1350.98,
+        "bottom": 828.59,
+        "width": 203.66,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(13, 110, 253)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "normal",
+        "overflowWrap": "break-word",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 1249.16,
+          "y": 809.59
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "button",
+          "id": null,
+          "text": "Update"
+        }
+      }
+    }
+  ],
+  "formControls": [
+    {
+      "tag": "select",
+      "id": "roleSelect",
+      "name": "role",
+      "type": null,
+      "text": "Viewer Tester Admin",
+      "accessibleName": {
+        "value": "Role",
+        "source": "associated label"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 1272,
+        "y": 12.5,
+        "left": 1272,
+        "top": 12.5,
+        "right": 1360,
+        "bottom": 43.5,
+        "width": 88,
+        "height": 31
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "14px",
+        "lineHeight": "21px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "pre",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 1316,
+          "y": 28
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "select",
+          "id": "roleSelect",
+          "text": "Viewer Tester Admin"
+        }
+      }
+    },
+    {
+      "tag": "select",
+      "id": null,
+      "name": "status",
+      "type": null,
+      "text": "New Triaged Assigned InProgress Resolved Retest Closed Reopened Deferred",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 89,
+        "y": 247.59,
+        "left": 89,
+        "top": 247.59,
+        "right": 398.5,
+        "bottom": 285.59,
+        "width": 309.5,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "pre",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 243.75,
+          "y": 266.59
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "select",
+          "id": null,
+          "text": "New Triaged Assigned InProgress Resolved Retest Closed Reopened Deferred"
+        }
+      }
+    },
+    {
+      "tag": "select",
+      "id": null,
+      "name": "priority",
+      "type": null,
+      "text": "Low Medium High Urgent",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 406.5,
+        "y": 247.59,
+        "left": 406.5,
+        "top": 247.59,
+        "right": 716,
+        "bottom": 285.59,
+        "width": 309.5,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "pre",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 561.25,
+          "y": 266.59
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "select",
+          "id": null,
+          "text": "Low Medium High Urgent"
+        }
+      }
+    },
+    {
+      "tag": "input",
+      "id": null,
+      "name": "assignedTo",
+      "type": null,
+      "text": "",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 724,
+        "y": 247.59,
+        "left": 724,
+        "top": 247.59,
+        "right": 1139.33,
+        "bottom": 285.59,
+        "width": 415.33,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "normal",
+        "overflowWrap": "break-word",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 931.67,
+          "y": 266.59
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "input",
+          "id": null,
+          "text": ""
+        }
+      }
+    },
+    {
+      "tag": "select",
+      "id": null,
+      "name": "status",
+      "type": null,
+      "text": "New Triaged Assigned InProgress Resolved Retest Closed Reopened Deferred",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 89,
+        "y": 428.59,
+        "left": 89,
+        "top": 428.59,
+        "right": 398.5,
+        "bottom": 466.59,
+        "width": 309.5,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "pre",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 243.75,
+          "y": 447.59
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "select",
+          "id": null,
+          "text": "New Triaged Assigned InProgress Resolved Retest Closed Reopened Deferred"
+        }
+      }
+    },
+    {
+      "tag": "select",
+      "id": null,
+      "name": "priority",
+      "type": null,
+      "text": "Low Medium High Urgent",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 406.5,
+        "y": 428.59,
+        "left": 406.5,
+        "top": 428.59,
+        "right": 716,
+        "bottom": 466.59,
+        "width": 309.5,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "pre",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 561.25,
+          "y": 447.59
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "select",
+          "id": null,
+          "text": "Low Medium High Urgent"
+        }
+      }
+    },
+    {
+      "tag": "input",
+      "id": null,
+      "name": "assignedTo",
+      "type": null,
+      "text": "",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 724,
+        "y": 428.59,
+        "left": 724,
+        "top": 428.59,
+        "right": 1139.33,
+        "bottom": 466.59,
+        "width": 415.33,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "normal",
+        "overflowWrap": "break-word",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 931.67,
+          "y": 447.59
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "input",
+          "id": null,
+          "text": ""
+        }
+      }
+    },
+    {
+      "tag": "select",
+      "id": null,
+      "name": "status",
+      "type": null,
+      "text": "New Triaged Assigned InProgress Resolved Retest Closed Reopened Deferred",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 89,
+        "y": 609.59,
+        "left": 89,
+        "top": 609.59,
+        "right": 398.5,
+        "bottom": 647.59,
+        "width": 309.5,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "pre",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 243.75,
+          "y": 628.59
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "select",
+          "id": null,
+          "text": "New Triaged Assigned InProgress Resolved Retest Closed Reopened Deferred"
+        }
+      }
+    },
+    {
+      "tag": "select",
+      "id": null,
+      "name": "priority",
+      "type": null,
+      "text": "Low Medium High Urgent",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 406.5,
+        "y": 609.59,
+        "left": 406.5,
+        "top": 609.59,
+        "right": 716,
+        "bottom": 647.59,
+        "width": 309.5,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "pre",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 561.25,
+          "y": 628.59
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "select",
+          "id": null,
+          "text": "Low Medium High Urgent"
+        }
+      }
+    },
+    {
+      "tag": "input",
+      "id": null,
+      "name": "assignedTo",
+      "type": null,
+      "text": "",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 724,
+        "y": 609.59,
+        "left": 724,
+        "top": 609.59,
+        "right": 1139.33,
+        "bottom": 647.59,
+        "width": 415.33,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "normal",
+        "overflowWrap": "break-word",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 931.67,
+          "y": 628.59
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "input",
+          "id": null,
+          "text": ""
+        }
+      }
+    },
+    {
+      "tag": "select",
+      "id": null,
+      "name": "status",
+      "type": null,
+      "text": "New Triaged Assigned InProgress Resolved Retest Closed Reopened Deferred",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 89,
+        "y": 790.59,
+        "left": 89,
+        "top": 790.59,
+        "right": 398.5,
+        "bottom": 828.59,
+        "width": 309.5,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "pre",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 243.75,
+          "y": 809.59
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "select",
+          "id": null,
+          "text": "New Triaged Assigned InProgress Resolved Retest Closed Reopened Deferred"
+        }
+      }
+    },
+    {
+      "tag": "select",
+      "id": null,
+      "name": "priority",
+      "type": null,
+      "text": "Low Medium High Urgent",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 406.5,
+        "y": 790.59,
+        "left": 406.5,
+        "top": 790.59,
+        "right": 716,
+        "bottom": 828.59,
+        "width": 309.5,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "pre",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 561.25,
+          "y": 809.59
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "select",
+          "id": null,
+          "text": "Low Medium High Urgent"
+        }
+      }
+    },
+    {
+      "tag": "input",
+      "id": null,
+      "name": "assignedTo",
+      "type": null,
+      "text": "",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 724,
+        "y": 790.59,
+        "left": 724,
+        "top": 790.59,
+        "right": 1139.33,
+        "bottom": 828.59,
+        "width": 415.33,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "normal",
+        "overflowWrap": "break-word",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 931.67,
+          "y": 809.59
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "input",
+          "id": null,
+          "text": ""
+        }
+      }
+    }
+  ],
+  "missingInputAccessibleNames": [
+    {
+      "tag": "select",
+      "id": null,
+      "name": "status",
+      "type": null,
+      "text": "New Triaged Assigned InProgress Resolved Retest Closed Reopened Deferred",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 89,
+        "y": 247.59,
+        "left": 89,
+        "top": 247.59,
+        "right": 398.5,
+        "bottom": 285.59,
+        "width": 309.5,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "pre",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 243.75,
+          "y": 266.59
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "select",
+          "id": null,
+          "text": "New Triaged Assigned InProgress Resolved Retest Closed Reopened Deferred"
+        }
+      },
+      "adjacentLabelText": [
+        "Status"
+      ],
+      "recommendation": "Associate the visible label with a unique control id using label[for], or wrap the control in its label."
+    },
+    {
+      "tag": "select",
+      "id": null,
+      "name": "priority",
+      "type": null,
+      "text": "Low Medium High Urgent",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 406.5,
+        "y": 247.59,
+        "left": 406.5,
+        "top": 247.59,
+        "right": 716,
+        "bottom": 285.59,
+        "width": 309.5,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "pre",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 561.25,
+          "y": 266.59
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "select",
+          "id": null,
+          "text": "Low Medium High Urgent"
+        }
+      },
+      "adjacentLabelText": [
+        "Priority"
+      ],
+      "recommendation": "Associate the visible label with a unique control id using label[for], or wrap the control in its label."
+    },
+    {
+      "tag": "input",
+      "id": null,
+      "name": "assignedTo",
+      "type": null,
+      "text": "",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 724,
+        "y": 247.59,
+        "left": 724,
+        "top": 247.59,
+        "right": 1139.33,
+        "bottom": 285.59,
+        "width": 415.33,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "normal",
+        "overflowWrap": "break-word",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 931.67,
+          "y": 266.59
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "input",
+          "id": null,
+          "text": ""
+        }
+      },
+      "adjacentLabelText": [
+        "Assigned to"
+      ],
+      "recommendation": "Associate the visible label with a unique control id using label[for], or wrap the control in its label."
+    },
+    {
+      "tag": "select",
+      "id": null,
+      "name": "status",
+      "type": null,
+      "text": "New Triaged Assigned InProgress Resolved Retest Closed Reopened Deferred",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 89,
+        "y": 428.59,
+        "left": 89,
+        "top": 428.59,
+        "right": 398.5,
+        "bottom": 466.59,
+        "width": 309.5,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "pre",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 243.75,
+          "y": 447.59
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "select",
+          "id": null,
+          "text": "New Triaged Assigned InProgress Resolved Retest Closed Reopened Deferred"
+        }
+      },
+      "adjacentLabelText": [
+        "Status"
+      ],
+      "recommendation": "Associate the visible label with a unique control id using label[for], or wrap the control in its label."
+    },
+    {
+      "tag": "select",
+      "id": null,
+      "name": "priority",
+      "type": null,
+      "text": "Low Medium High Urgent",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 406.5,
+        "y": 428.59,
+        "left": 406.5,
+        "top": 428.59,
+        "right": 716,
+        "bottom": 466.59,
+        "width": 309.5,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "pre",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 561.25,
+          "y": 447.59
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "select",
+          "id": null,
+          "text": "Low Medium High Urgent"
+        }
+      },
+      "adjacentLabelText": [
+        "Priority"
+      ],
+      "recommendation": "Associate the visible label with a unique control id using label[for], or wrap the control in its label."
+    },
+    {
+      "tag": "input",
+      "id": null,
+      "name": "assignedTo",
+      "type": null,
+      "text": "",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 724,
+        "y": 428.59,
+        "left": 724,
+        "top": 428.59,
+        "right": 1139.33,
+        "bottom": 466.59,
+        "width": 415.33,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "normal",
+        "overflowWrap": "break-word",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 931.67,
+          "y": 447.59
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "input",
+          "id": null,
+          "text": ""
+        }
+      },
+      "adjacentLabelText": [
+        "Assigned to"
+      ],
+      "recommendation": "Associate the visible label with a unique control id using label[for], or wrap the control in its label."
+    },
+    {
+      "tag": "select",
+      "id": null,
+      "name": "status",
+      "type": null,
+      "text": "New Triaged Assigned InProgress Resolved Retest Closed Reopened Deferred",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 89,
+        "y": 609.59,
+        "left": 89,
+        "top": 609.59,
+        "right": 398.5,
+        "bottom": 647.59,
+        "width": 309.5,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "pre",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 243.75,
+          "y": 628.59
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "select",
+          "id": null,
+          "text": "New Triaged Assigned InProgress Resolved Retest Closed Reopened Deferred"
+        }
+      },
+      "adjacentLabelText": [
+        "Status"
+      ],
+      "recommendation": "Associate the visible label with a unique control id using label[for], or wrap the control in its label."
+    },
+    {
+      "tag": "select",
+      "id": null,
+      "name": "priority",
+      "type": null,
+      "text": "Low Medium High Urgent",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 406.5,
+        "y": 609.59,
+        "left": 406.5,
+        "top": 609.59,
+        "right": 716,
+        "bottom": 647.59,
+        "width": 309.5,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "pre",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 561.25,
+          "y": 628.59
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "select",
+          "id": null,
+          "text": "Low Medium High Urgent"
+        }
+      },
+      "adjacentLabelText": [
+        "Priority"
+      ],
+      "recommendation": "Associate the visible label with a unique control id using label[for], or wrap the control in its label."
+    },
+    {
+      "tag": "input",
+      "id": null,
+      "name": "assignedTo",
+      "type": null,
+      "text": "",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 724,
+        "y": 609.59,
+        "left": 724,
+        "top": 609.59,
+        "right": 1139.33,
+        "bottom": 647.59,
+        "width": 415.33,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "normal",
+        "overflowWrap": "break-word",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 931.67,
+          "y": 628.59
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "input",
+          "id": null,
+          "text": ""
+        }
+      },
+      "adjacentLabelText": [
+        "Assigned to"
+      ],
+      "recommendation": "Associate the visible label with a unique control id using label[for], or wrap the control in its label."
+    },
+    {
+      "tag": "select",
+      "id": null,
+      "name": "status",
+      "type": null,
+      "text": "New Triaged Assigned InProgress Resolved Retest Closed Reopened Deferred",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 89,
+        "y": 790.59,
+        "left": 89,
+        "top": 790.59,
+        "right": 398.5,
+        "bottom": 828.59,
+        "width": 309.5,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "pre",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 243.75,
+          "y": 809.59
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "select",
+          "id": null,
+          "text": "New Triaged Assigned InProgress Resolved Retest Closed Reopened Deferred"
+        }
+      },
+      "adjacentLabelText": [
+        "Status"
+      ],
+      "recommendation": "Associate the visible label with a unique control id using label[for], or wrap the control in its label."
+    },
+    {
+      "tag": "select",
+      "id": null,
+      "name": "priority",
+      "type": null,
+      "text": "Low Medium High Urgent",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 406.5,
+        "y": 790.59,
+        "left": 406.5,
+        "top": 790.59,
+        "right": 716,
+        "bottom": 828.59,
+        "width": 309.5,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "pre",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 561.25,
+          "y": 809.59
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "select",
+          "id": null,
+          "text": "Low Medium High Urgent"
+        }
+      },
+      "adjacentLabelText": [
+        "Priority"
+      ],
+      "recommendation": "Associate the visible label with a unique control id using label[for], or wrap the control in its label."
+    },
+    {
+      "tag": "input",
+      "id": null,
+      "name": "assignedTo",
+      "type": null,
+      "text": "",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 724,
+        "y": 790.59,
+        "left": 724,
+        "top": 790.59,
+        "right": 1139.33,
+        "bottom": 828.59,
+        "width": 415.33,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "whiteSpace": "normal",
+        "overflowWrap": "break-word",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 931.67,
+          "y": 809.59
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "input",
+          "id": null,
+          "text": ""
+        }
+      },
+      "adjacentLabelText": [
+        "Assigned to"
+      ],
+      "recommendation": "Associate the visible label with a unique control id using label[for], or wrap the control in its label."
+    }
+  ],
+  "overflowElements": [],
+  "overlaps": [],
+  "clippedControls": [],
+  "severityLabels": [
+    {
+      "tag": "span",
+      "id": null,
+      "name": null,
+      "type": null,
+      "text": "Critical",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 1295.97,
+        "y": 154.59,
+        "left": 1295.97,
+        "top": 154.59,
+        "right": 1351,
+        "bottom": 199.59,
+        "width": 55.03,
+        "height": 45
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "12px",
+        "lineHeight": "12px",
+        "fontWeight": "700",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(108, 117, 125)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "nowrap",
+        "overflowWrap": "break-word",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 1323.49,
+          "y": 177.09
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "span",
+          "id": null,
+          "text": "Critical"
+        }
+      },
+      "parentHeight": 45,
+      "textRect": {
+        "left": 1303.77,
+        "top": 156.78,
+        "right": 1343.2,
+        "bottom": 172.78,
+        "width": 39.44,
+        "height": 16
+      },
+      "normalLineHeight": 12,
+      "stretched": true,
+      "textGeometricallyContained": true,
+      "assessment": "Cosmetic stretching candidate; text geometry and screenshot require separate review, not an automatic responsive failure."
+    },
+    {
+      "tag": "span",
+      "id": null,
+      "name": null,
+      "type": null,
+      "text": "High",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 1308.14,
+        "y": 335.59,
+        "left": 1308.14,
+        "top": 335.59,
+        "right": 1351,
+        "bottom": 380.59,
+        "width": 42.86,
+        "height": 45
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "12px",
+        "lineHeight": "12px",
+        "fontWeight": "700",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(108, 117, 125)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "nowrap",
+        "overflowWrap": "break-word",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 1329.57,
+          "y": 358.09
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "span",
+          "id": null,
+          "text": "High"
+        }
+      },
+      "parentHeight": 45,
+      "textRect": {
+        "left": 1315.94,
+        "top": 337.78,
+        "right": 1343.2,
+        "bottom": 353.78,
+        "width": 27.27,
+        "height": 16
+      },
+      "normalLineHeight": 12,
+      "stretched": true,
+      "textGeometricallyContained": true,
+      "assessment": "Cosmetic stretching candidate; text geometry and screenshot require separate review, not an automatic responsive failure."
+    },
+    {
+      "tag": "span",
+      "id": null,
+      "name": null,
+      "type": null,
+      "text": "Medium",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 1288.33,
+        "y": 516.59,
+        "left": 1288.33,
+        "top": 516.59,
+        "right": 1351,
+        "bottom": 561.59,
+        "width": 62.67,
+        "height": 45
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "12px",
+        "lineHeight": "12px",
+        "fontWeight": "700",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(108, 117, 125)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "nowrap",
+        "overflowWrap": "break-word",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 1319.67,
+          "y": 539.09
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "span",
+          "id": null,
+          "text": "Medium"
+        }
+      },
+      "parentHeight": 45,
+      "textRect": {
+        "left": 1296.13,
+        "top": 518.78,
+        "right": 1343.2,
+        "bottom": 534.78,
+        "width": 47.08,
+        "height": 16
+      },
+      "normalLineHeight": 12,
+      "stretched": true,
+      "textGeometricallyContained": true,
+      "assessment": "Cosmetic stretching candidate; text geometry and screenshot require separate review, not an automatic responsive failure."
+    },
+    {
+      "tag": "span",
+      "id": null,
+      "name": null,
+      "type": null,
+      "text": "Low",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 1312.36,
+        "y": 697.59,
+        "left": 1312.36,
+        "top": 697.59,
+        "right": 1351,
+        "bottom": 742.59,
+        "width": 38.64,
+        "height": 45
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "12px",
+        "lineHeight": "12px",
+        "fontWeight": "700",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(108, 117, 125)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "nowrap",
+        "overflowWrap": "break-word",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 1331.68,
+          "y": 720.09
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "span",
+          "id": null,
+          "text": "Low"
+        }
+      },
+      "parentHeight": 45,
+      "textRect": {
+        "left": 1320.16,
+        "top": 699.78,
+        "right": 1343.2,
+        "bottom": 715.78,
+        "width": 23.05,
+        "height": 16
+      },
+      "normalLineHeight": 12,
+      "stretched": true,
+      "textGeometricallyContained": true,
+      "assessment": "Cosmetic stretching candidate; text geometry and screenshot require separate review, not an automatic responsive failure."
+    }
+  ],
+  "stretchedBadges": [
+    {
+      "tag": "span",
+      "id": null,
+      "name": null,
+      "type": null,
+      "text": "Critical",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 1295.97,
+        "y": 154.59,
+        "left": 1295.97,
+        "top": 154.59,
+        "right": 1351,
+        "bottom": 199.59,
+        "width": 55.03,
+        "height": 45
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "12px",
+        "lineHeight": "12px",
+        "fontWeight": "700",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(108, 117, 125)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "nowrap",
+        "overflowWrap": "break-word",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 1323.49,
+          "y": 177.09
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "span",
+          "id": null,
+          "text": "Critical"
+        }
+      },
+      "parentHeight": 45,
+      "textRect": {
+        "left": 1303.77,
+        "top": 156.78,
+        "right": 1343.2,
+        "bottom": 172.78,
+        "width": 39.44,
+        "height": 16
+      },
+      "normalLineHeight": 12,
+      "stretched": true,
+      "textGeometricallyContained": true,
+      "assessment": "Cosmetic stretching candidate; text geometry and screenshot require separate review, not an automatic responsive failure."
+    },
+    {
+      "tag": "span",
+      "id": null,
+      "name": null,
+      "type": null,
+      "text": "High",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 1308.14,
+        "y": 335.59,
+        "left": 1308.14,
+        "top": 335.59,
+        "right": 1351,
+        "bottom": 380.59,
+        "width": 42.86,
+        "height": 45
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "12px",
+        "lineHeight": "12px",
+        "fontWeight": "700",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(108, 117, 125)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "nowrap",
+        "overflowWrap": "break-word",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 1329.57,
+          "y": 358.09
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "span",
+          "id": null,
+          "text": "High"
+        }
+      },
+      "parentHeight": 45,
+      "textRect": {
+        "left": 1315.94,
+        "top": 337.78,
+        "right": 1343.2,
+        "bottom": 353.78,
+        "width": 27.27,
+        "height": 16
+      },
+      "normalLineHeight": 12,
+      "stretched": true,
+      "textGeometricallyContained": true,
+      "assessment": "Cosmetic stretching candidate; text geometry and screenshot require separate review, not an automatic responsive failure."
+    },
+    {
+      "tag": "span",
+      "id": null,
+      "name": null,
+      "type": null,
+      "text": "Medium",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 1288.33,
+        "y": 516.59,
+        "left": 1288.33,
+        "top": 516.59,
+        "right": 1351,
+        "bottom": 561.59,
+        "width": 62.67,
+        "height": 45
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "12px",
+        "lineHeight": "12px",
+        "fontWeight": "700",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(108, 117, 125)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "nowrap",
+        "overflowWrap": "break-word",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 1319.67,
+          "y": 539.09
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "span",
+          "id": null,
+          "text": "Medium"
+        }
+      },
+      "parentHeight": 45,
+      "textRect": {
+        "left": 1296.13,
+        "top": 518.78,
+        "right": 1343.2,
+        "bottom": 534.78,
+        "width": 47.08,
+        "height": 16
+      },
+      "normalLineHeight": 12,
+      "stretched": true,
+      "textGeometricallyContained": true,
+      "assessment": "Cosmetic stretching candidate; text geometry and screenshot require separate review, not an automatic responsive failure."
+    },
+    {
+      "tag": "span",
+      "id": null,
+      "name": null,
+      "type": null,
+      "text": "Low",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 1312.36,
+        "y": 697.59,
+        "left": 1312.36,
+        "top": 697.59,
+        "right": 1351,
+        "bottom": 742.59,
+        "width": 38.64,
+        "height": 45
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "12px",
+        "lineHeight": "12px",
+        "fontWeight": "700",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(108, 117, 125)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "nowrap",
+        "overflowWrap": "break-word",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 1331.68,
+          "y": 720.09
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "span",
+          "id": null,
+          "text": "Low"
+        }
+      },
+      "parentHeight": 45,
+      "textRect": {
+        "left": 1320.16,
+        "top": 699.78,
+        "right": 1343.2,
+        "bottom": 715.78,
+        "width": 23.05,
+        "height": 16
+      },
+      "normalLineHeight": 12,
+      "stretched": true,
+      "textGeometricallyContained": true,
+      "assessment": "Cosmetic stretching candidate; text geometry and screenshot require separate review, not an automatic responsive failure."
+    }
+  ],
+  "severityProgressBars": [],
+  "tables": [],
+  "limitations": [
+    "DOM and geometry measurements test technical criteria; they cannot independently establish visual readability, user acceptance, or full WCAG conformance.",
+    "Out-of-viewport content inside a horizontally scrollable table is assessed by actual wheel scrolling rather than classified as document overflow.",
+    "The absence of an HTML caption is recorded; a nearby heading may identify a table visually, while axe independently checks supported accessibility rules.",
+    "The Defect Register and Recent defects are card/list structures, not HTML tables; their text, form controls and severity labels are recorded separately."
+  ],
+  "assessment": {
+    "responsivePassed": true,
+    "tablePassed": true,
+    "meaning": "PASS refers only to the stated automated geometry, structural and native scrolling criteria. Accessibility scan and screenshot observations are assessed separately.",
+    "cosmeticStretchingCount": 4,
+    "missingInputAccessibleNameCount": 12
+  },
+  "screenshots": [
+    "C:\\Users\\zsr20\\source\\repos\\3ilmar\\apiguard\\docs\\qa-evidence\\SQA-20\\retest-20261019T095150Z\\before\\chrome\\desktop-defects-full.png",
+    "C:\\Users\\zsr20\\source\\repos\\3ilmar\\apiguard\\docs\\qa-evidence\\SQA-20\\retest-20261019T095150Z\\before\\chrome\\desktop-defects-viewport.png"
+  ]
+}

@@ -1,0 +1,6 @@
+3dfdbe4 Merge branch 'main' into fix/encoded-path-validation
+e3f2bc3 feat(rbac): enforce roles on defect update, API registration, endpoints and checks
+f462b81 fix(security): reject encoded and backslash path traversal in endpoint paths
+503e081 Improve endpoint configuration validation and duplicate prevention
+f7426b9 Improve API registration validation and duplicate prevention
+fb334f3 Add working Secure API quality platform baseline

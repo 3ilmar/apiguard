@@ -1,0 +1,27 @@
+2026-10-19T09:53:51.851Z Google Chrome 155.0.8059.80 launched from C:\Program Files\Google\Chrome\Application\chrome.exe
+2026-10-19T09:53:52.061Z chrome: desktop-dashboard
+2026-10-19T09:53:57.449Z chrome: desktop-apis
+2026-10-19T09:54:03.451Z chrome: desktop-orders
+2026-10-19T09:54:12.616Z chrome: desktop-catalogue
+2026-10-19T09:54:21.641Z chrome: desktop-defects
+2026-10-19T09:54:34.455Z chrome: desktop-registration
+2026-10-19T09:54:41.096Z chrome: narrow-dashboard
+2026-10-19T09:54:46.190Z chrome: narrow-apis
+2026-10-19T09:54:52.164Z chrome: narrow-orders
+2026-10-19T09:55:03.444Z chrome: narrow-catalogue
+2026-10-19T09:55:14.529Z chrome: narrow-defects
+2026-10-19T09:55:29.078Z chrome: narrow-registration
+2026-10-19T09:55:42.572Z Microsoft Edge 155.0.4283.62 launched from C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+2026-10-19T09:55:42.978Z edge: desktop-dashboard
+2026-10-19T09:55:48.464Z edge: desktop-apis
+2026-10-19T09:55:54.768Z edge: desktop-orders
+2026-10-19T09:56:04.217Z edge: desktop-catalogue
+2026-10-19T09:56:13.731Z edge: desktop-defects
+2026-10-19T09:56:26.816Z edge: desktop-registration
+2026-10-19T09:56:33.680Z edge: narrow-dashboard
+2026-10-19T09:56:39.026Z edge: narrow-apis
+2026-10-19T09:56:45.235Z edge: narrow-orders
+2026-10-19T09:56:56.600Z edge: narrow-catalogue
+2026-10-19T09:57:07.604Z edge: narrow-defects
+2026-10-19T09:57:22.149Z edge: narrow-registration
+2026-10-19T09:57:35.253Z Completed: {"PASS":14,"FAIL":2,"BLOCKED":0,"NOT RUN":0}; overall automated FAIL

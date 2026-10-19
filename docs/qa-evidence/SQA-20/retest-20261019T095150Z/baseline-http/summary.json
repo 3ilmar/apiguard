@@ -1,0 +1,14 @@
+{
+  "startedUtc": "2026-10-19T09:55:00.773962+00:00",
+  "finishedUtc": "2026-10-19T09:55:16.215287+00:00",
+  "boundary": "Real HTTP MVC and normal SQLite store; no browser or external service; private-target override scoped to synthetic loopback application process",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "appUrl": "http://127.0.0.1:51921",
+  "fixtureUrl": "http://127.0.0.1:51922",
+  "database": "C:\\Users\\zsr20\\source\\repos\\3ilmar\\apiguard\\docs\\qa-evidence\\SQA-20\\retest-20261019T095150Z\\baseline-http\\isolated-app.db",
+  "passed": 0,
+  "failed": 0,
+  "confirmedFindings": 0,
+  "error": "RuntimeError: Application did not become ready within 10 seconds.",
+  "status": "FAIL"
+}

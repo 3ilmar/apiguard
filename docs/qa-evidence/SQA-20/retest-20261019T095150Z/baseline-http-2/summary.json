@@ -1,0 +1,14 @@
+{
+  "startedUtc": "2026-10-19T09:55:43.644532+00:00",
+  "finishedUtc": "2026-10-19T09:55:49.012524+00:00",
+  "boundary": "Real HTTP MVC and normal SQLite store; no browser or external service; private-target override scoped to synthetic loopback application process",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "appUrl": "http://127.0.0.1:51921",
+  "fixtureUrl": "http://127.0.0.1:51922",
+  "database": "C:\\Users\\zsr20\\source\\repos\\3ilmar\\apiguard\\docs\\qa-evidence\\SQA-20\\retest-20261019T095150Z\\baseline-http-2\\isolated-app.db",
+  "passed": 21,
+  "failed": 1,
+  "confirmedFindings": 1,
+  "error": "AssertionError: failed-results CSV schema/filter/escaping: actual={'http': 200, 'columns': 15, 'rows': 10}, expected='200 CSV, 15 columns, filtered rows, quoted API name round-trips'",
+  "status": "FAIL"
+}

@@ -1,0 +1,1 @@
+Invalid report filter. Use apiId as a GUID and passed as true or false. Omit a filter to include all values.

@@ -1,0 +1,555 @@
+[
+  {
+    "atUtc": "2026-10-19T10:01:14.342837+00:00",
+    "method": "GET",
+    "path": "/",
+    "status": 200,
+    "location": null,
+    "contentType": "text/html; charset=utf-8",
+    "bodyArtifact": "http-001-empty-dashboard.txt",
+    "submittedFields": {}
+  },
+  {
+    "atUtc": "2026-10-19T10:01:14.392983+00:00",
+    "method": "GET",
+    "path": "/Apis/Create",
+    "status": 302,
+    "location": "/Apis",
+    "contentType": null,
+    "bodyArtifact": "http-002-viewer-create-denied.txt",
+    "submittedFields": {}
+  },
+  {
+    "atUtc": "2026-10-19T10:01:14.412064+00:00",
+    "method": "GET",
+    "path": "/",
+    "status": 200,
+    "location": null,
+    "contentType": "text/html; charset=utf-8",
+    "bodyArtifact": "http-003-form.txt",
+    "submittedFields": {}
+  },
+  {
+    "atUtc": "2026-10-19T10:01:14.443477+00:00",
+    "method": "POST",
+    "path": "/Apis/Create",
+    "status": 302,
+    "location": "/Apis",
+    "contentType": null,
+    "bodyArtifact": "http-004-viewer-post-denied.txt",
+    "submittedFields": {
+      "Name": "Denied",
+      "BaseUrl": "http://127.0.0.1:51922"
+    }
+  },
+  {
+    "atUtc": "2026-10-19T10:01:14.485672+00:00",
+    "method": "GET",
+    "path": "/",
+    "status": 200,
+    "location": null,
+    "contentType": "text/html; charset=utf-8",
+    "bodyArtifact": "http-005-form.txt",
+    "submittedFields": {}
+  },
+  {
+    "atUtc": "2026-10-19T10:01:14.517597+00:00",
+    "method": "POST",
+    "path": "/Role/SetRole",
+    "status": 302,
+    "location": "/",
+    "contentType": null,
+    "bodyArtifact": "http-006-role-Admin.txt",
+    "submittedFields": {
+      "role": "Admin",
+      "returnUrl": "/"
+    }
+  },
+  {
+    "atUtc": "2026-10-19T10:01:14.544837+00:00",
+    "method": "GET",
+    "path": "/",
+    "status": 200,
+    "location": null,
+    "contentType": "text/html; charset=utf-8",
+    "bodyArtifact": "http-007-form.txt",
+    "submittedFields": {}
+  },
+  {
+    "atUtc": "2026-10-19T10:01:14.556946+00:00",
+    "method": "POST",
+    "path": "/Role/SetRole",
+    "status": 302,
+    "location": "/",
+    "contentType": null,
+    "bodyArtifact": "http-008-role-Tester.txt",
+    "submittedFields": {
+      "role": "Tester",
+      "returnUrl": "/"
+    }
+  },
+  {
+    "atUtc": "2026-10-19T10:01:14.558938+00:00",
+    "method": "GET",
+    "path": "/Apis/Create",
+    "status": 302,
+    "location": "/Apis",
+    "contentType": null,
+    "bodyArtifact": "http-009-tester-create-denied.txt",
+    "submittedFields": {}
+  },
+  {
+    "atUtc": "2026-10-19T10:01:14.562501+00:00",
+    "method": "GET",
+    "path": "/Apis/Create",
+    "status": 200,
+    "location": null,
+    "contentType": "text/html; charset=utf-8",
+    "bodyArtifact": "http-010-form.txt",
+    "submittedFields": {}
+  },
+  {
+    "atUtc": "2026-10-19T10:01:14.605672+00:00",
+    "method": "POST",
+    "path": "/Apis/Create",
+    "status": 200,
+    "location": null,
+    "contentType": "text/html; charset=utf-8",
+    "bodyArtifact": "http-011-invalid-scheme.txt",
+    "submittedFields": {
+      "Name": "Invalid synthetic API",
+      "BaseUrl": "ftp://fixture.invalid"
+    }
+  },
+  {
+    "atUtc": "2026-10-19T10:01:14.627785+00:00",
+    "method": "GET",
+    "path": "/Apis/Create",
+    "status": 200,
+    "location": null,
+    "contentType": "text/html; charset=utf-8",
+    "bodyArtifact": "http-012-form.txt",
+    "submittedFields": {}
+  },
+  {
+    "atUtc": "2026-10-19T10:01:14.651920+00:00",
+    "method": "POST",
+    "path": "/Apis/Create",
+    "status": 200,
+    "location": null,
+    "contentType": "text/html; charset=utf-8",
+    "bodyArtifact": "http-013-credentials.txt",
+    "submittedFields": {
+      "Name": "Invalid synthetic API",
+      "BaseUrl": "http://synthetic:secret@127.0.0.1:51922"
+    }
+  },
+  {
+    "atUtc": "2026-10-19T10:01:14.658678+00:00",
+    "method": "GET",
+    "path": "/Apis/Create",
+    "status": 200,
+    "location": null,
+    "contentType": "text/html; charset=utf-8",
+    "bodyArtifact": "http-014-form.txt",
+    "submittedFields": {}
+  },
+  {
+    "atUtc": "2026-10-19T10:01:14.662735+00:00",
+    "method": "POST",
+    "path": "/Apis/Create",
+    "status": 200,
+    "location": null,
+    "contentType": "text/html; charset=utf-8",
+    "bodyArtifact": "http-015-private-target-rejected.txt",
+    "submittedFields": {
+      "Name": "Blocked loopback",
+      "BaseUrl": "http://127.0.0.1:51922"
+    }
+  },
+  {
+    "atUtc": "2026-10-19T10:01:16.286209+00:00",
+    "method": "GET",
+    "path": "/Apis/Create",
+    "status": 200,
+    "location": null,
+    "contentType": "text/html; charset=utf-8",
+    "bodyArtifact": "http-016-form.txt",
+    "submittedFields": {}
+  },
+  {
+    "atUtc": "2026-10-19T10:01:16.347075+00:00",
+    "method": "POST",
+    "path": "/Apis/Create",
+    "status": 302,
+    "location": "/Apis/Details/af1345f9-f7e7-445c-b5c9-67b2f665ec1c",
+    "contentType": null,
+    "bodyArtifact": "http-017-api-created.txt",
+    "submittedFields": {
+      "Name": "PostMerge, \"Synthetic API\"",
+      "BaseUrl": "http://127.0.0.1:51922",
+      "Description": "Owned loopback fixture only"
+    }
+  },
+  {
+    "atUtc": "2026-10-19T10:01:16.519204+00:00",
+    "method": "GET",
+    "path": "/Apis/Create",
+    "status": 200,
+    "location": null,
+    "contentType": "text/html; charset=utf-8",
+    "bodyArtifact": "http-018-form.txt",
+    "submittedFields": {}
+  },
+  {
+    "atUtc": "2026-10-19T10:01:16.526194+00:00",
+    "method": "POST",
+    "path": "/Apis/Create",
+    "status": 200,
+    "location": null,
+    "contentType": "text/html; charset=utf-8",
+    "bodyArtifact": "http-019-duplicate-api.txt",
+    "submittedFields": {
+      "Name": "Duplicate",
+      "BaseUrl": "http://127.0.0.1:51922/"
+    }
+  },
+  {
+    "atUtc": "2026-10-19T10:01:16.539841+00:00",
+    "method": "GET",
+    "path": "/Apis/Details/af1345f9-f7e7-445c-b5c9-67b2f665ec1c",
+    "status": 200,
+    "location": null,
+    "contentType": "text/html; charset=utf-8",
+    "bodyArtifact": "http-020-form.txt",
+    "submittedFields": {}
+  },
+  {
+    "atUtc": "2026-10-19T10:01:16.625123+00:00",
+    "method": "POST",
+    "path": "/Apis/AddEndpoint/AF1345F9-F7E7-445C-B5C9-67B2F665EC1C",
+    "status": 200,
+    "location": null,
+    "contentType": "text/html; charset=utf-8",
+    "bodyArtifact": "http-021-path-rejected.txt",
+    "submittedFields": {
+      "Name": "Synthetic health",
+      "Path": "/%2e%2e/admin",
+      "Method": "GET",
+      "ExpectedStatusCode": "200",
+      "MaxResponseTimeMs": "60000",
+      "ExpectedContentType": "application/json",
+      "RequiresAuthentication": "true"
+    }
+  },
+  {
+    "atUtc": "2026-10-19T10:01:16.642707+00:00",
+    "method": "GET",
+    "path": "/Apis/Details/af1345f9-f7e7-445c-b5c9-67b2f665ec1c",
+    "status": 200,
+    "location": null,
+    "contentType": "text/html; charset=utf-8",
+    "bodyArtifact": "http-022-form.txt",
+    "submittedFields": {}
+  },
+  {
+    "atUtc": "2026-10-19T10:01:16.655305+00:00",
+    "method": "POST",
+    "path": "/Apis/AddEndpoint/AF1345F9-F7E7-445C-B5C9-67B2F665EC1C",
+    "status": 200,
+    "location": null,
+    "contentType": "text/html; charset=utf-8",
+    "bodyArtifact": "http-023-range-rejected.txt",
+    "submittedFields": {
+      "Name": "Synthetic health",
+      "Path": "/health",
+      "Method": "GET",
+      "ExpectedStatusCode": "99",
+      "MaxResponseTimeMs": "60000",
+      "ExpectedContentType": "application/json",
+      "RequiresAuthentication": "true"
+    }
+  },
+  {
+    "atUtc": "2026-10-19T10:01:16.692473+00:00",
+    "method": "GET",
+    "path": "/Apis/Details/af1345f9-f7e7-445c-b5c9-67b2f665ec1c",
+    "status": 200,
+    "location": null,
+    "contentType": "text/html; charset=utf-8",
+    "bodyArtifact": "http-024-form.txt",
+    "submittedFields": {}
+  },
+  {
+    "atUtc": "2026-10-19T10:01:16.722298+00:00",
+    "method": "POST",
+    "path": "/Apis/AddEndpoint/AF1345F9-F7E7-445C-B5C9-67B2F665EC1C",
+    "status": 302,
+    "location": "/Apis/Details/af1345f9-f7e7-445c-b5c9-67b2f665ec1c",
+    "contentType": null,
+    "bodyArtifact": "http-025-malformed-number.txt",
+    "submittedFields": {
+      "Name": "Malformed numeric probe",
+      "Path": "/numeric-probe",
+      "Method": "GET",
+      "ExpectedStatusCode": "not-a-number",
+      "MaxResponseTimeMs": "60000",
+      "ExpectedContentType": "application/json",
+      "RequiresAuthentication": "true"
+    }
+  },
+  {
+    "atUtc": "2026-10-19T10:01:16.799428+00:00",
+    "method": "GET",
+    "path": "/Apis/Details/af1345f9-f7e7-445c-b5c9-67b2f665ec1c",
+    "status": 200,
+    "location": null,
+    "contentType": "text/html; charset=utf-8",
+    "bodyArtifact": "http-026-form.txt",
+    "submittedFields": {}
+  },
+  {
+    "atUtc": "2026-10-19T10:01:16.832891+00:00",
+    "method": "POST",
+    "path": "/Apis/AddEndpoint/AF1345F9-F7E7-445C-B5C9-67B2F665EC1C",
+    "status": 302,
+    "location": "/Apis/Details/af1345f9-f7e7-445c-b5c9-67b2f665ec1c",
+    "contentType": null,
+    "bodyArtifact": "http-027-endpoint-created.txt",
+    "submittedFields": {
+      "Name": "Synthetic health",
+      "Path": "/health",
+      "Method": "GET",
+      "ExpectedStatusCode": "200",
+      "MaxResponseTimeMs": "60000",
+      "ExpectedContentType": "application/json",
+      "RequiresAuthentication": "true"
+    }
+  },
+  {
+    "atUtc": "2026-10-19T10:01:16.849944+00:00",
+    "method": "GET",
+    "path": "/Apis/Details/af1345f9-f7e7-445c-b5c9-67b2f665ec1c",
+    "status": 200,
+    "location": null,
+    "contentType": "text/html; charset=utf-8",
+    "bodyArtifact": "http-028-form.txt",
+    "submittedFields": {}
+  },
+  {
+    "atUtc": "2026-10-19T10:01:16.877685+00:00",
+    "method": "POST",
+    "path": "/Apis/AddEndpoint/AF1345F9-F7E7-445C-B5C9-67B2F665EC1C",
+    "status": 200,
+    "location": null,
+    "contentType": "text/html; charset=utf-8",
+    "bodyArtifact": "http-029-duplicate-endpoint.txt",
+    "submittedFields": {
+      "Name": "Synthetic health",
+      "Path": "/health",
+      "Method": "GET",
+      "ExpectedStatusCode": "200",
+      "MaxResponseTimeMs": "60000",
+      "ExpectedContentType": "application/json",
+      "RequiresAuthentication": "true"
+    }
+  },
+  {
+    "atUtc": "2026-10-19T10:01:16.894336+00:00",
+    "method": "GET",
+    "path": "/Apis/Details/af1345f9-f7e7-445c-b5c9-67b2f665ec1c",
+    "status": 200,
+    "location": null,
+    "contentType": "text/html; charset=utf-8",
+    "bodyArtifact": "http-030-form.txt",
+    "submittedFields": {}
+  },
+  {
+    "atUtc": "2026-10-19T10:01:16.926135+00:00",
+    "method": "POST",
+    "path": "/Apis/AddEndpoint/AF1345F9-F7E7-445C-B5C9-67B2F665EC1C",
+    "status": 302,
+    "location": "/Apis",
+    "contentType": null,
+    "bodyArtifact": "http-031-tester-endpoint-denied.txt",
+    "submittedFields": {
+      "Name": "Synthetic health",
+      "Path": "/tester-denied",
+      "Method": "GET",
+      "ExpectedStatusCode": "200",
+      "MaxResponseTimeMs": "60000",
+      "ExpectedContentType": "application/json",
+      "RequiresAuthentication": "true"
+    }
+  },
+  {
+    "atUtc": "2026-10-19T10:01:16.951720+00:00",
+    "method": "GET",
+    "path": "/Apis/Details/af1345f9-f7e7-445c-b5c9-67b2f665ec1c",
+    "status": 200,
+    "location": null,
+    "contentType": "text/html; charset=utf-8",
+    "bodyArtifact": "http-032-form.txt",
+    "submittedFields": {}
+  },
+  {
+    "atUtc": "2026-10-19T10:01:16.987938+00:00",
+    "method": "POST",
+    "path": "/Apis/RunChecks/AF1345F9-F7E7-445C-B5C9-67B2F665EC1C",
+    "status": 302,
+    "location": "/Apis",
+    "contentType": null,
+    "bodyArtifact": "http-033-viewer-run-denied.txt",
+    "submittedFields": {}
+  },
+  {
+    "atUtc": "2026-10-19T10:01:17.015311+00:00",
+    "method": "GET",
+    "path": "/Apis/Details/af1345f9-f7e7-445c-b5c9-67b2f665ec1c",
+    "status": 200,
+    "location": null,
+    "contentType": "text/html; charset=utf-8",
+    "bodyArtifact": "http-034-form.txt",
+    "submittedFields": {}
+  },
+  {
+    "atUtc": "2026-10-19T10:01:17.027514+00:00",
+    "method": "POST",
+    "path": "/Apis/RunChecks/AF1345F9-F7E7-445C-B5C9-67B2F665EC1C",
+    "status": 302,
+    "location": "/Apis/Details/af1345f9-f7e7-445c-b5c9-67b2f665ec1c",
+    "contentType": null,
+    "bodyArtifact": "http-035-tester-run-failure.txt",
+    "submittedFields": {}
+  },
+  {
+    "atUtc": "2026-10-19T10:01:17.400030+00:00",
+    "method": "GET",
+    "path": "/Defects",
+    "status": 200,
+    "location": null,
+    "contentType": "text/html; charset=utf-8",
+    "bodyArtifact": "http-036-form.txt",
+    "submittedFields": {}
+  },
+  {
+    "atUtc": "2026-10-19T10:01:17.442667+00:00",
+    "method": "POST",
+    "path": "/Defects/Update",
+    "status": 302,
+    "location": "/Defects",
+    "contentType": null,
+    "bodyArtifact": "http-037-viewer-update-denied.txt",
+    "submittedFields": {
+      "id": "3C6126AE-D0C5-49A9-B3FA-9E03EC91984F",
+      "status": "Resolved",
+      "priority": "Urgent",
+      "assignedTo": "Synthetic, \"Tester\""
+    }
+  },
+  {
+    "atUtc": "2026-10-19T10:01:17.450954+00:00",
+    "method": "GET",
+    "path": "/Defects",
+    "status": 200,
+    "location": null,
+    "contentType": "text/html; charset=utf-8",
+    "bodyArtifact": "http-038-form.txt",
+    "submittedFields": {}
+  },
+  {
+    "atUtc": "2026-10-19T10:01:17.464140+00:00",
+    "method": "POST",
+    "path": "/Defects/Update",
+    "status": 302,
+    "location": "/Defects",
+    "contentType": null,
+    "bodyArtifact": "http-039-tester-update.txt",
+    "submittedFields": {
+      "id": "3C6126AE-D0C5-49A9-B3FA-9E03EC91984F",
+      "status": "Resolved",
+      "priority": "Urgent",
+      "assignedTo": "Synthetic, \"Tester\""
+    }
+  },
+  {
+    "atUtc": "2026-10-19T10:01:17.488563+00:00",
+    "method": "GET",
+    "path": "/Apis/Details/af1345f9-f7e7-445c-b5c9-67b2f665ec1c",
+    "status": 200,
+    "location": null,
+    "contentType": "text/html; charset=utf-8",
+    "bodyArtifact": "http-040-form.txt",
+    "submittedFields": {}
+  },
+  {
+    "atUtc": "2026-10-19T10:01:17.515822+00:00",
+    "method": "POST",
+    "path": "/Apis/RunChecks/AF1345F9-F7E7-445C-B5C9-67B2F665EC1C",
+    "status": 302,
+    "location": "/Apis/Details/af1345f9-f7e7-445c-b5c9-67b2f665ec1c",
+    "contentType": null,
+    "bodyArtifact": "http-041-tester-passing-retest.txt",
+    "submittedFields": {}
+  },
+  {
+    "atUtc": "2026-10-19T10:01:17.760035+00:00",
+    "method": "GET",
+    "path": "/",
+    "status": 200,
+    "location": null,
+    "contentType": "text/html; charset=utf-8",
+    "bodyArtifact": "http-042-populated-dashboard.txt",
+    "submittedFields": {}
+  },
+  {
+    "atUtc": "2026-10-19T10:01:17.814873+00:00",
+    "method": "GET",
+    "path": "/Reports/ExportResultsCsv?apiId=AF1345F9-F7E7-445C-B5C9-67B2F665EC1C&passed=false",
+    "status": 200,
+    "location": null,
+    "contentType": "text/csv; charset=utf-8",
+    "bodyArtifact": "http-043-failed-results.txt",
+    "submittedFields": {}
+  },
+  {
+    "atUtc": "2026-10-19T10:01:17.849545+00:00",
+    "method": "GET",
+    "path": "/Reports/ExportDefectsCsv?apiId=AF1345F9-F7E7-445C-B5C9-67B2F665EC1C&status=Closed&severity=High",
+    "status": 200,
+    "location": null,
+    "contentType": "text/csv; charset=utf-8",
+    "bodyArtifact": "http-044-closed-high-defects.txt",
+    "submittedFields": {}
+  },
+  {
+    "atUtc": "2026-10-19T10:01:17.875219+00:00",
+    "method": "GET",
+    "path": "/Reports/ExportResultsCsv?passed=wrong",
+    "status": 400,
+    "location": null,
+    "contentType": "text/plain; charset=utf-8",
+    "bodyArtifact": "http-045-bad-filter.txt",
+    "submittedFields": {}
+  },
+  {
+    "atUtc": "2026-10-19T10:01:17.882743+00:00",
+    "method": "GET",
+    "path": "/Reports/ExportDefectsCsv?severity=999",
+    "status": 400,
+    "location": null,
+    "contentType": "text/plain; charset=utf-8",
+    "bodyArtifact": "http-046-bad-filter.txt",
+    "submittedFields": {}
+  },
+  {
+    "atUtc": "2026-10-19T10:01:20.199282+00:00",
+    "method": "GET",
+    "path": "/Apis/Details/af1345f9-f7e7-445c-b5c9-67b2f665ec1c",
+    "status": 200,
+    "location": null,
+    "contentType": "text/html; charset=utf-8",
+    "bodyArtifact": "http-047-details-after-restart.txt",
+    "submittedFields": {}
+  }
+]

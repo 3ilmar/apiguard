@@ -1,0 +1,15 @@
+## fix/sqa20-accessibility-postmerge...origin/main
+ M SecureApiQualityPlatform.Web/Views/Apis/Details.cshtml
+ M SecureApiQualityPlatform.Web/Views/Defects/Index.cshtml
+ M SecureApiQualityPlatform.Web/wwwroot/css/site.css
+ M docs/DefectLog.md
+ M docs/ShiruiFinalTestCases.csv
+ M docs/ShiruiQualityMetrics-Evidence.md
+ M tools/Sqa20.ManualHost/Run-BrowserChecks.cjs
+ M tools/Sqa20.ManualHost/axe/LICENSE
+ M tools/Sqa20.ManualHost/axe/axe.min.js
+ M tools/Sqa20.ManualHost/axe/package.json
+?? .gitattributes
+?? docs/qa-evidence/SQA-20/retest-20261019T095150Z/
+?? tools/PostMergeRegression/
+?? tools/Sqa20.ManualHost/Verify-AccessibilityTargets.cjs

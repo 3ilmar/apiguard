@@ -1,0 +1,7 @@
+{
+  "processId": 21084,
+  "port": 51920,
+  "source": "7f28ee9239ba728a297ffd729da618abb1c0d415",
+  "startedAtUtc": "2026-10-19T09:53:25.1717281Z",
+  "fixture": "2 APIs,2 endpoints,8 results,4 defects; isolated in-memory store"
+}

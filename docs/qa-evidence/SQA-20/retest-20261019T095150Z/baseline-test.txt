@@ -1,0 +1,8 @@
+Test run for C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Release\net8.0\SecureApiQualityPlatform.Tests.dll (.NETCoreApp,Version=v8.0)
+A total of 1 test files matched the specified pattern.
+Results File: C:\Users\zsr20\source\repos\3ilmar\apiguard\docs\qa-evidence\SQA-20\retest-20261019T095150Z\baseline-suite\baseline.trx
+
+Passed!  - Failed:     0, Passed:   136, Skipped:     0, Total:   136, Duration: 27 s - SecureApiQualityPlatform.Tests.dll (net8.0)
+
+Attachments:
+  C:\Users\zsr20\source\repos\3ilmar\apiguard\docs\qa-evidence\SQA-20\retest-20261019T095150Z\baseline-suite\b2bcca06-9cad-4691-ab12-75cdde41cb0c\coverage.cobertura.xml

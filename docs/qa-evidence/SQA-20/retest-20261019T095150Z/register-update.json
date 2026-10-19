@@ -1,0 +1,12 @@
+{
+  "planned": 22,
+  "executed": 16,
+  "confirmedPass": 15,
+  "provisionalPass": 1,
+  "failed": 0,
+  "blocked": 0,
+  "notRun": 6,
+  "otherRowsPreserved": true,
+  "sqa18Preserved": true,
+  "sqa19Preserved": true
+}

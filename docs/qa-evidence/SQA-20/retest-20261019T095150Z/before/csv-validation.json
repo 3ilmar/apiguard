@@ -1,0 +1,527 @@
+{
+  "generatedAtUtc": "2026-10-19T09:57:35.145152+00:00",
+  "method": "Python stdlib strict UTF-8 and CSV validation of original browser downloads",
+  "browsers": {
+    "chrome": {
+      "results": {
+        "status": "PASS",
+        "checks": [
+          {
+            "name": "one_original_download",
+            "passed": true,
+            "actual": [
+              "api-check-results-20261019-095540.csv"
+            ]
+          },
+          {
+            "name": "filename_pattern",
+            "passed": true,
+            "actual": "api-check-results-20261019-095540.csv"
+          },
+          {
+            "name": "strict_utf8_and_csv_parse",
+            "passed": true,
+            "actual": "UTF-8 decoded and csv.reader(strict=True) parsed logical records."
+          },
+          {
+            "name": "exact_header",
+            "passed": true,
+            "actual": [
+              "ExecutedAtUtc",
+              "ApiName",
+              "ApiId",
+              "EndpointName",
+              "EndpointId",
+              "Method",
+              "Path",
+              "CheckType",
+              "Passed",
+              "ActualStatusCode",
+              "ResponseTimeMs",
+              "FailureSeverity",
+              "Message",
+              "ApiBaseUrl",
+              "Outcome"
+            ]
+          },
+          {
+            "name": "logical_record_column_counts",
+            "passed": true,
+            "actual": [
+              15,
+              15,
+              15,
+              15,
+              15,
+              15,
+              15,
+              15,
+              15
+            ]
+          },
+          {
+            "name": "data_record_count",
+            "passed": true,
+            "actual": 8
+          },
+          {
+            "name": "four_pass_four_fail_with_matching_outcomes",
+            "passed": true,
+            "actual": {
+              "True|Pass": 4,
+              "False|Fail": 4
+            }
+          },
+          {
+            "name": "api_comma_and_quotes_preserved",
+            "passed": true,
+            "actual": {
+              "SQA-20 Catalogue, \"healthy\"": 4,
+              "SQA-20 Orders, \"review\"": 4
+            }
+          },
+          {
+            "name": "endpoint_comma_and_quotes_preserved",
+            "passed": true,
+            "actual": {
+              "Catalogue, \"passing\" endpoint": 4,
+              "Orders, \"manual review\" endpoint with a deliberately long descriptive label": 4
+            }
+          },
+          {
+            "name": "synthetic_disclosure_text_preserved",
+            "passed": true,
+            "actual": [
+              "Server header disclosed: SQA-20 fixture, \"synthetic\" server."
+            ]
+          }
+        ],
+        "files": [
+          {
+            "path": "chrome/downloads/api-check-results-20261019-095540.csv",
+            "bytes": 3221,
+            "sha256": "d981c80fcbb0fbd5f40c4dab61a31734796bd1115f20a33b6778cee55352cdfc"
+          }
+        ],
+        "limitations": []
+      },
+      "defects": {
+        "status": "PASS",
+        "checks": [
+          {
+            "name": "one_original_download",
+            "passed": true,
+            "actual": [
+              "defects-20261019-095541.csv"
+            ]
+          },
+          {
+            "name": "filename_pattern",
+            "passed": true,
+            "actual": "defects-20261019-095541.csv"
+          },
+          {
+            "name": "strict_utf8_and_csv_parse",
+            "passed": true,
+            "actual": "UTF-8 decoded and csv.reader(strict=True) parsed logical records."
+          },
+          {
+            "name": "exact_header",
+            "passed": true,
+            "actual": [
+              "DefectId",
+              "ApiName",
+              "ApiId",
+              "EndpointName",
+              "EndpointId",
+              "Method",
+              "Path",
+              "CheckType",
+              "Severity",
+              "Priority",
+              "Status",
+              "AssignedTo",
+              "CreatedAtUtc",
+              "UpdatedAtUtc",
+              "RetestedAtUtc",
+              "SourceCheckResultId",
+              "Title",
+              "Description",
+              "ApiBaseUrl",
+              "LifecycleStage",
+              "IsOpen"
+            ]
+          },
+          {
+            "name": "logical_record_column_counts",
+            "passed": true,
+            "actual": [
+              21,
+              21,
+              21,
+              21,
+              21
+            ]
+          },
+          {
+            "name": "data_record_count",
+            "passed": true,
+            "actual": 4
+          },
+          {
+            "name": "one_of_each_severity",
+            "passed": true,
+            "actual": {
+              "Critical": 1,
+              "High": 1,
+              "Medium": 1,
+              "Low": 1
+            }
+          },
+          {
+            "name": "fixture_status_and_lifecycle",
+            "passed": true,
+            "actual": [
+              {
+                "severity": "Critical",
+                "status": "New",
+                "lifecycle": "Active",
+                "isOpen": "True"
+              },
+              {
+                "severity": "High",
+                "status": "Assigned",
+                "lifecycle": "Active",
+                "isOpen": "True"
+              },
+              {
+                "severity": "Medium",
+                "status": "InProgress",
+                "lifecycle": "Active",
+                "isOpen": "True"
+              },
+              {
+                "severity": "Low",
+                "status": "Retest",
+                "lifecycle": "Verification",
+                "isOpen": "True"
+              }
+            ]
+          },
+          {
+            "name": "api_comma_and_quotes_preserved",
+            "passed": true,
+            "actual": [
+              "SQA-20 Orders, \"review\""
+            ]
+          },
+          {
+            "name": "endpoint_comma_and_quotes_preserved",
+            "passed": true,
+            "actual": [
+              "Orders, \"manual review\" endpoint with a deliberately long descriptive label"
+            ]
+          },
+          {
+            "name": "synthetic_disclosure_text_preserved",
+            "passed": true,
+            "actual": [
+              "Server header disclosed: SQA-20 fixture, \"synthetic\" server."
+            ]
+          },
+          {
+            "name": "source_result_ids_nonempty_valid_unique",
+            "passed": true,
+            "actual": [
+              "ae3e4b60-f4ba-4e8c-8a14-86feea468049",
+              "72e40eff-2801-4c64-b6a8-34c51f769956",
+              "0fbf64a8-cf8e-4e7b-aab1-73fcc02feed3",
+              "0ab422c8-9a77-4eab-8793-d134383709c0"
+            ]
+          },
+          {
+            "name": "matches_same_browser_failed_result_content",
+            "passed": true,
+            "actual": {
+              "failedResultKeys": 4,
+              "defectKeys": 4
+            }
+          }
+        ],
+        "files": [
+          {
+            "path": "chrome/downloads/defects-20261019-095541.csv",
+            "bytes": 2679,
+            "sha256": "14c085905fa46a5ee947a17806fe0432edd69fc6e3eccb4c53e0634f6a3c3d55"
+          }
+        ],
+        "limitations": [
+          "Results CSV has no result ID column: exact SourceCheckResultId foreign-key equality cannot be established from these CSV exports. Matching failed result contents are checked separately."
+        ]
+      }
+    },
+    "edge": {
+      "results": {
+        "status": "PASS",
+        "checks": [
+          {
+            "name": "one_original_download",
+            "passed": true,
+            "actual": [
+              "api-check-results-20261019-095733.csv"
+            ]
+          },
+          {
+            "name": "filename_pattern",
+            "passed": true,
+            "actual": "api-check-results-20261019-095733.csv"
+          },
+          {
+            "name": "strict_utf8_and_csv_parse",
+            "passed": true,
+            "actual": "UTF-8 decoded and csv.reader(strict=True) parsed logical records."
+          },
+          {
+            "name": "exact_header",
+            "passed": true,
+            "actual": [
+              "ExecutedAtUtc",
+              "ApiName",
+              "ApiId",
+              "EndpointName",
+              "EndpointId",
+              "Method",
+              "Path",
+              "CheckType",
+              "Passed",
+              "ActualStatusCode",
+              "ResponseTimeMs",
+              "FailureSeverity",
+              "Message",
+              "ApiBaseUrl",
+              "Outcome"
+            ]
+          },
+          {
+            "name": "logical_record_column_counts",
+            "passed": true,
+            "actual": [
+              15,
+              15,
+              15,
+              15,
+              15,
+              15,
+              15,
+              15,
+              15
+            ]
+          },
+          {
+            "name": "data_record_count",
+            "passed": true,
+            "actual": 8
+          },
+          {
+            "name": "four_pass_four_fail_with_matching_outcomes",
+            "passed": true,
+            "actual": {
+              "True|Pass": 4,
+              "False|Fail": 4
+            }
+          },
+          {
+            "name": "api_comma_and_quotes_preserved",
+            "passed": true,
+            "actual": {
+              "SQA-20 Catalogue, \"healthy\"": 4,
+              "SQA-20 Orders, \"review\"": 4
+            }
+          },
+          {
+            "name": "endpoint_comma_and_quotes_preserved",
+            "passed": true,
+            "actual": {
+              "Catalogue, \"passing\" endpoint": 4,
+              "Orders, \"manual review\" endpoint with a deliberately long descriptive label": 4
+            }
+          },
+          {
+            "name": "synthetic_disclosure_text_preserved",
+            "passed": true,
+            "actual": [
+              "Server header disclosed: SQA-20 fixture, \"synthetic\" server."
+            ]
+          }
+        ],
+        "files": [
+          {
+            "path": "edge/downloads/api-check-results-20261019-095733.csv",
+            "bytes": 3221,
+            "sha256": "d981c80fcbb0fbd5f40c4dab61a31734796bd1115f20a33b6778cee55352cdfc"
+          }
+        ],
+        "limitations": []
+      },
+      "defects": {
+        "status": "PASS",
+        "checks": [
+          {
+            "name": "one_original_download",
+            "passed": true,
+            "actual": [
+              "defects-20261019-095734.csv"
+            ]
+          },
+          {
+            "name": "filename_pattern",
+            "passed": true,
+            "actual": "defects-20261019-095734.csv"
+          },
+          {
+            "name": "strict_utf8_and_csv_parse",
+            "passed": true,
+            "actual": "UTF-8 decoded and csv.reader(strict=True) parsed logical records."
+          },
+          {
+            "name": "exact_header",
+            "passed": true,
+            "actual": [
+              "DefectId",
+              "ApiName",
+              "ApiId",
+              "EndpointName",
+              "EndpointId",
+              "Method",
+              "Path",
+              "CheckType",
+              "Severity",
+              "Priority",
+              "Status",
+              "AssignedTo",
+              "CreatedAtUtc",
+              "UpdatedAtUtc",
+              "RetestedAtUtc",
+              "SourceCheckResultId",
+              "Title",
+              "Description",
+              "ApiBaseUrl",
+              "LifecycleStage",
+              "IsOpen"
+            ]
+          },
+          {
+            "name": "logical_record_column_counts",
+            "passed": true,
+            "actual": [
+              21,
+              21,
+              21,
+              21,
+              21
+            ]
+          },
+          {
+            "name": "data_record_count",
+            "passed": true,
+            "actual": 4
+          },
+          {
+            "name": "one_of_each_severity",
+            "passed": true,
+            "actual": {
+              "Critical": 1,
+              "High": 1,
+              "Medium": 1,
+              "Low": 1
+            }
+          },
+          {
+            "name": "fixture_status_and_lifecycle",
+            "passed": true,
+            "actual": [
+              {
+                "severity": "Critical",
+                "status": "New",
+                "lifecycle": "Active",
+                "isOpen": "True"
+              },
+              {
+                "severity": "High",
+                "status": "Assigned",
+                "lifecycle": "Active",
+                "isOpen": "True"
+              },
+              {
+                "severity": "Medium",
+                "status": "InProgress",
+                "lifecycle": "Active",
+                "isOpen": "True"
+              },
+              {
+                "severity": "Low",
+                "status": "Retest",
+                "lifecycle": "Verification",
+                "isOpen": "True"
+              }
+            ]
+          },
+          {
+            "name": "api_comma_and_quotes_preserved",
+            "passed": true,
+            "actual": [
+              "SQA-20 Orders, \"review\""
+            ]
+          },
+          {
+            "name": "endpoint_comma_and_quotes_preserved",
+            "passed": true,
+            "actual": [
+              "Orders, \"manual review\" endpoint with a deliberately long descriptive label"
+            ]
+          },
+          {
+            "name": "synthetic_disclosure_text_preserved",
+            "passed": true,
+            "actual": [
+              "Server header disclosed: SQA-20 fixture, \"synthetic\" server."
+            ]
+          },
+          {
+            "name": "source_result_ids_nonempty_valid_unique",
+            "passed": true,
+            "actual": [
+              "ae3e4b60-f4ba-4e8c-8a14-86feea468049",
+              "72e40eff-2801-4c64-b6a8-34c51f769956",
+              "0fbf64a8-cf8e-4e7b-aab1-73fcc02feed3",
+              "0ab422c8-9a77-4eab-8793-d134383709c0"
+            ]
+          },
+          {
+            "name": "matches_same_browser_failed_result_content",
+            "passed": true,
+            "actual": {
+              "failedResultKeys": 4,
+              "defectKeys": 4
+            }
+          }
+        ],
+        "files": [
+          {
+            "path": "edge/downloads/defects-20261019-095734.csv",
+            "bytes": 2679,
+            "sha256": "14c085905fa46a5ee947a17806fe0432edd69fc6e3eccb4c53e0634f6a3c3d55"
+          }
+        ],
+        "limitations": [
+          "Results CSV has no result ID column: exact SourceCheckResultId foreign-key equality cannot be established from these CSV exports. Matching failed result contents are checked separately."
+        ]
+      }
+    }
+  },
+  "totals": {
+    "PASS": 4,
+    "FAIL": 0,
+    "BLOCKED": 0
+  }
+}

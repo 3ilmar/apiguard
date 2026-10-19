@@ -1,0 +1,23 @@
+[
+  {
+    "File": "axe.min.js",
+    "OriginalSha256": "d8b6da0b871c914820ab57529fdf3940df93dc159193c9634115b3687d07dbfc",
+    "LfSha256": "880970c081707360e64f34cea25ff91892f5bc95675b0776925b9709dd8a68bb",
+    "MatchesPinned": true,
+    "Change": "CRLF to LF only"
+  },
+  {
+    "File": "package.json",
+    "OriginalSha256": "faad45344782ce026a11f6a477d905873b27b34ea576ea575b77d9ed2c3cf6b2",
+    "LfSha256": "732bcda01b1e1550eb849d83c6d82a7379b3373a98724865ecacfce610207230",
+    "MatchesPinned": true,
+    "Change": "CRLF to LF only"
+  },
+  {
+    "File": "LICENSE",
+    "OriginalSha256": "daccd6f5b8e0fd07c0992116280fcddc77c2a612c4ebeb64d8b114ed9da1a10b",
+    "LfSha256": "af175b9d96ee93c21a036152e1b905b0b95304d4ae8c2c921c7609100ba8df7e",
+    "MatchesPinned": true,
+    "Change": "CRLF to LF only"
+  }
+]
