@@ -6,16 +6,31 @@
 
 | Metric | Calculation / source | Current measured value |
 |---|---|---|
-| Test execution rate | Executed / Planned × 100; master SQA case register | 14/22 = 63.64%; 13 PASS, 1 FAIL (SQA-20), 8 NOT RUN, 0 BLOCKED |
-| Test pass rate | Passed / Executed × 100; exclude blocked and not run | 13/14 = 92.86%; SQA-20 failed additional accessibility criteria |
+| Test execution rate | Executed / Planned × 100; includes executed cases awaiting final approval | 15/22 = 68.18%; 13 PASS, 1 PASS (PROVISIONAL, SQA-19), 1 FAIL (SQA-20), 7 NOT RUN, 0 BLOCKED |
+| Test pass rate | Passed / all executed × 100; exclude blocked and not run; distinguish provisional outcomes | Confirmed PASS only: 13/15 = 86.67%. Proposed including SQA-19 provisional PASS: 14/15 = 93.33%, subject to Shirui's approval. SQA-20 remains FAIL |
 | Automated test pass rate | Passed MSTest / executed MSTest × 100; TRX artifact | 19 October 2026: 71/71 = 100%; 0 failed/skipped; Debug with XPlat coverage; SDK 10.0.402 targeting net8.0 on installed runtime 8.0.32 |
 | Requirements verification | Fully verified requirements / requirements in scope × 100; RTM | PENDING |
 | Defect severity distribution | Count unresolved defects by severity; include Deferred separately from dashboard open counts | NOT ASSESSED; test fixtures are not the team's product defect register |
-| Automation coverage | Test cases automated / cases selected for automation × 100; test mapping | Selection denominator requires team agreement; 14 SQA cases now have executed automated evidence (13 PASS, SQA-20 FAIL); human SQA-19 acceptance remains NOT RUN |
+| Automation coverage | Test cases automated / cases selected for automation × 100; test mapping | Selection denominator requires team agreement; 14 SQA cases have executed automated evidence (13 PASS, SQA-20 FAIL). Human SQA-19 is separately reported executed, with 5/5 provisional scenario passes and final observer approval pending |
 | Code coverage | Local Cobertura instrumented lines/branches in SecureApiQualityPlatform.Web | 19 October Debug run: 561/781 lines = 71.83%; 222/392 branches = 56.63%; current local source identity recorded. Earlier coverage-loading failure and older coverage remain historical; CI pending |
 | Commit activity | Count verifiable commits per member from Git history | PENDING |
 | Dashboard PT-01 | Aggregation and complete HTTP document receipt for 2,000 deterministic results; browser separately | PASS for both measured boundaries: aggregation first 21.4494 ms / warm median 0.7386 ms / max 8.7894 ms; HTTP first 223.0098 ms / warm median 1.8280 ms / max 2.6382 ms; browser NOT MEASURED |
 | SQA-20 automated browser checks | Eight scoped technical categories in each installed browser, plus separate accessibility scans | 16/16 technical PASS, 0 FAIL/BLOCKED/NOT RUN; Chrome 155.0.8059.80 and Edge 155.0.4283.62. Additional axe/DOM naming and contrast checks FAIL, therefore overall SQA-20 FAIL. No human acceptance inferred |
+| SQA-19 human usability | Five submitted interpretations and evidence pairs compared with the actual messages | Reported 19 October 2026, 15:00–16:00 NZDT: 5/5 provisional PASS recommendations, final Shirui approval pending. Tester-reported interpretations preceded ChatGPT wording assistance; no original unpolished transcript supplied |
+
+SQA-19 evidence: [unchanged submitted responses](qa-evidence/SQA-19/observation-sheet-session-eilmar.md), [proposed observer assessment and limitations](qa-evidence/SQA-19/observer-assessment-session-eilmar.md). Execution counts reflect that the human session was reported completed; approval is a separate outcome decision. The provisional case contributes once to the 22-case register. Its five scenarios are not five additional master cases. Automated tests and the [AI-assisted heuristic review](qa-evidence/SQA-20/playwright-20261019T035608Z/sqa19-heuristic-review.md) remain distinct from the human evidence.
+
+| Master-register count | Before this proposed update | Current review state |
+|---|---:|---:|
+| Planned | 22 | 22 |
+| Executed, including pending approval | 14 | 15 |
+| Confirmed PASS | 13 | 13 |
+| PASS (PROVISIONAL), approval pending | 0 | 1 |
+| FAIL | 1 | 1 |
+| BLOCKED | 0 | 0 |
+| NOT RUN | 8 | 7 |
+
+Current status reconciliation: 13 + 1 + 1 + 0 + 7 = 22. Executed: 13 + 1 + 1 = 15. If Shirui accepts the proposed SQA-19 outcome, confirmed PASS becomes 14 and provisional PASS becomes 0; the executed denominator stays 15. Until then, do not publish 14 confirmed passes. SQA-18 remains NOT RUN; SQA-20 remains FAIL. Earlier execution ledgers retain their historical totals.
 
 Latest SQA-20 evidence: [execution ledger](qa-evidence/SQA-20/playwright-20261019T035608Z/README.md), [all 16 results](qa-evidence/SQA-20/playwright-20261019T035608Z/browser-execution.json), [accessibility findings](qa-evidence/SQA-20/playwright-20261019T035608Z/findings.md), [71-test TRX](qa-evidence/SQA-20/playwright-20261019T035608Z/dotnet/automated-suite.trx), [coverage](qa-evidence/SQA-20/playwright-20261019T035608Z/dotnet/cobertura.xml), [master register](ShiruiFinalTestCases.csv). This run used SDK 10.0.402 on Windows 10.0.26200 x64; the application host loads .NET 8.0.32. No production source changes were made for browser execution.
 

@@ -1,14 +1,18 @@
-# SQA-19 manual usability session preparation
+# SQA-19 human usability evidence and session procedure
 
 Work item: **SQA-19** · Test case: **TC-12** · Requirement: **NFR-USA-01**
 
-**Human execution status: NOT RUN.** These files prepare a session; they contain no participant responses or human pass result. Synthetic results demonstrate application wording and are not evidence that live endpoint requests produced these outcomes. This is a procedure/evidence template, not submitted assessment report prose.
+**Current human execution: reported completed. Proposed outcome: 5/5 PASS, Shirui's final observer approval PENDING.** The [unchanged Eilmar submission](observation-sheet-session-eilmar.md) records session `SQA19-20261019-EILMAR`, tester `EILMAR-P01`, observer Shirui, on 19 October 2026 from 15:00 to 16:00 NZDT. The [separate proposed observer assessment](observer-assessment-session-eilmar.md) compares the five submitted responses with the actual evaluator messages and records the evidence limitations. It does not represent Shirui's approval.
+
+The tester reports forming the interpretations before asking ChatGPT to compare and lightly polish their wording. The supplied text is assisted wording, not a fully unassisted verbatim transcript; original unpolished responses are not supplied. No session-specific screenshot was identified. The existing [18 October screenshot](automated-setup/dashboard-preparation.jpg) remains setup evidence only. The [AI-assisted heuristic inspection](../SQA-20/playwright-20261019T035608Z/sqa19-heuristic-review.md) and automated message tests are supplementary evidence, distinct from the human submission.
+
+The blank master sheets, facilitator key and historical automated preparation records remain unchanged. The original NOT RUN figures below describe the reusable template/preparation baseline, not the current reported execution. Synthetic results demonstrate application wording, not live endpoint outcomes. These are QA evidence and procedures, not submitted assessment report prose.
 
 ## Environment and scope
 
 - Dashboard URL: **http://localhost:51919/**
 - Start/restart the isolated development host from the repository root: `powershell -NoProfile -ExecutionPolicy Bypass -File .\tools\Sqa19.ManualHost\Start-Sqa19.ps1`.
-- A prepared instance was left running in the background for this session. To stop it, run `powershell -NoProfile -File .\tools\Sqa19.ManualHost\Stop-Sqa19.ps1`; this checks the listening process belongs to this repository's SQA-19 host before stopping it. For a foreground launch, Ctrl+C also stops that instance. Stop before restarting; the launcher never terminates an existing listener.
+- An instance was left running during the 18 October preparation; availability has not been rechecked during this documentation review. To stop it, run `powershell -NoProfile -File .\tools\Sqa19.ManualHost\Stop-Sqa19.ps1`; this checks the listening process belongs to this repository's SQA-19 host before stopping it. For a foreground launch, Ctrl+C also stops that instance. Stop before restarting; the launcher never terminates an existing listener.
 - Automated setup evidence is in [automated-setup/README.md](automated-setup/README.md). To repeat its HTTP checks while the host is running: `powershell -NoProfile -File .\tools\Sqa19.ManualHost\Verify-Sqa19.ps1`. A successful setup check is not a human usability result.
 - The host uses the application's dashboard and five synthetic failed results. It is separate from any normally running application instance. Do not run checks or register APIs during this session.
 - The fixture order in **Recent checks**, top to bottom, is SQA19-01 through SQA19-05. Verify that five FAIL rows are visible before the participant joins. If the rows are missing or reordered, stop and correct preparation before collecting answers.
@@ -17,7 +21,7 @@ Work item: **SQA-19** · Test case: **TC-12** · Requirement: **NFR-USA-01**
 - This host allows reading the original dashboard and stylesheet only. Other navigation links are outside this session; writes are rejected. Five check results are seeded directly without defect-lifecycle processing, so the dashboard's zero defects are fixture setup, not a statement that failed checks would produce no defects during a normal run. Displayed check times are synthetic ordering times at startup; 1001 ms is supplied test data, not a measured request duration.
 - The unchanged application layout fetches Bootstrap CSS from jsDelivr. Confirm styling has loaded before the session and record browser/zoom conditions; this is a normal stylesheet fetch, not an API check.
 
-## Session record — complete before testing
+## Reusable session record — blank master
 
 | Field | Value to record |
 |---|---|
@@ -54,7 +58,7 @@ Record the current software state, rather than attributing uncommitted preparati
 9. Retain corrections as dated addenda alongside the unchanged original answer. Any later explanation/debrief happens after all five answers are captured; keep it distinct from unaided session evidence.
 10. Complete the execution totals and outcome below only from the recorded session. Record follow-up defects with the affected scenario, verbatim feedback and evidence. Do not mark SQA-19 PASS based on automated setup checks.
 
-## Outcome record — awaiting human execution
+## Historical preparation outcome — blank master
 
 | Measure | Initial value | Actual after session |
 |---|---:|---|
