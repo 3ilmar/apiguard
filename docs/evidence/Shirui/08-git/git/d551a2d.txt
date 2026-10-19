@@ -1,0 +1,22 @@
+commit d551a2defd48c72f7b065b865415fd9aee3d4fb1
+Author:     SaltedFishInATank <zsr20041012@gmail.com>
+AuthorDate: Mon Oct 19 22:20:29 2026 +1300
+Commit:     SaltedFishInATank <zsr20041012@gmail.com>
+CommitDate: Mon Oct 19 22:20:29 2026 +1300
+
+    test(qa): record SQA-19 human observations and provisional usability assessment
+    Added Eilmar's human usability observation sheet for SQA-19 / TC-12.
+    
+    Evaluated five failed-check scenarios against NFR-USA-01.
+    
+    Recorded a provisional 5/5 PASS based on the tester's interpretations and supporting evidence.
+    
+    Documented ChatGPT-assisted wording and limitations of the human observation evidence.
+    
+    Updated SQA-19 evidence references and quality metrics.
+    
+    Preserved SQA-19's pending final observer approval.
+    
+    Kept SQA-20's overall FAIL outcome and accessibility findings unchanged.
+    
+    Left application functionality and unrelated tests unchanged.

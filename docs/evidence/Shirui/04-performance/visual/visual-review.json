@@ -1,0 +1,37 @@
+{
+  "ReviewedAtUtc": "2026-10-18T07:31:17.1036220+00:00",
+  "Reviewer": "Codex",
+  "Method": "Viewed all five saved viewport PNGs using view_image; factual visual QA, not a human team approval",
+  "Runs": [
+    {
+      "Run": 1,
+      "File": "run-1/dashboard.png",
+      "Result": "PASS",
+      "Observation": "Complete styled dashboard, all eight cards, four severity rows, twelve recent checks and eight recent defects visible with correct fixture values; no clipping or overflow observed"
+    },
+    {
+      "Run": 2,
+      "File": "run-2/dashboard.png",
+      "Result": "PASS",
+      "Observation": "Complete styled dashboard, all eight cards, four severity rows, twelve recent checks and eight recent defects visible with correct fixture values; no clipping or overflow observed"
+    },
+    {
+      "Run": 3,
+      "File": "run-3/dashboard.png",
+      "Result": "PASS",
+      "Observation": "Complete styled dashboard, all eight cards, four severity rows, twelve recent checks and eight recent defects visible with correct fixture values; no clipping or overflow observed"
+    },
+    {
+      "Run": 4,
+      "File": "run-4/dashboard.png",
+      "Result": "PASS",
+      "Observation": "Complete styled dashboard, all eight cards, four severity rows, twelve recent checks and eight recent defects visible with correct fixture values; no clipping or overflow observed"
+    },
+    {
+      "Run": 5,
+      "File": "run-5/dashboard.png",
+      "Result": "PASS",
+      "Observation": "Complete styled dashboard, all eight cards, four severity rows, twelve recent checks and eight recent defects visible with correct fixture values; no clipping or overflow observed"
+    }
+  ]
+}

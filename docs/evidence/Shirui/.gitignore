@@ -1,0 +1,4 @@
+# Include archived evidence and copied logs/coverage; no runtime outputs belong here.
+!**/
+!**/*
+/.stage-*/

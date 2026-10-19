@@ -1,0 +1,45 @@
+{
+  "Counters": {
+    "total": 136,
+    "executed": 136,
+    "passed": 136,
+    "failed": 0,
+    "error": 0,
+    "timeout": 0,
+    "aborted": 0,
+    "inconclusive": 0,
+    "passedButRunAborted": 0,
+    "notRunnable": 0,
+    "notExecuted": 0,
+    "disconnected": 0,
+    "warning": 0,
+    "completed": 0,
+    "inProgress": 0,
+    "pending": 0
+  },
+  "Times": {
+    "creation": "2026-10-19T22:25:38.4994986+13:00",
+    "queuing": "2026-10-19T22:25:38.4994992+13:00",
+    "start": "2026-10-19T22:25:28.3283659+13:00",
+    "finish": "2026-10-19T22:25:58.7022751+13:00"
+  },
+  "Coverage": {
+    "LinesCovered": 876,
+    "LinesValid": 1141,
+    "LinePercent": 76.77,
+    "BranchesCovered": 325,
+    "BranchesValid": 494,
+    "BranchPercent": 65.78,
+    "Packages": [
+      "SecureApiQualityPlatform.Web"
+    ],
+    "Scope": "Measured instrumented application package from this Debug integration run"
+  },
+  "Framework": "net8.0",
+  "SDK": "10.0.402",
+  "HostRuntime": "8.0.32",
+  "Configuration": "Debug",
+  "CoverageCollected": true,
+  "PerformanceCaveat": "Instrumented regression tests; not a fresh SQA18 browser benchmark",
+  "BaselineDelta": "132 inherited executions plus 4 new startup-isolation executions = 136"
+}

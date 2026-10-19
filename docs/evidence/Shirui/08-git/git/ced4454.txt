@@ -1,0 +1,14 @@
+commit ced44546ba9c71f25935e6ba913b27fe08f0acd1
+Author:     SaltedFishInATank <zsr20041012@gmail.com>
+AuthorDate: Sun Oct 18 19:12:16 2026 +1300
+Commit:     SaltedFishInATank <zsr20041012@gmail.com>
+CommitDate: Sun Oct 18 19:12:16 2026 +1300
+
+    feat(qa): complete dashboard, CSV reporting and performance tests
+    - Implemented dashboard severity distribution and improved aggregation performance.
+    - Enhanced CSV exports with filtering, lifecycle fields and safer data handling.
+    - Added automated tests for dashboard functionality, CSV reporting, usability and performance.
+    - Verified 71 automated tests passed with no failures.
+    - Completed PT-01 testing with 2,000 results; aggregation and HTTP response times met the 2-second target.
+    - Added performance test logs and quality assurance evidence.
+    - Documented remaining browser-rendering, coverage and CI verification requirements.

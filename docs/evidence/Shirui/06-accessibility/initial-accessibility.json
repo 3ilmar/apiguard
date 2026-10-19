@@ -1,0 +1,1163 @@
+{
+  "method": "Derived from original axe JSON; unique counts use browser + page + selector",
+  "browsers": {
+    "chrome": {
+      "status": "FAIL",
+      "uniqueViolations": [
+        {
+          "url": "http://localhost:51920/Apis/Details/20200000-0000-0000-0000-000000000002",
+          "rule": "color-contrast",
+          "impact": "serious",
+          "targets": [
+            "div > code"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.23 (foreground color: #d63384, background color: #f6f8fb, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+          "evidence": [
+            "chrome/axe-desktop-catalogue.json",
+            "chrome/axe-narrow-catalogue.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Apis/Details/20200000-0000-0000-0000-000000000002",
+          "rule": "label",
+          "impact": "critical",
+          "targets": [
+            "#NewEndpoint_Name"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+          "help": "Form elements must have labels",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/label?application=axeAPI",
+          "evidence": [
+            "chrome/axe-desktop-catalogue.json",
+            "chrome/axe-narrow-catalogue.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Apis/Details/20200000-0000-0000-0000-000000000002",
+          "rule": "label",
+          "impact": "critical",
+          "targets": [
+            "#NewEndpoint_ExpectedStatusCode"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+          "help": "Form elements must have labels",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/label?application=axeAPI",
+          "evidence": [
+            "chrome/axe-desktop-catalogue.json",
+            "chrome/axe-narrow-catalogue.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Apis/Details/20200000-0000-0000-0000-000000000002",
+          "rule": "label",
+          "impact": "critical",
+          "targets": [
+            "#NewEndpoint_MaxResponseTimeMs"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+          "help": "Form elements must have labels",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/label?application=axeAPI",
+          "evidence": [
+            "chrome/axe-desktop-catalogue.json",
+            "chrome/axe-narrow-catalogue.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Apis/Details/20200000-0000-0000-0000-000000000002",
+          "rule": "label",
+          "impact": "critical",
+          "targets": [
+            "#NewEndpoint_RequiresAuthentication"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+          "help": "Form elements must have labels",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/label?application=axeAPI",
+          "evidence": [
+            "chrome/axe-desktop-catalogue.json",
+            "chrome/axe-narrow-catalogue.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Apis/Details/20200000-0000-0000-0000-000000000002",
+          "rule": "select-name",
+          "impact": "critical",
+          "targets": [
+            "#NewEndpoint_Method"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+          "help": "Select element must have an accessible name",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/select-name?application=axeAPI",
+          "evidence": [
+            "chrome/axe-desktop-catalogue.json",
+            "chrome/axe-narrow-catalogue.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Defects",
+          "rule": "color-contrast",
+          "impact": "serious",
+          "targets": [
+            ".btn-outline-secondary"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.4 (foreground color: #6c757d, background color: #f6f8fb, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+          "evidence": [
+            "chrome/axe-desktop-defects.json",
+            "chrome/axe-narrow-defects.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Defects",
+          "rule": "label",
+          "impact": "critical",
+          "targets": [
+            "form:nth-child(2) > .row.g-2.mt-2 > .col-md-4 > .form-control[name=\"assignedTo\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+          "help": "Form elements must have labels",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/label?application=axeAPI",
+          "evidence": [
+            "chrome/axe-desktop-defects.json",
+            "chrome/axe-narrow-defects.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Defects",
+          "rule": "label",
+          "impact": "critical",
+          "targets": [
+            "form:nth-child(3) > .row.g-2.mt-2 > .col-md-4 > .form-control[value=\"SQA-20 manual tester\"][name=\"assignedTo\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+          "help": "Form elements must have labels",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/label?application=axeAPI",
+          "evidence": [
+            "chrome/axe-desktop-defects.json",
+            "chrome/axe-narrow-defects.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Defects",
+          "rule": "label",
+          "impact": "critical",
+          "targets": [
+            "form:nth-child(4) > .row.g-2.mt-2 > .col-md-4 > .form-control[value=\"SQA-20 manual tester\"][name=\"assignedTo\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+          "help": "Form elements must have labels",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/label?application=axeAPI",
+          "evidence": [
+            "chrome/axe-desktop-defects.json",
+            "chrome/axe-narrow-defects.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Defects",
+          "rule": "label",
+          "impact": "critical",
+          "targets": [
+            "form:nth-child(5) > .row.g-2.mt-2 > .col-md-4 > .form-control[value=\"SQA-20 manual tester\"][name=\"assignedTo\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+          "help": "Form elements must have labels",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/label?application=axeAPI",
+          "evidence": [
+            "chrome/axe-desktop-defects.json",
+            "chrome/axe-narrow-defects.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Defects",
+          "rule": "select-name",
+          "impact": "critical",
+          "targets": [
+            "form:nth-child(2) > .row.g-2.mt-2 > .col-md-3:nth-child(1) > select[name=\"status\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+          "help": "Select element must have an accessible name",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/select-name?application=axeAPI",
+          "evidence": [
+            "chrome/axe-desktop-defects.json",
+            "chrome/axe-narrow-defects.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Defects",
+          "rule": "select-name",
+          "impact": "critical",
+          "targets": [
+            "form:nth-child(2) > .row.g-2.mt-2 > .col-md-3:nth-child(2) > select[name=\"priority\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+          "help": "Select element must have an accessible name",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/select-name?application=axeAPI",
+          "evidence": [
+            "chrome/axe-desktop-defects.json",
+            "chrome/axe-narrow-defects.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Defects",
+          "rule": "select-name",
+          "impact": "critical",
+          "targets": [
+            "form:nth-child(3) > .row.g-2.mt-2 > .col-md-3:nth-child(1) > select[name=\"status\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+          "help": "Select element must have an accessible name",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/select-name?application=axeAPI",
+          "evidence": [
+            "chrome/axe-desktop-defects.json",
+            "chrome/axe-narrow-defects.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Defects",
+          "rule": "select-name",
+          "impact": "critical",
+          "targets": [
+            "form:nth-child(3) > .row.g-2.mt-2 > .col-md-3:nth-child(2) > select[name=\"priority\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+          "help": "Select element must have an accessible name",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/select-name?application=axeAPI",
+          "evidence": [
+            "chrome/axe-desktop-defects.json",
+            "chrome/axe-narrow-defects.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Defects",
+          "rule": "select-name",
+          "impact": "critical",
+          "targets": [
+            "form:nth-child(4) > .row.g-2.mt-2 > .col-md-3:nth-child(1) > select[name=\"status\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+          "help": "Select element must have an accessible name",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/select-name?application=axeAPI",
+          "evidence": [
+            "chrome/axe-desktop-defects.json",
+            "chrome/axe-narrow-defects.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Defects",
+          "rule": "select-name",
+          "impact": "critical",
+          "targets": [
+            "form:nth-child(4) > .row.g-2.mt-2 > .col-md-3:nth-child(2) > select[name=\"priority\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+          "help": "Select element must have an accessible name",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/select-name?application=axeAPI",
+          "evidence": [
+            "chrome/axe-desktop-defects.json",
+            "chrome/axe-narrow-defects.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Defects",
+          "rule": "select-name",
+          "impact": "critical",
+          "targets": [
+            "form:nth-child(5) > .row.g-2.mt-2 > .col-md-3:nth-child(1) > select[name=\"status\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+          "help": "Select element must have an accessible name",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/select-name?application=axeAPI",
+          "evidence": [
+            "chrome/axe-desktop-defects.json",
+            "chrome/axe-narrow-defects.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Defects",
+          "rule": "select-name",
+          "impact": "critical",
+          "targets": [
+            "form:nth-child(5) > .row.g-2.mt-2 > .col-md-3:nth-child(2) > select[name=\"priority\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+          "help": "Select element must have an accessible name",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/select-name?application=axeAPI",
+          "evidence": [
+            "chrome/axe-desktop-defects.json",
+            "chrome/axe-narrow-defects.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Apis/Details/20200000-0000-0000-0000-000000000001",
+          "rule": "color-contrast",
+          "impact": "serious",
+          "targets": [
+            "div > code"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.23 (foreground color: #d63384, background color: #f6f8fb, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+          "evidence": [
+            "chrome/axe-desktop-orders.json",
+            "chrome/axe-narrow-orders.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Apis/Details/20200000-0000-0000-0000-000000000001",
+          "rule": "label",
+          "impact": "critical",
+          "targets": [
+            "#NewEndpoint_Name"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+          "help": "Form elements must have labels",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/label?application=axeAPI",
+          "evidence": [
+            "chrome/axe-desktop-orders.json",
+            "chrome/axe-narrow-orders.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Apis/Details/20200000-0000-0000-0000-000000000001",
+          "rule": "label",
+          "impact": "critical",
+          "targets": [
+            "#NewEndpoint_ExpectedStatusCode"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+          "help": "Form elements must have labels",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/label?application=axeAPI",
+          "evidence": [
+            "chrome/axe-desktop-orders.json",
+            "chrome/axe-narrow-orders.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Apis/Details/20200000-0000-0000-0000-000000000001",
+          "rule": "label",
+          "impact": "critical",
+          "targets": [
+            "#NewEndpoint_MaxResponseTimeMs"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+          "help": "Form elements must have labels",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/label?application=axeAPI",
+          "evidence": [
+            "chrome/axe-desktop-orders.json",
+            "chrome/axe-narrow-orders.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Apis/Details/20200000-0000-0000-0000-000000000001",
+          "rule": "label",
+          "impact": "critical",
+          "targets": [
+            "#NewEndpoint_RequiresAuthentication"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+          "help": "Form elements must have labels",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/label?application=axeAPI",
+          "evidence": [
+            "chrome/axe-desktop-orders.json",
+            "chrome/axe-narrow-orders.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Apis/Details/20200000-0000-0000-0000-000000000001",
+          "rule": "select-name",
+          "impact": "critical",
+          "targets": [
+            "#NewEndpoint_Method"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+          "help": "Select element must have an accessible name",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/select-name?application=axeAPI",
+          "evidence": [
+            "chrome/axe-desktop-orders.json",
+            "chrome/axe-narrow-orders.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Apis/Details/20200000-0000-0000-0000-000000000002",
+          "rule": "scrollable-region-focusable",
+          "impact": "serious",
+          "targets": [
+            ".mb-4 > .table-responsive"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element should have focusable content\n  Element should be focusable",
+          "help": "Scrollable region must have keyboard access",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/scrollable-region-focusable?application=axeAPI",
+          "evidence": [
+            "chrome/axe-narrow-catalogue.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Apis/Details/20200000-0000-0000-0000-000000000001",
+          "rule": "scrollable-region-focusable",
+          "impact": "serious",
+          "targets": [
+            ".mb-4 > .table-responsive"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element should have focusable content\n  Element should be focusable",
+          "help": "Scrollable region must have keyboard access",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/scrollable-region-focusable?application=axeAPI",
+          "evidence": [
+            "chrome/axe-narrow-orders.json"
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "url": "http://localhost:51920/Apis/Details/20200000-0000-0000-0000-000000000002",
+          "rule": "color-contrast",
+          "impact": "serious",
+          "targets": [
+            "#NewEndpoint_Method"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+          "evidence": [
+            "chrome/axe-desktop-catalogue.json",
+            "chrome/axe-narrow-catalogue.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Defects",
+          "rule": "color-contrast",
+          "impact": "serious",
+          "targets": [
+            "form:nth-child(2) > .row.g-2.mt-2 > .col-md-3:nth-child(1) > select[name=\"status\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+          "evidence": [
+            "chrome/axe-desktop-defects.json",
+            "chrome/axe-narrow-defects.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Defects",
+          "rule": "color-contrast",
+          "impact": "serious",
+          "targets": [
+            "form:nth-child(2) > .row.g-2.mt-2 > .col-md-3:nth-child(2) > select[name=\"priority\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+          "evidence": [
+            "chrome/axe-desktop-defects.json",
+            "chrome/axe-narrow-defects.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Defects",
+          "rule": "color-contrast",
+          "impact": "serious",
+          "targets": [
+            "form:nth-child(3) > .row.g-2.mt-2 > .col-md-3:nth-child(1) > select[name=\"status\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+          "evidence": [
+            "chrome/axe-desktop-defects.json",
+            "chrome/axe-narrow-defects.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Defects",
+          "rule": "color-contrast",
+          "impact": "serious",
+          "targets": [
+            "form:nth-child(3) > .row.g-2.mt-2 > .col-md-3:nth-child(2) > select[name=\"priority\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+          "evidence": [
+            "chrome/axe-desktop-defects.json",
+            "chrome/axe-narrow-defects.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Defects",
+          "rule": "color-contrast",
+          "impact": "serious",
+          "targets": [
+            "form:nth-child(4) > .row.g-2.mt-2 > .col-md-3:nth-child(1) > select[name=\"status\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+          "evidence": [
+            "chrome/axe-desktop-defects.json",
+            "chrome/axe-narrow-defects.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Defects",
+          "rule": "color-contrast",
+          "impact": "serious",
+          "targets": [
+            "form:nth-child(4) > .row.g-2.mt-2 > .col-md-3:nth-child(2) > select[name=\"priority\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+          "evidence": [
+            "chrome/axe-desktop-defects.json",
+            "chrome/axe-narrow-defects.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Defects",
+          "rule": "color-contrast",
+          "impact": "serious",
+          "targets": [
+            "form:nth-child(5) > .row.g-2.mt-2 > .col-md-3:nth-child(1) > select[name=\"status\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+          "evidence": [
+            "chrome/axe-desktop-defects.json",
+            "chrome/axe-narrow-defects.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Defects",
+          "rule": "color-contrast",
+          "impact": "serious",
+          "targets": [
+            "form:nth-child(5) > .row.g-2.mt-2 > .col-md-3:nth-child(2) > select[name=\"priority\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+          "evidence": [
+            "chrome/axe-desktop-defects.json",
+            "chrome/axe-narrow-defects.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Apis/Details/20200000-0000-0000-0000-000000000001",
+          "rule": "color-contrast",
+          "impact": "serious",
+          "targets": [
+            "#NewEndpoint_Method"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+          "evidence": [
+            "chrome/axe-desktop-orders.json",
+            "chrome/axe-narrow-orders.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Apis/Create",
+          "rule": "color-contrast",
+          "impact": "serious",
+          "targets": [
+            "#Description"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+          "evidence": [
+            "chrome/axe-desktop-registration.json",
+            "chrome/axe-narrow-registration.json"
+          ]
+        }
+      ],
+      "uniqueNamingViolations": 22,
+      "domMissingReliableLabelAssociations": 26,
+      "namingCountExplanation": "The DOM count also includes placeholder-backed fields not failed by axe. Counts describe rendered controls across the tested routes; repeated viewport/browser instances are not separate product defects.",
+      "scrollableRegionFinding": "Raw axe flag retained. Genuine Tab, Shift+Tab and ArrowRight reached and scrolled each overflowing endpoint table in the tested native browsers. See narrow-keyboard-settled-verification.json; not a confirmed keyboard failure."
+    },
+    "edge": {
+      "status": "FAIL",
+      "uniqueViolations": [
+        {
+          "url": "http://localhost:51920/Apis/Details/20200000-0000-0000-0000-000000000002",
+          "rule": "color-contrast",
+          "impact": "serious",
+          "targets": [
+            "div > code"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.23 (foreground color: #d63384, background color: #f6f8fb, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+          "evidence": [
+            "edge/axe-desktop-catalogue.json",
+            "edge/axe-narrow-catalogue.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Apis/Details/20200000-0000-0000-0000-000000000002",
+          "rule": "label",
+          "impact": "critical",
+          "targets": [
+            "#NewEndpoint_Name"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+          "help": "Form elements must have labels",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/label?application=axeAPI",
+          "evidence": [
+            "edge/axe-desktop-catalogue.json",
+            "edge/axe-narrow-catalogue.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Apis/Details/20200000-0000-0000-0000-000000000002",
+          "rule": "label",
+          "impact": "critical",
+          "targets": [
+            "#NewEndpoint_ExpectedStatusCode"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+          "help": "Form elements must have labels",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/label?application=axeAPI",
+          "evidence": [
+            "edge/axe-desktop-catalogue.json",
+            "edge/axe-narrow-catalogue.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Apis/Details/20200000-0000-0000-0000-000000000002",
+          "rule": "label",
+          "impact": "critical",
+          "targets": [
+            "#NewEndpoint_MaxResponseTimeMs"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+          "help": "Form elements must have labels",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/label?application=axeAPI",
+          "evidence": [
+            "edge/axe-desktop-catalogue.json",
+            "edge/axe-narrow-catalogue.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Apis/Details/20200000-0000-0000-0000-000000000002",
+          "rule": "label",
+          "impact": "critical",
+          "targets": [
+            "#NewEndpoint_RequiresAuthentication"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+          "help": "Form elements must have labels",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/label?application=axeAPI",
+          "evidence": [
+            "edge/axe-desktop-catalogue.json",
+            "edge/axe-narrow-catalogue.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Apis/Details/20200000-0000-0000-0000-000000000002",
+          "rule": "select-name",
+          "impact": "critical",
+          "targets": [
+            "#NewEndpoint_Method"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+          "help": "Select element must have an accessible name",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/select-name?application=axeAPI",
+          "evidence": [
+            "edge/axe-desktop-catalogue.json",
+            "edge/axe-narrow-catalogue.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Defects",
+          "rule": "color-contrast",
+          "impact": "serious",
+          "targets": [
+            ".btn-outline-secondary"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.4 (foreground color: #6c757d, background color: #f6f8fb, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+          "evidence": [
+            "edge/axe-desktop-defects.json",
+            "edge/axe-narrow-defects.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Defects",
+          "rule": "label",
+          "impact": "critical",
+          "targets": [
+            "form:nth-child(2) > .row.g-2.mt-2 > .col-md-4 > .form-control[name=\"assignedTo\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+          "help": "Form elements must have labels",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/label?application=axeAPI",
+          "evidence": [
+            "edge/axe-desktop-defects.json",
+            "edge/axe-narrow-defects.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Defects",
+          "rule": "label",
+          "impact": "critical",
+          "targets": [
+            "form:nth-child(3) > .row.g-2.mt-2 > .col-md-4 > .form-control[value=\"SQA-20 manual tester\"][name=\"assignedTo\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+          "help": "Form elements must have labels",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/label?application=axeAPI",
+          "evidence": [
+            "edge/axe-desktop-defects.json",
+            "edge/axe-narrow-defects.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Defects",
+          "rule": "label",
+          "impact": "critical",
+          "targets": [
+            "form:nth-child(4) > .row.g-2.mt-2 > .col-md-4 > .form-control[value=\"SQA-20 manual tester\"][name=\"assignedTo\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+          "help": "Form elements must have labels",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/label?application=axeAPI",
+          "evidence": [
+            "edge/axe-desktop-defects.json",
+            "edge/axe-narrow-defects.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Defects",
+          "rule": "label",
+          "impact": "critical",
+          "targets": [
+            "form:nth-child(5) > .row.g-2.mt-2 > .col-md-4 > .form-control[value=\"SQA-20 manual tester\"][name=\"assignedTo\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+          "help": "Form elements must have labels",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/label?application=axeAPI",
+          "evidence": [
+            "edge/axe-desktop-defects.json",
+            "edge/axe-narrow-defects.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Defects",
+          "rule": "select-name",
+          "impact": "critical",
+          "targets": [
+            "form:nth-child(2) > .row.g-2.mt-2 > .col-md-3:nth-child(1) > select[name=\"status\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+          "help": "Select element must have an accessible name",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/select-name?application=axeAPI",
+          "evidence": [
+            "edge/axe-desktop-defects.json",
+            "edge/axe-narrow-defects.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Defects",
+          "rule": "select-name",
+          "impact": "critical",
+          "targets": [
+            "form:nth-child(2) > .row.g-2.mt-2 > .col-md-3:nth-child(2) > select[name=\"priority\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+          "help": "Select element must have an accessible name",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/select-name?application=axeAPI",
+          "evidence": [
+            "edge/axe-desktop-defects.json",
+            "edge/axe-narrow-defects.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Defects",
+          "rule": "select-name",
+          "impact": "critical",
+          "targets": [
+            "form:nth-child(3) > .row.g-2.mt-2 > .col-md-3:nth-child(1) > select[name=\"status\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+          "help": "Select element must have an accessible name",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/select-name?application=axeAPI",
+          "evidence": [
+            "edge/axe-desktop-defects.json",
+            "edge/axe-narrow-defects.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Defects",
+          "rule": "select-name",
+          "impact": "critical",
+          "targets": [
+            "form:nth-child(3) > .row.g-2.mt-2 > .col-md-3:nth-child(2) > select[name=\"priority\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+          "help": "Select element must have an accessible name",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/select-name?application=axeAPI",
+          "evidence": [
+            "edge/axe-desktop-defects.json",
+            "edge/axe-narrow-defects.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Defects",
+          "rule": "select-name",
+          "impact": "critical",
+          "targets": [
+            "form:nth-child(4) > .row.g-2.mt-2 > .col-md-3:nth-child(1) > select[name=\"status\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+          "help": "Select element must have an accessible name",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/select-name?application=axeAPI",
+          "evidence": [
+            "edge/axe-desktop-defects.json",
+            "edge/axe-narrow-defects.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Defects",
+          "rule": "select-name",
+          "impact": "critical",
+          "targets": [
+            "form:nth-child(4) > .row.g-2.mt-2 > .col-md-3:nth-child(2) > select[name=\"priority\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+          "help": "Select element must have an accessible name",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/select-name?application=axeAPI",
+          "evidence": [
+            "edge/axe-desktop-defects.json",
+            "edge/axe-narrow-defects.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Defects",
+          "rule": "select-name",
+          "impact": "critical",
+          "targets": [
+            "form:nth-child(5) > .row.g-2.mt-2 > .col-md-3:nth-child(1) > select[name=\"status\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+          "help": "Select element must have an accessible name",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/select-name?application=axeAPI",
+          "evidence": [
+            "edge/axe-desktop-defects.json",
+            "edge/axe-narrow-defects.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Defects",
+          "rule": "select-name",
+          "impact": "critical",
+          "targets": [
+            "form:nth-child(5) > .row.g-2.mt-2 > .col-md-3:nth-child(2) > select[name=\"priority\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+          "help": "Select element must have an accessible name",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/select-name?application=axeAPI",
+          "evidence": [
+            "edge/axe-desktop-defects.json",
+            "edge/axe-narrow-defects.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Apis/Details/20200000-0000-0000-0000-000000000001",
+          "rule": "color-contrast",
+          "impact": "serious",
+          "targets": [
+            "div > code"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.23 (foreground color: #d63384, background color: #f6f8fb, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+          "evidence": [
+            "edge/axe-desktop-orders.json",
+            "edge/axe-narrow-orders.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Apis/Details/20200000-0000-0000-0000-000000000001",
+          "rule": "label",
+          "impact": "critical",
+          "targets": [
+            "#NewEndpoint_Name"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+          "help": "Form elements must have labels",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/label?application=axeAPI",
+          "evidence": [
+            "edge/axe-desktop-orders.json",
+            "edge/axe-narrow-orders.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Apis/Details/20200000-0000-0000-0000-000000000001",
+          "rule": "label",
+          "impact": "critical",
+          "targets": [
+            "#NewEndpoint_ExpectedStatusCode"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+          "help": "Form elements must have labels",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/label?application=axeAPI",
+          "evidence": [
+            "edge/axe-desktop-orders.json",
+            "edge/axe-narrow-orders.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Apis/Details/20200000-0000-0000-0000-000000000001",
+          "rule": "label",
+          "impact": "critical",
+          "targets": [
+            "#NewEndpoint_MaxResponseTimeMs"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+          "help": "Form elements must have labels",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/label?application=axeAPI",
+          "evidence": [
+            "edge/axe-desktop-orders.json",
+            "edge/axe-narrow-orders.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Apis/Details/20200000-0000-0000-0000-000000000001",
+          "rule": "label",
+          "impact": "critical",
+          "targets": [
+            "#NewEndpoint_RequiresAuthentication"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+          "help": "Form elements must have labels",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/label?application=axeAPI",
+          "evidence": [
+            "edge/axe-desktop-orders.json",
+            "edge/axe-narrow-orders.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Apis/Details/20200000-0000-0000-0000-000000000001",
+          "rule": "select-name",
+          "impact": "critical",
+          "targets": [
+            "#NewEndpoint_Method"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+          "help": "Select element must have an accessible name",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/select-name?application=axeAPI",
+          "evidence": [
+            "edge/axe-desktop-orders.json",
+            "edge/axe-narrow-orders.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Apis/Details/20200000-0000-0000-0000-000000000002",
+          "rule": "scrollable-region-focusable",
+          "impact": "serious",
+          "targets": [
+            ".mb-4 > .table-responsive"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element should have focusable content\n  Element should be focusable",
+          "help": "Scrollable region must have keyboard access",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/scrollable-region-focusable?application=axeAPI",
+          "evidence": [
+            "edge/axe-narrow-catalogue.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Apis/Details/20200000-0000-0000-0000-000000000001",
+          "rule": "scrollable-region-focusable",
+          "impact": "serious",
+          "targets": [
+            ".mb-4 > .table-responsive"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element should have focusable content\n  Element should be focusable",
+          "help": "Scrollable region must have keyboard access",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/scrollable-region-focusable?application=axeAPI",
+          "evidence": [
+            "edge/axe-narrow-orders.json"
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "url": "http://localhost:51920/Apis/Details/20200000-0000-0000-0000-000000000002",
+          "rule": "color-contrast",
+          "impact": "serious",
+          "targets": [
+            "#NewEndpoint_Method"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+          "evidence": [
+            "edge/axe-desktop-catalogue.json",
+            "edge/axe-narrow-catalogue.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Defects",
+          "rule": "color-contrast",
+          "impact": "serious",
+          "targets": [
+            "form:nth-child(2) > .row.g-2.mt-2 > .col-md-3:nth-child(1) > select[name=\"status\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+          "evidence": [
+            "edge/axe-desktop-defects.json",
+            "edge/axe-narrow-defects.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Defects",
+          "rule": "color-contrast",
+          "impact": "serious",
+          "targets": [
+            "form:nth-child(2) > .row.g-2.mt-2 > .col-md-3:nth-child(2) > select[name=\"priority\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+          "evidence": [
+            "edge/axe-desktop-defects.json",
+            "edge/axe-narrow-defects.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Defects",
+          "rule": "color-contrast",
+          "impact": "serious",
+          "targets": [
+            "form:nth-child(3) > .row.g-2.mt-2 > .col-md-3:nth-child(1) > select[name=\"status\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+          "evidence": [
+            "edge/axe-desktop-defects.json",
+            "edge/axe-narrow-defects.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Defects",
+          "rule": "color-contrast",
+          "impact": "serious",
+          "targets": [
+            "form:nth-child(3) > .row.g-2.mt-2 > .col-md-3:nth-child(2) > select[name=\"priority\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+          "evidence": [
+            "edge/axe-desktop-defects.json",
+            "edge/axe-narrow-defects.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Defects",
+          "rule": "color-contrast",
+          "impact": "serious",
+          "targets": [
+            "form:nth-child(4) > .row.g-2.mt-2 > .col-md-3:nth-child(1) > select[name=\"status\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+          "evidence": [
+            "edge/axe-desktop-defects.json",
+            "edge/axe-narrow-defects.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Defects",
+          "rule": "color-contrast",
+          "impact": "serious",
+          "targets": [
+            "form:nth-child(4) > .row.g-2.mt-2 > .col-md-3:nth-child(2) > select[name=\"priority\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+          "evidence": [
+            "edge/axe-desktop-defects.json",
+            "edge/axe-narrow-defects.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Defects",
+          "rule": "color-contrast",
+          "impact": "serious",
+          "targets": [
+            "form:nth-child(5) > .row.g-2.mt-2 > .col-md-3:nth-child(1) > select[name=\"status\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+          "evidence": [
+            "edge/axe-desktop-defects.json",
+            "edge/axe-narrow-defects.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Defects",
+          "rule": "color-contrast",
+          "impact": "serious",
+          "targets": [
+            "form:nth-child(5) > .row.g-2.mt-2 > .col-md-3:nth-child(2) > select[name=\"priority\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+          "evidence": [
+            "edge/axe-desktop-defects.json",
+            "edge/axe-narrow-defects.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Apis/Details/20200000-0000-0000-0000-000000000001",
+          "rule": "color-contrast",
+          "impact": "serious",
+          "targets": [
+            "#NewEndpoint_Method"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+          "evidence": [
+            "edge/axe-desktop-orders.json",
+            "edge/axe-narrow-orders.json"
+          ]
+        },
+        {
+          "url": "http://localhost:51920/Apis/Create",
+          "rule": "color-contrast",
+          "impact": "serious",
+          "targets": [
+            "#Description"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+          "evidence": [
+            "edge/axe-desktop-registration.json",
+            "edge/axe-narrow-registration.json"
+          ]
+        }
+      ],
+      "uniqueNamingViolations": 22,
+      "domMissingReliableLabelAssociations": 26,
+      "namingCountExplanation": "The DOM count also includes placeholder-backed fields not failed by axe. Counts describe rendered controls across the tested routes; repeated viewport/browser instances are not separate product defects.",
+      "scrollableRegionFinding": "Raw axe flag retained. Genuine Tab, Shift+Tab and ArrowRight reached and scrolled each overflowing endpoint table in the tested native browsers. See narrow-keyboard-settled-verification.json; not a confirmed keyboard failure."
+    }
+  }
+}

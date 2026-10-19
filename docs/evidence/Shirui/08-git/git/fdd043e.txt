@@ -1,0 +1,12 @@
+commit fdd043e71589865dbf3ab33c7ce7d33e8ee671bf
+Merge: 586a516 ca173d9
+Author:     LanaIdais <lanaidais10@gmail.com>
+AuthorDate: Mon Oct 19 01:02:07 2026 +1300
+Commit:     GitHub <noreply@github.com>
+CommitDate: Mon Oct 19 01:02:07 2026 +1300
+
+    Merge pull request #7 from 3ilmar/docs/sqa18-browser-evidence
+    
+    Completed SQA-18 browser performance validation using 2,000 deterministic API check results.
+    
+    Eilmar also reviewed (see his comment).

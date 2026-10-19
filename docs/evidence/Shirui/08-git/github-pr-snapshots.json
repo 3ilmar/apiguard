@@ -1,0 +1,581 @@
+{
+  "retrieved_utc": "2026-10-19 11:09:34 UTC",
+  "source": "GitHub connector read-only API responses; captured during evidence consolidation",
+  "repository": "3ilmar/apiguard",
+  "pull_requests": [
+    {
+      "status": "fulfilled",
+      "value": {
+        "number": 2,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "url": "https://github.com/3ilmar/apiguard/pull/2",
+            "number": 2,
+            "state": "closed",
+            "merged": true,
+            "mergeable": false,
+            "draft": false,
+            "body": "Improves Feature C dashboard and reporting quality.\r\n\r\nChanges include improved dashboard metrics and empty-data handling, richer CSV QA exports, additional automated dashboard/reporting tests, and updates to requirements, test cases and the RTM.\r\n\r\nVerification: solution builds successfully and all 17 automated tests pass.\r\n\r\nPlease review before merging.",
+            "title": "Improve dashboard metrics, reporting and QA test coverage",
+            "base": "main",
+            "base_sha": "fb334f3c253af7b6eb050e00b6a5a7c45a0ac875",
+            "head": "Shirui",
+            "head_sha": "b459e091e1ca98cba639bf86881199e6e9f72551",
+            "head_repo_id": 1351064186,
+            "head_repo_full_name": "3ilmar/apiguard",
+            "merge_commit_sha": "033a4fa6485aa6f3b5540ba9ce360966317174cc",
+            "user": {
+              "login": "SaltedFishInATank",
+              "name": "SaltedFishInATank",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/189859927?v=4",
+              "id": 189859927
+            },
+            "requested_reviewers": null,
+            "requested_team_reviewers": null,
+            "diff": null,
+            "comments": null,
+            "created_at": "2026-08-30T11:25:55Z",
+            "updated_at": "2026-08-30T12:14:20Z",
+            "closed_at": "2026-08-30T12:14:20Z",
+            "merged_at": "2026-08-30T12:14:20Z",
+            "commits": 3,
+            "changed_files": 9,
+            "additions": 385,
+            "deletions": 32,
+            "display_url": "https://github.com/3ilmar/apiguard/pull/2",
+            "display_title": "Improve dashboard metrics, reporting and QA test coverage"
+          },
+          "isError": false
+        }
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "number": 5,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "url": "https://github.com/3ilmar/apiguard/pull/5",
+            "number": 5,
+            "state": "closed",
+            "merged": true,
+            "mergeable": false,
+            "draft": false,
+            "body": "- Implemented dashboard severity distribution and improved aggregation performance.\n- Enhanced CSV exports with filtering, lifecycle fields and safer data handling.\n- Added automated tests for dashboard functionality, CSV reporting, usability and performance.\n- Verified 71 automated tests passed with no failures.\n- Completed PT-01 testing with 2,000 results; aggregation and HTTP response times met the 2-second target.\n- Added performance test logs and quality assurance evidence.\n- Documented remaining browser-rendering, coverage and CI verification requirements.",
+            "title": "Assessment 2: Dashboard, CSV Reporting and QA Testing",
+            "base": "main",
+            "base_sha": "1505cc9f1d60687111765aec1355ec1e9f87b2a9",
+            "head": "feature/dashboard-reporting",
+            "head_sha": "ced44546ba9c71f25935e6ba913b27fe08f0acd1",
+            "head_repo_id": 1351064186,
+            "head_repo_full_name": "3ilmar/apiguard",
+            "merge_commit_sha": "8e69c6273080b01db100c29cc76eb33a798e84af",
+            "user": {
+              "login": "SaltedFishInATank",
+              "name": "SaltedFishInATank",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/189859927?v=4",
+              "id": 189859927
+            },
+            "requested_reviewers": null,
+            "requested_team_reviewers": null,
+            "diff": null,
+            "comments": null,
+            "created_at": "2026-10-18T06:19:42Z",
+            "updated_at": "2026-10-18T06:23:32Z",
+            "closed_at": "2026-10-18T06:23:32Z",
+            "merged_at": "2026-10-18T06:23:32Z",
+            "commits": 1,
+            "changed_files": 177,
+            "additions": 41404,
+            "deletions": 87,
+            "display_url": "https://github.com/3ilmar/apiguard/pull/5",
+            "display_title": "Assessment 2: Dashboard, CSV Reporting and QA Testing"
+          },
+          "isError": false
+        }
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "number": 7,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "url": "https://github.com/3ilmar/apiguard/pull/7",
+            "number": 7,
+            "state": "closed",
+            "merged": true,
+            "mergeable": false,
+            "draft": false,
+            "body": "Changes\n\nUpdated the SQA-18 test-case status and evidence records.\n\nAdded five independent Chrome browser performance measurements.\n\nRecorded a median visual-readiness time of 199.5 ms and maximum of 257.9 ms.\n\nVerified dashboard statistics, severity distribution, styling, and visual readiness.\n\nIncluded Playwright automation tools, screenshots, performance traces, and testing documentation.\n\nTest Results\n\nSQA-18 passed against the documented operational acceptance criterion of under 2,000 ms.\n\nLimitations\n\nTesting was performed on an isolated local development instance. Formal approval of NFR-PERF-01 remains pending.",
+            "title": "Completed SQA-18 browser performance validation using 2,000 deterministic API check results.",
+            "base": "main",
+            "base_sha": "586a51683e6e385c4369c16b46ce334b1e5d4604",
+            "head": "docs/sqa18-browser-evidence",
+            "head_sha": "ca173d9fc7484f4f96d139b78452be34ffbf9fc9",
+            "head_repo_id": 1351064186,
+            "head_repo_full_name": "3ilmar/apiguard",
+            "merge_commit_sha": "fdd043e71589865dbf3ab33c7ce7d33e8ee671bf",
+            "user": {
+              "login": "SaltedFishInATank",
+              "name": "SaltedFishInATank",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/189859927?v=4",
+              "id": 189859927
+            },
+            "requested_reviewers": null,
+            "requested_team_reviewers": null,
+            "diff": null,
+            "comments": null,
+            "created_at": "2026-10-18T08:12:03Z",
+            "updated_at": "2026-10-18T12:02:07Z",
+            "closed_at": "2026-10-18T12:02:07Z",
+            "merged_at": "2026-10-18T12:02:07Z",
+            "commits": 2,
+            "changed_files": 86,
+            "additions": 23016,
+            "deletions": 146,
+            "display_url": "https://github.com/3ilmar/apiguard/pull/7",
+            "display_title": "Completed SQA-18 browser performance validation using 2,000 deterministic API check results."
+          },
+          "isError": false
+        }
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "number": 12,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "url": "https://github.com/3ilmar/apiguard/pull/12",
+            "number": 12,
+            "state": "closed",
+            "merged": true,
+            "mergeable": false,
+            "draft": false,
+            "body": null,
+            "title": "QA: SQA-19 Human Usability and SQA-20 Browser Accessibility Testing",
+            "base": "main",
+            "base_sha": "07dfd40cb1a8df582bc4f9bcd003c523b5297862",
+            "head": "qa/sqa19-sqa20-manual-validation",
+            "head_sha": "18c6401b6618d8f8f16afebc504349705b120c86",
+            "head_repo_id": 1351064186,
+            "head_repo_full_name": "3ilmar/apiguard",
+            "merge_commit_sha": "7f28ee9239ba728a297ffd729da618abb1c0d415",
+            "user": {
+              "login": "SaltedFishInATank",
+              "name": "SaltedFishInATank",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/189859927?v=4",
+              "id": 189859927
+            },
+            "requested_reviewers": null,
+            "requested_team_reviewers": null,
+            "diff": null,
+            "comments": null,
+            "created_at": "2026-10-19T09:41:18Z",
+            "updated_at": "2026-10-19T09:43:21Z",
+            "closed_at": "2026-10-19T09:43:21Z",
+            "merged_at": "2026-10-19T09:43:21Z",
+            "commits": 3,
+            "changed_files": 427,
+            "additions": 709611,
+            "deletions": 25,
+            "display_url": "https://github.com/3ilmar/apiguard/pull/12",
+            "display_title": "QA: SQA-19 Human Usability and SQA-20 Browser Accessibility Testing"
+          },
+          "isError": false
+        }
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "number": 13,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "url": "https://github.com/3ilmar/apiguard/pull/13",
+            "number": 13,
+            "state": "closed",
+            "merged": true,
+            "mergeable": false,
+            "draft": false,
+            "body": "Records Shirui's explicit observer approval of EILMAR-P01's five SQA-19 interpretations and supporting explanations from the 19 October 2026 session. SQA-19 is now PASS — observer approved (5/5), while the original submitted observation sheet remains unchanged. The wording assistance, absent unpolished answers/session screenshot and uncorroborated aspects of the unaided session remain disclosed; no signature or precise approval timestamp is inferred.\n\nRecalculates the master register to 22 planned, 16 executed, 16 PASS, 0 provisional PASS, 0 FAIL/BLOCKED and 6 NOT RUN (72.73% execution; 100% pass among executed master cases). SQA-18's proposed-criterion PASS and SQA-20's automated-retest PASS remain unchanged, with original SQA-20 FAIL evidence preserved.\n\nIncludes a technical assessment of PM-VALIDATION-01 for a separate application branch/PR. `ModelState.Clear()` removes malformed numeric-input binding errors, allowing default status 200 to persist. The existing HTTP regression remains 28 PASS / 1 FAIL; no application correction or teammate assignment is made here.\n\nValidation:\n- 20/20 automated documentation checks PASS.\n- 151 local links resolve across 11 documents; CSV schema, widths, IDs, totals and approval records checked.\n- 1,577 pre-existing evidence files compared; only the two intended current SQA-19 documents changed. Original observations and SQA-18/SQA-20 artifacts are preserved.\n- Documentation-only diff; no fresh local .NET/browser/HTTP execution claimed. Existing 136/136 .NET evidence remains historical; GitHub Actions runs separately for this PR.\n\nEvidence: [SQA-19 final assessment](https://github.com/3ilmar/apiguard/blob/ca4a49713e9501b2b6194897012b9473c8a8ca2c/docs/qa-evidence/SQA-19/observer-assessment-session-eilmar.md), [validation](https://github.com/3ilmar/apiguard/blob/ca4a49713e9501b2b6194897012b9473c8a8ca2c/docs/qa-evidence/SQA-19/final-approval-20261019/validation.json), [numeric defect assessment](https://github.com/3ilmar/apiguard/blob/ca4a49713e9501b2b6194897012b9473c8a8ca2c/docs/qa-evidence/SQA-19/numeric-endpoint-validation-assessment.md).\n\nRemaining submission work: six NOT RUN acceptance cases, RTM/requirement coordination, formal performance-criterion approval, PM-VALIDATION-01 and DEF-010 triage/correction, and the team's release decision. This PR does not establish full WCAG compliance or human accessibility acceptance.\n\nPost-submission CI: both push workflows and both PR workflows passed. PR runs: [.NET quality checks](https://github.com/3ilmar/apiguard/actions/runs/39238655229) and [ENSE707 Quality Gate](https://github.com/3ilmar/apiguard/actions/runs/39238655356). The branch-push .NET log records 136/136 tests passing and Release build 0 warnings/errors; no failed workflow was observed.\n",
+            "title": "Finalise SQA-19 Observer Approval and QA Metrics",
+            "base": "main",
+            "base_sha": "e43fe52373d3d74b617610e2dbee418ac9b3f9b4",
+            "head": "docs/sqa19-final-approval",
+            "head_sha": "ca4a49713e9501b2b6194897012b9473c8a8ca2c",
+            "head_repo_id": 1351064186,
+            "head_repo_full_name": "3ilmar/apiguard",
+            "merge_commit_sha": "bd9cc4340f67fb75d2db36a8294d66cfeda6b9a9",
+            "user": {
+              "login": "SaltedFishInATank",
+              "name": "SaltedFishInATank",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/189859927?v=4",
+              "id": 189859927
+            },
+            "requested_reviewers": null,
+            "requested_team_reviewers": null,
+            "diff": null,
+            "comments": null,
+            "created_at": "2026-10-19T10:36:23Z",
+            "updated_at": "2026-10-19T10:46:05Z",
+            "closed_at": "2026-10-19T10:46:05Z",
+            "merged_at": "2026-10-19T10:46:05Z",
+            "commits": 1,
+            "changed_files": 17,
+            "additions": 2589,
+            "deletions": 48,
+            "display_url": "https://github.com/3ilmar/apiguard/pull/13",
+            "display_title": "Finalise SQA-19 Observer Approval and QA Metrics"
+          },
+          "isError": false
+        }
+      }
+    }
+  ],
+  "reviews_and_comments": [
+    {
+      "status": "fulfilled",
+      "value": {
+        "number": 2,
+        "results": [
+          {
+            "status": "fulfilled",
+            "value": {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Action completed."
+                }
+              ],
+              "structuredContent": {
+                "reviews": [
+                  {
+                    "id": "PRR_kwDOUIeaes8AAAABLaQPRg",
+                    "state": "APPROVED",
+                    "body": "Reviewed changes. Functionality looks correct and aligns with project requirements.",
+                    "submitted_at": "2026-08-30T11:32:10Z",
+                    "author": {
+                      "login": "LanaIdais",
+                      "name": "LanaIdais",
+                      "email": null,
+                      "avatar_url": "https://avatars.githubusercontent.com/u/228625282?u=02e4d25bf48b27565f7ba8c1af60debbfb4407d2&v=4",
+                      "id": null
+                    }
+                  }
+                ]
+              },
+              "isError": false
+            }
+          },
+          {
+            "status": "fulfilled",
+            "value": {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Action completed."
+                }
+              ],
+              "structuredContent": {
+                "comments": [
+                  {
+                    "url": "https://github.com/3ilmar/apiguard/pull/2#pullrequestreview-5060693830",
+                    "body": "Reviewed changes. Functionality looks correct and aligns with project requirements.",
+                    "user": {
+                      "login": "LanaIdais",
+                      "name": "LanaIdais",
+                      "email": null,
+                      "avatar_url": "https://avatars.githubusercontent.com/u/228625282?u=02e4d25bf48b27565f7ba8c1af60debbfb4407d2&v=4",
+                      "id": 228625282
+                    },
+                    "id": 5060693830,
+                    "pull_request_review_id": null,
+                    "in_reply_to_id": null,
+                    "created_at": "2026-08-30T11:32:10Z",
+                    "updated_at": null,
+                    "review": "APPROVED",
+                    "side": null,
+                    "line": null,
+                    "start_line": null,
+                    "path": null,
+                    "body_html": "<p dir=\"auto\">Reviewed changes. Functionality looks correct and aligns with project requirements.</p>"
+                  }
+                ],
+                "url": "https://github.com/3ilmar/apiguard/pull/2",
+                "title": "3ilmar/apiguard PR #2 comments",
+                "display_url": "https://github.com/3ilmar/apiguard/pull/2",
+                "display_title": "3ilmar/apiguard PR #2 comments"
+              },
+              "isError": false
+            }
+          }
+        ]
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "number": 5,
+        "results": [
+          {
+            "status": "fulfilled",
+            "value": {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Action completed."
+                }
+              ],
+              "structuredContent": {
+                "reviews": []
+              },
+              "isError": false
+            }
+          },
+          {
+            "status": "fulfilled",
+            "value": {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Action completed."
+                }
+              ],
+              "structuredContent": {
+                "comments": [
+                  {
+                    "url": "https://github.com/3ilmar/apiguard/pull/5#issuecomment-6246522247",
+                    "body": "Reviewed the PR. All checks passed, and the implementation looks good. The dashboard aggregation, CSV export enhancements, automated tests, and performance testing are well covered. No issues found from my review.",
+                    "user": {
+                      "login": "LanaIdais",
+                      "name": "LanaIdais",
+                      "email": null,
+                      "avatar_url": "https://avatars.githubusercontent.com/u/228625282?v=4",
+                      "id": 228625282
+                    },
+                    "id": 6246522247,
+                    "pull_request_review_id": null,
+                    "in_reply_to_id": null,
+                    "created_at": "2026-10-18T06:23:09Z",
+                    "updated_at": "2026-10-18T06:23:09Z",
+                    "review": null,
+                    "side": null,
+                    "line": null,
+                    "start_line": null,
+                    "path": null,
+                    "body_html": "<p dir=\"auto\">Reviewed the PR. All checks passed, and the implementation looks good. The dashboard aggregation, CSV export enhancements, automated tests, and performance testing are well covered. No issues found from my review.</p>"
+                  }
+                ],
+                "url": "https://github.com/3ilmar/apiguard/pull/5",
+                "title": "3ilmar/apiguard PR #5 comments",
+                "display_url": "https://github.com/3ilmar/apiguard/pull/5",
+                "display_title": "3ilmar/apiguard PR #5 comments"
+              },
+              "isError": false
+            }
+          }
+        ]
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "number": 7,
+        "results": [
+          {
+            "status": "fulfilled",
+            "value": {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Action completed."
+                }
+              ],
+              "structuredContent": {
+                "reviews": [
+                  {
+                    "id": "PRR_kwDOUIeaes8AAAABS4ec6g",
+                    "state": "APPROVED",
+                    "body": "Reviewed the final SQA-18 browser-performance branch. I independently built the branch in Release mode and ran the automated suite successfully with 76/76 tests passing and 0 failures. I also checked the browser-performance evidence, including the five 2,000-result runs, final decision evidence, screenshots, environment records, and supporting artifacts. The PR clearly states that SQA-18 passes the proposed operational criterion while formal NFR-PERF-01 approval remains pending. No blocking issues found.",
+                    "submitted_at": "2026-10-18T08:38:49Z",
+                    "author": {
+                      "login": "3ilmar",
+                      "name": "3ilmar",
+                      "email": null,
+                      "avatar_url": "https://avatars.githubusercontent.com/u/190670093?v=4",
+                      "id": null
+                    }
+                  }
+                ]
+              },
+              "isError": false
+            }
+          },
+          {
+            "status": "fulfilled",
+            "value": {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Action completed."
+                }
+              ],
+              "structuredContent": {
+                "comments": [
+                  {
+                    "url": "https://github.com/3ilmar/apiguard/pull/7#pullrequestreview-5562146026",
+                    "body": "Reviewed the final SQA-18 browser-performance branch. I independently built the branch in Release mode and ran the automated suite successfully with 76/76 tests passing and 0 failures. I also checked the browser-performance evidence, including the five 2,000-result runs, final decision evidence, screenshots, environment records, and supporting artifacts. The PR clearly states that SQA-18 passes the proposed operational criterion while formal NFR-PERF-01 approval remains pending. No blocking issues found.",
+                    "user": {
+                      "login": "3ilmar",
+                      "name": "3ilmar",
+                      "email": null,
+                      "avatar_url": "https://avatars.githubusercontent.com/u/190670093?v=4",
+                      "id": 190670093
+                    },
+                    "id": 5562146026,
+                    "pull_request_review_id": null,
+                    "in_reply_to_id": null,
+                    "created_at": "2026-10-18T08:38:49Z",
+                    "updated_at": null,
+                    "review": "APPROVED",
+                    "side": null,
+                    "line": null,
+                    "start_line": null,
+                    "path": null,
+                    "body_html": "<p dir=\"auto\">Reviewed the final SQA-18 browser-performance branch. I independently built the branch in Release mode and ran the automated suite successfully with 76/76 tests passing and 0 failures. I also checked the browser-performance evidence, including the five 2,000-result runs, final decision evidence, screenshots, environment records, and supporting artifacts. The PR clearly states that SQA-18 passes the proposed operational criterion while formal NFR-PERF-01 approval remains pending. No blocking issues found.</p>"
+                  }
+                ],
+                "url": "https://github.com/3ilmar/apiguard/pull/7",
+                "title": "3ilmar/apiguard PR #7 comments",
+                "display_url": "https://github.com/3ilmar/apiguard/pull/7",
+                "display_title": "3ilmar/apiguard PR #7 comments"
+              },
+              "isError": false
+            }
+          }
+        ]
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "number": 12,
+        "results": [
+          {
+            "status": "fulfilled",
+            "value": {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Action completed."
+                }
+              ],
+              "structuredContent": {
+                "reviews": []
+              },
+              "isError": false
+            }
+          },
+          {
+            "status": "fulfilled",
+            "value": {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Action completed."
+                }
+              ],
+              "structuredContent": {
+                "comments": [],
+                "url": "https://github.com/3ilmar/apiguard/pull/12",
+                "title": "3ilmar/apiguard PR #12 comments",
+                "display_url": "https://github.com/3ilmar/apiguard/pull/12",
+                "display_title": "3ilmar/apiguard PR #12 comments"
+              },
+              "isError": false
+            }
+          }
+        ]
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "number": 13,
+        "results": [
+          {
+            "status": "fulfilled",
+            "value": {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Action completed."
+                }
+              ],
+              "structuredContent": {
+                "reviews": []
+              },
+              "isError": false
+            }
+          },
+          {
+            "status": "fulfilled",
+            "value": {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Action completed."
+                }
+              ],
+              "structuredContent": {
+                "comments": [],
+                "url": "https://github.com/3ilmar/apiguard/pull/13",
+                "title": "3ilmar/apiguard PR #13 comments",
+                "display_url": "https://github.com/3ilmar/apiguard/pull/13",
+                "display_title": "3ilmar/apiguard PR #13 comments"
+              },
+              "isError": false
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

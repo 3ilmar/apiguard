@@ -1,0 +1,35 @@
+name: .NET quality checks
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+      - name: Restore
+        run: dotnet restore SecureApiQualityPlatform.sln
+      - name: Build
+        run: dotnet build SecureApiQualityPlatform.sln --configuration Release --no-restore
+      - name: Test with coverage and TRX results
+        run: >-
+          dotnet test SecureApiQualityPlatform.Tests/SecureApiQualityPlatform.Tests.csproj
+          --configuration Release
+          --no-build
+          --logger "trx;LogFileName=test-results.trx"
+          --results-directory TestResults
+          --collect "XPlat Code Coverage"
+      - name: Upload test and coverage evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: qa-test-results-${{ github.run_id }}
+          path: |
+            TestResults/**/*.trx
+            TestResults/**/coverage.cobertura.xml
+          if-no-files-found: warn

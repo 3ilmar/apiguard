@@ -1,0 +1,20 @@
+{
+  "old_files": 1768,
+  "old_bytes": 136517321,
+  "old_max_absolute_path": 273,
+  "old_paths_at_least_260": 24,
+  "historical_records": 1768,
+  "original_evidence_records": 1737,
+  "original_unique_hashes": 1112,
+  "duplicate_payloads_not_recopied": 621,
+  "duplicate_uncompressed_bytes_not_recopied": 20895976,
+  "storage_counts": {
+    "Archive member": 1026,
+    "Direct copy": 121,
+    "Duplicate reference": 621
+  },
+  "all_historical_payloads_preserved": true,
+  "original_reference_only_records": 0,
+  "note": "Every historical context remains in manifest. Five identical per-run visual PNGs remain direct contextual copies.",
+  "built_utc": "2026-10-19T11:26:47.956408+00:00"
+}

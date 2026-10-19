@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="205bc790-2a0b-4a40-9822-1d6fbc938554" name="zsr20@哈迪斯的宠物二 2026-10-18 17:51:55" runUser="哈迪斯的宠物二\zsr20" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-10-18T17:51:55.6978199+13:00" queuing="2026-10-18T17:51:55.6978204+13:00" start="2026-10-18T17:51:46.0252853+13:00" finish="2026-10-18T17:51:57.5982777+13:00" />
+  <TestSettings name="default" id="f554da2d-3ad0-43d9-a56f-7d2b90c476ed">
+    <Deployment runDeploymentRoot="zsr20_哈迪斯的宠物二_2026-10-18_17_51_55" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="e7d993b3-08e3-48ce-9869-ba50e5fa2ad2" testId="4bbed8f6-fd7d-4f24-d8aa-a303b01a8c2d" testName="ExportResultsCsv_IncludesQaContextAndEscapesCsvValues" computerName="哈迪斯的宠物二" duration="00:00:00.3550558" startTime="2026-10-18T17:51:55.7032868+13:00" endTime="2026-10-18T17:51:56.0584788+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e7d993b3-08e3-48ce-9869-ba50e5fa2ad2" />
+    <UnitTestResult executionId="acc69341-5449-4d77-9d63-02d6a820dc25" testId="f00c1b4f-9538-a550-be3d-8c300ed6e0eb" testName="Build_CountsOnlyOpenHighOrCriticalDefectsAsHighRisk" computerName="哈迪斯的宠物二" duration="00:00:00.0002622" startTime="2026-10-18T17:51:55.6922332+13:00" endTime="2026-10-18T17:51:55.6925828+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="acc69341-5449-4d77-9d63-02d6a820dc25" />
+    <UnitTestResult executionId="9e8b8d56-b20e-4b12-b4be-27f7b7daac08" testId="8795f816-f328-f85e-b229-d039dead8064" testName="Cors_WhenAuthRequiredAndWildcard_ReturnsFail" computerName="哈迪斯的宠物二" duration="00:00:00.0003996" startTime="2026-10-18T17:51:55.6568544+13:00" endTime="2026-10-18T17:51:55.6573209+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9e8b8d56-b20e-4b12-b4be-27f7b7daac08" />
+    <UnitTestResult executionId="a4f4de29-6b45-4ecd-a5b4-1440cc46dd6a" testId="c6770dfd-4066-fc66-36ae-d4996507c576" testName="Build_UnorderedResults_StillReturnsLatestTwelve" computerName="哈迪斯的宠物二" duration="00:00:00.0010977" startTime="2026-10-18T17:51:55.6819322+13:00" endTime="2026-10-18T17:51:55.6831404+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a4f4de29-6b45-4ecd-a5b4-1440cc46dd6a" />
+    <UnitTestResult executionId="e7a09f73-c0ec-4a69-9db7-821e78fbd388" testId="6bd22966-3633-c58c-d222-f5d0dc1adae5" testName="TryAddEndpoint_SamePathDifferentMethod_ReturnsTrue" computerName="哈迪斯的宠物二" duration="00:00:00.0001657" startTime="2026-10-18T17:51:55.7026300+13:00" endTime="2026-10-18T17:51:55.7028561+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e7a09f73-c0ec-4a69-9db7-821e78fbd388" />
+    <UnitTestResult executionId="a27b5348-8735-4a99-905b-348cbc82cec1" testId="71d8db1b-2303-65d0-7ffe-b60a288397bc" testName="FailedCheck_CreatesDefectWithMappedPriority" computerName="哈迪斯的宠物二" duration="00:00:00.0015385" startTime="2026-10-18T17:51:55.6940355+13:00" endTime="2026-10-18T17:51:55.6957949+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a27b5348-8735-4a99-905b-348cbc82cec1" />
+    <UnitTestResult executionId="e3b0d058-effc-4857-b3a8-9ed17dce0601" testId="838b28cd-4bd3-b7e0-5405-e90246fecac9" testName="ExportDefectsCsv_IncludesLifecycleEvidenceAndEscapesCsvValues" computerName="哈迪斯的宠物二" duration="00:00:00.0017323" startTime="2026-10-18T17:51:56.0590040+13:00" endTime="2026-10-18T17:51:56.0608339+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e3b0d058-effc-4857-b3a8-9ed17dce0601" />
+    <UnitTestResult executionId="f1b95e3c-a8e0-4fb4-9f2c-d5a5253d1e4a" testId="f27af468-07b7-ef10-e35b-a7ed5305d93d" testName="ExportResultsCsv_FiltersByApiAndPassStatus" computerName="哈迪斯的宠物二" duration="00:00:00.0003349" startTime="2026-10-18T17:51:56.0618464+13:00" endTime="2026-10-18T17:51:56.0622944+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f1b95e3c-a8e0-4fb4-9f2c-d5a5253d1e4a" />
+    <UnitTestResult executionId="12815d97-99ef-4a50-a449-767c4fe59b7f" testId="4c9fffbc-b1b7-a957-ae5a-aff66b7ced60" testName="TryAddEndpoint_DuplicateMethodAndPath_ReturnsFalse" computerName="哈迪斯的宠物二" duration="00:00:00.0006970" startTime="2026-10-18T17:51:55.7013996+13:00" endTime="2026-10-18T17:51:55.7021638+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="12815d97-99ef-4a50-a449-767c4fe59b7f" />
+    <UnitTestResult executionId="ccd5d9c3-f19a-47e6-a15e-35bb782f22c7" testId="bf141455-ff5b-99b7-f6b9-bfb9cf9a4c98" testName="PassingRetest_ClosesResolvedDefect" computerName="哈迪斯的宠物二" duration="00:00:00.0006144" startTime="2026-10-18T17:51:55.6962839+13:00" endTime="2026-10-18T17:51:55.6969779+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ccd5d9c3-f19a-47e6-a15e-35bb782f22c7" />
+    <UnitTestResult executionId="3aa6b966-aa8d-4404-acd5-6558e8a1f1a4" testId="5b483f5e-eada-5279-2468-392691ec58b1" testName="ExportDefectsCsv_FiltersSeverityStatusAndApi_AndAddsLifecycleFields" computerName="哈迪斯的宠物二" duration="00:00:00.0005188" startTime="2026-10-18T17:51:56.0626027+13:00" endTime="2026-10-18T17:51:56.0631728+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3aa6b966-aa8d-4404-acd5-6558e8a1f1a4" />
+    <UnitTestResult executionId="c2f38f7c-6127-4697-940d-547c18ff4148" testId="a913622e-a0b4-be1a-5c19-4fa0e2ca49ae" testName="AuthenticationProtection_WhenRequiredAndUnauthorized_ReturnsPass" computerName="哈迪斯的宠物二" duration="00:00:00.0003030" startTime="2026-10-18T17:51:55.6554467+13:00" endTime="2026-10-18T17:51:55.6558211+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c2f38f7c-6127-4697-940d-547c18ff4148" />
+    <UnitTestResult executionId="935f47d5-6ae3-4bd5-8dde-55b29ba4aac4" testId="6790e69c-5f97-43e3-5b41-6ae36496a697" testName="Build_NoDefects_StillProvidesAllSeverityLabels" computerName="哈迪斯的宠物二" duration="00:00:00.0003880" startTime="2026-10-18T17:51:55.6808747+13:00" endTime="2026-10-18T17:51:55.6814010+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="935f47d5-6ae3-4bd5-8dde-55b29ba4aac4" />
+    <UnitTestResult executionId="74106e2b-ff29-47dd-871d-e20c98fff684" testId="1263fdce-489b-1284-a0ab-41100d7ae80b" testName="ResponseTime_OverThreshold_ReturnsFail" computerName="哈迪斯的宠物二" duration="00:00:00.0001287" startTime="2026-10-18T17:51:55.6547836+13:00" endTime="2026-10-18T17:51:55.6549949+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="74106e2b-ff29-47dd-871d-e20c98fff684" />
+    <UnitTestResult executionId="bb5f95ef-bc54-43f0-8acd-a2662f6eeb4b" testId="65865416-f6d6-fcdb-2419-dc948f4c1962" testName="TryAddApi_DuplicateBaseUrl_ReturnsFalse" computerName="哈迪斯的宠物二" duration="00:00:00.0005942" startTime="2026-10-18T17:51:55.6993989+13:00" endTime="2026-10-18T17:51:55.7001620+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bb5f95ef-bc54-43f0-8acd-a2662f6eeb4b" />
+    <UnitTestResult executionId="60863926-8ce1-42de-a752-5557eab1a4a8" testId="ce0f242e-138a-310f-2c13-e81428762193" testName="AuthenticationProtection_WhenRequiredButReturnsOk_ReturnsCriticalFail" computerName="哈迪斯的宠物二" duration="00:00:00.0001001" startTime="2026-10-18T17:51:55.6562497+13:00" endTime="2026-10-18T17:51:55.6564106+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="60863926-8ce1-42de-a752-5557eab1a4a8" />
+    <UnitTestResult executionId="5314b946-0ed1-44da-af11-eaac959b01fa" testId="cb9e7789-8f4e-d792-ab39-460be47464e3" testName="Build_CalculatesCheckAndResponseTimeMetrics" computerName="哈迪斯的宠物二" duration="00:00:00.0017670" startTime="2026-10-18T17:51:55.6889273+13:00" endTime="2026-10-18T17:51:55.6908643+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5314b946-0ed1-44da-af11-eaac959b01fa" />
+    <UnitTestResult executionId="abcf0a7b-9470-437b-94fc-d5c24388088e" testId="65399025-2ad8-6d1d-5877-fa4409694b4b" testName="Build_OpenSeverityDistribution_ExcludesClosedAndDeferred" computerName="哈迪斯的宠物二" duration="00:00:00.0132634" startTime="2026-10-18T17:51:55.6587504+13:00" endTime="2026-10-18T17:51:55.6722077+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="abcf0a7b-9470-437b-94fc-d5c24388088e" />
+    <UnitTestResult executionId="49f43dc4-9d56-439f-83e4-249503761c31" testId="8db9f59e-020e-b3e3-1fa7-90388ed937d8" testName="ExportResultsCsv_WithNoResults_ReturnsHeaderOnly" computerName="哈迪斯的宠物二" duration="00:00:00.0003014" startTime="2026-10-18T17:51:56.0611670+13:00" endTime="2026-10-18T17:51:56.0615454+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="49f43dc4-9d56-439f-83e4-249503761c31" />
+    <UnitTestResult executionId="0d28763a-64dd-4fc9-bda5-d26a8ae01e99" testId="75b1ec3f-37b3-ee3d-948f-9851b6de80d7" testName="ExportDefectsCsv_WithNoMatchingRows_RemainsHeaderOnly" computerName="哈迪斯的宠物二" duration="00:00:00.0001582" startTime="2026-10-18T17:51:56.0645322+13:00" endTime="2026-10-18T17:51:56.0648015+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0d28763a-64dd-4fc9-bda5-d26a8ae01e99" />
+    <UnitTestResult executionId="3da1d2f2-36bd-4638-8115-6de5de99ebac" testId="9730722e-2f59-8b10-0e48-329c410d77f4" testName="Build_HandlesNoCheckDataWithoutInvalidMetrics" computerName="哈迪斯的宠物二" duration="00:00:00.0002983" startTime="2026-10-18T17:51:55.6913675+13:00" endTime="2026-10-18T17:51:55.6917608+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3da1d2f2-36bd-4638-8115-6de5de99ebac" />
+    <UnitTestResult executionId="997b3839-c516-4b18-9eec-fdd2404d7934" testId="d230ef21-5cb8-5a53-0778-fdd78d9a2d86" testName="ContentType_WhenExpectedMatches_ReturnsPass" computerName="哈迪斯的宠物二" duration="00:00:00.0003388" startTime="2026-10-18T17:51:55.6578358+13:00" endTime="2026-10-18T17:51:55.6583176+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="997b3839-c516-4b18-9eec-fdd2404d7934" />
+    <UnitTestResult executionId="ad351c29-0961-4539-9515-52b7b8f1ce22" testId="88d38998-b06c-ca07-b0f2-1ef60535eb43" testName="ExportResultsCsv_EscapesUntrustedSpreadsheetFormulaAndNewLine" computerName="哈迪斯的宠物二" duration="00:00:00.0001739" startTime="2026-10-18T17:51:56.0640242+13:00" endTime="2026-10-18T17:51:56.0642540+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ad351c29-0961-4539-9515-52b7b8f1ce22" />
+    <UnitTestResult executionId="67f859cb-465f-4561-bfd8-9cbdbafb2e55" testId="b2e535f7-ca6a-d0cf-cacd-6c3b390a241a" testName="ResponseTime_AtThreshold_ReturnsPass" computerName="哈迪斯的宠物二" duration="00:00:00.0009306" startTime="2026-10-18T17:51:55.6532491+13:00" endTime="2026-10-18T17:51:55.6542878+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="67f859cb-465f-4561-bfd8-9cbdbafb2e55" />
+    <UnitTestResult executionId="b1cbc890-90d6-4d46-afd4-5ae8e1788c0e" testId="cbac041c-ce35-4542-e074-b446b770b3d5" testName="PT01_BuildWithTwoThousandResults_UnderTwoSeconds" computerName="哈迪斯的宠物二" duration="00:00:00.0044287" startTime="2026-10-18T17:51:55.6836580+13:00" endTime="2026-10-18T17:51:55.6882481+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b1cbc890-90d6-4d46-afd4-5ae8e1788c0e">
+      <Output>
+        <StdOut>PT-01 service aggregation: 0.71 ms for 2,000 results</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="ec25cc33-89ce-4e96-88ca-5b2f2bce2240" testId="80634be9-e703-586b-8bfa-bc1ea6156ce6" testName="ValidateAsync_ShouldRejectUrlsWithCredentials" computerName="哈迪斯的宠物二" duration="00:00:00.1834802" startTime="2026-10-18T17:51:56.0650852+13:00" endTime="2026-10-18T17:51:56.2492364+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ec25cc33-89ce-4e96-88ca-5b2f2bce2240" />
+    <UnitTestResult executionId="da5c1035-10a7-4bd7-adb3-dfe3d80174a8" testId="373e2db5-fa31-84ef-f7a7-f5c4a6b9d876" testName="Build_ReturnsMostRecentChecksAndDefectsWithinDisplayLimits" computerName="哈迪斯的宠物二" duration="00:00:00.0004711" startTime="2026-10-18T17:51:55.6930437+13:00" endTime="2026-10-18T17:51:55.6935881+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="da5c1035-10a7-4bd7-adb3-dfe3d80174a8" />
+    <UnitTestResult executionId="e1c79470-bc6b-41f0-b1dc-78bbb38925d2" testId="a92c4c74-0f8c-cdca-1964-dd47cc150180" testName="TryAddApi_DifferentBaseUrl_ReturnsTrue" computerName="哈迪斯的宠物二" duration="00:00:00.0002069" startTime="2026-10-18T17:51:55.7006755+13:00" endTime="2026-10-18T17:51:55.7009598+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e1c79470-bc6b-41f0-b1dc-78bbb38925d2" />
+    <UnitTestResult executionId="07fef443-0f4a-425c-8991-7bc629ee32ee" testId="2e31e6a4-191c-e13b-3757-68decc27192f" testName="ExpectedStatus_WhenDifferent_ReturnsFail" computerName="哈迪斯的宠物二" duration="00:00:00.0007125" startTime="2026-10-18T17:51:55.6513066+13:00" endTime="2026-10-18T17:51:55.6522575+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="07fef443-0f4a-425c-8991-7bc629ee32ee" />
+    <UnitTestResult executionId="a9bdfdb9-b26e-4d3e-933c-17c918f8a61d" testId="a19aa752-52eb-8815-8ae3-f495448a0b7b" testName="ExpectedStatus_WhenMatching_ReturnsPass" computerName="哈迪斯的宠物二" duration="00:00:01.1698478" startTime="2026-10-18T17:51:54.4555559+13:00" endTime="2026-10-18T17:51:55.6434172+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a9bdfdb9-b26e-4d3e-933c-17c918f8a61d" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="AuthenticationProtection_WhenRequiredButReturnsOk_ReturnsCriticalFail" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\debug\net8.0\secureapiqualityplatform.tests.dll" id="ce0f242e-138a-310f-2c13-e81428762193">
+      <Execution id="60863926-8ce1-42de-a752-5557eab1a4a8" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Debug\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.CheckEvaluatorTests" name="AuthenticationProtection_WhenRequiredButReturnsOk_ReturnsCriticalFail" />
+    </UnitTest>
+    <UnitTest name="ExportResultsCsv_FiltersByApiAndPassStatus" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\debug\net8.0\secureapiqualityplatform.tests.dll" id="f27af468-07b7-ef10-e35b-a7ed5305d93d">
+      <Execution id="f1b95e3c-a8e0-4fb4-9f2c-d5a5253d1e4a" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Debug\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.ReportsEnhancementTests" name="ExportResultsCsv_FiltersByApiAndPassStatus" />
+    </UnitTest>
+    <UnitTest name="FailedCheck_CreatesDefectWithMappedPriority" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\debug\net8.0\secureapiqualityplatform.tests.dll" id="71d8db1b-2303-65d0-7ffe-b60a288397bc">
+      <Execution id="a27b5348-8735-4a99-905b-348cbc82cec1" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Debug\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.DefectLifecycleServiceTests" name="FailedCheck_CreatesDefectWithMappedPriority" />
+    </UnitTest>
+    <UnitTest name="Build_CountsOnlyOpenHighOrCriticalDefectsAsHighRisk" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\debug\net8.0\secureapiqualityplatform.tests.dll" id="f00c1b4f-9538-a550-be3d-8c300ed6e0eb">
+      <Execution id="acc69341-5449-4d77-9d63-02d6a820dc25" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Debug\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.DashboardServiceTests" name="Build_CountsOnlyOpenHighOrCriticalDefectsAsHighRisk" />
+    </UnitTest>
+    <UnitTest name="ExportResultsCsv_EscapesUntrustedSpreadsheetFormulaAndNewLine" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\debug\net8.0\secureapiqualityplatform.tests.dll" id="88d38998-b06c-ca07-b0f2-1ef60535eb43">
+      <Execution id="ad351c29-0961-4539-9515-52b7b8f1ce22" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Debug\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.ReportsEnhancementTests" name="ExportResultsCsv_EscapesUntrustedSpreadsheetFormulaAndNewLine" />
+    </UnitTest>
+    <UnitTest name="Cors_WhenAuthRequiredAndWildcard_ReturnsFail" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\debug\net8.0\secureapiqualityplatform.tests.dll" id="8795f816-f328-f85e-b229-d039dead8064">
+      <Execution id="9e8b8d56-b20e-4b12-b4be-27f7b7daac08" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Debug\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.CheckEvaluatorTests" name="Cors_WhenAuthRequiredAndWildcard_ReturnsFail" />
+    </UnitTest>
+    <UnitTest name="ExportDefectsCsv_FiltersSeverityStatusAndApi_AndAddsLifecycleFields" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\debug\net8.0\secureapiqualityplatform.tests.dll" id="5b483f5e-eada-5279-2468-392691ec58b1">
+      <Execution id="3aa6b966-aa8d-4404-acd5-6558e8a1f1a4" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Debug\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.ReportsEnhancementTests" name="ExportDefectsCsv_FiltersSeverityStatusAndApi_AndAddsLifecycleFields" />
+    </UnitTest>
+    <UnitTest name="ExpectedStatus_WhenMatching_ReturnsPass" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\debug\net8.0\secureapiqualityplatform.tests.dll" id="a19aa752-52eb-8815-8ae3-f495448a0b7b">
+      <Execution id="a9bdfdb9-b26e-4d3e-933c-17c918f8a61d" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Debug\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.CheckEvaluatorTests" name="ExpectedStatus_WhenMatching_ReturnsPass" />
+    </UnitTest>
+    <UnitTest name="ExportResultsCsv_IncludesQaContextAndEscapesCsvValues" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\debug\net8.0\secureapiqualityplatform.tests.dll" id="4bbed8f6-fd7d-4f24-d8aa-a303b01a8c2d">
+      <Execution id="e7d993b3-08e3-48ce-9869-ba50e5fa2ad2" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Debug\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.ReportsControllerTests" name="ExportResultsCsv_IncludesQaContextAndEscapesCsvValues" />
+    </UnitTest>
+    <UnitTest name="TryAddEndpoint_SamePathDifferentMethod_ReturnsTrue" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\debug\net8.0\secureapiqualityplatform.tests.dll" id="6bd22966-3633-c58c-d222-f5d0dc1adae5">
+      <Execution id="e7a09f73-c0ec-4a69-9db7-821e78fbd388" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Debug\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.RegistrationValidationTests" name="TryAddEndpoint_SamePathDifferentMethod_ReturnsTrue" />
+    </UnitTest>
+    <UnitTest name="PassingRetest_ClosesResolvedDefect" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\debug\net8.0\secureapiqualityplatform.tests.dll" id="bf141455-ff5b-99b7-f6b9-bfb9cf9a4c98">
+      <Execution id="ccd5d9c3-f19a-47e6-a15e-35bb782f22c7" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Debug\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.DefectLifecycleServiceTests" name="PassingRetest_ClosesResolvedDefect" />
+    </UnitTest>
+    <UnitTest name="TryAddApi_DuplicateBaseUrl_ReturnsFalse" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\debug\net8.0\secureapiqualityplatform.tests.dll" id="65865416-f6d6-fcdb-2419-dc948f4c1962">
+      <Execution id="bb5f95ef-bc54-43f0-8acd-a2662f6eeb4b" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Debug\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.RegistrationValidationTests" name="TryAddApi_DuplicateBaseUrl_ReturnsFalse" />
+    </UnitTest>
+    <UnitTest name="Build_OpenSeverityDistribution_ExcludesClosedAndDeferred" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\debug\net8.0\secureapiqualityplatform.tests.dll" id="65399025-2ad8-6d1d-5877-fa4409694b4b">
+      <Execution id="abcf0a7b-9470-437b-94fc-d5c24388088e" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Debug\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.DashboardEnhancementTests" name="Build_OpenSeverityDistribution_ExcludesClosedAndDeferred" />
+    </UnitTest>
+    <UnitTest name="ExpectedStatus_WhenDifferent_ReturnsFail" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\debug\net8.0\secureapiqualityplatform.tests.dll" id="2e31e6a4-191c-e13b-3757-68decc27192f">
+      <Execution id="07fef443-0f4a-425c-8991-7bc629ee32ee" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Debug\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.CheckEvaluatorTests" name="ExpectedStatus_WhenDifferent_ReturnsFail" />
+    </UnitTest>
+    <UnitTest name="AuthenticationProtection_WhenRequiredAndUnauthorized_ReturnsPass" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\debug\net8.0\secureapiqualityplatform.tests.dll" id="a913622e-a0b4-be1a-5c19-4fa0e2ca49ae">
+      <Execution id="c2f38f7c-6127-4697-940d-547c18ff4148" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Debug\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.CheckEvaluatorTests" name="AuthenticationProtection_WhenRequiredAndUnauthorized_ReturnsPass" />
+    </UnitTest>
+    <UnitTest name="Build_ReturnsMostRecentChecksAndDefectsWithinDisplayLimits" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\debug\net8.0\secureapiqualityplatform.tests.dll" id="373e2db5-fa31-84ef-f7a7-f5c4a6b9d876">
+      <Execution id="da5c1035-10a7-4bd7-adb3-dfe3d80174a8" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Debug\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.DashboardServiceTests" name="Build_ReturnsMostRecentChecksAndDefectsWithinDisplayLimits" />
+    </UnitTest>
+    <UnitTest name="ResponseTime_AtThreshold_ReturnsPass" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\debug\net8.0\secureapiqualityplatform.tests.dll" id="b2e535f7-ca6a-d0cf-cacd-6c3b390a241a">
+      <Execution id="67f859cb-465f-4561-bfd8-9cbdbafb2e55" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Debug\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.CheckEvaluatorTests" name="ResponseTime_AtThreshold_ReturnsPass" />
+    </UnitTest>
+    <UnitTest name="ExportDefectsCsv_IncludesLifecycleEvidenceAndEscapesCsvValues" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\debug\net8.0\secureapiqualityplatform.tests.dll" id="838b28cd-4bd3-b7e0-5405-e90246fecac9">
+      <Execution id="e3b0d058-effc-4857-b3a8-9ed17dce0601" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Debug\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.ReportsControllerTests" name="ExportDefectsCsv_IncludesLifecycleEvidenceAndEscapesCsvValues" />
+    </UnitTest>
+    <UnitTest name="Build_CalculatesCheckAndResponseTimeMetrics" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\debug\net8.0\secureapiqualityplatform.tests.dll" id="cb9e7789-8f4e-d792-ab39-460be47464e3">
+      <Execution id="5314b946-0ed1-44da-af11-eaac959b01fa" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Debug\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.DashboardServiceTests" name="Build_CalculatesCheckAndResponseTimeMetrics" />
+    </UnitTest>
+    <UnitTest name="Build_UnorderedResults_StillReturnsLatestTwelve" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\debug\net8.0\secureapiqualityplatform.tests.dll" id="c6770dfd-4066-fc66-36ae-d4996507c576">
+      <Execution id="a4f4de29-6b45-4ecd-a5b4-1440cc46dd6a" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Debug\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.DashboardEnhancementTests" name="Build_UnorderedResults_StillReturnsLatestTwelve" />
+    </UnitTest>
+    <UnitTest name="Build_NoDefects_StillProvidesAllSeverityLabels" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\debug\net8.0\secureapiqualityplatform.tests.dll" id="6790e69c-5f97-43e3-5b41-6ae36496a697">
+      <Execution id="935f47d5-6ae3-4bd5-8dde-55b29ba4aac4" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Debug\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.DashboardEnhancementTests" name="Build_NoDefects_StillProvidesAllSeverityLabels" />
+    </UnitTest>
+    <UnitTest name="ExportDefectsCsv_WithNoMatchingRows_RemainsHeaderOnly" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\debug\net8.0\secureapiqualityplatform.tests.dll" id="75b1ec3f-37b3-ee3d-948f-9851b6de80d7">
+      <Execution id="0d28763a-64dd-4fc9-bda5-d26a8ae01e99" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Debug\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.ReportsEnhancementTests" name="ExportDefectsCsv_WithNoMatchingRows_RemainsHeaderOnly" />
+    </UnitTest>
+    <UnitTest name="ResponseTime_OverThreshold_ReturnsFail" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\debug\net8.0\secureapiqualityplatform.tests.dll" id="1263fdce-489b-1284-a0ab-41100d7ae80b">
+      <Execution id="74106e2b-ff29-47dd-871d-e20c98fff684" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Debug\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.CheckEvaluatorTests" name="ResponseTime_OverThreshold_ReturnsFail" />
+    </UnitTest>
+    <UnitTest name="ValidateAsync_ShouldRejectUrlsWithCredentials" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\debug\net8.0\secureapiqualityplatform.tests.dll" id="80634be9-e703-586b-8bfa-bc1ea6156ce6">
+      <Execution id="ec25cc33-89ce-4e96-88ca-5b2f2bce2240" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Debug\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.UrlSafetyServiceTests" name="ValidateAsync_ShouldRejectUrlsWithCredentials" />
+    </UnitTest>
+    <UnitTest name="ExportResultsCsv_WithNoResults_ReturnsHeaderOnly" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\debug\net8.0\secureapiqualityplatform.tests.dll" id="8db9f59e-020e-b3e3-1fa7-90388ed937d8">
+      <Execution id="49f43dc4-9d56-439f-83e4-249503761c31" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Debug\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.ReportsControllerTests" name="ExportResultsCsv_WithNoResults_ReturnsHeaderOnly" />
+    </UnitTest>
+    <UnitTest name="PT01_BuildWithTwoThousandResults_UnderTwoSeconds" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\debug\net8.0\secureapiqualityplatform.tests.dll" id="cbac041c-ce35-4542-e074-b446b770b3d5">
+      <TestCategory>
+        <TestCategoryItem TestCategory="Performance" />
+      </TestCategory>
+      <Execution id="b1cbc890-90d6-4d46-afd4-5ae8e1788c0e" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Debug\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.DashboardPerformanceTests" name="PT01_BuildWithTwoThousandResults_UnderTwoSeconds" />
+    </UnitTest>
+    <UnitTest name="TryAddApi_DifferentBaseUrl_ReturnsTrue" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\debug\net8.0\secureapiqualityplatform.tests.dll" id="a92c4c74-0f8c-cdca-1964-dd47cc150180">
+      <Execution id="e1c79470-bc6b-41f0-b1dc-78bbb38925d2" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Debug\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.RegistrationValidationTests" name="TryAddApi_DifferentBaseUrl_ReturnsTrue" />
+    </UnitTest>
+    <UnitTest name="ContentType_WhenExpectedMatches_ReturnsPass" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\debug\net8.0\secureapiqualityplatform.tests.dll" id="d230ef21-5cb8-5a53-0778-fdd78d9a2d86">
+      <Execution id="997b3839-c516-4b18-9eec-fdd2404d7934" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Debug\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.CheckEvaluatorTests" name="ContentType_WhenExpectedMatches_ReturnsPass" />
+    </UnitTest>
+    <UnitTest name="TryAddEndpoint_DuplicateMethodAndPath_ReturnsFalse" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\debug\net8.0\secureapiqualityplatform.tests.dll" id="4c9fffbc-b1b7-a957-ae5a-aff66b7ced60">
+      <Execution id="12815d97-99ef-4a50-a449-767c4fe59b7f" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Debug\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.RegistrationValidationTests" name="TryAddEndpoint_DuplicateMethodAndPath_ReturnsFalse" />
+    </UnitTest>
+    <UnitTest name="Build_HandlesNoCheckDataWithoutInvalidMetrics" storage="c:\users\zsr20\source\repos\3ilmar\apiguard\secureapiqualityplatform.tests\bin\debug\net8.0\secureapiqualityplatform.tests.dll" id="9730722e-2f59-8b10-0e48-329c410d77f4">
+      <Execution id="3da1d2f2-36bd-4638-8115-6de5de99ebac" />
+      <TestMethod codeBase="C:\Users\zsr20\source\repos\3ilmar\apiguard\SecureApiQualityPlatform.Tests\bin\Debug\net8.0\SecureApiQualityPlatform.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SecureApiQualityPlatform.Tests.DashboardServiceTests" name="Build_HandlesNoCheckDataWithoutInvalidMetrics" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="4bbed8f6-fd7d-4f24-d8aa-a303b01a8c2d" executionId="e7d993b3-08e3-48ce-9869-ba50e5fa2ad2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f00c1b4f-9538-a550-be3d-8c300ed6e0eb" executionId="acc69341-5449-4d77-9d63-02d6a820dc25" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8795f816-f328-f85e-b229-d039dead8064" executionId="9e8b8d56-b20e-4b12-b4be-27f7b7daac08" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c6770dfd-4066-fc66-36ae-d4996507c576" executionId="a4f4de29-6b45-4ecd-a5b4-1440cc46dd6a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6bd22966-3633-c58c-d222-f5d0dc1adae5" executionId="e7a09f73-c0ec-4a69-9db7-821e78fbd388" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="71d8db1b-2303-65d0-7ffe-b60a288397bc" executionId="a27b5348-8735-4a99-905b-348cbc82cec1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="838b28cd-4bd3-b7e0-5405-e90246fecac9" executionId="e3b0d058-effc-4857-b3a8-9ed17dce0601" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f27af468-07b7-ef10-e35b-a7ed5305d93d" executionId="f1b95e3c-a8e0-4fb4-9f2c-d5a5253d1e4a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4c9fffbc-b1b7-a957-ae5a-aff66b7ced60" executionId="12815d97-99ef-4a50-a449-767c4fe59b7f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bf141455-ff5b-99b7-f6b9-bfb9cf9a4c98" executionId="ccd5d9c3-f19a-47e6-a15e-35bb782f22c7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5b483f5e-eada-5279-2468-392691ec58b1" executionId="3aa6b966-aa8d-4404-acd5-6558e8a1f1a4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a913622e-a0b4-be1a-5c19-4fa0e2ca49ae" executionId="c2f38f7c-6127-4697-940d-547c18ff4148" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6790e69c-5f97-43e3-5b41-6ae36496a697" executionId="935f47d5-6ae3-4bd5-8dde-55b29ba4aac4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1263fdce-489b-1284-a0ab-41100d7ae80b" executionId="74106e2b-ff29-47dd-871d-e20c98fff684" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="65865416-f6d6-fcdb-2419-dc948f4c1962" executionId="bb5f95ef-bc54-43f0-8acd-a2662f6eeb4b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ce0f242e-138a-310f-2c13-e81428762193" executionId="60863926-8ce1-42de-a752-5557eab1a4a8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cb9e7789-8f4e-d792-ab39-460be47464e3" executionId="5314b946-0ed1-44da-af11-eaac959b01fa" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="65399025-2ad8-6d1d-5877-fa4409694b4b" executionId="abcf0a7b-9470-437b-94fc-d5c24388088e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8db9f59e-020e-b3e3-1fa7-90388ed937d8" executionId="49f43dc4-9d56-439f-83e4-249503761c31" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="75b1ec3f-37b3-ee3d-948f-9851b6de80d7" executionId="0d28763a-64dd-4fc9-bda5-d26a8ae01e99" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9730722e-2f59-8b10-0e48-329c410d77f4" executionId="3da1d2f2-36bd-4638-8115-6de5de99ebac" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d230ef21-5cb8-5a53-0778-fdd78d9a2d86" executionId="997b3839-c516-4b18-9eec-fdd2404d7934" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="88d38998-b06c-ca07-b0f2-1ef60535eb43" executionId="ad351c29-0961-4539-9515-52b7b8f1ce22" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b2e535f7-ca6a-d0cf-cacd-6c3b390a241a" executionId="67f859cb-465f-4561-bfd8-9cbdbafb2e55" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cbac041c-ce35-4542-e074-b446b770b3d5" executionId="b1cbc890-90d6-4d46-afd4-5ae8e1788c0e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="80634be9-e703-586b-8bfa-bc1ea6156ce6" executionId="ec25cc33-89ce-4e96-88ca-5b2f2bce2240" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="373e2db5-fa31-84ef-f7a7-f5c4a6b9d876" executionId="da5c1035-10a7-4bd7-adb3-dfe3d80174a8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a92c4c74-0f8c-cdca-1964-dd47cc150180" executionId="e1c79470-bc6b-41f0-b1dc-78bbb38925d2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2e31e6a4-191c-e13b-3757-68decc27192f" executionId="07fef443-0f4a-425c-8991-7bc629ee32ee" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a19aa752-52eb-8815-8ae3-f495448a0b7b" executionId="a9bdfdb9-b26e-4d3e-933c-17c918f8a61d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="30" executed="30" passed="30" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <CollectorDataEntries>
+      <Collector agentName="哈迪斯的宠物二" uri="datacollector://microsoft/CoverletCodeCoverage/1.0" collectorDisplayName="XPlat code coverage">
+        <UriAttachments>
+          <UriAttachment>
+            <A href="哈迪斯的宠物二\coverage.cobertura.xml"></A>
+          </UriAttachment>
+        </UriAttachments>
+      </Collector>
+    </CollectorDataEntries>
+  </ResultSummary>
+</TestRun>

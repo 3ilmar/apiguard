@@ -1,0 +1,7 @@
+commit ca4a49713e9501b2b6194897012b9473c8a8ca2c
+Author:     SaltedFishInATank <zsr20041012@gmail.com>
+AuthorDate: Mon Oct 19 23:34:08 2026 +1300
+Commit:     SaltedFishInATank <zsr20041012@gmail.com>
+CommitDate: Mon Oct 19 23:34:08 2026 +1300
+
+    docs(qa): finalise SQA-19 observer approval and quality metrics

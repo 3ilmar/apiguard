@@ -1,0 +1,22 @@
+commit e43fe52373d3d74b617610e2dbee418ac9b3f9b4
+Author:     SaltedFishInATank <zsr20041012@gmail.com>
+AuthorDate: Mon Oct 19 23:15:32 2026 +1300
+Commit:     SaltedFishInATank <zsr20041012@gmail.com>
+CommitDate: Mon Oct 19 23:15:32 2026 +1300
+
+    fix(a11y): resolve SQA-20 accessibility defects and complete retesting
+    Corrected missing accessible labels on API endpoint and defect management forms.
+    
+    Improved API URL and CSV export text contrast to meet WCAG AA requirements.
+    
+    Fixed vertically stretched severity badges.
+    
+    Completed SQA-20 retesting with 16/16 Chrome and Edge technical checks passing.
+    
+    Verified 136/136 automated .NET tests passed.
+    
+    Preserved original SQA-20 FAIL evidence and added before/after accessibility results.
+    
+    Documented the pre-existing numeric endpoint validation failure found during HTTP regression testing.
+    
+    Preserved SQA-18 and SQA-19 evidence and limitations.

@@ -1,0 +1,7 @@
+commit 5ec4efc653ffe7f9321e2e59485b29448cd0d31e
+Author:     Eilmar Shaba <Eilmars@hotmail.com>
+AuthorDate: Mon Oct 19 00:22:04 2026 +1300
+Commit:     Eilmar Shaba <Eilmars@hotmail.com>
+CommitDate: Mon Oct 19 00:22:04 2026 +1300
+
+    fix(test): adapt dashboard performance test to SQLite

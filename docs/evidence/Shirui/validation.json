@@ -1,0 +1,48 @@
+{
+  "validated_utc": "2026-10-19T11:31:51.008711+00:00",
+  "client_timezone": "Pacific/Auckland",
+  "status": "PASS",
+  "scope": "Evidence integrity/layout/Git dry-run only; no application tests rerun",
+  "errors": [],
+  "historical_records_checked": 1768,
+  "original_evidence_records": 1737,
+  "unique_original_hashes": 1112,
+  "preexisting_files_checked": 1841,
+  "unique_stored_payloads": 1147,
+  "archive_containers": 6,
+  "archive_members": 1026,
+  "storage_counts": {
+    "Archive member": 1026,
+    "Direct copy": 121,
+    "Duplicate reference": 621
+  },
+  "original_reference_only": 0,
+  "new_readme_links_checked": 62,
+  "new_readme_broken_links": [],
+  "historical_md_links_mapped": 499,
+  "historical_unavailable_original_links": 33,
+  "max_absolute_path_characters": 119,
+  "paths_at_least_260": 0,
+  "physical_file_count": 137,
+  "manifest_record_count": 1784,
+  "git_dry_run_probes": [
+    {
+      "git": "C:\\Program Files\\Git\\cmd\\git.EXE",
+      "version": "git version 2.45.1.windows.1",
+      "core.longpaths": false,
+      "exit_code": 0,
+      "stderr": "",
+      "dry_run_output_lines": 137
+    },
+    {
+      "git": "C:\\Users\\zsr20\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\git\\cmd\\git.exe",
+      "version": "git version 2.53.0.windows.3",
+      "core.longpaths": false,
+      "exit_code": 0,
+      "stderr": "",
+      "dry_run_output_lines": 137
+    }
+  ],
+  "application_or_other_original_changes": [],
+  "note": "validation/manifest omit self hashes to avoid circular references; archive rows hash the archive container, evidence rows hash member contents"
+}

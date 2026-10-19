@@ -1,0 +1,1703 @@
+commit ced44546ba9c71f25935e6ba913b27fe08f0acd1
+Author:     SaltedFishInATank <zsr20041012@gmail.com>
+AuthorDate: Sun Oct 18 19:12:16 2026 +1300
+Commit:     SaltedFishInATank <zsr20041012@gmail.com>
+CommitDate: Sun Oct 18 19:12:16 2026 +1300
+
+    feat(qa): complete dashboard, CSV reporting and performance tests
+    - Implemented dashboard severity distribution and improved aggregation performance.
+    - Enhanced CSV exports with filtering, lifecycle fields and safer data handling.
+    - Added automated tests for dashboard functionality, CSV reporting, usability and performance.
+    - Verified 71 automated tests passed with no failures.
+    - Completed PT-01 testing with 2,000 results; aggregation and HTTP response times met the 2-second target.
+    - Added performance test logs and quality assurance evidence.
+    - Documented remaining browser-rendering, coverage and CI verification requirements.
+
+diff --git a/.github/workflows/dotnet.yml b/.github/workflows/dotnet.yml
+index 80b0c86..7d4101c 100644
+--- a/.github/workflows/dotnet.yml
++++ b/.github/workflows/dotnet.yml
+@@ -13,8 +13,23 @@ jobs:
+         with:
+           dotnet-version: '8.0.x'
+       - name: Restore
+-        run: dotnet restore SecureApiQualityPlatform.Web/SecureApiQualityPlatform.Web.csproj
++        run: dotnet restore SecureApiQualityPlatform.sln
+       - name: Build
+-        run: dotnet build SecureApiQualityPlatform.Web/SecureApiQualityPlatform.Web.csproj --configuration Release --no-restore
+-      - name: Test
+-        run: dotnet test SecureApiQualityPlatform.Tests/SecureApiQualityPlatform.Tests.csproj --configuration Release --collect "XPlat Code Coverage"
++        run: dotnet build SecureApiQualityPlatform.sln --configuration Release --no-restore
++      - name: Test with coverage and TRX results
++        run: >-
++          dotnet test SecureApiQualityPlatform.Tests/SecureApiQualityPlatform.Tests.csproj
++          --configuration Release
++          --no-build
++          --logger "trx;LogFileName=test-results.trx"
++          --results-directory TestResults
++          --collect "XPlat Code Coverage"
++      - name: Upload test and coverage evidence
++        if: always()
++        uses: actions/upload-artifact@v4
++        with:
++          name: qa-test-results-${{ github.run_id }}
++          path: |
++            TestResults/**/*.trx
++            TestResults/**/coverage.cobertura.xml
++          if-no-files-found: warn
+diff --git a/SecureApiQualityPlatform.Tests/ApiCheckPipelineIntegrationTests.cs b/SecureApiQualityPlatform.Tests/ApiCheckPipelineIntegrationTests.cs
+new file mode 100644
+index 0000000..57057b2
+--- /dev/null
++++ b/SecureApiQualityPlatform.Tests/ApiCheckPipelineIntegrationTests.cs
+@@ -0,0 +1,194 @@
++using System.Net;
++using System.Text;
++using Microsoft.AspNetCore.Builder;
++using Microsoft.AspNetCore.Hosting;
++using Microsoft.AspNetCore.Hosting.Server;
++using Microsoft.AspNetCore.Hosting.Server.Features;
++using Microsoft.AspNetCore.Http;
++using Microsoft.AspNetCore.Mvc;
++using Microsoft.Extensions.Configuration;
++using Microsoft.Extensions.DependencyInjection;
++using Microsoft.Extensions.Logging;
++using Microsoft.VisualStudio.TestTools.UnitTesting;
++using SecureApiQualityPlatform.Web.Controllers;
++using SecureApiQualityPlatform.Web.Models;
++using SecureApiQualityPlatform.Web.Services;
++
++namespace SecureApiQualityPlatform.Tests;
++
++[TestClass]
++public class ApiCheckPipelineIntegrationTests
++{
++    [DataTestMethod]
++    [TestCategory("Integration")]
++    [DataRow(DefectStatus.Resolved)]
++    [DataRow(DefectStatus.Retest)]
++    public async Task OwnedLoopbackFixture_FailureAndPassingRetest_ReachDashboardAndReports(DefectStatus verificationStatus)
++    {
++        var statusCode = StatusCodes.Status503ServiceUnavailable;
++        var builder = WebApplication.CreateBuilder(new WebApplicationOptions
++        {
++            EnvironmentName = "Testing",
++            ContentRootPath = AppContext.BaseDirectory
++        });
++        builder.Logging.ClearProviders();
++        builder.WebHost.UseUrls("http://127.0.0.1:0");
++        builder.WebHost.ConfigureKestrel(options => options.AddServerHeader = false);
++        await using var fixture = builder.Build();
++        fixture.MapGet("/health", () => Results.Json(new { ready = true }, statusCode: Volatile.Read(ref statusCode)));
++        await fixture.StartAsync();
++        try
++        {
++            var addresses = fixture.Services.GetRequiredService<IServer>().Features.Get<IServerAddressesFeature>();
++            Assert.IsNotNull(addresses);
++            var baseUrl = addresses.Addresses.Single();
++            Assert.IsTrue(new Uri(baseUrl).IsLoopback);
++
++            var store = new InMemoryPlatformStore();
++            var (api, endpoint) = RegisterFixture(store, baseUrl);
++            using var client = new HttpClient(new SocketsHttpHandler { UseProxy = false, AllowAutoRedirect = false })
++            {
++                Timeout = TimeSpan.FromSeconds(10)
++            };
++            var checks = CreateChecks(store, client);
++
++            var firstRun = await checks.RunApiAsync(api.Id);
++            var statusFailure = firstRun.Single(result => result.CheckType == "Expected status");
++            Assert.IsFalse(statusFailure.Passed);
++            Assert.AreEqual(503, statusFailure.ActualStatusCode);
++            var defect = store.GetDefects().Single(item => item.CheckType == "Expected status");
++            Assert.AreEqual(DefectStatus.New, defect.Status);
++            Assert.AreEqual(statusFailure.Id, defect.SourceCheckResultId);
++
++            // The owned fixture deliberately uses HTTP without a test certificate.
++            // HTTPS transport therefore fails on both runs and remains an open defect.
++            Assert.IsFalse(firstRun.Single(result => result.CheckType == "HTTPS transport").Passed);
++            Console.WriteLine($"Owned loopback fixture: {baseUrl}; HTTP intentionally fails HTTPS transport. Retest from {verificationStatus}.");
++
++            defect.Status = verificationStatus;
++            store.UpdateDefect(defect);
++            Volatile.Write(ref statusCode, StatusCodes.Status200OK);
++            var secondRun = await checks.RunApiAsync(api.Id);
++
++            Assert.IsTrue(secondRun.Single(result => result.CheckType == "Expected status").Passed);
++            Assert.AreEqual(DefectStatus.Closed, defect.Status);
++            Assert.IsNotNull(defect.RetestedAtUtc);
++            Assert.AreEqual(2, store.GetDefects().Count);
++            Assert.AreEqual(firstRun.Count + secondRun.Count, store.GetResults().Count);
++
++            var dashboard = new DashboardService(store).Build();
++            Assert.AreEqual(1, dashboard.ApiCount);
++            Assert.AreEqual(1, dashboard.EndpointCount);
++            Assert.AreEqual(12, dashboard.ExecutedChecks);
++            Assert.AreEqual(9, dashboard.PassedChecks);
++            Assert.AreEqual(3, dashboard.FailedChecks);
++            Assert.AreEqual(75.0, dashboard.PassRatePercent);
++            Assert.AreEqual(1, dashboard.OpenDefects);
++            Assert.AreEqual(1, dashboard.OpenDefectsBySeverity[DefectSeverity.High]);
++            Assert.AreEqual(1, dashboard.OpenHighOrCriticalDefects);
++
++            var reports = new ReportsController(store);
++            var closedCsv = ReadCsv(reports.ExportDefectsCsv(status: DefectStatus.Closed, apiId: api.Id));
++            Assert.AreEqual(2, CsvLineCount(closedCsv));
++            StringAssert.Contains(closedCsv, $"\"{defect.Id}\"");
++            StringAssert.Contains(closedCsv, "\"Expected status\"");
++            StringAssert.Contains(closedCsv, "\"Closed\",\"False\"");
++            StringAssert.Contains(closedCsv, defect.RetestedAtUtc.Value.ToString("O"));
++
++            var failedCsv = ReadCsv(reports.ExportResultsCsv(api.Id, passed: false));
++            Assert.AreEqual(4, CsvLineCount(failedCsv));
++            StringAssert.Contains(failedCsv, "\"Expected HTTP 200 but received 503.\"");
++            StringAssert.Contains(failedCsv, "\"HTTPS transport\"");
++            StringAssert.Contains(failedCsv, $"\"{endpoint.Id}\"");
++            StringAssert.Contains(failedCsv, $"\"{baseUrl}\"");
++        }
++        finally
++        {
++            await fixture.StopAsync();
++        }
++    }
++
++    [TestMethod]
++    [TestCategory("Integration")]
++    [TestCategory("Simulation")]
++    public async Task SimulatedTransportTimeout_RecordsFailureAndAllowsNextCheckRun()
++    {
++        var store = new InMemoryPlatformStore();
++        var (api, _) = RegisterFixture(store, "http://127.0.0.1");
++        using var handler = new TimeoutThenSuccessHandler();
++        using var client = new HttpClient(handler);
++        var checks = CreateChecks(store, client);
++
++        var firstRun = await checks.RunApiAsync(api.Id);
++        var timeout = firstRun.Single(result => result.CheckType == "Availability");
++        Assert.IsFalse(timeout.Passed);
++        StringAssert.Contains(timeout.Message, "Request timed out.");
++        Assert.AreEqual(1, store.GetDefects().Count(defect => defect.CheckType == "Availability"));
++
++        var secondRun = await checks.RunApiAsync(api.Id);
++
++        Assert.AreEqual(2, handler.RequestCount);
++        Assert.IsTrue(secondRun.Single(result => result.CheckType == "Availability").Passed);
++        Assert.IsTrue(secondRun.Single(result => result.CheckType == "Expected status").Passed);
++        Assert.AreEqual(firstRun.Count + secondRun.Count, store.GetResults().Count);
++        Console.WriteLine("Deterministic timeout simulation: HttpMessageHandler throws TaskCanceledException, then returns HTTP 200; no network request or elapsed timeout is measured. HTTP intentionally fails HTTPS transport.");
++    }
++
++    private static (RegisteredApi Api, ApiEndpoint Endpoint) RegisterFixture(InMemoryPlatformStore store, string baseUrl)
++    {
++        var api = new RegisteredApi { Name = "Owned loopback fixture", BaseUrl = baseUrl };
++        var endpoint = new ApiEndpoint
++        {
++            ApiId = api.Id,
++            Name = "Fixture health",
++            Path = "/health",
++            ExpectedStatusCode = 200,
++            ExpectedContentType = "application/json",
++            MaxResponseTimeMs = 60000
++        };
++        store.AddApi(api);
++        store.AddEndpoint(api.Id, endpoint);
++        return (api, endpoint);
++    }
++
++    private static ApiCheckService CreateChecks(InMemoryPlatformStore store, HttpClient client)
++    {
++        // Test-only override for this owned loopback fixture; production defaults stay intact.
++        var configuration = new ConfigurationBuilder().AddInMemoryCollection(new Dictionary<string, string?>
++        {
++            ["Safety:AllowPrivateNetworkTargets"] = "true"
++        }).Build();
++        return new ApiCheckService(client, store, new CheckEvaluator(),
++            new DefectLifecycleService(store), new UrlSafetyService(configuration));
++    }
++
++    private static string ReadCsv(IActionResult result)
++    {
++        var file = result as FileContentResult;
++        Assert.IsNotNull(file);
++        return Encoding.UTF8.GetString(file.FileContents);
++    }
++
++    // The owned fixture's messages contain no embedded newlines; escaping itself
++    // is covered by the dedicated CSV structure tests.
++    private static int CsvLineCount(string csv) => csv.Split('\n', StringSplitOptions.RemoveEmptyEntries).Length;
++
++    private sealed class TimeoutThenSuccessHandler : HttpMessageHandler
++    {
++        public int RequestCount { get; private set; }
++
++        protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
++        {
++            Assert.IsNotNull(request.RequestUri);
++            Assert.IsTrue(request.RequestUri.IsLoopback);
++            RequestCount++;
++            if (RequestCount == 1)
++                throw new TaskCanceledException("Simulated timeout; no connection was attempted.");
++
++            return Task.FromResult(new HttpResponseMessage(HttpStatusCode.OK)
++            {
++                Content = new StringContent("{}", Encoding.UTF8, "application/json")
++            });
++        }
++    }
++}
+diff --git a/SecureApiQualityPlatform.Tests/DashboardEnhancementTests.cs b/SecureApiQualityPlatform.Tests/DashboardEnhancementTests.cs
+new file mode 100644
+index 0000000..ddb9414
+--- /dev/null
++++ b/SecureApiQualityPlatform.Tests/DashboardEnhancementTests.cs
+@@ -0,0 +1,179 @@
++using Microsoft.VisualStudio.TestTools.UnitTesting;
++using SecureApiQualityPlatform.Web.Models;
++using SecureApiQualityPlatform.Web.Services;
++
++namespace SecureApiQualityPlatform.Tests;
++
++[TestClass]
++public class DashboardEnhancementTests
++{
++    [TestMethod]
++    public void Build_OpenSeverityDistribution_ExcludesClosedAndDeferred()
++    {
++        var store = new InMemoryPlatformStore();
++        AddDefect(store, DefectSeverity.Low, DefectStatus.New);
++        AddDefect(store, DefectSeverity.High, DefectStatus.Assigned);
++        AddDefect(store, DefectSeverity.Critical, DefectStatus.Retest);
++        AddDefect(store, DefectSeverity.High, DefectStatus.Closed);
++        AddDefect(store, DefectSeverity.Critical, DefectStatus.Deferred);
++
++        var dashboard = new DashboardService(store).Build();
++
++        Assert.AreEqual(3, dashboard.OpenDefects);
++        Assert.AreEqual(2, dashboard.OpenHighOrCriticalDefects);
++        Assert.AreEqual(1, dashboard.OpenDefectsBySeverity[DefectSeverity.Low]);
++        Assert.AreEqual(0, dashboard.OpenDefectsBySeverity[DefectSeverity.Medium]);
++        Assert.AreEqual(1, dashboard.OpenDefectsBySeverity[DefectSeverity.High]);
++        Assert.AreEqual(1, dashboard.OpenDefectsBySeverity[DefectSeverity.Critical]);
++    }
++
++    [TestMethod]
++    public void Build_NoDefects_StillProvidesAllSeverityLabels()
++    {
++        var dashboard = new DashboardService(new InMemoryPlatformStore()).Build();
++
++        Assert.AreEqual(0, dashboard.OpenDefects);
++        Assert.AreEqual(4, dashboard.OpenDefectsBySeverity.Count);
++        foreach (var severity in Enum.GetValues<DefectSeverity>())
++            Assert.AreEqual(0, dashboard.OpenDefectsBySeverity[severity]);
++    }
++
++    [TestMethod]
++    public void Build_UnorderedResults_StillReturnsLatestTwelve()
++    {
++        var results = new List<ApiCheckResult>();
++        var origin = new DateTimeOffset(2026, 10, 18, 0, 0, 0, TimeSpan.Zero);
++        // Intentionally insert out of order to test bounded selection.
++        foreach (var index in new[] { 12, 0, 9, 3, 1, 11, 6, 4, 13, 2, 8, 5, 7, 10 })
++        {
++            results.Add(new ApiCheckResult
++            {
++                ApiId = Guid.NewGuid(),
++                EndpointId = Guid.NewGuid(),
++                CheckType = $"Check-{index}",
++                Passed = true,
++                ExecutedAtUtc = origin.AddMinutes(index)
++            });
++        }
++
++        var dashboard = new DashboardService(new SnapshotStore(results)).Build();
++
++        Assert.AreEqual(12, dashboard.RecentResults.Count);
++        Assert.AreEqual("Check-13", dashboard.RecentResults[0].CheckType);
++        Assert.AreEqual("Check-2", dashboard.RecentResults[^1].CheckType);
++    }
++
++    [TestMethod]
++    public void Build_TiedResults_PreservesSnapshotOrderAtDisplayLimit()
++    {
++        var origin = new DateTimeOffset(2026, 10, 18, 0, 0, 0, TimeSpan.Zero);
++        var results = Enumerable.Range(0, 14).Select(index => new ApiCheckResult
++        {
++            CheckType = $"Check-{index}",
++            ExecutedAtUtc = origin
++        }).ToList();
++        // A late newer result must evict the last tied item, not an arbitrary tie.
++        results.Add(new ApiCheckResult { CheckType = "Newest", ExecutedAtUtc = origin.AddMinutes(1) });
++
++        var dashboard = new DashboardService(new SnapshotStore(results)).Build();
++
++        CollectionAssert.AreEqual(
++            new[] { "Newest", "Check-0", "Check-1", "Check-2", "Check-3", "Check-4", "Check-5",
++                "Check-6", "Check-7", "Check-8", "Check-9", "Check-10" },
++            dashboard.RecentResults.Select(result => result.CheckType).ToArray());
++    }
++
++    [TestMethod]
++    public void Build_UnorderedAndTiedDefects_PreservesSnapshotOrderAtDisplayLimit()
++    {
++        var origin = new DateTimeOffset(2026, 10, 18, 0, 0, 0, TimeSpan.Zero);
++        var defects = Enumerable.Range(0, 10).Select(index => new Defect
++        {
++            Title = $"Defect-{index}",
++            UpdatedAtUtc = origin
++        }).ToList();
++        defects.Insert(3, new Defect { Title = "Older", UpdatedAtUtc = origin.AddMinutes(-1) });
++        defects.Add(new Defect { Title = "Newest", UpdatedAtUtc = origin.AddMinutes(1) });
++
++        var dashboard = new DashboardService(new SnapshotStore(defects: defects)).Build();
++
++        CollectionAssert.AreEqual(
++            new[] { "Newest", "Defect-0", "Defect-1", "Defect-2", "Defect-3", "Defect-4", "Defect-5", "Defect-6" },
++            dashboard.RecentDefects.Select(defect => defect.Title).ToArray());
++    }
++
++    [TestMethod]
++    public void Build_ResultsWithoutTimings_StillCalculatesPassRate()
++    {
++        var results = new[]
++        {
++            new ApiCheckResult { Passed = true, ResponseTimeMs = null },
++            new ApiCheckResult { Passed = false, ResponseTimeMs = null }
++        };
++
++        var dashboard = new DashboardService(new SnapshotStore(results)).Build();
++
++        Assert.AreEqual(2, dashboard.ExecutedChecks);
++        Assert.AreEqual(50.0, dashboard.PassRatePercent);
++        Assert.AreEqual(0, dashboard.TimedChecks);
++        Assert.AreEqual(0.0, dashboard.AverageResponseTimeMs);
++    }
++
++    [TestMethod]
++    public void Build_OnlyClosedAndDeferredDefects_HasNoOpenSeverityCounts()
++    {
++        var store = new InMemoryPlatformStore();
++        AddDefect(store, DefectSeverity.High, DefectStatus.Closed);
++        AddDefect(store, DefectSeverity.Critical, DefectStatus.Deferred);
++
++        var dashboard = new DashboardService(store).Build();
++
++        Assert.AreEqual(0, dashboard.OpenDefects);
++        Assert.AreEqual(0, dashboard.OpenHighOrCriticalDefects);
++        Assert.IsTrue(dashboard.OpenDefectsBySeverity.Values.All(count => count == 0));
++        Assert.AreEqual(2, dashboard.RecentDefects.Count);
++    }
++
++    private static void AddDefect(InMemoryPlatformStore store, DefectSeverity severity, DefectStatus status)
++    {
++        store.AddDefect(new Defect
++        {
++            ApiId = Guid.NewGuid(),
++            EndpointId = Guid.NewGuid(),
++            Title = $"{severity}-{status}",
++            Description = "Fixture",
++            Severity = severity,
++            Priority = DefectPriority.Medium,
++            Status = status
++        });
++    }
++
++    // Return fixtures in their supplied order so the service, rather than the store,
++    // is responsible for selecting and ordering recent items.
++    private sealed class SnapshotStore : IPlatformStore
++    {
++        private readonly IReadOnlyList<ApiCheckResult> _results;
++        private readonly IReadOnlyList<Defect> _defects;
++
++        public SnapshotStore(IReadOnlyList<ApiCheckResult>? results = null, IReadOnlyList<Defect>? defects = null)
++        {
++            _results = results ?? Array.Empty<ApiCheckResult>();
++            _defects = defects ?? Array.Empty<Defect>();
++        }
++
++        public IReadOnlyList<RegisteredApi> GetApis() => Array.Empty<RegisteredApi>();
++        public RegisteredApi? GetApi(Guid id) => null;
++        public IReadOnlyList<ApiCheckResult> GetResults() => _results;
++        public IReadOnlyList<ApiCheckResult> GetResultsForApi(Guid apiId) => _results.Where(result => result.ApiId == apiId).ToArray();
++        public IReadOnlyList<Defect> GetDefects() => _defects;
++        public Defect? GetDefect(Guid id) => _defects.FirstOrDefault(defect => defect.Id == id);
++        public Defect? FindOpenDefect(Guid endpointId, string checkType) => throw new NotSupportedException();
++        public void AddApi(RegisteredApi api) => throw new NotSupportedException();
++        public bool TryAddApi(RegisteredApi api) => throw new NotSupportedException();
++        public void AddEndpoint(Guid apiId, ApiEndpoint endpoint) => throw new NotSupportedException();
++        public bool TryAddEndpoint(Guid apiId, ApiEndpoint endpoint) => throw new NotSupportedException();
++        public void AddResult(ApiCheckResult result) => throw new NotSupportedException();
++        public void AddDefect(Defect defect) => throw new NotSupportedException();
++        public void UpdateDefect(Defect defect) => throw new NotSupportedException();
++    }
++}
+diff --git a/SecureApiQualityPlatform.Tests/DashboardPerformanceTests.cs b/SecureApiQualityPlatform.Tests/DashboardPerformanceTests.cs
+new file mode 100644
+index 0000000..1931ba6
+--- /dev/null
++++ b/SecureApiQualityPlatform.Tests/DashboardPerformanceTests.cs
+@@ -0,0 +1,319 @@
++using System.Diagnostics;
++using System.Net;
++using System.Runtime.InteropServices;
++using System.Security.Cryptography;
++using System.Text;
++using System.Text.Json;
++using System.Text.RegularExpressions;
++using Microsoft.AspNetCore.Hosting.Server;
++using Microsoft.AspNetCore.Hosting.Server.Features;
++using Microsoft.Extensions.DependencyInjection;
++using Microsoft.VisualStudio.TestTools.UnitTesting;
++using SecureApiQualityPlatform.Web.Models;
++using SecureApiQualityPlatform.Web.Services;
++using SecureApiQualityPlatform.Web.ViewModels;
++
++namespace SecureApiQualityPlatform.Tests;
++
++[TestClass]
++[DoNotParallelize]
++public class DashboardPerformanceTests
++{
++    private const int ResultCount = 2000;
++    private const int WarmupCount = 3;
++    private const int SampleCount = 20;
++    private const double LimitMs = 2000;
++    private static readonly DateTimeOffset Origin = new(2026, 10, 18, 0, 0, 0, TimeSpan.Zero);
++    private static readonly JsonSerializerOptions JsonOptions = new() { WriteIndented = true };
++    private readonly Dictionary<string, string> _attachments = new();
++
++    public TestContext TestContext { get; set; } = null!;
++
++    [TestCleanup]
++    public void SaveAttachments()
++    {
++        // The evidence runner supplies a stable directory independent of adapter relocation.
++        // Plain dotnet test runs still attach files through the normal MSTest results directory.
++        var directory = TestContext.Properties["PT01EvidenceDirectory"] as string
++            ?? Path.Combine(TestContext.TestResultsDirectory!, "pt01");
++        Directory.CreateDirectory(directory);
++        foreach (var (name, contents) in _attachments)
++        {
++            var path = Path.Combine(directory, name);
++            File.WriteAllText(path, contents);
++            TestContext.AddResultFile(path);
++        }
++    }
++
++    [TestMethod]
++    [TestCategory("Performance")]
++    public void PT01_BuildWithTwoThousandResults_UnderTwoSeconds()
++    {
++        var store = new InMemoryPlatformStore();
++        Seed(store);
++        var service = new DashboardService(store);
++        var started = DateTimeOffset.UtcNow;
++        double? first = null;
++        var samples = new List<double>();
++        var passed = false;
++        string? error = null;
++        try
++        {
++            first = MeasureBuild();
++            for (var i = 0; i < WarmupCount; i++) _ = MeasureBuild();
++            for (var i = 0; i < SampleCount; i++) samples.Add(MeasureBuild());
++            AssertUnderLimit(first.Value, samples);
++            passed = true;
++        }
++        catch (Exception exception)
++        {
++            error = exception.ToString();
++            throw;
++        }
++        finally
++        {
++            SaveEvidence("aggregation", store, started, passed, error, new
++            {
++                Boundary = "Stopwatch around DashboardService.Build(), including store snapshot/sort; excludes seeding, assertions, Razor, HTTP and browser",
++                FirstCallMs = first,
++                WarmupCount,
++                SamplesMs = samples,
++                WarmStatistics = Statistics(samples)
++            });
++            PrintSummary("aggregation", first, samples);
++        }
++
++        double MeasureBuild()
++        {
++            var timer = Stopwatch.StartNew();
++            var model = service.Build();
++            timer.Stop();
++            AssertModel(model); // Correctness checks are outside the timing boundary.
++            return timer.Elapsed.TotalMilliseconds;
++        }
++    }
++
++    [TestMethod]
++    [TestCategory("Performance")]
++    [TestCategory("Integration")]
++    public async Task PT01_DashboardHttpWithTwoThousandResults_UnderTwoSeconds()
++    {
++        // Run the real Program registrations, middleware, controller and compiled Razor view.
++        // No seed endpoint, environment-variable mutation, or connection to an existing app.
++        await using var app = Program.CreateApp(new[]
++        {
++            "--urls", "http://127.0.0.1:0",
++            "--environment", "Testing",
++            "--contentRoot", FindWebRoot(),
++            "--Logging:LogLevel:Default", "Warning"
++        });
++        var store = app.Services.GetRequiredService<IPlatformStore>();
++        Assert.IsInstanceOfType<InMemoryPlatformStore>(store);
++        Seed(store);
++        var originalFixtureHash = FixtureHash(store);
++        await app.StartAsync();
++        var started = DateTimeOffset.UtcNow;
++        HttpSample? first = null;
++        var samples = new List<HttpSample>();
++        var passed = false;
++        string? error = null;
++        string? address = null;
++        string? lastHtml = null;
++        try
++        {
++            address = app.Services.GetRequiredService<IServer>()
++                .Features.Get<IServerAddressesFeature>()!.Addresses.Single();
++            Assert.IsTrue(new Uri(address).IsLoopback);
++            using var client = new HttpClient(new SocketsHttpHandler
++            {
++                UseProxy = false,
++                AllowAutoRedirect = false
++            }) { BaseAddress = new Uri(address), Timeout = TimeSpan.FromSeconds(30) };
++
++            first = await MeasureHttp(); // Includes initial connection and first MVC/Razor request.
++            for (var i = 0; i < WarmupCount; i++) _ = await MeasureHttp();
++            for (var i = 0; i < SampleCount; i++) samples.Add(await MeasureHttp());
++            AssertModel(app.Services.GetRequiredService<DashboardService>().Build());
++            Assert.AreEqual(ResultCount, store.GetResults().Count, "HTTP GET must not change the fixture.");
++            Assert.AreEqual(originalFixtureHash, FixtureHash(store), "HTTP GET must preserve all fixture records.");
++            AssertUnderLimit(first.ElapsedMs, samples.Select(sample => sample.ElapsedMs).ToArray());
++            passed = true;
++
++            async Task<HttpSample> MeasureHttp()
++            {
++                var timer = Stopwatch.StartNew();
++                using var response = await client.GetAsync("/", HttpCompletionOption.ResponseHeadersRead);
++                var bytes = await response.Content.ReadAsByteArrayAsync();
++                timer.Stop(); // Full document body received; decoding/validation/file writes excluded.
++                var sample = new HttpSample(timer.Elapsed.TotalMilliseconds, (int)response.StatusCode, bytes.Length);
++                var html = Encoding.UTF8.GetString(bytes);
++                lastHtml = html;
++                Assert.AreEqual(HttpStatusCode.OK, response.StatusCode, "Redirects/errors cannot pass PT-01.");
++                Assert.AreEqual("text/html", response.Content.Headers.ContentType?.MediaType);
++                StringAssert.Contains(html, "API Quality Dashboard");
++                StringAssert.Contains(html, "Executed checks</span><strong>2000</strong>");
++                StringAssert.Contains(html, "Passed / Failed</span><strong>1000 / 1000</strong>");
++                StringAssert.Contains(html, "Open defects</span><strong>48</strong>");
++                StringAssert.Contains(html, "High/Critical open</span><strong>24</strong>");
++                Assert.AreEqual(12, Regex.Matches(html, @"PT-01 check \d{4}").Count);
++                Assert.AreEqual(8, Regex.Matches(html, @"PT-01 defect \d{4}").Count);
++                StringAssert.Contains(html, "PT-01 check 1999");
++                StringAssert.Contains(html, "PT-01 defect 0079");
++                return sample;
++            }
++        }
++        catch (Exception exception)
++        {
++            error = exception.ToString();
++            throw;
++        }
++        finally
++        {
++            if (lastHtml is not null) SaveAttachment("pt01-dashboard.html", lastHtml);
++            SaveEvidence("http", store, started, passed, error, new
++            {
++                Boundary = "HttpClient GET / through real loopback TCP/Kestrel + MVC + Razor until complete HTML body received; excludes host startup, seeding, decoding/assertions, CSS fetch, browser layout/paint",
++                Url = address is null ? null : address + "/",
++                FirstRequest = first,
++                WarmupCount,
++                Samples = samples,
++                WarmStatistics = Statistics(samples.Select(sample => sample.ElapsedMs).ToArray()),
++                Concurrency = 1,
++                Connection = "First request opens a connection; later requests reuse HttpClient/connection; no proxy or redirects"
++            });
++            PrintSummary("HTTP", first?.ElapsedMs, samples.Select(sample => sample.ElapsedMs).ToArray());
++            await app.StopAsync();
++        }
++    }
++
++    private static void Seed(IPlatformStore store)
++    {
++        Assert.AreEqual(0, store.GetApis().Count, "PT-01 requires a new isolated store.");
++        Assert.AreEqual(0, store.GetResults().Count, "Never seed a store containing manual results.");
++        Assert.AreEqual(0, store.GetDefects().Count);
++        var api = new RegisteredApi
++        {
++            Id = Id(1), Name = "PT-01 isolated fixture", BaseUrl = "https://pt01.invalid",
++            CreatedAtUtc = Origin
++        };
++        var endpoint = new ApiEndpoint { Id = Id(2), ApiId = api.Id, Name = "PT-01 recorded endpoint", Path = "/health" };
++        store.AddApi(api);
++        store.AddEndpoint(api.Id, endpoint);
++        for (var index = 0; index < ResultCount; index++)
++        {
++            store.AddResult(new ApiCheckResult
++            {
++                Id = Id(10000 + index), ApiId = api.Id, EndpointId = endpoint.Id,
++                CheckType = "Availability", Message = $"PT-01 check {index:D4}",
++                Passed = index % 2 == 0, ActualStatusCode = index % 2 == 0 ? 200 : 503,
++                ResponseTimeMs = index % 3 == 0 ? null : 100 + index % 100,
++                ExecutedAtUtc = Origin.AddSeconds(index)
++            });
++        }
++
++        var statuses = new[] { DefectStatus.New, DefectStatus.InProgress, DefectStatus.Resolved, DefectStatus.Closed, DefectStatus.Deferred };
++        for (var index = 0; index < 80; index++)
++        {
++            store.AddDefect(new Defect
++            {
++                Id = Id(20000 + index), ApiId = api.Id, EndpointId = endpoint.Id,
++                SourceCheckResultId = Id(10000 + index * 2 + 1),
++                Title = $"PT-01 defect {index:D4}", Description = "Synthetic recorded failure; no network check executed.",
++                CheckType = "Availability", Severity = (DefectSeverity)(index % 4),
++                Priority = DefectPriority.Medium, Status = statuses[index % statuses.Length],
++                CreatedAtUtc = Origin.AddSeconds(index), UpdatedAtUtc = Origin.AddSeconds(index)
++            });
++        }
++    }
++
++    private static Guid Id(int value) => new(value, 0, 0, new byte[8]);
++
++    private static void AssertModel(DashboardViewModel model)
++    {
++        Assert.AreEqual(1, model.ApiCount);
++        Assert.AreEqual(1, model.EndpointCount);
++        Assert.AreEqual(ResultCount, model.ExecutedChecks);
++        Assert.AreEqual(1000, model.PassedChecks);
++        Assert.AreEqual(1000, model.FailedChecks);
++        Assert.AreEqual(50.0, model.PassRatePercent);
++        Assert.AreEqual(1333, model.TimedChecks);
++        Assert.AreEqual(149.5, model.AverageResponseTimeMs);
++        Assert.AreEqual(48, model.OpenDefects);
++        Assert.AreEqual(24, model.OpenHighOrCriticalDefects);
++        foreach (var severity in Enum.GetValues<DefectSeverity>())
++            Assert.AreEqual(12, model.OpenDefectsBySeverity[severity]);
++        Assert.AreEqual(12, model.RecentResults.Count);
++        Assert.AreEqual(Id(11999), model.RecentResults[0].Id);
++        Assert.AreEqual(8, model.RecentDefects.Count);
++        Assert.AreEqual(Id(20079), model.RecentDefects[0].Id);
++    }
++
++    private static void AssertUnderLimit(double first, IReadOnlyCollection<double> samples)
++    {
++        Assert.AreEqual(SampleCount, samples.Count);
++        var worst = Math.Max(first, samples.Max());
++        Assert.IsTrue(worst < LimitMs, $"PT-01 worst first/warmed duration was {worst:F3} ms; every measured duration must be < {LimitMs} ms.");
++    }
++
++    private void SaveEvidence(string kind, IPlatformStore store, DateTimeOffset started, bool passed, string? error, object measurement)
++    {
++        var record = new
++        {
++            Test = "PT-01", Kind = kind, Status = passed ? "PASS" : "FAIL", Error = error,
++            StartedUtc = started, FinishedUtc = DateTimeOffset.UtcNow,
++            ThresholdMs = LimitMs, Rule = "Every first and warmed measured duration must be strictly below 2000 ms; correctness must pass",
++            SampleCount, ResultCount, ApiCount = 1, EndpointCount = 1, DefectCount = 80,
++            Fixture = "Fixed IDs and UTC timestamps; 1000 pass/1000 fail, 1333 timings, 48 open defects (12 per severity); new private in-memory store; no outbound checks",
++            FixtureSha256 = FixtureHash(store),
++            Runtime = RuntimeInformation.FrameworkDescription, OS = RuntimeInformation.OSDescription,
++            Architecture = RuntimeInformation.ProcessArchitecture.ToString(), LogicalProcessors = Environment.ProcessorCount,
++            ProcessId = Environment.ProcessId, Stopwatch.Frequency, Stopwatch.IsHighResolution,
++            BuildConfiguration = BuildConfiguration(), TargetFramework = "net8.0", Measurement = measurement
++        };
++        SaveAttachment($"pt01-{kind}.json", JsonSerializer.Serialize(record, JsonOptions));
++    }
++
++    private static string FixtureHash(IPlatformStore store) => Convert.ToHexString(SHA256.HashData(
++        JsonSerializer.SerializeToUtf8Bytes(new { Apis = store.GetApis(), Results = store.GetResults(), Defects = store.GetDefects() })));
++
++    private void SaveAttachment(string name, string contents)
++    {
++        _attachments[name] = contents;
++    }
++
++    private void PrintSummary(string kind, double? first, IReadOnlyList<double> samples)
++    {
++        Console.WriteLine($"PT-01 {kind}: first={first:F3} ms; warm statistics={JsonSerializer.Serialize(Statistics(samples))}; limit < {LimitMs} ms");
++        Console.WriteLine($"Warm samples (ms): {JsonSerializer.Serialize(samples)}");
++    }
++
++    private static object? Statistics(IReadOnlyList<double> samples)
++    {
++        if (samples.Count == 0) return null;
++        var sorted = samples.Order().ToArray();
++        var middle = sorted.Length / 2;
++        var median = sorted.Length % 2 == 0 ? (sorted[middle - 1] + sorted[middle]) / 2 : sorted[middle];
++        return new { MinMs = sorted[0], MedianMs = median, MeanMs = samples.Average(), P95Ms = sorted[(int)Math.Ceiling(sorted.Length * 0.95) - 1], MaxMs = sorted[^1] };
++    }
++
++    private static string FindWebRoot()
++    {
++        for (var directory = new DirectoryInfo(AppContext.BaseDirectory); directory is not null; directory = directory.Parent)
++        {
++            var candidate = Path.Combine(directory.FullName, "SecureApiQualityPlatform.Web");
++            if (File.Exists(Path.Combine(candidate, "SecureApiQualityPlatform.Web.csproj"))) return candidate;
++        }
++        throw new DirectoryNotFoundException("Run PT-01 from a built repository checkout containing SecureApiQualityPlatform.Web.");
++    }
++
++    private static string BuildConfiguration()
++    {
++#if DEBUG
++        return "Debug";
++#else
++        return "Release";
++#endif
++    }
++
++    private sealed record HttpSample(double ElapsedMs, int StatusCode, int BodyBytes);
++}
+diff --git a/SecureApiQualityPlatform.Tests/FailureMessageTests.cs b/SecureApiQualityPlatform.Tests/FailureMessageTests.cs
+new file mode 100644
+index 0000000..6506835
+--- /dev/null
++++ b/SecureApiQualityPlatform.Tests/FailureMessageTests.cs
+@@ -0,0 +1,45 @@
++using System.Net;
++using Microsoft.VisualStudio.TestTools.UnitTesting;
++using SecureApiQualityPlatform.Web.Models;
++using SecureApiQualityPlatform.Web.Services;
++
++namespace SecureApiQualityPlatform.Tests;
++
++[TestClass]
++public class FailureMessageTests
++{
++    // These guards verify the evidence in the messages. A representative user's
++    // ability to understand them still requires the manual usability case.
++    [DataTestMethod]
++    [DataRow("Status", "Expected HTTP 200", "received 400")]
++    [DataRow("Timing", "1001 ms", "1000 ms threshold")]
++    [DataRow("Authentication", "authentication-required", "HTTP 200")]
++    [DataRow("ContentType", "application/json", "text/html")]
++    [DataRow("Availability", "Request failed", "Request timed out.")]
++    public void FailedCheck_MessageIncludesExpectationAndObservedEvidence(
++        string scenario, string firstEvidence, string secondEvidence)
++    {
++        var evaluator = new CheckEvaluator();
++        var endpoint = new ApiEndpoint
++        {
++            ExpectedStatusCode = 200,
++            MaxResponseTimeMs = 1000,
++            RequiresAuthentication = true,
++            ExpectedContentType = "application/json"
++        };
++        var result = scenario switch
++        {
++            "Status" => evaluator.ExpectedStatus(endpoint.ApiId, endpoint, HttpStatusCode.BadRequest),
++            "Timing" => evaluator.ResponseTime(endpoint.ApiId, endpoint, 1001),
++            "Authentication" => evaluator.AuthenticationProtection(endpoint.ApiId, endpoint, HttpStatusCode.OK),
++            "ContentType" => evaluator.ContentType(endpoint.ApiId, endpoint, "text/html"),
++            "Availability" => evaluator.AvailabilityFailure(endpoint.ApiId, endpoint, "Request timed out."),
++            _ => throw new ArgumentOutOfRangeException(nameof(scenario))
++        };
++
++        Assert.IsFalse(result.Passed);
++        Assert.IsFalse(string.IsNullOrWhiteSpace(result.CheckType));
++        StringAssert.Contains(result.Message, firstEvidence);
++        StringAssert.Contains(result.Message, secondEvidence);
++    }
++}
+diff --git a/SecureApiQualityPlatform.Tests/ReportsEnhancementTests.cs b/SecureApiQualityPlatform.Tests/ReportsEnhancementTests.cs
+new file mode 100644
+index 0000000..5654029
+--- /dev/null
++++ b/SecureApiQualityPlatform.Tests/ReportsEnhancementTests.cs
+@@ -0,0 +1,405 @@
++using System.Text;
++using Microsoft.AspNetCore.Mvc;
++using Microsoft.VisualBasic.FileIO;
++using Microsoft.VisualStudio.TestTools.UnitTesting;
++using SecureApiQualityPlatform.Web.Controllers;
++using SecureApiQualityPlatform.Web.Models;
++using SecureApiQualityPlatform.Web.Services;
++
++namespace SecureApiQualityPlatform.Tests;
++
++[TestClass]
++public class ReportsEnhancementTests
++{
++    private static readonly string[] ResultsHeader =
++    [
++        "ExecutedAtUtc", "ApiName", "ApiId", "EndpointName", "EndpointId", "Method", "Path",
++        "CheckType", "Passed", "ActualStatusCode", "ResponseTimeMs", "FailureSeverity", "Message",
++        "ApiBaseUrl", "Outcome"
++    ];
++
++    private static readonly string[] DefectsHeader =
++    [
++        "DefectId", "ApiName", "ApiId", "EndpointName", "EndpointId", "Method", "Path", "CheckType",
++        "Severity", "Priority", "Status", "AssignedTo", "CreatedAtUtc", "UpdatedAtUtc", "RetestedAtUtc",
++        "SourceCheckResultId", "Title", "Description", "ApiBaseUrl", "LifecycleStage", "IsOpen"
++    ];
++
++    [DataTestMethod]
++    [DataRow(false, "selected-fail", "Fail")]
++    [DataRow(true, "selected-pass", "Pass")]
++    public void ExportResultsCsv_FiltersByApiAndPassStatus(bool passed, string message, string outcome)
++    {
++        var store = new InMemoryPlatformStore();
++        var selectedApi = Guid.NewGuid();
++        var otherApi = Guid.NewGuid();
++        AddResult(store, selectedApi, true, "selected-pass");
++        AddResult(store, selectedApi, false, "selected-fail");
++        AddResult(store, otherApi, false, "other-fail");
++
++        var rows = ParseCsv(new ReportsController(store).ExportResultsCsv(apiId: selectedApi, passed: passed));
++
++        AssertSchema(rows, ResultsHeader);
++        Assert.AreEqual(2, rows.Count); // Header + exactly one filtered result.
++        Assert.AreEqual(selectedApi.ToString(), rows[1][2]);
++        Assert.AreEqual(passed.ToString(), rows[1][8]);
++        Assert.AreEqual(message, rows[1][12]);
++        Assert.AreEqual(outcome, rows[1][14]);
++    }
++
++    [TestMethod]
++    public void ExportDefectsCsv_FiltersSeverityStatusAndApi_AndAddsLifecycleFields()
++    {
++        var store = new InMemoryPlatformStore();
++        var selectedApi = Guid.NewGuid();
++        AddDefect(store, selectedApi, DefectSeverity.High, DefectStatus.Retest, "selected");
++        AddDefect(store, selectedApi, DefectSeverity.Low, DefectStatus.Retest, "wrong-severity");
++        AddDefect(store, selectedApi, DefectSeverity.High, DefectStatus.Closed, "wrong-status");
++        AddDefect(store, Guid.NewGuid(), DefectSeverity.High, DefectStatus.Retest, "wrong-api");
++
++        var rows = ParseCsv(new ReportsController(store).ExportDefectsCsv(
++            status: DefectStatus.Retest, severity: DefectSeverity.High, apiId: selectedApi));
++
++        AssertSchema(rows, DefectsHeader);
++        Assert.AreEqual(2, rows.Count);
++        Assert.AreEqual(selectedApi.ToString(), rows[1][2]);
++        Assert.AreEqual("High", rows[1][8]);
++        Assert.AreEqual("Retest", rows[1][10]);
++        Assert.AreEqual("selected", rows[1][16]);
++        Assert.AreEqual("Verification", rows[1][19]);
++        Assert.AreEqual("True", rows[1][20]);
++    }
++
++    [TestMethod]
++    public void ExportResultsCsv_EscapesUntrustedSpreadsheetFormulaAndNewLine()
++    {
++        var store = new InMemoryPlatformStore();
++        var api = new RegisteredApi { Name = "=HYPERLINK(\"https://example.com\")", BaseUrl = "https://example.com" };
++        store.AddApi(api);
++        store.AddResult(new ApiCheckResult
++        {
++            ApiId = api.Id,
++            EndpointId = Guid.NewGuid(),
++            CheckType = "Availability",
++            Passed = false,
++            Message = "@SUM(1,2)\nsecond line"
++        });
++
++        var rows = ParseCsv(new ReportsController(store).ExportResultsCsv());
++        AssertSchema(rows, ResultsHeader);
++        Assert.AreEqual(2, rows.Count);
++        Assert.AreEqual("'=HYPERLINK(\"https://example.com\")", rows[1][1]);
++        Assert.AreEqual("'@SUM(1,2)\nsecond line", NormalizeNewLines(rows[1][12]));
++    }
++
++    [TestMethod]
++    public void ExportDefectsCsv_WithNoMatchingRows_RemainsHeaderOnly()
++    {
++        var store = new InMemoryPlatformStore();
++        AddDefect(store, Guid.NewGuid(), DefectSeverity.Low, DefectStatus.Closed, "closed-low");
++
++        var rows = ParseCsv(new ReportsController(store).ExportDefectsCsv(
++            status: DefectStatus.New, severity: DefectSeverity.Critical));
++
++        AssertSchema(rows, DefectsHeader);
++        Assert.AreEqual(1, rows.Count);
++    }
++
++    [TestMethod]
++    public void ExportResultsCsv_PreservesSchemaAndQuotedMultilineText()
++    {
++        var store = new InMemoryPlatformStore();
++        var api = new RegisteredApi { Name = "Payments, \"QA\"", BaseUrl = "https://example.com" };
++        store.AddApi(api);
++        var endpoint = new ApiEndpoint
++        {
++            ApiId = api.Id,
++            Name = "Health\r\ncheck",
++            Method = "GET",
++            Path = "/health?name=one,two"
++        };
++        store.AddEndpoint(api.Id, endpoint);
++        var executedAt = new DateTimeOffset(2026, 8, 30, 8, 15, 0, TimeSpan.Zero);
++        store.AddResult(new ApiCheckResult
++        {
++            ApiId = api.Id,
++            EndpointId = endpoint.Id,
++            CheckType = "ExpectedStatus",
++            Passed = false,
++            ActualStatusCode = 500,
++            ResponseTimeMs = 245,
++            FailureSeverity = DefectSeverity.High,
++            Message = "Expected 200, received \"500\"\r\nRetry failed",
++            ExecutedAtUtc = executedAt
++        });
++
++        var rows = ParseCsv(new ReportsController(store).ExportResultsCsv());
++
++        AssertSchema(rows, ResultsHeader);
++        Assert.AreEqual(2, rows.Count);
++        CollectionAssert.AreEqual(new[]
++        {
++            executedAt.ToString("O"), api.Name, api.Id.ToString(), "Health\ncheck", endpoint.Id.ToString(),
++            "GET", endpoint.Path, "ExpectedStatus", "False", "500", "245", "High",
++            "Expected 200, received \"500\"\nRetry failed", api.BaseUrl, "Fail"
++        }, rows[1].Select(NormalizeNewLines).ToArray());
++    }
++
++    [TestMethod]
++    public void ExportDefectsCsv_PreservesSchemaAndQuotedLifecycleEvidence()
++    {
++        var store = new InMemoryPlatformStore();
++        var api = new RegisteredApi { Name = "Orders, API", BaseUrl = "https://example.com" };
++        store.AddApi(api);
++        var endpoint = new ApiEndpoint { ApiId = api.Id, Name = "Create \"order\"", Method = "POST", Path = "/orders" };
++        store.AddEndpoint(api.Id, endpoint);
++        var createdAt = new DateTimeOffset(2026, 8, 29, 10, 0, 0, TimeSpan.Zero);
++        var updatedAt = createdAt.AddDays(1);
++        var retestedAt = updatedAt.AddMinutes(5);
++        var sourceResultId = Guid.NewGuid();
++        var defect = new Defect
++        {
++            ApiId = api.Id,
++            EndpointId = endpoint.Id,
++            CheckType = "ExpectedStatus",
++            Severity = DefectSeverity.High,
++            Priority = DefectPriority.Urgent,
++            Status = DefectStatus.Retest,
++            AssignedTo = "Tester, QA",
++            CreatedAtUtc = createdAt,
++            UpdatedAtUtc = updatedAt,
++            RetestedAtUtc = retestedAt,
++            SourceCheckResultId = sourceResultId,
++            Title = "Quote \"handling\" defect",
++            Description = "Contains, comma\r\nsecond line"
++        };
++        store.AddDefect(defect);
++
++        var rows = ParseCsv(new ReportsController(store).ExportDefectsCsv());
++
++        AssertSchema(rows, DefectsHeader);
++        Assert.AreEqual(2, rows.Count);
++        CollectionAssert.AreEqual(new[]
++        {
++            defect.Id.ToString(), api.Name, api.Id.ToString(), endpoint.Name, endpoint.Id.ToString(),
++            endpoint.Method, endpoint.Path, "ExpectedStatus", "High", "Urgent", "Retest", "Tester, QA",
++            createdAt.ToString("O"), updatedAt.ToString("O"), retestedAt.ToString("O"), sourceResultId.ToString(),
++            defect.Title, "Contains, comma\nsecond line", api.BaseUrl, "Verification", "True"
++        }, rows[1].Select(NormalizeNewLines).ToArray());
++    }
++
++    [TestMethod]
++    public void Exports_WithMissingApiAndEndpoint_PreserveIdsAndEmptyOptionalFields()
++    {
++        var store = new InMemoryPlatformStore();
++        var apiId = Guid.NewGuid();
++        AddResult(store, apiId, false, "Missing context");
++        AddDefect(store, apiId, DefectSeverity.Low, DefectStatus.New, "Missing context");
++
++        var results = ParseCsv(new ReportsController(store).ExportResultsCsv());
++        var defects = ParseCsv(new ReportsController(store).ExportDefectsCsv());
++
++        AssertSchema(results, ResultsHeader);
++        AssertSchema(defects, DefectsHeader);
++        Assert.AreEqual(apiId.ToString(), results[1][2]);
++        Assert.AreEqual(store.GetResults()[0].EndpointId.ToString(), results[1][4]);
++        Assert.AreEqual(apiId.ToString(), defects[1][2]);
++        Assert.AreEqual(store.GetDefects()[0].EndpointId.ToString(), defects[1][4]);
++        foreach (var index in new[] { 1, 3, 5, 6, 9, 10, 13 })
++            Assert.AreEqual(string.Empty, results[1][index], $"Result column {ResultsHeader[index]} should be empty.");
++        foreach (var index in new[] { 1, 3, 5, 6, 11, 14, 15, 18 })
++            Assert.AreEqual(string.Empty, defects[1][index], $"Defect column {DefectsHeader[index]} should be empty.");
++    }
++
++    [TestMethod]
++    public void Exports_WithoutFilters_IncludeAllRowsNewestFirst()
++    {
++        var store = new InMemoryPlatformStore();
++        var older = new DateTimeOffset(2026, 8, 29, 10, 0, 0, TimeSpan.Zero);
++        var newer = older.AddDays(1);
++        store.AddResult(new ApiCheckResult { Passed = true, Message = "older", ExecutedAtUtc = older });
++        store.AddResult(new ApiCheckResult { Passed = false, Message = "newer", ExecutedAtUtc = newer });
++        store.AddDefect(new Defect { Title = "older", Status = DefectStatus.Closed, UpdatedAtUtc = older });
++        store.AddDefect(new Defect { Title = "newer", Status = DefectStatus.New, UpdatedAtUtc = newer });
++
++        var results = ParseCsv(new ReportsController(store).ExportResultsCsv());
++        var defects = ParseCsv(new ReportsController(store).ExportDefectsCsv());
++
++        AssertSchema(results, ResultsHeader);
++        AssertSchema(defects, DefectsHeader);
++        Assert.AreEqual(3, results.Count);
++        Assert.AreEqual(3, defects.Count);
++        CollectionAssert.AreEqual(new[] { "newer", "older" }, results.Skip(1).Select(row => row[12]).ToArray());
++        CollectionAssert.AreEqual(new[] { "newer", "older" }, defects.Skip(1).Select(row => row[16]).ToArray());
++    }
++
++    [DataTestMethod]
++    [DataRow(DefectStatus.New, "Active", true)]
++    [DataRow(DefectStatus.Triaged, "Active", true)]
++    [DataRow(DefectStatus.Assigned, "Active", true)]
++    [DataRow(DefectStatus.InProgress, "Active", true)]
++    [DataRow(DefectStatus.Resolved, "Verification", true)]
++    [DataRow(DefectStatus.Retest, "Verification", true)]
++    [DataRow(DefectStatus.Closed, "Closed", false)]
++    [DataRow(DefectStatus.Reopened, "Active", true)]
++    [DataRow(DefectStatus.Deferred, "Deferred", false)]
++    public void ExportDefectsCsv_MapsEveryLifecycleStatus(DefectStatus status, string stage, bool isOpen)
++    {
++        var store = new InMemoryPlatformStore();
++        AddDefect(store, Guid.NewGuid(), DefectSeverity.Medium, status, "Lifecycle fixture");
++
++        var rows = ParseCsv(new ReportsController(store).ExportDefectsCsv());
++
++        AssertSchema(rows, DefectsHeader);
++        Assert.AreEqual(status.ToString(), rows[1][10]);
++        Assert.AreEqual(stage, rows[1][19]);
++        Assert.AreEqual(isOpen.ToString(), rows[1][20]);
++    }
++
++    [DataTestMethod]
++    [DataRow("=SUM(1,2)")]
++    [DataRow("+SUM(1,2)")]
++    [DataRow("-SUM(1,2)")]
++    [DataRow("@SUM(1,2)")]
++    [DataRow(" \t=SUM(1,2)")]
++    public void Exports_NeutralizeFormulaPrefixesInUntrustedFields(string value)
++    {
++        var store = new InMemoryPlatformStore();
++        var api = new RegisteredApi { Name = value, BaseUrl = value };
++        store.AddApi(api);
++        var endpoint = new ApiEndpoint { ApiId = api.Id, Name = value, Method = value, Path = value };
++        store.AddEndpoint(api.Id, endpoint);
++        store.AddResult(new ApiCheckResult { ApiId = api.Id, EndpointId = endpoint.Id, CheckType = value, Message = value });
++        store.AddDefect(new Defect
++        {
++            ApiId = api.Id, EndpointId = endpoint.Id, CheckType = value, AssignedTo = value,
++            Title = value, Description = value
++        });
++
++        var results = ParseCsv(new ReportsController(store).ExportResultsCsv());
++        var defects = ParseCsv(new ReportsController(store).ExportDefectsCsv());
++
++        AssertSchema(results, ResultsHeader);
++        AssertSchema(defects, DefectsHeader);
++        foreach (var index in new[] { 1, 3, 5, 6, 7, 12, 13 })
++            Assert.AreEqual("'" + value, results[1][index], $"Result column {ResultsHeader[index]} should neutralize the prefix.");
++        foreach (var index in new[] { 1, 3, 5, 6, 7, 11, 16, 17, 18 })
++            Assert.AreEqual("'" + value, defects[1][index], $"Defect column {DefectsHeader[index]} should neutralize the prefix.");
++    }
++
++    [DataTestMethod]
++    [DataRow("apiId")]
++    [DataRow("passed")]
++    public void ExportResultsCsv_WithMalformedFilter_ReturnsActionableBadRequest(string filter)
++    {
++        var store = new InMemoryPlatformStore();
++        AddResult(store, Guid.NewGuid(), false, "Must not export with an invalid filter");
++        var controller = new ReportsController(store);
++        // MVC records a conversion error when a query value cannot bind to Guid?/bool?.
++        controller.ModelState.AddModelError(filter, "Invalid query value.");
++
++        var result = controller.ExportResultsCsv() as BadRequestObjectResult;
++
++        Assert.IsNotNull(result);
++        var message = result.Value as string;
++        Assert.IsNotNull(message);
++        StringAssert.Contains(message, "apiId as a GUID");
++        StringAssert.Contains(message, "passed as true or false");
++        StringAssert.Contains(message, "Omit a filter");
++    }
++
++    [DataTestMethod]
++    [DataRow("apiId")]
++    [DataRow("status")]
++    [DataRow("severity")]
++    public void ExportDefectsCsv_WithMalformedFilter_ReturnsActionableBadRequest(string filter)
++    {
++        var controller = new ReportsController(new InMemoryPlatformStore());
++        controller.ModelState.AddModelError(filter, "Invalid query value.");
++
++        AssertDefectFilterError(controller.ExportDefectsCsv());
++    }
++
++    [DataTestMethod]
++    [DataRow(-1, 0)]
++    [DataRow(999, 0)]
++    [DataRow(0, -1)]
++    [DataRow(0, 999)]
++    public void ExportDefectsCsv_WithUndefinedEnumFilter_ReturnsActionableBadRequest(int status, int severity)
++    {
++        var controller = new ReportsController(new InMemoryPlatformStore());
++
++        AssertDefectFilterError(controller.ExportDefectsCsv(status: (DefectStatus)status, severity: (DefectSeverity)severity));
++    }
++
++    private static void AssertDefectFilterError(IActionResult result)
++    {
++        var badRequest = result as BadRequestObjectResult;
++        Assert.IsNotNull(badRequest);
++        var message = badRequest.Value as string;
++        Assert.IsNotNull(message);
++        StringAssert.Contains(message, "apiId as a GUID");
++        StringAssert.Contains(message, "status as one of New, Triaged");
++        StringAssert.Contains(message, "severity as one of Low, Medium, High, Critical");
++        StringAssert.Contains(message, "Omit a filter");
++    }
++
++    private static List<string[]> ParseCsv(IActionResult result)
++    {
++        var file = result as FileContentResult;
++        Assert.IsNotNull(file);
++        using var parser = new TextFieldParser(new StringReader(Encoding.UTF8.GetString(file.FileContents)))
++        {
++            TextFieldType = FieldType.Delimited,
++            HasFieldsEnclosedInQuotes = true,
++            TrimWhiteSpace = false
++        };
++        parser.SetDelimiters(",");
++        var rows = new List<string[]>();
++        while (!parser.EndOfData)
++        {
++            var fields = parser.ReadFields();
++            Assert.IsNotNull(fields);
++            rows.Add(fields);
++        }
++        return rows;
++    }
++
++    private static void AssertSchema(IReadOnlyList<string[]> rows, string[] header)
++    {
++        Assert.IsTrue(rows.Count > 0, "CSV must include its header even when no rows match.");
++        CollectionAssert.AreEqual(header, rows[0]);
++        foreach (var row in rows.Skip(1))
++            Assert.AreEqual(header.Length, row.Length, "Every logical CSV row must have the same number of columns as the header.");
++    }
++
++    private static string NormalizeNewLines(string value) => value.Replace("\r\n", "\n", StringComparison.Ordinal);
++
++    private static void AddResult(InMemoryPlatformStore store, Guid apiId, bool passed, string message)
++    {
++        store.AddResult(new ApiCheckResult
++        {
++            ApiId = apiId,
++            EndpointId = Guid.NewGuid(),
++            CheckType = "Availability",
++            Passed = passed,
++            Message = message
++        });
++    }
++
++    private static void AddDefect(
++        InMemoryPlatformStore store, Guid apiId, DefectSeverity severity,
++        DefectStatus status, string title)
++    {
++        store.AddDefect(new Defect
++        {
++            ApiId = apiId,
++            EndpointId = Guid.NewGuid(),
++            Title = title,
++            Description = "Fixture",
++            Severity = severity,
++            Priority = DefectPriority.Medium,
++            Status = status
++        });
++    }
++}
+diff --git a/SecureApiQualityPlatform.Web/Controllers/ReportsController.cs b/SecureApiQualityPlatform.Web/Controllers/ReportsController.cs
+index d962a26..65fb034 100644
+--- a/SecureApiQualityPlatform.Web/Controllers/ReportsController.cs
++++ b/SecureApiQualityPlatform.Web/Controllers/ReportsController.cs
+@@ -11,66 +11,93 @@ public sealed class ReportsController : Controller
+ 
+     public ReportsController(IPlatformStore store) => _store = store;
+ 
+-    public IActionResult ExportResultsCsv()
++    // Optional query filters are applied before CSV generation. Omitted filters
++    // preserve the original export-all behaviour for existing UI links.
++    public IActionResult ExportResultsCsv(Guid? apiId = null, bool? passed = null)
+     {
++        if (!ModelState.IsValid)
++            return BadRequest("Invalid report filter. Use apiId as a GUID and passed as true or false. Omit a filter to include all values.");
++
+         var (apis, endpoints) = BuildLookups();
+         var sb = new StringBuilder();
+-        sb.AppendLine("ExecutedAtUtc,ApiName,ApiId,EndpointName,EndpointId,Method,Path,CheckType,Passed,ActualStatusCode,ResponseTimeMs,FailureSeverity,Message");
++        sb.AppendLine("ExecutedAtUtc,ApiName,ApiId,EndpointName,EndpointId,Method,Path,CheckType,Passed,ActualStatusCode,ResponseTimeMs,FailureSeverity,Message,ApiBaseUrl,Outcome");
+ 
+-        foreach (var r in _store.GetResults().OrderByDescending(r => r.ExecutedAtUtc))
++        foreach (var r in _store.GetResults()
++            .Where(r => (!apiId.HasValue || r.ApiId == apiId.Value) &&
++                        (!passed.HasValue || r.Passed == passed.Value))
++            .OrderByDescending(r => r.ExecutedAtUtc))
+         {
+             apis.TryGetValue(r.ApiId, out var api);
+             endpoints.TryGetValue(r.EndpointId, out var endpoint);
+ 
+             sb.AppendLine(string.Join(',',
+                 Csv(r.ExecutedAtUtc.ToString("O")),
+-                Csv(api?.Name),
++                CsvText(api?.Name),
+                 Csv(r.ApiId.ToString()),
+-                Csv(endpoint?.Name),
++                CsvText(endpoint?.Name),
+                 Csv(r.EndpointId.ToString()),
+-                Csv(endpoint?.Method),
+-                Csv(endpoint?.Path),
+-                Csv(r.CheckType),
++                CsvText(endpoint?.Method),
++                CsvText(endpoint?.Path),
++                CsvText(r.CheckType),
+                 Csv(r.Passed.ToString()),
+                 Csv(r.ActualStatusCode?.ToString()),
+                 Csv(r.ResponseTimeMs?.ToString()),
+                 Csv(r.FailureSeverity.ToString()),
+-                Csv(r.Message)));
++                CsvText(r.Message),
++                CsvText(api?.BaseUrl),
++                Csv(r.Passed ? "Pass" : "Fail")));
+         }
+ 
+         return CsvFile(sb, "api-check-results");
+     }
+ 
+-    public IActionResult ExportDefectsCsv()
++    public IActionResult ExportDefectsCsv(
++        DefectStatus? status = null,
++        DefectSeverity? severity = null,
++        Guid? apiId = null)
+     {
++        if (!ModelState.IsValid ||
++            (status.HasValue && !Enum.IsDefined(status.Value)) ||
++            (severity.HasValue && !Enum.IsDefined(severity.Value)))
++        {
++            return BadRequest($"Invalid report filter. Use apiId as a GUID, status as one of {string.Join(", ", Enum.GetNames<DefectStatus>())}, and severity as one of {string.Join(", ", Enum.GetNames<DefectSeverity>())}. Omit a filter to include all values.");
++        }
++
+         var (apis, endpoints) = BuildLookups();
+         var sb = new StringBuilder();
+-        sb.AppendLine("DefectId,ApiName,ApiId,EndpointName,EndpointId,Method,Path,CheckType,Severity,Priority,Status,AssignedTo,CreatedAtUtc,UpdatedAtUtc,RetestedAtUtc,SourceCheckResultId,Title,Description");
++        sb.AppendLine("DefectId,ApiName,ApiId,EndpointName,EndpointId,Method,Path,CheckType,Severity,Priority,Status,AssignedTo,CreatedAtUtc,UpdatedAtUtc,RetestedAtUtc,SourceCheckResultId,Title,Description,ApiBaseUrl,LifecycleStage,IsOpen");
+ 
+-        foreach (var d in _store.GetDefects().OrderByDescending(d => d.UpdatedAtUtc))
++        foreach (var d in _store.GetDefects()
++            .Where(d => (!status.HasValue || d.Status == status.Value) &&
++                        (!severity.HasValue || d.Severity == severity.Value) &&
++                        (!apiId.HasValue || d.ApiId == apiId.Value))
++            .OrderByDescending(d => d.UpdatedAtUtc))
+         {
+             apis.TryGetValue(d.ApiId, out var api);
+             endpoints.TryGetValue(d.EndpointId, out var endpoint);
+ 
+             sb.AppendLine(string.Join(',',
+                 Csv(d.Id.ToString()),
+-                Csv(api?.Name),
++                CsvText(api?.Name),
+                 Csv(d.ApiId.ToString()),
+-                Csv(endpoint?.Name),
++                CsvText(endpoint?.Name),
+                 Csv(d.EndpointId.ToString()),
+-                Csv(endpoint?.Method),
+-                Csv(endpoint?.Path),
+-                Csv(d.CheckType),
++                CsvText(endpoint?.Method),
++                CsvText(endpoint?.Path),
++                CsvText(d.CheckType),
+                 Csv(d.Severity.ToString()),
+                 Csv(d.Priority.ToString()),
+                 Csv(d.Status.ToString()),
+-                Csv(d.AssignedTo),
++                CsvText(d.AssignedTo),
+                 Csv(d.CreatedAtUtc.ToString("O")),
+                 Csv(d.UpdatedAtUtc.ToString("O")),
+                 Csv(d.RetestedAtUtc?.ToString("O")),
+                 Csv(d.SourceCheckResultId?.ToString()),
+-                Csv(d.Title),
+-                Csv(d.Description)));
++                CsvText(d.Title),
++                CsvText(d.Description),
++                CsvText(api?.BaseUrl),
++                Csv(LifecycleStage(d.Status)),
++                Csv(IsOpen(d.Status).ToString())));
+         }
+ 
+         return CsvFile(sb, "defects");
+@@ -90,6 +117,28 @@ public sealed class ReportsController : Controller
+         return File(Encoding.UTF8.GetBytes(sb.ToString()), "text/csv; charset=utf-8", fileName);
+     }
+ 
++    private static bool IsOpen(DefectStatus status) =>
++        status is not (DefectStatus.Closed or DefectStatus.Deferred);
++
++    private static string LifecycleStage(DefectStatus status) => status switch
++    {
++        DefectStatus.Closed => "Closed",
++        DefectStatus.Deferred => "Deferred",
++        DefectStatus.Resolved or DefectStatus.Retest => "Verification",
++        _ => "Active"
++    };
++
++    // Quoting protects CSV structure; a leading apostrophe additionally
++    // prevents spreadsheet programs interpreting untrusted text as a formula.
++    private static string CsvText(string? value)
++    {
++        var safeValue = value ?? string.Empty;
++        var trimmed = safeValue.TrimStart();
++        if (trimmed.Length > 0 && "=+-@".Contains(trimmed[0]))
++            safeValue = "'" + safeValue;
++        return Csv(safeValue);
++    }
++
+     private static string Csv(string? value)
+     {
+         var safeValue = value ?? string.Empty;
+diff --git a/SecureApiQualityPlatform.Web/Program.cs b/SecureApiQualityPlatform.Web/Program.cs
+index b1a9de6..151eb1e 100644
+--- a/SecureApiQualityPlatform.Web/Program.cs
++++ b/SecureApiQualityPlatform.Web/Program.cs
+@@ -1,35 +1,48 @@
+ using SecureApiQualityPlatform.Web.Services;
+ 
+-var builder = WebApplication.CreateBuilder(args);
+-
+-builder.Services.AddControllersWithViews();
+-builder.Services.AddSingleton<IPlatformStore, InMemoryPlatformStore>();
+-builder.Services.AddSingleton<CheckEvaluator>();
+-builder.Services.AddSingleton<DefectLifecycleService>();
+-builder.Services.AddSingleton<DashboardService>();
+-builder.Services.AddSingleton<UrlSafetyService>();
+-builder.Services.AddHttpClient<ApiCheckService>(client =>
+-{
+-    client.Timeout = TimeSpan.FromSeconds(10);
+-    client.DefaultRequestHeaders.UserAgent.ParseAdd("ENSE707-SecureApiQualityPlatform/0.1");
+-});
+-
+-var app = builder.Build();
++var app = Program.CreateApp(args);
++app.Run();
+ 
+-if (!app.Environment.IsDevelopment())
++public partial class Program
+ {
+-    app.UseExceptionHandler("/Home/Error");
+-    app.UseHsts();
++    // The executable and integration tests share the same registrations and MVC pipeline.
++    // Each call owns a fresh service provider, including its own in-memory store.
++    public static WebApplication CreateApp(string[] args)
++    {
++        var builder = WebApplication.CreateBuilder(new WebApplicationOptions
++        {
++            Args = args,
++            ApplicationName = typeof(Program).Assembly.GetName().Name
++        });
++
++        builder.Services.AddControllersWithViews();
++        builder.Services.AddSingleton<IPlatformStore, InMemoryPlatformStore>();
++        builder.Services.AddSingleton<CheckEvaluator>();
++        builder.Services.AddSingleton<DefectLifecycleService>();
++        builder.Services.AddSingleton<DashboardService>();
++        builder.Services.AddSingleton<UrlSafetyService>();
++        builder.Services.AddHttpClient<ApiCheckService>(client =>
++        {
++            client.Timeout = TimeSpan.FromSeconds(10);
++            client.DefaultRequestHeaders.UserAgent.ParseAdd("ENSE707-SecureApiQualityPlatform/0.1");
++        });
++
++        var app = builder.Build();
++
++        if (!app.Environment.IsDevelopment())
++        {
++            app.UseExceptionHandler("/Home/Error");
++            app.UseHsts();
++        }
++
++        app.UseHttpsRedirection();
++        app.UseStaticFiles();
++        app.UseRouting();
++
++        app.MapControllerRoute(
++            name: "default",
++            pattern: "{controller=Home}/{action=Index}/{id?}");
++
++        return app;
++    }
+ }
+-
+-app.UseHttpsRedirection();
+-app.UseStaticFiles();
+-app.UseRouting();
+-
+-app.MapControllerRoute(
+-    name: "default",
+-    pattern: "{controller=Home}/{action=Index}/{id?}");
+-
+-app.Run();
+-
+-public partial class Program { }
+diff --git a/SecureApiQualityPlatform.Web/Services/DashboardService.cs b/SecureApiQualityPlatform.Web/Services/DashboardService.cs
+index 8eb7132..ed31834 100644
+--- a/SecureApiQualityPlatform.Web/Services/DashboardService.cs
++++ b/SecureApiQualityPlatform.Web/Services/DashboardService.cs
+@@ -11,34 +11,87 @@ public sealed class DashboardService
+ 
+     public DashboardViewModel Build()
+     {
++        // The store may sort snapshots; aggregate here without extra full-sized arrays.
+         var apis = _store.GetApis();
+         var results = _store.GetResults();
+         var defects = _store.GetDefects();
+ 
+-        var passed = results.Count(r => r.Passed);
+-        var failed = results.Count - passed;
+-        var timings = results
+-            .Where(r => r.ResponseTimeMs.HasValue)
+-            .Select(r => (double)r.ResponseTimeMs!.Value)
+-            .ToArray();
+-        var open = defects
+-            .Where(d => d.Status != DefectStatus.Closed && d.Status != DefectStatus.Deferred)
+-            .ToArray();
++        var passed = 0;
++        var timed = 0;
++        double totalResponseTimeMs = 0;
++
++        foreach (var result in results)
++        {
++            if (result.Passed) passed++;
++            if (result.ResponseTimeMs is long elapsed)
++            {
++                timed++;
++                totalResponseTimeMs += elapsed;
++            }
++        }
++
++        var distribution = Enum.GetValues<DefectSeverity>()
++            .ToDictionary(severity => severity, _ => 0);
++        var openCount = 0;
++        var highRiskOpenCount = 0;
++
++        foreach (var defect in defects)
++        {
++            if (defect.Status is DefectStatus.Closed or DefectStatus.Deferred)
++                continue;
++
++            openCount++;
++            if (distribution.ContainsKey(defect.Severity))
++                distribution[defect.Severity]++;
++
++            if (defect.Severity is DefectSeverity.High or DefectSeverity.Critical)
++                highRiskOpenCount++;
++        }
+ 
+         return new DashboardViewModel
+         {
+             ApiCount = apis.Count,
+-            EndpointCount = apis.Sum(a => a.Endpoints.Count),
++            EndpointCount = apis.Sum(api => api.Endpoints.Count),
+             ExecutedChecks = results.Count,
+             PassedChecks = passed,
+-            FailedChecks = failed,
++            FailedChecks = results.Count - passed,
+             PassRatePercent = results.Count == 0 ? 0 : Math.Round((double)passed / results.Count * 100, 1),
+-            TimedChecks = timings.Length,
+-            AverageResponseTimeMs = timings.Length == 0 ? 0 : Math.Round(timings.Average(), 1),
+-            OpenDefects = open.Length,
+-            OpenHighOrCriticalDefects = open.Count(d => d.Severity is DefectSeverity.High or DefectSeverity.Critical),
+-            RecentResults = results.OrderByDescending(r => r.ExecutedAtUtc).Take(12).ToArray(),
+-            RecentDefects = defects.OrderByDescending(d => d.UpdatedAtUtc).Take(8).ToArray()
++            TimedChecks = timed,
++            AverageResponseTimeMs = timed == 0 ? 0 : Math.Round(totalResponseTimeMs / timed, 1),
++            OpenDefects = openCount,
++            OpenHighOrCriticalDefects = highRiskOpenCount,
++            OpenDefectsBySeverity = distribution,
++            RecentResults = Newest(results, result => result.ExecutedAtUtc, 12),
++            RecentDefects = Newest(defects, defect => defect.UpdatedAtUtc, 8)
+         };
+     }
++
++    private static IReadOnlyList<T> Newest<T>(
++        IReadOnlyList<T> items,
++        Func<T, DateTimeOffset> timestamp,
++        int limit)
++    {
++        // Selection is O(n log limit), independently of any sorting done by the store.
++        // Earlier snapshot items win timestamp ties, matching stable OrderByDescending.
++        var heap = new PriorityQueue<T, (DateTimeOffset Time, int ReverseIndex)>();
++        for (var index = 0; index < items.Count; index++)
++        {
++            var item = items[index];
++            var priority = (Time: timestamp(item), ReverseIndex: -index);
++            if (heap.Count < limit)
++            {
++                heap.Enqueue(item, priority);
++            }
++            else if (heap.TryPeek(out _, out var oldest) && priority.CompareTo(oldest) > 0)
++            {
++                heap.Dequeue();
++                heap.Enqueue(item, priority);
++            }
++        }
++
++        return heap.UnorderedItems
++            .OrderByDescending(entry => entry.Priority)
++            .Select(entry => entry.Element)
++            .ToArray();
++    }
+ }
+diff --git a/SecureApiQualityPlatform.Web/ViewModels/DashboardViewModel.cs b/SecureApiQualityPlatform.Web/ViewModels/DashboardViewModel.cs
+index 350fadb..9e7a5ab 100644
+--- a/SecureApiQualityPlatform.Web/ViewModels/DashboardViewModel.cs
++++ b/SecureApiQualityPlatform.Web/ViewModels/DashboardViewModel.cs
+@@ -14,6 +14,8 @@ public sealed class DashboardViewModel
+     public double AverageResponseTimeMs { get; init; }
+     public int OpenDefects { get; init; }
+     public int OpenHighOrCriticalDefects { get; init; }
++    public IReadOnlyDictionary<DefectSeverity, int> OpenDefectsBySeverity { get; init; }
++        = new Dictionary<DefectSeverity, int>();
+     public IReadOnlyList<ApiCheckResult> RecentResults { get; init; } = Array.Empty<ApiCheckResult>();
+     public IReadOnlyList<Defect> RecentDefects { get; init; } = Array.Empty<Defect>();
+ }
+diff --git a/SecureApiQualityPlatform.Web/Views/Home/Index.cshtml b/SecureApiQualityPlatform.Web/Views/Home/Index.cshtml
+index 89fab01..d1131b3 100644
+--- a/SecureApiQualityPlatform.Web/Views/Home/Index.cshtml
++++ b/SecureApiQualityPlatform.Web/Views/Home/Index.cshtml
+@@ -2,14 +2,14 @@
+ @{
+     ViewData["Title"] = "Dashboard";
+ }
+-<div class="d-flex justify-content-between align-items-center mb-4">
++<div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-3 mb-4">
+     <div>
+         <h1 class="h3 mb-1">API Quality Dashboard</h1>
+         <p class="text-muted mb-0">Current prototype evidence for quality, performance, and defects.</p>
+     </div>
+     <a class="btn btn-primary" asp-controller="Apis" asp-action="Create">Register API</a>
+ </div>
+-<div class="row g-3 mb-4">
++<div class="row g-3 mb-4" role="group" aria-label="Quality metrics">
+     <div class="col-md-3"><div class="metric-card"><span>Registered APIs</span><strong>@Model.ApiCount</strong></div></div>
+     <div class="col-md-3"><div class="metric-card"><span>Configured endpoints</span><strong>@Model.EndpointCount</strong></div></div>
+     <div class="col-md-3"><div class="metric-card"><span>Executed checks</span><strong>@Model.ExecutedChecks</strong></div></div>
+@@ -19,13 +19,46 @@
+     <div class="col-md-3"><div class="metric-card"><span>Open defects</span><strong>@Model.OpenDefects</strong></div></div>
+     <div class="col-md-3"><div class="metric-card"><span>High/Critical open</span><strong>@Model.OpenHighOrCriticalDefects</strong></div></div>
+ </div>
++<section class="card mb-4" aria-labelledby="severity-title">
++    <h2 class="card-header h6 mb-0" id="severity-title">Open defect severity distribution</h2>
++    <div class="card-body">
++        @if (Model.OpenDefects == 0)
++        {
++            <p class="text-muted mb-0" role="status">No open defects to classify.</p>
++        }
++        else
++        {
++            @foreach (var severity in Enum.GetValues<DefectSeverity>().Reverse())
++            {
++                var count = Model.OpenDefectsBySeverity.TryGetValue(severity, out var observed) ? observed : 0;
++                var percent = 100.0 * count / Model.OpenDefects;
++                var colour = severity switch
++                {
++                    DefectSeverity.Critical => "bg-danger",
++                    DefectSeverity.High => "bg-warning",
++                    DefectSeverity.Medium => "bg-info",
++                    _ => "bg-secondary"
++                };
++                <div class="severity-row mb-3">
++                    <div class="d-flex justify-content-between mb-1">
++                        <span>@severity</span><strong>@count</strong>
++                    </div>
++                    <div class="progress" role="progressbar" aria-label="@severity open defects" aria-valuenow="@count" aria-valuemin="0" aria-valuemax="@Model.OpenDefects">
++                        <div class="progress-bar @colour" style="width: @(percent.ToString("0.##", System.Globalization.CultureInfo.InvariantCulture))%"></div>
++                    </div>
++                </div>
++            }
++            <p class="text-muted small mb-0">Counts exclude Closed and Deferred defects. Numbers are displayed alongside colours.</p>
++        }
++    </div>
++</section>
+ <div class="row g-4">
+     <div class="col-lg-7">
+-        <div class="card">
+-            <div class="card-header">Recent checks</div>
++        <section class="card" aria-labelledby="recent-checks-title">
++            <h2 class="card-header h6 mb-0" id="recent-checks-title">Recent checks</h2>
+             <div class="table-responsive">
+                 <table class="table table-sm mb-0">
+-                    <thead><tr><th>Check</th><th>Result</th><th>Response</th><th>When</th></tr></thead>
++                    <thead><tr><th scope="col">Check</th><th scope="col">Result</th><th scope="col">Response</th><th scope="col">When</th></tr></thead>
+                     <tbody>
+                     @if (Model.RecentResults.Count == 0)
+                     {
+@@ -34,20 +67,20 @@
+                     @foreach (var r in Model.RecentResults)
+                     {
+                         <tr>
+-                            <td>@r.CheckType<br/><small class="text-muted">@r.Message</small></td>
++                            <td class="text-break">@r.CheckType<br /><small class="text-muted">@r.Message</small></td>
+                             <td><span class="badge @(r.Passed ? "text-bg-success" : "text-bg-danger")">@(r.Passed ? "PASS" : "FAIL")</span></td>
+-                            <td>@(r.ResponseTimeMs?.ToString() ?? "-") ms</td>
+-                            <td>@r.ExecutedAtUtc.ToLocalTime().ToString("g")</td>
++                            <td>@(r.ResponseTimeMs.HasValue ? $"{r.ResponseTimeMs.Value} ms" : "N/A")</td>
++                            <td><time datetime="@r.ExecutedAtUtc.ToString("O")">@r.ExecutedAtUtc.ToLocalTime().ToString("g")</time></td>
+                         </tr>
+                     }
+                     </tbody>
+                 </table>
+             </div>
+-        </div>
++        </section>
+     </div>
+     <div class="col-lg-5">
+-        <div class="card">
+-            <div class="card-header">Recent defects</div>
++        <section class="card" aria-labelledby="recent-defects-title">
++            <h2 class="card-header h6 mb-0" id="recent-defects-title">Recent defects</h2>
+             <div class="list-group list-group-flush">
+                 @if (Model.RecentDefects.Count == 0)
+                 {
+@@ -55,12 +88,12 @@
+                 }
+                 @foreach (var d in Model.RecentDefects)
+                 {
+-                    <div class="list-group-item">
+-                        <div class="d-flex justify-content-between"><strong>@d.Title</strong><span>@d.Severity</span></div>
++                    <div class="list-group-item text-break">
++                        <div class="d-flex justify-content-between gap-2"><strong>@d.Title</strong><span>@d.Severity</span></div>
+                         <small class="text-muted">@d.Status · @d.Priority</small>
+                     </div>
+                 }
+             </div>
+-        </div>
++        </section>
+     </div>
+ </div>
+diff --git a/SecureApiQualityPlatform.Web/wwwroot/css/site.css b/SecureApiQualityPlatform.Web/wwwroot/css/site.css
+index 7d02010..da985a4 100644
+--- a/SecureApiQualityPlatform.Web/wwwroot/css/site.css
++++ b/SecureApiQualityPlatform.Web/wwwroot/css/site.css
+@@ -1,5 +1,11 @@
+ body { background: #f6f8fb; }
+ .metric-card { background: white; border: 1px solid #e5e7eb; border-radius: .75rem; padding: 1rem; min-height: 100px; display: flex; flex-direction: column; justify-content: space-between; }
+-.metric-card span { color: #6b7280; font-size: .9rem; }
+-.metric-card strong { font-size: 1.8rem; }
++.metric-card span { color: #4b5563; font-size: .9rem; }
++.metric-card strong { font-size: 1.8rem; overflow-wrap: anywhere; }
+ .card { border-color: #e5e7eb; box-shadow: 0 1px 2px rgba(0,0,0,.03); }
++.severity-row:last-of-type { margin-bottom: .75rem !important; }
++.severity-row .progress { height: .75rem; }
++@media (max-width: 575px) {
++    .metric-card { min-height: 85px; }
++    .metric-card strong { font-size: 1.5rem; }
++}

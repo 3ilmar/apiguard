@@ -1,0 +1,22 @@
+{
+  "CheckedAtUtc": "2026-10-18T07:34:02.1909205+00:00",
+  "ValidationStatus": "PASS",
+  "UnchangedLaunchedSourceFiles": 50,
+  "HistoricalAttachmentsUnchanged": 7,
+  "ArchivedRunnerMatches": true,
+  "OtherCaseRowsUnchanged": 21,
+  "StatusTotals": [
+    {
+      "Name": "NOT RUN",
+      "Count": 8
+    },
+    {
+      "Name": "PASS",
+      "Count": 14
+    }
+  ],
+  "LocalLinksChecked": 83,
+  "ApplicationRequirementsRtmCiDiff": "No changes (git diff verified separately)",
+  "FormalTeamApproval": false,
+  "MSTestRerun": false
+}

@@ -1,0 +1,15 @@
+commit ff077fce7bdd5dc4891dcc74e8dd01c245789512
+Author:     SaltedFishInATank <zsr20041012@gmail.com>
+AuthorDate: Mon Oct 19 17:41:53 2026 +1300
+Commit:     SaltedFishInATank <zsr20041012@gmail.com>
+CommitDate: Mon Oct 19 17:41:53 2026 +1300
+
+    test(qa): complete SQA-20 automated testing and document pending SQA-19
+    - Completed all 16 SQA-20 automated browser checks across Chrome and Microsoft Edge.
+    - Verified keyboard navigation, responsive layouts, severity presentation, tables, and CSV exports.
+    - Identified and documented accessibility issues involving missing labels and insufficient colour contrast.
+    - Recorded SQA-20 overall status as FAIL pending accessibility fixes, despite 16/16 technical checks passing.
+    - Confirmed 71/71 automated .NET tests passed.
+    - Added SQA-19 AI-assisted usability inspection findings as supplementary evidence.
+    - Kept SQA-19 human usability testing pending until representative-user feedback is available.
+    - Added testing scripts, screenshots, execution logs, and QA evidence documentation.

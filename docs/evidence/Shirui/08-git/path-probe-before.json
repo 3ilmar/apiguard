@@ -1,0 +1,34 @@
+[
+  {
+    "git": "C:/Program Files/Git/cmd/git.exe",
+    "version": "git version 2.45.1.windows.1",
+    "longpaths": "false",
+    "exit_code": 128,
+    "stdout_lines": 102,
+    "stderr": "error: open(\"docs/evidence/Shirui/04-Performance-SQA18/docs/qa-evidence/2026-10-18/pt01-20261018T053209677Z-51a300/attachments/full-suite/zsr20_哈迪斯的宠物二_2026-10-18_18_32_26/In/a60db8d8-c3ee-428d-bb82-2c43a3733771/哈迪斯的宠物二/pt01-dashboard.html\"): Filename too long\nerror: unable to index file 'docs/evidence/Shirui/04-Performance-SQA18/docs/qa-evidence/2026-10-18/pt01-20261018T053209677Z-51a300/attachments/full-suite/zsr20_哈迪斯的宠物二_2026-10-18_18_32_26/In/a60db8d8-c3ee-428d-bb82-2c43a3733771/哈迪斯的宠物二/pt01-dashboard.html'\nfatal: adding files failed\n"
+  },
+  {
+    "git": "C:/Program Files/Git/cmd/git.exe",
+    "version": "git version 2.45.1.windows.1",
+    "longpaths": "true",
+    "exit_code": 0,
+    "stdout_lines": 1768,
+    "stderr": ""
+  },
+  {
+    "git": "C:/Users/zsr20/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/git/cmd/git.exe",
+    "version": "git version 2.53.0.windows.3",
+    "longpaths": "false",
+    "exit_code": 128,
+    "stdout_lines": 102,
+    "stderr": "error: open(\"docs/evidence/Shirui/04-Performance-SQA18/docs/qa-evidence/2026-10-18/pt01-20261018T053209677Z-51a300/attachments/full-suite/zsr20_哈迪斯的宠物二_2026-10-18_18_32_26/In/a60db8d8-c3ee-428d-bb82-2c43a3733771/哈迪斯的宠物二/pt01-dashboard.html\"): Filename too long\nerror: unable to index file 'docs/evidence/Shirui/04-Performance-SQA18/docs/qa-evidence/2026-10-18/pt01-20261018T053209677Z-51a300/attachments/full-suite/zsr20_哈迪斯的宠物二_2026-10-18_18_32_26/In/a60db8d8-c3ee-428d-bb82-2c43a3733771/哈迪斯的宠物二/pt01-dashboard.html'\nfatal: adding files failed\n"
+  },
+  {
+    "git": "C:/Users/zsr20/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/git/cmd/git.exe",
+    "version": "git version 2.53.0.windows.3",
+    "longpaths": "true",
+    "exit_code": 0,
+    "stdout_lines": 1768,
+    "stderr": ""
+  }
+]

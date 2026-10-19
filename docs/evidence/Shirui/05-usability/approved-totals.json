@@ -1,0 +1,17 @@
+{
+  "planned": 22,
+  "executed": 16,
+  "passed": 16,
+  "provisionalPass": 0,
+  "failed": 0,
+  "blocked": 0,
+  "notRun": 6,
+  "executionRatePercent": 72.73,
+  "passRatePercent": 100.0,
+  "statusCounts": {
+    "NOT RUN": 6,
+    "PASS": 16
+  },
+  "otherOutcomesUnchanged": true,
+  "boundary": "Master acceptance/evidence cases, not MSTest or HTTP check counts"
+}

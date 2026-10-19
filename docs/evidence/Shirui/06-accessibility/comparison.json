@@ -1,0 +1,1631 @@
+{
+  "baseCommit": "7f28ee9239ba728a297ffd729da618abb1c0d415",
+  "sourceIdentity": "Uncommitted accessibility diff over base commit; source and DLL hashes retained separately.",
+  "baselineSuite": {
+    "trx": "baseline-suite/baseline.trx",
+    "counters": {
+      "total": "136",
+      "executed": "136",
+      "passed": "136",
+      "failed": "0",
+      "error": "0",
+      "timeout": "0",
+      "aborted": "0",
+      "inconclusive": "0",
+      "passedButRunAborted": "0",
+      "notRunnable": "0",
+      "notExecuted": "0",
+      "disconnected": "0",
+      "warning": "0",
+      "completed": "0",
+      "inProgress": "0",
+      "pending": "0"
+    },
+    "times": {
+      "creation": "2026-10-19T22:52:44.0981396+13:00",
+      "queuing": "2026-10-19T22:52:44.0981400+13:00",
+      "start": "2026-10-19T22:52:36.4831597+13:00",
+      "finish": "2026-10-19T22:53:10.6482931+13:00"
+    },
+    "coverage": {
+      "lines-covered": "715",
+      "lines-valid": "918",
+      "branches-covered": "325",
+      "branches-valid": "492"
+    },
+    "coverageFile": "baseline-suite/b2bcca06-9cad-4691-ab12-75cdde41cb0c/coverage.cobertura.xml"
+  },
+  "postfixSuite": {
+    "trx": "postfix-suite/postfix.trx",
+    "counters": {
+      "total": "136",
+      "executed": "136",
+      "passed": "136",
+      "failed": "0",
+      "error": "0",
+      "timeout": "0",
+      "aborted": "0",
+      "inconclusive": "0",
+      "passedButRunAborted": "0",
+      "notRunnable": "0",
+      "notExecuted": "0",
+      "disconnected": "0",
+      "warning": "0",
+      "completed": "0",
+      "inProgress": "0",
+      "pending": "0"
+    },
+    "times": {
+      "creation": "2026-10-19T22:59:03.8569805+13:00",
+      "queuing": "2026-10-19T22:59:03.8569809+13:00",
+      "start": "2026-10-19T22:58:57.0968802+13:00",
+      "finish": "2026-10-19T22:59:34.0353665+13:00"
+    },
+    "coverage": {
+      "lines-covered": "715",
+      "lines-valid": "918",
+      "branches-covered": "325",
+      "branches-valid": "492"
+    },
+    "coverageFile": "postfix-suite/8c67a55e-7330-4d11-82f3-a2b02f9d8b91/coverage.cobertura.xml"
+  },
+  "baselineBrowsers": {
+    "counts": {
+      "PASS": 14,
+      "FAIL": 2,
+      "BLOCKED": 0,
+      "NOT RUN": 0
+    },
+    "overallAutomatedStatus": "FAIL",
+    "startedAtUtc": "2026-10-19T09:53:51.326Z",
+    "completedAtUtc": "2026-10-19T09:57:35.249Z",
+    "source": "before/browser-execution.json",
+    "browsers": [
+      {
+        "browser": "chrome",
+        "version": "155.0.8059.80",
+        "keyboardPageViewportRuns": 12,
+        "forwardPassed": 12,
+        "reversePassed": 12,
+        "labelGapsAcrossViewports": 52,
+        "stretchedBadgesAcrossViewports": 8,
+        "rawAxeViolations": [],
+        "unresolvedAxeRules": 0
+      },
+      {
+        "browser": "edge",
+        "version": "155.0.4283.62",
+        "keyboardPageViewportRuns": 12,
+        "forwardPassed": 12,
+        "reversePassed": 12,
+        "labelGapsAcrossViewports": 52,
+        "stretchedBadgesAcrossViewports": 8,
+        "rawAxeViolations": [],
+        "unresolvedAxeRules": 0
+      }
+    ]
+  },
+  "postfixBrowsers": {
+    "counts": {
+      "PASS": 16,
+      "FAIL": 0,
+      "BLOCKED": 0,
+      "NOT RUN": 0
+    },
+    "overallAutomatedStatus": "PASS",
+    "startedAtUtc": "2026-10-19T09:59:37.137Z",
+    "completedAtUtc": "2026-10-19T10:03:22.201Z",
+    "source": "after/browser-execution.json",
+    "browsers": [
+      {
+        "browser": "chrome",
+        "version": "155.0.8059.80",
+        "keyboardPageViewportRuns": 12,
+        "forwardPassed": 12,
+        "reversePassed": 12,
+        "labelGapsAcrossViewports": 0,
+        "stretchedBadgesAcrossViewports": 0,
+        "rawAxeViolations": [
+          {
+            "page": "orders",
+            "viewport": "narrow",
+            "violations": [
+              {
+                "id": "scrollable-region-focusable",
+                "impact": "serious",
+                "description": "Ensure elements that have scrollable content are accessible by keyboard",
+                "help": "Scrollable region must have keyboard access",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/scrollable-region-focusable?application=axeAPI",
+                "nodes": 1,
+                "targets": [
+                  [
+                    ".mb-4 > .table-responsive"
+                  ]
+                ]
+              }
+            ],
+            "proof": [
+              {
+                "target": [
+                  ".mb-4 > .table-responsive"
+                ],
+                "reachedByTab": true,
+                "reachedByShiftTab": true,
+                "keyboardScrollWorks": true,
+                "key": "dom-37",
+                "isTableWrapper": true,
+                "clientWidth": 349,
+                "scrollWidth": 558,
+                "tabIndex": -1,
+                "attributeTabIndex": null,
+                "scrollBefore": 0,
+                "scrollAfter": 40,
+                "unconfirmedScannerFlag": true
+              }
+            ]
+          },
+          {
+            "page": "catalogue",
+            "viewport": "narrow",
+            "violations": [
+              {
+                "id": "scrollable-region-focusable",
+                "impact": "serious",
+                "description": "Ensure elements that have scrollable content are accessible by keyboard",
+                "help": "Scrollable region must have keyboard access",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/scrollable-region-focusable?application=axeAPI",
+                "nodes": 1,
+                "targets": [
+                  [
+                    ".mb-4 > .table-responsive"
+                  ]
+                ]
+              }
+            ],
+            "proof": [
+              {
+                "target": [
+                  ".mb-4 > .table-responsive"
+                ],
+                "reachedByTab": true,
+                "reachedByShiftTab": true,
+                "keyboardScrollWorks": true,
+                "key": "dom-37",
+                "isTableWrapper": true,
+                "clientWidth": 349,
+                "scrollWidth": 458,
+                "tabIndex": -1,
+                "attributeTabIndex": null,
+                "scrollBefore": 0,
+                "scrollAfter": 40,
+                "unconfirmedScannerFlag": true
+              }
+            ]
+          }
+        ],
+        "unresolvedAxeRules": 0
+      },
+      {
+        "browser": "edge",
+        "version": "155.0.4283.62",
+        "keyboardPageViewportRuns": 12,
+        "forwardPassed": 12,
+        "reversePassed": 12,
+        "labelGapsAcrossViewports": 0,
+        "stretchedBadgesAcrossViewports": 0,
+        "rawAxeViolations": [
+          {
+            "page": "orders",
+            "viewport": "narrow",
+            "violations": [
+              {
+                "id": "scrollable-region-focusable",
+                "impact": "serious",
+                "description": "Ensure elements that have scrollable content are accessible by keyboard",
+                "help": "Scrollable region must have keyboard access",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/scrollable-region-focusable?application=axeAPI",
+                "nodes": 1,
+                "targets": [
+                  [
+                    ".mb-4 > .table-responsive"
+                  ]
+                ]
+              }
+            ],
+            "proof": [
+              {
+                "target": [
+                  ".mb-4 > .table-responsive"
+                ],
+                "reachedByTab": true,
+                "reachedByShiftTab": true,
+                "keyboardScrollWorks": true,
+                "key": "dom-37",
+                "isTableWrapper": true,
+                "clientWidth": 349,
+                "scrollWidth": 558,
+                "tabIndex": -1,
+                "attributeTabIndex": null,
+                "scrollBefore": 0,
+                "scrollAfter": 40,
+                "unconfirmedScannerFlag": true
+              }
+            ]
+          },
+          {
+            "page": "catalogue",
+            "viewport": "narrow",
+            "violations": [
+              {
+                "id": "scrollable-region-focusable",
+                "impact": "serious",
+                "description": "Ensure elements that have scrollable content are accessible by keyboard",
+                "help": "Scrollable region must have keyboard access",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/scrollable-region-focusable?application=axeAPI",
+                "nodes": 1,
+                "targets": [
+                  [
+                    ".mb-4 > .table-responsive"
+                  ]
+                ]
+              }
+            ],
+            "proof": [
+              {
+                "target": [
+                  ".mb-4 > .table-responsive"
+                ],
+                "reachedByTab": true,
+                "reachedByShiftTab": true,
+                "keyboardScrollWorks": true,
+                "key": "dom-37",
+                "isTableWrapper": true,
+                "clientWidth": 349,
+                "scrollWidth": 458,
+                "tabIndex": -1,
+                "attributeTabIndex": null,
+                "scrollBefore": 0,
+                "scrollAfter": 40,
+                "unconfirmedScannerFlag": true
+              }
+            ]
+          }
+        ],
+        "unresolvedAxeRules": 0
+      }
+    ]
+  },
+  "baselineTargets": {
+    "status": "FAIL",
+    "browsers": [
+      {
+        "browser": "chrome",
+        "version": "155.0.8059.80",
+        "pages": [
+          {
+            "page": "orders",
+            "viewport": "desktop",
+            "status": "FAIL",
+            "controls": 7,
+            "passingControls": 0,
+            "axeNamingNodes": 5,
+            "axeContrastNodes": 1,
+            "contrast": [
+              {
+                "requestedState": "resting",
+                "state": {
+                  "hover": false,
+                  "focus": false,
+                  "focusVisible": false,
+                  "active": false
+                },
+                "ratio": 4.230337695279152,
+                "color": "rgb(214, 51, 132)",
+                "status": "FAIL"
+              },
+              {
+                "requestedState": "hover",
+                "state": {
+                  "hover": true,
+                  "focus": false,
+                  "focusVisible": false,
+                  "active": false
+                },
+                "ratio": 4.230337695279152,
+                "color": "rgb(214, 51, 132)",
+                "status": "FAIL"
+              },
+              {
+                "requestedState": null,
+                "state": "focus",
+                "ratio": null,
+                "color": null,
+                "status": "N/A"
+              },
+              {
+                "requestedState": null,
+                "state": "active",
+                "ratio": null,
+                "color": null,
+                "status": "N/A"
+              }
+            ]
+          },
+          {
+            "page": "catalogue",
+            "viewport": "desktop",
+            "status": "FAIL",
+            "controls": 7,
+            "passingControls": 0,
+            "axeNamingNodes": 5,
+            "axeContrastNodes": 1,
+            "contrast": [
+              {
+                "requestedState": "resting",
+                "state": {
+                  "hover": false,
+                  "focus": false,
+                  "focusVisible": false,
+                  "active": false
+                },
+                "ratio": 4.230337695279152,
+                "color": "rgb(214, 51, 132)",
+                "status": "FAIL"
+              },
+              {
+                "requestedState": "hover",
+                "state": {
+                  "hover": true,
+                  "focus": false,
+                  "focusVisible": false,
+                  "active": false
+                },
+                "ratio": 4.230337695279152,
+                "color": "rgb(214, 51, 132)",
+                "status": "FAIL"
+              },
+              {
+                "requestedState": null,
+                "state": "focus",
+                "ratio": null,
+                "color": null,
+                "status": "N/A"
+              },
+              {
+                "requestedState": null,
+                "state": "active",
+                "ratio": null,
+                "color": null,
+                "status": "N/A"
+              }
+            ]
+          },
+          {
+            "page": "defects",
+            "viewport": "desktop",
+            "status": "FAIL",
+            "controls": 12,
+            "passingControls": 0,
+            "axeNamingNodes": 12,
+            "axeContrastNodes": 1,
+            "contrast": [
+              {
+                "requestedState": "resting",
+                "state": {
+                  "hover": false,
+                  "focus": false,
+                  "focusVisible": false,
+                  "active": false
+                },
+                "ratio": 4.407616254509299,
+                "color": "rgb(108, 117, 125)",
+                "status": "FAIL"
+              },
+              {
+                "requestedState": "hover",
+                "state": {
+                  "hover": true,
+                  "focus": false,
+                  "focusVisible": false,
+                  "active": false
+                },
+                "ratio": 4.689301797380369,
+                "color": "rgb(255, 255, 255)",
+                "status": "PASS"
+              },
+              {
+                "requestedState": "focus",
+                "state": {
+                  "hover": false,
+                  "focus": true,
+                  "focusVisible": true,
+                  "active": false
+                },
+                "ratio": 4.689301797380369,
+                "color": "rgb(255, 255, 255)",
+                "status": "PASS"
+              },
+              {
+                "requestedState": "active",
+                "state": {
+                  "hover": true,
+                  "focus": true,
+                  "focusVisible": false,
+                  "active": true
+                },
+                "ratio": 4.689301797380369,
+                "color": "rgb(255, 255, 255)",
+                "status": "PASS"
+              }
+            ]
+          },
+          {
+            "page": "orders",
+            "viewport": "narrow",
+            "status": "FAIL",
+            "controls": 7,
+            "passingControls": 0,
+            "axeNamingNodes": 5,
+            "axeContrastNodes": 1,
+            "contrast": [
+              {
+                "requestedState": "resting",
+                "state": {
+                  "hover": false,
+                  "focus": false,
+                  "focusVisible": false,
+                  "active": false
+                },
+                "ratio": 4.230337695279152,
+                "color": "rgb(214, 51, 132)",
+                "status": "FAIL"
+              },
+              {
+                "requestedState": "hover",
+                "state": {
+                  "hover": true,
+                  "focus": false,
+                  "focusVisible": false,
+                  "active": false
+                },
+                "ratio": 4.230337695279152,
+                "color": "rgb(214, 51, 132)",
+                "status": "FAIL"
+              },
+              {
+                "requestedState": null,
+                "state": "focus",
+                "ratio": null,
+                "color": null,
+                "status": "N/A"
+              },
+              {
+                "requestedState": null,
+                "state": "active",
+                "ratio": null,
+                "color": null,
+                "status": "N/A"
+              }
+            ]
+          },
+          {
+            "page": "catalogue",
+            "viewport": "narrow",
+            "status": "FAIL",
+            "controls": 7,
+            "passingControls": 0,
+            "axeNamingNodes": 5,
+            "axeContrastNodes": 1,
+            "contrast": [
+              {
+                "requestedState": "resting",
+                "state": {
+                  "hover": false,
+                  "focus": false,
+                  "focusVisible": false,
+                  "active": false
+                },
+                "ratio": 4.230337695279152,
+                "color": "rgb(214, 51, 132)",
+                "status": "FAIL"
+              },
+              {
+                "requestedState": "hover",
+                "state": {
+                  "hover": true,
+                  "focus": false,
+                  "focusVisible": false,
+                  "active": false
+                },
+                "ratio": 4.230337695279152,
+                "color": "rgb(214, 51, 132)",
+                "status": "FAIL"
+              },
+              {
+                "requestedState": null,
+                "state": "focus",
+                "ratio": null,
+                "color": null,
+                "status": "N/A"
+              },
+              {
+                "requestedState": null,
+                "state": "active",
+                "ratio": null,
+                "color": null,
+                "status": "N/A"
+              }
+            ]
+          },
+          {
+            "page": "defects",
+            "viewport": "narrow",
+            "status": "FAIL",
+            "controls": 12,
+            "passingControls": 0,
+            "axeNamingNodes": 12,
+            "axeContrastNodes": 1,
+            "contrast": [
+              {
+                "requestedState": "resting",
+                "state": {
+                  "hover": false,
+                  "focus": false,
+                  "focusVisible": false,
+                  "active": false
+                },
+                "ratio": 4.407616254509299,
+                "color": "rgb(108, 117, 125)",
+                "status": "FAIL"
+              },
+              {
+                "requestedState": "hover",
+                "state": {
+                  "hover": true,
+                  "focus": false,
+                  "focusVisible": false,
+                  "active": false
+                },
+                "ratio": 4.689301797380369,
+                "color": "rgb(255, 255, 255)",
+                "status": "PASS"
+              },
+              {
+                "requestedState": "focus",
+                "state": {
+                  "hover": false,
+                  "focus": true,
+                  "focusVisible": true,
+                  "active": false
+                },
+                "ratio": 4.689301797380369,
+                "color": "rgb(255, 255, 255)",
+                "status": "PASS"
+              },
+              {
+                "requestedState": "active",
+                "state": {
+                  "hover": true,
+                  "focus": true,
+                  "focusVisible": false,
+                  "active": true
+                },
+                "ratio": 4.689301797380369,
+                "color": "rgb(255, 255, 255)",
+                "status": "PASS"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "browser": "edge",
+        "version": "155.0.4283.62",
+        "pages": [
+          {
+            "page": "orders",
+            "viewport": "desktop",
+            "status": "FAIL",
+            "controls": 7,
+            "passingControls": 0,
+            "axeNamingNodes": 5,
+            "axeContrastNodes": 1,
+            "contrast": [
+              {
+                "requestedState": "resting",
+                "state": {
+                  "hover": false,
+                  "focus": false,
+                  "focusVisible": false,
+                  "active": false
+                },
+                "ratio": 4.230337695279152,
+                "color": "rgb(214, 51, 132)",
+                "status": "FAIL"
+              },
+              {
+                "requestedState": "hover",
+                "state": {
+                  "hover": true,
+                  "focus": false,
+                  "focusVisible": false,
+                  "active": false
+                },
+                "ratio": 4.230337695279152,
+                "color": "rgb(214, 51, 132)",
+                "status": "FAIL"
+              },
+              {
+                "requestedState": null,
+                "state": "focus",
+                "ratio": null,
+                "color": null,
+                "status": "N/A"
+              },
+              {
+                "requestedState": null,
+                "state": "active",
+                "ratio": null,
+                "color": null,
+                "status": "N/A"
+              }
+            ]
+          },
+          {
+            "page": "catalogue",
+            "viewport": "desktop",
+            "status": "FAIL",
+            "controls": 7,
+            "passingControls": 0,
+            "axeNamingNodes": 5,
+            "axeContrastNodes": 1,
+            "contrast": [
+              {
+                "requestedState": "resting",
+                "state": {
+                  "hover": false,
+                  "focus": false,
+                  "focusVisible": false,
+                  "active": false
+                },
+                "ratio": 4.230337695279152,
+                "color": "rgb(214, 51, 132)",
+                "status": "FAIL"
+              },
+              {
+                "requestedState": "hover",
+                "state": {
+                  "hover": true,
+                  "focus": false,
+                  "focusVisible": false,
+                  "active": false
+                },
+                "ratio": 4.230337695279152,
+                "color": "rgb(214, 51, 132)",
+                "status": "FAIL"
+              },
+              {
+                "requestedState": null,
+                "state": "focus",
+                "ratio": null,
+                "color": null,
+                "status": "N/A"
+              },
+              {
+                "requestedState": null,
+                "state": "active",
+                "ratio": null,
+                "color": null,
+                "status": "N/A"
+              }
+            ]
+          },
+          {
+            "page": "defects",
+            "viewport": "desktop",
+            "status": "FAIL",
+            "controls": 12,
+            "passingControls": 0,
+            "axeNamingNodes": 12,
+            "axeContrastNodes": 1,
+            "contrast": [
+              {
+                "requestedState": "resting",
+                "state": {
+                  "hover": false,
+                  "focus": false,
+                  "focusVisible": false,
+                  "active": false
+                },
+                "ratio": 4.407616254509299,
+                "color": "rgb(108, 117, 125)",
+                "status": "FAIL"
+              },
+              {
+                "requestedState": "hover",
+                "state": {
+                  "hover": true,
+                  "focus": false,
+                  "focusVisible": false,
+                  "active": false
+                },
+                "ratio": 4.689301797380369,
+                "color": "rgb(255, 255, 255)",
+                "status": "PASS"
+              },
+              {
+                "requestedState": "focus",
+                "state": {
+                  "hover": false,
+                  "focus": true,
+                  "focusVisible": true,
+                  "active": false
+                },
+                "ratio": 4.689301797380369,
+                "color": "rgb(255, 255, 255)",
+                "status": "PASS"
+              },
+              {
+                "requestedState": "active",
+                "state": {
+                  "hover": true,
+                  "focus": true,
+                  "focusVisible": false,
+                  "active": true
+                },
+                "ratio": 4.689301797380369,
+                "color": "rgb(255, 255, 255)",
+                "status": "PASS"
+              }
+            ]
+          },
+          {
+            "page": "orders",
+            "viewport": "narrow",
+            "status": "FAIL",
+            "controls": 7,
+            "passingControls": 0,
+            "axeNamingNodes": 5,
+            "axeContrastNodes": 1,
+            "contrast": [
+              {
+                "requestedState": "resting",
+                "state": {
+                  "hover": false,
+                  "focus": false,
+                  "focusVisible": false,
+                  "active": false
+                },
+                "ratio": 4.230337695279152,
+                "color": "rgb(214, 51, 132)",
+                "status": "FAIL"
+              },
+              {
+                "requestedState": "hover",
+                "state": {
+                  "hover": true,
+                  "focus": false,
+                  "focusVisible": false,
+                  "active": false
+                },
+                "ratio": 4.230337695279152,
+                "color": "rgb(214, 51, 132)",
+                "status": "FAIL"
+              },
+              {
+                "requestedState": null,
+                "state": "focus",
+                "ratio": null,
+                "color": null,
+                "status": "N/A"
+              },
+              {
+                "requestedState": null,
+                "state": "active",
+                "ratio": null,
+                "color": null,
+                "status": "N/A"
+              }
+            ]
+          },
+          {
+            "page": "catalogue",
+            "viewport": "narrow",
+            "status": "FAIL",
+            "controls": 7,
+            "passingControls": 0,
+            "axeNamingNodes": 5,
+            "axeContrastNodes": 1,
+            "contrast": [
+              {
+                "requestedState": "resting",
+                "state": {
+                  "hover": false,
+                  "focus": false,
+                  "focusVisible": false,
+                  "active": false
+                },
+                "ratio": 4.230337695279152,
+                "color": "rgb(214, 51, 132)",
+                "status": "FAIL"
+              },
+              {
+                "requestedState": "hover",
+                "state": {
+                  "hover": true,
+                  "focus": false,
+                  "focusVisible": false,
+                  "active": false
+                },
+                "ratio": 4.230337695279152,
+                "color": "rgb(214, 51, 132)",
+                "status": "FAIL"
+              },
+              {
+                "requestedState": null,
+                "state": "focus",
+                "ratio": null,
+                "color": null,
+                "status": "N/A"
+              },
+              {
+                "requestedState": null,
+                "state": "active",
+                "ratio": null,
+                "color": null,
+                "status": "N/A"
+              }
+            ]
+          },
+          {
+            "page": "defects",
+            "viewport": "narrow",
+            "status": "FAIL",
+            "controls": 12,
+            "passingControls": 0,
+            "axeNamingNodes": 12,
+            "axeContrastNodes": 1,
+            "contrast": [
+              {
+                "requestedState": "resting",
+                "state": {
+                  "hover": false,
+                  "focus": false,
+                  "focusVisible": false,
+                  "active": false
+                },
+                "ratio": 4.407616254509299,
+                "color": "rgb(108, 117, 125)",
+                "status": "FAIL"
+              },
+              {
+                "requestedState": "hover",
+                "state": {
+                  "hover": true,
+                  "focus": false,
+                  "focusVisible": false,
+                  "active": false
+                },
+                "ratio": 4.689301797380369,
+                "color": "rgb(255, 255, 255)",
+                "status": "PASS"
+              },
+              {
+                "requestedState": "focus",
+                "state": {
+                  "hover": false,
+                  "focus": true,
+                  "focusVisible": true,
+                  "active": false
+                },
+                "ratio": 4.689301797380369,
+                "color": "rgb(255, 255, 255)",
+                "status": "PASS"
+              },
+              {
+                "requestedState": "active",
+                "state": {
+                  "hover": true,
+                  "focus": true,
+                  "focusVisible": false,
+                  "active": true
+                },
+                "ratio": 4.689301797380369,
+                "color": "rgb(255, 255, 255)",
+                "status": "PASS"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "postfixTargets": {
+    "status": "PASS",
+    "browsers": [
+      {
+        "browser": "chrome",
+        "version": "155.0.8059.80",
+        "pages": [
+          {
+            "page": "orders",
+            "viewport": "desktop",
+            "status": "PASS",
+            "controls": 7,
+            "passingControls": 7,
+            "axeNamingNodes": 0,
+            "axeContrastNodes": 0,
+            "contrast": [
+              {
+                "requestedState": "resting",
+                "state": {
+                  "hover": false,
+                  "focus": false,
+                  "focusVisible": false,
+                  "active": false
+                },
+                "ratio": 6.590441316712724,
+                "color": "rgb(166, 30, 101)",
+                "status": "PASS"
+              },
+              {
+                "requestedState": "hover",
+                "state": {
+                  "hover": true,
+                  "focus": false,
+                  "focusVisible": false,
+                  "active": false
+                },
+                "ratio": 6.590441316712724,
+                "color": "rgb(166, 30, 101)",
+                "status": "PASS"
+              },
+              {
+                "requestedState": null,
+                "state": "focus",
+                "ratio": null,
+                "color": null,
+                "status": "N/A"
+              },
+              {
+                "requestedState": null,
+                "state": "active",
+                "ratio": null,
+                "color": null,
+                "status": "N/A"
+              }
+            ]
+          },
+          {
+            "page": "catalogue",
+            "viewport": "desktop",
+            "status": "PASS",
+            "controls": 7,
+            "passingControls": 7,
+            "axeNamingNodes": 0,
+            "axeContrastNodes": 0,
+            "contrast": [
+              {
+                "requestedState": "resting",
+                "state": {
+                  "hover": false,
+                  "focus": false,
+                  "focusVisible": false,
+                  "active": false
+                },
+                "ratio": 6.590441316712724,
+                "color": "rgb(166, 30, 101)",
+                "status": "PASS"
+              },
+              {
+                "requestedState": "hover",
+                "state": {
+                  "hover": true,
+                  "focus": false,
+                  "focusVisible": false,
+                  "active": false
+                },
+                "ratio": 6.590441316712724,
+                "color": "rgb(166, 30, 101)",
+                "status": "PASS"
+              },
+              {
+                "requestedState": null,
+                "state": "focus",
+                "ratio": null,
+                "color": null,
+                "status": "N/A"
+              },
+              {
+                "requestedState": null,
+                "state": "active",
+                "ratio": null,
+                "color": null,
+                "status": "N/A"
+              }
+            ]
+          },
+          {
+            "page": "defects",
+            "viewport": "desktop",
+            "status": "PASS",
+            "controls": 12,
+            "passingControls": 12,
+            "axeNamingNodes": 0,
+            "axeContrastNodes": 0,
+            "contrast": [
+              {
+                "requestedState": "resting",
+                "state": {
+                  "hover": false,
+                  "focus": false,
+                  "focusVisible": false,
+                  "active": false
+                },
+                "ratio": 7.685202327635107,
+                "color": "rgb(73, 80, 87)",
+                "status": "PASS"
+              },
+              {
+                "requestedState": "hover",
+                "state": {
+                  "hover": true,
+                  "focus": false,
+                  "focusVisible": false,
+                  "active": false
+                },
+                "ratio": 8.17635452073249,
+                "color": "rgb(255, 255, 255)",
+                "status": "PASS"
+              },
+              {
+                "requestedState": "focus",
+                "state": {
+                  "hover": false,
+                  "focus": true,
+                  "focusVisible": true,
+                  "active": false
+                },
+                "ratio": 8.17635452073249,
+                "color": "rgb(255, 255, 255)",
+                "status": "PASS"
+              },
+              {
+                "requestedState": "active",
+                "state": {
+                  "hover": true,
+                  "focus": true,
+                  "focusVisible": false,
+                  "active": true
+                },
+                "ratio": 8.17635452073249,
+                "color": "rgb(255, 255, 255)",
+                "status": "PASS"
+              }
+            ]
+          },
+          {
+            "page": "orders",
+            "viewport": "narrow",
+            "status": "PASS",
+            "controls": 7,
+            "passingControls": 7,
+            "axeNamingNodes": 0,
+            "axeContrastNodes": 0,
+            "contrast": [
+              {
+                "requestedState": "resting",
+                "state": {
+                  "hover": false,
+                  "focus": false,
+                  "focusVisible": false,
+                  "active": false
+                },
+                "ratio": 6.590441316712724,
+                "color": "rgb(166, 30, 101)",
+                "status": "PASS"
+              },
+              {
+                "requestedState": "hover",
+                "state": {
+                  "hover": true,
+                  "focus": false,
+                  "focusVisible": false,
+                  "active": false
+                },
+                "ratio": 6.590441316712724,
+                "color": "rgb(166, 30, 101)",
+                "status": "PASS"
+              },
+              {
+                "requestedState": null,
+                "state": "focus",
+                "ratio": null,
+                "color": null,
+                "status": "N/A"
+              },
+              {
+                "requestedState": null,
+                "state": "active",
+                "ratio": null,
+                "color": null,
+                "status": "N/A"
+              }
+            ]
+          },
+          {
+            "page": "catalogue",
+            "viewport": "narrow",
+            "status": "PASS",
+            "controls": 7,
+            "passingControls": 7,
+            "axeNamingNodes": 0,
+            "axeContrastNodes": 0,
+            "contrast": [
+              {
+                "requestedState": "resting",
+                "state": {
+                  "hover": false,
+                  "focus": false,
+                  "focusVisible": false,
+                  "active": false
+                },
+                "ratio": 6.590441316712724,
+                "color": "rgb(166, 30, 101)",
+                "status": "PASS"
+              },
+              {
+                "requestedState": "hover",
+                "state": {
+                  "hover": true,
+                  "focus": false,
+                  "focusVisible": false,
+                  "active": false
+                },
+                "ratio": 6.590441316712724,
+                "color": "rgb(166, 30, 101)",
+                "status": "PASS"
+              },
+              {
+                "requestedState": null,
+                "state": "focus",
+                "ratio": null,
+                "color": null,
+                "status": "N/A"
+              },
+              {
+                "requestedState": null,
+                "state": "active",
+                "ratio": null,
+                "color": null,
+                "status": "N/A"
+              }
+            ]
+          },
+          {
+            "page": "defects",
+            "viewport": "narrow",
+            "status": "PASS",
+            "controls": 12,
+            "passingControls": 12,
+            "axeNamingNodes": 0,
+            "axeContrastNodes": 0,
+            "contrast": [
+              {
+                "requestedState": "resting",
+                "state": {
+                  "hover": false,
+                  "focus": false,
+                  "focusVisible": false,
+                  "active": false
+                },
+                "ratio": 7.685202327635107,
+                "color": "rgb(73, 80, 87)",
+                "status": "PASS"
+              },
+              {
+                "requestedState": "hover",
+                "state": {
+                  "hover": true,
+                  "focus": false,
+                  "focusVisible": false,
+                  "active": false
+                },
+                "ratio": 8.17635452073249,
+                "color": "rgb(255, 255, 255)",
+                "status": "PASS"
+              },
+              {
+                "requestedState": "focus",
+                "state": {
+                  "hover": false,
+                  "focus": true,
+                  "focusVisible": true,
+                  "active": false
+                },
+                "ratio": 8.17635452073249,
+                "color": "rgb(255, 255, 255)",
+                "status": "PASS"
+              },
+              {
+                "requestedState": "active",
+                "state": {
+                  "hover": true,
+                  "focus": true,
+                  "focusVisible": false,
+                  "active": true
+                },
+                "ratio": 8.17635452073249,
+                "color": "rgb(255, 255, 255)",
+                "status": "PASS"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "browser": "edge",
+        "version": "155.0.4283.62",
+        "pages": [
+          {
+            "page": "orders",
+            "viewport": "desktop",
+            "status": "PASS",
+            "controls": 7,
+            "passingControls": 7,
+            "axeNamingNodes": 0,
+            "axeContrastNodes": 0,
+            "contrast": [
+              {
+                "requestedState": "resting",
+                "state": {
+                  "hover": false,
+                  "focus": false,
+                  "focusVisible": false,
+                  "active": false
+                },
+                "ratio": 6.590441316712724,
+                "color": "rgb(166, 30, 101)",
+                "status": "PASS"
+              },
+              {
+                "requestedState": "hover",
+                "state": {
+                  "hover": true,
+                  "focus": false,
+                  "focusVisible": false,
+                  "active": false
+                },
+                "ratio": 6.590441316712724,
+                "color": "rgb(166, 30, 101)",
+                "status": "PASS"
+              },
+              {
+                "requestedState": null,
+                "state": "focus",
+                "ratio": null,
+                "color": null,
+                "status": "N/A"
+              },
+              {
+                "requestedState": null,
+                "state": "active",
+                "ratio": null,
+                "color": null,
+                "status": "N/A"
+              }
+            ]
+          },
+          {
+            "page": "catalogue",
+            "viewport": "desktop",
+            "status": "PASS",
+            "controls": 7,
+            "passingControls": 7,
+            "axeNamingNodes": 0,
+            "axeContrastNodes": 0,
+            "contrast": [
+              {
+                "requestedState": "resting",
+                "state": {
+                  "hover": false,
+                  "focus": false,
+                  "focusVisible": false,
+                  "active": false
+                },
+                "ratio": 6.590441316712724,
+                "color": "rgb(166, 30, 101)",
+                "status": "PASS"
+              },
+              {
+                "requestedState": "hover",
+                "state": {
+                  "hover": true,
+                  "focus": false,
+                  "focusVisible": false,
+                  "active": false
+                },
+                "ratio": 6.590441316712724,
+                "color": "rgb(166, 30, 101)",
+                "status": "PASS"
+              },
+              {
+                "requestedState": null,
+                "state": "focus",
+                "ratio": null,
+                "color": null,
+                "status": "N/A"
+              },
+              {
+                "requestedState": null,
+                "state": "active",
+                "ratio": null,
+                "color": null,
+                "status": "N/A"
+              }
+            ]
+          },
+          {
+            "page": "defects",
+            "viewport": "desktop",
+            "status": "PASS",
+            "controls": 12,
+            "passingControls": 12,
+            "axeNamingNodes": 0,
+            "axeContrastNodes": 0,
+            "contrast": [
+              {
+                "requestedState": "resting",
+                "state": {
+                  "hover": false,
+                  "focus": false,
+                  "focusVisible": false,
+                  "active": false
+                },
+                "ratio": 7.685202327635107,
+                "color": "rgb(73, 80, 87)",
+                "status": "PASS"
+              },
+              {
+                "requestedState": "hover",
+                "state": {
+                  "hover": true,
+                  "focus": false,
+                  "focusVisible": false,
+                  "active": false
+                },
+                "ratio": 8.17635452073249,
+                "color": "rgb(255, 255, 255)",
+                "status": "PASS"
+              },
+              {
+                "requestedState": "focus",
+                "state": {
+                  "hover": false,
+                  "focus": true,
+                  "focusVisible": true,
+                  "active": false
+                },
+                "ratio": 8.17635452073249,
+                "color": "rgb(255, 255, 255)",
+                "status": "PASS"
+              },
+              {
+                "requestedState": "active",
+                "state": {
+                  "hover": true,
+                  "focus": true,
+                  "focusVisible": false,
+                  "active": true
+                },
+                "ratio": 8.17635452073249,
+                "color": "rgb(255, 255, 255)",
+                "status": "PASS"
+              }
+            ]
+          },
+          {
+            "page": "orders",
+            "viewport": "narrow",
+            "status": "PASS",
+            "controls": 7,
+            "passingControls": 7,
+            "axeNamingNodes": 0,
+            "axeContrastNodes": 0,
+            "contrast": [
+              {
+                "requestedState": "resting",
+                "state": {
+                  "hover": false,
+                  "focus": false,
+                  "focusVisible": false,
+                  "active": false
+                },
+                "ratio": 6.590441316712724,
+                "color": "rgb(166, 30, 101)",
+                "status": "PASS"
+              },
+              {
+                "requestedState": "hover",
+                "state": {
+                  "hover": true,
+                  "focus": false,
+                  "focusVisible": false,
+                  "active": false
+                },
+                "ratio": 6.590441316712724,
+                "color": "rgb(166, 30, 101)",
+                "status": "PASS"
+              },
+              {
+                "requestedState": null,
+                "state": "focus",
+                "ratio": null,
+                "color": null,
+                "status": "N/A"
+              },
+              {
+                "requestedState": null,
+                "state": "active",
+                "ratio": null,
+                "color": null,
+                "status": "N/A"
+              }
+            ]
+          },
+          {
+            "page": "catalogue",
+            "viewport": "narrow",
+            "status": "PASS",
+            "controls": 7,
+            "passingControls": 7,
+            "axeNamingNodes": 0,
+            "axeContrastNodes": 0,
+            "contrast": [
+              {
+                "requestedState": "resting",
+                "state": {
+                  "hover": false,
+                  "focus": false,
+                  "focusVisible": false,
+                  "active": false
+                },
+                "ratio": 6.590441316712724,
+                "color": "rgb(166, 30, 101)",
+                "status": "PASS"
+              },
+              {
+                "requestedState": "hover",
+                "state": {
+                  "hover": true,
+                  "focus": false,
+                  "focusVisible": false,
+                  "active": false
+                },
+                "ratio": 6.590441316712724,
+                "color": "rgb(166, 30, 101)",
+                "status": "PASS"
+              },
+              {
+                "requestedState": null,
+                "state": "focus",
+                "ratio": null,
+                "color": null,
+                "status": "N/A"
+              },
+              {
+                "requestedState": null,
+                "state": "active",
+                "ratio": null,
+                "color": null,
+                "status": "N/A"
+              }
+            ]
+          },
+          {
+            "page": "defects",
+            "viewport": "narrow",
+            "status": "PASS",
+            "controls": 12,
+            "passingControls": 12,
+            "axeNamingNodes": 0,
+            "axeContrastNodes": 0,
+            "contrast": [
+              {
+                "requestedState": "resting",
+                "state": {
+                  "hover": false,
+                  "focus": false,
+                  "focusVisible": false,
+                  "active": false
+                },
+                "ratio": 7.685202327635107,
+                "color": "rgb(73, 80, 87)",
+                "status": "PASS"
+              },
+              {
+                "requestedState": "hover",
+                "state": {
+                  "hover": true,
+                  "focus": false,
+                  "focusVisible": false,
+                  "active": false
+                },
+                "ratio": 8.17635452073249,
+                "color": "rgb(255, 255, 255)",
+                "status": "PASS"
+              },
+              {
+                "requestedState": "focus",
+                "state": {
+                  "hover": false,
+                  "focus": true,
+                  "focusVisible": true,
+                  "active": false
+                },
+                "ratio": 8.17635452073249,
+                "color": "rgb(255, 255, 255)",
+                "status": "PASS"
+              },
+              {
+                "requestedState": "active",
+                "state": {
+                  "hover": true,
+                  "focus": true,
+                  "focusVisible": false,
+                  "active": true
+                },
+                "ratio": 8.17635452073249,
+                "color": "rgb(255, 255, 255)",
+                "status": "PASS"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "baselineHttp": {
+    "startedUtc": "2026-10-19T09:57:12.862151+00:00",
+    "finishedUtc": "2026-10-19T09:57:21.175835+00:00",
+    "boundary": "Real HTTP MVC and normal SQLite store; no browser or external service; private-target override scoped to synthetic loopback application process",
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "appUrl": "http://127.0.0.1:51921",
+    "fixtureUrl": "http://127.0.0.1:51922",
+    "database": "C:\\Users\\zsr20\\source\\repos\\3ilmar\\apiguard\\docs\\qa-evidence\\SQA-20\\retest-20261019T095150Z\\baseline-http-4\\isolated-app.db",
+    "passed": 28,
+    "failed": 1,
+    "confirmedFindings": 1,
+    "error": null,
+    "status": "FAIL"
+  },
+  "postfixHttp": {
+    "startedUtc": "2026-10-19T10:01:12.243259+00:00",
+    "finishedUtc": "2026-10-19T10:01:21.032702+00:00",
+    "boundary": "Real HTTP MVC and normal SQLite store; no browser or external service; private-target override scoped to synthetic loopback application process",
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "appUrl": "http://127.0.0.1:51921",
+    "fixtureUrl": "http://127.0.0.1:51922",
+    "database": "C:\\Users\\zsr20\\source\\repos\\3ilmar\\apiguard\\docs\\qa-evidence\\SQA-20\\retest-20261019T095150Z\\postfix-http-verified\\isolated-app.db",
+    "passed": 28,
+    "failed": 1,
+    "confirmedFindings": 1,
+    "error": null,
+    "status": "FAIL"
+  },
+  "csvValidation": {
+    "PASS": 4,
+    "FAIL": 0,
+    "BLOCKED": 0
+  },
+  "historicalEvidence": {
+    "checkedFiles": 361,
+    "changed": []
+  },
+  "limitations": [
+    "Initial full baseline browser scan was blocked by pinned-file CRLF integrity mismatch; separate verified before-targets scans reproduce labels and contrast before application edits.",
+    "Baseline severity category intentionally requires compact badges, unlike the historical 16/16 category result.",
+    "Older HTTP CSV schema assertions were strengthened; final postfix-http-verified uses exact headers, strict parsing and raw row widths.",
+    "Existing numeric endpoint validation fails in both HTTP phases; SQA-20 PASS cannot imply overall release readiness."
+  ]
+}

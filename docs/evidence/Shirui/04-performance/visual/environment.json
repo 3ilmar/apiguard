@@ -1,0 +1,23 @@
+{
+  "CapturedAtUtc": "2026-10-18T07:28:15.1031234+00:00",
+  "CapturedAtAuckland": "2026-10-18T20:28:15.1073491+13:00",
+  "OS": "Microsoft Windows 10.0.26200",
+  "CPU": [
+    "12th Gen Intel(R) Core(TM) i7-12700H"
+  ],
+  "LogicalProcessors": 20,
+  "PhysicalMemoryBytes": 16834023424,
+  "PowerScheme": [
+    "Power Scheme GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (Balanced)"
+  ],
+  "Battery": [
+    {
+      "BatteryStatus": 2,
+      "EstimatedChargeRemaining": 100
+    }
+  ],
+  "GitBranch": "feature/dashboard-reporting",
+  "GitHead": "ced44546ba9c71f25935e6ba913b27fe08f0acd1",
+  "BackgroundLoad": "Existing desktop applications not closed or controlled",
+  "MachineIdentity": "Same local workspace host; formal team agreement not supplied"
+}

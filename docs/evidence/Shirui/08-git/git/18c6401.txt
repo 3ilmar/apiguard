@@ -1,0 +1,12 @@
+commit 18c6401b6618d8f8f16afebc504349705b120c86
+Merge: d551a2d 07dfd40
+Author:     SaltedFishInATank <zsr20041012@gmail.com>
+AuthorDate: Mon Oct 19 22:33:37 2026 +1300
+Commit:     SaltedFishInATank <zsr20041012@gmail.com>
+CommitDate: Mon Oct 19 22:33:37 2026 +1300
+
+    Merge remote-tracking branch 'origin/main' into qa/sqa19-sqa20-manual-validation
+    
+    # Conflicts:
+    #       docs/ShiruiFinalTestCases.csv
+    #       docs/ShiruiQualityMetrics-Evidence.md
