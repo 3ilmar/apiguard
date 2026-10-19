@@ -1,0 +1,19 @@
+{
+  "CapturedAtUtc": "2026-10-19T04:16:49.5299926+00:00",
+  "Listeners": [
+    {
+      "LocalAddress": "::1",
+      "LocalPort": 51920,
+      "OwningProcess": 12428
+    },
+    {
+      "LocalAddress": "127.0.0.1",
+      "LocalPort": 51920,
+      "OwningProcess": 12428
+    }
+  ],
+  "RuntimeModule": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\8.0.32\\hostpolicy.dll",
+  "ApplicationUrl": "http://localhost:51920/",
+  "HumanSqa19Status": "NOT RUN",
+  "AutomatedSqa20Acceptance": "FAIL"
+}

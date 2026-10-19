@@ -1,0 +1,1 @@
+Active host stdout/stderr files excluded from initial hashes: locked live process logs; existing logs left untouched.

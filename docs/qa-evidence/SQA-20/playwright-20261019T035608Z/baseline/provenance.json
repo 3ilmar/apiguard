@@ -1,0 +1,21 @@
+{
+  "Session": "playwright-20261019T035608Z",
+  "Directory": "C:\\Users\\zsr20\\source\\repos\\3ilmar\\apiguard\\docs\\qa-evidence\\SQA-20\\playwright-20261019T035608Z",
+  "StartedAtUtc": "2026-10-19T03:56:08.7557097+00:00",
+  "Branch": "qa/sqa19-sqa20-manual-validation",
+  "BaseCommit": "8e69c6273080b01db100c29cc76eb33a798e84af",
+  "NodeVersion": "v24.19.0",
+  "ExistingHumanEvidence": "User previously reported 5 passes, but no files/recorded observations were located in the current repo; preserved assertion without assigning human results",
+  "Sqa19": {
+    "ID": "SQA-19",
+    "Initial case mapping": "TC-12",
+    "Requirement": "NFR-USA-01",
+    "Type": "Manual usability",
+    "Preconditions": "Representative user and 5 failed-check examples",
+    "Steps / input": "Read failure messages and describe observed issue",
+    "Expected result": "Tester identifies failure and evidence without reading code",
+    "Actual result": "NOT EXECUTED with representative user; 5 automated message-evidence scenarios passed but do not prove user comprehension",
+    "Status": "NOT RUN",
+    "Evidence link or screenshot": "qa-evidence/2026-10-18/final.trx (supporting FailureMessageTests only; tester evidence pending)"
+  }
+}

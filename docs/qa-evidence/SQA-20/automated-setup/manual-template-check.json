@@ -1,0 +1,14 @@
+{
+  "CapturedAtUtc": "2026-10-18T09:25:27.0660421+00:00",
+  "ManualSqa20Status": "NOT RUN",
+  "Planned": 16,
+  "Executed": 0,
+  "Passed": 0,
+  "Failed": 0,
+  "Blocked": 0,
+  "NotRun": 16,
+  "ObservationFieldsBlank": true,
+  "ChromeRows": 8,
+  "EdgeRows": 8,
+  "MasterRegisterLine": "SQA-20,-,\"NFR-USA-01,NFR-COMP-01\",Manual accessibility/compatibility,Current Chrome and Edge desktop; narrow viewport; keyboard,Tab through app; resize; inspect severity and recent tables; inspect CSV download,\"Links focusable; labels available; metrics readable; no overlap; downloads usable\",NOT EXECUTED in Chrome or Edge; HTTP Razor smoke does not verify browser focus or layout or screen-reader behaviour,NOT RUN,PENDING"
+}

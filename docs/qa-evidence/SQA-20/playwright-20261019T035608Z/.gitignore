@@ -1,0 +1,3 @@
+# Keep authentic QA outputs otherwise ignored by the repository-wide rules.
+!execution.log
+!dotnet/**/coverage.cobertura.xml

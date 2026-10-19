@@ -1,0 +1,1120 @@
+{
+  "method": "Filesystem/reference/hash/source-scope validation; browser outcomes were not rerun or changed",
+  "checks": [
+    {
+      "name": "requested_branch",
+      "passed": true,
+      "actual": "qa/sqa19-sqa20-manual-validation"
+    },
+    {
+      "name": "application_and_dotnet_tests_unchanged",
+      "passed": true,
+      "actual": "git diff on both project directories"
+    },
+    {
+      "name": "no_staged_changes",
+      "passed": true,
+      "actual": ""
+    },
+    {
+      "name": "tracked_scope",
+      "passed": true,
+      "actual": [
+        "docs/ShiruiFinalTestCases.csv",
+        "docs/ShiruiQualityMetrics-Evidence.md"
+      ]
+    },
+    {
+      "name": "existing_evidence_preserved_except_authorized_current_records",
+      "passed": true,
+      "actual": [
+        "docs/qa-evidence/SQA-20/observation-sheet.csv",
+        "docs/qa-evidence/SQA-20/README.md",
+        "docs/qa-evidence/SQA-20/screenshots/README.md",
+        "docs/qa-evidence/SQA-20/downloads/README.md",
+        "docs/qa-evidence/SQA-20/observations/README.md"
+      ]
+    },
+    {
+      "name": "existing_sqa19_evidence_unchanged",
+      "passed": true,
+      "actual": "All baseline-hashed SQA-19 artifacts; locked live host logs explicitly excluded before testing."
+    },
+    {
+      "name": "sqa19_master_case_unchanged",
+      "passed": true,
+      "actual": {
+        "sha256": "e964d59acb07b07da1f0b7c39aec8486584aeff5c7ccb35042bf14979dbded80",
+        "workingTreeBytesUnchanged": true,
+        "gitContentComparison": "Line endings normalized because Git stores LF while this working-tree CSV has CRLF."
+      }
+    },
+    {
+      "name": "all_16_explicitly_automated",
+      "passed": true,
+      "actual": 16
+    },
+    {
+      "name": "scoped_case_totals_match",
+      "passed": true,
+      "actual": {
+        "PASS": 16,
+        "FAIL": 0,
+        "BLOCKED": 0,
+        "NOT RUN": 0
+      }
+    },
+    {
+      "name": "overall_accessibility_failure_explicit",
+      "passed": true,
+      "actual": "16 technical PASS; additional accessibility FAIL"
+    },
+    {
+      "name": "observation_evidence_references",
+      "passed": true,
+      "actual": []
+    },
+    {
+      "name": "machine_evidence_references",
+      "passed": true,
+      "actual": {
+        "checked": 270,
+        "missing": []
+      }
+    },
+    {
+      "name": "markdown_evidence_references",
+      "passed": true,
+      "actual": {
+        "checked": 129,
+        "missing": []
+      }
+    },
+    {
+      "name": "real_png_files_and_expected_widths",
+      "passed": true,
+      "actual": {
+        "images": 193,
+        "invalid": []
+      }
+    },
+    {
+      "name": "four_original_browser_downloads",
+      "passed": true,
+      "actual": [
+        "chrome/downloads/api-check-results-20261019-040212.csv",
+        "chrome/downloads/defects-20261019-040213.csv",
+        "edge/downloads/api-check-results-20261019-040242.csv",
+        "edge/downloads/defects-20261019-040243.csv"
+      ]
+    },
+    {
+      "name": "all_downloads_semantically_validated",
+      "passed": true,
+      "actual": {
+        "PASS": 4,
+        "FAIL": 0,
+        "BLOCKED": 0
+      }
+    },
+    {
+      "name": "dotnet_actual_counters",
+      "passed": true,
+      "actual": {
+        "total": 71,
+        "executed": 71,
+        "passed": 71,
+        "failed": 0,
+        "error": 0,
+        "timeout": 0,
+        "aborted": 0,
+        "inconclusive": 0,
+        "passedButRunAborted": 0,
+        "notRunnable": 0,
+        "notExecuted": 0,
+        "disconnected": 0,
+        "warning": 0,
+        "completed": 0,
+        "inProgress": 0,
+        "pending": 0
+      }
+    },
+    {
+      "name": "credential_candidate_scan",
+      "passed": true,
+      "actual": {
+        "textFilesScanned": 141,
+        "candidates": [],
+        "limitation": "Pattern audit of this execution and its tools; not a claim of exhaustive secret detection. Existing locked live-host logs were not read."
+      }
+    }
+  ],
+  "passed": true,
+  "imageIndex": [
+    {
+      "path": "chrome/desktop-apis-full.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "chrome/desktop-apis-viewport.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "chrome/desktop-catalogue-full.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "chrome/desktop-catalogue-viewport.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "chrome/desktop-dashboard-full.png",
+      "width": 1440,
+      "height": 1316
+    },
+    {
+      "path": "chrome/desktop-dashboard-viewport.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "chrome/desktop-defects-full.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "chrome/desktop-defects-viewport.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "chrome/desktop-orders-full.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "chrome/desktop-orders-viewport.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "chrome/desktop-registration-full.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "chrome/desktop-registration-viewport.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "chrome/keyboard-apis-forward-001-link.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "chrome/keyboard-apis-reverse-001-link.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "chrome/keyboard-catalogue-forward-001-link.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "chrome/keyboard-catalogue-forward-006-button.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "chrome/keyboard-catalogue-forward-007-input.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "chrome/keyboard-catalogue-forward-009-select.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "chrome/keyboard-catalogue-forward-013-checkbox.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "chrome/keyboard-catalogue-reverse-001-button.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "chrome/keyboard-dashboard-forward-001-link.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "chrome/keyboard-dashboard-reverse-001-link.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "chrome/keyboard-defects-forward-001-link.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "chrome/keyboard-defects-forward-007-select.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "chrome/keyboard-defects-forward-009-input.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "chrome/keyboard-defects-forward-010-button.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "chrome/keyboard-defects-reverse-001-button.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "chrome/keyboard-narrow-catalogue-forward-001-link.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "chrome/keyboard-narrow-catalogue-forward-006-button.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "chrome/keyboard-narrow-catalogue-forward-008-input.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "chrome/keyboard-narrow-catalogue-forward-009-input.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "chrome/keyboard-narrow-catalogue-forward-010-select.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "chrome/keyboard-narrow-catalogue-forward-011-input.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "chrome/keyboard-narrow-catalogue-forward-013-input.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "chrome/keyboard-narrow-catalogue-forward-014-checkbox.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "chrome/keyboard-narrow-catalogue-forward-017-link.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "chrome/keyboard-narrow-catalogue-reverse-001-button.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "chrome/keyboard-narrow-catalogue-reverse-002-checkbox.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "chrome/keyboard-narrow-catalogue-reverse-003-input.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "chrome/keyboard-narrow-catalogue-reverse-009-other.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "chrome/keyboard-narrow-catalogue-reverse-010-button.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "chrome/keyboard-narrow-catalogue-reverse-011-link.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "chrome/keyboard-narrow-catalogue-reverse-012-link.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "chrome/keyboard-narrow-catalogue-reverse-014-link.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "chrome/keyboard-narrow-orders-forward-001-link.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "chrome/keyboard-narrow-orders-forward-006-button.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "chrome/keyboard-narrow-orders-forward-008-input.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "chrome/keyboard-narrow-orders-forward-009-input.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "chrome/keyboard-narrow-orders-forward-010-select.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "chrome/keyboard-narrow-orders-forward-011-input.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "chrome/keyboard-narrow-orders-forward-012-input.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "chrome/keyboard-narrow-orders-forward-013-input.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "chrome/keyboard-narrow-orders-forward-014-checkbox.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "chrome/keyboard-narrow-orders-forward-017-link.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "chrome/keyboard-narrow-orders-reverse-001-button.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "chrome/keyboard-narrow-orders-reverse-009-other.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "chrome/keyboard-narrow-orders-reverse-010-button.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "chrome/keyboard-narrow-orders-reverse-011-link.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "chrome/keyboard-narrow-orders-reverse-012-link.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "chrome/keyboard-narrow-orders-reverse-013-link.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "chrome/keyboard-narrow-orders-reverse-014-link.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "chrome/keyboard-orders-forward-001-link.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "chrome/keyboard-orders-forward-006-button.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "chrome/keyboard-orders-forward-007-input.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "chrome/keyboard-orders-forward-009-select.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "chrome/keyboard-orders-forward-013-checkbox.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "chrome/keyboard-orders-reverse-001-button.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "chrome/keyboard-registration-forward-001-link.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "chrome/keyboard-registration-forward-006-input.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "chrome/keyboard-registration-forward-008-textarea.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "chrome/keyboard-registration-forward-009-button.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "chrome/keyboard-registration-reverse-001-button.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "chrome/narrow-apis-full.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "chrome/narrow-apis-viewport.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "chrome/narrow-catalogue-full.png",
+      "width": 375,
+      "height": 1504
+    },
+    {
+      "path": "chrome/narrow-catalogue-table-1-rightedge.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "chrome/narrow-catalogue-viewport.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "chrome/narrow-dashboard-full.png",
+      "width": 375,
+      "height": 3175
+    },
+    {
+      "path": "chrome/narrow-dashboard-viewport.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "chrome/narrow-defects-full.png",
+      "width": 375,
+      "height": 1918
+    },
+    {
+      "path": "chrome/narrow-defects-viewport.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "chrome/narrow-orders-full.png",
+      "width": 375,
+      "height": 1792
+    },
+    {
+      "path": "chrome/narrow-orders-table-1-rightedge.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "chrome/narrow-orders-viewport.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "chrome/narrow-registration-full.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "chrome/narrow-registration-viewport.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "chrome/narrow-settled/keyboard-narrow-catalogue-forward-001-link.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "chrome/narrow-settled/keyboard-narrow-catalogue-forward-006-button.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "chrome/narrow-settled/keyboard-narrow-catalogue-forward-008-input.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "chrome/narrow-settled/keyboard-narrow-catalogue-forward-010-select.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "chrome/narrow-settled/keyboard-narrow-catalogue-forward-014-checkbox.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "chrome/narrow-settled/keyboard-narrow-catalogue-reverse-001-button.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "chrome/narrow-settled/keyboard-narrow-orders-forward-001-link.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "chrome/narrow-settled/keyboard-narrow-orders-forward-006-button.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "chrome/narrow-settled/keyboard-narrow-orders-forward-008-input.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "chrome/narrow-settled/keyboard-narrow-orders-forward-010-select.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "chrome/narrow-settled/keyboard-narrow-orders-forward-014-checkbox.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "chrome/narrow-settled/keyboard-narrow-orders-reverse-001-button.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "edge/desktop-apis-full.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "edge/desktop-apis-viewport.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "edge/desktop-catalogue-full.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "edge/desktop-catalogue-viewport.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "edge/desktop-dashboard-full.png",
+      "width": 1440,
+      "height": 1316
+    },
+    {
+      "path": "edge/desktop-dashboard-viewport.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "edge/desktop-defects-full.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "edge/desktop-defects-viewport.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "edge/desktop-orders-full.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "edge/desktop-orders-viewport.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "edge/desktop-registration-full.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "edge/desktop-registration-viewport.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "edge/keyboard-apis-forward-001-link.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "edge/keyboard-apis-reverse-002-link.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "edge/keyboard-catalogue-forward-001-link.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "edge/keyboard-catalogue-forward-006-button.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "edge/keyboard-catalogue-forward-007-input.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "edge/keyboard-catalogue-forward-009-select.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "edge/keyboard-catalogue-forward-013-checkbox.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "edge/keyboard-catalogue-reverse-002-button.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "edge/keyboard-dashboard-forward-001-link.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "edge/keyboard-dashboard-reverse-002-link.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "edge/keyboard-defects-forward-001-link.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "edge/keyboard-defects-forward-007-select.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "edge/keyboard-defects-forward-009-input.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "edge/keyboard-defects-forward-010-button.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "edge/keyboard-defects-reverse-002-button.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "edge/keyboard-narrow-catalogue-forward-001-link.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "edge/keyboard-narrow-catalogue-forward-006-button.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "edge/keyboard-narrow-catalogue-forward-008-input.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "edge/keyboard-narrow-catalogue-forward-009-input.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "edge/keyboard-narrow-catalogue-forward-010-select.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "edge/keyboard-narrow-catalogue-forward-011-input.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "edge/keyboard-narrow-catalogue-forward-013-input.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "edge/keyboard-narrow-catalogue-forward-014-checkbox.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "edge/keyboard-narrow-catalogue-forward-017-link.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "edge/keyboard-narrow-catalogue-reverse-002-button.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "edge/keyboard-narrow-catalogue-reverse-010-other.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "edge/keyboard-narrow-catalogue-reverse-011-button.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "edge/keyboard-narrow-catalogue-reverse-012-link.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "edge/keyboard-narrow-catalogue-reverse-013-link.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "edge/keyboard-narrow-orders-forward-001-link.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "edge/keyboard-narrow-orders-forward-006-button.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "edge/keyboard-narrow-orders-forward-008-input.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "edge/keyboard-narrow-orders-forward-009-input.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "edge/keyboard-narrow-orders-forward-010-select.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "edge/keyboard-narrow-orders-forward-011-input.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "edge/keyboard-narrow-orders-forward-012-input.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "edge/keyboard-narrow-orders-forward-013-input.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "edge/keyboard-narrow-orders-forward-014-checkbox.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "edge/keyboard-narrow-orders-forward-017-link.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "edge/keyboard-narrow-orders-reverse-002-button.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "edge/keyboard-narrow-orders-reverse-010-other.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "edge/keyboard-narrow-orders-reverse-011-button.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "edge/keyboard-narrow-orders-reverse-012-link.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "edge/keyboard-narrow-orders-reverse-013-link.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "edge/keyboard-narrow-orders-reverse-014-link.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "edge/keyboard-narrow-orders-reverse-015-link.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "edge/keyboard-orders-forward-001-link.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "edge/keyboard-orders-forward-006-button.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "edge/keyboard-orders-forward-007-input.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "edge/keyboard-orders-forward-009-select.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "edge/keyboard-orders-forward-013-checkbox.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "edge/keyboard-orders-reverse-002-button.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "edge/keyboard-registration-forward-001-link.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "edge/keyboard-registration-forward-006-input.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "edge/keyboard-registration-forward-008-textarea.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "edge/keyboard-registration-forward-009-button.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "edge/keyboard-registration-reverse-002-button.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "edge/narrow-apis-full.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "edge/narrow-apis-viewport.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "edge/narrow-catalogue-full.png",
+      "width": 375,
+      "height": 1504
+    },
+    {
+      "path": "edge/narrow-catalogue-table-1-rightedge.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "edge/narrow-catalogue-viewport.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "edge/narrow-dashboard-full.png",
+      "width": 375,
+      "height": 3175
+    },
+    {
+      "path": "edge/narrow-dashboard-viewport.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "edge/narrow-defects-full.png",
+      "width": 375,
+      "height": 1918
+    },
+    {
+      "path": "edge/narrow-defects-viewport.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "edge/narrow-orders-full.png",
+      "width": 375,
+      "height": 1792
+    },
+    {
+      "path": "edge/narrow-orders-table-1-rightedge.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "edge/narrow-orders-viewport.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "edge/narrow-registration-full.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "edge/narrow-registration-viewport.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "edge/narrow-settled/keyboard-narrow-catalogue-forward-001-link.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "edge/narrow-settled/keyboard-narrow-catalogue-forward-006-button.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "edge/narrow-settled/keyboard-narrow-catalogue-forward-008-input.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "edge/narrow-settled/keyboard-narrow-catalogue-forward-010-select.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "edge/narrow-settled/keyboard-narrow-catalogue-forward-014-checkbox.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "edge/narrow-settled/keyboard-narrow-catalogue-reverse-002-button.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "edge/narrow-settled/keyboard-narrow-orders-forward-001-link.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "edge/narrow-settled/keyboard-narrow-orders-forward-006-button.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "edge/narrow-settled/keyboard-narrow-orders-forward-008-input.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "edge/narrow-settled/keyboard-narrow-orders-forward-010-select.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "edge/narrow-settled/keyboard-narrow-orders-forward-014-checkbox.png",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "edge/narrow-settled/keyboard-narrow-orders-reverse-002-button.png",
+      "width": 375,
+      "height": 812
+    }
+  ]
+}

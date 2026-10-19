@@ -1,0 +1,110 @@
+{
+    "Verification":  "Automated local HTTP setup checks only; no browser/manual execution",
+    "verified":  true,
+    "StartedAtUtc":  "2026-10-18T09:26:57.4192706+00:00",
+    "CompletedAtUtc":  "2026-10-18T09:26:57.6669507+00:00",
+    "BaseUrl":  "http://localhost:51920/",
+    "HttpClient":  "System.Net.Http.HttpClient; UseProxy=false; AllowAutoRedirect=false",
+    "Pages":  [
+                  {
+                      "Path":  "/",
+                      "HttpStatus":  200,
+                      "Verified":  true
+                  },
+                  {
+                      "Path":  "/Apis",
+                      "HttpStatus":  200,
+                      "Verified":  true
+                  },
+                  {
+                      "Path":  "/Apis/Create",
+                      "HttpStatus":  200,
+                      "Verified":  true
+                  },
+                  {
+                      "Path":  "/Apis/Details/20200000-0000-0000-0000-000000000001",
+                      "HttpStatus":  200,
+                      "Verified":  true
+                  },
+                  {
+                      "Path":  "/Apis/Details/20200000-0000-0000-0000-000000000002",
+                      "HttpStatus":  200,
+                      "Verified":  true
+                  },
+                  {
+                      "Path":  "/Defects",
+                      "HttpStatus":  200,
+                      "Verified":  true
+                  },
+                  {
+                      "Path":  "/css/site.css",
+                      "HttpStatus":  200,
+                      "Verified":  true
+                  }
+              ],
+    "Fixtures":  {
+                     "RegisteredApis":  2,
+                     "ConfiguredEndpoints":  2,
+                     "Results":  8,
+                     "PassingResults":  4,
+                     "FailingResults":  4,
+                     "OpenDefects":  4,
+                     "SeverityStatuses":  {
+                                              "Critical":  "New",
+                                              "High":  "Assigned",
+                                              "Medium":  "InProgress",
+                                              "Low":  "Retest"
+                                          },
+                     "RecordsWithinLastHours":  24,
+                     "SyntheticData":  true
+                 },
+    "Csv":  {
+                "ResultsColumns":  15,
+                "DefectsColumns":  21,
+                "QuotedFieldsPreserved":  true,
+                "DownloadHeadersVerified":  true,
+                "FilteredFailedApiResults":  4,
+                "FilteredAssignedHighDefects":  1,
+                "UnchangedAfterRejectedWrites":  true
+            },
+    "RejectedRequests":  [
+                             {
+                                 "Method":  "POST",
+                                 "Path":  "/Apis/Create",
+                                 "HttpStatus":  405,
+                                 "Verified":  true
+                             },
+                             {
+                                 "Method":  "POST",
+                                 "Path":  "/Apis/AddEndpoint/20200000-0000-0000-0000-000000000001",
+                                 "HttpStatus":  405,
+                                 "Verified":  true
+                             },
+                             {
+                                 "Method":  "POST",
+                                 "Path":  "/Apis/RunChecks/20200000-0000-0000-0000-000000000001",
+                                 "HttpStatus":  405,
+                                 "Verified":  true
+                             },
+                             {
+                                 "Method":  "POST",
+                                 "Path":  "/Defects/Update/78916eed-4b7b-4b7e-92a9-dd194655d349",
+                                 "HttpStatus":  405,
+                                 "Verified":  true
+                             },
+                             {
+                                 "Method":  "PUT",
+                                 "Path":  "/",
+                                 "HttpStatus":  405,
+                                 "Verified":  true
+                             },
+                             {
+                                 "Method":  "GET",
+                                 "Path":  "/Apis/RunChecks/20200000-0000-0000-0000-000000000001",
+                                 "HttpStatus":  405,
+                                 "Verified":  true
+                             }
+                         ],
+    "ManualSqa20Status":  "NOT RUN",
+    "ManualObservations":  "None recorded by this script. The student must execute Chrome/Edge, keyboard, narrow-viewport and download checks."
+}

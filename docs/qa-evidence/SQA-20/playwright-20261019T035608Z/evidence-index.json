@@ -1,0 +1,1586 @@
+{
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 125,
+      "sha256": "a4a2d81d0dc320f744b0b3735a699897c48ccd3fb64a4f32454b3a1f4d667c6d"
+    },
+    {
+      "path": "accessibility-summary.json",
+      "bytes": 70757,
+      "sha256": "c1e05a6f183bc987e7121887378b2b5f8f32fb5deeb57f4a594f07b52cb0e464"
+    },
+    {
+      "path": "baseline/existing-evidence-sha256.csv",
+      "bytes": 5387,
+      "sha256": "a30f504b7e6f325afa15118138b97eadfc52844e3669480ac7f1518ff93a1440"
+    },
+    {
+      "path": "baseline/hash-exclusions.txt",
+      "bytes": 119,
+      "sha256": "24eb4e0616d4b18cc94aa6aee12c7db878ce3415d609a74321c4e3b1afd9f562"
+    },
+    {
+      "path": "baseline/observation-sheet.csv",
+      "bytes": 2467,
+      "sha256": "a60cd72cc8e6599b4a546d6076042d374a4dc526ccd396a4131288a962912887"
+    },
+    {
+      "path": "baseline/provenance.json",
+      "bytes": 1245,
+      "sha256": "9a869e0ca9e9038fda106a7d3ebb79d88f6590d1b382379b6c19f4597d9efd87"
+    },
+    {
+      "path": "browser-execution.json",
+      "bytes": 607099,
+      "sha256": "48388a0297dd106e556a19820a5c51e79114e87921d488d5bb464405c450fb63"
+    },
+    {
+      "path": "changes.md",
+      "bytes": 3382,
+      "sha256": "c87452873c979297c2022663570a03c3e946dbfe42efb7296fb16391005f9bb6"
+    },
+    {
+      "path": "chrome/axe-desktop-apis.json",
+      "bytes": 64860,
+      "sha256": "5e2dcc5e09e25790ae8441df45308cad077e879579cc86b4239b9dee822e1450"
+    },
+    {
+      "path": "chrome/axe-desktop-catalogue.json",
+      "bytes": 128047,
+      "sha256": "1f6b520e09235ae65d8c9aa764741c85996d7dc5dfb7542136e8c938ad7d048d"
+    },
+    {
+      "path": "chrome/axe-desktop-dashboard.json",
+      "bytes": 176311,
+      "sha256": "128c93ea440623c906026d2f74d949684235d2ccb4234c76f37619c26a31b703"
+    },
+    {
+      "path": "chrome/axe-desktop-defects.json",
+      "bytes": 184190,
+      "sha256": "7d8abb7f44181982579b5af047bb7007ba3e4400a63d72b488adcb73b019890b"
+    },
+    {
+      "path": "chrome/axe-desktop-orders.json",
+      "bytes": 127674,
+      "sha256": "75a6353705291a748794c6936a4b6b93d76d843884d222e25d5a4d6bdc67ba62"
+    },
+    {
+      "path": "chrome/axe-desktop-registration.json",
+      "bytes": 73478,
+      "sha256": "2ff4899b4d93ec40bab358cd63572ff1f695f7ccfd9322f3426b14d9014b8d46"
+    },
+    {
+      "path": "chrome/axe-narrow-apis.json",
+      "bytes": 64850,
+      "sha256": "352074977ef9bacaa5ac68c305f8ea3866b660cc9b0ca18ffa0cb2c79f7386cb"
+    },
+    {
+      "path": "chrome/axe-narrow-catalogue.json",
+      "bytes": 128885,
+      "sha256": "7b14b9ccaf09d7815c25f202ecd40b4c741a655da9ded1a4ed95e19efa717f03"
+    },
+    {
+      "path": "chrome/axe-narrow-dashboard.json",
+      "bytes": 176281,
+      "sha256": "d01b342503c9b49c35d34407d3451a5eccb4c768a44d8f2f154333b841b74868"
+    },
+    {
+      "path": "chrome/axe-narrow-defects.json",
+      "bytes": 184116,
+      "sha256": "54f2c7b5c2e680336786935a45762f83dcdccace387a7f93eb055254cdd672c2"
+    },
+    {
+      "path": "chrome/axe-narrow-orders.json",
+      "bytes": 128512,
+      "sha256": "a4e1ea8b716caa90a4689b0d7eea1b3cd440a1ff45d3d851a93d5a131a8e2e51"
+    },
+    {
+      "path": "chrome/axe-narrow-registration.json",
+      "bytes": 73460,
+      "sha256": "29f5e27b148f9d86f194bb79300623b227eb28370d547729c8225c4a3410547d"
+    },
+    {
+      "path": "chrome/browser-events.json",
+      "bytes": 24409,
+      "sha256": "631d1dad2b4b3c91760af7ae4d7d96ae0eee020fef8cc0c84c3b05ab420f95c6"
+    },
+    {
+      "path": "chrome/browser-summary.json",
+      "bytes": 3612309,
+      "sha256": "848cfd94b37a3bbc4347113fafb7b6279c0d4b6b3a7f5f329850e7922b77991b"
+    },
+    {
+      "path": "chrome/desktop-apis-full.png",
+      "bytes": 31431,
+      "sha256": "4bba14d375dc3cfcda72232c8212ae4e4a2f16abb0279c3430e0114fac30da20"
+    },
+    {
+      "path": "chrome/desktop-apis-viewport.png",
+      "bytes": 31431,
+      "sha256": "4bba14d375dc3cfcda72232c8212ae4e4a2f16abb0279c3430e0114fac30da20"
+    },
+    {
+      "path": "chrome/desktop-catalogue-full.png",
+      "bytes": 58717,
+      "sha256": "f744fdc627881ebc288dec25778e741e539e851a712ecf4a0467886a4b08766d"
+    },
+    {
+      "path": "chrome/desktop-catalogue-viewport.png",
+      "bytes": 58717,
+      "sha256": "f744fdc627881ebc288dec25778e741e539e851a712ecf4a0467886a4b08766d"
+    },
+    {
+      "path": "chrome/desktop-dashboard-full.png",
+      "bytes": 106401,
+      "sha256": "39146d8de22a6252f7d3a7848d7a34f9b667a78a42b562131ab7141aa38810ea"
+    },
+    {
+      "path": "chrome/desktop-dashboard-viewport.png",
+      "bytes": 62181,
+      "sha256": "b09fc96d88d7c3b7d7daa77dfd9cbb59b54d4e5e022f1d0a8630d6445f1ee821"
+    },
+    {
+      "path": "chrome/desktop-defects-full.png",
+      "bytes": 57137,
+      "sha256": "a341f2b5358af3c7504a878ed85f4b750d25d79617c1bc9a5da1ba4afdee9912"
+    },
+    {
+      "path": "chrome/desktop-defects-viewport.png",
+      "bytes": 57137,
+      "sha256": "a341f2b5358af3c7504a878ed85f4b750d25d79617c1bc9a5da1ba4afdee9912"
+    },
+    {
+      "path": "chrome/desktop-orders-full.png",
+      "bytes": 65021,
+      "sha256": "d3a31aedd1690c51c6b36de87f777dedbe116219ce212546ef0eefbdbaa4110e"
+    },
+    {
+      "path": "chrome/desktop-orders-viewport.png",
+      "bytes": 65021,
+      "sha256": "d3a31aedd1690c51c6b36de87f777dedbe116219ce212546ef0eefbdbaa4110e"
+    },
+    {
+      "path": "chrome/desktop-registration-full.png",
+      "bytes": 25169,
+      "sha256": "8ad2e9e4ba4b7b39bc0c648dc506d18cde33e628b1aab9d4861cbbc465d11041"
+    },
+    {
+      "path": "chrome/desktop-registration-viewport.png",
+      "bytes": 25169,
+      "sha256": "8ad2e9e4ba4b7b39bc0c648dc506d18cde33e628b1aab9d4861cbbc465d11041"
+    },
+    {
+      "path": "chrome/downloads/api-check-results-20261019-040212.csv",
+      "bytes": 3221,
+      "sha256": "595224d91336fa5a31803134b9ac22de99413bf513d65e7f76f72496e65d831e"
+    },
+    {
+      "path": "chrome/downloads/defects-20261019-040213.csv",
+      "bytes": 2679,
+      "sha256": "eb7d1be3af43b0e93e78e50b32c73e0451f7ddae9459abcecfdcd3ae8b43392d"
+    },
+    {
+      "path": "chrome/keyboard-apis-forward-001-link.png",
+      "bytes": 31822,
+      "sha256": "d4764bf162683cf28e3dcf0c81cef2c31ac951d55c411f788e585d5edc2ab1bc"
+    },
+    {
+      "path": "chrome/keyboard-apis-reverse-001-link.png",
+      "bytes": 32334,
+      "sha256": "7ed4375696cf6f5eefbc4506d401cad712acdc879b343c98f667a5e1bb065b17"
+    },
+    {
+      "path": "chrome/keyboard-apis.json",
+      "bytes": 298094,
+      "sha256": "002667642cad39464705346adbf0ce32d417a95ae2fe2aee69458cff1fb78784"
+    },
+    {
+      "path": "chrome/keyboard-catalogue-forward-001-link.png",
+      "bytes": 59101,
+      "sha256": "daf3031b3c056f98a82299b903f2ed17481e2ce03c992d501e3a175da7972a2b"
+    },
+    {
+      "path": "chrome/keyboard-catalogue-forward-006-button.png",
+      "bytes": 59120,
+      "sha256": "12d997b6b5dc43b259be06c054beef84844fa18d89a95cd8e6c3f8e56a3609bb"
+    },
+    {
+      "path": "chrome/keyboard-catalogue-forward-007-input.png",
+      "bytes": 59061,
+      "sha256": "8025441162ef3040499497ea6f0bc97a2e937a5d5dc69285f687d750e63e915f"
+    },
+    {
+      "path": "chrome/keyboard-catalogue-forward-009-select.png",
+      "bytes": 59030,
+      "sha256": "da5a30822ce2162ffdc1260c4198bd84d75bf3df9d2b9cac0fe12b3a7b7faeff"
+    },
+    {
+      "path": "chrome/keyboard-catalogue-forward-013-checkbox.png",
+      "bytes": 58983,
+      "sha256": "f6c0fdbf84cb18d8ddb39b933c2173fd5889299123e0f4b484a88d01cac5a08f"
+    },
+    {
+      "path": "chrome/keyboard-catalogue-reverse-001-button.png",
+      "bytes": 59207,
+      "sha256": "aaa3c77d3616515b334472e09ad64c5deeb9beccda130a64cae1be96dd1df22d"
+    },
+    {
+      "path": "chrome/keyboard-catalogue.json",
+      "bytes": 497721,
+      "sha256": "a8e4212da456bec7f4747a70fecd08662c9e1028b18111cc390ecacb9b0c873a"
+    },
+    {
+      "path": "chrome/keyboard-dashboard-forward-001-link.png",
+      "bytes": 62554,
+      "sha256": "b2a7fdbed1e9d675f8158c39593db0d41e752932e4f4a0c0d520eefe629d9149"
+    },
+    {
+      "path": "chrome/keyboard-dashboard-reverse-001-link.png",
+      "bytes": 62763,
+      "sha256": "ce2f65ac8f591ab1b2a0f587716252c64e2b16e57157831002d2093abe4df21d"
+    },
+    {
+      "path": "chrome/keyboard-dashboard.json",
+      "bytes": 233418,
+      "sha256": "8f0f36563e5c2fce7bd5c867211a27ad300eaf819c223f2774c3c3c3319b7e28"
+    },
+    {
+      "path": "chrome/keyboard-defects-forward-001-link.png",
+      "bytes": 57514,
+      "sha256": "3ff61959e5dfd8f583c99c3feb95c317eae6ffdcab9f886bd784a50e1add838a"
+    },
+    {
+      "path": "chrome/keyboard-defects-forward-007-select.png",
+      "bytes": 57708,
+      "sha256": "db51ff913ddf0d6663a4b5fae115e70800529a0919e424319a75284b6ce61f6d"
+    },
+    {
+      "path": "chrome/keyboard-defects-forward-009-input.png",
+      "bytes": 57717,
+      "sha256": "bf95aa46895c6d3fb7060a22bafd2407d3fbd445b49ba92314066ec686618f1c"
+    },
+    {
+      "path": "chrome/keyboard-defects-forward-010-button.png",
+      "bytes": 57600,
+      "sha256": "dced09eca5cc53a51248febb195d023ec33539369e0f17f518f4d5efd0f85dcf"
+    },
+    {
+      "path": "chrome/keyboard-defects-reverse-001-button.png",
+      "bytes": 57614,
+      "sha256": "707067ffa7e34fb16b2398ea05d3549d9ad3787fb16549d562d9209968394c21"
+    },
+    {
+      "path": "chrome/keyboard-defects.json",
+      "bytes": 760839,
+      "sha256": "00de06cf72ba91b2d29015a926e5b078942704e9d7dfa2b946968897f545f569"
+    },
+    {
+      "path": "chrome/keyboard-narrow-catalogue-forward-001-link.png",
+      "bytes": 36579,
+      "sha256": "a0f00ad6bf4a0ba114c146aeafa3feffa73626df5896970b3b7345dc3bb56131"
+    },
+    {
+      "path": "chrome/keyboard-narrow-catalogue-forward-006-button.png",
+      "bytes": 36586,
+      "sha256": "1ddd2fa1e7d06745bfb06fad0f0dc1e7ed429d8d902be0d4e2bdf6c227d51914"
+    },
+    {
+      "path": "chrome/keyboard-narrow-catalogue-forward-008-input.png",
+      "bytes": 36327,
+      "sha256": "5ca77700fd2df3a43539bfe595b7abf79722edc74133e2d0b065cb64e7832a12"
+    },
+    {
+      "path": "chrome/keyboard-narrow-catalogue-forward-009-input.png",
+      "bytes": 35858,
+      "sha256": "fa7a0a253fbb8732a07862c70fcd9e65f07ec5e4dd5d2e3789380fb161989528"
+    },
+    {
+      "path": "chrome/keyboard-narrow-catalogue-forward-010-select.png",
+      "bytes": 34863,
+      "sha256": "37dca02f27959a1570fb964ec7ebe6db07a9393ab92d952ba2974f8ac2fd3420"
+    },
+    {
+      "path": "chrome/keyboard-narrow-catalogue-forward-011-input.png",
+      "bytes": 26616,
+      "sha256": "a455110413a2168b6fb4b9893a44471d5ca0eab322e566de7b70d172340bd755"
+    },
+    {
+      "path": "chrome/keyboard-narrow-catalogue-forward-013-input.png",
+      "bytes": 27795,
+      "sha256": "55850278b804272872973b48f29b965455f63a301820c83db4b3554625f3e210"
+    },
+    {
+      "path": "chrome/keyboard-narrow-catalogue-forward-014-checkbox.png",
+      "bytes": 26799,
+      "sha256": "b82911e68baf8d708aaa9edf96d939245203bef902f55c54d8469741770e6ebd"
+    },
+    {
+      "path": "chrome/keyboard-narrow-catalogue-forward-017-link.png",
+      "bytes": 25138,
+      "sha256": "b4640386fb4b39b43abb1b36a1e95022afb369447ee77dda598f252fc6f713e7"
+    },
+    {
+      "path": "chrome/keyboard-narrow-catalogue-reverse-001-button.png",
+      "bytes": 25352,
+      "sha256": "ef7a5c91ddfbd1d9288fd64d6d2600e00aa0772020f4aad44f3af9a32b1181cd"
+    },
+    {
+      "path": "chrome/keyboard-narrow-catalogue-reverse-002-checkbox.png",
+      "bytes": 28639,
+      "sha256": "c62abc138cf1cf014a7a236229d76f938fd94e8906fbb49e3e0d2f63c23edafb"
+    },
+    {
+      "path": "chrome/keyboard-narrow-catalogue-reverse-003-input.png",
+      "bytes": 27064,
+      "sha256": "9141045bda75bfdca12f079f0e74e8311e2a7a8ca5c8a67a84b2c272ef05203f"
+    },
+    {
+      "path": "chrome/keyboard-narrow-catalogue-reverse-009-other.png",
+      "bytes": 25140,
+      "sha256": "0ab92a93f861fa1bcc304455ab89a5274b4752c0e91b0e1656c741e2c29436eb"
+    },
+    {
+      "path": "chrome/keyboard-narrow-catalogue-reverse-010-button.png",
+      "bytes": 26725,
+      "sha256": "39df338fb96be2b299a6d9941476501eb285b0514fbe7bcc17ff77c414ed8df1"
+    },
+    {
+      "path": "chrome/keyboard-narrow-catalogue-reverse-011-link.png",
+      "bytes": 25660,
+      "sha256": "580a0e0f79c9d9a2f491afcb9b2764e5b7a6c85cf693697e07a78e0b834d7ea7"
+    },
+    {
+      "path": "chrome/keyboard-narrow-catalogue-reverse-012-link.png",
+      "bytes": 34861,
+      "sha256": "99cf23338a25f7834ee966f8a112e465af4f5a2985c7413f73953b71b5cad00f"
+    },
+    {
+      "path": "chrome/keyboard-narrow-catalogue-reverse-014-link.png",
+      "bytes": 35841,
+      "sha256": "c3119626fed94a1d305053c5b2d60777488e6c87b540806bbcb18671c0c57cae"
+    },
+    {
+      "path": "chrome/keyboard-narrow-catalogue.json",
+      "bytes": 558290,
+      "sha256": "af4fe3fe0c4d8d55572009e7cee4bf8f4f8ed895b9a36dbb2c2c2c0f01ac4ff2"
+    },
+    {
+      "path": "chrome/keyboard-narrow-orders-forward-001-link.png",
+      "bytes": 30994,
+      "sha256": "0a983efc732589de240abd4718bf0433b43298ab7b0ec4500cccf5d91469fd0f"
+    },
+    {
+      "path": "chrome/keyboard-narrow-orders-forward-006-button.png",
+      "bytes": 31129,
+      "sha256": "550e76800b99f8052139a4f153633ec48d2bd1d8bf33f392f8f75bb934a8cd17"
+    },
+    {
+      "path": "chrome/keyboard-narrow-orders-forward-008-input.png",
+      "bytes": 30688,
+      "sha256": "2cc63ea799efc619e9a2267d22dc28119df78204cbc10f1d7a006beb236ef335"
+    },
+    {
+      "path": "chrome/keyboard-narrow-orders-forward-009-input.png",
+      "bytes": 32012,
+      "sha256": "03590813c8dff8b0c9f43855e0c80ef9a0a5aed8b3ac9523970575a0cbc754c1"
+    },
+    {
+      "path": "chrome/keyboard-narrow-orders-forward-010-select.png",
+      "bytes": 31977,
+      "sha256": "b24ea3de538abd2f0c9d67143dbe3c97d80512dd3673392d570cf06e6f1cc0a5"
+    },
+    {
+      "path": "chrome/keyboard-narrow-orders-forward-011-input.png",
+      "bytes": 28350,
+      "sha256": "c3b5f32b9f7b5e9eb182537b67a75e0d2430153da868281fca00df8e1c20f895"
+    },
+    {
+      "path": "chrome/keyboard-narrow-orders-forward-012-input.png",
+      "bytes": 24634,
+      "sha256": "726534b80dc6d7514aa9b822a65839326a8735a018d642fde8d87986f00fd61b"
+    },
+    {
+      "path": "chrome/keyboard-narrow-orders-forward-013-input.png",
+      "bytes": 25046,
+      "sha256": "2bbf605fdf1e3b39d1a9c31fdd7ce61edced81e2c53e4e46c2c3e0093659b05c"
+    },
+    {
+      "path": "chrome/keyboard-narrow-orders-forward-014-checkbox.png",
+      "bytes": 24709,
+      "sha256": "abde5b35600b65bae3cfa4ebed15ba29c347507f72525fa97d09205293681e0b"
+    },
+    {
+      "path": "chrome/keyboard-narrow-orders-forward-017-link.png",
+      "bytes": 23622,
+      "sha256": "bf9929034ec5e1528e3a9db03e0d807fe9571f0ac44339a6dd9fb04d3c5c2ed1"
+    },
+    {
+      "path": "chrome/keyboard-narrow-orders-reverse-001-button.png",
+      "bytes": 24502,
+      "sha256": "74e2bc6b90664b0f72ceb39b9862e7b6450d5ecf6441b319e5b08db504447a0f"
+    },
+    {
+      "path": "chrome/keyboard-narrow-orders-reverse-009-other.png",
+      "bytes": 23622,
+      "sha256": "bf9929034ec5e1528e3a9db03e0d807fe9571f0ac44339a6dd9fb04d3c5c2ed1"
+    },
+    {
+      "path": "chrome/keyboard-narrow-orders-reverse-010-button.png",
+      "bytes": 24370,
+      "sha256": "c868b60a2a3768558b4f6ed445deb8ab6a59d78692ed6d2f8f8f8f3287af2479"
+    },
+    {
+      "path": "chrome/keyboard-narrow-orders-reverse-011-link.png",
+      "bytes": 23012,
+      "sha256": "7c240f03f444d424c956fccfc81ac3eece8bebdf021661a99dec4cea7c37335e"
+    },
+    {
+      "path": "chrome/keyboard-narrow-orders-reverse-012-link.png",
+      "bytes": 27849,
+      "sha256": "ed3421d1202281ebc11531e3d32ea7a6e247e066322ca66ca646c5461dad50cb"
+    },
+    {
+      "path": "chrome/keyboard-narrow-orders-reverse-013-link.png",
+      "bytes": 32271,
+      "sha256": "5c5ba17507aba25e5fbb9fe4d63383ef81483f3bcffdc3fceba398aff1777d2a"
+    },
+    {
+      "path": "chrome/keyboard-narrow-orders-reverse-014-link.png",
+      "bytes": 32470,
+      "sha256": "f96285ccf88d05ca7fa4db4bc1303e4dd424d9c5ff2bde77a4c3d0f5f85b3a06"
+    },
+    {
+      "path": "chrome/keyboard-narrow-orders.json",
+      "bytes": 560000,
+      "sha256": "297df74dcffe0bb9642a281c97c21db29586a2e1f1a3d928cdf99206e1d062aa"
+    },
+    {
+      "path": "chrome/keyboard-orders-forward-001-link.png",
+      "bytes": 65391,
+      "sha256": "995bc5ca2a3ef3b49772409c85edc34fe4857921f5c835182dda63651d10d983"
+    },
+    {
+      "path": "chrome/keyboard-orders-forward-006-button.png",
+      "bytes": 65393,
+      "sha256": "fab2b334c1beaaf91cc00d8d939208f8b92a7130dea3c291a51e0d304f15051f"
+    },
+    {
+      "path": "chrome/keyboard-orders-forward-007-input.png",
+      "bytes": 65341,
+      "sha256": "d8b8c135de2831c0de5ca3426809a34657760b9c5d5a708352e2a09425ca5942"
+    },
+    {
+      "path": "chrome/keyboard-orders-forward-009-select.png",
+      "bytes": 65292,
+      "sha256": "54339c362edbe2031f1a760ef5c3ba814a3d41a9f1c23fb8ef5e2c093c02fddf"
+    },
+    {
+      "path": "chrome/keyboard-orders-forward-013-checkbox.png",
+      "bytes": 65279,
+      "sha256": "a08b24c12e603f575ae2c9bee6e8b1a5506a3f1eb8611f0c4a41fefc10199b90"
+    },
+    {
+      "path": "chrome/keyboard-orders-reverse-001-button.png",
+      "bytes": 65507,
+      "sha256": "69cfae4883930d5516c21b39a9fe9f5a75a8c6bd1350a9e46bd71c7d17b4a9c8"
+    },
+    {
+      "path": "chrome/keyboard-orders.json",
+      "bytes": 497669,
+      "sha256": "26b4a13879e3816293dafb9bfec0812dd4ca25a041ee418cb6207d3bbcf975b6"
+    },
+    {
+      "path": "chrome/keyboard-registration-forward-001-link.png",
+      "bytes": 25559,
+      "sha256": "6f0e62fa3f629fb5ab41d73411a77f8ea11b3f7ebb493cdf6c0abff865211118"
+    },
+    {
+      "path": "chrome/keyboard-registration-forward-006-input.png",
+      "bytes": 25479,
+      "sha256": "7855c774ec5699000ea0c07eeef6d0d167b2a7984f0e6dc1ded79acf24a69918"
+    },
+    {
+      "path": "chrome/keyboard-registration-forward-008-textarea.png",
+      "bytes": 25483,
+      "sha256": "e67b99e1091aa836ecdf43ff012ae7b84fe9c886bf362d1544a9e26b266aa40d"
+    },
+    {
+      "path": "chrome/keyboard-registration-forward-009-button.png",
+      "bytes": 25616,
+      "sha256": "7fecac042dacb03005d22a3d247f5fe2335ae55b60e680708c67a5b056cc3f99"
+    },
+    {
+      "path": "chrome/keyboard-registration-reverse-001-button.png",
+      "bytes": 25616,
+      "sha256": "7fecac042dacb03005d22a3d247f5fe2335ae55b60e680708c67a5b056cc3f99"
+    },
+    {
+      "path": "chrome/keyboard-registration.json",
+      "bytes": 331237,
+      "sha256": "f2d6f18ccfbe28780818cbecf3a6b7938b4f25d62a0c0bafa61fc319fbd48a84"
+    },
+    {
+      "path": "chrome/layout-desktop-apis.json",
+      "bytes": 16239,
+      "sha256": "a1a4b1aff6429d432a1d9c016e9f18c3920c0d88be51c0edb1873c3d42a6b229"
+    },
+    {
+      "path": "chrome/layout-desktop-catalogue.json",
+      "bytes": 68642,
+      "sha256": "a7d8deb2143aaff080ddbbd590aac71da2c2c4178446c2fb8ff80aa16f13d1d6"
+    },
+    {
+      "path": "chrome/layout-desktop-dashboard.json",
+      "bytes": 69983,
+      "sha256": "38568a445ee90473722e0e38cd1a28f158b8ca71cd9384a54ec3618c0f6b6dd9"
+    },
+    {
+      "path": "chrome/layout-desktop-defects.json",
+      "bytes": 77827,
+      "sha256": "f55f677eef73d107edd34994ea00715482500bedae94ad147606061a5f7f3e7f"
+    },
+    {
+      "path": "chrome/layout-desktop-orders.json",
+      "bytes": 68785,
+      "sha256": "7c4bef0abfc1beec414407412fb3527af8a2e7dd946fcd03ec5d510e95d4a437"
+    },
+    {
+      "path": "chrome/layout-desktop-registration.json",
+      "bytes": 18326,
+      "sha256": "a76c71ec3a6afe96994f923a4fc799d33a37dcd03f7925fa71f80687c4a8ba4b"
+    },
+    {
+      "path": "chrome/layout-narrow-apis.json",
+      "bytes": 16168,
+      "sha256": "3fecdce12cf20c4a613a87b524c946e32d4b4bd5c2b6ea09021c5999281247bf"
+    },
+    {
+      "path": "chrome/layout-narrow-catalogue.json",
+      "bytes": 66769,
+      "sha256": "6465892c332bb0e6a2715d1fffc4951706f853c3d528df1ed02f34a8074b155f"
+    },
+    {
+      "path": "chrome/layout-narrow-dashboard.json",
+      "bytes": 68699,
+      "sha256": "17324f22dc8dcd43907c2ace42fc647bb3018bdc0064f98c10e50d847a5e4385"
+    },
+    {
+      "path": "chrome/layout-narrow-defects.json",
+      "bytes": 73361,
+      "sha256": "5767d76b9ef96baf7601d1c3f0961e8b41c637357507c30213eec42971756a7f"
+    },
+    {
+      "path": "chrome/layout-narrow-orders.json",
+      "bytes": 66588,
+      "sha256": "4f1f71cc9184a5a7f02465e6df383f60e80ab28cc1589adb7f19af7ec60642f3"
+    },
+    {
+      "path": "chrome/layout-narrow-registration.json",
+      "bytes": 18317,
+      "sha256": "f8c2b6a8af5f18a1319ad21b6dd091221b23c8968310493e9f66fcd0fb6fe961"
+    },
+    {
+      "path": "chrome/narrow-apis-full.png",
+      "bytes": 32822,
+      "sha256": "04b709f1ad12f325096ba5bd4b45f8e4f6d35c11de8e63b84b993bf20e5bce24"
+    },
+    {
+      "path": "chrome/narrow-apis-viewport.png",
+      "bytes": 32822,
+      "sha256": "04b709f1ad12f325096ba5bd4b45f8e4f6d35c11de8e63b84b993bf20e5bce24"
+    },
+    {
+      "path": "chrome/narrow-catalogue-full.png",
+      "bytes": 54309,
+      "sha256": "333959348d2d129ab1ac9486a2e7caf61f6edf7fa41ab820b883d299be7c1d89"
+    },
+    {
+      "path": "chrome/narrow-catalogue-table-1-rightedge.png",
+      "bytes": 35001,
+      "sha256": "95d59264f26c707585f631c8af63267f5cb5a7235f8d3260febed3fa0e9604ea"
+    },
+    {
+      "path": "chrome/narrow-catalogue-viewport.png",
+      "bytes": 36221,
+      "sha256": "b324f0bd11bfb5a4b8d2afb69e9e1263a80d534ca13f1d66edd2cec561d3ad39"
+    },
+    {
+      "path": "chrome/narrow-dashboard-full.png",
+      "bytes": 109575,
+      "sha256": "46c04300d39ff36a460c0b8c7b3de726198281ff5a0fbae597289b1783323538"
+    },
+    {
+      "path": "chrome/narrow-dashboard-viewport.png",
+      "bytes": 23900,
+      "sha256": "78b6d38acca3b865b0cff5a81773156b15ac5bb215543f3ed2c287dd3241837f"
+    },
+    {
+      "path": "chrome/narrow-defects-full.png",
+      "bytes": 60714,
+      "sha256": "710e00ef8c172e83f9217788b70c326ad403808abf7ce59b58786ffd23a732a9"
+    },
+    {
+      "path": "chrome/narrow-defects-viewport.png",
+      "bytes": 27113,
+      "sha256": "ab3733f91619c8d1f254d071b93b0a1f6e7198f16c5e35302702fafdc121fd5b"
+    },
+    {
+      "path": "chrome/narrow-orders-full.png",
+      "bytes": 60323,
+      "sha256": "23ece3de2784ca513d42f7098ffc830aeb37d77d954d3a5cfad111d1665d2115"
+    },
+    {
+      "path": "chrome/narrow-orders-table-1-rightedge.png",
+      "bytes": 26801,
+      "sha256": "09f2e134e10621fb6bea964af6393aa697ef139cb3a23fb80b53ba831d330239"
+    },
+    {
+      "path": "chrome/narrow-orders-viewport.png",
+      "bytes": 30635,
+      "sha256": "a363bbad480102708bf74ad5df2a00f7b4f35b749129f592f2afc6cbd02bc48c"
+    },
+    {
+      "path": "chrome/narrow-registration-full.png",
+      "bytes": 21618,
+      "sha256": "27265f7fb689e7a19f319260f64987728e7efa6f9ef0b8072f97a7523525889d"
+    },
+    {
+      "path": "chrome/narrow-registration-viewport.png",
+      "bytes": 21618,
+      "sha256": "27265f7fb689e7a19f319260f64987728e7efa6f9ef0b8072f97a7523525889d"
+    },
+    {
+      "path": "chrome/narrow-settled/keyboard-narrow-catalogue-forward-001-link.png",
+      "bytes": 36579,
+      "sha256": "a0f00ad6bf4a0ba114c146aeafa3feffa73626df5896970b3b7345dc3bb56131"
+    },
+    {
+      "path": "chrome/narrow-settled/keyboard-narrow-catalogue-forward-006-button.png",
+      "bytes": 36586,
+      "sha256": "1ddd2fa1e7d06745bfb06fad0f0dc1e7ed429d8d902be0d4e2bdf6c227d51914"
+    },
+    {
+      "path": "chrome/narrow-settled/keyboard-narrow-catalogue-forward-008-input.png",
+      "bytes": 28960,
+      "sha256": "cb16f9736486d5bc52dc6ea4a5cf8c8750c61eb16fff9d7f159c2408e356861f"
+    },
+    {
+      "path": "chrome/narrow-settled/keyboard-narrow-catalogue-forward-010-select.png",
+      "bytes": 28972,
+      "sha256": "ab48acbbc33188109f20fffac8fd58ed5665d222a428ac6b129f650195651040"
+    },
+    {
+      "path": "chrome/narrow-settled/keyboard-narrow-catalogue-forward-014-checkbox.png",
+      "bytes": 25342,
+      "sha256": "b80450d0470a3832f942838e534b87fc4c84f216a38f8f8463d9ca6e6dc87ed6"
+    },
+    {
+      "path": "chrome/narrow-settled/keyboard-narrow-catalogue-reverse-001-button.png",
+      "bytes": 25670,
+      "sha256": "973f2ad787fdb8cc151022d00a6bcceeaf0e44c53163afce31c3141347f26131"
+    },
+    {
+      "path": "chrome/narrow-settled/keyboard-narrow-catalogue.json",
+      "bytes": 531783,
+      "sha256": "43a36e9a70a4bbcf37fe5df45087c665a6e6a25bfa4b7fa28eed5cbaf600eea2"
+    },
+    {
+      "path": "chrome/narrow-settled/keyboard-narrow-orders-forward-001-link.png",
+      "bytes": 30994,
+      "sha256": "0a983efc732589de240abd4718bf0433b43298ab7b0ec4500cccf5d91469fd0f"
+    },
+    {
+      "path": "chrome/narrow-settled/keyboard-narrow-orders-forward-006-button.png",
+      "bytes": 31129,
+      "sha256": "550e76800b99f8052139a4f153633ec48d2bd1d8bf33f392f8f75bb934a8cd17"
+    },
+    {
+      "path": "chrome/narrow-settled/keyboard-narrow-orders-forward-008-input.png",
+      "bytes": 25153,
+      "sha256": "aab0f418e5adbfbdec95f8712a3851b5b82ad4d52deb403bcc5b7dc088951e4e"
+    },
+    {
+      "path": "chrome/narrow-settled/keyboard-narrow-orders-forward-010-select.png",
+      "bytes": 25167,
+      "sha256": "07cf6dc9c847a46eb4d4b133990db5ad107532efcc2a3ba067c944038982a7e0"
+    },
+    {
+      "path": "chrome/narrow-settled/keyboard-narrow-orders-forward-014-checkbox.png",
+      "bytes": 22499,
+      "sha256": "df6afbb41d4708830d5c410e95e29dd996677c0180ff31c2adb315f3f871b741"
+    },
+    {
+      "path": "chrome/narrow-settled/keyboard-narrow-orders-reverse-001-button.png",
+      "bytes": 22820,
+      "sha256": "8329024f65fa40141028348fd50aa59ceddee43834a5bb0062306372e149b891"
+    },
+    {
+      "path": "chrome/narrow-settled/keyboard-narrow-orders.json",
+      "bytes": 533172,
+      "sha256": "177c6f45dd13041bb13eb26a9a274184feac12832234919a9861d8bd525a7e01"
+    },
+    {
+      "path": "csv-validation.json",
+      "bytes": 15433,
+      "sha256": "4294a48f69710a8f302d167c6c1383035410efbb9ab62cd698dab4c157a20b81"
+    },
+    {
+      "path": "dotnet/5a4ccc9f-55cf-45f3-be9c-c40a5439d108/coverage.cobertura.xml",
+      "bytes": 184159,
+      "sha256": "d958a8ac2149ad1a6bfa75aa1b684fb96e49315d63303257eeffdf23de1c134c"
+    },
+    {
+      "path": "dotnet/automated-suite.trx",
+      "bytes": 102464,
+      "sha256": "b04988ea4155475c38e33095a144cf1675122cfb2740755fed7d99fa77318201"
+    },
+    {
+      "path": "dotnet/build.txt",
+      "bytes": 404,
+      "sha256": "8ce00b12c6a4dc52314022ab5d88f115e3615b95ace58987a04b5d69c1386ee9"
+    },
+    {
+      "path": "dotnet/cobertura.xml",
+      "bytes": 184159,
+      "sha256": "d958a8ac2149ad1a6bfa75aa1b684fb96e49315d63303257eeffdf23de1c134c"
+    },
+    {
+      "path": "dotnet/dotnet-info.txt",
+      "bytes": 3397,
+      "sha256": "06ca6ce837e2e050b5a961a4c6a520ae69735d8343380a253af7316801c370b2"
+    },
+    {
+      "path": "dotnet/restore.txt",
+      "bytes": 82,
+      "sha256": "2ad9967f2280d0195ad457a92fe6a353a8492625846632386df6dfc446efe4bc"
+    },
+    {
+      "path": "dotnet/test-summary.json",
+      "bytes": 1020,
+      "sha256": "fa4eb806f709046d15dd929be0bb3281010fdafd55f99eef539afb1aa95feaab"
+    },
+    {
+      "path": "dotnet/test.txt",
+      "bytes": 681,
+      "sha256": "ff5372590dfbb361ba5e7619d275168c36753014cf34e2d356713fd4a2240cb7"
+    },
+    {
+      "path": "dotnet/zsr20_哈迪斯的宠物二_2026-10-19_17_06_59/In/c6845110-11b7-4058-adee-dfc14c19ce3a/哈迪斯的宠物二/pt01-dashboard.html",
+      "bytes": 13227,
+      "sha256": "831d2877399c4933d394272842e963a887ef62d4f000a9b68714443d9796e619"
+    },
+    {
+      "path": "dotnet/zsr20_哈迪斯的宠物二_2026-10-19_17_06_59/In/c6845110-11b7-4058-adee-dfc14c19ce3a/哈迪斯的宠物二/pt01-http.json",
+      "bytes": 3790,
+      "sha256": "0e3ae5932513f4980c5c372fde7de51a38d8d150ed4c1d07cc281fd0ef53fefd"
+    },
+    {
+      "path": "dotnet/zsr20_哈迪斯的宠物二_2026-10-19_17_06_59/In/dc9fafcd-3016-491b-8845-bdeee6f1a6c4/哈迪斯的宠物二/pt01-aggregation.json",
+      "bytes": 1677,
+      "sha256": "4dc4a26819d59e3bd1ead85dd5b2b006059d3b1bf7add702cca93ca8fedbce5d"
+    },
+    {
+      "path": "dotnet/zsr20_哈迪斯的宠物二_2026-10-19_17_06_59/In/哈迪斯的宠物二/coverage.cobertura.xml",
+      "bytes": 184159,
+      "sha256": "d958a8ac2149ad1a6bfa75aa1b684fb96e49315d63303257eeffdf23de1c134c"
+    },
+    {
+      "path": "edge/axe-desktop-apis.json",
+      "bytes": 64874,
+      "sha256": "716991a01f2d939712ba85d0e61af5d5d7ce6acef838611f4be84988298d6f33"
+    },
+    {
+      "path": "edge/axe-desktop-catalogue.json",
+      "bytes": 128061,
+      "sha256": "c3d6a0d1fdc66cbed40cbd6d3f72ad82650fdac4ba249cc279661f9ebf0e7810"
+    },
+    {
+      "path": "edge/axe-desktop-dashboard.json",
+      "bytes": 176325,
+      "sha256": "4b6a5a42a7278c8d139a91bb2230540328f6da8cbd173b6b6fbea39b13cba6dc"
+    },
+    {
+      "path": "edge/axe-desktop-defects.json",
+      "bytes": 184204,
+      "sha256": "916d6f049c62d3c2ce86e4cebf4da85c591a63322c7a37d23c066d72296ce953"
+    },
+    {
+      "path": "edge/axe-desktop-orders.json",
+      "bytes": 127688,
+      "sha256": "ff1edc46576181f2e257e86a830e87262171479818718328b1ea6ccde4dc2aba"
+    },
+    {
+      "path": "edge/axe-desktop-registration.json",
+      "bytes": 73492,
+      "sha256": "bfbde8d27c2c125253572dbb1f0393b8ad322cb49dfc6a4061a4ebd9052ed17e"
+    },
+    {
+      "path": "edge/axe-narrow-apis.json",
+      "bytes": 64864,
+      "sha256": "3425194540f610e99d7a429215dcd0e00675e1caf585fe405e94cae23641b86e"
+    },
+    {
+      "path": "edge/axe-narrow-catalogue.json",
+      "bytes": 128899,
+      "sha256": "ac73e534e1a843da7ac6cc39f279e0e41192d876c4b95984a964ad9b72f7b594"
+    },
+    {
+      "path": "edge/axe-narrow-dashboard.json",
+      "bytes": 176295,
+      "sha256": "830b63a290170515f497fe2ce6d44eae46177be36c7415e9003d661d9327857b"
+    },
+    {
+      "path": "edge/axe-narrow-defects.json",
+      "bytes": 184130,
+      "sha256": "b3fe567bd9257efb4d6e51f336b2f9f5c94c2a8c6d2cdc85e227e668111a08e0"
+    },
+    {
+      "path": "edge/axe-narrow-orders.json",
+      "bytes": 128526,
+      "sha256": "9632beb301b25746afd9f0ddcbb91e5532a9cc490fe470d8b65f49b06a7a6bc2"
+    },
+    {
+      "path": "edge/axe-narrow-registration.json",
+      "bytes": 73474,
+      "sha256": "871333cb21ad40aa19df6332a19964b8339c7a110be77cbca17c56a31d26c894"
+    },
+    {
+      "path": "edge/browser-events.json",
+      "bytes": 24409,
+      "sha256": "474d0e7bea12f3028c0fdf6179f2baf60484932b38b9933163588908e9dee50d"
+    },
+    {
+      "path": "edge/browser-summary.json",
+      "bytes": 3718081,
+      "sha256": "89581e6defdee699ddd085710bb1a9eed4ab730db94aa90fe46a685308f78d93"
+    },
+    {
+      "path": "edge/desktop-apis-full.png",
+      "bytes": 31431,
+      "sha256": "4bba14d375dc3cfcda72232c8212ae4e4a2f16abb0279c3430e0114fac30da20"
+    },
+    {
+      "path": "edge/desktop-apis-viewport.png",
+      "bytes": 31431,
+      "sha256": "4bba14d375dc3cfcda72232c8212ae4e4a2f16abb0279c3430e0114fac30da20"
+    },
+    {
+      "path": "edge/desktop-catalogue-full.png",
+      "bytes": 58717,
+      "sha256": "f744fdc627881ebc288dec25778e741e539e851a712ecf4a0467886a4b08766d"
+    },
+    {
+      "path": "edge/desktop-catalogue-viewport.png",
+      "bytes": 58717,
+      "sha256": "f744fdc627881ebc288dec25778e741e539e851a712ecf4a0467886a4b08766d"
+    },
+    {
+      "path": "edge/desktop-dashboard-full.png",
+      "bytes": 106401,
+      "sha256": "39146d8de22a6252f7d3a7848d7a34f9b667a78a42b562131ab7141aa38810ea"
+    },
+    {
+      "path": "edge/desktop-dashboard-viewport.png",
+      "bytes": 62181,
+      "sha256": "b09fc96d88d7c3b7d7daa77dfd9cbb59b54d4e5e022f1d0a8630d6445f1ee821"
+    },
+    {
+      "path": "edge/desktop-defects-full.png",
+      "bytes": 57137,
+      "sha256": "a341f2b5358af3c7504a878ed85f4b750d25d79617c1bc9a5da1ba4afdee9912"
+    },
+    {
+      "path": "edge/desktop-defects-viewport.png",
+      "bytes": 57137,
+      "sha256": "a341f2b5358af3c7504a878ed85f4b750d25d79617c1bc9a5da1ba4afdee9912"
+    },
+    {
+      "path": "edge/desktop-orders-full.png",
+      "bytes": 65021,
+      "sha256": "d3a31aedd1690c51c6b36de87f777dedbe116219ce212546ef0eefbdbaa4110e"
+    },
+    {
+      "path": "edge/desktop-orders-viewport.png",
+      "bytes": 65021,
+      "sha256": "d3a31aedd1690c51c6b36de87f777dedbe116219ce212546ef0eefbdbaa4110e"
+    },
+    {
+      "path": "edge/desktop-registration-full.png",
+      "bytes": 25169,
+      "sha256": "8ad2e9e4ba4b7b39bc0c648dc506d18cde33e628b1aab9d4861cbbc465d11041"
+    },
+    {
+      "path": "edge/desktop-registration-viewport.png",
+      "bytes": 25169,
+      "sha256": "8ad2e9e4ba4b7b39bc0c648dc506d18cde33e628b1aab9d4861cbbc465d11041"
+    },
+    {
+      "path": "edge/downloads/api-check-results-20261019-040242.csv",
+      "bytes": 3221,
+      "sha256": "595224d91336fa5a31803134b9ac22de99413bf513d65e7f76f72496e65d831e"
+    },
+    {
+      "path": "edge/downloads/defects-20261019-040243.csv",
+      "bytes": 2679,
+      "sha256": "eb7d1be3af43b0e93e78e50b32c73e0451f7ddae9459abcecfdcd3ae8b43392d"
+    },
+    {
+      "path": "edge/keyboard-apis-forward-001-link.png",
+      "bytes": 31822,
+      "sha256": "d4764bf162683cf28e3dcf0c81cef2c31ac951d55c411f788e585d5edc2ab1bc"
+    },
+    {
+      "path": "edge/keyboard-apis-reverse-002-link.png",
+      "bytes": 32334,
+      "sha256": "7ed4375696cf6f5eefbc4506d401cad712acdc879b343c98f667a5e1bb065b17"
+    },
+    {
+      "path": "edge/keyboard-apis.json",
+      "bytes": 313910,
+      "sha256": "56e4d59f83b5faeb87c7a0031887d0c4fb73d438eb41420b67d642aaaba80067"
+    },
+    {
+      "path": "edge/keyboard-catalogue-forward-001-link.png",
+      "bytes": 59101,
+      "sha256": "daf3031b3c056f98a82299b903f2ed17481e2ce03c992d501e3a175da7972a2b"
+    },
+    {
+      "path": "edge/keyboard-catalogue-forward-006-button.png",
+      "bytes": 59120,
+      "sha256": "12d997b6b5dc43b259be06c054beef84844fa18d89a95cd8e6c3f8e56a3609bb"
+    },
+    {
+      "path": "edge/keyboard-catalogue-forward-007-input.png",
+      "bytes": 59061,
+      "sha256": "8025441162ef3040499497ea6f0bc97a2e937a5d5dc69285f687d750e63e915f"
+    },
+    {
+      "path": "edge/keyboard-catalogue-forward-009-select.png",
+      "bytes": 59030,
+      "sha256": "da5a30822ce2162ffdc1260c4198bd84d75bf3df9d2b9cac0fe12b3a7b7faeff"
+    },
+    {
+      "path": "edge/keyboard-catalogue-forward-013-checkbox.png",
+      "bytes": 58983,
+      "sha256": "f6c0fdbf84cb18d8ddb39b933c2173fd5889299123e0f4b484a88d01cac5a08f"
+    },
+    {
+      "path": "edge/keyboard-catalogue-reverse-002-button.png",
+      "bytes": 59207,
+      "sha256": "aaa3c77d3616515b334472e09ad64c5deeb9beccda130a64cae1be96dd1df22d"
+    },
+    {
+      "path": "edge/keyboard-catalogue.json",
+      "bytes": 513549,
+      "sha256": "5254bb522aeacb74e9cb1bc68d3ff0dcca8310361e2944b518b59f4eeb1962a6"
+    },
+    {
+      "path": "edge/keyboard-dashboard-forward-001-link.png",
+      "bytes": 62554,
+      "sha256": "b2a7fdbed1e9d675f8158c39593db0d41e752932e4f4a0c0d520eefe629d9149"
+    },
+    {
+      "path": "edge/keyboard-dashboard-reverse-002-link.png",
+      "bytes": 62763,
+      "sha256": "ce2f65ac8f591ab1b2a0f587716252c64e2b16e57157831002d2093abe4df21d"
+    },
+    {
+      "path": "edge/keyboard-dashboard.json",
+      "bytes": 249186,
+      "sha256": "6997bb6cbc355a82e139f061ebdb355fa4382c9320d003b2db8e09808bf14ef7"
+    },
+    {
+      "path": "edge/keyboard-defects-forward-001-link.png",
+      "bytes": 57514,
+      "sha256": "3ff61959e5dfd8f583c99c3feb95c317eae6ffdcab9f886bd784a50e1add838a"
+    },
+    {
+      "path": "edge/keyboard-defects-forward-007-select.png",
+      "bytes": 57708,
+      "sha256": "db51ff913ddf0d6663a4b5fae115e70800529a0919e424319a75284b6ce61f6d"
+    },
+    {
+      "path": "edge/keyboard-defects-forward-009-input.png",
+      "bytes": 57717,
+      "sha256": "bf95aa46895c6d3fb7060a22bafd2407d3fbd445b49ba92314066ec686618f1c"
+    },
+    {
+      "path": "edge/keyboard-defects-forward-010-button.png",
+      "bytes": 57600,
+      "sha256": "dced09eca5cc53a51248febb195d023ec33539369e0f17f518f4d5efd0f85dcf"
+    },
+    {
+      "path": "edge/keyboard-defects-reverse-002-button.png",
+      "bytes": 57614,
+      "sha256": "707067ffa7e34fb16b2398ea05d3549d9ad3787fb16549d562d9209968394c21"
+    },
+    {
+      "path": "edge/keyboard-defects.json",
+      "bytes": 776713,
+      "sha256": "1c1b9c144947aa91e695fababe1890eec28e8481c243a6577e24a340c75a9958"
+    },
+    {
+      "path": "edge/keyboard-narrow-catalogue-forward-001-link.png",
+      "bytes": 36579,
+      "sha256": "a0f00ad6bf4a0ba114c146aeafa3feffa73626df5896970b3b7345dc3bb56131"
+    },
+    {
+      "path": "edge/keyboard-narrow-catalogue-forward-006-button.png",
+      "bytes": 36586,
+      "sha256": "1ddd2fa1e7d06745bfb06fad0f0dc1e7ed429d8d902be0d4e2bdf6c227d51914"
+    },
+    {
+      "path": "edge/keyboard-narrow-catalogue-forward-008-input.png",
+      "bytes": 36327,
+      "sha256": "5ca77700fd2df3a43539bfe595b7abf79722edc74133e2d0b065cb64e7832a12"
+    },
+    {
+      "path": "edge/keyboard-narrow-catalogue-forward-009-input.png",
+      "bytes": 35858,
+      "sha256": "fa7a0a253fbb8732a07862c70fcd9e65f07ec5e4dd5d2e3789380fb161989528"
+    },
+    {
+      "path": "edge/keyboard-narrow-catalogue-forward-010-select.png",
+      "bytes": 35211,
+      "sha256": "9b21ffb578020a0cddbc5defbc63a13bf1df3f3818a46a45b070b21be3507cfa"
+    },
+    {
+      "path": "edge/keyboard-narrow-catalogue-forward-011-input.png",
+      "bytes": 24991,
+      "sha256": "6c6578c1f88999db53cbb850652800e2a4cd3242af82dbf4430f92ff46728f44"
+    },
+    {
+      "path": "edge/keyboard-narrow-catalogue-forward-013-input.png",
+      "bytes": 27796,
+      "sha256": "67f17d09cb9c9f0aaf8d5891a21f4da1909abbe3a109e1067759d0ea6396318b"
+    },
+    {
+      "path": "edge/keyboard-narrow-catalogue-forward-014-checkbox.png",
+      "bytes": 26507,
+      "sha256": "4a226ce7a247f8b808da97c52468bd1758fff8d390c551a8c302a2b9b537569e"
+    },
+    {
+      "path": "edge/keyboard-narrow-catalogue-forward-017-link.png",
+      "bytes": 25138,
+      "sha256": "301fc645b8c6a8016379b8d6f06e37fbe84f4bceed5aa1cc75d0702a12f2cc36"
+    },
+    {
+      "path": "edge/keyboard-narrow-catalogue-reverse-002-button.png",
+      "bytes": 27827,
+      "sha256": "f116c3935eec340b2ad45b0022f10544047a3dddb93a3115ce21d0bb0ab05de8"
+    },
+    {
+      "path": "edge/keyboard-narrow-catalogue-reverse-010-other.png",
+      "bytes": 25144,
+      "sha256": "ea694c310d83d76849ec352956bb10bb5f4998d3fe3bbfeae0ed7a595dfdd262"
+    },
+    {
+      "path": "edge/keyboard-narrow-catalogue-reverse-011-button.png",
+      "bytes": 26739,
+      "sha256": "16c974283a31713e62b2b03ad9b798b95b6d6d02dfbbc0439c3a5d17f7c90de5"
+    },
+    {
+      "path": "edge/keyboard-narrow-catalogue-reverse-012-link.png",
+      "bytes": 26535,
+      "sha256": "ea105a525a48350bf753bc715c80ef169c9654948a2d1363993cc66036bd11c1"
+    },
+    {
+      "path": "edge/keyboard-narrow-catalogue-reverse-013-link.png",
+      "bytes": 34972,
+      "sha256": "a8133ef2fe89382ad5c603226c33187ee4c3615186de7feda41b4a753b973942"
+    },
+    {
+      "path": "edge/keyboard-narrow-catalogue.json",
+      "bytes": 567793,
+      "sha256": "18a05c2f784f62b19db1fda606a09de037a79cbc0db575f9390e1af4dfc71537"
+    },
+    {
+      "path": "edge/keyboard-narrow-orders-forward-001-link.png",
+      "bytes": 30994,
+      "sha256": "0a983efc732589de240abd4718bf0433b43298ab7b0ec4500cccf5d91469fd0f"
+    },
+    {
+      "path": "edge/keyboard-narrow-orders-forward-006-button.png",
+      "bytes": 31129,
+      "sha256": "550e76800b99f8052139a4f153633ec48d2bd1d8bf33f392f8f75bb934a8cd17"
+    },
+    {
+      "path": "edge/keyboard-narrow-orders-forward-008-input.png",
+      "bytes": 30688,
+      "sha256": "2cc63ea799efc619e9a2267d22dc28119df78204cbc10f1d7a006beb236ef335"
+    },
+    {
+      "path": "edge/keyboard-narrow-orders-forward-009-input.png",
+      "bytes": 32630,
+      "sha256": "cf67e212e7549843884848f40cbdac9e0657d067d423e996c948f441dc9112dd"
+    },
+    {
+      "path": "edge/keyboard-narrow-orders-forward-010-select.png",
+      "bytes": 31932,
+      "sha256": "b601182d82ec81b30d0a12bfed5e59802bc8e0f5ef4a3357205be4123f404dea"
+    },
+    {
+      "path": "edge/keyboard-narrow-orders-forward-011-input.png",
+      "bytes": 27657,
+      "sha256": "837098bf3bd6d378594396b789e445f879c729dbbc7e522cf1554b5cd3f2fd19"
+    },
+    {
+      "path": "edge/keyboard-narrow-orders-forward-012-input.png",
+      "bytes": 24737,
+      "sha256": "ea028fc825d903483c81e2b4e7cf90ebd6983d367310c92717e1525dc4a0b407"
+    },
+    {
+      "path": "edge/keyboard-narrow-orders-forward-013-input.png",
+      "bytes": 24426,
+      "sha256": "2dadef653e040b82d7cfa11a58e799ba1f1b99f5ce0a3f2f1ea1ebb8aab0639f"
+    },
+    {
+      "path": "edge/keyboard-narrow-orders-forward-014-checkbox.png",
+      "bytes": 24642,
+      "sha256": "831ae640ccd4ca761cd925910e8e91c770aeccb549ecef5cecc7f534828c924d"
+    },
+    {
+      "path": "edge/keyboard-narrow-orders-forward-017-link.png",
+      "bytes": 23622,
+      "sha256": "bf9929034ec5e1528e3a9db03e0d807fe9571f0ac44339a6dd9fb04d3c5c2ed1"
+    },
+    {
+      "path": "edge/keyboard-narrow-orders-reverse-002-button.png",
+      "bytes": 25018,
+      "sha256": "57e7c6fc111fff71af7ca45dcc825ebf5d9fb16deb6b93359c6bd7063b151ead"
+    },
+    {
+      "path": "edge/keyboard-narrow-orders-reverse-010-other.png",
+      "bytes": 22545,
+      "sha256": "768145a27c961b89f0d5915aac5f67d6bda61eff4677326de029b78c02ebaf83"
+    },
+    {
+      "path": "edge/keyboard-narrow-orders-reverse-011-button.png",
+      "bytes": 22887,
+      "sha256": "3cbfa5df75ffd1a9968bfb24b77ca03f66486e3e241692289a473d876b80a707"
+    },
+    {
+      "path": "edge/keyboard-narrow-orders-reverse-012-link.png",
+      "bytes": 22106,
+      "sha256": "c53af1797b010c0741b8b71c04e17522f021c3d5dc38de82c058933bf5cc5064"
+    },
+    {
+      "path": "edge/keyboard-narrow-orders-reverse-013-link.png",
+      "bytes": 26242,
+      "sha256": "e053dc8f459a2c7b832ecd73927eb3f72096cad97a2e4efff8fec234e092b427"
+    },
+    {
+      "path": "edge/keyboard-narrow-orders-reverse-014-link.png",
+      "bytes": 33687,
+      "sha256": "a1c6b1846691461afe8bef31db42f85c9b91f862045579b51182b08ae0d0b085"
+    },
+    {
+      "path": "edge/keyboard-narrow-orders-reverse-015-link.png",
+      "bytes": 31176,
+      "sha256": "aff9bc4a616e66e290c0ce9c9ad4769b1bc8b3d898567aa405894d007b73c37c"
+    },
+    {
+      "path": "edge/keyboard-narrow-orders.json",
+      "bytes": 575881,
+      "sha256": "632f98c52b02db7a189ecce36e4b1b8e0841be98f5e4bf8e1f3fa4432011fa7e"
+    },
+    {
+      "path": "edge/keyboard-orders-forward-001-link.png",
+      "bytes": 65391,
+      "sha256": "995bc5ca2a3ef3b49772409c85edc34fe4857921f5c835182dda63651d10d983"
+    },
+    {
+      "path": "edge/keyboard-orders-forward-006-button.png",
+      "bytes": 65393,
+      "sha256": "fab2b334c1beaaf91cc00d8d939208f8b92a7130dea3c291a51e0d304f15051f"
+    },
+    {
+      "path": "edge/keyboard-orders-forward-007-input.png",
+      "bytes": 65341,
+      "sha256": "d8b8c135de2831c0de5ca3426809a34657760b9c5d5a708352e2a09425ca5942"
+    },
+    {
+      "path": "edge/keyboard-orders-forward-009-select.png",
+      "bytes": 65292,
+      "sha256": "54339c362edbe2031f1a760ef5c3ba814a3d41a9f1c23fb8ef5e2c093c02fddf"
+    },
+    {
+      "path": "edge/keyboard-orders-forward-013-checkbox.png",
+      "bytes": 65279,
+      "sha256": "a08b24c12e603f575ae2c9bee6e8b1a5506a3f1eb8611f0c4a41fefc10199b90"
+    },
+    {
+      "path": "edge/keyboard-orders-reverse-002-button.png",
+      "bytes": 65507,
+      "sha256": "69cfae4883930d5516c21b39a9fe9f5a75a8c6bd1350a9e46bd71c7d17b4a9c8"
+    },
+    {
+      "path": "edge/keyboard-orders.json",
+      "bytes": 513535,
+      "sha256": "de605bfec53940b202a0bf3a2614dca0ca02b7eb4ff71958860fcd64ae4cc845"
+    },
+    {
+      "path": "edge/keyboard-registration-forward-001-link.png",
+      "bytes": 25559,
+      "sha256": "6f0e62fa3f629fb5ab41d73411a77f8ea11b3f7ebb493cdf6c0abff865211118"
+    },
+    {
+      "path": "edge/keyboard-registration-forward-006-input.png",
+      "bytes": 25479,
+      "sha256": "7855c774ec5699000ea0c07eeef6d0d167b2a7984f0e6dc1ded79acf24a69918"
+    },
+    {
+      "path": "edge/keyboard-registration-forward-008-textarea.png",
+      "bytes": 25483,
+      "sha256": "e67b99e1091aa836ecdf43ff012ae7b84fe9c886bf362d1544a9e26b266aa40d"
+    },
+    {
+      "path": "edge/keyboard-registration-forward-009-button.png",
+      "bytes": 25616,
+      "sha256": "7fecac042dacb03005d22a3d247f5fe2335ae55b60e680708c67a5b056cc3f99"
+    },
+    {
+      "path": "edge/keyboard-registration-reverse-002-button.png",
+      "bytes": 25616,
+      "sha256": "7fecac042dacb03005d22a3d247f5fe2335ae55b60e680708c67a5b056cc3f99"
+    },
+    {
+      "path": "edge/keyboard-registration.json",
+      "bytes": 346991,
+      "sha256": "62b9259af32ee3bffdc0045ccb9b975a68c0c29950134a4d035126ed3eecfdf1"
+    },
+    {
+      "path": "edge/layout-desktop-apis.json",
+      "bytes": 16235,
+      "sha256": "cd61c47be0aa226c3346787df7172192847d19ab4d556e53d43a43999bea39a5"
+    },
+    {
+      "path": "edge/layout-desktop-catalogue.json",
+      "bytes": 68638,
+      "sha256": "e9d2b32661fc851e364694d72da73da2ac3b6a1eff6d6f3e22b6d946960e394d"
+    },
+    {
+      "path": "edge/layout-desktop-dashboard.json",
+      "bytes": 69979,
+      "sha256": "79693a33d66f55a0381b106729766ab1ff9a5097faeca6210937f98309ca3dfd"
+    },
+    {
+      "path": "edge/layout-desktop-defects.json",
+      "bytes": 77823,
+      "sha256": "739516c7adb5c3c54949685d4e3ff08b01a53783f67ff04bc2aae5ef8aff82be"
+    },
+    {
+      "path": "edge/layout-desktop-orders.json",
+      "bytes": 68781,
+      "sha256": "18ce6dde003b2855729e40306ef7d067e31a3759cbe029cfcd7b34ecf8600d21"
+    },
+    {
+      "path": "edge/layout-desktop-registration.json",
+      "bytes": 18322,
+      "sha256": "2d43f58572c6120839dc5e777c9965f1609b96a151f23583fb87b7f30d7e6243"
+    },
+    {
+      "path": "edge/layout-narrow-apis.json",
+      "bytes": 16164,
+      "sha256": "b1348eb38c508881b0ce28677141d390ab15d9426d71cf2b22c6882bc53f8dc3"
+    },
+    {
+      "path": "edge/layout-narrow-catalogue.json",
+      "bytes": 66761,
+      "sha256": "922d95b468769971b4ff744d3f4cdcf295403e50e3c7c2bdbc7fe9f99e0f606d"
+    },
+    {
+      "path": "edge/layout-narrow-dashboard.json",
+      "bytes": 68695,
+      "sha256": "f151a824186ea48a27c84026c55d39a54ad5b7ba896def4bccf5e21c2e3c4305"
+    },
+    {
+      "path": "edge/layout-narrow-defects.json",
+      "bytes": 73357,
+      "sha256": "8312bc302c7a54137349a5144d45bd6fe98a432b6753459e77f8fad7ccd63d48"
+    },
+    {
+      "path": "edge/layout-narrow-orders.json",
+      "bytes": 66580,
+      "sha256": "552181c5479f7aa457f1b0019dfe16f1db9e297ee3961529fc470bdcc604a2c8"
+    },
+    {
+      "path": "edge/layout-narrow-registration.json",
+      "bytes": 18313,
+      "sha256": "ee1e18484fd57d70fcbdda3edabebef6452b87155b31700c1e46a92bb9afc1c8"
+    },
+    {
+      "path": "edge/narrow-apis-full.png",
+      "bytes": 32822,
+      "sha256": "04b709f1ad12f325096ba5bd4b45f8e4f6d35c11de8e63b84b993bf20e5bce24"
+    },
+    {
+      "path": "edge/narrow-apis-viewport.png",
+      "bytes": 32822,
+      "sha256": "04b709f1ad12f325096ba5bd4b45f8e4f6d35c11de8e63b84b993bf20e5bce24"
+    },
+    {
+      "path": "edge/narrow-catalogue-full.png",
+      "bytes": 54309,
+      "sha256": "333959348d2d129ab1ac9486a2e7caf61f6edf7fa41ab820b883d299be7c1d89"
+    },
+    {
+      "path": "edge/narrow-catalogue-table-1-rightedge.png",
+      "bytes": 35001,
+      "sha256": "95d59264f26c707585f631c8af63267f5cb5a7235f8d3260febed3fa0e9604ea"
+    },
+    {
+      "path": "edge/narrow-catalogue-viewport.png",
+      "bytes": 36221,
+      "sha256": "b324f0bd11bfb5a4b8d2afb69e9e1263a80d534ca13f1d66edd2cec561d3ad39"
+    },
+    {
+      "path": "edge/narrow-dashboard-full.png",
+      "bytes": 109575,
+      "sha256": "46c04300d39ff36a460c0b8c7b3de726198281ff5a0fbae597289b1783323538"
+    },
+    {
+      "path": "edge/narrow-dashboard-viewport.png",
+      "bytes": 23900,
+      "sha256": "78b6d38acca3b865b0cff5a81773156b15ac5bb215543f3ed2c287dd3241837f"
+    },
+    {
+      "path": "edge/narrow-defects-full.png",
+      "bytes": 60714,
+      "sha256": "710e00ef8c172e83f9217788b70c326ad403808abf7ce59b58786ffd23a732a9"
+    },
+    {
+      "path": "edge/narrow-defects-viewport.png",
+      "bytes": 27113,
+      "sha256": "ab3733f91619c8d1f254d071b93b0a1f6e7198f16c5e35302702fafdc121fd5b"
+    },
+    {
+      "path": "edge/narrow-orders-full.png",
+      "bytes": 60323,
+      "sha256": "23ece3de2784ca513d42f7098ffc830aeb37d77d954d3a5cfad111d1665d2115"
+    },
+    {
+      "path": "edge/narrow-orders-table-1-rightedge.png",
+      "bytes": 26801,
+      "sha256": "09f2e134e10621fb6bea964af6393aa697ef139cb3a23fb80b53ba831d330239"
+    },
+    {
+      "path": "edge/narrow-orders-viewport.png",
+      "bytes": 30635,
+      "sha256": "a363bbad480102708bf74ad5df2a00f7b4f35b749129f592f2afc6cbd02bc48c"
+    },
+    {
+      "path": "edge/narrow-registration-full.png",
+      "bytes": 21618,
+      "sha256": "27265f7fb689e7a19f319260f64987728e7efa6f9ef0b8072f97a7523525889d"
+    },
+    {
+      "path": "edge/narrow-registration-viewport.png",
+      "bytes": 21618,
+      "sha256": "27265f7fb689e7a19f319260f64987728e7efa6f9ef0b8072f97a7523525889d"
+    },
+    {
+      "path": "edge/narrow-settled/keyboard-narrow-catalogue-forward-001-link.png",
+      "bytes": 36579,
+      "sha256": "a0f00ad6bf4a0ba114c146aeafa3feffa73626df5896970b3b7345dc3bb56131"
+    },
+    {
+      "path": "edge/narrow-settled/keyboard-narrow-catalogue-forward-006-button.png",
+      "bytes": 36586,
+      "sha256": "1ddd2fa1e7d06745bfb06fad0f0dc1e7ed429d8d902be0d4e2bdf6c227d51914"
+    },
+    {
+      "path": "edge/narrow-settled/keyboard-narrow-catalogue-forward-008-input.png",
+      "bytes": 28960,
+      "sha256": "cb16f9736486d5bc52dc6ea4a5cf8c8750c61eb16fff9d7f159c2408e356861f"
+    },
+    {
+      "path": "edge/narrow-settled/keyboard-narrow-catalogue-forward-010-select.png",
+      "bytes": 28972,
+      "sha256": "ab48acbbc33188109f20fffac8fd58ed5665d222a428ac6b129f650195651040"
+    },
+    {
+      "path": "edge/narrow-settled/keyboard-narrow-catalogue-forward-014-checkbox.png",
+      "bytes": 25342,
+      "sha256": "b80450d0470a3832f942838e534b87fc4c84f216a38f8f8463d9ca6e6dc87ed6"
+    },
+    {
+      "path": "edge/narrow-settled/keyboard-narrow-catalogue-reverse-002-button.png",
+      "bytes": 25670,
+      "sha256": "973f2ad787fdb8cc151022d00a6bcceeaf0e44c53163afce31c3141347f26131"
+    },
+    {
+      "path": "edge/narrow-settled/keyboard-narrow-catalogue.json",
+      "bytes": 547700,
+      "sha256": "ed0ade8d3ac306673711f0edb1f7b5c577f2aacd469d919851603f3970e4cb3a"
+    },
+    {
+      "path": "edge/narrow-settled/keyboard-narrow-orders-forward-001-link.png",
+      "bytes": 30994,
+      "sha256": "0a983efc732589de240abd4718bf0433b43298ab7b0ec4500cccf5d91469fd0f"
+    },
+    {
+      "path": "edge/narrow-settled/keyboard-narrow-orders-forward-006-button.png",
+      "bytes": 31129,
+      "sha256": "550e76800b99f8052139a4f153633ec48d2bd1d8bf33f392f8f75bb934a8cd17"
+    },
+    {
+      "path": "edge/narrow-settled/keyboard-narrow-orders-forward-008-input.png",
+      "bytes": 25153,
+      "sha256": "aab0f418e5adbfbdec95f8712a3851b5b82ad4d52deb403bcc5b7dc088951e4e"
+    },
+    {
+      "path": "edge/narrow-settled/keyboard-narrow-orders-forward-010-select.png",
+      "bytes": 25167,
+      "sha256": "07cf6dc9c847a46eb4d4b133990db5ad107532efcc2a3ba067c944038982a7e0"
+    },
+    {
+      "path": "edge/narrow-settled/keyboard-narrow-orders-forward-014-checkbox.png",
+      "bytes": 22499,
+      "sha256": "df6afbb41d4708830d5c410e95e29dd996677c0180ff31c2adb315f3f871b741"
+    },
+    {
+      "path": "edge/narrow-settled/keyboard-narrow-orders-reverse-002-button.png",
+      "bytes": 22820,
+      "sha256": "8329024f65fa40141028348fd50aa59ceddee43834a5bb0062306372e149b891"
+    },
+    {
+      "path": "edge/narrow-settled/keyboard-narrow-orders.json",
+      "bytes": 549153,
+      "sha256": "1514c214117d9a97dda71e3a1c75710074a177cbc1e4a7b2e46e2fbaceb566c9"
+    },
+    {
+      "path": "environment.json",
+      "bytes": 2186,
+      "sha256": "60c2a703513c74fd84969cae5dcf58186fd63d96082a1a41b3d83c47af78c677"
+    },
+    {
+      "path": "evidence-validation.json",
+      "bytes": 27983,
+      "sha256": "0c681bb857f7acfbbd1086d6f6ec1c3d19b18678db26d55a4123e5fb51e2a6da"
+    },
+    {
+      "path": "execution.log",
+      "bytes": 2077,
+      "sha256": "22ec15a844697c1465a55f897bd59cfff9f04ad54149ef30d1757ac3b1fb98ff"
+    },
+    {
+      "path": "findings.md",
+      "bytes": 8323,
+      "sha256": "efd7f26157d8e1af33739ebd34dacb16be81f2721bf8e63bd50f143ce5ae2bcb"
+    },
+    {
+      "path": "host-runtime.json",
+      "bytes": 520,
+      "sha256": "53fc22967db127ade1010ab60b71f905eb5fb012c3c8c290ad3cd68944406ca6"
+    },
+    {
+      "path": "listeners.json",
+      "bytes": 195,
+      "sha256": "9568f748209f380a634f3223b6add62ee72afb68ba478a00ec6512f32391662d"
+    },
+    {
+      "path": "narrow-keyboard-settled-verification.json",
+      "bytes": 4273,
+      "sha256": "5c2b822a4f41aec1942adac3c8322fdd9136859b53d1faf60b04a5cf87d53577"
+    },
+    {
+      "path": "narrow-keyboard-verification.json",
+      "bytes": 4221,
+      "sha256": "92a7dda7416a66a6bb07ab239ad24ac69e05670dba00753edaf05eadedf4d12a"
+    },
+    {
+      "path": "observations.csv",
+      "bytes": 32808,
+      "sha256": "1bfc52a77d9684ebf349a45dc62ed402b2d909d8ec8d2568a4a8d12be5e9cdd7"
+    },
+    {
+      "path": "README.md",
+      "bytes": 16704,
+      "sha256": "5d0f5c3984c6c3f497230006da3955305397b30916e47080d7cac02a1225a586"
+    },
+    {
+      "path": "runner-source/axe-dependency.json",
+      "bytes": 1068,
+      "sha256": "8ae238851801ffc4f6219ed808b1ec195ca8b442971b13875c078e0731f43f58"
+    },
+    {
+      "path": "runner-source/browser-accessibility.cjs",
+      "bytes": 3389,
+      "sha256": "baf43d4fe1cf13474cd72e0647db576b3fe50290e0b77b8ebd16b68be573e123"
+    },
+    {
+      "path": "runner-source/browser-keyboard-settled.cjs",
+      "bytes": 17173,
+      "sha256": "2a5841a9f8a73d56e86f0db2177582bbc4ce51109109636cdf7b357d3ddfc30e"
+    },
+    {
+      "path": "runner-source/browser-keyboard.cjs",
+      "bytes": 16342,
+      "sha256": "45c19f5952b00a15b0c8dca85375eb1024659240999f905f68520aa886af2650"
+    },
+    {
+      "path": "runner-source/browser-layout.cjs",
+      "bytes": 17174,
+      "sha256": "f84c78c42ca291b9c43fc48c578ca0b746df916b278d2f9e7247e2a4c015dbbf"
+    },
+    {
+      "path": "runner-source/Prepare-EvidenceRecords.py",
+      "bytes": 15235,
+      "sha256": "994e4418c2225acbc25a7d612e33d2ff946c0c767d30ac09ca2ee4687b7e5500"
+    },
+    {
+      "path": "runner-source/Run-BrowserChecks-finalizer.cjs",
+      "bytes": 21805,
+      "sha256": "a021f0c16f12aec5c218681892cdc16db35287fdf16a7236caa02aa11972995e"
+    },
+    {
+      "path": "runner-source/Run-BrowserChecks.cjs",
+      "bytes": 21197,
+      "sha256": "d5343b063f218de4d634186e4f306d51703e4a0c66eec873c05296a53e32bad8"
+    },
+    {
+      "path": "runner-source/validate_browser_csv.py",
+      "bytes": 8246,
+      "sha256": "501290685ef83f59a981c302b5ffdb6d07d47f74add9a9c05a79de0aca2f1c90"
+    },
+    {
+      "path": "runner-source/Verify-Evidence.py",
+      "bytes": 10902,
+      "sha256": "e966ac045aac90bd857b795e12a6f23273c76c9f9cce4cf853c0cad3cb91bd54"
+    },
+    {
+      "path": "runner-source/Verify-NarrowKeyboard-settled.cjs",
+      "bytes": 4488,
+      "sha256": "256b2e7fc43e77de0a07dea015206ca57f9edabe6bc63254b85788007b0aa637"
+    },
+    {
+      "path": "runner-source/Verify-NarrowKeyboard.cjs",
+      "bytes": 4145,
+      "sha256": "51ca18d0321784eee4ceb3fbd93e33fc5b5320dc54c588660bf8826653d2ef1a"
+    },
+    {
+      "path": "source-sha256.csv",
+      "bytes": 7504,
+      "sha256": "7eb527cd05962f18c20edc12fa1cf1f7bb3f84767db4965d23ea02d9815d9043"
+    },
+    {
+      "path": "sqa19-heuristic-review.md",
+      "bytes": 4905,
+      "sha256": "b3c0cab14453bc7afd59a2feb1e4481618adb096428a33973f7f1d88795e3509"
+    },
+    {
+      "path": "sqa19-register-preserved.json",
+      "bytes": 108,
+      "sha256": "5fed6734cb8eb6b7f186ed16e991d3d556d55f79ec9cdba64d0f154c7ec72cd9"
+    },
+    {
+      "path": "working-tree-status.txt",
+      "bytes": 34990,
+      "sha256": "747dae5340f019a7f07a48b538cb474b258355106512acd17cb36db2c297d577"
+    }
+  ],
+  "fileCount": 316,
+  "bytes": 30799030
+}

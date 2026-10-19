@@ -1,0 +1,41 @@
+{
+  "CapturedAtUtc": "2026-10-18T21:53:51.9998735+13:00",
+  "CapturedAtAuckland": "2026-10-18T21:53:51.9998735+13:00",
+  "Branch": "qa/sqa19-sqa20-manual-validation",
+  "BaseCommit": "8e69c6273080b01db100c29cc76eb33a798e84af",
+  "InitialWorkingTree": "Clean",
+  "PreparationChanges": "Uncommitted additional tools and evidence only",
+  "OS": "Microsoft Windows 10.0.26200",
+  "Architecture": "X64",
+  "SDK": "10.0.402",
+  "HostRuntimeModule": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\8.0.32\\coreclr.dll",
+  "HostProcessId": 34240,
+  "TestCounters": {
+    "total": 71,
+    "executed": 71,
+    "passed": 71,
+    "failed": 0,
+    "error": 0,
+    "timeout": 0,
+    "aborted": 0,
+    "inconclusive": 0,
+    "passedButRunAborted": 0,
+    "notRunnable": 0,
+    "notExecuted": 0,
+    "disconnected": 0,
+    "warning": 0,
+    "completed": 0,
+    "inProgress": 0,
+    "pending": 0
+  },
+  "TestTimes": {
+    "creation": "2026-10-18T21:51:17.6889473+13:00",
+    "queuing": "2026-10-18T21:51:17.6889477+13:00",
+    "start": "2026-10-18T21:51:03.1525414+13:00",
+    "finish": "2026-10-18T21:51:21.0300062+13:00"
+  },
+  "CI": "N/A: local preparation",
+  "Browser": "Codex in-app browser; participant browser/version to be recorded at session",
+  "PowerShell": "7.6.5",
+  "HumanUsabilityStatus": "NOT RUN"
+}

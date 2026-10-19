@@ -1,0 +1,72 @@
+{
+  "CapturedAtUtc": "2026-10-18T08:52:40.8560141+00:00",
+  "URL": "http://localhost:51919/",
+  "PreparationStatus": "PASS",
+  "HumanUsabilityStatus": "NOT RUN",
+  "Data": "Synthetic evaluator results; no external API requests made",
+  "RecentCheckMessagesInOrder": [
+    "Expected HTTP 200 but received 400.",
+    "Response took 1001 ms, exceeding the 1000 ms threshold.",
+    "Endpoint is marked authentication-required but unauthenticated request returned HTTP 200.",
+    "Expected content type containing 'application/json' but received 'text/html'.",
+    "Request failed: Request timed out."
+  ],
+  "FailedRowCount": 5,
+  "DashboardUnchangedAfterBlockedActions": true,
+  "HTTPChecks": [
+    {
+      "Method": "GET",
+      "Path": "/",
+      "Status": 200,
+      "PreparationCheck": "PASS"
+    },
+    {
+      "Method": "HEAD",
+      "Path": "/",
+      "Status": 200,
+      "PreparationCheck": "PASS"
+    },
+    {
+      "Method": "GET",
+      "Path": "/Home/Index",
+      "Status": 200,
+      "PreparationCheck": "PASS"
+    },
+    {
+      "Method": "GET",
+      "Path": "/css/site.css",
+      "Status": 200,
+      "PreparationCheck": "PASS"
+    },
+    {
+      "Method": "POST",
+      "Path": "/Apis/RunChecks",
+      "Status": 405,
+      "PreparationCheck": "PASS"
+    },
+    {
+      "Method": "POST",
+      "Path": "/",
+      "Status": 405,
+      "PreparationCheck": "PASS"
+    },
+    {
+      "Method": "GET",
+      "Path": "/Apis/RunChecks",
+      "Status": 404,
+      "PreparationCheck": "PASS"
+    },
+    {
+      "Method": "GET",
+      "Path": "/Apis/Create",
+      "Status": 404,
+      "PreparationCheck": "PASS"
+    },
+    {
+      "Method": "GET",
+      "Path": "/",
+      "Status": 200,
+      "PreparationCheck": "PASS"
+    }
+  ]
+}
