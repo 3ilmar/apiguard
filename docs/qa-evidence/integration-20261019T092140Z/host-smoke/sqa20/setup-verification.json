@@ -1,0 +1,134 @@
+{
+  "Verification": "Automated local HTTP setup checks only; no browser/manual execution",
+  "verified": true,
+  "StartedAtUtc": "2026-10-19T09:28:25.0555600+00:00",
+  "CompletedAtUtc": "2026-10-19T09:28:25.3820613+00:00",
+  "BaseUrl": "http://localhost:51920/",
+  "HttpClient": "System.Net.Http.HttpClient; UseProxy=false; AllowAutoRedirect=false",
+  "DemoRoleSetup": {
+    "CookieName": "apiguard_role",
+    "RegistrationInspectionRole": "Admin",
+    "CookieScope": "http://localhost:51920/",
+    "OtherRequests": "No role cookie; application default Viewer",
+    "NoCookieRegistrationStatus": 302,
+    "NoCookieRegistrationLocation": "/Apis",
+    "ApplicationRoleFiltersPreserved": true
+  },
+  "Pages": [
+    {
+      "Path": "/",
+      "HttpStatus": 200,
+      "DemoRole": "No cookie; application default Viewer",
+      "Verified": true
+    },
+    {
+      "Path": "/Apis",
+      "HttpStatus": 200,
+      "DemoRole": "No cookie; application default Viewer",
+      "Verified": true
+    },
+    {
+      "Path": "/Apis/Create",
+      "HttpStatus": 200,
+      "DemoRole": "Admin",
+      "Verified": true
+    },
+    {
+      "Path": "/Apis/Details/20200000-0000-0000-0000-000000000001",
+      "HttpStatus": 200,
+      "DemoRole": "No cookie; application default Viewer",
+      "Verified": true
+    },
+    {
+      "Path": "/Apis/Details/20200000-0000-0000-0000-000000000002",
+      "HttpStatus": 200,
+      "DemoRole": "No cookie; application default Viewer",
+      "Verified": true
+    },
+    {
+      "Path": "/Defects",
+      "HttpStatus": 200,
+      "DemoRole": "No cookie; application default Viewer",
+      "Verified": true
+    },
+    {
+      "Path": "/css/site.css",
+      "HttpStatus": 200,
+      "DemoRole": "No cookie; application default Viewer",
+      "Verified": true
+    }
+  ],
+  "Fixtures": {
+    "RegisteredApis": 2,
+    "ConfiguredEndpoints": 2,
+    "Results": 8,
+    "PassingResults": 4,
+    "FailingResults": 4,
+    "OpenDefects": 4,
+    "SeverityStatuses": {
+      "Critical": "New",
+      "High": "Assigned",
+      "Medium": "InProgress",
+      "Low": "Retest"
+    },
+    "RecordsWithinLastHours": 24,
+    "SyntheticData": true
+  },
+  "Csv": {
+    "ResultsColumns": 15,
+    "DefectsColumns": 21,
+    "QuotedFieldsPreserved": true,
+    "DownloadHeadersVerified": true,
+    "FilteredFailedApiResults": 4,
+    "FilteredAssignedHighDefects": 1,
+    "UnchangedAfterRejectedWrites": true
+  },
+  "RejectedRequests": [
+    {
+      "Method": "POST",
+      "Path": "/Apis/Create",
+      "HttpStatus": 405,
+      "Verified": true
+    },
+    {
+      "Method": "POST",
+      "Path": "/Role/SetRole",
+      "HttpStatus": 405,
+      "Verified": true
+    },
+    {
+      "Method": "POST",
+      "Path": "/Apis/AddEndpoint/20200000-0000-0000-0000-000000000001",
+      "HttpStatus": 405,
+      "Verified": true
+    },
+    {
+      "Method": "POST",
+      "Path": "/Apis/RunChecks/20200000-0000-0000-0000-000000000001",
+      "HttpStatus": 405,
+      "Verified": true
+    },
+    {
+      "Method": "POST",
+      "Path": "/Defects/Update/b5843149-ebe2-4184-89cf-1f44f4138e71",
+      "HttpStatus": 405,
+      "Verified": true
+    },
+    {
+      "Method": "PUT",
+      "Path": "/",
+      "HttpStatus": 405,
+      "Verified": true
+    },
+    {
+      "Method": "GET",
+      "Path": "/Apis/RunChecks/20200000-0000-0000-0000-000000000001",
+      "HttpStatus": 405,
+      "Verified": true
+    }
+  ],
+  "HumanAcceptance": "NOT PERFORMED",
+  "BrowserExecution": "NOT PERFORMED BY THIS SCRIPT; automated HTTP setup only",
+  "HistoricalAutomatedSqa20": "19 October execution overall FAIL; retained evidence is not rerun or reassessed by this script",
+  "HumanObservations": "None recorded by this script. HTTP setup does not establish human acceptance or new browser/accessibility outcomes."
+}

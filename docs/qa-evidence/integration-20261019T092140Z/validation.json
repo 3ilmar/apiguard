@@ -1,0 +1,35 @@
+{
+  "CapturedAtUtc": "2026-10-19T09:31:29.4181602+00:00",
+  "Status": "PASS",
+  "Register": {
+    "NotRun": 6,
+    "Executed": 16,
+    "Fail": 1,
+    "Pass": 14,
+    "Blocked": 0,
+    "ParentRowsVerified": true,
+    "Cases": 22,
+    "ProvisionalPass": 1,
+    "Columns": 10
+  },
+  "LocalMarkdownReferencesChecked": 126,
+  "RegisterEvidenceTargetsChecked": 11,
+  "SubmittedHumanSHA256": "092D7B886716F48D8E5511A545EA83370C0AC4BCF6578E6659CF1DC20826BE82",
+  "MainTeammateAndSqa18ArchivesUnchanged": true,
+  "QaHumanAndHistoricalSqa20ArchivesUnchanged": true,
+  "NormalDatabaseFiles": 0,
+  "ChangedFileCount": 208,
+  "UnexpectedGeneratedOrSensitivePaths": [],
+  "CredentialPatternFindings": [],
+  "Scope": "Signature scan and explicit file inventory; not a guarantee of absence of secrets",
+  "CheckedDocuments": [
+    "README.md",
+    "docs/AutomationSuite-Shirui.md",
+    "docs/ShiruiQualityMetrics-Evidence.md",
+    "docs/qa-evidence/SQA-19/README.md",
+    "docs/qa-evidence/SQA-19/observer-assessment-session-eilmar.md",
+    "docs/qa-evidence/SQA-20/README.md",
+    "docs/qa-evidence/SQA18-Browser-Performance.md",
+    "docs/qa-evidence/integration-20261019T092140Z/README.md"
+  ]
+}

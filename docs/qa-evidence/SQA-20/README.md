@@ -4,6 +4,16 @@ Requirements: **NFR-USA-01, NFR-COMP-01**. **Overall automated SQA-20: FAIL. Hum
 
 The [19 October automated execution ledger](playwright-20261019T035608Z/README.md) records **16/16 scoped technical browser checks PASS**, while additional programmatic-label and colour-contrast checks **FAIL**. The technical passes cover navigation, physical focus traversal, geometry, severity data, tables and CSV downloads; they do not establish complete accessibility acceptance. The [observation sheet](observation-sheet.csv) now explicitly records automated execution. Its original blank version is preserved in [the baseline](playwright-20261019T035608Z/baseline/observation-sheet.csv). Existing preparation evidence below remains historical. No participant answers or human browser results are invented.
 
+## Integration note for future fixture checks
+
+The retained 19 October browser execution predates the merge of SQLite persistence and demo RBAC into this branch. Its archived runner, screenshots and results remain unchanged; the integration changes below are not a rerun of those 16 checks or a correction of the open accessibility failures. Overall historical SQA-20 remains **FAIL**.
+
+The fixture host now explicitly replaces `IPlatformStore` with a fresh `InMemoryPlatformStore` through the trusted Development-only factory callback before database initialization. Normal application startup retains SQLite. The application's real role provider and role filters remain active, and requests without a role cookie retain the default **Viewer**. The registration GET requires **Admin**.
+
+For future read-only inspection, the current [browser runner](../../../tools/Sqa20.ManualHost/Run-BrowserChecks.cjs) explicitly sets the real demo-role cookie, `apiguard_role=Admin`, in each new isolated browser context and records that setup in new-run metadata. This is a user-selected prototype role, not authentication. The [HTTP verifier](../../../tools/Sqa20.ManualHost/Verify-Sqa20.ps1) sends that cookie only for registration-form inspection and checks that a no-cookie registration request still redirects the default Viewer. It records HTTP setup separately from browser execution and human acceptance.
+
+All form POSTs, including the role selector's `/Role/SetRole` submission, remain blocked by the fixture host. Use the prepared cookie context to inspect the Admin-only form; selecting a different role in the fixture UI attempts a blocked POST. No fixture role bypass is added to the application, no production data is accessed, and these script changes do not assign a new browser or human outcome.
+
 ## Open the isolated application
 
 - Local URL: **http://localhost:51920/**. Use the same URL in Google Chrome and Microsoft Edge.
@@ -89,4 +99,4 @@ For keyboard evidence, write observations such as the focused control and naviga
 
 Original preparation baseline: **planned 16; executed 0; passed 0; failed 0; blocked 0; not run 16**. The latest automated session executed all 16 technical cases: **passed 16; failed 0; blocked 0; not run 0**. Additional accessibility verification failed, so the master SQA-20 case is **FAIL**. Human acceptance was not performed. Case totals and overall acceptance are deliberately separate.
 
-The user's latest instruction authorizes browser automation to update SQA-20. The master register now records the verified automated failure and the unperformed human-acceptance limitation. SQA-19's representative-user test stays unchanged. The earlier assertion of five human passes is retained as provenance; corresponding local screenshots/downloads/observations were not found, so no human results were imported. Automated scanning does not establish full WCAG compliance.
+During the original automated browser review, the user's instruction authorized SQA-20 browser automation. That execution recorded the verified automated failure and the unperformed human-acceptance limitation. At that time SQA-19 was left unchanged. The earlier assertion of five SQA-20 human browser passes is retained as provenance; corresponding local screenshots/downloads/observations were not found, so no human SQA-20 results were imported. The subsequently supplied SQA-19 human session is recorded separately in its evidence directory with a provisional 5/5 recommendation and Shirui's approval pending. Automated scanning does not establish full WCAG compliance.

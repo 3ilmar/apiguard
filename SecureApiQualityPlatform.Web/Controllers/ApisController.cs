@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using SecureApiQualityPlatform.Web.Models;
 using SecureApiQualityPlatform.Web.Services;
 using SecureApiQualityPlatform.Web.ViewModels;
+using SecureApiQualityPlatform.Web.Filters;
 
 namespace SecureApiQualityPlatform.Web.Controllers;
 
@@ -21,10 +22,12 @@ public sealed class ApisController : Controller
     public IActionResult Index() => View(_store.GetApis());
 
     [HttpGet]
+    [RequireRole(UserRole.Admin)]
     public IActionResult Create() => View(new RegisteredApi());
 
     [HttpPost]
     [ValidateAntiForgeryToken]
+    [RequireRole(UserRole.Admin)]
     public async Task<IActionResult> Create(RegisteredApi model)
     {
         model.Name = model.Name?.Trim() ?? string.Empty;
@@ -72,6 +75,7 @@ public sealed class ApisController : Controller
 
     [HttpPost]
     [ValidateAntiForgeryToken]
+    [RequireRole(UserRole.Admin)]
     public IActionResult AddEndpoint(Guid id, ApiEndpoint endpoint)
     {
         var api = _store.GetApi(id);
@@ -83,14 +87,9 @@ public sealed class ApisController : Controller
 
         var normalizedPath = endpoint.Path?.Trim() ?? string.Empty;
 
-        if (normalizedPath.Contains("://", StringComparison.OrdinalIgnoreCase) ||
-            normalizedPath.StartsWith("//") ||
-            normalizedPath.Split('/', StringSplitOptions.RemoveEmptyEntries)
-                .Any(segment => segment == ".."))
+        if (!EndpointPathValidator.IsSafe(normalizedPath, out var pathProblem))
         {
-            ModelState.AddModelError(
-                nameof(endpoint.Path),
-                "Endpoint path must stay within the registered API.");
+            ModelState.AddModelError(nameof(endpoint.Path), pathProblem);
 
             return View("Details", new ApiDetailsViewModel
             {
@@ -158,6 +157,7 @@ public sealed class ApisController : Controller
 
     [HttpPost]
     [ValidateAntiForgeryToken]
+    [RequireRole(UserRole.Tester)]
     public async Task<IActionResult> RunChecks(Guid id)
     {
         await _checks.RunApiAsync(id, HttpContext.RequestAborted);

@@ -3,8 +3,10 @@
 Verifies the running SQA-20 fixture host using local HTTP requests only.
 .DESCRIPTION
 This is automated environment preparation. It does not open a browser, evaluate
-accessibility or compatibility, create screenshots, or change SQA-20's NOT RUN
-manual status. Start-Sqa20.ps1 must already be running in another terminal.
+accessibility or compatibility, create screenshots, or change SQA-20's historical
+automated FAIL or unperformed human acceptance. Start-Sqa20.ps1 must already be
+running in another terminal. A real demo Admin cookie permits read-only inspection
+of the registration form; requests without that cookie keep the Viewer default.
 .PARAMETER OutputDirectory
 Optional directory for automated CSV samples and setup-verification.json.
 These samples are HTTP-client responses, not evidence of browser downloads.
@@ -21,16 +23,21 @@ $baseUrl = 'http://localhost:51920/'
 $failedApiId = '20200000-0000-0000-0000-000000000001'
 $healthyApiId = '20200000-0000-0000-0000-000000000002'
 $startedAt = [DateTimeOffset]::UtcNow
+# Matches CookieRoleProvider.CookieName; this is a demo role, not authentication.
+$demoRoleCookieName = 'apiguard_role'
 
 function Assert-Setup([bool]$Condition, [string]$Message) {
     if (-not $Condition) { throw "SQA-20 setup verification failed: $Message" }
 }
 
-function Get-LocalResponse([string]$Path, [string]$Method = 'GET') {
+function Get-LocalResponse([string]$Path, [string]$Method = 'GET', [string]$DemoRole = '') {
     $uri = [Uri]::new([Uri]$baseUrl, $Path.TrimStart('/'))
     $request = [System.Net.Http.HttpRequestMessage]::new([System.Net.Http.HttpMethod]::new($Method), $uri)
     $response = $null
     try {
+        if (-not [string]::IsNullOrWhiteSpace($DemoRole)) {
+            [void]$request.Headers.TryAddWithoutValidation('Cookie', "$demoRoleCookieName=$DemoRole")
+        }
         $response = $client.SendAsync($request).GetAwaiter().GetResult()
         $body = $response.Content.ReadAsStringAsync().GetAwaiter().GetResult()
         return [PSCustomObject]@{
@@ -40,6 +47,8 @@ function Get-LocalResponse([string]$Path, [string]$Method = 'GET') {
             ContentType = [string]$response.Content.Headers.ContentType
             ContentDisposition = [string]$response.Content.Headers.ContentDisposition
             Allow = [string]($response.Content.Headers.Allow -join ', ')
+            Location = [string]$response.Headers.Location
+            DemoRole = if ($DemoRole) { $DemoRole } else { 'No cookie; application default Viewer' }
             Body = $body
         }
     }
@@ -93,16 +102,20 @@ function Assert-RecentTimestamp([string]$Value, [string]$Label) {
 $handler = [System.Net.Http.HttpClientHandler]::new()
 $handler.UseProxy = $false
 $handler.AllowAutoRedirect = $false
+$handler.UseCookies = $false # Each role cookie below is explicit; no hidden cookie state.
 $client = [System.Net.Http.HttpClient]::new($handler)
 $client.Timeout = [TimeSpan]::FromSeconds(20)
 try {
     $pageFacts = [Collections.Generic.List[object]]::new()
     $pages = @{}
+    $viewerRegistration = Get-LocalResponse '/Apis/Create'
+    Assert-Setup ($viewerRegistration.Status -eq 302 -and $viewerRegistration.Location -match '^/Apis(?:/Index)?(?:\?.*)?$') 'Registration without a role cookie should retain the default Viewer redirect to APIs.'
     foreach ($path in @('/', '/Apis', '/Apis/Create', "/Apis/Details/$failedApiId", "/Apis/Details/$healthyApiId", '/Defects', '/css/site.css')) {
-        $response = Get-LocalResponse $path
+        $demoRole = if ($path -eq '/Apis/Create') { 'Admin' } else { '' }
+        $response = Get-LocalResponse $path -DemoRole $demoRole
         Assert-Setup ($response.Status -eq 200) "GET $path returned HTTP $($response.Status); expected 200 with no redirect."
         $pages[$path] = [Net.WebUtility]::HtmlDecode($response.Body)
-        $pageFacts.Add([PSCustomObject]@{ Path = $path; HttpStatus = $response.Status; Verified = $true })
+        $pageFacts.Add([PSCustomObject]@{ Path = $path; HttpStatus = $response.Status; DemoRole = $response.DemoRole; Verified = $true })
     }
     Assert-Setup ($pages['/'] -match 'Open defect severity distribution' -and $pages['/'] -match 'Recent checks' -and $pages['/'] -match 'Recent defects') 'Dashboard fixture sections were missing.'
     Assert-Setup ($pages['/'] -match '<span>Registered APIs</span>\s*<strong>2</strong>' -and $pages['/'] -match '<span>Configured endpoints</span>\s*<strong>2</strong>') 'Dashboard did not report exactly two registered APIs and two configured endpoints.'
@@ -159,6 +172,7 @@ try {
     $firstDefectId = $defects.Rows[0].DefectId
     $guardRequests = @(
         @{ Method = 'POST'; Path = '/Apis/Create' },
+        @{ Method = 'POST'; Path = '/Role/SetRole' },
         @{ Method = 'POST'; Path = "/Apis/AddEndpoint/$failedApiId" },
         @{ Method = 'POST'; Path = "/Apis/RunChecks/$failedApiId" },
         @{ Method = 'POST'; Path = "/Defects/Update/$firstDefectId" },
@@ -186,12 +200,15 @@ try {
         CompletedAtUtc = [DateTimeOffset]::UtcNow.ToString('O')
         BaseUrl = $baseUrl
         HttpClient = 'System.Net.Http.HttpClient; UseProxy=false; AllowAutoRedirect=false'
+        DemoRoleSetup = [PSCustomObject]@{ CookieName = $demoRoleCookieName; RegistrationInspectionRole = 'Admin'; CookieScope = $baseUrl; OtherRequests = 'No role cookie; application default Viewer'; NoCookieRegistrationStatus = $viewerRegistration.Status; NoCookieRegistrationLocation = $viewerRegistration.Location; ApplicationRoleFiltersPreserved = $true }
         Pages = $pageFacts.ToArray()
         Fixtures = [PSCustomObject]@{ RegisteredApis = 2; ConfiguredEndpoints = 2; Results = 8; PassingResults = 4; FailingResults = 4; OpenDefects = 4; SeverityStatuses = $severityStatus; RecordsWithinLastHours = 24; SyntheticData = $true }
         Csv = [PSCustomObject]@{ ResultsColumns = $results.Headers.Count; DefectsColumns = $defects.Headers.Count; QuotedFieldsPreserved = $true; DownloadHeadersVerified = $true; FilteredFailedApiResults = $filteredResults.Rows.Count; FilteredAssignedHighDefects = $filteredDefects.Rows.Count; UnchangedAfterRejectedWrites = $true }
         RejectedRequests = $guardFacts.ToArray()
-        ManualSqa20Status = 'NOT RUN'
-        ManualObservations = 'None recorded by this script. The student must execute Chrome/Edge, keyboard, narrow-viewport and download checks.'
+        HumanAcceptance = 'NOT PERFORMED'
+        BrowserExecution = 'NOT PERFORMED BY THIS SCRIPT; automated HTTP setup only'
+        HistoricalAutomatedSqa20 = '19 October execution overall FAIL; retained evidence is not rerun or reassessed by this script'
+        HumanObservations = 'None recorded by this script. HTTP setup does not establish human acceptance or new browser/accessibility outcomes.'
     }
     $json = $facts | ConvertTo-Json -Depth 8
     if (-not [string]::IsNullOrWhiteSpace($OutputDirectory)) {

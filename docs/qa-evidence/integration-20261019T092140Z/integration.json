@@ -1,0 +1,42 @@
+{
+  "Case": "Main integration validation",
+  "StartedAtUtc": "2026-10-19T22:24:23.9181606+13:00",
+  "Branch": "qa/sqa19-sqa20-manual-validation",
+  "OriginalHead": "d551a2defd48c72f7b065b865415fd9aee3d4fb1",
+  "FetchedMain": "07dfd40cb1a8df582bc4f9bcd003c523b5297862",
+  "BackupBranch": "codex/backup-sqa19-sqa20-20261019T092140Z-d551a2d",
+  "WorkingTreeBeforeMerge": "Clean",
+  "DivergenceBeforeMerge": {
+    "MainOnlyCommits": 51,
+    "QaOnlyCommits": 2
+  },
+  "StoppedRepositoryServers": [
+    34240,
+    12428
+  ],
+  "StoppedLauncherWrappers": [
+    29652,
+    27808
+  ],
+  "MergeConflicts": [
+    "docs/ShiruiFinalTestCases.csv",
+    "docs/ShiruiQualityMetrics-Evidence.md"
+  ],
+  "Status": "Validation passed; this snapshot precedes the authorized merge commit",
+  "CI": "N/A: local integration; no push or PR authorized",
+  "ValidationCompletedAtUtc": "2026-10-19T09:32:40.7995629+00:00",
+  "ActualTests": {
+    "Total": 136,
+    "Passed": 136,
+    "Failed": 0,
+    "Skipped": 0
+  },
+  "ActualCoverage": {
+    "BranchesCovered": 325,
+    "BranchesValid": 494,
+    "LinesCovered": 876,
+    "LinesValid": 1141
+  },
+  "HostSmoke": "3/3 PASS; all stopped; normal database not created",
+  "PushOrPrAuthorized": false
+}

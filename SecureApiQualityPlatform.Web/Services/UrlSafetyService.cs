@@ -47,14 +47,24 @@ public sealed class UrlSafetyService
         return (true, "Target is a public HTTP(S) URL.");
     }
 
+
     private static bool IsPrivateOrLocal(IPAddress ip)
     {
-        if (IPAddress.IsLoopback(ip) || ip.Equals(IPAddress.Any) || ip.Equals(IPAddress.IPv6Any))
+        // Prevent IPv4-mapped IPv6 addresses from bypassing IPv4 checks.
+        if (ip.IsIPv4MappedToIPv6)
+            ip = ip.MapToIPv4();
+
+        if (IPAddress.IsLoopback(ip) ||
+            ip.Equals(IPAddress.Any) ||
+            ip.Equals(IPAddress.IPv6Any))
+        {
             return true;
+        }
 
         if (ip.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)
         {
             var b = ip.GetAddressBytes();
+
             return b[0] == 10 ||
                    (b[0] == 172 && b[1] >= 16 && b[1] <= 31) ||
                    (b[0] == 192 && b[1] == 168) ||
@@ -62,6 +72,16 @@ public sealed class UrlSafetyService
                    b[0] == 127;
         }
 
-        return ip.IsIPv6LinkLocal || ip.IsIPv6SiteLocal || ip.IsIPv6Multicast;
+        // Block IPv6 unique-local addresses in fc00::/7.
+        if (ip.AddressFamily == System.Net.Sockets.AddressFamily.InterNetworkV6 &&
+            (ip.GetAddressBytes()[0] & 0xFE) == 0xFC)
+        {
+            return true;
+        }
+
+        return ip.IsIPv6LinkLocal ||
+               ip.IsIPv6SiteLocal ||
+               ip.IsIPv6Multicast;
     }
+
 }

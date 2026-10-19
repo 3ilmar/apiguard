@@ -75,7 +75,7 @@ These comments support wording review; no new product defect severity, owner, im
 | Proposed FAIL / BLOCKED / NOT RUN | 0 / 0 / 0 |
 | Final approved scenario outcomes | 0; all 5 await observer approval |
 
-The [master register](../../ShiruiFinalTestCases.csv) counts this session as **one executed case with a provisional PASS**, not five master cases. Updated totals and denominators are in the [quality metrics worksheet](../../ShiruiQualityMetrics-Evidence.md). SQA-18 stays NOT RUN; SQA-20 stays FAIL with its existing findings. This recommendation does not approve NFR-USA-01 as a whole or any release decision.
+The [master register](../../ShiruiFinalTestCases.csv) counts this session as **one executed case with a provisional PASS**, not five master cases. Updated totals and denominators are in the [quality metrics worksheet](../../ShiruiQualityMetrics-Evidence.md). After integrating main, SQA-18 is PASS against its documented proposed operational criterion, with formal NFR-PERF-01 approval still pending; SQA-20 stays FAIL with its existing findings. This recommendation does not approve NFR-USA-01 as a whole or any release decision.
 
 | Approval field | Entry |
 |---|---|
@@ -84,4 +84,4 @@ The [master register](../../ShiruiFinalTestCases.csv) counts this session as **o
 | Decision date/time and approver | Not supplied |
 | Authorized final register status | PENDING; current entry is provisional |
 
-Git commit/push approval is separate and has not been given. All changes remain available for review.
+The user separately authorized the local integration merge commit on 19 October 2026. That authorization does not approve these observer recommendations or a remote push. Shirui's observer decision and push/PR approval remain pending.

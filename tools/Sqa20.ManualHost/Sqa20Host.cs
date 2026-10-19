@@ -2,6 +2,7 @@ using System.Net;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
 using Microsoft.Extensions.Options;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using SecureApiQualityPlatform.Web.Models;
 using SecureApiQualityPlatform.Web.Services;
 
@@ -19,7 +20,11 @@ internal static class Sqa20Host
             "--environment", "Development",
             "--urls", "http://localhost:51920",
             "--contentRoot", Path.GetFullPath(args[0])
-        ]);
+        ], services =>
+        {
+            services.RemoveAll<IPlatformStore>();
+            services.AddSingleton<IPlatformStore, InMemoryPlatformStore>();
+        });
         if (!app.Environment.IsDevelopment())
             throw new InvalidOperationException("SQA-20 fixtures require Development.");
 

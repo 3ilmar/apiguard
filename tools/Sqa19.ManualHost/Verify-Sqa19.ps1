@@ -59,13 +59,18 @@ try {
     $null = Read-Response GET /Apis/RunChecks 404
     $null = Read-Response GET /Apis/Create 404
     $after = Read-Response GET / 200
-    if ($after -cne $html) { throw 'Dashboard changed during the read-only host verification.' }
+    # The merged shared layout includes an antiforgery token in its role form.
+    # Ignore only that per-render token when comparing the immutable fixture HTML.
+    $tokenPattern = '(<input\b[^>]*name="__RequestVerificationToken"[^>]*value=")[^"]*(")'
+    $beforeStable = [regex]::Replace($html, $tokenPattern, '$1$2')
+    $afterStable = [regex]::Replace($after, $tokenPattern, '$1$2')
+    if ($afterStable -cne $beforeStable) { throw 'Dashboard changed during the read-only host verification.' }
 
     [ordered]@{
         CapturedAtUtc = [DateTimeOffset]::UtcNow.ToString('O')
         URL = 'http://localhost:51919/'
         PreparationStatus = 'PASS'
-        HumanUsabilityStatus = 'NOT RUN'
+        HumanUsabilityStatus = 'Not evaluated by this preparation check'
         Data = 'Synthetic evaluator results; no external API requests made'
         RecentCheckMessagesInOrder = $messages
         FailedRowCount = 5

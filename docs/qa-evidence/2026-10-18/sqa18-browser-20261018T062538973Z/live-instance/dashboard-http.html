@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dashboard - Secure API Quality Platform</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/site.css?v=HffZIPzXvtCF50QQu7UxC_M2h9_R0To5cymAcUw3MHk" />
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="/">API Quality</a>
+        <div class="navbar-nav">
+            <a class="nav-link" href="/">Dashboard</a>
+            <a class="nav-link" href="/Apis">APIs</a>
+            <a class="nav-link" href="/Defects">Defects</a>
+            <a class="nav-link" href="/Reports/ExportResultsCsv">Export Results</a>
+        </div>
+    </div>
+</nav>
+<main class="container py-4">
+    <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-3 mb-4">
+    <div>
+        <h1 class="h3 mb-1">API Quality Dashboard</h1>
+        <p class="text-muted mb-0">Current prototype evidence for quality, performance, and defects.</p>
+    </div>
+    <a class="btn btn-primary" href="/Apis/Create">Register API</a>
+</div>
+<div class="row g-3 mb-4" role="group" aria-label="Quality metrics">
+    <div class="col-md-3"><div class="metric-card"><span>Registered APIs</span><strong>1</strong></div></div>
+    <div class="col-md-3"><div class="metric-card"><span>Configured endpoints</span><strong>1</strong></div></div>
+    <div class="col-md-3"><div class="metric-card"><span>Executed checks</span><strong>2000</strong></div></div>
+    <div class="col-md-3"><div class="metric-card"><span>Pass rate</span><strong>50%</strong></div></div>
+    <div class="col-md-3"><div class="metric-card"><span>Passed / Failed</span><strong>1000 / 1000</strong></div></div>
+    <div class="col-md-3"><div class="metric-card"><span>Avg response</span><strong>149.5 ms</strong></div></div>
+    <div class="col-md-3"><div class="metric-card"><span>Open defects</span><strong>48</strong></div></div>
+    <div class="col-md-3"><div class="metric-card"><span>High/Critical open</span><strong>24</strong></div></div>
+</div>
+<section class="card mb-4" aria-labelledby="severity-title">
+    <h2 class="card-header h6 mb-0" id="severity-title">Open defect severity distribution</h2>
+    <div class="card-body">
+                <div class="severity-row mb-3">
+                    <div class="d-flex justify-content-between mb-1">
+                        <span>Critical</span><strong>12</strong>
+                    </div>
+                    <div class="progress" role="progressbar" aria-label="Critical open defects" aria-valuenow="12" aria-valuemin="0" aria-valuemax="48">
+                        <div class="progress-bar bg-danger" style="width: 25%"></div>
+                    </div>
+                </div>
+                <div class="severity-row mb-3">
+                    <div class="d-flex justify-content-between mb-1">
+                        <span>High</span><strong>12</strong>
+                    </div>
+                    <div class="progress" role="progressbar" aria-label="High open defects" aria-valuenow="12" aria-valuemin="0" aria-valuemax="48">
+                        <div class="progress-bar bg-warning" style="width: 25%"></div>
+                    </div>
+                </div>
+                <div class="severity-row mb-3">
+                    <div class="d-flex justify-content-between mb-1">
+                        <span>Medium</span><strong>12</strong>
+                    </div>
+                    <div class="progress" role="progressbar" aria-label="Medium open defects" aria-valuenow="12" aria-valuemin="0" aria-valuemax="48">
+                        <div class="progress-bar bg-info" style="width: 25%"></div>
+                    </div>
+                </div>
+                <div class="severity-row mb-3">
+                    <div class="d-flex justify-content-between mb-1">
+                        <span>Low</span><strong>12</strong>
+                    </div>
+                    <div class="progress" role="progressbar" aria-label="Low open defects" aria-valuenow="12" aria-valuemin="0" aria-valuemax="48">
+                        <div class="progress-bar bg-secondary" style="width: 25%"></div>
+                    </div>
+                </div>
+            <p class="text-muted small mb-0">Counts exclude Closed and Deferred defects. Numbers are displayed alongside colours.</p>
+    </div>
+</section>
+<div class="row g-4">
+    <div class="col-lg-7">
+        <section class="card" aria-labelledby="recent-checks-title">
+            <h2 class="card-header h6 mb-0" id="recent-checks-title">Recent checks</h2>
+            <div class="table-responsive">
+                <table class="table table-sm mb-0">
+                    <thead><tr><th scope="col">Check</th><th scope="col">Result</th><th scope="col">Response</th><th scope="col">When</th></tr></thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-break">Availability<br /><small class="text-muted">PT-01 check 1999</small></td>
+                            <td><span class="badge text-bg-danger">FAIL</span></td>
+                            <td>199 ms</td>
+                            <td><time datetime="2026-10-18T00:33:19.0000000&#x2B;00:00">10/18/2026 1:33 PM</time></td>
+                        </tr>
+                        <tr>
+                            <td class="text-break">Availability<br /><small class="text-muted">PT-01 check 1998</small></td>
+                            <td><span class="badge text-bg-success">PASS</span></td>
+                            <td>N/A</td>
+                            <td><time datetime="2026-10-18T00:33:18.0000000&#x2B;00:00">10/18/2026 1:33 PM</time></td>
+                        </tr>
+                        <tr>
+                            <td class="text-break">Availability<br /><small class="text-muted">PT-01 check 1997</small></td>
+                            <td><span class="badge text-bg-danger">FAIL</span></td>
+                            <td>197 ms</td>
+                            <td><time datetime="2026-10-18T00:33:17.0000000&#x2B;00:00">10/18/2026 1:33 PM</time></td>
+                        </tr>
+                        <tr>
+                            <td class="text-break">Availability<br /><small class="text-muted">PT-01 check 1996</small></td>
+                            <td><span class="badge text-bg-success">PASS</span></td>
+                            <td>196 ms</td>
+                            <td><time datetime="2026-10-18T00:33:16.0000000&#x2B;00:00">10/18/2026 1:33 PM</time></td>
+                        </tr>
+                        <tr>
+                            <td class="text-break">Availability<br /><small class="text-muted">PT-01 check 1995</small></td>
+                            <td><span class="badge text-bg-danger">FAIL</span></td>
+                            <td>N/A</td>
+                            <td><time datetime="2026-10-18T00:33:15.0000000&#x2B;00:00">10/18/2026 1:33 PM</time></td>
+                        </tr>
+                        <tr>
+                            <td class="text-break">Availability<br /><small class="text-muted">PT-01 check 1994</small></td>
+                            <td><span class="badge text-bg-success">PASS</span></td>
+                            <td>194 ms</td>
+                            <td><time datetime="2026-10-18T00:33:14.0000000&#x2B;00:00">10/18/2026 1:33 PM</time></td>
+                        </tr>
+                        <tr>
+                            <td class="text-break">Availability<br /><small class="text-muted">PT-01 check 1993</small></td>
+                            <td><span class="badge text-bg-danger">FAIL</span></td>
+                            <td>193 ms</td>
+                            <td><time datetime="2026-10-18T00:33:13.0000000&#x2B;00:00">10/18/2026 1:33 PM</time></td>
+                        </tr>
+                        <tr>
+                            <td class="text-break">Availability<br /><small class="text-muted">PT-01 check 1992</small></td>
+                            <td><span class="badge text-bg-success">PASS</span></td>
+                            <td>N/A</td>
+                            <td><time datetime="2026-10-18T00:33:12.0000000&#x2B;00:00">10/18/2026 1:33 PM</time></td>
+                        </tr>
+                        <tr>
+                            <td class="text-break">Availability<br /><small class="text-muted">PT-01 check 1991</small></td>
+                            <td><span class="badge text-bg-danger">FAIL</span></td>
+                            <td>191 ms</td>
+                            <td><time datetime="2026-10-18T00:33:11.0000000&#x2B;00:00">10/18/2026 1:33 PM</time></td>
+                        </tr>
+                        <tr>
+                            <td class="text-break">Availability<br /><small class="text-muted">PT-01 check 1990</small></td>
+                            <td><span class="badge text-bg-success">PASS</span></td>
+                            <td>190 ms</td>
+                            <td><time datetime="2026-10-18T00:33:10.0000000&#x2B;00:00">10/18/2026 1:33 PM</time></td>
+                        </tr>
+                        <tr>
+                            <td class="text-break">Availability<br /><small class="text-muted">PT-01 check 1989</small></td>
+                            <td><span class="badge text-bg-danger">FAIL</span></td>
+                            <td>N/A</td>
+                            <td><time datetime="2026-10-18T00:33:09.0000000&#x2B;00:00">10/18/2026 1:33 PM</time></td>
+                        </tr>
+                        <tr>
+                            <td class="text-break">Availability<br /><small class="text-muted">PT-01 check 1988</small></td>
+                            <td><span class="badge text-bg-success">PASS</span></td>
+                            <td>188 ms</td>
+                            <td><time datetime="2026-10-18T00:33:08.0000000&#x2B;00:00">10/18/2026 1:33 PM</time></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+    <div class="col-lg-5">
+        <section class="card" aria-labelledby="recent-defects-title">
+            <h2 class="card-header h6 mb-0" id="recent-defects-title">Recent defects</h2>
+            <div class="list-group list-group-flush">
+                    <div class="list-group-item text-break">
+                        <div class="d-flex justify-content-between gap-2"><strong>PT-01 defect 0079</strong><span>Critical</span></div>
+                        <small class="text-muted">Deferred · Medium</small>
+                    </div>
+                    <div class="list-group-item text-break">
+                        <div class="d-flex justify-content-between gap-2"><strong>PT-01 defect 0078</strong><span>High</span></div>
+                        <small class="text-muted">Closed · Medium</small>
+                    </div>
+                    <div class="list-group-item text-break">
+                        <div class="d-flex justify-content-between gap-2"><strong>PT-01 defect 0077</strong><span>Medium</span></div>
+                        <small class="text-muted">Resolved · Medium</small>
+                    </div>
+                    <div class="list-group-item text-break">
+                        <div class="d-flex justify-content-between gap-2"><strong>PT-01 defect 0076</strong><span>Low</span></div>
+                        <small class="text-muted">InProgress · Medium</small>
+                    </div>
+                    <div class="list-group-item text-break">
+                        <div class="d-flex justify-content-between gap-2"><strong>PT-01 defect 0075</strong><span>Critical</span></div>
+                        <small class="text-muted">New · Medium</small>
+                    </div>
+                    <div class="list-group-item text-break">
+                        <div class="d-flex justify-content-between gap-2"><strong>PT-01 defect 0074</strong><span>High</span></div>
+                        <small class="text-muted">Deferred · Medium</small>
+                    </div>
+                    <div class="list-group-item text-break">
+                        <div class="d-flex justify-content-between gap-2"><strong>PT-01 defect 0073</strong><span>Medium</span></div>
+                        <small class="text-muted">Closed · Medium</small>
+                    </div>
+                    <div class="list-group-item text-break">
+                        <div class="d-flex justify-content-between gap-2"><strong>PT-01 defect 0072</strong><span>Low</span></div>
+                        <small class="text-muted">Resolved · Medium</small>
+                    </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+</main>
+</body>
+</html>
+

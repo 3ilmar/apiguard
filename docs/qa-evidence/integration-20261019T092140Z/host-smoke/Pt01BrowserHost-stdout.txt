@@ -1,0 +1,3 @@
+PT-01 dashboard ready: http://127.0.0.1:51881/ (PID 11348); browser SQA-18 NOT RUN.
+warn: Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware[3]
+      Failed to determine the https port for redirect.

@@ -8,11 +8,13 @@ The tester reports forming the interpretations before asking ChatGPT to compare 
 
 The blank master sheets, facilitator key and historical automated preparation records remain unchanged. The original NOT RUN figures below describe the reusable template/preparation baseline, not the current reported execution. Synthetic results demonstrate application wording, not live endpoint outcomes. These are QA evidence and procedures, not submitted assessment report prose.
 
+After integrating main's SQLite and demo-RBAC changes, the separate fixture executable explicitly selects its private in-memory store before any database initialization. The normal application retains SQLite and default Viewer role enforcement. Role-selector submissions are blocked by this read-only host. The [integration ledger](../integration-20261019T092140Z/README.md) records fresh technical validation without changing the submitted human answers or granting observer approval.
+
 ## Environment and scope
 
 - Dashboard URL: **http://localhost:51919/**
 - Start/restart the isolated development host from the repository root: `powershell -NoProfile -ExecutionPolicy Bypass -File .\tools\Sqa19.ManualHost\Start-Sqa19.ps1`.
-- An instance was left running during the 18 October preparation; availability has not been rechecked during this documentation review. To stop it, run `powershell -NoProfile -File .\tools\Sqa19.ManualHost\Stop-Sqa19.ps1`; this checks the listening process belongs to this repository's SQA-19 host before stopping it. For a foreground launch, Ctrl+C also stops that instance. Stop before restarting; the launcher never terminates an existing listener.
+- The original background instance was stopped before integrating main. A fresh instance passed the integration HTTP smoke and was then stopped; no fixture host is left running by that validation. Start it using the launcher above when needed. To stop a running instance, use `powershell -NoProfile -File .\tools\Sqa19.ManualHost\Stop-Sqa19.ps1`; this checks the listening process belongs to this repository's SQA-19 host. For a foreground launch, Ctrl+C also stops it. Stop before restarting; the launcher never terminates an existing listener.
 - Automated setup evidence is in [automated-setup/README.md](automated-setup/README.md). To repeat its HTTP checks while the host is running: `powershell -NoProfile -File .\tools\Sqa19.ManualHost\Verify-Sqa19.ps1`. A successful setup check is not a human usability result.
 - The host uses the application's dashboard and five synthetic failed results. It is separate from any normally running application instance. Do not run checks or register APIs during this session.
 - The fixture order in **Recent checks**, top to bottom, is SQA19-01 through SQA19-05. Verify that five FAIL rows are visible before the participant joins. If the rows are missing or reordered, stop and correct preparation before collecting answers.

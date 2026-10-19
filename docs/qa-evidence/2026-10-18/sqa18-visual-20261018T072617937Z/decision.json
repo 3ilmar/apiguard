@@ -1,0 +1,82 @@
+{
+  "case": "SQA-18",
+  "decision": "PASS",
+  "scope": "User-proposed operational acceptance criterion v1 only",
+  "formallyApprovedByTeam": false,
+  "formalRequirementStatus": "Provisional/TBC; unchanged",
+  "releaseDecision": "PENDING",
+  "checkedAtUtc": "2026-10-18T07:31:27.463Z",
+  "criterion": "PROPOSED-CRITERION.md",
+  "evidence": "results.json",
+  "screenshotReview": "visual-review.json",
+  "boundary": "Navigation time origin to browser performance.now() immediately after a viewport screenshot has been captured and returned; conservative visual-readiness upper bound including screenshot/automation overhead",
+  "samplesMs": [
+    257.89999997615814,
+    199.5,
+    197.10000002384186,
+    189.70000004768372,
+    201
+  ],
+  "medianMs": 199.5,
+  "maximumMs": 257.89999997615814,
+  "thresholdMs": 2000,
+  "everySampleStrictlyUnderThreshold": true,
+  "fixtureUnchanged": true,
+  "traceChecks": [
+    {
+      "run": 1,
+      "navigationId": "98E1CFCC36781417169D859B310BE395",
+      "navigationTimestampUs": 289630379295,
+      "verifiedMarkTimestampUs": 289630637165,
+      "traceBoundMs": 257.87,
+      "recordedBoundMs": 257.89999997615814,
+      "priorPaintEvents": 1,
+      "priorFilmstripFrames": 3,
+      "screenshotSHA256": "2AF95C87601535EBA5F8620F6187C607F6D60D519192B84D2D158C37CD513B2D"
+    },
+    {
+      "run": 2,
+      "navigationId": "1E4FDEFEB78E6290EC766D023DD15E86",
+      "navigationTimestampUs": 289630932643,
+      "verifiedMarkTimestampUs": 289631132147,
+      "traceBoundMs": 199.504,
+      "recordedBoundMs": 199.5,
+      "priorPaintEvents": 1,
+      "priorFilmstripFrames": 2,
+      "screenshotSHA256": "2AF95C87601535EBA5F8620F6187C607F6D60D519192B84D2D158C37CD513B2D"
+    },
+    {
+      "run": 3,
+      "navigationId": "7507A568A8096C74FFF133532D2823EC",
+      "navigationTimestampUs": 289631404576,
+      "verifiedMarkTimestampUs": 289631601531,
+      "traceBoundMs": 196.955,
+      "recordedBoundMs": 197.10000002384186,
+      "priorPaintEvents": 1,
+      "priorFilmstripFrames": 2,
+      "screenshotSHA256": "2AF95C87601535EBA5F8620F6187C607F6D60D519192B84D2D158C37CD513B2D"
+    },
+    {
+      "run": 4,
+      "navigationId": "5B72C467A5619D83DC2082FF4C1F3D7F",
+      "navigationTimestampUs": 289631865974,
+      "verifiedMarkTimestampUs": 289632055640,
+      "traceBoundMs": 189.666,
+      "recordedBoundMs": 189.70000004768372,
+      "priorPaintEvents": 1,
+      "priorFilmstripFrames": 2,
+      "screenshotSHA256": "2AF95C87601535EBA5F8620F6187C607F6D60D519192B84D2D158C37CD513B2D"
+    },
+    {
+      "run": 5,
+      "navigationId": "C8148C173F5D5613BD38E1112D47D648",
+      "navigationTimestampUs": 289632327747,
+      "verifiedMarkTimestampUs": 289632528726,
+      "traceBoundMs": 200.979,
+      "recordedBoundMs": 201,
+      "priorPaintEvents": 1,
+      "priorFilmstripFrames": 2,
+      "screenshotSHA256": "2AF95C87601535EBA5F8620F6187C607F6D60D519192B84D2D158C37CD513B2D"
+    }
+  ]
+}

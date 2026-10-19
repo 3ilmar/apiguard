@@ -19,6 +19,10 @@ if (argument < 0 || !process.argv[argument + 1]) throw new Error('Supply --outpu
 const output = path.resolve(process.argv[argument + 1]);
 const root = path.resolve(__dirname, '../..');
 const baseUrl = 'http://localhost:51920';
+// Matches CookieRoleProvider.CookieName. This user-selected demo role is not
+// authentication; it permits read-only inspection of the real Admin-only form.
+const demoRole = { cookieName: 'apiguard_role', value: 'Admin', scope: baseUrl,
+  purpose: 'Read-only registration/form inspection in this isolated browser context; application role filters remain active.' };
 let startedAt = new Date().toISOString();
 const finalizeOnly = process.argv.includes('--finalize-only');
 const prefix = name => name === 'chrome' ? 'CH' : 'ED';
@@ -57,9 +61,9 @@ const metadata = finalizeOnly ? JSON.parse(fs.readFileSync(path.join(output, 'en
   sourceState: git(['status', '--short']), node: process.version, os: { platform: os.platform(), release: os.release(), architecture: os.arch(), cpu: os.cpus()[0]?.model, logicalCpus: os.cpus().length },
   playwright: require(path.join(path.dirname(playwrightPath), 'package.json')).version,
   playwrightPath, baseUrl, headless: true, viewportDesktop: { width: 1440, height: 900 }, viewportNarrow: { width: 375, height: 812 }, deviceScaleFactor: 1,
-  axe: axeAvailability, originalApplicationCodeModified: false,
+  axe: axeAvailability, originalApplicationCodeModified: false, demoRole,
   networkPolicy: 'Only localhost:51920 GET/HEAD and original Bootstrap stylesheet URL allowed by browser context. No API checks or form submissions.',
-  humanTesting: 'No human execution is claimed. Prior human evidence was not present in the repository inspected at start.'
+  humanTesting: 'No human SQA-20 execution or acceptance is performed by this runner; separate human evidence is not reassessed.'
 };
 if (!finalizeOnly) json(path.join(output, 'environment.json'), metadata);
 else startedAt = metadata.startedAtUtc;
@@ -101,6 +105,9 @@ async function executeBrowser(configuration) {
     summary.substitution = false;
     log(`${configuration.product} ${summary.version} launched from ${configuration.executablePath}`);
     const context = await browser.newContext({ viewport: metadata.viewportDesktop, deviceScaleFactor: 1, acceptDownloads: true, locale: 'en-NZ', timezoneId: 'Pacific/Auckland', colorScheme: 'light' });
+    await context.addCookies([{ name: demoRole.cookieName, value: demoRole.value,
+      url: baseUrl + '/', httpOnly: true, sameSite: 'Lax', secure: false }]);
+    summary.demoRole = demoRole;
     await context.route('**/*', route => {
       const request = route.request(), url = new URL(request.url());
       const local = url.origin === baseUrl;
@@ -116,7 +123,7 @@ async function executeBrowser(configuration) {
     page.on('requestfailed', request => events.push({ atUtc: new Date().toISOString(), phase, type: 'requestfailed', url: request.url(), method: request.method(), error: request.failure()?.errorText }));
     page.on('response', response => events.push({ atUtc: new Date().toISOString(), phase, type: 'response', url: response.url(), status: response.status(), contentType: response.headers()['content-type'] || '' }));
     summary.userAgent = await page.evaluate(() => navigator.userAgent);
-    summary.preconditions = 'Existing isolated host; fixed synthetic fixture; no form submissions or API execution.';
+    summary.preconditions = 'Existing isolated host; fixed synthetic fixture; explicit Admin demo-role cookie in isolated context; no form submissions or API execution. Default no-cookie Viewer behavior is unchanged.';
     for (const viewportName of ['desktop', 'narrow']) {
       await page.setViewportSize(viewportName === 'desktop' ? metadata.viewportDesktop : metadata.viewportNarrow);
       for (const item of cases) {

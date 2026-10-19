@@ -1,0 +1,48 @@
+{
+  "ImportedAtUtc": "2026-10-18T07:02:25.2355685+00:00",
+  "Method": "Byte-for-byte copy from user-supplied paths; no changes to originals",
+  "Files": [
+    {
+      "Source": "C:/Users/zsr20/Downloads/Trace-20261018T195043.json/Trace-20261018T195043.json",
+      "File": "Trace-20261018T195043.json",
+      "Bytes": 3134380,
+      "SHA256": "AAB8AB51895D7DA096A6047D35529797FB16FE52C6C9C5E77175075063A502ED"
+    },
+    {
+      "Source": "C:/Users/zsr20/AppData/Local/Temp/codex-clipboard-49cd5009-9091-494a-b422-729f2e5ea144.png",
+      "File": "network-attachment-01.png",
+      "Bytes": 132991,
+      "SHA256": "D865D667DBEF140996BF5161A2A5131D29D228349B5A01BFC8A4E7519A4DDE2E"
+    },
+    {
+      "Source": "C:/Users/zsr20/AppData/Local/Temp/codex-clipboard-f014a8ec-5b2a-4b8f-8b63-875585df7f15.png",
+      "File": "network-attachment-02.png",
+      "Bytes": 133121,
+      "SHA256": "0BD8F7BF92ED538A934BEC47B5514AE8C32B10331B036CD3997D1B3E56466E74"
+    },
+    {
+      "Source": "C:/Users/zsr20/AppData/Local/Temp/codex-clipboard-464e72c5-a891-4d6b-8ca6-dc3f29c2313f.png",
+      "File": "network-attachment-03.png",
+      "Bytes": 133128,
+      "SHA256": "1FD55FA1A9FF7D84F8DD24A59BCDEA24195740F00B27CC766FDA941B02D06DE0"
+    },
+    {
+      "Source": "C:/Users/zsr20/AppData/Local/Temp/codex-clipboard-fa98f638-5e54-45a4-817b-42afa711414d.png",
+      "File": "network-attachment-04.png",
+      "Bytes": 133128,
+      "SHA256": "1FD55FA1A9FF7D84F8DD24A59BCDEA24195740F00B27CC766FDA941B02D06DE0"
+    },
+    {
+      "Source": "C:/Users/zsr20/AppData/Local/Temp/codex-clipboard-84bfca6d-8fc3-4286-a93f-89b8b6a1de76.png",
+      "File": "network-attachment-05.png",
+      "Bytes": 133000,
+      "SHA256": "E3C9F67F311A3EF249A8D9101391FC3A962E08FBA37DD0C969BE026064406F3E"
+    },
+    {
+      "Source": "C:/Users/zsr20/AppData/Local/Temp/codex-clipboard-0650e4bd-bd9e-4c4c-8d4d-a88070146a4d.png",
+      "File": "network-attachment-06.png",
+      "Bytes": 133128,
+      "SHA256": "1FD55FA1A9FF7D84F8DD24A59BCDEA24195740F00B27CC766FDA941B02D06DE0"
+    }
+  ]
+}

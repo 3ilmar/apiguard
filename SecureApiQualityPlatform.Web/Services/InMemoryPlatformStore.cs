@@ -33,7 +33,7 @@ public sealed class InMemoryPlatformStore : IPlatformStore
             var duplicateExists = _apis.Any(existingApi =>
                 existingApi.BaseUrl.TrimEnd('/').Equals(
                     normalizedBaseUrl,
-                    StringComparison.OrdinalIgnoreCase));
+                    StringComparison.Ordinal));
 
             if (duplicateExists)
             {

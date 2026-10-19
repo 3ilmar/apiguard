@@ -1,0 +1,6 @@
+{"run":1,"visualReadinessUpperBoundMs":257.89999997615814,"status":"NUMERIC PASS - SCREENSHOT REVIEW PENDING"}
+{"run":2,"visualReadinessUpperBoundMs":199.5,"status":"NUMERIC PASS - SCREENSHOT REVIEW PENDING"}
+{"run":3,"visualReadinessUpperBoundMs":197.10000002384186,"status":"NUMERIC PASS - SCREENSHOT REVIEW PENDING"}
+{"run":4,"visualReadinessUpperBoundMs":189.70000004768372,"status":"NUMERIC PASS - SCREENSHOT REVIEW PENDING"}
+{"run":5,"visualReadinessUpperBoundMs":201,"status":"NUMERIC PASS - SCREENSHOT REVIEW PENDING"}
+{"status":"SCREENSHOT REVIEW PENDING","samplesMs":[257.89999997615814,199.5,197.10000002384186,189.70000004768372,201],"medianMs":199.5,"maximumMs":257.89999997615814,"thresholdMs":2000}

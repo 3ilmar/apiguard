@@ -1,0 +1,49 @@
+{
+  "CheckedAtUtc": "2026-10-18T06:30:16.6993493+00:00",
+  "SetupStatus": "PASS",
+  "Url": "http://127.0.0.1:51818/",
+  "FixtureSha256": "CCBE6723FB603221C3CECB95BB176BD6426E8F7611B96D3AC0565A1D7927AC18",
+  "ResultCount": 2000,
+  "Passed": 1000,
+  "Failed": 1000,
+  "DefectCount": 80,
+  "OpenDefects": 48,
+  "Requests": [
+    {
+      "Path": "/",
+      "Status": 200,
+      "ContentType": "text/html"
+    },
+    {
+      "Path": "/css/site.css",
+      "Status": 200,
+      "ContentType": "text/css"
+    },
+    {
+      "Path": "/Reports/ExportResultsCsv",
+      "Status": 200,
+      "ContentType": "text/csv"
+    },
+    {
+      "Path": "/Reports/ExportDefectsCsv",
+      "Status": 200,
+      "ContentType": "text/csv"
+    },
+    {
+      "Path": "/Reports/ExportResultsCsv",
+      "Status": 200,
+      "ContentType": "text/csv"
+    },
+    {
+      "Path": "/Reports/ExportDefectsCsv",
+      "Status": 200,
+      "ContentType": "text/csv"
+    }
+  ],
+  "PostStatus": 405,
+  "ExportsUnchangedAfterRequests": true,
+  "ServerState": "MVC/Razor and aggregation warmed by HTTP readiness requests",
+  "BrowserStatus": "NOT RUN",
+  "BrowserTimings": null,
+  "CDN": "Not fetched by this smoke check; verify Bootstrap in Chrome Network"
+}

@@ -2,6 +2,7 @@ using System.Net;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
 using Microsoft.Extensions.Options;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using SecureApiQualityPlatform.Web.Models;
 using SecureApiQualityPlatform.Web.Services;
 
@@ -21,7 +22,11 @@ internal static class Sqa19Host
             "--environment", "Development",
             "--urls", DashboardUrl,
             "--contentRoot", Path.GetFullPath(args[0])
-        ]);
+        ], services =>
+        {
+            services.RemoveAll<IPlatformStore>();
+            services.AddSingleton<IPlatformStore, InMemoryPlatformStore>();
+        });
         if (!app.Environment.IsDevelopment())
             throw new InvalidOperationException("SQA-19 fixtures require the Development environment.");
 
@@ -32,8 +37,9 @@ internal static class Sqa19Host
         kestrel.ListenLocalhost(51919);
 
         var store = app.Services.GetRequiredService<IPlatformStore>();
-        if (store.GetApis().Count != 0 || store.GetResults().Count != 0 || store.GetDefects().Count != 0)
-            throw new InvalidOperationException("Seed only an empty, process-local store.");
+        if (store is not InMemoryPlatformStore || store.GetApis().Count != 0 ||
+            store.GetResults().Count != 0 || store.GetDefects().Count != 0)
+            throw new InvalidOperationException("Seed only an empty, process-local InMemoryPlatformStore.");
 
         var evaluator = app.Services.GetRequiredService<CheckEvaluator>();
         var api = new RegisteredApi
