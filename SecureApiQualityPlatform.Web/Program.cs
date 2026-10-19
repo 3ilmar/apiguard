@@ -8,7 +8,9 @@ app.Run();
 
 public partial class Program
 {
-    public static WebApplication CreateApp(string[] args)
+    public static WebApplication CreateApp(
+        string[] args,
+        Action<IServiceCollection>? configureServices = null)
     {
         var builder = WebApplication.CreateBuilder(new WebApplicationOptions
         {
@@ -43,11 +45,24 @@ public partial class Program
                 "ENSE707-SecureApiQualityPlatform/0.1");
         });
 
+        // Trusted test/development executables can replace services before any
+        // database is opened. Normal startup keeps the SQLite registration.
+        if (configureServices is not null)
+        {
+            if (!builder.Environment.IsDevelopment()
+                && !builder.Environment.IsEnvironment("Testing"))
+                throw new InvalidOperationException("Service overrides require Development or Testing.");
+
+            configureServices(builder.Services);
+        }
+
         var app = builder.Build();
 
-        // Ensure the SQLite database exists before handling requests.
-        using (var scope = app.Services.CreateScope())
+        // A replaced in-memory store must never open the normal database.
+        // Initialise persistence only when the application actually uses it.
+        if (app.Services.GetRequiredService<IPlatformStore>() is SqlitePlatformStore)
         {
+            using var scope = app.Services.CreateScope();
             var dbFactory = scope.ServiceProvider
                 .GetRequiredService<IDbContextFactory<PlatformDbContext>>();
 

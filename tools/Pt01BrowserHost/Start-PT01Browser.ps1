@@ -6,8 +6,8 @@ param(
 $ErrorActionPreference = 'Stop'
 $repositoryRoot = (Resolve-Path -LiteralPath (Join-Path $PSScriptRoot '../..')).Path
 $branch = (& git -C $repositoryRoot branch --show-current).Trim()
-if ($LASTEXITCODE -ne 0 -or $branch -ne 'feature/dashboard-reporting') {
-    throw "Expected feature/dashboard-reporting; found $branch. No server was started."
+if ($LASTEXITCODE -ne 0 -or $branch -notin @('feature/dashboard-reporting', 'qa/sqa19-sqa20-manual-validation')) {
+    throw "Expected feature/dashboard-reporting or qa/sqa19-sqa20-manual-validation; found $branch. No server was started."
 }
 if ([string]::IsNullOrWhiteSpace($EvidenceDirectory)) {
     $aucklandZone = [TimeZoneInfo]::FindSystemTimeZoneById('New Zealand Standard Time')

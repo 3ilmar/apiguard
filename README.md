@@ -15,8 +15,8 @@ ENSE707 mid-project prototype written in C# / ASP.NET Core MVC.
 
 ## Deliberate limitations of the initial prototype
 
-- In-memory storage only; data resets when the process restarts.
-- No production authentication/RBAC yet.
+- Normal application data is persisted in SQLite (`apiguard.db` by default). Schema migration, backup and deployment operations still require review. The separate QA fixture hosts explicitly use their own in-memory stores.
+- Server-side demo roles are enforced, with missing or invalid role cookies defaulting to Viewer. The role is user-selected; this is not authenticated identity or production authorization.
 - No credential or secret storage.
 - No active exploitation, fuzzing, or high-volume rate-limit testing.
 - Security checks are a selected, non-destructive subset and are not a claim of OWASP Top 10 compliance.

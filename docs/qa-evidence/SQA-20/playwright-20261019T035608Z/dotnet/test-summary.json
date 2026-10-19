@@ -1,0 +1,42 @@
+{
+  "method": "Existing MSTest suite, Debug with XPlat Code Coverage",
+  "counters": {
+    "total": 71,
+    "executed": 71,
+    "passed": 71,
+    "failed": 0,
+    "error": 0,
+    "timeout": 0,
+    "aborted": 0,
+    "inconclusive": 0,
+    "passedButRunAborted": 0,
+    "notRunnable": 0,
+    "notExecuted": 0,
+    "disconnected": 0,
+    "warning": 0,
+    "completed": 0,
+    "inProgress": 0,
+    "pending": 0
+  },
+  "times": {
+    "creation": "2026-10-19T17:06:59.5183051+13:00",
+    "queuing": "2026-10-19T17:06:59.5183055+13:00",
+    "start": "2026-10-19T17:06:53.2485217+13:00",
+    "finish": "2026-10-19T17:07:00.2031786+13:00"
+  },
+  "coverage": {
+    "lines-covered": 561,
+    "lines-valid": 781,
+    "branches-covered": 222,
+    "branches-valid": 392,
+    "linePercent": 71.83,
+    "branchPercent": 56.63,
+    "packages": [
+      {
+        "name": "SecureApiQualityPlatform.Web",
+        "lineRate": "0.7182999999999999",
+        "branchRate": "0.5663"
+      }
+    ]
+  }
+}

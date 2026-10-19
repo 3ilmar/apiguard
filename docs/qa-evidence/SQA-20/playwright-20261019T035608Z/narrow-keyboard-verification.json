@@ -1,0 +1,157 @@
+{
+  "method": "Targeted genuine Tab/Shift+Tab/ArrowRight verification of axe scrollable-region-focusable findings; no DOM focus or tabindex mutation.",
+  "results": [
+    {
+      "browser": "chrome",
+      "version": "155.0.8059.80",
+      "page": "orders",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "atUtc": "2026-10-19T04:04:00.070Z",
+      "forwardPassed": false,
+      "reversePassed": false,
+      "keyboardEvidence": "chrome/keyboard-narrow-orders.json",
+      "wrappers": [
+        {
+          "index": 0,
+          "key": "dom-28",
+          "tabIndex": -1,
+          "clientWidth": 349,
+          "scrollWidth": 558,
+          "overflow": true,
+          "attributeTabIndex": null,
+          "reachedByTab": true,
+          "reachedByShiftTab": true,
+          "scrollBefore": 0,
+          "scrollAfter": 40,
+          "keyboardScrollWorks": true
+        },
+        {
+          "index": 1,
+          "key": "dom-47",
+          "tabIndex": -1,
+          "clientWidth": 349,
+          "scrollWidth": 349,
+          "overflow": false,
+          "attributeTabIndex": null
+        }
+      ]
+    },
+    {
+      "browser": "chrome",
+      "version": "155.0.8059.80",
+      "page": "catalogue",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "atUtc": "2026-10-19T04:04:02.491Z",
+      "forwardPassed": false,
+      "reversePassed": false,
+      "keyboardEvidence": "chrome/keyboard-narrow-catalogue.json",
+      "wrappers": [
+        {
+          "index": 0,
+          "key": "dom-28",
+          "tabIndex": -1,
+          "clientWidth": 349,
+          "scrollWidth": 458,
+          "overflow": true,
+          "attributeTabIndex": null,
+          "reachedByTab": true,
+          "reachedByShiftTab": true,
+          "scrollBefore": 0,
+          "scrollAfter": 40,
+          "keyboardScrollWorks": true
+        },
+        {
+          "index": 1,
+          "key": "dom-47",
+          "tabIndex": -1,
+          "clientWidth": 349,
+          "scrollWidth": 349,
+          "overflow": false,
+          "attributeTabIndex": null
+        }
+      ]
+    },
+    {
+      "browser": "edge",
+      "version": "155.0.4283.62",
+      "page": "orders",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "atUtc": "2026-10-19T04:04:05.585Z",
+      "forwardPassed": false,
+      "reversePassed": false,
+      "keyboardEvidence": "edge/keyboard-narrow-orders.json",
+      "wrappers": [
+        {
+          "index": 0,
+          "key": "dom-28",
+          "tabIndex": -1,
+          "clientWidth": 349,
+          "scrollWidth": 558,
+          "overflow": true,
+          "attributeTabIndex": null,
+          "reachedByTab": true,
+          "reachedByShiftTab": true,
+          "scrollBefore": 0,
+          "scrollAfter": 40,
+          "keyboardScrollWorks": true
+        },
+        {
+          "index": 1,
+          "key": "dom-47",
+          "tabIndex": -1,
+          "clientWidth": 349,
+          "scrollWidth": 349,
+          "overflow": false,
+          "attributeTabIndex": null
+        }
+      ]
+    },
+    {
+      "browser": "edge",
+      "version": "155.0.4283.62",
+      "page": "catalogue",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "atUtc": "2026-10-19T04:04:07.979Z",
+      "forwardPassed": false,
+      "reversePassed": false,
+      "keyboardEvidence": "edge/keyboard-narrow-catalogue.json",
+      "wrappers": [
+        {
+          "index": 0,
+          "key": "dom-28",
+          "tabIndex": -1,
+          "clientWidth": 349,
+          "scrollWidth": 458,
+          "overflow": true,
+          "attributeTabIndex": null,
+          "reachedByTab": true,
+          "reachedByShiftTab": true,
+          "scrollBefore": 0,
+          "scrollAfter": 40,
+          "keyboardScrollWorks": true
+        },
+        {
+          "index": 1,
+          "key": "dom-47",
+          "tabIndex": -1,
+          "clientWidth": 349,
+          "scrollWidth": 349,
+          "overflow": false,
+          "attributeTabIndex": null
+        }
+      ]
+    }
+  ]
+}

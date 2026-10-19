@@ -1,0 +1,21 @@
+{
+  "CapturedAtUtc": "2026-10-18T09:23:41.4958464+00:00",
+  "Branch": "qa/sqa19-sqa20-manual-validation",
+  "BaseCommit": "8e69c6273080b01db100c29cc76eb33a798e84af",
+  "OS": "Microsoft Windows NT 10.0.26200.0",
+  "Browsers": [
+    {
+      "Product": "Google Chrome",
+      "FileVersion": "155.0.8059.80",
+      "Path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
+    },
+    {
+      "Product": "Microsoft Edge",
+      "FileVersion": "155.0.4283.62",
+      "Path": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe"
+    }
+  ],
+  "BrowserExecution": "NOT RUN",
+  "Data": "Separate in-memory fixture store; synthetic checks, no external API scans",
+  "CI": "N/A - local preparation"
+}

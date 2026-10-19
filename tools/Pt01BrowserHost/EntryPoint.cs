@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Hosting.Server.Features;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
 using SecureApiQualityPlatform.Tests.Fixtures;
 using SecureApiQualityPlatform.Web.Services;
@@ -40,6 +41,10 @@ internal static class EntryPoint
         {
             "--environment", "Development", "--urls", url,
             "--contentRoot", webRoot, "--Logging:LogLevel:Default", "Warning"
+        }, services =>
+        {
+            services.RemoveAll<IPlatformStore>();
+            services.AddSingleton<IPlatformStore, InMemoryPlatformStore>();
         });
         if (!app.Environment.IsDevelopment()
             || app.Configuration.GetSection("Kestrel:Endpoints").GetChildren().Any()

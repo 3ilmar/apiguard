@@ -1,0 +1,157 @@
+{
+  "method": "Targeted genuine Tab/Shift+Tab/ArrowRight verification of axe scrollable-region-focusable findings; no DOM focus or tabindex mutation.",
+  "results": [
+    {
+      "browser": "chrome",
+      "version": "155.0.8059.80",
+      "page": "orders",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "atUtc": "2026-10-19T04:06:11.837Z",
+      "forwardPassed": true,
+      "reversePassed": true,
+      "keyboardEvidence": "chrome/narrow-settled/keyboard-narrow-orders.json",
+      "wrappers": [
+        {
+          "index": 0,
+          "key": "dom-28",
+          "tabIndex": -1,
+          "clientWidth": 349,
+          "scrollWidth": 558,
+          "overflow": true,
+          "attributeTabIndex": null,
+          "reachedByTab": true,
+          "reachedByShiftTab": true,
+          "scrollBefore": 0,
+          "scrollAfter": 40,
+          "keyboardScrollWorks": true
+        },
+        {
+          "index": 1,
+          "key": "dom-47",
+          "tabIndex": -1,
+          "clientWidth": 349,
+          "scrollWidth": 349,
+          "overflow": false,
+          "attributeTabIndex": null
+        }
+      ]
+    },
+    {
+      "browser": "chrome",
+      "version": "155.0.8059.80",
+      "page": "catalogue",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "atUtc": "2026-10-19T04:06:21.292Z",
+      "forwardPassed": true,
+      "reversePassed": true,
+      "keyboardEvidence": "chrome/narrow-settled/keyboard-narrow-catalogue.json",
+      "wrappers": [
+        {
+          "index": 0,
+          "key": "dom-28",
+          "tabIndex": -1,
+          "clientWidth": 349,
+          "scrollWidth": 458,
+          "overflow": true,
+          "attributeTabIndex": null,
+          "reachedByTab": true,
+          "reachedByShiftTab": true,
+          "scrollBefore": 0,
+          "scrollAfter": 40,
+          "keyboardScrollWorks": true
+        },
+        {
+          "index": 1,
+          "key": "dom-47",
+          "tabIndex": -1,
+          "clientWidth": 349,
+          "scrollWidth": 349,
+          "overflow": false,
+          "attributeTabIndex": null
+        }
+      ]
+    },
+    {
+      "browser": "edge",
+      "version": "155.0.4283.62",
+      "page": "orders",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "atUtc": "2026-10-19T04:06:31.916Z",
+      "forwardPassed": true,
+      "reversePassed": true,
+      "keyboardEvidence": "edge/narrow-settled/keyboard-narrow-orders.json",
+      "wrappers": [
+        {
+          "index": 0,
+          "key": "dom-28",
+          "tabIndex": -1,
+          "clientWidth": 349,
+          "scrollWidth": 558,
+          "overflow": true,
+          "attributeTabIndex": null,
+          "reachedByTab": true,
+          "reachedByShiftTab": true,
+          "scrollBefore": 0,
+          "scrollAfter": 40,
+          "keyboardScrollWorks": true
+        },
+        {
+          "index": 1,
+          "key": "dom-47",
+          "tabIndex": -1,
+          "clientWidth": 349,
+          "scrollWidth": 349,
+          "overflow": false,
+          "attributeTabIndex": null
+        }
+      ]
+    },
+    {
+      "browser": "edge",
+      "version": "155.0.4283.62",
+      "page": "catalogue",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "atUtc": "2026-10-19T04:06:41.540Z",
+      "forwardPassed": true,
+      "reversePassed": true,
+      "keyboardEvidence": "edge/narrow-settled/keyboard-narrow-catalogue.json",
+      "wrappers": [
+        {
+          "index": 0,
+          "key": "dom-28",
+          "tabIndex": -1,
+          "clientWidth": 349,
+          "scrollWidth": 458,
+          "overflow": true,
+          "attributeTabIndex": null,
+          "reachedByTab": true,
+          "reachedByShiftTab": true,
+          "scrollBefore": 0,
+          "scrollAfter": 40,
+          "keyboardScrollWorks": true
+        },
+        {
+          "index": 1,
+          "key": "dom-47",
+          "tabIndex": -1,
+          "clientWidth": 349,
+          "scrollWidth": 349,
+          "overflow": false,
+          "attributeTabIndex": null
+        }
+      ]
+    }
+  ]
+}

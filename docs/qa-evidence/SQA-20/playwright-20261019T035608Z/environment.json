@@ -1,0 +1,55 @@
+{
+  "startedAtUtc": "2026-10-19T04:01:46.721Z",
+  "branch": "qa/sqa19-sqa20-manual-validation",
+  "baseCommit": "8e69c6273080b01db100c29cc76eb33a798e84af",
+  "sourceState": "?? docs/qa-evidence/SQA-19/\n?? docs/qa-evidence/SQA-20/\n?? tools/",
+  "node": "v24.19.0",
+  "os": {
+    "platform": "win32",
+    "release": "10.0.26200",
+    "architecture": "x64",
+    "cpu": "12th Gen Intel(R) Core(TM) i7-12700H",
+    "logicalCpus": 20
+  },
+  "playwright": "1.62.1",
+  "playwrightPath": "C:\\Users\\zsr20\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\node_modules\\playwright\\index.js",
+  "baseUrl": "http://localhost:51920",
+  "headless": true,
+  "viewportDesktop": {
+    "width": 1440,
+    "height": 900
+  },
+  "viewportNarrow": {
+    "width": 375,
+    "height": 812
+  },
+  "deviceScaleFactor": 1,
+  "axe": {
+    "available": true,
+    "name": "axe-core",
+    "version": "4.10.3",
+    "source": "https://registry.npmjs.org/axe-core/4.10.3",
+    "tarball": "https://registry.npmjs.org/axe-core/-/axe-core-4.10.3.tgz",
+    "integrity": "sha512-Xm7bpRXnDSX2YE2YFfBk2FnF0ep6tmG7xPh8iHee8MIcrgq762Nkce856dYtJYLkuIoYZvGfTs/PbZhideTcEg==",
+    "tarballSha256": "0f2b4d7dcdf7d1219df8d1959ad68e565f51d14c3f0d88bb71cd59abeb956292",
+    "filesSha256": {
+      "axe.min.js": "880970c081707360e64f34cea25ff91892f5bc95675b0776925b9709dd8a68bb",
+      "package.json": "732bcda01b1e1550eb849d83c6d82a7379b3373a98724865ecacfce610207230",
+      "LICENSE": "af175b9d96ee93c21a036152e1b905b0b95304d4ae8c2c921c7609100ba8df7e"
+    },
+    "retrievedUtc": "2026-10-19T03:57:25.3830884Z",
+    "license": "MPL-2.0",
+    "tags": [
+      "wcag2a",
+      "wcag2aa",
+      "wcag21a",
+      "wcag21aa",
+      "wcag22aa"
+    ],
+    "dependencyError": null,
+    "limitation": "Automated axe rules cover only part of WCAG; a scan cannot establish full WCAG conformance."
+  },
+  "originalApplicationCodeModified": false,
+  "networkPolicy": "Only localhost:51920 GET/HEAD and original Bootstrap stylesheet URL allowed by browser context. No API checks or form submissions.",
+  "humanTesting": "No human execution is claimed. Prior human evidence was not present in the repository inspected at start."
+}

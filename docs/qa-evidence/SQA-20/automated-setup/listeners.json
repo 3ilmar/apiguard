@@ -1,0 +1,22 @@
+{
+  "CapturedAtUtc": "2026-10-18T09:24:10.2627878+00:00",
+  "Listeners": [
+    {
+      "LocalAddress": "::1",
+      "LocalPort": 51920,
+      "OwningProcess": 12428
+    },
+    {
+      "LocalAddress": "127.0.0.1",
+      "LocalPort": 51920,
+      "OwningProcess": 12428
+    }
+  ],
+  "Processes": [
+    {
+      "ProcessId": 12428,
+      "Name": "dotnet.exe",
+      "CommandLine": "\"C:\\Program Files\\dotnet\\dotnet.exe\" C:\\Users\\zsr20\\source\\repos\\3ilmar\\apiguard\\tools\\Sqa20.ManualHost\\bin\\Release\\net8.0\\Sqa20.ManualHost.dll C:\\Users\\zsr20\\source\\repos\\3ilmar\\apiguard\\SecureApiQualityPlatform.Web"
+    }
+  ]
+}

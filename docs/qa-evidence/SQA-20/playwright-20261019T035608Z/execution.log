@@ -1,0 +1,31 @@
+2026-10-19T04:01:47.179Z Google Chrome 155.0.8059.80 launched from C:\Program Files\Google\Chrome\Application\chrome.exe
+2026-10-19T04:01:47.343Z chrome: desktop-dashboard
+2026-10-19T04:01:49.508Z chrome: desktop-apis
+2026-10-19T04:01:51.559Z chrome: desktop-orders
+2026-10-19T04:01:54.352Z chrome: desktop-catalogue
+2026-10-19T04:01:57.152Z chrome: desktop-defects
+2026-10-19T04:02:00.432Z chrome: desktop-registration
+2026-10-19T04:02:02.739Z chrome: narrow-dashboard
+2026-10-19T04:02:03.648Z chrome: narrow-apis
+2026-10-19T04:02:04.393Z chrome: narrow-orders
+2026-10-19T04:02:05.525Z chrome: narrow-catalogue
+2026-10-19T04:02:06.661Z chrome: narrow-defects
+2026-10-19T04:02:07.546Z chrome: narrow-registration
+2026-10-19T04:02:13.884Z Microsoft Edge 155.0.4283.62 launched from C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+2026-10-19T04:02:14.081Z edge: desktop-dashboard
+2026-10-19T04:02:16.442Z edge: desktop-apis
+2026-10-19T04:02:18.698Z edge: desktop-orders
+2026-10-19T04:02:21.709Z edge: desktop-catalogue
+2026-10-19T04:02:24.604Z edge: desktop-defects
+2026-10-19T04:02:28.132Z edge: desktop-registration
+2026-10-19T04:02:30.648Z edge: narrow-dashboard
+2026-10-19T04:02:31.796Z edge: narrow-apis
+2026-10-19T04:02:32.620Z edge: narrow-orders
+2026-10-19T04:02:33.834Z edge: narrow-catalogue
+2026-10-19T04:02:35.395Z edge: narrow-defects
+2026-10-19T04:02:36.431Z edge: narrow-registration
+2026-10-19T04:02:44.419Z Error: ENOENT: no such file or directory, copyfile 'C:\Users\zsr20\source\repos\3ilmar\apiguard\tools\Sqa20.ManualHost\validate_browser_csv.py' -> 'C:\Users\zsr20\source\repos\3ilmar\apiguard\docs\qa-evidence\SQA-20\playwright-20261019T035608Z\runner-source\validate_browser_csv.py'
+    at Object.copyFileSync (node:fs:3177:11)
+    at C:\Users\zsr20\source\repos\3ilmar\apiguard\tools\Sqa20.ManualHost\Run-BrowserChecks.cjs:215:8
+2026-10-19T04:05:59.101Z Finalizing saved browser executions; no browser navigation or downloads repeated.
+2026-10-19T04:05:59.955Z Completed: {"PASS":16,"FAIL":0,"BLOCKED":0,"NOT RUN":0}; overall automated FAIL

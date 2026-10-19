@@ -1,0 +1,638 @@
+{
+  "capturedUtc": "2026-10-19T04:02:04.302Z",
+  "url": "http://localhost:51920/Apis",
+  "viewport": {
+    "width": 375,
+    "height": 812,
+    "devicePixelRatio": 1
+  },
+  "document": {
+    "clientWidth": 375,
+    "scrollWidth": 375,
+    "clientHeight": 812,
+    "scrollHeight": 812,
+    "bodyClientWidth": 375,
+    "bodyScrollWidth": 375,
+    "horizontalOverflow": false
+  },
+  "headings": [
+    {
+      "tag": "h1",
+      "id": null,
+      "name": null,
+      "type": null,
+      "text": "Registered APIs",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 12,
+        "y": 201.17,
+        "left": 12,
+        "top": 201.17,
+        "right": 174.69,
+        "bottom": 228.83,
+        "width": 162.69,
+        "height": 27.66
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "23.05px",
+        "lineHeight": "27.66px",
+        "fontWeight": "500",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "normal",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 93.35,
+          "y": 215
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "h1",
+          "id": null,
+          "text": "Registered APIs"
+        }
+      }
+    },
+    {
+      "tag": "h2",
+      "id": null,
+      "name": null,
+      "type": null,
+      "text": "SQA-20 Orders, \"review\"",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 29,
+        "y": 271,
+        "left": 29,
+        "top": 271,
+        "right": 346,
+        "bottom": 295,
+        "width": 317,
+        "height": 24
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "20px",
+        "lineHeight": "24px",
+        "fontWeight": "500",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "normal",
+        "overflowWrap": "break-word",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 187.5,
+          "y": 283
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "h2",
+          "id": null,
+          "text": "SQA-20 Orders, \"review\""
+        }
+      }
+    },
+    {
+      "tag": "h2",
+      "id": null,
+      "name": null,
+      "type": null,
+      "text": "SQA-20 Catalogue, \"healthy\"",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 29,
+        "y": 535,
+        "left": 29,
+        "top": 535,
+        "right": 346,
+        "bottom": 559,
+        "width": 317,
+        "height": 24
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "20px",
+        "lineHeight": "24px",
+        "fontWeight": "500",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "normal",
+        "overflowWrap": "break-word",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 187.5,
+          "y": 547
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "h2",
+          "id": null,
+          "text": "SQA-20 Catalogue, \"healthy\""
+        }
+      }
+    }
+  ],
+  "navigation": [
+    {
+      "tag": "nav",
+      "id": null,
+      "name": null,
+      "type": null,
+      "text": "API Quality Dashboard APIs Defects Export Results",
+      "accessibleName": {
+        "value": "",
+        "source": "none; placeholder and adjacent unassociated text do not provide a reliable name"
+      },
+      "href": null,
+      "role": null,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "left": 0,
+        "top": 0,
+        "right": 375,
+        "bottom": 176,
+        "width": 375,
+        "height": 176
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(33, 37, 41)",
+        "backgroundColor": "rgb(33, 37, 41)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "normal",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 187.5,
+          "y": 88
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "div",
+          "id": null,
+          "text": "API Quality Dashboard APIs Defects Export Results"
+        }
+      }
+    }
+  ],
+  "controls": [
+    {
+      "tag": "a",
+      "id": null,
+      "name": null,
+      "type": null,
+      "text": "API Quality",
+      "accessibleName": {
+        "value": "API Quality",
+        "source": "element text"
+      },
+      "href": "/",
+      "role": null,
+      "rect": {
+        "x": 12,
+        "y": 68,
+        "left": 12,
+        "top": 68,
+        "right": 109.63,
+        "bottom": 108,
+        "width": 97.63,
+        "height": 40
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "20px",
+        "lineHeight": "30px",
+        "fontWeight": "400",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "nowrap",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 60.82,
+          "y": 88
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "a",
+          "id": null,
+          "text": "API Quality"
+        }
+      }
+    },
+    {
+      "tag": "a",
+      "id": null,
+      "name": null,
+      "type": null,
+      "text": "Dashboard",
+      "accessibleName": {
+        "value": "Dashboard",
+        "source": "element text"
+      },
+      "href": "/",
+      "role": null,
+      "rect": {
+        "x": 264.02,
+        "y": 8,
+        "left": 264.02,
+        "top": 8,
+        "right": 363,
+        "bottom": 48,
+        "width": 98.98,
+        "height": 40
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgba(255, 255, 255, 0.55)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "normal",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 313.51,
+          "y": 28
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "a",
+          "id": null,
+          "text": "Dashboard"
+        }
+      }
+    },
+    {
+      "tag": "a",
+      "id": null,
+      "name": null,
+      "type": null,
+      "text": "APIs",
+      "accessibleName": {
+        "value": "APIs",
+        "source": "element text"
+      },
+      "href": "/Apis",
+      "role": null,
+      "rect": {
+        "x": 264.02,
+        "y": 48,
+        "left": 264.02,
+        "top": 48,
+        "right": 363,
+        "bottom": 88,
+        "width": 98.98,
+        "height": 40
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgba(255, 255, 255, 0.55)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "normal",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 313.51,
+          "y": 68
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "a",
+          "id": null,
+          "text": "APIs"
+        }
+      }
+    },
+    {
+      "tag": "a",
+      "id": null,
+      "name": null,
+      "type": null,
+      "text": "Defects",
+      "accessibleName": {
+        "value": "Defects",
+        "source": "element text"
+      },
+      "href": "/Defects",
+      "role": null,
+      "rect": {
+        "x": 264.02,
+        "y": 88,
+        "left": 264.02,
+        "top": 88,
+        "right": 363,
+        "bottom": 128,
+        "width": 98.98,
+        "height": 40
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgba(255, 255, 255, 0.55)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "normal",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 313.51,
+          "y": 108
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "a",
+          "id": null,
+          "text": "Defects"
+        }
+      }
+    },
+    {
+      "tag": "a",
+      "id": null,
+      "name": null,
+      "type": null,
+      "text": "Export Results",
+      "accessibleName": {
+        "value": "Export Results",
+        "source": "element text"
+      },
+      "href": "/Reports/ExportResultsCsv",
+      "role": null,
+      "rect": {
+        "x": 264.02,
+        "y": 128,
+        "left": 264.02,
+        "top": 128,
+        "right": 363,
+        "bottom": 168,
+        "width": 98.98,
+        "height": 40
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgba(255, 255, 255, 0.55)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "normal",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 313.51,
+          "y": 148
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "a",
+          "id": null,
+          "text": "Export Results"
+        }
+      }
+    },
+    {
+      "tag": "a",
+      "id": null,
+      "name": null,
+      "type": null,
+      "text": "Register API",
+      "accessibleName": {
+        "value": "Register API",
+        "source": "element text"
+      },
+      "href": "/Apis/Create",
+      "role": null,
+      "rect": {
+        "x": 252.17,
+        "y": 200,
+        "left": 252.17,
+        "top": 200,
+        "right": 363,
+        "bottom": 238,
+        "width": 110.83,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(13, 110, 253)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "normal",
+        "overflowWrap": "normal",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 307.58,
+          "y": 219
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "a",
+          "id": null,
+          "text": "Register API"
+        }
+      }
+    },
+    {
+      "tag": "a",
+      "id": null,
+      "name": null,
+      "type": null,
+      "text": "Open",
+      "accessibleName": {
+        "value": "Open",
+        "source": "element text"
+      },
+      "href": "/Apis/Details/20200000-0000-0000-0000-000000000001",
+      "role": null,
+      "rect": {
+        "x": 29,
+        "y": 447,
+        "left": 29,
+        "top": 447,
+        "right": 93.89,
+        "bottom": 485,
+        "width": 64.89,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(13, 110, 253)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "normal",
+        "overflowWrap": "break-word",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 61.45,
+          "y": 466
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "a",
+          "id": null,
+          "text": "Open"
+        }
+      }
+    },
+    {
+      "tag": "a",
+      "id": null,
+      "name": null,
+      "type": null,
+      "text": "Open",
+      "accessibleName": {
+        "value": "Open",
+        "source": "element text"
+      },
+      "href": "/Apis/Details/20200000-0000-0000-0000-000000000002",
+      "role": null,
+      "rect": {
+        "x": 29,
+        "y": 711,
+        "left": 29,
+        "top": 711,
+        "right": 93.89,
+        "bottom": 749,
+        "width": 64.89,
+        "height": 38
+      },
+      "rendered": true,
+      "computed": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "400",
+        "color": "rgb(13, 110, 253)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "whiteSpace": "normal",
+        "overflowWrap": "break-word",
+        "textOverflow": "clip"
+      },
+      "hitTest": {
+        "point": {
+          "x": 61.45,
+          "y": 730
+        },
+        "applicable": true,
+        "receivesPointer": true,
+        "topElement": {
+          "tag": "a",
+          "id": null,
+          "text": "Open"
+        }
+      }
+    }
+  ],
+  "formControls": [],
+  "missingInputAccessibleNames": [],
+  "overflowElements": [],
+  "overlaps": [],
+  "clippedControls": [],
+  "severityLabels": [],
+  "stretchedBadges": [],
+  "severityProgressBars": [],
+  "tables": [],
+  "limitations": [
+    "DOM and geometry measurements test technical criteria; they cannot independently establish visual readability, user acceptance, or full WCAG conformance.",
+    "Out-of-viewport content inside a horizontally scrollable table is assessed by actual wheel scrolling rather than classified as document overflow.",
+    "The absence of an HTML caption is recorded; a nearby heading may identify a table visually, while axe independently checks supported accessibility rules.",
+    "The Defect Register and Recent defects are card/list structures, not HTML tables; their text, form controls and severity labels are recorded separately."
+  ],
+  "assessment": {
+    "responsivePassed": true,
+    "tablePassed": true,
+    "meaning": "PASS refers only to the stated automated geometry, structural and native scrolling criteria. Accessibility scan and screenshot observations are assessed separately.",
+    "cosmeticStretchingCount": 0,
+    "missingInputAccessibleNameCount": 0
+  },
+  "screenshots": [
+    "chrome/narrow-apis-full.png",
+    "chrome/narrow-apis-viewport.png"
+  ]
+}

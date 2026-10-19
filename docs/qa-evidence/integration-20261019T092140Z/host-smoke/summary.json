@@ -1,0 +1,30 @@
+{
+  "CapturedAtUtc": "2026-10-19T09:28:27.9753589+00:00",
+  "PreparationStatus": "PASS",
+  "Checks": [
+    {
+      "Host": "Sqa19.ManualHost",
+      "Url": "http://localhost:51919/",
+      "PreparationStatus": "PASS",
+      "ConfiguredDatabase": "Unusable sentinel path; fixture must use private memory",
+      "BrowserOrHumanAcceptance": "Not assessed by this smoke check"
+    },
+    {
+      "Host": "Sqa20.ManualHost",
+      "Url": "http://localhost:51920/",
+      "PreparationStatus": "PASS",
+      "ConfiguredDatabase": "Unusable sentinel path; fixture must use private memory",
+      "BrowserOrHumanAcceptance": "Not assessed by this smoke check"
+    },
+    {
+      "Host": "Pt01BrowserHost",
+      "Url": "http://127.0.0.1:51881/",
+      "PreparationStatus": "PASS",
+      "ConfiguredDatabase": "Unusable sentinel path; fixture must use private memory",
+      "BrowserOrHumanAcceptance": "Not assessed by this smoke check"
+    }
+  ],
+  "SentinelUnchanged": true,
+  "NormalDatabaseCreated": false,
+  "AllSmokeServersStopped": true
+}
