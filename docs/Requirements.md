@@ -19,6 +19,7 @@
 | FR-06 | The system shall support retesting and close a resolved/retest defect when the associated check passes. | Must |
 | FR-07 | The system shall display counts for executed, passed and failed checks, pass rate, average recorded response time, open defects and open high/critical defects. | Must |
 | FR-08 | The system shall export check and defect evidence as CSV files containing relevant API/endpoint context, timestamps and QA lifecycle fields. | Should |
+| FR-09 | The system shall persist registered APIs, endpoints, check results and defects across application restarts. | Must |
 
 ## Non-functional / quality requirements
 
@@ -28,6 +29,7 @@ The numeric targets below are **prototype engineering targets** and must be vali
 |---|---|---|
 | NFR-SEC-01 | Security | By default, the platform shall reject localhost, loopback, link-local and private-network API targets before sending a request. |
 | NFR-SEC-02 | Security | The prototype shall not store API passwords, bearer tokens or other secrets. |
+| NFR-SEC-03 | Security | Protected state-changing actions shall enforce the prototype role rules server-side, and missing or invalid role information shall fall back to Viewer. |
 | NFR-REL-01 | Reliability | Failure of one endpoint request shall be recorded as evidence and shall not terminate the application or prevent later endpoints from being tested. |
 | NFR-PERF-01 | Performance | For a prototype data set of up to 2,000 recorded check results, the dashboard target is to render within 2 seconds on the agreed test machine. **Provisional/TBC.** |
 | NFR-MAINT-01 | Maintainability | Check-evaluation rules shall be separated from controllers and be independently unit-testable. |
@@ -83,3 +85,17 @@ THEN check counts remain zero and percentage/response-time metrics are presented
 GIVEN check results or defects exist, including text values that may contain commas or quotation marks
 WHEN a results or defect CSV export is requested
 THEN the downloaded file contains a header row, relevant API/endpoint context, timestamps and QA evidence fields, with text values escaped so the CSV remains parseable.
+
+### AC-07 Persistence
+GIVEN registered APIs, endpoints, check results and defects exist
+WHEN the application is restarted
+THEN the stored data remains available.
+
+### AC-08 Prototype role enforcement
+GIVEN a user has the Viewer role
+WHEN the user submits a protected state-changing action
+THEN the server rejects the action.
+
+GIVEN role information is missing or invalid
+WHEN the current role is resolved
+THEN the system falls back to Viewer.
